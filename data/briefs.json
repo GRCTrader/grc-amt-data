@@ -1,11 +1,159 @@
 {
-  "updated": "2026-06-10T16:05:02.834860-04:00",
+  "updated": "2026-06-11T16:05:12.024479-04:00",
   "stats": {
-    "total_graded": 4,
+    "total_graded": 5,
     "correct": 3,
-    "accuracy_pct": 75.0
+    "accuracy_pct": 60.0,
+    "accuracy_series": [
+      {
+        "date": "2026-05-29",
+        "pct": 100.0,
+        "n": 1
+      },
+      {
+        "date": "2026-06-01",
+        "pct": 100.0,
+        "n": 2
+      },
+      {
+        "date": "2026-06-09",
+        "pct": 100.0,
+        "n": 3
+      },
+      {
+        "date": "2026-06-10",
+        "pct": 75.0,
+        "n": 4
+      },
+      {
+        "date": "2026-06-11",
+        "pct": 60.0,
+        "n": 5
+      }
+    ],
+    "by_scenario": {
+      "A": {
+        "total": 5,
+        "correct": 3,
+        "pct": 60.0
+      }
+    },
+    "calibration": {
+      "50\u201360%": {
+        "correct": 0,
+        "total": 0,
+        "pct": null
+      },
+      "60\u201370%": {
+        "correct": 0,
+        "total": 0,
+        "pct": null
+      },
+      "70\u201380%": {
+        "correct": 3,
+        "total": 5,
+        "pct": 60.0
+      },
+      "80%+": {
+        "correct": 0,
+        "total": 0,
+        "pct": null
+      }
+    }
+  },
+  "ops": {
+    "generated_at": "2026-06-11T16:05:12.024560-04:00",
+    "last_brief_date": "2026-06-11",
+    "last_brief_time": "09:00:00",
+    "last_grade_date": "2026-06-11",
+    "recent_failures": [
+      {
+        "ts": "2026-06-10 16:23:32",
+        "label": "gemini",
+        "status": "error",
+        "detail": "x_extract: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      },
+      {
+        "ts": "2026-06-10 16:18:45",
+        "label": "x_import",
+        "status": "error",
+        "detail": "2064732326727237795"
+      }
+    ]
   },
   "days": [
+    {
+      "date": "2026-06-11",
+      "inventory": "SL",
+      "vah": 29196.0,
+      "poc": 29109.0,
+      "val": 28718.0,
+      "settle": 28554.0,
+      "ovn_high": 28936.0,
+      "ovn_low": 28265.75,
+      "ovn_poc": 28789.0,
+      "ovn_vah": 28922.0,
+      "ovn_val": 28728.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.71,
+      "confidence_b": 0.11,
+      "confidence_c": 0.17,
+      "post_time": "09:00:00",
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Held inside value area (28718-29196)",
+        "notes": null,
+        "gemini": "SCENARIO:\nThis was a strong trend day up. Price initially dipped below prior VAL and Settlement to 28265.75, then reversed aggressively, breaking decisively above VAH (29196) and closing near the high (29477.5).\n\nLEVELS:\nPrice opened near OVN POC, then rejected OVN VAL (28728) and VAL (28718). After hitting 28265.75, it rallied past OVN VAH (28922) and broke VAH (29196), holding higher.\n\nVERDICT:\nDespite no high-confidence scenario, the AMT levels were crucial, identifying the initial liquidation below key support and the subsequent strong directional breakout.",
+        "close": 29477.5,
+        "high": 29544.25,
+        "low": 28265.75
+      },
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 28751.5,
+          "vs_settle": 197.5,
+          "inside_va": true,
+          "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 28773.25,
+          "vs_settle": 219.25,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 28718.00/29196.00, target POC 29109.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 28815.25,
+          "vs_settle": 261.25,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 28718.00/29196.00, target POC 29109.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 28762.5,
+          "vs_settle": 208.5,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 28718.00/29196.00, target POC 29109.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 28790.0,
+          "vs_settle": 236.0,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 28718.00/29196.00, target POC 29109.00."
+        }
+      ],
+      "trades_summary": {
+        "count": 1,
+        "pnl": 353.0
+      }
+    },
     {
       "date": "2026-06-10",
       "inventory": "100S",
@@ -24,6 +172,7 @@
       "confidence_a": 0.71,
       "confidence_b": 0.11,
       "confidence_c": 0.17,
+      "post_time": "15:57:06",
       "grade": {
         "actual": "C",
         "predicted": "A",
@@ -34,6 +183,19 @@
         "close": 28615.5,
         "high": 29250.0,
         "low": 28493.0
+      },
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 28853.0,
+          "vs_settle": -264.0,
+          "inside_va": true,
+          "call": "Morning brief anchor"
+        }
+      ],
+      "trades_summary": {
+        "count": 2,
+        "pnl": 1065.0
       }
     },
     {
@@ -54,6 +216,7 @@
       "confidence_a": 0.75,
       "confidence_b": 0.12,
       "confidence_c": 0.13,
+      "post_time": "14:51:30",
       "grade": {
         "actual": "A",
         "predicted": "A",
@@ -64,6 +227,47 @@
         "close": 29032.75,
         "high": 29848.25,
         "low": 28227.75
+      },
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29736.75,
+          "vs_settle": 282.0,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29698.0,
+          "vs_settle": 243.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29375.00\u201329590.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 29843.75,
+          "vs_settle": 389.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29375.00\u201329590.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 29410.25,
+          "vs_settle": -44.5,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29375.00/29590.00, target POC 29452.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 29116.5,
+          "vs_settle": -338.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29375.00\u201329590.00."
+        }
+      ],
+      "trades_summary": {
+        "count": 2,
+        "pnl": 1831.0
       }
     },
     {
@@ -83,7 +287,45 @@
       "scenario_c": "C",
       "confidence_a": 0.75,
       "confidence_b": 0.12,
-      "confidence_c": 0.13
+      "confidence_c": 0.13,
+      "post_time": "09:00:00",
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 30121.0,
+          "vs_settle": -367.25,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 30036.5,
+          "vs_settle": -451.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30182.00\u201330488.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 29857.75,
+          "vs_settle": -630.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30182.00\u201330488.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 29940.0,
+          "vs_settle": -548.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30182.00\u201330488.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 29827.25,
+          "vs_settle": -661.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30182.00\u201330488.00."
+        }
+      ]
     },
     {
       "date": "2026-06-03",
@@ -102,7 +344,21 @@
       "scenario_c": "C",
       "confidence_a": 0.5,
       "confidence_b": 0.37,
-      "confidence_c": 0.13
+      "confidence_c": 0.13,
+      "post_time": "09:01:33",
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 30728.25,
+          "vs_settle": 15.5,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ],
+      "trades_summary": {
+        "count": 1,
+        "pnl": -13.0
+      }
     },
     {
       "date": "2026-06-02",
@@ -121,7 +377,45 @@
       "scenario_c": "C",
       "confidence_a": 0.54,
       "confidence_b": 0.29,
-      "confidence_c": 0.17
+      "confidence_c": 0.17,
+      "post_time": "09:00:00",
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 30554.25,
+          "vs_settle": -12.0,
+          "inside_va": true,
+          "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 30512.0,
+          "vs_settle": -54.25,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30314.00/30567.00, target POC 30371.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 30550.25,
+          "vs_settle": -16.0,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30314.00/30567.00, target POC 30371.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 30626.5,
+          "vs_settle": 60.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30314.00\u201330567.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 30618.0,
+          "vs_settle": 51.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30314.00\u201330567.00."
+        }
+      ]
     },
     {
       "date": "2026-06-01",
@@ -141,6 +435,7 @@
       "confidence_a": 0.74,
       "confidence_b": 0.1,
       "confidence_c": 0.16,
+      "post_time": "09:00:00",
       "grade": {
         "actual": "A",
         "predicted": "A",
@@ -151,7 +446,37 @@
         "close": null,
         "high": null,
         "low": null
-      }
+      },
+      "intraday": [
+        {
+          "slot": "09:30",
+          "price": 30350.0,
+          "vs_settle": -55.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30374.00\u201330516.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 30427.25,
+          "vs_settle": 22.0,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30374.00/30516.00, target POC 30389.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 30365.5,
+          "vs_settle": -39.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30374.00\u201330516.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 30429.25,
+          "vs_settle": 24.0,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30374.00/30516.00, target POC 30389.00."
+        }
+      ]
     },
     {
       "date": "2026-05-29",
@@ -171,6 +496,7 @@
       "confidence_a": 0.74,
       "confidence_b": 0.11,
       "confidence_c": 0.14,
+      "post_time": "09:00:00",
       "grade": {
         "actual": "A",
         "predicted": "A",
