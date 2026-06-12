@@ -1,9 +1,9 @@
 {
-  "updated": "2026-06-12T09:00:27.975680-04:00",
+  "updated": "2026-06-12T17:45:58.325134-04:00",
   "stats": {
-    "total_graded": 5,
-    "correct": 3,
-    "accuracy_pct": 60.0,
+    "total_graded": 6,
+    "correct": 4,
+    "accuracy_pct": 66.7,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -29,13 +29,18 @@
         "date": "2026-06-11",
         "pct": 60.0,
         "n": 5
+      },
+      {
+        "date": "2026-06-12",
+        "pct": 66.7,
+        "n": 6
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 5,
-        "correct": 3,
-        "pct": 60.0
+        "total": 6,
+        "correct": 4,
+        "pct": 66.7
       }
     },
     "calibration": {
@@ -50,9 +55,9 @@
         "pct": null
       },
       "70\u201380%": {
-        "correct": 3,
-        "total": 5,
-        "pct": 60.0
+        "correct": 4,
+        "total": 6,
+        "pct": 66.7
       },
       "80%+": {
         "correct": 0,
@@ -62,10 +67,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-06-12T09:00:27.975754-04:00",
+    "generated_at": "2026-06-12T17:45:58.325199-04:00",
     "last_brief_date": "2026-06-12",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-06-11",
+    "last_grade_date": "2026-06-12",
     "recent_failures": [
       {
         "ts": "2026-06-10 16:23:32",
@@ -81,6 +86,7 @@
       }
     ]
   },
+  "coach": null,
   "days": [
     {
       "date": "2026-06-12",
@@ -101,6 +107,21 @@
       "confidence_b": 0.12,
       "confidence_c": 0.13,
       "post_time": "09:00:00",
+      "day_shape": "look_below_fail",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "grade": {
+        "actual": "A",
+        "predicted": "A",
+        "correct": true,
+        "detail": "Probed extreme then reverted toward value (range 29298-29587)",
+        "notes": null,
+        "gemini": "SCENARIO: Scenario A played out as buyers aggressively defended the lower overnight boundary to initiate a strong upward trend day. \n\nLEVELS: The low of 29230.0 found support just below OVN VAL 29280.0, initiating a rally that reclaimed OVN POC 29453.0 and broke through OVN VAH 29469.0 to close at 29677.75.\n\nVERDICT: Yes, the morning read was highly useful as the OVN VAL and VAH levels perfectly framed the day's key inflection and breakout points.",
+        "close": 29677.75,
+        "high": 29760.0,
+        "low": 29230.0
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -108,8 +129,40 @@
           "vs_settle": 9.25,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29459.5,
+          "vs_settle": -5.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28707.00\u201329201.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 29298.25,
+          "vs_settle": -166.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28707.00\u201329201.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 29587.25,
+          "vs_settle": 122.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28707.00\u201329201.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 29374.75,
+          "vs_settle": -90.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28707.00\u201329201.00."
         }
-      ]
+      ],
+      "trades_summary": {
+        "count": 1,
+        "pnl": -100.0
+      }
     },
     {
       "date": "2026-06-11",
@@ -130,6 +183,10 @@
       "confidence_b": 0.11,
       "confidence_c": 0.17,
       "post_time": "09:00:00",
+      "day_shape": null,
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
       "grade": {
         "actual": "C",
         "predicted": "A",
@@ -202,6 +259,10 @@
       "confidence_b": 0.11,
       "confidence_c": 0.17,
       "post_time": "15:57:06",
+      "day_shape": null,
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
       "grade": {
         "actual": "C",
         "predicted": "A",
@@ -246,6 +307,10 @@
       "confidence_b": 0.12,
       "confidence_c": 0.13,
       "post_time": "14:51:30",
+      "day_shape": null,
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
       "grade": {
         "actual": "A",
         "predicted": "A",
@@ -318,6 +383,10 @@
       "confidence_b": 0.12,
       "confidence_c": 0.13,
       "post_time": "09:00:00",
+      "day_shape": null,
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
       "intraday": [
         {
           "slot": "09:00",
@@ -375,6 +444,10 @@
       "confidence_b": 0.37,
       "confidence_c": 0.13,
       "post_time": "09:01:33",
+      "day_shape": null,
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
       "intraday": [
         {
           "slot": "09:00",
@@ -408,6 +481,10 @@
       "confidence_b": 0.29,
       "confidence_c": 0.17,
       "post_time": "09:00:00",
+      "day_shape": null,
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
       "intraday": [
         {
           "slot": "09:00",
@@ -465,6 +542,10 @@
       "confidence_b": 0.1,
       "confidence_c": 0.16,
       "post_time": "09:00:00",
+      "day_shape": null,
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
       "grade": {
         "actual": "A",
         "predicted": "A",
@@ -526,6 +607,10 @@
       "confidence_b": 0.11,
       "confidence_c": 0.14,
       "post_time": "09:00:00",
+      "day_shape": null,
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
       "grade": {
         "actual": "A",
         "predicted": "A",
