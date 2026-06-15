@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T17:45:58.325134-04:00",
+  "updated": "2026-06-15T09:00:23.351909-04:00",
   "stats": {
     "total_graded": 6,
     "correct": 4,
@@ -67,27 +67,47 @@
     }
   },
   "ops": {
-    "generated_at": "2026-06-12T17:45:58.325199-04:00",
-    "last_brief_date": "2026-06-12",
+    "generated_at": "2026-06-15T09:00:23.351994-04:00",
+    "last_brief_date": "2026-06-15",
     "last_brief_time": "09:00:00",
     "last_grade_date": "2026-06-12",
-    "recent_failures": [
-      {
-        "ts": "2026-06-10 16:23:32",
-        "label": "gemini",
-        "status": "error",
-        "detail": "x_extract: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
-      },
-      {
-        "ts": "2026-06-10 16:18:45",
-        "label": "x_import",
-        "status": "error",
-        "detail": "2064732326727237795"
-      }
-    ]
+    "recent_failures": []
   },
   "coach": null,
   "days": [
+    {
+      "date": "2026-06-15",
+      "inventory": "100L",
+      "vah": 29660.0,
+      "poc": 29534.0,
+      "val": 29290.0,
+      "settle": 29662.0,
+      "ovn_high": 30628.25,
+      "ovn_low": 29646.0,
+      "ovn_poc": 30457.0,
+      "ovn_vah": 30614.0,
+      "ovn_val": 30251.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.75,
+      "confidence_b": 0.12,
+      "confidence_c": 0.13,
+      "post_time": "09:00:00",
+      "day_shape": "look_above_fail",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 30558.0,
+          "vs_settle": 896.0,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-06-12",
       "inventory": "SL",
@@ -115,12 +135,12 @@
         "actual": "A",
         "predicted": "A",
         "correct": true,
-        "detail": "Probed extreme then reverted toward value (range 29298-29587)",
-        "notes": null,
-        "gemini": "SCENARIO: Scenario A played out as buyers aggressively defended the lower overnight boundary to initiate a strong upward trend day. \n\nLEVELS: The low of 29230.0 found support just below OVN VAL 29280.0, initiating a rally that reclaimed OVN POC 29453.0 and broke through OVN VAH 29469.0 to close at 29677.75.\n\nVERDICT: Yes, the morning read was highly useful as the OVN VAL and VAH levels perfectly framed the day's key inflection and breakout points.",
-        "close": 29677.75,
-        "high": 29760.0,
-        "low": 29230.0
+        "detail": "Manually logged outcome",
+        "notes": "Read spot on \u2022 Traded \u2192 won \u2022 Discipline clean \u2022 Good read & execution",
+        "gemini": null,
+        "close": null,
+        "high": null,
+        "low": null
       },
       "intraday": [
         {
@@ -161,7 +181,7 @@
       ],
       "trades_summary": {
         "count": 1,
-        "pnl": -100.0
+        "pnl": 353.0
       }
     },
     {
