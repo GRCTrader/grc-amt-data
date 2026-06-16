@@ -1,9 +1,9 @@
 {
-  "updated": "2026-06-16T09:16:50.799432-04:00",
+  "updated": "2026-06-16T16:05:10.196878-04:00",
   "stats": {
-    "total_graded": 7,
-    "correct": 4,
-    "accuracy_pct": 57.1,
+    "total_graded": 8,
+    "correct": 5,
+    "accuracy_pct": 62.5,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -39,13 +39,18 @@
         "date": "2026-06-15",
         "pct": 57.1,
         "n": 7
+      },
+      {
+        "date": "2026-06-16",
+        "pct": 62.5,
+        "n": 8
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 7,
-        "correct": 4,
-        "pct": 57.1
+        "total": 8,
+        "correct": 5,
+        "pct": 62.5
       }
     },
     "calibration": {
@@ -55,9 +60,9 @@
         "pct": null
       },
       "60\u201370%": {
-        "correct": 0,
-        "total": 0,
-        "pct": null
+        "correct": 1,
+        "total": 1,
+        "pct": 100.0
       },
       "70\u201380%": {
         "correct": 4,
@@ -72,10 +77,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-06-16T09:16:50.799496-04:00",
+    "generated_at": "2026-06-16T16:05:10.196945-04:00",
     "last_brief_date": "2026-06-16",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-06-15",
+    "last_grade_date": "2026-06-16",
     "recent_failures": []
   },
   "coach": null,
@@ -103,6 +108,17 @@
       "day_shape_note": "With 100% long overnight inventory and a 62% probe-and-revert probability, expect an initial downward flush below OVN VAL of 30827.0 to reconcile inventory before rejecting and reverting back into overnight value.",
       "htf_bias": null,
       "htf_text": null,
+      "grade": {
+        "actual": "A",
+        "predicted": "A",
+        "correct": true,
+        "detail": "Manually logged outcome",
+        "notes": "Read spot on \u2022 Traded \u2192 won \u2022 Discipline mostly \u2022 Won but sloppy entry \u2022 Note: Result: I got my topstep evaluation that ive been trading here live to funded stage. \n\n+ 699 on the funded! \n+400 on lucid\n\n---\n\nComing into the market today, I felt a bit of FOMO. I really wanted to take longs because it looked like we wanted to move up right at the open, or even just before the open. I was also very bullish coming into today because my scoring system was heavily favori",
+        "gemini": "**SCENARIO:** Scenario C (17% confidence) played out as the market underwent a severe long liquidation trend day. The 100L overnight inventory unwound completely, driving prices down to a low of 30336.75.\n\n**LEVELS:** After failing near OVN POC 30876.0 and VAH 30876.75, price broke support at OVN VAL 30827.0 and VAL 30769.5, accelerating straight through Settle 30559.25.\n\n**VERDICT:** Yes, the 100L overnight inventory metric alerted traders to a high-reward liquidation trade once key support levels broke.",
+        "close": 30391.5,
+        "high": 30975.5,
+        "low": 30336.75
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -110,8 +126,40 @@
           "vs_settle": 272.25,
           "inside_va": true,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 30834.25,
+          "vs_settle": 275.0,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30769.50/30876.75, target POC 30856.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 30860.25,
+          "vs_settle": 301.0,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30769.50/30876.75, target POC 30856.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 30740.25,
+          "vs_settle": 181.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30769.50\u201330876.75."
+        },
+        {
+          "slot": "11:00",
+          "price": 30633.25,
+          "vs_settle": 74.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30769.50\u201330876.75."
         }
-      ]
+      ],
+      "trades_summary": {
+        "count": 1,
+        "pnl": 705.0
+      }
     },
     {
       "date": "2026-06-15",
