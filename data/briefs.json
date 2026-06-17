@@ -1,9 +1,9 @@
 {
-  "updated": "2026-06-17T09:01:45.936586-04:00",
+  "updated": "2026-06-17T16:05:25.506809-04:00",
   "stats": {
-    "total_graded": 8,
+    "total_graded": 9,
     "correct": 5,
-    "accuracy_pct": 62.5,
+    "accuracy_pct": 55.6,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -44,13 +44,18 @@
         "date": "2026-06-16",
         "pct": 62.5,
         "n": 8
+      },
+      {
+        "date": "2026-06-17",
+        "pct": 55.6,
+        "n": 9
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 8,
+        "total": 9,
         "correct": 5,
-        "pct": 62.5
+        "pct": 55.6
       }
     },
     "calibration": {
@@ -66,8 +71,8 @@
       },
       "70\u201380%": {
         "correct": 4,
-        "total": 7,
-        "pct": 57.1
+        "total": 8,
+        "pct": 50.0
       },
       "80%+": {
         "correct": 0,
@@ -77,11 +82,18 @@
     }
   },
   "ops": {
-    "generated_at": "2026-06-17T09:01:45.936652-04:00",
+    "generated_at": "2026-06-17T16:05:25.506879-04:00",
     "last_brief_date": "2026-06-17",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-06-16",
-    "recent_failures": []
+    "last_grade_date": "2026-06-17",
+    "recent_failures": [
+      {
+        "ts": "2026-06-17 16:05:25",
+        "label": "gemini",
+        "status": "error",
+        "detail": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+      }
+    ]
   },
   "coach": null,
   "days": [
@@ -108,6 +120,17 @@
       "day_shape_note": null,
       "htf_bias": null,
       "htf_text": null,
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Held inside value area (30310-30642)",
+        "notes": null,
+        "gemini": null,
+        "close": 29950.75,
+        "high": 30584.5,
+        "low": 29923.0
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -115,6 +138,34 @@
           "vs_settle": 511.5,
           "inside_va": true,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 30505.25,
+          "vs_settle": 510.25,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30310.00/30642.00, target POC 30334.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 30452.25,
+          "vs_settle": 457.25,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30310.00/30642.00, target POC 30334.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 30469.75,
+          "vs_settle": 474.75,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30310.00/30642.00, target POC 30334.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 30370.75,
+          "vs_settle": 375.75,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30310.00/30642.00, target POC 30334.00."
         }
       ]
     },
