@@ -1,9 +1,9 @@
 {
-  "updated": "2026-06-18T09:20:08.098317-04:00",
+  "updated": "2026-06-18T16:05:08.543602-04:00",
   "stats": {
-    "total_graded": 9,
+    "total_graded": 10,
     "correct": 5,
-    "accuracy_pct": 55.6,
+    "accuracy_pct": 50.0,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -49,13 +49,18 @@
         "date": "2026-06-17",
         "pct": 55.6,
         "n": 9
+      },
+      {
+        "date": "2026-06-18",
+        "pct": 50.0,
+        "n": 10
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 9,
+        "total": 10,
         "correct": 5,
-        "pct": 55.6
+        "pct": 50.0
       }
     },
     "calibration": {
@@ -71,8 +76,8 @@
       },
       "70\u201380%": {
         "correct": 4,
-        "total": 8,
-        "pct": 50.0
+        "total": 9,
+        "pct": 44.4
       },
       "80%+": {
         "correct": 0,
@@ -82,10 +87,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-06-18T09:20:08.098385-04:00",
+    "generated_at": "2026-06-18T16:05:08.543672-04:00",
     "last_brief_date": "2026-06-18",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-06-17",
+    "last_grade_date": "2026-06-18",
     "recent_failures": [
       {
         "ts": "2026-06-17 16:05:25",
@@ -120,6 +125,17 @@
       "day_shape_note": null,
       "htf_bias": null,
       "htf_text": null,
+      "grade": {
+        "actual": "B",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Closed beyond OVN extreme (last 30646, OVN 29993-30500)",
+        "notes": null,
+        "gemini": "SCENARIO: Price opened above OVN VAH (30375) and VAH (30499), establishing initial strength. It then trended strongly upwards, closing significantly higher at 30749.25, indicating a clear buy-side driven trend day.\n\nLEVELS: OVN VAH (30375) provided initial support, with the low at 30096.0 remaining above OVN VAL (30040). Price then broke decisively above VAH (30499) and remained above it for the rest of the day.\n\nVERDICT: Yes, the morning read was highly useful, as key OVN and Value Area levels accurately defined support zones for the strong upward trend.",
+        "close": 30749.25,
+        "high": 30783.25,
+        "low": 30096.0
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -127,6 +143,34 @@
           "vs_settle": 790.0,
           "inside_va": true,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 30526.5,
+          "vs_settle": 839.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30329.00\u201330499.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 30496.25,
+          "vs_settle": 808.75,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30329.00/30499.00, target POC 30399.25."
+        },
+        {
+          "slot": "10:30",
+          "price": 30600.25,
+          "vs_settle": 912.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30329.00\u201330499.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 30646.5,
+          "vs_settle": 959.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30329.00\u201330499.00."
         }
       ]
     },
