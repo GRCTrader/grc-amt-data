@@ -1,9 +1,9 @@
 {
-  "updated": "2026-06-19T09:02:43.832947-04:00",
+  "updated": "2026-06-19T16:05:20.363175-04:00",
   "stats": {
-    "total_graded": 10,
-    "correct": 5,
-    "accuracy_pct": 50.0,
+    "total_graded": 11,
+    "correct": 6,
+    "accuracy_pct": 54.5,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -54,13 +54,18 @@
         "date": "2026-06-18",
         "pct": 50.0,
         "n": 10
+      },
+      {
+        "date": "2026-06-19",
+        "pct": 54.5,
+        "n": 11
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 10,
-        "correct": 5,
-        "pct": 50.0
+        "total": 11,
+        "correct": 6,
+        "pct": 54.5
       }
     },
     "calibration": {
@@ -70,8 +75,8 @@
         "pct": null
       },
       "60\u201370%": {
-        "correct": 1,
-        "total": 1,
+        "correct": 2,
+        "total": 2,
         "pct": 100.0
       },
       "70\u201380%": {
@@ -87,10 +92,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-06-19T09:02:43.832973-04:00",
+    "generated_at": "2026-06-19T16:05:20.363197-04:00",
     "last_brief_date": "2026-06-19",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-06-18",
+    "last_grade_date": "2026-06-19",
     "recent_failures": [
       {
         "ts": "2026-06-17 16:05:25",
@@ -125,6 +130,17 @@
       "day_shape_note": null,
       "htf_bias": null,
       "htf_text": null,
+      "grade": {
+        "actual": "A",
+        "predicted": "A",
+        "correct": true,
+        "detail": "Probed extreme then reverted toward value (range 30506-30506)",
+        "notes": null,
+        "gemini": "SCENARIO: The day was clearly rotational, probing above OVN High (30737.0) to 30770.75 and below VAL (30528.0) to 30388.0, before closing at 30647.0 within the Value Area. This indicates Scenario B, a balanced or rotational day, likely played out.\n\nLEVELS: Price initially rejected OVN High (30737.0) and VAH (30721.0), then broke OVN Low (30650.0) and VAL (30528.0). It later rejected the low probe, closing just below OVN Low at 30647.0.\n\nVERDICT: The morning read was useful as OVN and VA levels provided excellent reference points for identifying rejection and acceptance zones during the rotation.",
+        "close": 30647.0,
+        "high": 30770.75,
+        "low": 30388.0
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -132,6 +148,34 @@
           "vs_settle": 243.150390625,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 30506.5,
+          "vs_settle": 243.150390625,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30528.00\u201330721.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 30506.5,
+          "vs_settle": 243.150390625,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30528.00\u201330721.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 30506.5,
+          "vs_settle": 243.150390625,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30528.00\u201330721.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 30506.5,
+          "vs_settle": 243.150390625,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30528.00\u201330721.00."
         }
       ]
     },
