@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22T08:21:10.205029-04:00",
+  "updated": "2026-06-22T09:01:46.335350-04:00",
   "stats": {
     "total_graded": 11,
     "correct": 6,
@@ -101,9 +101,9 @@
     "win_rate_by_model": {}
   },
   "ops": {
-    "generated_at": "2026-06-22T08:21:10.205041-04:00",
+    "generated_at": "2026-06-22T09:01:46.335365-04:00",
     "last_brief_date": "2026-06-22",
-    "last_brief_time": null,
+    "last_brief_time": "09:00:00",
     "last_grade_date": "2026-06-19",
     "recent_failures": []
   },
@@ -115,34 +115,65 @@
   "days": [
     {
       "date": "2026-06-22",
-      "inventory": null,
-      "vah": 30786.25,
-      "poc": 30773.25,
-      "val": null,
-      "settle": null,
-      "ovn_high": null,
-      "ovn_low": null,
-      "ovn_poc": null,
-      "ovn_vah": null,
-      "ovn_val": null,
-      "scenario_a": null,
-      "scenario_b": null,
-      "scenario_c": null,
-      "confidence_a": null,
-      "confidence_b": null,
-      "confidence_c": null,
-      "post_time": null,
-      "day_shape": null,
+      "inventory": "100L",
+      "vah": 30721.0,
+      "poc": 30720.0,
+      "val": 30528.0,
+      "settle": 30263.349609375,
+      "ovn_high": 30844.75,
+      "ovn_low": 30505.5,
+      "ovn_poc": 30707.0,
+      "ovn_vah": 30743.0,
+      "ovn_val": 30573.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.78,
+      "confidence_b": 0.1,
+      "confidence_c": 0.12,
+      "post_time": "09:00:00",
+      "day_shape": "failed_auction",
       "day_shape_note": null,
       "htf_bias": null,
       "htf_text": null,
-      "regime": null,
-      "invalidation": null,
-      "plan": null,
-      "risk": null,
-      "predicted_model": null,
-      "vol_regime": null,
-      "models": []
+      "regime": "Rule-based seed (AI unavailable).",
+      "invalidation": "",
+      "plan": "",
+      "risk": "",
+      "predicted_model": "failed_auction",
+      "vol_regime": "normal",
+      "models": [
+        {
+          "model": "failed_auction",
+          "probability": 78,
+          "confidence": "medium",
+          "why": "Directional overnight inventory favours a probe-and-revert.",
+          "stat_support": ""
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 12,
+          "confidence": "low",
+          "why": "Two-sided trade holds value if neither extreme accepts.",
+          "stat_support": ""
+        },
+        {
+          "model": "trend_up",
+          "probability": 10,
+          "confidence": "medium",
+          "why": "Acceptance beyond the overnight extreme would extend the move.",
+          "stat_support": ""
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 30806.5,
+          "vs_settle": 543.150390625,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
     },
     {
       "date": "2026-06-21",
