@@ -1,9 +1,9 @@
 {
-  "updated": "2026-06-22T09:15:54.797964-04:00",
+  "updated": "2026-06-22T11:05:26.228413-04:00",
   "stats": {
-    "total_graded": 11,
+    "total_graded": 12,
     "correct": 6,
-    "accuracy_pct": 54.5,
+    "accuracy_pct": 50.0,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -59,13 +59,18 @@
         "date": "2026-06-19",
         "pct": 54.5,
         "n": 11
+      },
+      {
+        "date": "2026-06-22",
+        "pct": 50.0,
+        "n": 12
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 11,
+        "total": 12,
         "correct": 6,
-        "pct": 54.5
+        "pct": 50.0
       }
     },
     "calibration": {
@@ -81,8 +86,8 @@
       },
       "70\u201380%": {
         "correct": 4,
-        "total": 9,
-        "pct": 44.4
+        "total": 10,
+        "pct": 40.0
       },
       "80%+": {
         "correct": 0,
@@ -92,7 +97,7 @@
     },
     "model_reliability": {
       "A": {
-        "total": 1,
+        "total": 2,
         "correct": 0,
         "label": "A",
         "pct": 0.0
@@ -101,10 +106,10 @@
     "win_rate_by_model": {}
   },
   "ops": {
-    "generated_at": "2026-06-22T09:15:54.797987-04:00",
+    "generated_at": "2026-06-22T11:05:26.228426-04:00",
     "last_brief_date": "2026-06-22",
-    "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-06-19",
+    "last_brief_time": "09:25:34",
+    "last_grade_date": "2026-06-22",
     "recent_failures": []
   },
   "coach": null,
@@ -116,62 +121,82 @@
     {
       "date": "2026-06-22",
       "inventory": "100L",
-      "vah": 30865.5,
-      "poc": 30725.25,
-      "val": 30576.5,
+      "vah": 30721.0,
+      "poc": 30720.0,
+      "val": 30528.0,
       "settle": 30263.349609375,
-      "ovn_high": 30844.75,
+      "ovn_high": 30869.75,
       "ovn_low": 30505.5,
       "ovn_poc": 30707.0,
       "ovn_vah": 30743.0,
-      "ovn_val": 30573.0,
+      "ovn_val": 30546.0,
       "scenario_a": "A",
       "scenario_b": "B",
       "scenario_c": "C",
       "confidence_a": 0.78,
       "confidence_b": 0.1,
       "confidence_c": 0.12,
-      "post_time": "09:00:00",
-      "day_shape": "failed_auction",
+      "post_time": "09:25:34",
+      "day_shape": null,
       "day_shape_note": null,
       "htf_bias": null,
       "htf_text": null,
-      "regime": "Rule-based seed (AI unavailable).",
-      "invalidation": "",
-      "plan": "",
-      "risk": "",
-      "predicted_model": "failed_auction",
-      "vol_regime": "normal",
-      "models": [
-        {
-          "model": "failed_auction",
-          "probability": 78,
-          "confidence": "medium",
-          "why": "Directional overnight inventory favours a probe-and-revert.",
-          "stat_support": ""
-        },
-        {
-          "model": "rotational_balance",
-          "probability": 12,
-          "confidence": "low",
-          "why": "Two-sided trade holds value if neither extreme accepts.",
-          "stat_support": ""
-        },
-        {
-          "model": "trend_up",
-          "probability": 10,
-          "confidence": "medium",
-          "why": "Acceptance beyond the overnight extreme would extend the move.",
-          "stat_support": ""
-        }
-      ],
+      "regime": null,
+      "invalidation": null,
+      "plan": null,
+      "risk": null,
+      "predicted_model": null,
+      "vol_regime": null,
+      "models": [],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Two-sided, range 30558-30968, close 30580",
+        "notes": null,
+        "gemini": "SCENARIO: The market opened above OVN VAH (30743) and VAH (30721), rallied to 30968.0, but faced strong rejection. Price then trended downwards, penetrating all value and OVN levels, suggesting a Scenario C (failed auction/reversal day).\n\nLEVELS: The market opened above OVN VAH (30743) and VAH (30721). After rejection, price pierced OVN POC (30707) and POC (30720), eventually testing OVN VAL (30546) and VAL (30528) with a low of 30558.0.\n\nVERDICT: The morning read provided useful reference levels, but its implied high-confidence scenario did not play out, as the market experienced a strong reversal.",
+        "close": 30580.25,
+        "high": 30968.0,
+        "low": 30558.0,
+        "predicted_model": "A",
+        "actual_model": "range_expansion",
+        "model_correct": false
+      },
       "intraday": [
         {
           "slot": "09:00",
-          "price": 30806.5,
-          "vs_settle": 543.150390625,
+          "price": 30857.75,
+          "vs_settle": 594.400390625,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 30857.0,
+          "vs_settle": 593.650390625,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30528.00\u201330721.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 30882.75,
+          "vs_settle": 619.400390625,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30528.00\u201330721.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 30874.75,
+          "vs_settle": 611.400390625,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30528.00\u201330721.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 30629.75,
+          "vs_settle": 366.400390625,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30528.00/30721.00, target POC 30720.00."
         }
       ]
     },
