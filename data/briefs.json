@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22T11:05:26.228413-04:00",
+  "updated": "2026-06-23T09:01:07.985265-04:00",
   "stats": {
     "total_graded": 12,
     "correct": 6,
@@ -106,9 +106,9 @@
     "win_rate_by_model": {}
   },
   "ops": {
-    "generated_at": "2026-06-22T11:05:26.228426-04:00",
-    "last_brief_date": "2026-06-22",
-    "last_brief_time": "09:25:34",
+    "generated_at": "2026-06-23T09:01:07.985290-04:00",
+    "last_brief_date": "2026-06-23",
+    "last_brief_time": "09:00:00",
     "last_grade_date": "2026-06-22",
     "recent_failures": []
   },
@@ -118,6 +118,68 @@
     "text": "SCORECARD\nMarket Read: 9/10 \u2014 Accurate assessment of NQ distribution and HTF levels on June 16.\nLevel Selection: 9/10 \u2014 Caught the exact structural inflection point for the long.\nExecution: 10/10 \u2014 Clean entry on the 16th, zero hesitation.\nRisk Management: 10/10 \u2014 Sized correctly on the mini, no scaling into trouble.\nPsychology: 10/10 \u2014 Logged as confident, zero FOMO on no-trade days.\nDiscipline: 10/10 \u2014 Walked away after your single win, respected the June 17 news block.\n\nPNL\nNet: $+705 | Best/Worst Day: $+705 (06-16) | Profit Factor: N/A | Avg R: 3.5R\n\nWHAT WORKED\n* HTF Location Alignment: Your June 16 NQ long was a textbook example of waiting for price to trade into discount structural support before triggering.\n* No-Trade Discipline: Sitting out June 17 due to news preserved your mental capital and protected your $705 gain from high-volatility noise.\n\nBIGGEST LEAK\nInactivity-Induced Complacency. While your execution was flawless, a one-trade week can trigger \"Trader B\" next week. When you trade this infrequently, the urge to force trades or over-leverage to \"make things happen\" on Monday is your highest-risk leak. Do not let this single win make you sloppy with your entry model.\n\nBEST & WORST TRADE\nBest: 2026-06-16 NQ Long (+3.5R) \u2014 Patiently waited for location and rode it to target.\nWorst: None \u2014 A clean, disciplined sheet.\n\n    NEXT WEEK\nTrade only one funded account and force yourself to write down the HTF confirmation trigger in your journal *before* you click buy or sell."
   },
   "days": [
+    {
+      "date": "2026-06-23",
+      "inventory": "100S",
+      "vah": 30941.0,
+      "poc": 30815.0,
+      "val": 30598.0,
+      "settle": 30653.5,
+      "ovn_high": 30701.25,
+      "ovn_low": 29706.5,
+      "ovn_poc": 30661.0,
+      "ovn_vah": 30664.0,
+      "ovn_val": 29867.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.75,
+      "confidence_b": 0.12,
+      "confidence_c": 0.13,
+      "post_time": "09:00:00",
+      "day_shape": "failed_auction",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Rule-based seed (AI unavailable).",
+      "invalidation": "",
+      "plan": "",
+      "risk": "",
+      "predicted_model": "failed_auction",
+      "vol_regime": "high",
+      "models": [
+        {
+          "model": "failed_auction",
+          "probability": 75,
+          "confidence": "medium",
+          "why": "Directional overnight inventory favours a probe-and-revert.",
+          "stat_support": ""
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 13,
+          "confidence": "low",
+          "why": "Two-sided trade holds value if neither extreme accepts.",
+          "stat_support": ""
+        },
+        {
+          "model": "trend_down",
+          "probability": 12,
+          "confidence": "medium",
+          "why": "Acceptance beyond the overnight extreme would extend the move.",
+          "stat_support": ""
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29741.25,
+          "vs_settle": -912.25,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-06-22",
       "inventory": "100L",
@@ -198,7 +260,11 @@
           "inside_va": true,
           "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30528.00/30721.00, target POC 30720.00."
         }
-      ]
+      ],
+      "trades_summary": {
+        "count": 1,
+        "pnl": -158.0
+      }
     },
     {
       "date": "2026-06-21",
