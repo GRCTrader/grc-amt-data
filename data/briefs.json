@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T11:05:57.327142-04:00",
+  "updated": "2026-06-24T09:02:30.650279-04:00",
   "stats": {
     "total_graded": 13,
     "correct": 6,
@@ -114,14 +114,27 @@
         "pct": 0.0
       }
     },
-    "win_rate_by_model": {}
+    "win_rate_by_model": {
+      "failed_auction": {
+        "label": "\ud83e\udea4 Failed Auction",
+        "trades": 1,
+        "win_rate": 100.0,
+        "exp": 134.0
+      }
+    }
   },
   "ops": {
-    "generated_at": "2026-06-23T11:05:57.327166-04:00",
-    "last_brief_date": "2026-06-23",
+    "generated_at": "2026-06-24T09:02:30.650299-04:00",
+    "last_brief_date": "2026-06-24",
     "last_brief_time": "09:00:00",
     "last_grade_date": "2026-06-23",
     "recent_failures": [
+      {
+        "ts": "2026-06-24 08:04:08",
+        "label": "gemini",
+        "status": "error",
+        "detail": "x_extract: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+      },
       {
         "ts": "2026-06-23 11:05:57",
         "label": "gemini",
@@ -136,6 +149,73 @@
     "text": "SCORECARD\nMarket Read: 9/10 \u2014 Accurate assessment of NQ distribution and HTF levels on June 16.\nLevel Selection: 9/10 \u2014 Caught the exact structural inflection point for the long.\nExecution: 10/10 \u2014 Clean entry on the 16th, zero hesitation.\nRisk Management: 10/10 \u2014 Sized correctly on the mini, no scaling into trouble.\nPsychology: 10/10 \u2014 Logged as confident, zero FOMO on no-trade days.\nDiscipline: 10/10 \u2014 Walked away after your single win, respected the June 17 news block.\n\nPNL\nNet: $+705 | Best/Worst Day: $+705 (06-16) | Profit Factor: N/A | Avg R: 3.5R\n\nWHAT WORKED\n* HTF Location Alignment: Your June 16 NQ long was a textbook example of waiting for price to trade into discount structural support before triggering.\n* No-Trade Discipline: Sitting out June 17 due to news preserved your mental capital and protected your $705 gain from high-volatility noise.\n\nBIGGEST LEAK\nInactivity-Induced Complacency. While your execution was flawless, a one-trade week can trigger \"Trader B\" next week. When you trade this infrequently, the urge to force trades or over-leverage to \"make things happen\" on Monday is your highest-risk leak. Do not let this single win make you sloppy with your entry model.\n\nBEST & WORST TRADE\nBest: 2026-06-16 NQ Long (+3.5R) \u2014 Patiently waited for location and rode it to target.\nWorst: None \u2014 A clean, disciplined sheet.\n\n    NEXT WEEK\nTrade only one funded account and force yourself to write down the HTF confirmation trigger in your journal *before* you click buy or sell."
   },
   "days": [
+    {
+      "date": "2026-06-24",
+      "inventory": "100L",
+      "vah": 29867.0,
+      "poc": 29674.0,
+      "val": 29614.0,
+      "settle": 29666.0,
+      "ovn_high": 29891.75,
+      "ovn_low": 29585.5,
+      "ovn_poc": 29663.0,
+      "ovn_vah": 29820.0,
+      "ovn_val": 29613.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.74,
+      "confidence_b": 0.1,
+      "confidence_c": 0.16,
+      "post_time": "09:00:00",
+      "day_shape": "failed_auction",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Rule-based seed (AI unavailable).",
+      "invalidation": "",
+      "plan": "",
+      "risk": "",
+      "predicted_model": "failed_auction",
+      "vol_regime": "normal",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "failed_auction",
+          "probability": 74,
+          "confidence": "medium",
+          "why": "Directional overnight inventory favours a probe-and-revert.",
+          "stat_support": ""
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 16,
+          "confidence": "low",
+          "why": "Two-sided trade holds value if neither extreme accepts.",
+          "stat_support": ""
+        },
+        {
+          "model": "trend_up",
+          "probability": 10,
+          "confidence": "medium",
+          "why": "Acceptance beyond the overnight extreme would extend the move.",
+          "stat_support": ""
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29793.0,
+          "vs_settle": 127.0,
+          "inside_va": true,
+          "call": "Morning brief anchor"
+        }
+      ],
+      "trades_summary": {
+        "count": 1,
+        "pnl": 134.0
+      }
+    },
     {
       "date": "2026-06-23",
       "inventory": "100S",
@@ -165,6 +245,7 @@
       "risk": "",
       "predicted_model": "failed_auction",
       "vol_regime": "high",
+      "tpo_read": null,
       "models": [
         {
           "model": "failed_auction",
@@ -269,6 +350,7 @@
       "risk": null,
       "predicted_model": null,
       "vol_regime": null,
+      "tpo_read": null,
       "models": [],
       "grade": {
         "actual": "C",
@@ -355,6 +437,7 @@
       "risk": null,
       "predicted_model": null,
       "vol_regime": null,
+      "tpo_read": null,
       "models": [],
       "intraday": [
         {
@@ -395,6 +478,7 @@
       "risk": null,
       "predicted_model": null,
       "vol_regime": null,
+      "tpo_read": null,
       "models": [],
       "grade": {
         "actual": "A",
@@ -476,6 +560,7 @@
       "risk": null,
       "predicted_model": null,
       "vol_regime": null,
+      "tpo_read": null,
       "models": [],
       "grade": {
         "actual": "B",
@@ -557,6 +642,7 @@
       "risk": null,
       "predicted_model": null,
       "vol_regime": null,
+      "tpo_read": null,
       "models": [],
       "grade": {
         "actual": "C",
@@ -638,6 +724,7 @@
       "risk": null,
       "predicted_model": null,
       "vol_regime": null,
+      "tpo_read": null,
       "models": [],
       "grade": {
         "actual": "A",
@@ -723,6 +810,7 @@
       "risk": null,
       "predicted_model": null,
       "vol_regime": null,
+      "tpo_read": null,
       "models": [],
       "grade": {
         "actual": "B",
@@ -804,6 +892,7 @@
       "risk": null,
       "predicted_model": null,
       "vol_regime": null,
+      "tpo_read": null,
       "models": [],
       "grade": {
         "actual": "A",
@@ -889,6 +978,7 @@
       "risk": null,
       "predicted_model": null,
       "vol_regime": null,
+      "tpo_read": null,
       "models": [],
       "grade": {
         "actual": "B",
@@ -975,6 +1065,7 @@
       "risk": null,
       "predicted_model": null,
       "vol_regime": null,
+      "tpo_read": null,
       "models": [],
       "grade": {
         "actual": "C",
@@ -1032,6 +1123,7 @@
       "risk": null,
       "predicted_model": null,
       "vol_regime": null,
+      "tpo_read": null,
       "models": [],
       "grade": {
         "actual": "A",
@@ -1117,6 +1209,7 @@
       "risk": null,
       "predicted_model": null,
       "vol_regime": null,
+      "tpo_read": null,
       "models": [],
       "intraday": [
         {
@@ -1185,6 +1278,7 @@
       "risk": null,
       "predicted_model": null,
       "vol_regime": null,
+      "tpo_read": null,
       "models": [],
       "intraday": [
         {
@@ -1229,6 +1323,7 @@
       "risk": null,
       "predicted_model": null,
       "vol_regime": null,
+      "tpo_read": null,
       "models": [],
       "intraday": [
         {
@@ -1297,6 +1392,7 @@
       "risk": null,
       "predicted_model": null,
       "vol_regime": null,
+      "tpo_read": null,
       "models": [],
       "grade": {
         "actual": "A",
@@ -1371,6 +1467,7 @@
       "risk": null,
       "predicted_model": null,
       "vol_regime": null,
+      "tpo_read": null,
       "models": [],
       "grade": {
         "actual": "A",
