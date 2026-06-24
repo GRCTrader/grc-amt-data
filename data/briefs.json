@@ -1,9 +1,9 @@
 {
-  "updated": "2026-06-24T09:02:30.650279-04:00",
+  "updated": "2026-06-24T11:05:52.729263-04:00",
   "stats": {
-    "total_graded": 13,
-    "correct": 6,
-    "accuracy_pct": 46.2,
+    "total_graded": 14,
+    "correct": 7,
+    "accuracy_pct": 50.0,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -69,13 +69,18 @@
         "date": "2026-06-23",
         "pct": 46.2,
         "n": 13
+      },
+      {
+        "date": "2026-06-24",
+        "pct": 50.0,
+        "n": 14
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 13,
-        "correct": 6,
-        "pct": 46.2
+        "total": 14,
+        "correct": 7,
+        "pct": 50.0
       }
     },
     "calibration": {
@@ -90,9 +95,9 @@
         "pct": 100.0
       },
       "70\u201380%": {
-        "correct": 4,
-        "total": 11,
-        "pct": 36.4
+        "correct": 5,
+        "total": 12,
+        "pct": 41.7
       },
       "80%+": {
         "correct": 0,
@@ -108,27 +113,45 @@
         "pct": 0.0
       },
       "failed_auction": {
-        "total": 1,
-        "correct": 0,
+        "total": 2,
+        "correct": 1,
         "label": "\ud83e\udea4 Failed Auction",
-        "pct": 0.0
+        "pct": 50.0
       }
     },
     "win_rate_by_model": {
       "failed_auction": {
         "label": "\ud83e\udea4 Failed Auction",
-        "trades": 1,
-        "win_rate": 100.0,
-        "exp": 134.0
+        "trades": 2,
+        "win_rate": 50.0,
+        "exp": -83.0
       }
     }
   },
   "ops": {
-    "generated_at": "2026-06-24T09:02:30.650299-04:00",
+    "generated_at": "2026-06-24T11:05:52.729280-04:00",
     "last_brief_date": "2026-06-24",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-06-23",
+    "last_grade_date": "2026-06-24",
     "recent_failures": [
+      {
+        "ts": "2026-06-24 11:05:52",
+        "label": "gemini",
+        "status": "error",
+        "detail": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+      },
+      {
+        "ts": "2026-06-24 09:52:31",
+        "label": "gemini",
+        "status": "error",
+        "detail": "x_extract: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+      },
+      {
+        "ts": "2026-06-24 09:51:59",
+        "label": "gemini",
+        "status": "error",
+        "detail": "x_extract: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+      },
       {
         "ts": "2026-06-24 08:04:08",
         "label": "gemini",
@@ -202,6 +225,20 @@
           "stat_support": ""
         }
       ],
+      "grade": {
+        "actual": "A",
+        "predicted": "A",
+        "correct": true,
+        "detail": "Swept OVN low 29586, failed, closed 29812",
+        "notes": null,
+        "gemini": null,
+        "close": 29812.5,
+        "high": 29877.75,
+        "low": 29525.0,
+        "predicted_model": "failed_auction",
+        "actual_model": "failed_auction",
+        "model_correct": true
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -209,11 +246,39 @@
           "vs_settle": 127.0,
           "inside_va": true,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29734.75,
+          "vs_settle": 68.75,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29614.00/29867.00, target POC 29674.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 29661.5,
+          "vs_settle": -4.5,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29614.00/29867.00, target POC 29674.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 29584.25,
+          "vs_settle": -81.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29614.00\u201329867.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 29832.5,
+          "vs_settle": 166.5,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29614.00/29867.00, target POC 29674.00."
         }
       ],
       "trades_summary": {
-        "count": 1,
-        "pnl": 134.0
+        "count": 2,
+        "pnl": -166.0
       }
     },
     {
