@@ -1,9 +1,9 @@
 {
-  "updated": "2026-06-25T09:23:39.828340-04:00",
+  "updated": "2026-06-25T11:05:26.203676-04:00",
   "stats": {
-    "total_graded": 14,
+    "total_graded": 15,
     "correct": 7,
-    "accuracy_pct": 50.0,
+    "accuracy_pct": 46.7,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -74,13 +74,18 @@
         "date": "2026-06-24",
         "pct": 50.0,
         "n": 14
+      },
+      {
+        "date": "2026-06-25",
+        "pct": 46.7,
+        "n": 15
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 14,
+        "total": 15,
         "correct": 7,
-        "pct": 50.0
+        "pct": 46.7
       }
     },
     "calibration": {
@@ -96,8 +101,8 @@
       },
       "70\u201380%": {
         "correct": 5,
-        "total": 12,
-        "pct": 41.7
+        "total": 13,
+        "pct": 38.5
       },
       "80%+": {
         "correct": 0,
@@ -113,10 +118,10 @@
         "pct": 0.0
       },
       "failed_auction": {
-        "total": 2,
+        "total": 3,
         "correct": 1,
         "label": "\ud83e\udea4 Failed Auction",
-        "pct": 50.0
+        "pct": 33.3
       }
     },
     "win_rate_by_model": {
@@ -124,16 +129,22 @@
         "label": "\ud83e\udea4 Failed Auction",
         "trades": 2,
         "win_rate": 50.0,
-        "exp": -83.0
+        "exp": 150.0
       }
     }
   },
   "ops": {
-    "generated_at": "2026-06-25T09:23:39.828357-04:00",
+    "generated_at": "2026-06-25T11:05:26.203696-04:00",
     "last_brief_date": "2026-06-25",
     "last_brief_time": "08:00:01",
-    "last_grade_date": "2026-06-24",
+    "last_grade_date": "2026-06-25",
     "recent_failures": [
+      {
+        "ts": "2026-06-25 11:05:26",
+        "label": "gemini",
+        "status": "error",
+        "detail": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+      },
       {
         "ts": "2026-06-24 11:05:52",
         "label": "gemini",
@@ -157,12 +168,6 @@
         "label": "gemini",
         "status": "error",
         "detail": "x_extract: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
-      },
-      {
-        "ts": "2026-06-23 11:05:57",
-        "label": "gemini",
-        "status": "error",
-        "detail": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
       }
     ]
   },
@@ -225,6 +230,20 @@
           "stat_support": ""
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Two-sided, range 29296-30264, close 29774",
+        "notes": null,
+        "gemini": null,
+        "close": 29773.75,
+        "high": 30263.75,
+        "low": 29295.75,
+        "predicted_model": "failed_auction",
+        "actual_model": "range_expansion",
+        "model_correct": false
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -232,6 +251,34 @@
           "vs_settle": 618.75,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 30144.75,
+          "vs_settle": 630.5,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29993.00/30221.50, target POC 30106.25."
+        },
+        {
+          "slot": "10:00",
+          "price": 29644.5,
+          "vs_settle": 130.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29993.00\u201330221.50."
+        },
+        {
+          "slot": "10:30",
+          "price": 29612.25,
+          "vs_settle": 98.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29993.00\u201330221.50."
+        },
+        {
+          "slot": "11:00",
+          "price": 29673.25,
+          "vs_settle": 159.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29993.00\u201330221.50."
         }
       ]
     },
@@ -341,7 +388,7 @@
       ],
       "trades_summary": {
         "count": 2,
-        "pnl": -166.0
+        "pnl": 300.0
       }
     },
     {
