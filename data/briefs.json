@@ -1,9 +1,9 @@
 {
-  "updated": "2026-06-26T09:37:06.531748-04:00",
+  "updated": "2026-06-26T11:05:08.445515-04:00",
   "stats": {
-    "total_graded": 15,
+    "total_graded": 16,
     "correct": 7,
-    "accuracy_pct": 46.7,
+    "accuracy_pct": 43.8,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -79,13 +79,18 @@
         "date": "2026-06-25",
         "pct": 46.7,
         "n": 15
+      },
+      {
+        "date": "2026-06-26",
+        "pct": 43.8,
+        "n": 16
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 15,
+        "total": 16,
         "correct": 7,
-        "pct": 46.7
+        "pct": 43.8
       }
     },
     "calibration": {
@@ -101,8 +106,8 @@
       },
       "70\u201380%": {
         "correct": 5,
-        "total": 13,
-        "pct": 38.5
+        "total": 14,
+        "pct": 35.7
       },
       "80%+": {
         "correct": 0,
@@ -122,6 +127,12 @@
         "correct": 1,
         "label": "\ud83e\udea4 Failed Auction",
         "pct": 33.3
+      },
+      "short_covering": {
+        "total": 1,
+        "correct": 0,
+        "label": "\ud83d\ude80 Short-Covering Rally",
+        "pct": 0.0
       }
     },
     "win_rate_by_model": {
@@ -134,10 +145,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-06-26T09:37:06.531762-04:00",
+    "generated_at": "2026-06-26T11:05:08.445537-04:00",
     "last_brief_date": "2026-06-26",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-06-25",
+    "last_grade_date": "2026-06-26",
     "recent_failures": [
       {
         "ts": "2026-06-25 11:05:26",
@@ -237,11 +248,46 @@
           "stat_support": "London-low made first in 44% of similar sessions"
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Held value 29161-29646",
+        "notes": null,
+        "gemini": "**SCENARIO:** Scenario A played out because the market rallied from the open to correct the 100S overnight inventory.\n\n**LEVELS:** VAL at 29161.0 provided solid support near the session low of 29181.5, while the upward move topped out just above VAH (29646.5) at 29665.25.\n\n**VERDICT:** Yes, the morning read was highly useful as the value area limits accurately framed the entire day's range.",
+        "close": 29520.5,
+        "high": 29665.25,
+        "low": 29181.5,
+        "predicted_model": "short_covering",
+        "actual_model": "rotational_balance",
+        "model_correct": false
+      },
       "intraday": [
         {
           "slot": "09:30",
           "price": 29254.75,
           "vs_settle": -470.0,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29161.00/29646.50, target POC 29369.25."
+        },
+        {
+          "slot": "10:00",
+          "price": 29267.25,
+          "vs_settle": -457.5,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29161.00/29646.50, target POC 29369.25."
+        },
+        {
+          "slot": "10:30",
+          "price": 29529.25,
+          "vs_settle": -195.5,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29161.00/29646.50, target POC 29369.25."
+        },
+        {
+          "slot": "11:00",
+          "price": 29532.75,
+          "vs_settle": -192.0,
           "inside_va": true,
           "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29161.00/29646.50, target POC 29369.25."
         }
