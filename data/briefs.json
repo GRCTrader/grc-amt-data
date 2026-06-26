@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T11:05:26.203676-04:00",
+  "updated": "2026-06-26T09:11:12.431076-04:00",
   "stats": {
     "total_graded": 15,
     "correct": 7,
@@ -127,16 +127,16 @@
     "win_rate_by_model": {
       "failed_auction": {
         "label": "\ud83e\udea4 Failed Auction",
-        "trades": 2,
+        "trades": 4,
         "win_rate": 50.0,
         "exp": 150.0
       }
     }
   },
   "ops": {
-    "generated_at": "2026-06-25T11:05:26.203696-04:00",
-    "last_brief_date": "2026-06-25",
-    "last_brief_time": "08:00:01",
+    "generated_at": "2026-06-26T09:11:12.431098-04:00",
+    "last_brief_date": "2026-06-26",
+    "last_brief_time": "09:00:00",
     "last_grade_date": "2026-06-25",
     "recent_failures": [
       {
@@ -177,6 +177,67 @@
     "text": "SCORECARD\nMarket Read: 9/10 \u2014 Accurate assessment of NQ distribution and HTF levels on June 16.\nLevel Selection: 9/10 \u2014 Caught the exact structural inflection point for the long.\nExecution: 10/10 \u2014 Clean entry on the 16th, zero hesitation.\nRisk Management: 10/10 \u2014 Sized correctly on the mini, no scaling into trouble.\nPsychology: 10/10 \u2014 Logged as confident, zero FOMO on no-trade days.\nDiscipline: 10/10 \u2014 Walked away after your single win, respected the June 17 news block.\n\nPNL\nNet: $+705 | Best/Worst Day: $+705 (06-16) | Profit Factor: N/A | Avg R: 3.5R\n\nWHAT WORKED\n* HTF Location Alignment: Your June 16 NQ long was a textbook example of waiting for price to trade into discount structural support before triggering.\n* No-Trade Discipline: Sitting out June 17 due to news preserved your mental capital and protected your $705 gain from high-volatility noise.\n\nBIGGEST LEAK\nInactivity-Induced Complacency. While your execution was flawless, a one-trade week can trigger \"Trader B\" next week. When you trade this infrequently, the urge to force trades or over-leverage to \"make things happen\" on Monday is your highest-risk leak. Do not let this single win make you sloppy with your entry model.\n\nBEST & WORST TRADE\nBest: 2026-06-16 NQ Long (+3.5R) \u2014 Patiently waited for location and rode it to target.\nWorst: None \u2014 A clean, disciplined sheet.\n\n    NEXT WEEK\nTrade only one funded account and force yourself to write down the HTF confirmation trigger in your journal *before* you click buy or sell."
   },
   "days": [
+    {
+      "date": "2026-06-26",
+      "inventory": "100S",
+      "vah": 29646.5,
+      "poc": 29369.25,
+      "val": 29161.0,
+      "settle": 29724.75,
+      "ovn_high": 29922.5,
+      "ovn_low": 29160.5,
+      "ovn_poc": 29836.0,
+      "ovn_vah": 29873.0,
+      "ovn_val": 29720.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.75,
+      "confidence_b": 0.12,
+      "confidence_c": 0.13,
+      "post_time": "09:00:00",
+      "day_shape": "short_covering",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Imbalance \u2014 Price rejected below prior value, trading in extreme discount (3% of ADR) with 100% short overnight inventory.",
+      "invalidation": "Acceptance below the overnight low of 29160.5 with heavy negative delta, converting prior support into a structural ceiling.",
+      "plan": "If price probes below PDL (29295.75) and shows CVD absorption/exhaustion, buy the failed auction targeting 29359.0 (VAL) and 29672.0 (prior POC). Alternatively, if a bullish Q3 FVG inverts between 09:45\u201310:08 ET above 29300, enter long targeting the 09:22:30 true open.",
+      "risk": "Extreme overnight range of 762 points indicates highly elevated ATR; size down to micro contracts to accommodate wider structural stops.",
+      "predicted_model": "short_covering",
+      "vol_regime": "high",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "short_covering",
+          "probability": 65,
+          "confidence": "medium",
+          "why": "The 100% short overnight inventory trading at a deep discount near PDL (29295.75) is highly susceptible to a squeeze if initial sellers fail to hold price down.",
+          "stat_support": "NY-AM up 51% on similar historical profiles"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 60,
+          "confidence": "high",
+          "why": "A probe below PDL (29295.75) or OVN Low (29160.5) that fails to accept and reverses back inside provides a high-edge setup aligning with the trader's personal edge.",
+          "stat_support": "Trader failed auction edge: 50% WR, +$150/trade"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 55,
+          "confidence": "medium",
+          "why": "Stretched high-volatility overnight range (762 pts) suggests exhaustion, favoring a reversion back toward the prior RTH VAL (29359.0) once liquidity is swept.",
+          "stat_support": "~80% of the time price revisits prior value after leaving it"
+        },
+        {
+          "model": "trend_down",
+          "probability": 40,
+          "confidence": "low",
+          "why": "HTF bias is bearish, but extreme overnight expansion makes a direct open-drive continuation downward statistically exhausted without prior retracement.",
+          "stat_support": "London-low made first in 44% of similar sessions"
+        }
+      ]
+    },
     {
       "date": "2026-06-25",
       "inventory": "100L",
@@ -280,7 +341,11 @@
           "inside_va": false,
           "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29993.00\u201330221.50."
         }
-      ]
+      ],
+      "trades_summary": {
+        "count": 2,
+        "pnl": 300.0
+      }
     },
     {
       "date": "2026-06-24",
