@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29T09:00:21.229791-04:00",
+  "updated": "2026-06-29T09:00:22.288965-04:00",
   "stats": {
     "total_graded": 16,
     "correct": 7,
@@ -151,7 +151,7 @@
     }
   },
   "ops": {
-    "generated_at": "2026-06-29T09:00:21.229801-04:00",
+    "generated_at": "2026-06-29T09:00:22.288984-04:00",
     "last_brief_date": "2026-06-29",
     "last_brief_time": "09:00:00",
     "last_grade_date": "2026-06-26",
@@ -182,18 +182,49 @@
       "confidence_b": 0.12,
       "confidence_c": 0.13,
       "post_time": "09:00:00",
-      "day_shape": null,
+      "day_shape": "failed_auction",
       "day_shape_note": null,
       "htf_bias": null,
       "htf_text": null,
-      "regime": null,
-      "invalidation": null,
-      "plan": null,
-      "risk": null,
-      "predicted_model": null,
-      "vol_regime": null,
+      "regime": "Rule-based seed (AI unavailable).",
+      "invalidation": "",
+      "plan": "",
+      "risk": "",
+      "predicted_model": "failed_auction",
+      "vol_regime": "normal",
       "tpo_read": null,
-      "models": []
+      "models": [
+        {
+          "model": "failed_auction",
+          "probability": 75,
+          "confidence": "medium",
+          "why": "Directional overnight inventory favours a probe-and-revert.",
+          "stat_support": ""
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 13,
+          "confidence": "low",
+          "why": "Two-sided trade holds value if neither extreme accepts.",
+          "stat_support": ""
+        },
+        {
+          "model": "trend_up",
+          "probability": 12,
+          "confidence": "medium",
+          "why": "Acceptance beyond the overnight extreme would extend the move.",
+          "stat_support": ""
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29672.0,
+          "vs_settle": 303.75,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
     },
     {
       "date": "2026-06-26",
