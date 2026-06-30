@@ -1,9 +1,9 @@
 {
-  "updated": "2026-06-30T09:15:40.156020-04:00",
+  "updated": "2026-06-30T11:05:11.482093-04:00",
   "stats": {
-    "total_graded": 17,
+    "total_graded": 18,
     "correct": 7,
-    "accuracy_pct": 41.2,
+    "accuracy_pct": 38.9,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -89,20 +89,25 @@
         "date": "2026-06-29",
         "pct": 41.2,
         "n": 17
+      },
+      {
+        "date": "2026-06-30",
+        "pct": 38.9,
+        "n": 18
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 17,
+        "total": 18,
         "correct": 7,
-        "pct": 41.2
+        "pct": 38.9
       }
     },
     "calibration": {
       "50\u201360%": {
         "correct": 0,
-        "total": 0,
-        "pct": null
+        "total": 1,
+        "pct": 0.0
       },
       "60\u201370%": {
         "correct": 2,
@@ -138,6 +143,12 @@
         "correct": 0,
         "label": "\ud83d\ude80 Short-Covering Rally",
         "pct": 0.0
+      },
+      "range_expansion": {
+        "total": 1,
+        "correct": 0,
+        "label": "\ud83d\udca5 Range Expansion",
+        "pct": 0.0
       }
     },
     "win_rate_by_model": {
@@ -156,10 +167,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-06-30T09:15:40.156030-04:00",
+    "generated_at": "2026-06-30T11:05:11.482112-04:00",
     "last_brief_date": "2026-06-30",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-06-29",
+    "last_grade_date": "2026-06-30",
     "recent_failures": []
   },
   "coach": null,
@@ -233,6 +244,50 @@
           "confidence": "low",
           "why": "If an early drive fails or a failed auction occurs at the session extreme (PDH/OVN H), price is likely to revert towards the ONVP POC (30026.0) or RTH VAH (29979.0).",
           "stat_support": "base rate 11%"
+        }
+      ],
+      "grade": {
+        "actual": "B",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Accepted above VAH 30123, closed 30317 (top of range)",
+        "notes": null,
+        "gemini": "SCENARIO: No specific scenarios (A/B/C) were defined in the brief, but a highly bullish \"gap-and-go\" trend day played out, with price opening above value and driving to a high of 30442.5.\n\nLEVELS: NQ opened completely above VAH/OVN VAH (30123.0) and never retested them, while the early low of 30033.0 held just above the OVN POC (30026.0) and VAL (29995.5).\n\nVERDICT: Yes, the morning levels were highly useful as holding above 30123.0 signaled immediate, high-conviction bullish strength.",
+        "close": 30317.0,
+        "high": 30442.5,
+        "low": 30033.0,
+        "predicted_model": "range_expansion",
+        "actual_model": "trend_up",
+        "model_correct": false
+      },
+      "intraday": [
+        {
+          "slot": "09:30",
+          "price": 30024.75,
+          "vs_settle": -28.0,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29995.50/30123.00, target POC 30028.50."
+        },
+        {
+          "slot": "10:00",
+          "price": 30213.0,
+          "vs_settle": 160.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29995.50\u201330123.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 30365.0,
+          "vs_settle": 312.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29995.50\u201330123.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 30350.75,
+          "vs_settle": 298.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29995.50\u201330123.00."
         }
       ]
     },
