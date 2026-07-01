@@ -1,9 +1,9 @@
 {
-  "updated": "2026-07-01T09:16:47.503292-04:00",
+  "updated": "2026-07-01T11:06:04.732920-04:00",
   "stats": {
-    "total_graded": 18,
+    "total_graded": 19,
     "correct": 7,
-    "accuracy_pct": 38.9,
+    "accuracy_pct": 36.8,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -94,13 +94,18 @@
         "date": "2026-06-30",
         "pct": 38.9,
         "n": 18
+      },
+      {
+        "date": "2026-07-01",
+        "pct": 36.8,
+        "n": 19
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 18,
+        "total": 19,
         "correct": 7,
-        "pct": 38.9
+        "pct": 36.8
       }
     },
     "calibration": {
@@ -116,8 +121,8 @@
       },
       "70\u201380%": {
         "correct": 5,
-        "total": 15,
-        "pct": 33.3
+        "total": 16,
+        "pct": 31.2
       },
       "80%+": {
         "correct": 0,
@@ -133,10 +138,10 @@
         "pct": 0.0
       },
       "failed_auction": {
-        "total": 4,
+        "total": 5,
         "correct": 1,
         "label": "\ud83e\udea4 Failed Auction",
-        "pct": 25.0
+        "pct": 20.0
       },
       "short_covering": {
         "total": 1,
@@ -173,10 +178,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-01T09:16:47.503320-04:00",
+    "generated_at": "2026-07-01T11:06:04.732939-04:00",
     "last_brief_date": "2026-07-01",
     "last_brief_time": "08:00:01",
-    "last_grade_date": "2026-06-30",
+    "last_grade_date": "2026-07-01",
     "recent_failures": []
   },
   "coach": null,
@@ -238,6 +243,20 @@
           "stat_support": ""
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Two-sided, range 30088-30395, close 30216",
+        "notes": null,
+        "gemini": "SCENARIO: Scenario A played out as the market opened with a large gap down below value and trended lower to a low of 30087.75, aligning with the 74% high-confidence bearish bias.\n\nLEVELS: The price opened well below OVN VAL 30452.0, and a brief morning rally peaked at 30395.0, finding clear resistance just above VAL 30369.0 before collapsing.\n\nVERDICT: Yes, the morning read was highly useful as the net-short (SS) inventory bias and key value levels perfectly flagged the massive downside extension.",
+        "close": 30215.75,
+        "high": 30395.0,
+        "low": 30087.75,
+        "predicted_model": "failed_auction",
+        "actual_model": "range_expansion",
+        "model_correct": false
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -245,6 +264,34 @@
           "vs_settle": -152.5,
           "inside_va": true,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 30282.75,
+          "vs_settle": -240.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30369.00\u201330544.50."
+        },
+        {
+          "slot": "10:00",
+          "price": 30205.0,
+          "vs_settle": -318.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30369.00\u201330544.50."
+        },
+        {
+          "slot": "10:30",
+          "price": 30301.75,
+          "vs_settle": -221.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30369.00\u201330544.50."
+        },
+        {
+          "slot": "11:00",
+          "price": 30190.5,
+          "vs_settle": -333.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30369.00\u201330544.50."
         }
       ]
     },
