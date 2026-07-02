@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T11:06:04.732920-04:00",
+  "updated": "2026-07-02T09:03:22.520167-04:00",
   "stats": {
     "total_graded": 19,
     "correct": 7,
@@ -159,9 +159,9 @@
     "win_rate_by_model": {
       "failed_auction": {
         "label": "\ud83e\udea4 Failed Auction",
-        "trades": 4,
-        "win_rate": 50.0,
-        "exp": 150.0
+        "trades": 5,
+        "win_rate": 40.0,
+        "exp": 25.2
       },
       "short_covering": {
         "label": "\ud83d\ude80 Short-Covering Rally",
@@ -178,9 +178,9 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-01T11:06:04.732939-04:00",
-    "last_brief_date": "2026-07-01",
-    "last_brief_time": "08:00:01",
+    "generated_at": "2026-07-02T09:03:22.520188-04:00",
+    "last_brief_date": "2026-07-02",
+    "last_brief_time": "09:00:00",
     "last_grade_date": "2026-07-01",
     "recent_failures": []
   },
@@ -190,6 +190,74 @@
     "text": "SCORECARD:\nMarket Read: 8/10 \u2014 Your location-first read for shorts was excellent, leading to $1290 profit on 2 trades this week.\nLevel Selection: 7/10 \u2014 Your primary levels were strong, but the 2026-06-24 a2 planned_limit loss suggests a level or stop placement issue on secondary attempts.\nExecution: 6/10 \u2014 When you commit to your edge, like the 2026-06-26 planned_limit, execution is clean. Emotional entries weaken this.\nRisk Management: 7/10 \u2014 Profit factor 3.39 is solid, but the $-300 MAE=150pt STOP\u2192TARGET on 2026-06-24 a2 signals potential for re-evaluating stop placement on second entries.\nPsychology: 5/10 \u2014 Fluctuating from \"confident\" to \"rushed/tilted\" clearly impacted your trade quality, especially on 2026-06-25.\nDiscipline: 5/10 \u2014 The 0% win rate on second trades and the recurrence of \"emotional\" tags show a clear break from your A-setup and max attempts rules.\n\nPNL: net $+1332 over 6 trades / 4 days; profit factor 3.39; best day $+890; worst day $-158.\n\nWHAT WORKED:\n*   Your location-first \"confluence reversal short\" on 2026-06-26 with a planned_limit entry was your best trade, netting $+890 and executed calmly. This is your core edge.\n*   Trading the short side delivered 2 wins, 0 losses, and $+1290 P&L, demonstrating strong directional conviction when you commit.\n\nBIGGEST LEAK:\nYour most costly leak is the **second trade attempt**, which resulted in 0 wins and $-400 in losses this week. This pattern is proven by both 2026-06-24 a2 ($-300, STOP\u2192TARGET, after a win) and 2026-06-25 a2 ($-100, emotional, while already tilted from the prior trade). These attempts consistently bleed P&L and disrupt discipline, regardless of the first trade's outcome.\n\nBEST & WORST TRADE:\nBEST: 2026-06-26 MNQ short (+890) \u2014 repeat this calm, planned_limit execution into a HTF setup.\nWORST: 2026-06-24 MNQ a2 ($-300) \u2014 this second attempt, even with a planned limit, stopped then targeted, showing that forcing a second trade carries hidden risks. Cut all second attempts.\n\nNEXT WEEK:\nTrade a maximum of ONE attempt per day. Focus solely on your highest-conviction A-setup and do not take a second trade, regardless of the first trade's outcome."
   },
   "days": [
+    {
+      "date": "2026-07-02",
+      "inventory": "N",
+      "vah": 30133.0,
+      "poc": 30051.75,
+      "val": 29864.5,
+      "settle": 30094.25,
+      "ovn_high": 30320.0,
+      "ovn_low": 29826.25,
+      "ovn_poc": 30041.0,
+      "ovn_vah": 30081.0,
+      "ovn_val": 29848.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.48,
+      "confidence_b": 0.35,
+      "confidence_c": 0.17,
+      "post_time": "09:00:00",
+      "day_shape": "rotational_balance",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Balance \u2014 opening at upper prior RTH value boundary within positive GEX, favoring a rotational start with expansion risk to OVNH",
+      "invalidation": "High-volume acceptance above OVNH 30320.0 or below RTH POC 30161.0 nullifies the rotational balance expectation.",
+      "plan": "If price rejects VAH 30244.0 / Call Wall 30295.0 with exhaustion near OVNH 30320.0, execute shorts targeting POC 30161.0 and VAL 30041.0. Look for a Q3 (09:45\u201310:08 ET) inverse FVG in premium near 30295.0 after an overnight high sweep to enter short, targeting the 09:22:30 open. If price accepts above 30320.0, hold for range expansion.",
+      "risk": "Large overnight range (494 pts) increases volatility and necessitates wider risk parameters; dealer long gamma is thin at +0.1$Bn.",
+      "predicted_model": "rotational_balance",
+      "vol_regime": "normal",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "rotational_balance",
+          "probability": 31,
+          "confidence": "medium",
+          "why": "Opening at prior RTH VAH (30242.5 vs 30244.0) with positive dealer GEX (+0.1$Bn) favors initial rotation inside the prior value area.",
+          "stat_support": "base rate 22%"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 21,
+          "confidence": "low",
+          "why": "The wide 493.75-point overnight range (70th percentile) combined with proximity to the 30295.0 Call Wall creates conditions ripe for a breakout if early range boundaries break.",
+          "stat_support": "base rate 21%"
+        },
+        {
+          "model": "trend_down",
+          "probability": 16,
+          "confidence": "low",
+          "why": "Value migrating lower and a failure to hold the 30244.0 VAH level could force a test lower toward prior-day POC 30161.0 and ONVP POC 30041.0.",
+          "stat_support": "base rate 18%"
+        },
+        {
+          "model": "trend_up",
+          "probability": 13,
+          "confidence": "low",
+          "why": "A strong +0.49% overnight gap above settle could spark a continuation drive if buyers successfully accept price above the 30295.0 Call Wall.",
+          "stat_support": "base rate 20%"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 10,
+          "confidence": "low",
+          "why": "Unswept liquidity above the overnight high of 30320.0 offers a clean target for trapping momentum buyers before reversing.",
+          "stat_support": "base rate 10%"
+        }
+      ]
+    },
     {
       "date": "2026-07-01",
       "inventory": "SS",
@@ -293,7 +361,11 @@
           "inside_va": false,
           "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30369.00\u201330544.50."
         }
-      ]
+      ],
+      "trades_summary": {
+        "count": 1,
+        "pnl": -474.0
+      }
     },
     {
       "date": "2026-06-30",
