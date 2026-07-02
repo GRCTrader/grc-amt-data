@@ -1,9 +1,9 @@
 {
-  "updated": "2026-07-02T09:03:22.520167-04:00",
+  "updated": "2026-07-02T11:05:30.775836-04:00",
   "stats": {
-    "total_graded": 19,
+    "total_graded": 20,
     "correct": 7,
-    "accuracy_pct": 36.8,
+    "accuracy_pct": 35.0,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -99,19 +99,24 @@
         "date": "2026-07-01",
         "pct": 36.8,
         "n": 19
+      },
+      {
+        "date": "2026-07-02",
+        "pct": 35.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 19,
+        "total": 20,
         "correct": 7,
-        "pct": 36.8
+        "pct": 35.0
       }
     },
     "calibration": {
       "50\u201360%": {
         "correct": 0,
-        "total": 1,
+        "total": 2,
         "pct": 0.0
       },
       "60\u201370%": {
@@ -154,6 +159,12 @@
         "correct": 0,
         "label": "\ud83d\udca5 Range Expansion",
         "pct": 0.0
+      },
+      "rotational_balance": {
+        "total": 1,
+        "correct": 0,
+        "label": "\u2696\ufe0f Rotational / Balance",
+        "pct": 0.0
       }
     },
     "win_rate_by_model": {
@@ -178,10 +189,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-02T09:03:22.520188-04:00",
+    "generated_at": "2026-07-02T11:05:30.775856-04:00",
     "last_brief_date": "2026-07-02",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-07-01",
+    "last_grade_date": "2026-07-02",
     "recent_failures": []
   },
   "coach": null,
@@ -255,6 +266,50 @@
           "confidence": "low",
           "why": "Unswept liquidity above the overnight high of 30320.0 offers a clean target for trapping momentum buyers before reversing.",
           "stat_support": "base rate 10%"
+        }
+      ],
+      "grade": {
+        "actual": "B",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Accepted below VAL 29864, closed 29767 (low of range)",
+        "notes": null,
+        "gemini": "**SCENARIO:** \nScenario A played out as the market failed to sustain the initial breakout above VAH 30133, resulting in a classic \"look above and fail\" liquidation.\n\n**LEVELS:** \nBuyers initially held OVN VAH 30081 to push to 30320.0, but sellers aggressively reclaimed VAH 30133, slicing straight through VAL 29864.5 to close at 29767.0.\n\n**VERDICT:** \nYes, the AMT levels were highly useful, clearly defining the failure point at 30133 and the downside targets.",
+        "close": 29767.0,
+        "high": 30320.0,
+        "low": 29730.75,
+        "predicted_model": "rotational_balance",
+        "actual_model": "trend_down",
+        "model_correct": false
+      },
+      "intraday": [
+        {
+          "slot": "09:30",
+          "price": 30168.5,
+          "vs_settle": 74.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29864.50\u201330133.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 30186.75,
+          "vs_settle": 92.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29864.50\u201330133.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 30156.0,
+          "vs_settle": 61.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29864.50\u201330133.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 29823.5,
+          "vs_settle": -270.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29864.50\u201330133.00."
         }
       ]
     },
