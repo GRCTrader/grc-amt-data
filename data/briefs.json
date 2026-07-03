@@ -1,9 +1,9 @@
 {
-  "updated": "2026-07-03T09:23:34.238449-04:00",
+  "updated": "2026-07-03T11:05:08.470918-04:00",
   "stats": {
-    "total_graded": 20,
+    "total_graded": 21,
     "correct": 7,
-    "accuracy_pct": 35.0,
+    "accuracy_pct": 33.3,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -104,6 +104,11 @@
         "date": "2026-07-02",
         "pct": 35.0,
         "n": 20
+      },
+      {
+        "date": "2026-07-03",
+        "pct": 30.0,
+        "n": 20
       }
     ],
     "by_scenario": {
@@ -111,6 +116,11 @@
         "total": 20,
         "correct": 7,
         "pct": 35.0
+      },
+      "?": {
+        "total": 1,
+        "correct": 0,
+        "pct": 0.0
       }
     },
     "calibration": {
@@ -195,11 +205,42 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-03T09:23:34.238469-04:00",
+    "generated_at": "2026-07-03T11:05:08.470944-04:00",
     "last_brief_date": "2026-07-03",
     "last_brief_time": null,
-    "last_grade_date": "2026-07-02",
-    "recent_failures": []
+    "last_grade_date": "2026-07-03",
+    "recent_failures": [
+      {
+        "ts": "2026-07-03 09:45:00",
+        "label": "scan_09:45",
+        "status": "error",
+        "detail": "unsupported operand type(s) for -: 'float' and 'NoneType'"
+      },
+      {
+        "ts": "2026-07-03 09:40:00",
+        "label": "scan_09:40",
+        "status": "error",
+        "detail": "unsupported operand type(s) for -: 'float' and 'NoneType'"
+      },
+      {
+        "ts": "2026-07-03 09:35:00",
+        "label": "scan_09:35",
+        "status": "error",
+        "detail": "unsupported operand type(s) for -: 'float' and 'NoneType'"
+      },
+      {
+        "ts": "2026-07-03 09:31:00",
+        "label": "scan_09:31",
+        "status": "error",
+        "detail": "unsupported operand type(s) for -: 'float' and 'NoneType'"
+      },
+      {
+        "ts": "2026-07-03 09:30:00",
+        "label": "09:30",
+        "status": "error",
+        "detail": "'<=' not supported between instances of 'float' and 'NoneType'"
+      }
+    ]
   },
   "coach": null,
   "mentor_review": {
@@ -209,16 +250,16 @@
   "days": [
     {
       "date": "2026-07-03",
-      "inventory": null,
+      "inventory": "Slightly Long",
       "vah": 29833.5,
       "poc": 29542.25,
       "val": 29514.0,
-      "settle": null,
+      "settle": 29556.0,
       "ovn_high": 29924.25,
       "ovn_low": 29522.0,
-      "ovn_poc": null,
-      "ovn_vah": null,
-      "ovn_val": null,
+      "ovn_poc": 29537.0,
+      "ovn_vah": 29613.0,
+      "ovn_val": 29535.0,
       "scenario_a": null,
       "scenario_b": null,
       "scenario_c": null,
@@ -237,7 +278,51 @@
       "predicted_model": null,
       "vol_regime": null,
       "tpo_read": null,
-      "models": []
+      "models": [],
+      "grade": {
+        "actual": "C",
+        "predicted": null,
+        "correct": false,
+        "detail": "Held value 29514-29834",
+        "notes": null,
+        "gemini": "SCENARIO: Scenario A, a strong Trend Day Up, played out. The market found support at 29522.0 near VAL (29514.0) before rallying aggressively, closing significantly above VAH.\nLEVELS: The market briefly dipped below OVN Low (29535.0) to test just above VAL (29514.0) at 29522.0. Price then rallied, decisively breaking above VAH (29833.5), reaching a high of 29955.25.\nVERDICT: Yes, the morning read was useful, as key levels like VAL provided critical support and VAH clearly defined the strong upside breakout.",
+        "close": 29924.25,
+        "high": 29955.25,
+        "low": 29522.0,
+        "predicted_model": null,
+        "actual_model": "rotational_balance",
+        "model_correct": false
+      },
+      "intraday": [
+        {
+          "slot": "09:30",
+          "price": 29768.0,
+          "vs_settle": 212.0,
+          "inside_va": true,
+          "call": "\u2705 Price within OVN range \u2014 **Scenario A still primary**. Watch 29522.00\u201329535.00 for entry."
+        },
+        {
+          "slot": "10:00",
+          "price": 29768.0,
+          "vs_settle": 212.0,
+          "inside_va": true,
+          "call": "\u2705 Price within OVN range \u2014 **Scenario A still primary**. Watch 29522.00\u201329535.00 for entry."
+        },
+        {
+          "slot": "10:30",
+          "price": 29768.0,
+          "vs_settle": 212.0,
+          "inside_va": true,
+          "call": "\u2705 Price within OVN range \u2014 **Scenario A still primary**. Watch 29522.00\u201329535.00 for entry."
+        },
+        {
+          "slot": "11:00",
+          "price": 29768.0,
+          "vs_settle": 212.0,
+          "inside_va": true,
+          "call": "\u2705 Price within OVN range \u2014 **Scenario A still primary**. Watch 29522.00\u201329535.00 for entry."
+        }
+      ]
     },
     {
       "date": "2026-07-02",
