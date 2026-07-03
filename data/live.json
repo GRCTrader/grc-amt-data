@@ -1,80 +1,14 @@
 {
-  "asof": "2026-07-02 11:01 ET",
-  "slot": "11:01",
-  "price": 29806.5,
-  "bias": "SHORT",
-  "scenarios": [
-    {
-      "model": "rotational_balance",
-      "probability": 31,
-      "base_rate": 22,
-      "drivers": [
-        "+ open inside value",
-        "\u2212 gap argues against balance"
-      ]
-    },
-    {
-      "model": "range_expansion",
-      "probability": 21,
-      "base_rate": 21,
-      "drivers": []
-    },
-    {
-      "model": "trend_down",
-      "probability": 16,
-      "base_rate": 18,
-      "drivers": [
-        "+ value migrating lower",
-        "\u2212 open not below value"
-      ]
-    },
-    {
-      "model": "trend_up",
-      "probability": 13,
-      "base_rate": 20,
-      "drivers": [
-        "\u2212 open not above value"
-      ]
-    }
-  ],
-  "invalidations": [
-    {
-      "scenario": "rotational_balance",
-      "status": "armed",
-      "condition": "close_above",
-      "level": 30244.0,
-      "closes_needed": 2,
-      "meaning": "balance dead \u2014 acceptance above VAH 30244.0"
-    },
-    {
-      "scenario": "rotational_balance",
-      "status": "near",
-      "condition": "close_below",
-      "level": 30041.0,
-      "closes_needed": 2,
-      "meaning": "balance dead \u2014 acceptance below VAL 30041.0"
-    },
-    {
-      "scenario": "rotational_balance",
-      "status": "near",
-      "condition": "close_below",
-      "level": 29880.0,
-      "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance below the put wall 29880 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
-    },
-    {
-      "scenario": "rotational_balance",
-      "status": "armed",
-      "condition": "close_above",
-      "level": 30295.0,
-      "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance above the call wall 30295 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
-    }
-  ],
+  "asof": "2026-07-03 09:55 ET",
+  "slot": "09:55",
+  "price": 29768.0,
+  "bias": "LONG",
+  "scenarios": [],
+  "invalidations": [],
   "gex": {
-    "total_gex_bn": 0.15,
-    "flip_nq": 31750,
-    "call_wall_nq": 30295,
-    "put_wall_nq": 29880
+    "total_gex_bn": -0.89,
+    "flip_nq": null,
+    "call_wall_nq": 30425,
+    "put_wall_nq": 29175
   }
 }
