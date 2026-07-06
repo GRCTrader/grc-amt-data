@@ -1,9 +1,9 @@
 {
-  "updated": "2026-07-06T09:00:36.564990-04:00",
+  "updated": "2026-07-06T11:05:10.406437-04:00",
   "stats": {
-    "total_graded": 21,
+    "total_graded": 22,
     "correct": 7,
-    "accuracy_pct": 33.3,
+    "accuracy_pct": 31.8,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -109,13 +109,18 @@
         "date": "2026-07-03",
         "pct": 30.0,
         "n": 20
+      },
+      {
+        "date": "2026-07-06",
+        "pct": 25.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 20,
+        "total": 21,
         "correct": 7,
-        "pct": 35.0
+        "pct": 33.3
       },
       "?": {
         "total": 1,
@@ -136,8 +141,8 @@
       },
       "70\u201380%": {
         "correct": 5,
-        "total": 16,
-        "pct": 31.2
+        "total": 17,
+        "pct": 29.4
       },
       "80%+": {
         "correct": 0,
@@ -175,6 +180,12 @@
         "correct": 0,
         "label": "\u2696\ufe0f Rotational / Balance",
         "pct": 0.0
+      },
+      "trend_up": {
+        "total": 1,
+        "correct": 0,
+        "label": "\ud83d\udcc8 Trend Continuation Up",
+        "pct": 0.0
       }
     },
     "win_rate_by_model": {
@@ -205,10 +216,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-06T09:00:36.565011-04:00",
+    "generated_at": "2026-07-06T11:05:10.406460-04:00",
     "last_brief_date": "2026-07-06",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-07-03",
+    "last_grade_date": "2026-07-06",
     "recent_failures": []
   },
   "coach": null,
@@ -284,6 +295,20 @@
           "stat_support": "base rate 6%"
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Held value 29497-30260",
+        "notes": null,
+        "gemini": "**SCENARIO:** \nScenario A (74% confidence) played out as the market opened with a large gap up, found responsive buyers on a brief dip, and rallied to close at 30020.0.\n\n**LEVELS:** \nThe daily low of 29776.25 briefly undercut OVN VAH (29834.0) before aggressive buying resumed, while the main VAH (30260.0) and Settle (29556.0) were never tested.\n\n**VERDICT:** \nYes, identifying 100% net long overnight inventory correctly flagged the strong bullish imbalance and upward continuation.",
+        "close": 30020.0,
+        "high": 30067.5,
+        "low": 29776.25,
+        "predicted_model": "trend_up",
+        "actual_model": "rotational_balance",
+        "model_correct": false
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -291,6 +316,34 @@
           "vs_settle": 344.0,
           "inside_va": true,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29841.0,
+          "vs_settle": 285.0,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29497.00/30260.00, target POC 29545.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 29952.75,
+          "vs_settle": 396.75,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29497.00/30260.00, target POC 29545.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 30007.5,
+          "vs_settle": 451.5,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29497.00/30260.00, target POC 29545.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 30043.25,
+          "vs_settle": 487.25,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29497.00/30260.00, target POC 29545.00."
         }
       ]
     },
