@@ -1,14 +1,71 @@
 {
-  "asof": "2026-07-03 11:02 ET",
-  "slot": "11:01",
-  "price": 29768.0,
+  "asof": "2026-07-06 09:33 ET",
+  "slot": "09:31",
+  "price": 29838.75,
   "bias": "LONG",
-  "scenarios": [],
-  "invalidations": [],
+  "scenarios": [
+    {
+      "model": "trend_up",
+      "probability": 29,
+      "base_rate": 44,
+      "drivers": [
+        "\u2212 open not above value"
+      ]
+    },
+    {
+      "model": "range_expansion",
+      "probability": 23,
+      "base_rate": 23,
+      "drivers": []
+    },
+    {
+      "model": "rotational_balance",
+      "probability": 18,
+      "base_rate": 13,
+      "drivers": [
+        "+ open inside value",
+        "\u2212 gap argues against balance"
+      ]
+    },
+    {
+      "model": "mean_reversion",
+      "probability": 9,
+      "base_rate": 11,
+      "drivers": [
+        "\u2212 extended open far from POC"
+      ]
+    }
+  ],
+  "invalidations": [
+    {
+      "scenario": "trend_up",
+      "status": "armed",
+      "condition": "close_below",
+      "level": 29545.0,
+      "closes_needed": 2,
+      "meaning": "trend_up dead \u2014 acceptance back below POC 29545.0"
+    },
+    {
+      "scenario": "trend_up",
+      "status": "armed",
+      "condition": "close_below",
+      "level": 29020.0,
+      "closes_needed": 2,
+      "meaning": "\u26a1 GAMMA: acceptance below the put wall 29020 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
+    },
+    {
+      "scenario": "trend_up",
+      "status": "armed",
+      "condition": "close_above",
+      "level": 30060.0,
+      "closes_needed": 2,
+      "meaning": "\u26a1 GAMMA: acceptance above the call wall 30060 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
+    }
+  ],
   "gex": {
-    "total_gex_bn": -0.89,
-    "flip_nq": null,
-    "call_wall_nq": 30425,
-    "put_wall_nq": 29175
+    "total_gex_bn": 0.57,
+    "flip_nq": 30595,
+    "call_wall_nq": 30060,
+    "put_wall_nq": 29020
   }
 }
