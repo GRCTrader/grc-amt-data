@@ -1,9 +1,9 @@
 {
-  "updated": "2026-07-07T09:19:11.249224-04:00",
+  "updated": "2026-07-07T11:05:10.549024-04:00",
   "stats": {
-    "total_graded": 22,
-    "correct": 7,
-    "accuracy_pct": 31.8,
+    "total_graded": 23,
+    "correct": 8,
+    "accuracy_pct": 34.8,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -114,13 +114,18 @@
         "date": "2026-07-06",
         "pct": 25.0,
         "n": 20
+      },
+      {
+        "date": "2026-07-07",
+        "pct": 25.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 21,
-        "correct": 7,
-        "pct": 33.3
+        "total": 22,
+        "correct": 8,
+        "pct": 36.4
       },
       "?": {
         "total": 1,
@@ -141,8 +146,8 @@
       },
       "70\u201380%": {
         "correct": 5,
-        "total": 17,
-        "pct": 29.4
+        "total": 18,
+        "pct": 27.8
       },
       "80%+": {
         "correct": 0,
@@ -186,6 +191,12 @@
         "correct": 0,
         "label": "\ud83d\udcc8 Trend Continuation Up",
         "pct": 0.0
+      },
+      "trend_down": {
+        "total": 1,
+        "correct": 1,
+        "label": "\ud83d\udcc9 Trend Continuation Down",
+        "pct": 100.0
       }
     },
     "win_rate_by_model": {
@@ -222,10 +233,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-07T09:19:11.249244-04:00",
+    "generated_at": "2026-07-07T11:05:10.549052-04:00",
     "last_brief_date": "2026-07-07",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-07-06",
+    "last_grade_date": "2026-07-07",
     "recent_failures": []
   },
   "coach": null,
@@ -301,6 +312,20 @@
           "stat_support": "base rate 14%"
         }
       ],
+      "grade": {
+        "actual": "B",
+        "predicted": "A",
+        "correct": true,
+        "detail": "Accepted below VAL 29662, closed 29296 (low of range)",
+        "notes": null,
+        "gemini": "SCENARIO:\nThe day was a strong trend day to the downside. Price opened below the Value Area, briefly traded above VAL 29662 to 29685.75, but then failed and trended significantly lower.\n\nLEVELS:\nVAL 29662 acted as resistance; price traded slightly above it (High 29685.75) but rejected it sharply, plunging to a low of 29210.0. All VAH, POC, Settlement, and OVN levels (above 29941.0) were untouched.\n\nVERDICT:\nThe morning read was not useful as it failed to predict this strong downside trend day, with all scenarios having 'None' confidence.",
+        "close": 29296.5,
+        "high": 29685.75,
+        "low": 29210.0,
+        "predicted_model": "trend_down",
+        "actual_model": "trend_down",
+        "model_correct": true
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -308,6 +333,34 @@
           "vs_settle": -257.0,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29620.75,
+          "vs_settle": -320.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29662.00\u201329973.50."
+        },
+        {
+          "slot": "10:00",
+          "price": 29511.25,
+          "vs_settle": -429.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29662.00\u201329973.50."
+        },
+        {
+          "slot": "10:30",
+          "price": 29363.25,
+          "vs_settle": -577.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29662.00\u201329973.50."
+        },
+        {
+          "slot": "11:00",
+          "price": 29266.25,
+          "vs_settle": -674.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29662.00\u201329973.50."
         }
       ]
     },
