@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T11:05:10.406437-04:00",
+  "updated": "2026-07-07T09:00:25.327059-04:00",
   "stats": {
     "total_graded": 22,
     "correct": 7,
@@ -212,12 +212,18 @@
         "trades": 1,
         "win_rate": 0.0,
         "exp": -150.0
+      },
+      "trend_up": {
+        "label": "\ud83d\udcc8 Trend Continuation Up",
+        "trades": 3,
+        "win_rate": 100.0,
+        "exp": 943.17
       }
     }
   },
   "ops": {
-    "generated_at": "2026-07-06T11:05:10.406460-04:00",
-    "last_brief_date": "2026-07-06",
+    "generated_at": "2026-07-07T09:00:25.327080-04:00",
+    "last_brief_date": "2026-07-07",
     "last_brief_time": "09:00:00",
     "last_grade_date": "2026-07-06",
     "recent_failures": []
@@ -228,6 +234,83 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2013 Strong on 06-30 for the Market Structure Shift Long, but your subsequent losses on 07-01 and 07-02 indicate some missed reads.\nLevel Selection: 7/10 \u2013 Your Value Area Low selection on 06-30 was excellent. The level for the 07-01 planned_limit entry was clearly not robust enough.\nExecution: 8/10 \u2013 Your confirmation entries were executed perfectly this week, accounting for all your positive P&L.\nRisk Management: 6/10 \u2013 While your avg R is solid at 2.8R, the $-474 loss on 07-01 wiped out too much of your week's gains.\nPsychology: 7/10 \u2013 You showed calm and confidence on winning trades, but the costly planned_limit loss suggests an underlying impatience with the setup itself.\nDiscipline: 7/10 \u2013 You stuck to your max 2 attempts/day and didn't have any 'against-read' trades. However, the planned_limit failure signals a breach of waiting for true A-setup quality.\n\nPNL: Net $+171 over 5 trades / 4 days; profit factor 1.27; avg 2.8R; best day '2026-06-30' ($+794.8); worst day '2026-07-01' ($-474.0).\n\nWHAT WORKED:\n*   Your confirmation entries were 100% winners this week (2W/0L), delivering all $+795 of your gross profit, with trades on 06-30 and 07-03. This is your proven edge.\n*   The Market Structure Shift Long at Value Area Low setup proved highly effective, yielding 2 wins for $+795 on 06-30.\n\nBIGGEST LEAK:\nThe single most costly pattern this week was your premature use of the planned_limit entry model. Your 2026-07-01 NQ long loss of $-474, which was a planned_limit entry, represents 100% of your losses from that entry model and single-handedly cut your potential $+795 gross profit down to a net $+171. This demonstrates front-running the level without sufficient confirmation, turning a core part of your edge into a significant leak when applied without the proper market context or orderflow trigger.\n\nBEST & WORST TRADE:\nBEST: 2026-06-30 a1 MNQ long WIN $+575 \u2013 a calm, confirmed entry at a strong level. Repeat this process relentlessly.\nWORST: 2026-07-01 a1 NQ long LOSS $-474 \u2013 a planned_limit entry that front-ran the level. Eliminate this type of entry.\n\nNEXT WEEK:\nTrade only with confirmation entries; do not place any planned_limit orders."
   },
   "days": [
+    {
+      "date": "2026-07-07",
+      "inventory": "100S",
+      "vah": 30017.0,
+      "poc": 29954.0,
+      "val": 29870.0,
+      "settle": 29941.0,
+      "ovn_high": 29973.75,
+      "ovn_low": 29558.5,
+      "ovn_poc": 29949.0,
+      "ovn_vah": 29967.0,
+      "ovn_val": 29666.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.78,
+      "confidence_b": 0.1,
+      "confidence_c": 0.12,
+      "post_time": "09:00:00",
+      "day_shape": "trend_down",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Imbalance \u2014 Developing Trend Continuation Down / Range Expansion below prior value.",
+      "invalidation": "Acceptance back inside the overnight range above OVN VAL (29666.0) and PDL (29683.0) with active buying delta, shifting the focus back toward the RTH VAL (29870.0).",
+      "plan": "Monitor the RTH open relative to PDL (29683.0) and OVN VAL (29666.0). If the open drives lower and accepts below 29666.0, look for short entries on retests targeting the OVN low (29558.5) and the Put Wall (29440.0). If an ICT Q3 (09:45\u201310:08 ET) liquidity sweep occurs, watch for a premium inverse FVG to anchor shorts back down toward the true session open (29684.0) and PWL (29273.75). No long positions unless a clear failed auction occurs at OVN low with high-volume absorption.",
+      "risk": "Dealers are short gamma (-2.6$Bn GEX), meaning moves will extend rapidly with high volatility; keep risk sizes smaller (micros) to account for wider stops.",
+      "predicted_model": "trend_down",
+      "vol_regime": "normal",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "trend_down",
+          "probability": 48,
+          "confidence": "high",
+          "why": "Price opening below the prior RTH value area (29870.0) with 100% short overnight inventory and negative GEX heavily favors downside continuation.",
+          "stat_support": "base rate 28%"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 35,
+          "confidence": "medium",
+          "why": "Dealers are short gamma at -2.6$Bn, which acts as an accelerant for volatility and supports range expansion outside of the OVN range.",
+          "stat_support": "base rate 25%"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 9,
+          "confidence": "low",
+          "why": "The -0.86% gap and short dealer gamma argue strongly against balanced, rotational two-way trading inside yesterday's value.",
+          "stat_support": "base rate 18%"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 9,
+          "confidence": "low",
+          "why": "An open far below the prior POC (29954.0) makes mean reversion highly improbable unless massive buy absorption develops at the open.",
+          "stat_support": "base rate 10%"
+        },
+        {
+          "model": "short_covering",
+          "probability": 5,
+          "confidence": "low",
+          "why": "\u2212 shorts extended below value",
+          "stat_support": "base rate 14%"
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29684.0,
+          "vs_settle": -257.0,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-07-06",
       "inventory": "100L",
@@ -345,7 +428,11 @@
           "inside_va": true,
           "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29497.00/30260.00, target POC 29545.00."
         }
-      ]
+      ],
+      "trades_summary": {
+        "count": 3,
+        "pnl": 2829.5
+      }
     },
     {
       "date": "2026-07-03",
