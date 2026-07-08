@@ -1,40 +1,40 @@
 {
-  "asof": "2026-07-07 11:01 ET",
-  "slot": "11:01",
-  "price": 29275.0,
+  "asof": "2026-07-08 09:31 ET",
+  "slot": "09:31",
+  "price": 29200.25,
   "bias": "SHORT",
   "scenarios": [
     {
-      "model": "trend_down",
+      "model": "range_expansion",
       "probability": 48,
-      "base_rate": 28,
+      "base_rate": 32,
       "drivers": [
-        "+ open below value",
+        "+ range already expanded overnight",
+        "+ -GEX fuels expansion",
         "\u2212 25 similar days: 36% historically"
       ]
     },
     {
-      "model": "range_expansion",
-      "probability": 35,
-      "base_rate": 25,
+      "model": "trend_down",
+      "probability": 38,
+      "base_rate": 20,
       "drivers": [
-        "+ -GEX fuels expansion",
-        "+ 25 similar days: 52% historically"
+        "+ open below value",
+        "+ value migrating lower"
       ]
     },
     {
-      "model": "rotational_balance",
-      "probability": 9,
-      "base_rate": 18,
+      "model": "trend_up",
+      "probability": 10,
+      "base_rate": 27,
       "drivers": [
-        "\u2212 gap argues against balance",
-        "\u2212 -GEX amplifies moves"
+        "\u2212 open below value"
       ]
     },
     {
       "model": "mean_reversion",
       "probability": 9,
-      "base_rate": 10,
+      "base_rate": 9,
       "drivers": [
         "\u2212 extended open far from POC"
       ]
@@ -42,34 +42,26 @@
   ],
   "invalidations": [
     {
-      "scenario": "trend_down",
+      "scenario": "range_expansion",
       "status": "armed",
-      "condition": "close_above",
-      "level": 29954.0,
-      "closes_needed": 2,
-      "meaning": "trend_down dead \u2014 acceptance back above POC 29954.0"
-    },
-    {
-      "scenario": "trend_down",
-      "status": "tripped",
       "condition": "close_below",
-      "level": 29440.0,
+      "level": 28855.0,
       "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance below the put wall 29440 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
+      "meaning": "\u26a1 GAMMA: acceptance below the put wall 28855 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
     },
     {
-      "scenario": "trend_down",
+      "scenario": "range_expansion",
       "status": "armed",
       "condition": "close_above",
-      "level": 30270.0,
+      "level": 29520.0,
       "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance above the call wall 30270 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
+      "meaning": "\u26a1 GAMMA: acceptance above the call wall 29520 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
     }
   ],
   "gex": {
-    "total_gex_bn": -2.57,
+    "total_gex_bn": -3.89,
     "flip_nq": null,
-    "call_wall_nq": 30270,
-    "put_wall_nq": 29440
+    "call_wall_nq": 29520,
+    "put_wall_nq": 28855
   }
 }
