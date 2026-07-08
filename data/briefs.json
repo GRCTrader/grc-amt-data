@@ -1,9 +1,9 @@
 {
-  "updated": "2026-07-08T09:15:00.093932-04:00",
+  "updated": "2026-07-08T11:05:16.568972-04:00",
   "stats": {
-    "total_graded": 23,
+    "total_graded": 24,
     "correct": 8,
-    "accuracy_pct": 34.8,
+    "accuracy_pct": 33.3,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -119,13 +119,18 @@
         "date": "2026-07-07",
         "pct": 25.0,
         "n": 20
+      },
+      {
+        "date": "2026-07-08",
+        "pct": 25.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 22,
+        "total": 23,
         "correct": 8,
-        "pct": 36.4
+        "pct": 34.8
       },
       "?": {
         "total": 1,
@@ -136,7 +141,7 @@
     "calibration": {
       "50\u201360%": {
         "correct": 0,
-        "total": 2,
+        "total": 3,
         "pct": 0.0
       },
       "60\u201370%": {
@@ -175,7 +180,7 @@
         "pct": 0.0
       },
       "range_expansion": {
-        "total": 1,
+        "total": 2,
         "correct": 0,
         "label": "\ud83d\udca5 Range Expansion",
         "pct": 0.0
@@ -239,10 +244,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-08T09:15:00.093952-04:00",
+    "generated_at": "2026-07-08T11:05:16.568993-04:00",
     "last_brief_date": "2026-07-08",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-07-07",
+    "last_grade_date": "2026-07-08",
     "recent_failures": [
       {
         "ts": "2026-07-07 19:38:27",
@@ -325,6 +330,20 @@
           "stat_support": "base rate 11%"
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Held value 29144-29559",
+        "notes": null,
+        "gemini": "SCENARIO: The top predicted model, Range Expansion, with a downside bias played out. The market experienced a 248-point range, moving from a high of 29399.0 down to a low of 29151.0, with a predominantly downward trajectory, fitting \"Volatile Range Expansion to the downside.\"\n\nLEVELS: Price rejected levels above OVN VAL (29352.0) and Settle (29391.5), peaking at 29399.0. It then traded below the prior day low (29210.0) but found support just above VAL (29144.5) at 29151.0, failing to reach the overnight low (28909.75).\n\nVERDICT: The 09:00 read was useful for the 09:30\u201311:00 session, as the top model, Range Expansion, played out with a significant downside move.",
+        "close": 29246.5,
+        "high": 29399.0,
+        "low": 29151.0,
+        "predicted_model": "range_expansion",
+        "actual_model": "rotational_balance",
+        "model_correct": false
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -332,6 +351,34 @@
           "vs_settle": -208.5,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29216.75,
+          "vs_settle": -174.75,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29144.50/29559.00, target POC 29419.75."
+        },
+        {
+          "slot": "10:00",
+          "price": 29304.25,
+          "vs_settle": -87.25,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29144.50/29559.00, target POC 29419.75."
+        },
+        {
+          "slot": "10:30",
+          "price": 29290.25,
+          "vs_settle": -101.25,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29144.50/29559.00, target POC 29419.75."
+        },
+        {
+          "slot": "11:00",
+          "price": 29173.75,
+          "vs_settle": -217.75,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29144.50/29559.00, target POC 29419.75."
         }
       ]
     },
