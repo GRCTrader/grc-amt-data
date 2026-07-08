@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T11:05:10.549024-04:00",
+  "updated": "2026-07-07T20:19:33.777849-04:00",
   "stats": {
     "total_graded": 23,
     "correct": 8,
@@ -229,15 +229,28 @@
         "trades": 3,
         "win_rate": 100.0,
         "exp": 943.17
+      },
+      "trend_down": {
+        "label": "\ud83d\udcc9 Trend Continuation Down",
+        "trades": 1,
+        "win_rate": 100.0,
+        "exp": 402.9
       }
     }
   },
   "ops": {
-    "generated_at": "2026-07-07T11:05:10.549052-04:00",
+    "generated_at": "2026-07-07T20:19:33.777871-04:00",
     "last_brief_date": "2026-07-07",
     "last_brief_time": "09:00:00",
     "last_grade_date": "2026-07-07",
-    "recent_failures": []
+    "recent_failures": [
+      {
+        "ts": "2026-07-07 19:38:27",
+        "label": "github_push",
+        "status": "error",
+        "detail": "data/shadow.json HTTP 401"
+      }
+    ]
   },
   "coach": null,
   "mentor_review": {
@@ -318,7 +331,7 @@
         "correct": true,
         "detail": "Accepted below VAL 29662, closed 29296 (low of range)",
         "notes": null,
-        "gemini": "SCENARIO:\nThe day was a strong trend day to the downside. Price opened below the Value Area, briefly traded above VAL 29662 to 29685.75, but then failed and trended significantly lower.\n\nLEVELS:\nVAL 29662 acted as resistance; price traded slightly above it (High 29685.75) but rejected it sharply, plunging to a low of 29210.0. All VAH, POC, Settlement, and OVN levels (above 29941.0) were untouched.\n\nVERDICT:\nThe morning read was not useful as it failed to predict this strong downside trend day, with all scenarios having 'None' confidence.",
+        "gemini": "SCENARIO: The top-ranked \"Trend Continuation Down\" (48%) and \"Range Expansion\" (35%) models played out perfectly as NQ trended aggressively lower.\n\nLEVELS: Price rejected PDL (29683.0) at the 29685.75 high, accepted below OVN VAL (29666.0), and washed through the OVN low (29558.5) and 29440.0 Put Wall to a low of 29210.0. \n\nVERDICT: The 09:00 prediction was highly useful as the top trend_down model played out exactly as written.",
         "close": 29296.5,
         "high": 29685.75,
         "low": 29210.0,
@@ -362,7 +375,11 @@
           "inside_va": false,
           "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29662.00\u201329973.50."
         }
-      ]
+      ],
+      "trades_summary": {
+        "count": 1,
+        "pnl": 402.9
+      }
     },
     {
       "date": "2026-07-06",
