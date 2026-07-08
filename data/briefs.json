@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T20:19:33.777849-04:00",
+  "updated": "2026-07-08T09:00:13.823959-04:00",
   "stats": {
     "total_graded": 23,
     "correct": 8,
@@ -239,8 +239,8 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-07T20:19:33.777871-04:00",
-    "last_brief_date": "2026-07-07",
+    "generated_at": "2026-07-08T09:00:13.823981-04:00",
+    "last_brief_date": "2026-07-08",
     "last_brief_time": "09:00:00",
     "last_grade_date": "2026-07-07",
     "recent_failures": [
@@ -258,6 +258,83 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2013 Strong on 06-30 for the Market Structure Shift Long, but your subsequent losses on 07-01 and 07-02 indicate some missed reads.\nLevel Selection: 7/10 \u2013 Your Value Area Low selection on 06-30 was excellent. The level for the 07-01 planned_limit entry was clearly not robust enough.\nExecution: 8/10 \u2013 Your confirmation entries were executed perfectly this week, accounting for all your positive P&L.\nRisk Management: 6/10 \u2013 While your avg R is solid at 2.8R, the $-474 loss on 07-01 wiped out too much of your week's gains.\nPsychology: 7/10 \u2013 You showed calm and confidence on winning trades, but the costly planned_limit loss suggests an underlying impatience with the setup itself.\nDiscipline: 7/10 \u2013 You stuck to your max 2 attempts/day and didn't have any 'against-read' trades. However, the planned_limit failure signals a breach of waiting for true A-setup quality.\n\nPNL: Net $+171 over 5 trades / 4 days; profit factor 1.27; avg 2.8R; best day '2026-06-30' ($+794.8); worst day '2026-07-01' ($-474.0).\n\nWHAT WORKED:\n*   Your confirmation entries were 100% winners this week (2W/0L), delivering all $+795 of your gross profit, with trades on 06-30 and 07-03. This is your proven edge.\n*   The Market Structure Shift Long at Value Area Low setup proved highly effective, yielding 2 wins for $+795 on 06-30.\n\nBIGGEST LEAK:\nThe single most costly pattern this week was your premature use of the planned_limit entry model. Your 2026-07-01 NQ long loss of $-474, which was a planned_limit entry, represents 100% of your losses from that entry model and single-handedly cut your potential $+795 gross profit down to a net $+171. This demonstrates front-running the level without sufficient confirmation, turning a core part of your edge into a significant leak when applied without the proper market context or orderflow trigger.\n\nBEST & WORST TRADE:\nBEST: 2026-06-30 a1 MNQ long WIN $+575 \u2013 a calm, confirmed entry at a strong level. Repeat this process relentlessly.\nWORST: 2026-07-01 a1 NQ long LOSS $-474 \u2013 a planned_limit entry that front-ran the level. Eliminate this type of entry.\n\nNEXT WEEK:\nTrade only with confirmation entries; do not place any planned_limit orders."
   },
   "days": [
+    {
+      "date": "2026-07-08",
+      "inventory": "N",
+      "vah": 29578.0,
+      "poc": 29578.0,
+      "val": 29345.0,
+      "settle": 29391.5,
+      "ovn_high": 29558.75,
+      "ovn_low": 28909.75,
+      "ovn_poc": 29409.0,
+      "ovn_vah": 29464.0,
+      "ovn_val": 29352.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.5,
+      "confidence_b": 0.37,
+      "confidence_c": 0.13,
+      "post_time": "09:00:00",
+      "day_shape": "range_expansion",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Imbalance \u2014 Volatile Range Expansion to the downside fueled by negative GEX and an open below value.",
+      "invalidation": "Acceptance and sustained trading back above the prior day low at 29210.0 and weekly low at 29273.75, which would signal a shift back into the prior session's value area.",
+      "plan": "If the open fails to reclaim the prior day low at 29210.0, look for a continuation down toward the overnight low of 28909.75. If the auction accepts below 28909.75, target the key put wall at 28855.0. If the overnight low at 28909.75 is swept on the open and immediately rejects with aggressive buying, look for a rotation back to test the prior day low at 29210.0 and the prior weekly low at 29273.75.",
+      "risk": "Elevated volatility risk due to an 81st-percentile overnight range and short dealer gamma, which can cause swift, illiquid flushes and rapid expansion in both directions.",
+      "predicted_model": "range_expansion",
+      "vol_regime": "high",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 48,
+          "confidence": "high",
+          "why": "The massive 649-point overnight range combined with -3.9Bn short dealer gamma heavily favors a wide expansion of the daily range.",
+          "stat_support": "base rate 32%"
+        },
+        {
+          "model": "trend_down",
+          "probability": 38,
+          "confidence": "medium",
+          "why": "Opening well below the prior day value area of 29345.0\u201329578.0 with value actively migrating lower gives sellers immediate structural control.",
+          "stat_support": "base rate 20%"
+        },
+        {
+          "model": "trend_up",
+          "probability": 10,
+          "confidence": "low",
+          "why": "Price opening in a deep discount relative to the prior range makes a sustained trend up difficult without first establishing a major structural floor.",
+          "stat_support": "base rate 27%"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 9,
+          "confidence": "low",
+          "why": "The large gap and extended open location far below the prior RTH POC of 29578.0 suggest the market is in a highly directional state rather than a mean-reverting one.",
+          "stat_support": "base rate 9%"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 6,
+          "confidence": "low",
+          "why": "Large overnight ranges and deep negative gamma environments historically suppress any chance of a quiet, two-sided rotational auction.",
+          "stat_support": "base rate 11%"
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29183.0,
+          "vs_settle": -208.5,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-07-07",
       "inventory": "100S",
