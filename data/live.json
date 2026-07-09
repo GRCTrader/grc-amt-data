@@ -1,67 +1,46 @@
 {
-  "asof": "2026-07-08 11:01 ET",
-  "slot": "11:01",
-  "price": 29174.25,
-  "bias": "SHORT",
+  "asof": "2026-07-09 09:31 ET",
+  "slot": "09:31",
+  "price": 29732.5,
+  "bias": "LONG",
   "scenarios": [
     {
       "model": "range_expansion",
-      "probability": 48,
+      "probability": 31,
       "base_rate": 32,
+      "drivers": []
+    },
+    {
+      "model": "short_covering",
+      "probability": 30,
+      "base_rate": 19,
       "drivers": [
-        "+ range already expanded overnight",
-        "+ -GEX fuels expansion",
-        "\u2212 25 similar days: 36% historically"
+        "+ nothing to cover up here"
       ]
     },
     {
-      "model": "trend_down",
-      "probability": 38,
-      "base_rate": 20,
+      "model": "failed_auction",
+      "probability": 13,
+      "base_rate": 15,
       "drivers": [
-        "+ open below value",
-        "+ value migrating lower"
-      ]
-    },
-    {
-      "model": "trend_up",
-      "probability": 10,
-      "base_rate": 27,
-      "drivers": [
-        "\u2212 open below value"
+        "\u2212 open out of value near an OVN extreme",
+        "+ unswept liquidity to trap into"
       ]
     },
     {
       "model": "mean_reversion",
-      "probability": 9,
+      "probability": 8,
       "base_rate": 9,
       "drivers": [
         "\u2212 extended open far from POC"
       ]
     }
   ],
-  "invalidations": [
-    {
-      "scenario": "range_expansion",
-      "status": "armed",
-      "condition": "close_below",
-      "level": 28855.0,
-      "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance below the put wall 28855 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
-    },
-    {
-      "scenario": "range_expansion",
-      "status": "armed",
-      "condition": "close_above",
-      "level": 29520.0,
-      "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance above the call wall 29520 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
-    }
-  ],
+  "invalidations": [],
   "gex": {
-    "total_gex_bn": -3.89,
-    "flip_nq": null,
-    "call_wall_nq": 29520,
-    "put_wall_nq": 28855
+    "total_gex_bn": 0.81,
+    "flip_nq": 29590,
+    "call_wall_nq": 29835,
+    "put_wall_nq": 29010
   }
 }
