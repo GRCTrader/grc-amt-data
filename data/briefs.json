@@ -1,9 +1,9 @@
 {
-  "updated": "2026-07-09T08:00:19.117130-04:00",
+  "updated": "2026-07-09T11:05:10.532552-04:00",
   "stats": {
-    "total_graded": 24,
-    "correct": 8,
-    "accuracy_pct": 33.3,
+    "total_graded": 25,
+    "correct": 9,
+    "accuracy_pct": 36.0,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -124,13 +124,18 @@
         "date": "2026-07-08",
         "pct": 25.0,
         "n": 20
+      },
+      {
+        "date": "2026-07-09",
+        "pct": 30.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 23,
-        "correct": 8,
-        "pct": 34.8
+        "total": 24,
+        "correct": 9,
+        "pct": 37.5
       },
       "?": {
         "total": 1,
@@ -151,8 +156,8 @@
       },
       "70\u201380%": {
         "correct": 5,
-        "total": 18,
-        "pct": 27.8
+        "total": 19,
+        "pct": 26.3
       },
       "80%+": {
         "correct": 0,
@@ -180,10 +185,10 @@
         "pct": 0.0
       },
       "range_expansion": {
-        "total": 2,
-        "correct": 0,
+        "total": 3,
+        "correct": 1,
         "label": "\ud83d\udca5 Range Expansion",
-        "pct": 0.0
+        "pct": 33.3
       },
       "rotational_balance": {
         "total": 1,
@@ -244,10 +249,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-09T08:00:19.117146-04:00",
+    "generated_at": "2026-07-09T11:05:10.532578-04:00",
     "last_brief_date": "2026-07-09",
     "last_brief_time": "08:00:01",
-    "last_grade_date": "2026-07-08",
+    "last_grade_date": "2026-07-09",
     "recent_failures": [
       {
         "ts": "2026-07-07 19:38:27",
@@ -284,8 +289,8 @@
       "post_time": "08:00:01",
       "day_shape": "range_expansion",
       "day_shape_note": null,
-      "htf_bias": null,
-      "htf_text": null,
+      "htf_bias": "SHORT",
+      "htf_text": "DAILY: The Daily market structure is currently bearish, having established a lower low at 28909.75 on July 8th, completing a bearish displacement from the July 6th high of 30094.00, with price currently in a premium retracing into and mitigating the bearish FVG between 29558.75 (07-08 H) and 29683.00 (07-06 L). The nearest untapped buyside liquidity rests above the 07-06 high of 30094.00 and the 07-01 high of 30553.75, while sellside liquidity exists below the 07-08 low of 28909.75 and the 06-09 low of 28227.75.\n\n4H: Since the liquidity sweep at 28909.75 on July 8th, the 4H market structure has initiated a short-term bullish displacement, printing higher highs and leaving a substantial bullish FVG between 29462.50 and 29681.00 below current price action. A decisive rejection from the daily premium and a break below this 4H FVG would confirm the overarching daily bearish market structure, whereas acceptance above the 07-06 H30094.00 would indicate a significant daily market structure shift.\n\n1H: Overnight, NQ established a strong bullish market structure, consistently printing higher highs and higher lows, displacing significantly above the prior RTH close of 29391.25. The immediate draw for the NY open is for price to either seek the untapped buyside liquidity resting above 07-06 H30094.00 following the overnight bullish conviction, or to find rejection in the higher-timeframe premium after mitigating the daily bearish FVG.\n\nBIAS: SHORT. If NQ rejects the current daily premium after mitigating the bearish FVG, I expect a move to fill the 4H bullish FVG (29462.50-29681.00); otherwise, acceptance above the 07-06 high of 30094.00 would negate this bias, indicating a shift in HTF market structure.",
       "regime": "IMBALANCE: Attempted gap-and-go / range expansion outside overnight value.",
       "invalidation": "Acceptance back below PDH 29558.75 and OVN POC 29444.0 kills the bullish continuation thesis.",
       "plan": "If the open at 29700.0 drives immediately higher and accepts above OVN High 29735.75, then seek continuation longs targeting the Weekly Open 29930.25. If the open fails to break 29735.75 and rotates down, look for buyers to defend OVN VAH 29632.0 or PDH 29558.75 to re-enter longs. If OVN VAH 29632.0 is lost, then expect a mean reversion back toward OVN POC 29444.0 and Settle 29468.5.",
@@ -350,6 +355,20 @@
           "abort": ""
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": true,
+        "detail": "Two-sided, range 29614-29931, close 29763",
+        "notes": null,
+        "gemini": "SCENARIO: The top predicted model, Range Expansion (31%), accurately played out, supported by the high-ranked Short-Covering Rally. Price exhibited strong upward movement outside overnight value.\n\nLEVELS: Price drove immediately higher above OVN High 29735.75, hitting the Weekly Open target of 29930.25 precisely at 29931.25. OVN VAH 29632.0 was briefly lost to 29614.5, but buyers defended, preventing the expected mean reversion to OVN POC 29444.0. PDH 29558.75 was never tested.\n\nGAMMA: The session did not behave like a predicted MEAN-REVERT day; momentum extended past the call wall 29835, which was broken, rather than edges fading. The flip 29590 was not relevant.\n\nVERDICT: The 09:00 read was highly useful for the 09:30\u201311:00 session, as the top model, Range Expansion, accurately played out.",
+        "close": 29762.75,
+        "high": 29931.25,
+        "low": 29614.5,
+        "predicted_model": "range_expansion",
+        "actual_model": "range_expansion",
+        "model_correct": true
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -357,6 +376,34 @@
           "vs_settle": 231.5,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29740.75,
+          "vs_settle": 272.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29056.00\u201329362.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 29840.5,
+          "vs_settle": 372.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29056.00\u201329362.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 29692.0,
+          "vs_settle": 223.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29056.00\u201329362.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 29796.5,
+          "vs_settle": 328.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29056.00\u201329362.00."
         }
       ]
     },
