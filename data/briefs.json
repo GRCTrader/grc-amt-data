@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T11:05:16.568972-04:00",
+  "updated": "2026-07-09T08:00:19.117130-04:00",
   "stats": {
     "total_graded": 24,
     "correct": 8,
@@ -244,9 +244,9 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-08T11:05:16.568993-04:00",
-    "last_brief_date": "2026-07-08",
-    "last_brief_time": "09:00:00",
+    "generated_at": "2026-07-09T08:00:19.117146-04:00",
+    "last_brief_date": "2026-07-09",
+    "last_brief_time": "08:00:01",
     "last_grade_date": "2026-07-08",
     "recent_failures": [
       {
@@ -263,6 +263,103 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2013 Strong on 06-30 for the Market Structure Shift Long, but your subsequent losses on 07-01 and 07-02 indicate some missed reads.\nLevel Selection: 7/10 \u2013 Your Value Area Low selection on 06-30 was excellent. The level for the 07-01 planned_limit entry was clearly not robust enough.\nExecution: 8/10 \u2013 Your confirmation entries were executed perfectly this week, accounting for all your positive P&L.\nRisk Management: 6/10 \u2013 While your avg R is solid at 2.8R, the $-474 loss on 07-01 wiped out too much of your week's gains.\nPsychology: 7/10 \u2013 You showed calm and confidence on winning trades, but the costly planned_limit loss suggests an underlying impatience with the setup itself.\nDiscipline: 7/10 \u2013 You stuck to your max 2 attempts/day and didn't have any 'against-read' trades. However, the planned_limit failure signals a breach of waiting for true A-setup quality.\n\nPNL: Net $+171 over 5 trades / 4 days; profit factor 1.27; avg 2.8R; best day '2026-06-30' ($+794.8); worst day '2026-07-01' ($-474.0).\n\nWHAT WORKED:\n*   Your confirmation entries were 100% winners this week (2W/0L), delivering all $+795 of your gross profit, with trades on 06-30 and 07-03. This is your proven edge.\n*   The Market Structure Shift Long at Value Area Low setup proved highly effective, yielding 2 wins for $+795 on 06-30.\n\nBIGGEST LEAK:\nThe single most costly pattern this week was your premature use of the planned_limit entry model. Your 2026-07-01 NQ long loss of $-474, which was a planned_limit entry, represents 100% of your losses from that entry model and single-handedly cut your potential $+795 gross profit down to a net $+171. This demonstrates front-running the level without sufficient confirmation, turning a core part of your edge into a significant leak when applied without the proper market context or orderflow trigger.\n\nBEST & WORST TRADE:\nBEST: 2026-06-30 a1 MNQ long WIN $+575 \u2013 a calm, confirmed entry at a strong level. Repeat this process relentlessly.\nWORST: 2026-07-01 a1 NQ long LOSS $-474 \u2013 a planned_limit entry that front-ran the level. Eliminate this type of entry.\n\nNEXT WEEK:\nTrade only with confirmation entries; do not place any planned_limit orders."
   },
   "days": [
+    {
+      "date": "2026-07-09",
+      "inventory": "SL",
+      "vah": 29362.0,
+      "poc": 29277.0,
+      "val": 29056.0,
+      "settle": 29468.5,
+      "ovn_high": 29735.75,
+      "ovn_low": 29353.25,
+      "ovn_poc": 29444.0,
+      "ovn_vah": 29632.0,
+      "ovn_val": 29420.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.75,
+      "confidence_b": 0.12,
+      "confidence_c": 0.13,
+      "post_time": "08:00:01",
+      "day_shape": "range_expansion",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "IMBALANCE: Attempted gap-and-go / range expansion outside overnight value.",
+      "invalidation": "Acceptance back below PDH 29558.75 and OVN POC 29444.0 kills the bullish continuation thesis.",
+      "plan": "If the open at 29700.0 drives immediately higher and accepts above OVN High 29735.75, then seek continuation longs targeting the Weekly Open 29930.25. If the open fails to break 29735.75 and rotates down, look for buyers to defend OVN VAH 29632.0 or PDH 29558.75 to re-enter longs. If OVN VAH 29632.0 is lost, then expect a mean reversion back toward OVN POC 29444.0 and Settle 29468.5.",
+      "risk": "Opening at 122% of the prior-day range introduces elevated volatility and risk of rapid shakeouts; size down if the opening 5-minute range exceeds 100 points.",
+      "predicted_model": "range_expansion",
+      "vol_regime": "normal",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 31,
+          "confidence": "medium",
+          "why": "Opening above OVN VAH 29632.0 and near OVN High 29735.75 primes a breakout on normal overnight volatility.",
+          "stat_support": "base rate 32%",
+          "trigger": "Acceptance and hold above OVN High 29735.75 after the open.",
+          "confirm": "Retest and defense of OVN VAH 29632.0 as support with positive delta expansion.",
+          "target": "Weekly Open 29930.25",
+          "abort": "A clean break back inside the overnight value area below 29632.0."
+        },
+        {
+          "model": "short_covering",
+          "probability": 30,
+          "confidence": "medium",
+          "why": "Opening at 122% of the prior-day range traps overnight short inventory, driving rapid continuation if key resistance fails.",
+          "stat_support": "base rate 19%",
+          "trigger": "Clearance of OVN High 29735.75 early in the session.",
+          "confirm": "Passive absorption of selling pressure on pullbacks to the open level 29700.0.",
+          "target": "Weekly Open 29930.25",
+          "abort": "Reclaim and acceptance below PDH 29558.75."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 13,
+          "confidence": "low",
+          "why": "Opening near the OVN High 29735.75 without sufficient buying urgency invites a rapid failure and reversal back through value.",
+          "stat_support": "base rate 15%",
+          "trigger": "A swift run above OVN High 29735.75 that immediately fails and prints a rejection tail.",
+          "confirm": "Reclaiming back inside OVN VAH 29632.0 with aggressive selling volume.",
+          "target": "OVN POC 29444.0",
+          "abort": "Consolidation and acceptance above 29735.75."
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 8,
+          "confidence": "low",
+          "why": "An extended open relative to the high-volume nodes suggests an eventual return to fair value if the gap fails to find acceptance.",
+          "stat_support": "base rate 9%",
+          "trigger": "Failure to build acceptance above OVN VAH 29632.0 on a downward rotation.",
+          "confirm": "Breaching PDH 29558.75 and holding it as intraday resistance.",
+          "target": "OVN POC 29444.0",
+          "abort": "Breakout and hold above 29700.0."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 7,
+          "confidence": "low",
+          "why": "\u2212 gap argues against balance",
+          "stat_support": "base rate 10%",
+          "trigger": "",
+          "confirm": "",
+          "target": "",
+          "abort": ""
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29700.0,
+          "vs_settle": 231.5,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-07-08",
       "inventory": "N",
