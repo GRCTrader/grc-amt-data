@@ -1,46 +1,85 @@
 {
-  "asof": "2026-07-09 11:01 ET",
-  "slot": "11:01",
-  "price": 29785.25,
-  "bias": "NEUTRAL",
+  "asof": "2026-07-10 09:31 ET",
+  "slot": "09:31",
+  "price": 29823.75,
+  "bias": "SHORT",
   "scenarios": [
     {
-      "model": "range_expansion",
-      "probability": 31,
-      "base_rate": 32,
-      "drivers": []
+      "model": "rotational_balance",
+      "probability": 36,
+      "base_rate": 29,
+      "drivers": [
+        "+ open inside value",
+        "\u2212 gap argues against balance",
+        "\u2212 price below gamma flip 29925 \u2014 fades lose fuel",
+        "+ 25 similar days: 44% historically"
+      ]
     },
     {
-      "model": "short_covering",
-      "probability": 30,
-      "base_rate": 19,
+      "model": "range_expansion",
+      "probability": 15,
+      "base_rate": 14,
       "drivers": [
-        "+ nothing to cover up here"
+        "\u2212 OVN range compressed \u2014 coiled",
+        "+ -GEX fuels expansion",
+        "+ price below gamma flip 29925 \u2014 momentum regime"
       ]
     },
     {
       "model": "failed_auction",
-      "probability": 13,
-      "base_rate": 15,
+      "probability": 14,
+      "base_rate": 14,
       "drivers": [
-        "\u2212 open out of value near an OVN extreme",
         "+ unswept liquidity to trap into"
       ]
     },
     {
-      "model": "mean_reversion",
-      "probability": 8,
-      "base_rate": 9,
+      "model": "short_covering",
+      "probability": 13,
+      "base_rate": 11,
       "drivers": [
-        "\u2212 extended open far from POC"
+        "+ price below gamma flip 29925 \u2014 momentum regime"
       ]
     }
   ],
-  "invalidations": [],
+  "invalidations": [
+    {
+      "scenario": "rotational_balance",
+      "status": "armed",
+      "condition": "close_above",
+      "level": 29920.0,
+      "closes_needed": 2,
+      "meaning": "balance dead \u2014 acceptance above VAH 29920.0"
+    },
+    {
+      "scenario": "rotational_balance",
+      "status": "armed",
+      "condition": "close_below",
+      "level": 29680.0,
+      "closes_needed": 2,
+      "meaning": "balance dead \u2014 acceptance below VAL 29680.0"
+    },
+    {
+      "scenario": "rotational_balance",
+      "status": "armed",
+      "condition": "close_below",
+      "level": 28975.0,
+      "closes_needed": 2,
+      "meaning": "\u26a1 GAMMA: acceptance below the put wall 28975 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
+    },
+    {
+      "scenario": "rotational_balance",
+      "status": "armed",
+      "condition": "close_above",
+      "level": 30215.0,
+      "closes_needed": 2,
+      "meaning": "\u26a1 GAMMA: acceptance above the call wall 30215 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
+    }
+  ],
   "gex": {
-    "total_gex_bn": 0.81,
-    "flip_nq": 29590,
-    "call_wall_nq": 29835,
-    "put_wall_nq": 29010
+    "total_gex_bn": -0.76,
+    "flip_nq": 29925,
+    "call_wall_nq": 30215,
+    "put_wall_nq": 28975
   }
 }
