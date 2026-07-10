@@ -1,12 +1,12 @@
 {
-  "updated": "2026-07-10T09:13:27.475853-04:00",
+  "updated": "2026-07-10T11:05:16.439221-04:00",
   "stats": {
-    "total_graded": 25,
-    "correct": 9,
-    "accuracy_pct": 36.0,
-    "top2_graded": 12,
-    "top2_hits": 4,
-    "top2_pct": 33.3,
+    "total_graded": 26,
+    "correct": 10,
+    "accuracy_pct": 38.5,
+    "top2_graded": 13,
+    "top2_hits": 5,
+    "top2_pct": 38.5,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -132,13 +132,18 @@
         "date": "2026-07-09",
         "pct": 30.0,
         "n": 20
+      },
+      {
+        "date": "2026-07-10",
+        "pct": 30.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 24,
-        "correct": 9,
-        "pct": 37.5
+        "total": 25,
+        "correct": 10,
+        "pct": 40.0
       },
       "?": {
         "total": 1,
@@ -159,8 +164,8 @@
       },
       "70\u201380%": {
         "correct": 5,
-        "total": 19,
-        "pct": 26.3
+        "total": 20,
+        "pct": 25.0
       },
       "80%+": {
         "correct": 0,
@@ -194,10 +199,10 @@
         "pct": 33.3
       },
       "rotational_balance": {
-        "total": 1,
-        "correct": 0,
+        "total": 2,
+        "correct": 1,
         "label": "\u2696\ufe0f Rotational / Balance",
-        "pct": 0.0
+        "pct": 50.0
       },
       "trend_up": {
         "total": 1,
@@ -252,10 +257,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-10T09:13:27.475895-04:00",
+    "generated_at": "2026-07-10T11:05:16.439243-04:00",
     "last_brief_date": "2026-07-10",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-07-09",
+    "last_grade_date": "2026-07-10",
     "recent_failures": []
   },
   "coach": null,
@@ -351,6 +356,21 @@
           "abort": "Price reclaims RTH VAL 29680.0 and accepts back into RTH value 29680.0-29920.0."
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": true,
+        "detail": "Reverted to POC 29828",
+        "notes": null,
+        "gemini": "SCENARIO: The top predicted model, rotational_balance, did not play out. Instead, the session behaved like a Range Expansion day, which was a high-ranked probability (15%), as price broke significantly out of the overnight and RTH ranges.\n\nLEVELS: Price opened around 29900, rotated briefly, then broke above RTH VAH 29912 (plan: 29920) and OVN VAH 29952 to 29968.5. It then reversed sharply, breaking below OVN VAL 29822 and RTH VAL 29774 (plan: 29680) to 29675.0. The plan's \"fade extensions\" would have been difficult due to these sustained breaks. Both invalidation conditions were met.\n\nGAMMA: The session behaved like a momentum day as predicted; moves extended significantly above the Gamma flip 29925 (to 29968.5) and then sharply downwards to 29675.0, confirming the short gamma characteristic of extending moves.\n\nVERDICT: The 09:00 read was useful in identifying the potential for \"range_expansion\" and marking critical levels that were eventually broken, though the primary rotational context was invalidated.",
+        "close": 29853.25,
+        "high": 29968.5,
+        "low": 29675.0,
+        "predicted_model": "rotational_balance",
+        "actual_model": "mean_reversion",
+        "model_correct": true,
+        "top2_hit": true
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -358,6 +378,34 @@
           "vs_settle": -112.5,
           "inside_va": true,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29818.0,
+          "vs_settle": -119.0,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29773.50/29912.00, target POC 29827.75."
+        },
+        {
+          "slot": "10:00",
+          "price": 29940.75,
+          "vs_settle": 3.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29773.50\u201329912.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 29904.5,
+          "vs_settle": -32.5,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29773.50/29912.00, target POC 29827.75."
+        },
+        {
+          "slot": "11:00",
+          "price": 29902.0,
+          "vs_settle": -35.0,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29773.50/29912.00, target POC 29827.75."
         }
       ]
     },
