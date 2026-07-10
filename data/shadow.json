@@ -1,24 +1,24 @@
 {
-  "updated": "2026-07-09 12:05 ET",
+  "updated": "2026-07-10 12:05 ET",
   "kpis": {
-    "n": 4,
-    "gross_pnl": -1925.0,
-    "net_pnl": -1943.16,
+    "n": 7,
+    "gross_pnl": -2980.0,
+    "net_pnl": -3011.78,
     "win_rate": 0,
     "profit_factor": 0.0,
     "avg_win": 0,
-    "avg_loss": -485.79,
-    "max_drawdown": 1943.16,
-    "avg_duration_min": 2,
+    "avg_loss": -430.25,
+    "max_drawdown": 3011.78,
+    "avg_duration_min": 4,
     "by_direction": {
       "LONG": {
-        "n": 1,
-        "net": -314.54,
+        "n": 2,
+        "net": -1119.08,
         "wr": 0
       },
       "SHORT": {
-        "n": 3,
-        "net": -1628.62,
+        "n": 5,
+        "net": -1892.7,
         "wr": 0
       }
     },
@@ -26,10 +26,18 @@
       -94.54,
       -109.08,
       -423.62,
-      -1943.16
+      -1943.16,
+      -2192.7,
+      -2997.24,
+      -3011.78
     ]
   },
   "by_day_model": {
+    "mean_reversion": {
+      "n": 3,
+      "net": -1068.62,
+      "wr": 0
+    },
     "range_expansion": {
       "n": 2,
       "net": -1834.08,
@@ -42,6 +50,11 @@
     }
   },
   "by_weekday": {
+    "Friday": {
+      "n": 3,
+      "net": -1068.62,
+      "wr": 0
+    },
     "Thursday": {
       "n": 2,
       "net": -1834.08,
@@ -55,17 +68,74 @@
   },
   "by_exit": {
     "Breakeven Stop": {
-      "n": 1,
-      "net": -14.54,
+      "n": 2,
+      "net": -29.08,
       "wr": 0
     },
     "Stop": {
-      "n": 3,
-      "net": -1928.62,
+      "n": 5,
+      "net": -2982.7,
       "wr": 0
     }
   },
   "recent": [
+    {
+      "id": 184,
+      "date": "2026-07-10",
+      "direction": "SHORT",
+      "entry_time": "10:31",
+      "entry_price": 29932.75,
+      "stop": 29932.75,
+      "exit_time": "10:32",
+      "exit_price": 29932.75,
+      "exit_reason": "Breakeven Stop",
+      "points": -0.5,
+      "costs": 4.54,
+      "net_pnl": -14.54,
+      "duration_min": 1,
+      "adds": 0,
+      "day_model": "mean_reversion",
+      "vol_regime": "low",
+      "weekday": "Friday"
+    },
+    {
+      "id": 183,
+      "date": "2026-07-10",
+      "direction": "LONG",
+      "entry_time": "10:01",
+      "entry_price": 29943.0,
+      "stop": 29903.5,
+      "exit_time": "10:19",
+      "exit_price": 29903.5,
+      "exit_reason": "Stop",
+      "points": -40.0,
+      "costs": 4.54,
+      "net_pnl": -804.54,
+      "duration_min": 18,
+      "adds": 0,
+      "day_model": "mean_reversion",
+      "vol_regime": "low",
+      "weekday": "Friday"
+    },
+    {
+      "id": 182,
+      "date": "2026-07-10",
+      "direction": "SHORT",
+      "entry_time": "09:31",
+      "entry_price": 29881.0,
+      "stop": 29892.75,
+      "exit_time": "09:32",
+      "exit_price": 29892.75,
+      "exit_reason": "Stop",
+      "points": -12.25,
+      "costs": 4.54,
+      "net_pnl": -249.54,
+      "duration_min": 1,
+      "adds": 0,
+      "day_model": "mean_reversion",
+      "vol_regime": "low",
+      "weekday": "Friday"
+    },
     {
       "id": 181,
       "date": "2026-07-09",
@@ -151,6 +221,10 @@
     {
       "date": "2026-07-09",
       "net": -1834.08
+    },
+    {
+      "date": "2026-07-10",
+      "net": -1068.62
     }
   ]
 }
