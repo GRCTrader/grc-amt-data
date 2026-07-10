@@ -1,9 +1,12 @@
 {
-  "updated": "2026-07-09T11:05:10.532552-04:00",
+  "updated": "2026-07-10T09:00:38.570035-04:00",
   "stats": {
     "total_graded": 25,
     "correct": 9,
     "accuracy_pct": 36.0,
+    "top2_graded": 12,
+    "top2_hits": 4,
+    "top2_pct": 33.3,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -249,18 +252,11 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-09T11:05:10.532578-04:00",
-    "last_brief_date": "2026-07-09",
-    "last_brief_time": "08:00:01",
+    "generated_at": "2026-07-10T09:00:38.570058-04:00",
+    "last_brief_date": "2026-07-10",
+    "last_brief_time": "09:00:00",
     "last_grade_date": "2026-07-09",
-    "recent_failures": [
-      {
-        "ts": "2026-07-07 19:38:27",
-        "label": "github_push",
-        "status": "error",
-        "detail": "data/shadow.json HTTP 401"
-      }
-    ]
+    "recent_failures": []
   },
   "coach": null,
   "mentor_review": {
@@ -268,6 +264,103 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2013 Strong on 06-30 for the Market Structure Shift Long, but your subsequent losses on 07-01 and 07-02 indicate some missed reads.\nLevel Selection: 7/10 \u2013 Your Value Area Low selection on 06-30 was excellent. The level for the 07-01 planned_limit entry was clearly not robust enough.\nExecution: 8/10 \u2013 Your confirmation entries were executed perfectly this week, accounting for all your positive P&L.\nRisk Management: 6/10 \u2013 While your avg R is solid at 2.8R, the $-474 loss on 07-01 wiped out too much of your week's gains.\nPsychology: 7/10 \u2013 You showed calm and confidence on winning trades, but the costly planned_limit loss suggests an underlying impatience with the setup itself.\nDiscipline: 7/10 \u2013 You stuck to your max 2 attempts/day and didn't have any 'against-read' trades. However, the planned_limit failure signals a breach of waiting for true A-setup quality.\n\nPNL: Net $+171 over 5 trades / 4 days; profit factor 1.27; avg 2.8R; best day '2026-06-30' ($+794.8); worst day '2026-07-01' ($-474.0).\n\nWHAT WORKED:\n*   Your confirmation entries were 100% winners this week (2W/0L), delivering all $+795 of your gross profit, with trades on 06-30 and 07-03. This is your proven edge.\n*   The Market Structure Shift Long at Value Area Low setup proved highly effective, yielding 2 wins for $+795 on 06-30.\n\nBIGGEST LEAK:\nThe single most costly pattern this week was your premature use of the planned_limit entry model. Your 2026-07-01 NQ long loss of $-474, which was a planned_limit entry, represents 100% of your losses from that entry model and single-handedly cut your potential $+795 gross profit down to a net $+171. This demonstrates front-running the level without sufficient confirmation, turning a core part of your edge into a significant leak when applied without the proper market context or orderflow trigger.\n\nBEST & WORST TRADE:\nBEST: 2026-06-30 a1 MNQ long WIN $+575 \u2013 a calm, confirmed entry at a strong level. Repeat this process relentlessly.\nWORST: 2026-07-01 a1 NQ long LOSS $-474 \u2013 a planned_limit entry that front-ran the level. Eliminate this type of entry.\n\nNEXT WEEK:\nTrade only with confirmation entries; do not place any planned_limit orders."
   },
   "days": [
+    {
+      "date": "2026-07-10",
+      "inventory": "100S",
+      "vah": 29920.0,
+      "poc": 29847.0,
+      "val": 29680.0,
+      "settle": 29937.0,
+      "ovn_high": 29973.75,
+      "ovn_low": 29717.25,
+      "ovn_poc": 29952.0,
+      "ovn_vah": 29952.0,
+      "ovn_val": 29822.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.71,
+      "confidence_b": 0.11,
+      "confidence_c": 0.17,
+      "post_time": "09:00:00",
+      "day_shape": "rotational_balance",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "IMBALANCE regime, with an initial period of likely rotational_balance, poised for range_expansion or failed_auction due to negative GEX and compressed overnight range.",
+      "invalidation": "Acceptance above Gamma flip 29925.0 or below OVNL 29717.25 would invalidate the primary rotational context.",
+      "plan": "If the open at 29824.5 finds immediate acceptance and begins to rotate around RTH POC 29847.0, look to fade any extensions towards RTH VAL 29680.0 or RTH VAH 29920.0 back towards POC. If price decisively rejects OVN VAL 29822.0 and accepts below it, look for a drive towards OVNL 29717.25. A failure to hold OVNL could target PDL 29395.0. If price breaks above RTH VAH 29920.0 and reclaims Gamma flip 29925.0 with acceptance, anticipate a range expansion move towards PDH 29993.5. If price sweeps OVN high 29973.75 or OVNL 29717.25 but fails to find acceptance, look for a failed auction reversal bac",
+      "risk": "Volatility risk is elevated due to negative GEX and a compressed overnight range which could lead to sharp expansions. Monitor for MTF conflict as HTF bias is unclear.",
+      "predicted_model": "rotational_balance",
+      "vol_regime": "low",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "rotational_balance",
+          "probability": 36,
+          "confidence": "medium",
+          "why": "Open inside RTH value (29680.0-29920.0) and at OVN VAL 29822.0 supports this, though the gap (-0.38%) argues against balance, and price below gamma flip 29925 suggests fades may lose fuel.",
+          "stat_support": "base rate 29%",
+          "trigger": "Open at 29824.5 within RTH value 29680.0-29920.0, near OVN VAL 29822.0.",
+          "confirm": "Price rotation and acceptance between OVN VAL 29822.0 and RTH VAH 29920.0, staying below Gamma flip 29925.0.",
+          "target": "RTH POC 29847.0 or OVN POC 29952.0, trading the range between OVN VAL 29822.0 and RTH VAH 29920.0.",
+          "abort": "Acceptance above RTH VAH 29920.0 and Gamma flip 29925.0, or below RTH VAL 29680.0."
+        },
+        {
+          "model": "range_expansion",
+          "probability": 15,
+          "confidence": "low",
+          "why": "The compressed OVN range (256.5pts, 14th pctile) indicates coiled energy, -GEX fuels expansion, and price below gamma flip 29925 suggests a momentum regime.",
+          "stat_support": "base rate 14%",
+          "trigger": "Decisive break and hold above RTH VAH 29920.0 or below RTH VAL 29680.0.",
+          "confirm": "Acceptance beyond Gamma flip 29925.0 (upside) or below OVNL 29717.25 (downside).",
+          "target": "PDH 29993.5 or Call Wall 30215 (upside); PDL 29395.0 or Put Wall 28975 (downside).",
+          "abort": "Price quickly reverts back into the RTH value area 29680.0-29920.0 after attempting a breakout."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 14,
+          "confidence": "low",
+          "why": "Unswept liquidity at PDH 29993.5 and PDL 29395.0 provides clear zones to trap participants into.",
+          "stat_support": "base rate 14%",
+          "trigger": "Initial push above OVN high 29973.75 (towards PDH) or below OVNL 29717.25 (towards PDL).",
+          "confirm": "Rejection and failure to accept above OVN high 29973.75 (reversing below OVN VAH 29952.0), or failure to accept below OVNL 29717.25 (reversing above OVN VAL 298",
+          "target": "RTH POC 29847.0 or OVN POC 29952.0.",
+          "abort": "Clear acceptance and continuation beyond the swept extreme (e.g., sustained acceptance above PDH 29993.5 or below PDL 29395.0)."
+        },
+        {
+          "model": "short_covering",
+          "probability": 13,
+          "confidence": "low",
+          "why": "Price below gamma flip 29925 indicates a momentum regime where shorts might be trapped, fueling a rally, especially with 100% short inventory.",
+          "stat_support": "base rate 11%",
+          "trigger": "Strong aggressive buying and absorption at OVNL 29717.25 or RTH VAL 29680.0.",
+          "confirm": "Price reclaims and holds above OVN VAL 29822.0 and pushes decisively through Gamma flip 29925.0.",
+          "target": "Settle 29937.0 and PDH 29993.5.",
+          "abort": "Failure to hold OVNL 29717.25 or acceptance below RTH VAL 29680.0."
+        },
+        {
+          "model": "trend_down",
+          "probability": 12,
+          "confidence": "low",
+          "why": "Price below gamma flip 29925 suggests a momentum regime for downside continuation, despite the open not being below value.",
+          "stat_support": "base rate 14%",
+          "trigger": "Open at 29824.5 rejects RTH POC 29847.0 and decisively accepts below RTH VAL 29680.0.",
+          "confirm": "One-timeframing lower with sustained acceptance below OVNL 29717.25 without significant buying absorption.",
+          "target": "PDL 29395.0, then PWL 29273.75, finally Put Wall 28975.",
+          "abort": "Price reclaims RTH VAL 29680.0 and accepts back into RTH value 29680.0-29920.0."
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29824.5,
+          "vs_settle": -112.5,
+          "inside_va": true,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-07-09",
       "inventory": "SL",
@@ -367,7 +460,8 @@
         "low": 29614.5,
         "predicted_model": "range_expansion",
         "actual_model": "range_expansion",
-        "model_correct": true
+        "model_correct": true,
+        "top2_hit": true
       },
       "intraday": [
         {
@@ -486,7 +580,8 @@
         "low": 29151.0,
         "predicted_model": "range_expansion",
         "actual_model": "rotational_balance",
-        "model_correct": false
+        "model_correct": false,
+        "top2_hit": false
       },
       "intraday": [
         {
@@ -605,7 +700,8 @@
         "low": 29210.0,
         "predicted_model": "trend_down",
         "actual_model": "trend_down",
-        "model_correct": true
+        "model_correct": true,
+        "top2_hit": true
       },
       "intraday": [
         {
@@ -728,7 +824,8 @@
         "low": 29776.25,
         "predicted_model": "trend_up",
         "actual_model": "rotational_balance",
-        "model_correct": false
+        "model_correct": false,
+        "top2_hit": false
       },
       "intraday": [
         {
@@ -931,7 +1028,8 @@
         "low": 29730.75,
         "predicted_model": "rotational_balance",
         "actual_model": "trend_down",
-        "model_correct": false
+        "model_correct": false,
+        "top2_hit": false
       },
       "intraday": [
         {
@@ -1033,7 +1131,8 @@
         "low": 30087.75,
         "predicted_model": "failed_auction",
         "actual_model": "range_expansion",
-        "model_correct": false
+        "model_correct": false,
+        "top2_hit": false
       },
       "intraday": [
         {
@@ -1156,7 +1255,8 @@
         "low": 30033.0,
         "predicted_model": "range_expansion",
         "actual_model": "trend_up",
-        "model_correct": false
+        "model_correct": false,
+        "top2_hit": false
       },
       "intraday": [
         {
@@ -1258,7 +1358,8 @@
         "low": 29273.75,
         "predicted_model": "failed_auction",
         "actual_model": "mean_reversion",
-        "model_correct": false
+        "model_correct": false,
+        "top2_hit": true
       },
       "intraday": [
         {
@@ -1370,7 +1471,8 @@
         "low": 29181.5,
         "predicted_model": "short_covering",
         "actual_model": "rotational_balance",
-        "model_correct": false
+        "model_correct": false,
+        "top2_hit": false
       },
       "intraday": [
         {
@@ -1472,7 +1574,8 @@
         "low": 29295.75,
         "predicted_model": "failed_auction",
         "actual_model": "range_expansion",
-        "model_correct": false
+        "model_correct": false,
+        "top2_hit": false
       },
       "intraday": [
         {
@@ -1581,7 +1684,8 @@
         "low": 29525.0,
         "predicted_model": "failed_auction",
         "actual_model": "failed_auction",
-        "model_correct": true
+        "model_correct": true,
+        "top2_hit": true
       },
       "intraday": [
         {
@@ -1690,7 +1794,8 @@
         "low": 29616.5,
         "predicted_model": "failed_auction",
         "actual_model": "range_expansion",
-        "model_correct": false
+        "model_correct": false,
+        "top2_hit": false
       },
       "intraday": [
         {
