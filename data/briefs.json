@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-12T17:00:20.592211-04:00",
+  "updated": "2026-07-13T09:01:11.603022-04:00",
   "stats": {
     "total_graded": 26,
     "correct": 10,
@@ -257,8 +257,8 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-12T17:00:20.592244-04:00",
-    "last_brief_date": "2026-07-10",
+    "generated_at": "2026-07-13T09:01:11.603046-04:00",
+    "last_brief_date": "2026-07-13",
     "last_brief_time": "09:00:00",
     "last_grade_date": "2026-07-10",
     "recent_failures": []
@@ -269,6 +269,103 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2013 Your 'with-read' trades are 100% win rate for $+1248, but several losses indicate deviation from your conviction.\nLevel Selection: 8/10 \u2013 When you wait for confirmed levels, your planned_limit and confirmation entries perform extremely well.\nExecution: 6/10 \u2013 Strong on high-conviction entries, but execution on anticipatory/emotional trades is a significant drag.\nRisk Management: 7/10 \u2013 Overall P&L is solid, but the $-1500 loss shows a breach of stop discipline or sizing on a bad entry.\nPsychology: 6/10 \u2013 Your calm/confident trades are profitable, yet emotional triggers cost you deeply this week.\nDiscipline: 6/10 \u2013 You clearly have the edge, but you lack the discipline to consistently stick to it and avoid your known leaks.\n\nPNL: Net $+2746 over 14 trades / 5 days; profit factor 2.22; avg 3.4R; best day ('2026-07-06', $+2822.1); worst day ('2026-07-08', $-857.08).\n\nWHAT WORKED:\n*   Your location-first edge with planned_limit entries is your highest performer: 3W/1L (75%) for $+2822 and an impressive +3.87R average. Confirmation entries also delivered 2W/0L (100%) for +$858.\n*   Trades taken *with* your morning read have a 100% win rate (2W/0L) for $+1248, while specific setups like TMSO and SIBI confirmation also performed at 100%.\n\nBIGGEST LEAK:\nYour biggest leak is PREMATURE / EMOTIONAL ANTICIPATION, primarily front-running levels. Your 'Anticipatory' entry model went 0W/2L for -$467, particularly the two inversion setups on 2026-07-08 for -$233 each. Furthermore, your 'Emotional' entries were 1W/1L, barely breaking even at $+118, with the 2026-07-09 a1 MNQ -$283 loss being a clear example. This is directly abandoning your edge by not waiting for location *and* trigger.\n\nBEST & WORST TRADE:\nRepeat the 2026-07-06 a1 NQ WIN $+1132 (5.0R) planned_limit entry \u2013 this is your A-setup, executed calmly.\nCut the 2026-07-08 a1 NQ short LOSS $-1500 \u2013 this significant loss likely stemmed from the same anticipatory/emotional tendency that proved costly.\n\nNEXT WEEK:\nThis week, you will only take planned_limit or confirmation entries. If a trade is not either of these entry models, you will not take it, and you must log the reason why you hesitated or saw an anticipatory/emotional setup without taking it."
   },
   "days": [
+    {
+      "date": "2026-07-13",
+      "inventory": "100S",
+      "vah": 30045.0,
+      "poc": 30038.0,
+      "val": 29865.0,
+      "settle": 30032.25,
+      "ovn_high": 30073.75,
+      "ovn_low": 29542.75,
+      "ovn_poc": 30049.0,
+      "ovn_vah": 30062.0,
+      "ovn_val": 29654.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.78,
+      "confidence_b": 0.1,
+      "confidence_c": 0.12,
+      "post_time": "09:00:00",
+      "day_shape": "range_expansion",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Imbalance, developing range expansion / trend down day",
+      "invalidation": "Acceptance above RTH VAL 29865.0.",
+      "plan": "If RTH open drives down and accepts below PDL 29675.0, look for continuation towards OVN VAL 29654.0 and Put wall 29635.0. If open rallies from 29690.0, look for a failure to reclaim PDL 29675.0 or a rejection at settle 30032.25 for short entries. If price reaches OVN VAL 29654.0 or Put wall 29635.0, observe for absorption; a lack of new sellers or aggressive buying could hint at a bounce. If price sweeps the Put wall 29635.0 and quickly reclaims it with strong buying, be aware of a potential short squeeze toward PDL 29675.0 or RTH VAL 29865.0. An acceptance above RTH VAL 29865.0 would invalid",
+      "risk": "Negative GEX implies amplified moves, requiring tighter stops. Be aware of potential for fast liquidation spikes if key levels break.",
+      "predicted_model": "range_expansion",
+      "vol_regime": "normal",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 58,
+          "confidence": "high",
+          "why": "Range expansion is favored due to an already expanded overnight range, negative GEX amplifying moves, and price trading below the gamma flip, indicating a momentum regime.",
+          "stat_support": "base rate 32%",
+          "trigger": "Price accepts below PDL 29675.0 or fails to reclaim it after RTH open.",
+          "confirm": "Sustained one-timeframing below OVN VAL 29654.0 with continued delta negativity.",
+          "target": "Put wall 29635.0, then PWL 28909.75.",
+          "abort": "Acceptance back above prior RTH VAL 29865.0."
+        },
+        {
+          "model": "trend_down",
+          "probability": 45,
+          "confidence": "high",
+          "why": "A trend down is expected given the open below value, price trading below the gamma flip indicating a momentum regime, despite historical data for similar days showing lower probability.",
+          "stat_support": "base rate 24%",
+          "trigger": "RTH open drives directly lower from 29690.0 and accepts below PDL 29675.0.",
+          "confirm": "Price remains below OVN VAL 29654.0 with aggressive selling and minimal retracements.",
+          "target": "Put wall 29635.0, then potentially PWL 28909.75.",
+          "abort": "Acceptance back above RTH POC 30038.0."
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 9,
+          "confidence": "low",
+          "why": "\u2212 extended open far from POC; \u2212 price below gamma flip 30005 \u2014 fades lose fuel",
+          "stat_support": "base rate 12%",
+          "trigger": "",
+          "confirm": "",
+          "target": "",
+          "abort": ""
+        },
+        {
+          "model": "short_covering",
+          "probability": 5,
+          "confidence": "low",
+          "why": "Short covering is a low probability outcome as shorts are extended below value, but negative GEX could amplify an upward move if it occurs.",
+          "stat_support": "base rate 14%",
+          "trigger": "Strong absorption at Put wall 29635.0 immediately followed by a fast reclaim of OVN VAL 29654.0.",
+          "confirm": "Price establishes acceptance above PDL 29675.0 with positive delta and aggressive buying.",
+          "target": "Prior RTH VAL 29865.0, then settle 30032.25.",
+          "abort": "Price fails to hold OVN low 29542.75 and continues lower."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 5,
+          "confidence": "low",
+          "why": "A failed auction has low probability, despite unswept liquidity available for trapping, because the overnight range was already wide, suggesting both sides were explored.",
+          "stat_support": "base rate 9%",
+          "trigger": "Price attempts to break the OVN low 29542.75, but quickly reverses with aggressive buying.",
+          "confirm": "Price reclaims OVN VAL 29654.0 and PDL 29675.0 on strong volume.",
+          "target": "Prior RTH VAL 29865.0, potentially toward RTH POC 30038.0.",
+          "abort": "Sustained acceptance below OVN low 29542.75."
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29690.0,
+          "vs_settle": -342.25,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-07-10",
       "inventory": "100S",
