@@ -1,74 +1,59 @@
 {
-  "asof": "2026-07-10 11:01 ET",
-  "slot": "11:01",
-  "price": 29882.25,
+  "asof": "2026-07-13 09:31 ET",
+  "slot": "09:31",
+  "price": 29693.25,
   "bias": "SHORT",
   "scenarios": [
     {
-      "model": "rotational_balance",
-      "probability": 36,
-      "base_rate": 29,
-      "drivers": [
-        "+ open inside value",
-        "\u2212 gap argues against balance",
-        "\u2212 price below gamma flip 29925 \u2014 fades lose fuel",
-        "+ 25 similar days: 44% historically"
-      ]
-    },
-    {
       "model": "range_expansion",
-      "probability": 15,
-      "base_rate": 14,
+      "probability": 58,
+      "base_rate": 32,
       "drivers": [
-        "\u2212 OVN range compressed \u2014 coiled",
+        "+ range already expanded overnight",
         "+ -GEX fuels expansion",
-        "+ price below gamma flip 29925 \u2014 momentum regime"
+        "+ price below gamma flip 30005 \u2014 momentum regime"
       ]
     },
     {
-      "model": "failed_auction",
-      "probability": 14,
-      "base_rate": 14,
+      "model": "trend_down",
+      "probability": 45,
+      "base_rate": 24,
       "drivers": [
-        "+ unswept liquidity to trap into"
+        "+ open below value",
+        "+ price below gamma flip 30005 \u2014 momentum regime",
+        "\u2212 25 similar days: 32% historically"
+      ]
+    },
+    {
+      "model": "mean_reversion",
+      "probability": 9,
+      "base_rate": 12,
+      "drivers": [
+        "\u2212 extended open far from POC",
+        "\u2212 price below gamma flip 30005 \u2014 fades lose fuel"
       ]
     },
     {
       "model": "short_covering",
-      "probability": 13,
-      "base_rate": 11,
+      "probability": 5,
+      "base_rate": 14,
       "drivers": [
-        "+ price below gamma flip 29925 \u2014 momentum regime"
+        "\u2212 shorts extended below value",
+        "+ price below gamma flip 30005 \u2014 momentum regime"
       ]
     }
   ],
   "invalidations": [
     {
-      "scenario": "rotational_balance",
-      "status": "tripped",
-      "condition": "close_above",
-      "level": 29920.0,
-      "closes_needed": 2,
-      "meaning": "balance dead \u2014 acceptance above VAH 29920.0"
-    },
-    {
-      "scenario": "rotational_balance",
+      "scenario": "range_expansion",
       "status": "armed",
       "condition": "close_below",
-      "level": 29680.0,
+      "level": 29635.0,
       "closes_needed": 2,
-      "meaning": "balance dead \u2014 acceptance below VAL 29680.0"
+      "meaning": "\u26a1 GAMMA: acceptance below the put wall 29635 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
     },
     {
-      "scenario": "rotational_balance",
-      "status": "armed",
-      "condition": "close_below",
-      "level": 28975.0,
-      "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance below the put wall 28975 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
-    },
-    {
-      "scenario": "rotational_balance",
+      "scenario": "range_expansion",
       "status": "armed",
       "condition": "close_above",
       "level": 30215.0,
@@ -77,9 +62,9 @@
     }
   ],
   "gex": {
-    "total_gex_bn": -0.76,
-    "flip_nq": 29925,
+    "total_gex_bn": -2.48,
+    "flip_nq": 30005,
     "call_wall_nq": 30215,
-    "put_wall_nq": 28975
+    "put_wall_nq": 29635
   }
 }
