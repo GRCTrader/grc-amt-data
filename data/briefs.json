@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13T11:05:12.966131-04:00",
+  "updated": "2026-07-14T08:00:30.655099-04:00",
   "stats": {
     "total_graded": 27,
     "correct": 11,
@@ -262,11 +262,18 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-13T11:05:12.966155-04:00",
-    "last_brief_date": "2026-07-13",
-    "last_brief_time": "09:00:00",
+    "generated_at": "2026-07-14T08:00:30.655112-04:00",
+    "last_brief_date": "2026-07-14",
+    "last_brief_time": "08:00:01",
     "last_grade_date": "2026-07-13",
-    "recent_failures": []
+    "recent_failures": [
+      {
+        "ts": "2026-07-13 11:21:31",
+        "label": "gemini",
+        "status": "error",
+        "detail": "x_extract: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+      }
+    ]
   },
   "coach": null,
   "mentor_review": {
@@ -274,6 +281,83 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2013 Your 'with-read' trades are 100% win rate for $+1248, but several losses indicate deviation from your conviction.\nLevel Selection: 8/10 \u2013 When you wait for confirmed levels, your planned_limit and confirmation entries perform extremely well.\nExecution: 6/10 \u2013 Strong on high-conviction entries, but execution on anticipatory/emotional trades is a significant drag.\nRisk Management: 7/10 \u2013 Overall P&L is solid, but the $-1500 loss shows a breach of stop discipline or sizing on a bad entry.\nPsychology: 6/10 \u2013 Your calm/confident trades are profitable, yet emotional triggers cost you deeply this week.\nDiscipline: 6/10 \u2013 You clearly have the edge, but you lack the discipline to consistently stick to it and avoid your known leaks.\n\nPNL: Net $+2746 over 14 trades / 5 days; profit factor 2.22; avg 3.4R; best day ('2026-07-06', $+2822.1); worst day ('2026-07-08', $-857.08).\n\nWHAT WORKED:\n*   Your location-first edge with planned_limit entries is your highest performer: 3W/1L (75%) for $+2822 and an impressive +3.87R average. Confirmation entries also delivered 2W/0L (100%) for +$858.\n*   Trades taken *with* your morning read have a 100% win rate (2W/0L) for $+1248, while specific setups like TMSO and SIBI confirmation also performed at 100%.\n\nBIGGEST LEAK:\nYour biggest leak is PREMATURE / EMOTIONAL ANTICIPATION, primarily front-running levels. Your 'Anticipatory' entry model went 0W/2L for -$467, particularly the two inversion setups on 2026-07-08 for -$233 each. Furthermore, your 'Emotional' entries were 1W/1L, barely breaking even at $+118, with the 2026-07-09 a1 MNQ -$283 loss being a clear example. This is directly abandoning your edge by not waiting for location *and* trigger.\n\nBEST & WORST TRADE:\nRepeat the 2026-07-06 a1 NQ WIN $+1132 (5.0R) planned_limit entry \u2013 this is your A-setup, executed calmly.\nCut the 2026-07-08 a1 NQ short LOSS $-1500 \u2013 this significant loss likely stemmed from the same anticipatory/emotional tendency that proved costly.\n\nNEXT WEEK:\nThis week, you will only take planned_limit or confirmation entries. If a trade is not either of these entry models, you will not take it, and you must log the reason why you hesitated or saw an anticipatory/emotional setup without taking it."
   },
   "days": [
+    {
+      "date": "2026-07-14",
+      "inventory": "N",
+      "vah": 29702.0,
+      "poc": 29504.0,
+      "val": 29498.0,
+      "settle": 29475.75,
+      "ovn_high": 29670.5,
+      "ovn_low": 29303.5,
+      "ovn_poc": 29463.0,
+      "ovn_vah": 29611.0,
+      "ovn_val": 29402.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.48,
+      "confidence_b": 0.35,
+      "confidence_c": 0.17,
+      "post_time": "08:00:01",
+      "day_shape": "range_expansion",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "in value upper open, lower value, normal vol (rule-based read \u2014 AI unavailable)",
+      "invalidation": "",
+      "plan": "",
+      "risk": "",
+      "predicted_model": "range_expansion",
+      "vol_regime": "normal",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 38,
+          "confidence": "medium",
+          "why": "+ -GEX fuels expansion; + price below gamma flip 30000 \u2014 momentum regime",
+          "stat_support": "base rate 30%"
+        },
+        {
+          "model": "trend_up",
+          "probability": 19,
+          "confidence": "low",
+          "why": "\u2212 open not above value; + price below gamma flip 30000 \u2014 momentum regime",
+          "stat_support": "base rate 23%"
+        },
+        {
+          "model": "trend_down",
+          "probability": 13,
+          "confidence": "low",
+          "why": "+ value migrating lower; \u2212 open not below value",
+          "stat_support": "base rate 13%"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 12,
+          "confidence": "low",
+          "why": "+ open inside value; \u2212 gap argues against balance",
+          "stat_support": "base rate 14%"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 10,
+          "confidence": "low",
+          "why": "+ unswept liquidity to trap into",
+          "stat_support": "base rate 9%"
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29642.25,
+          "vs_settle": 166.5,
+          "inside_va": true,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-07-13",
       "inventory": "100S",
@@ -3141,37 +3225,7 @@
         "low": null,
         "predicted_model": null,
         "actual_model": null
-      },
-      "intraday": [
-        {
-          "slot": "09:30",
-          "price": 30350.0,
-          "vs_settle": -55.25,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30374.00\u201330516.00."
-        },
-        {
-          "slot": "10:00",
-          "price": 30427.25,
-          "vs_settle": 22.0,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30374.00/30516.00, target POC 30389.00."
-        },
-        {
-          "slot": "10:30",
-          "price": 30365.5,
-          "vs_settle": -39.75,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30374.00\u201330516.00."
-        },
-        {
-          "slot": "11:00",
-          "price": 30429.25,
-          "vs_settle": 24.0,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30374.00/30516.00, target POC 30389.00."
-        }
-      ]
+      }
     },
     {
       "date": "2026-05-29",
