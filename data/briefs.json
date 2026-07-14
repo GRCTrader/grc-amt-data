@@ -1,12 +1,12 @@
 {
-  "updated": "2026-07-14T08:00:30.655099-04:00",
+  "updated": "2026-07-14T11:05:09.040343-04:00",
   "stats": {
-    "total_graded": 27,
-    "correct": 11,
-    "accuracy_pct": 40.7,
-    "top2_graded": 14,
-    "top2_hits": 6,
-    "top2_pct": 42.9,
+    "total_graded": 28,
+    "correct": 12,
+    "accuracy_pct": 42.9,
+    "top2_graded": 15,
+    "top2_hits": 7,
+    "top2_pct": 46.7,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -142,13 +142,18 @@
         "date": "2026-07-13",
         "pct": 35.0,
         "n": 20
+      },
+      {
+        "date": "2026-07-14",
+        "pct": 35.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 26,
-        "correct": 11,
-        "pct": 42.3
+        "total": 27,
+        "correct": 12,
+        "pct": 44.4
       },
       "?": {
         "total": 1,
@@ -159,7 +164,7 @@
     "calibration": {
       "50\u201360%": {
         "correct": 0,
-        "total": 3,
+        "total": 4,
         "pct": 0.0
       },
       "60\u201370%": {
@@ -198,10 +203,10 @@
         "pct": 0.0
       },
       "range_expansion": {
-        "total": 4,
-        "correct": 2,
+        "total": 5,
+        "correct": 3,
         "label": "\ud83d\udca5 Range Expansion",
-        "pct": 50.0
+        "pct": 60.0
       },
       "rotational_balance": {
         "total": 2,
@@ -262,10 +267,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-14T08:00:30.655112-04:00",
+    "generated_at": "2026-07-14T11:05:09.040367-04:00",
     "last_brief_date": "2026-07-14",
     "last_brief_time": "08:00:01",
-    "last_grade_date": "2026-07-13",
+    "last_grade_date": "2026-07-14",
     "recent_failures": [
       {
         "ts": "2026-07-13 11:21:31",
@@ -302,8 +307,8 @@
       "post_time": "08:00:01",
       "day_shape": "range_expansion",
       "day_shape_note": null,
-      "htf_bias": null,
-      "htf_text": null,
+      "htf_bias": "LONG",
+      "htf_text": "DAILY: The market confirmed a bullish Change in Character (CHoCH) from the 07-08 low (28909.75) and has established a dealing range between this low and the 07-10 high (30077.75), with price currently in the premium at 29897.25. The nearest untapped buyside liquidity lies above at the 07-10 high (30077.75), while the nearest sellside liquidity is at the 07-13 low (29386.50).\n\n4H: Since the displacement off the 07-08 08:00 low (29034.00), the 4H structure remains bullish, having printed a higher low at 07-13 12:00 (29393.25) and is now rallying strongly, though a lower high (29921.75) compared to 07-10 12:00 (30077.75). An unmitigated bearish Fair Value Gap (FVG) exists overhead from 29915.00 to 30031.75 (formed between 07-10 16:00 L and 07-12 16:00 H); a break above 07-10 H (30077.75) would confirm daily bullish continuation, while a move below 07-13 L (29386.50) would invalidate the current higher low.\n\n1H: Overnight structure has been distinctly bullish, beginning with a strong displacement and CHoCH from the 07-13 23:00 low (29303.50), making a clear swing higher to the 07-14 08:00 high (29921.75). The immediate draw on liquidity for the NY open is the 4H bearish FVG (29915.00-30031.75) and ultimately the 07-10 daily high (30077.75).\n\nBIAS: LONG if NQ can maintain above the 07-14 07:00 low (29555.00) and consolidate around the current levels, targeting the 4H bearish FVG and 07-10 daily high; otherwise, a break below 29555.00 could see a retracement to the 07-13 23:00 low (29303.50) to seek underlying demand.",
       "regime": "in value upper open, lower value, normal vol (rule-based read \u2014 AI unavailable)",
       "invalidation": "",
       "plan": "",
@@ -348,6 +353,21 @@
           "stat_support": "base rate 9%"
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": true,
+        "detail": "Two-sided, range 29568-29922, close 29759",
+        "notes": null,
+        "gemini": "SCENARIO: The top predicted model, Range Expansion (38%), played out. The market demonstrated a significant range of 354.25 points, moving from a low of 29567.5 to a high of 29921.75, confirming range expansion.\n\nLEVELS: The VAH 29702.0 was breached multiple times, failing to act as strong support/resistance. The OVN VAH 29611.0 was briefly broken at the session low of 29567.5 but then recovered. The VAL 29498.0, POC 29504.0, Settle 29475.75, OVN POC 29463.0, and OVN VAL 29402.0 were never tested.\n\nGAMMA: The session behaved like a MOMENTUM day, as predicted. Price extended significantly past the call wall at 29825, reaching 29921.75, after crossing the flip at 29740.\n\nVERDICT: The 09:00 read was highly useful for the 09:30\u201311:00 session; the top model of Range Expansion played out.",
+        "close": 29758.0,
+        "high": 29921.75,
+        "low": 29567.5,
+        "predicted_model": "range_expansion",
+        "actual_model": "range_expansion",
+        "model_correct": true,
+        "top2_hit": true
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -355,6 +375,34 @@
           "vs_settle": 166.5,
           "inside_va": true,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29758.0,
+          "vs_settle": 282.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29498.00\u201329702.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 29765.0,
+          "vs_settle": 289.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29498.00\u201329702.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 29631.5,
+          "vs_settle": 155.75,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29498.00/29702.00, target POC 29504.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 29684.0,
+          "vs_settle": 208.25,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29498.00/29702.00, target POC 29504.00."
         }
       ]
     },
