@@ -1,15 +1,15 @@
 {
-  "updated": "2026-07-14 12:05 ET",
+  "updated": "2026-07-15 12:05 ET",
   "kpis": {
-    "n": 10,
-    "gross_pnl": -3610.0,
-    "net_pnl": -3655.4,
+    "n": 12,
+    "gross_pnl": -3675.0,
+    "net_pnl": -3729.48,
     "win_rate": 0,
     "profit_factor": 0.0,
     "avg_win": 0,
-    "avg_loss": -365.54,
-    "max_drawdown": 3655.4,
-    "avg_duration_min": 5,
+    "avg_loss": -310.79,
+    "max_drawdown": 3729.48,
+    "avg_duration_min": 4,
     "by_direction": {
       "LONG": {
         "n": 2,
@@ -17,8 +17,8 @@
         "wr": 0
       },
       "SHORT": {
-        "n": 8,
-        "net": -2536.32,
+        "n": 10,
+        "net": -2610.4,
         "wr": 0
       }
     },
@@ -32,10 +32,17 @@
       -3011.78,
       -3226.32,
       -3240.86,
-      -3655.4
+      -3655.4,
+      -3714.94,
+      -3729.48
     ]
   },
   "by_day_model": {
+    "long_liquidation": {
+      "n": 2,
+      "net": -74.08,
+      "wr": 0
+    },
     "mean_reversion": {
       "n": 3,
       "net": -1068.62,
@@ -74,24 +81,62 @@
       "wr": 0
     },
     "Wednesday": {
-      "n": 2,
-      "net": -109.08,
+      "n": 4,
+      "net": -183.16,
       "wr": 0
     }
   },
   "by_exit": {
     "Breakeven Stop": {
-      "n": 3,
-      "net": -43.62,
+      "n": 4,
+      "net": -58.16,
       "wr": 0
     },
     "Stop": {
-      "n": 7,
-      "net": -3611.78,
+      "n": 8,
+      "net": -3671.32,
       "wr": 0
     }
   },
   "recent": [
+    {
+      "id": 189,
+      "date": "2026-07-15",
+      "direction": "SHORT",
+      "entry_time": "10:31",
+      "entry_price": 29672.25,
+      "stop": 29672.25,
+      "exit_time": "10:32",
+      "exit_price": 29672.25,
+      "exit_reason": "Breakeven Stop",
+      "points": -0.5,
+      "costs": 4.54,
+      "net_pnl": -14.54,
+      "duration_min": 1,
+      "adds": 1,
+      "day_model": "long_liquidation",
+      "vol_regime": "normal",
+      "weekday": "Wednesday"
+    },
+    {
+      "id": 188,
+      "date": "2026-07-15",
+      "direction": "SHORT",
+      "entry_time": "10:01",
+      "entry_price": 29852.25,
+      "stop": 29854.5,
+      "exit_time": "10:02",
+      "exit_price": 29854.5,
+      "exit_reason": "Stop",
+      "points": -2.75,
+      "costs": 4.54,
+      "net_pnl": -59.54,
+      "duration_min": 1,
+      "adds": 0,
+      "day_model": "long_liquidation",
+      "vol_regime": "normal",
+      "weekday": "Wednesday"
+    },
     {
       "id": 187,
       "date": "2026-07-14",
@@ -303,6 +348,10 @@
     {
       "date": "2026-07-14",
       "net": -414.54
+    },
+    {
+      "date": "2026-07-15",
+      "net": -74.08
     }
   ]
 }
