@@ -1,67 +1,58 @@
 {
-  "asof": "2026-07-15 11:01 ET",
-  "slot": "11:01",
-  "price": 29618.0,
+  "asof": "2026-07-16 09:31 ET",
+  "slot": "09:31",
+  "price": 29459.25,
   "bias": "SHORT",
   "scenarios": [
     {
-      "model": "trend_up",
-      "probability": 53,
-      "base_rate": 35,
+      "model": "trend_down",
+      "probability": 31,
+      "base_rate": 18,
       "drivers": [
-        "+ open above value",
-        "\u2212 25 similar days: 20% historically"
+        "+ open below value"
       ]
     },
     {
       "model": "range_expansion",
-      "probability": 40,
-      "base_rate": 36,
+      "probability": 27,
+      "base_rate": 21,
       "drivers": [
-        "+ 25 similar days: 56% historically"
+        "+ 25 similar days: 48% historically"
       ]
     },
     {
       "model": "rotational_balance",
-      "probability": 10,
-      "base_rate": 14,
+      "probability": 14,
+      "base_rate": 22,
       "drivers": [
         "\u2212 gap argues against balance",
-        "+ price above gamma flip 29730 in +GEX \u2014 rotation regime"
+        "\u2212 25 similar days: 4% historically"
       ]
     },
     {
-      "model": "mean_reversion",
-      "probability": 7,
-      "base_rate": 5,
+      "model": "failed_auction",
+      "probability": 10,
+      "base_rate": 10,
       "drivers": [
-        "\u2212 extended open far from POC",
-        "+ price above gamma flip 29730 in +GEX \u2014 rotation regime"
+        "\u2212 open out of value near an OVN extreme",
+        "+ unswept liquidity to trap into"
       ]
     }
   ],
   "invalidations": [
     {
-      "scenario": "trend_up",
-      "status": "near",
-      "condition": "close_below",
-      "level": 29733.0,
-      "closes_needed": 2,
-      "meaning": "trend_up dead \u2014 acceptance back below POC 29733.0"
-    },
-    {
-      "scenario": "trend_up",
+      "scenario": "trend_down",
       "status": "armed",
-      "condition": "close_below",
-      "level": 28985.0,
+      "condition": "close_above",
+      "level": 29711.0,
       "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance below the put wall 28985 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
+      "meaning": "trend_down dead \u2014 acceptance back above POC 29711.0"
     }
   ],
   "gex": {
-    "total_gex_bn": 0.86,
-    "flip_nq": 29830,
-    "call_wall_nq": 30205,
-    "put_wall_nq": 28960
+    "total_gex_bn": -3.47,
+    "flip_nq": 29700,
+    "call_wall_nq": 30155,
+    "put_wall_nq": 28915
   }
 }
