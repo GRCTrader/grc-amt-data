@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T11:05:09.999940-04:00",
+  "updated": "2026-07-16T08:00:42.075438-04:00",
   "stats": {
     "total_graded": 29,
     "correct": 12,
@@ -259,9 +259,9 @@
       },
       "trend_up": {
         "label": "\ud83d\udcc8 Trend Continuation Up",
-        "trades": 3,
+        "trades": 4,
         "win_rate": 100.0,
-        "exp": 940.7
+        "exp": 718.77
       },
       "trend_down": {
         "label": "\ud83d\udcc9 Trend Continuation Down",
@@ -272,18 +272,11 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-15T11:05:09.999970-04:00",
-    "last_brief_date": "2026-07-15",
-    "last_brief_time": "08:00:01",
+    "generated_at": "2026-07-16T08:00:42.075449-04:00",
+    "last_brief_date": "2026-07-16",
+    "last_brief_time": "08:00:02",
     "last_grade_date": "2026-07-15",
-    "recent_failures": [
-      {
-        "ts": "2026-07-13 11:21:31",
-        "label": "gemini",
-        "status": "error",
-        "detail": "x_extract: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
-      }
-    ]
+    "recent_failures": []
   },
   "coach": null,
   "mentor_review": {
@@ -291,6 +284,103 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2013 Your 'with-read' trades are 100% win rate for $+1248, but several losses indicate deviation from your conviction.\nLevel Selection: 8/10 \u2013 When you wait for confirmed levels, your planned_limit and confirmation entries perform extremely well.\nExecution: 6/10 \u2013 Strong on high-conviction entries, but execution on anticipatory/emotional trades is a significant drag.\nRisk Management: 7/10 \u2013 Overall P&L is solid, but the $-1500 loss shows a breach of stop discipline or sizing on a bad entry.\nPsychology: 6/10 \u2013 Your calm/confident trades are profitable, yet emotional triggers cost you deeply this week.\nDiscipline: 6/10 \u2013 You clearly have the edge, but you lack the discipline to consistently stick to it and avoid your known leaks.\n\nPNL: Net $+2746 over 14 trades / 5 days; profit factor 2.22; avg 3.4R; best day ('2026-07-06', $+2822.1); worst day ('2026-07-08', $-857.08).\n\nWHAT WORKED:\n*   Your location-first edge with planned_limit entries is your highest performer: 3W/1L (75%) for $+2822 and an impressive +3.87R average. Confirmation entries also delivered 2W/0L (100%) for +$858.\n*   Trades taken *with* your morning read have a 100% win rate (2W/0L) for $+1248, while specific setups like TMSO and SIBI confirmation also performed at 100%.\n\nBIGGEST LEAK:\nYour biggest leak is PREMATURE / EMOTIONAL ANTICIPATION, primarily front-running levels. Your 'Anticipatory' entry model went 0W/2L for -$467, particularly the two inversion setups on 2026-07-08 for -$233 each. Furthermore, your 'Emotional' entries were 1W/1L, barely breaking even at $+118, with the 2026-07-09 a1 MNQ -$283 loss being a clear example. This is directly abandoning your edge by not waiting for location *and* trigger.\n\nBEST & WORST TRADE:\nRepeat the 2026-07-06 a1 NQ WIN $+1132 (5.0R) planned_limit entry \u2013 this is your A-setup, executed calmly.\nCut the 2026-07-08 a1 NQ short LOSS $-1500 \u2013 this significant loss likely stemmed from the same anticipatory/emotional tendency that proved costly.\n\nNEXT WEEK:\nThis week, you will only take planned_limit or confirmation entries. If a trade is not either of these entry models, you will not take it, and you must log the reason why you hesitated or saw an anticipatory/emotional setup without taking it."
   },
   "days": [
+    {
+      "date": "2026-07-16",
+      "inventory": "N",
+      "vah": 29948.0,
+      "poc": 29711.0,
+      "val": 29607.0,
+      "settle": 29693.25,
+      "ovn_high": 29797.0,
+      "ovn_low": 29361.0,
+      "ovn_poc": 29719.0,
+      "ovn_vah": 29766.0,
+      "ovn_val": 29622.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.53,
+      "confidence_b": 0.34,
+      "confidence_c": 0.13,
+      "post_time": "08:00:02",
+      "day_shape": "trend_down",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Imbalance \u2014 Downside Continuation (trend_down) or Range Expansion below value",
+      "invalidation": "Acceptance and sustained trading inside the prior-session value area above VAL 29607.0",
+      "plan": "If the market opens at 29387.0 and fails to reclaim PDL 29397.0, sell the retest of PDL 29397.0 targeting a break of OVNL 29361.0 down to PWL 28909.75. If OVNL 29361.0 is swept and quickly reclaimed on strong buying delta, buy the reclaim targeting prior VAL 29607.0.",
+      "risk": "Large 436-point overnight range means volatility is high; adjust contract size down and widen stops accordingly.",
+      "predicted_model": "trend_down",
+      "vol_regime": "normal",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "trend_down",
+          "probability": 31,
+          "confidence": "medium",
+          "why": "Opening significantly below prior RTH value at 29387.0 with a -1.03% gap creates immediate downward pressure if sellers hold PDL 29397.0.",
+          "stat_support": "base rate 18%",
+          "trigger": "Opening print remains below PDL 29397.0",
+          "confirm": "Acceptance below OVNL 29361.0 with heavy selling volume",
+          "target": "PWL 28909.75",
+          "abort": "A strong reclaim and acceptance above VAL 29607.0"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 27,
+          "confidence": "medium",
+          "why": "A massive 436-point overnight range and a large open gap historically expand the initial range on 48% of similar days.",
+          "stat_support": "base rate 21%",
+          "trigger": "Breakout past the initial session extremes at 29361.0 or 29450.0",
+          "confirm": "Strong sustained displacement on CVD out of the early range",
+          "target": "PWL 28909.75",
+          "abort": "Contracting volume and rotational action between OVNL 29361.0 and PDL 29397.0"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 14,
+          "confidence": "low",
+          "why": "The substantial overnight gap (-1.03%) and out-of-value open suggest very low probability of balance, aligning with only 4% of similar days.",
+          "stat_support": "base rate 22%",
+          "trigger": "Sellers fail to hold price below PDL 29397.0",
+          "confirm": "Overlap of price brackets and a flat VWAP around 29450.0",
+          "target": "Prior VAL 29607.0",
+          "abort": "A directional breakout below OVNL 29361.0 or above prior VAL 29607.0"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 10,
+          "confidence": "low",
+          "why": "Opening right above OVNL 29361.0 offers an ideal spot to trap late breakout sellers on an early sweep-and-reverse.",
+          "stat_support": "base rate 10%",
+          "trigger": "A swift break below OVNL 29361.0 immediately met with heavy buying absorption",
+          "confirm": "Reclaim of OVNL 29361.0 and PDL 29397.0 on positive delta",
+          "target": "ONVP POC 29719.0",
+          "abort": "Sustained price acceptance below 29300.0"
+        },
+        {
+          "model": "trend_up",
+          "probability": 7,
+          "confidence": "low",
+          "why": "\u2212 open below value; \u2212 25 similar days: 0% historically",
+          "stat_support": "base rate 20%",
+          "trigger": "",
+          "confirm": "",
+          "target": "",
+          "abort": ""
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29387.0,
+          "vs_settle": -306.25,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-07-15",
       "inventory": "100L",
@@ -409,7 +499,11 @@
           "inside_va": false,
           "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29745.50\u201329968.00."
         }
-      ]
+      ],
+      "trades_summary": {
+        "count": 1,
+        "pnl": 53.0
+      }
     },
     {
       "date": "2026-07-14",
@@ -3276,15 +3370,6 @@
       "vol_regime": null,
       "tpo_read": null,
       "models": [],
-      "intraday": [
-        {
-          "slot": "09:00",
-          "price": 30728.25,
-          "vs_settle": 15.5,
-          "inside_va": false,
-          "call": "Morning brief anchor"
-        }
-      ],
       "trades_summary": {
         "count": 1,
         "pnl": -13.0
