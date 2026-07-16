@@ -1,12 +1,12 @@
 {
-  "updated": "2026-07-16T09:21:32.748195-04:00",
+  "updated": "2026-07-16T11:05:18.869927-04:00",
   "stats": {
-    "total_graded": 29,
+    "total_graded": 30,
     "correct": 12,
-    "accuracy_pct": 41.4,
-    "top2_graded": 16,
-    "top2_hits": 7,
-    "top2_pct": 43.8,
+    "accuracy_pct": 40.0,
+    "top2_graded": 17,
+    "top2_hits": 8,
+    "top2_pct": 47.1,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -152,13 +152,18 @@
         "date": "2026-07-15",
         "pct": 35.0,
         "n": 20
+      },
+      {
+        "date": "2026-07-16",
+        "pct": 35.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 28,
+        "total": 29,
         "correct": 12,
-        "pct": 42.9
+        "pct": 41.4
       },
       "?": {
         "total": 1,
@@ -169,7 +174,7 @@
     "calibration": {
       "50\u201360%": {
         "correct": 0,
-        "total": 4,
+        "total": 5,
         "pct": 0.0
       },
       "60\u201370%": {
@@ -226,10 +231,10 @@
         "pct": 0.0
       },
       "trend_down": {
-        "total": 1,
+        "total": 2,
         "correct": 1,
         "label": "\ud83d\udcc9 Trend Continuation Down",
-        "pct": 100.0
+        "pct": 50.0
       }
     },
     "win_rate_by_model": {
@@ -272,10 +277,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-16T09:21:32.748218-04:00",
+    "generated_at": "2026-07-16T11:05:18.869951-04:00",
     "last_brief_date": "2026-07-16",
     "last_brief_time": "08:00:02",
-    "last_grade_date": "2026-07-15",
+    "last_grade_date": "2026-07-16",
     "recent_failures": []
   },
   "coach": null,
@@ -371,6 +376,21 @@
           "abort": ""
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Two-sided, range 29256-29532, close 29390",
+        "notes": null,
+        "gemini": "SCENARIO: The session primarily exhibited traits of a Range Expansion (27% ranked), with price expanding below initial levels, followed by a strong rejection and rally. The top predicted model, Trend Continuation Down, did not fully play out as the downside was not sustained.\n\nLEVELS: The market opened near 29400, failing to reclaim PDL 29397.0, and subsequently broke OVNL 29361.0, fulfilling the initial downside plan. However, the PWL 28909.75 target was never tested. OVNL 29361.0 was swept and reclaimed, but the alternate target of prior VAL 29607.0 was not reached (session high 29532.0).\n\nGAMMA: The session behaved like the predicted MOMENTUM day, with moves extending sharply both down from the open (to 29255.5) and then up (to 29532.0). The predicted walls and flip were not tested.\n\nVERDICT: The 09:00 read was moderately useful. While the initial downside bias and momentum call were correct, the top model \"Trend Continuation Down\" did not play out, and key targets were missed on both sides of the plan.",
+        "close": 29390.5,
+        "high": 29532.0,
+        "low": 29255.5,
+        "predicted_model": "trend_down",
+        "actual_model": "range_expansion",
+        "model_correct": false,
+        "top2_hit": true
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -378,6 +398,34 @@
           "vs_settle": -306.25,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29456.5,
+          "vs_settle": -236.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29546.50\u201329770.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 29273.0,
+          "vs_settle": -420.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29546.50\u201329770.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 29482.0,
+          "vs_settle": -211.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29546.50\u201329770.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 29439.25,
+          "vs_settle": -254.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29546.50\u201329770.00."
         }
       ]
     },
