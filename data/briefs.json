@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T11:05:18.869927-04:00",
+  "updated": "2026-07-17T09:00:39.251077-04:00",
   "stats": {
     "total_graded": 30,
     "correct": 12,
@@ -270,18 +270,25 @@
       },
       "trend_down": {
         "label": "\ud83d\udcc9 Trend Continuation Down",
-        "trades": 1,
-        "win_rate": 100.0,
-        "exp": 402.9
+        "trades": 3,
+        "win_rate": 66.7,
+        "exp": 67.63
       }
     }
   },
   "ops": {
-    "generated_at": "2026-07-16T11:05:18.869951-04:00",
-    "last_brief_date": "2026-07-16",
-    "last_brief_time": "08:00:02",
+    "generated_at": "2026-07-17T09:00:39.251090-04:00",
+    "last_brief_date": "2026-07-17",
+    "last_brief_time": "09:00:00",
     "last_grade_date": "2026-07-16",
-    "recent_failures": []
+    "recent_failures": [
+      {
+        "ts": "2026-07-17 02:06:32",
+        "label": "command",
+        "status": "error",
+        "detail": "/ictstudy: Command 'ictstudy' raised an exception: NameError: name 'OWNER_DISCORD_ID' is not defined"
+      }
+    ]
   },
   "coach": null,
   "mentor_review": {
@@ -289,6 +296,103 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2013 Your 'with-read' trades are 100% win rate for $+1248, but several losses indicate deviation from your conviction.\nLevel Selection: 8/10 \u2013 When you wait for confirmed levels, your planned_limit and confirmation entries perform extremely well.\nExecution: 6/10 \u2013 Strong on high-conviction entries, but execution on anticipatory/emotional trades is a significant drag.\nRisk Management: 7/10 \u2013 Overall P&L is solid, but the $-1500 loss shows a breach of stop discipline or sizing on a bad entry.\nPsychology: 6/10 \u2013 Your calm/confident trades are profitable, yet emotional triggers cost you deeply this week.\nDiscipline: 6/10 \u2013 You clearly have the edge, but you lack the discipline to consistently stick to it and avoid your known leaks.\n\nPNL: Net $+2746 over 14 trades / 5 days; profit factor 2.22; avg 3.4R; best day ('2026-07-06', $+2822.1); worst day ('2026-07-08', $-857.08).\n\nWHAT WORKED:\n*   Your location-first edge with planned_limit entries is your highest performer: 3W/1L (75%) for $+2822 and an impressive +3.87R average. Confirmation entries also delivered 2W/0L (100%) for +$858.\n*   Trades taken *with* your morning read have a 100% win rate (2W/0L) for $+1248, while specific setups like TMSO and SIBI confirmation also performed at 100%.\n\nBIGGEST LEAK:\nYour biggest leak is PREMATURE / EMOTIONAL ANTICIPATION, primarily front-running levels. Your 'Anticipatory' entry model went 0W/2L for -$467, particularly the two inversion setups on 2026-07-08 for -$233 each. Furthermore, your 'Emotional' entries were 1W/1L, barely breaking even at $+118, with the 2026-07-09 a1 MNQ -$283 loss being a clear example. This is directly abandoning your edge by not waiting for location *and* trigger.\n\nBEST & WORST TRADE:\nRepeat the 2026-07-06 a1 NQ WIN $+1132 (5.0R) planned_limit entry \u2013 this is your A-setup, executed calmly.\nCut the 2026-07-08 a1 NQ short LOSS $-1500 \u2013 this significant loss likely stemmed from the same anticipatory/emotional tendency that proved costly.\n\nNEXT WEEK:\nThis week, you will only take planned_limit or confirmation entries. If a trade is not either of these entry models, you will not take it, and you must log the reason why you hesitated or saw an anticipatory/emotional setup without taking it."
   },
   "days": [
+    {
+      "date": "2026-07-17",
+      "inventory": "100S",
+      "vah": 29395.0,
+      "poc": 29210.0,
+      "val": 29099.0,
+      "settle": 29225.75,
+      "ovn_high": 29231.25,
+      "ovn_low": 28550.0,
+      "ovn_poc": 29207.0,
+      "ovn_vah": 29207.0,
+      "ovn_val": 28911.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.78,
+      "confidence_b": 0.1,
+      "confidence_c": 0.12,
+      "post_time": "09:00:00",
+      "day_shape": "trend_down",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "imbalance / trend_down: highly-short gamma regime driving extreme downside continuation below prior value",
+      "invalidation": "Reclaim and acceptance above 28911.0 (ONVP VAL) which shifts the narrative toward a short-covering squeeze toward 29207.0 (ONVP POC)",
+      "plan": "If the open drives directly below the overnight low of 28550.0 and holds, target a fast extension to 28227.75. If the open retests the overnight low at 28550.0 but aggressively rejects, wait for a pull back to 28674.5 to enter longs targeting 28911.0. If price drifts upward into the 28911.0 zone on the open, watch for aggressive seller response to put on short positions targeting a retest of 28550.0.",
+      "risk": "Extremely high volatility (88th percentile overnight range of 681.25 points) and dealers in short gamma (-6.2$Bn GEX) will cause massive slippage and rapid extensions.",
+      "predicted_model": "trend_down",
+      "vol_regime": "high",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "trend_down",
+          "probability": 73,
+          "confidence": "high",
+          "why": "Opening significantly below prior RTH VAL 29099.0 under a negative gamma regime of -6.2$Bn GEX below the 29510 flip level favors persistent seller control.",
+          "stat_support": "base rate 39%",
+          "trigger": "Acceptance below the overnight low of 28550.0 on the RTH open.",
+          "confirm": "Orderflow shows aggressive selling and ask stacking at 28550.0, refusing to pull back above 28674.5.",
+          "target": "Put wall at 28560.0 and prior monthly low at 28227.75.",
+          "abort": "Reclaim of the overnight volume profile VAL at 28911.0."
+        },
+        {
+          "model": "range_expansion",
+          "probability": 67,
+          "confidence": "high",
+          "why": "The massive 681.25 point overnight range combined with dealers short gamma of -6.2$Bn GEX will fuel highly volatile expansion if key boundaries break.",
+          "stat_support": "base rate 40%",
+          "trigger": "Clean breakout of the overnight range low 28550.0.",
+          "confirm": "Volume spike on a break of 28550.0 or momentum driving through the 28560.0 put wall.",
+          "target": "Put wall extension level at 28500.0 down to prior monthly low at 28227.75.",
+          "abort": "Price compresses inside the 28600.0 to 28800.0 bracket with declining volume."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 4,
+          "confidence": "low",
+          "why": "Extreme negative GEX of -6.2$Bn and a massive -1.89% opening gap make range-bound trading highly unlikely.",
+          "stat_support": "base rate 8%",
+          "trigger": "Price chops inside the overnight range lower half from 28550.0 to 28800.0.",
+          "confirm": "Extreme absorption on both bids and asks with low volume at extremes.",
+          "target": "Overnight POC at 29207.0.",
+          "abort": "Breakout of either 28550.0 or 28911.0."
+        },
+        {
+          "model": "short_covering",
+          "probability": 4,
+          "confidence": "low",
+          "why": "Extremely stretched overnight inventory of 100% short could spark a violent squeeze if shorts fail to hold the overnight low.",
+          "stat_support": "base rate 5%",
+          "trigger": "Failure to break the overnight low at 28550.0 followed by a quick pop above 28674.5.",
+          "confirm": "CVD divergence with positive delta forcing price above 28750.0.",
+          "target": "Overnight volume profile VAL at 28911.0 and prior weekly low at 28909.75.",
+          "abort": "Break and acceptance below the 28560.0 put wall."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 3,
+          "confidence": "low",
+          "why": "+ unswept liquidity to trap into; \u2212 wide OVN range already explored both sides",
+          "stat_support": "base rate 7%",
+          "trigger": "",
+          "confirm": "",
+          "target": "",
+          "abort": ""
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 28674.5,
+          "vs_settle": -551.25,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-07-16",
       "inventory": "N",
@@ -427,7 +531,11 @@
           "inside_va": false,
           "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29546.50\u201329770.00."
         }
-      ]
+      ],
+      "trades_summary": {
+        "count": 2,
+        "pnl": -200.0
+      }
     },
     {
       "date": "2026-07-15",
@@ -3348,44 +3456,7 @@
       "predicted_model": null,
       "vol_regime": null,
       "tpo_read": null,
-      "models": [],
-      "intraday": [
-        {
-          "slot": "09:00",
-          "price": 30121.0,
-          "vs_settle": -367.25,
-          "inside_va": false,
-          "call": "Morning brief anchor"
-        },
-        {
-          "slot": "09:30",
-          "price": 30036.5,
-          "vs_settle": -451.75,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30182.00\u201330488.00."
-        },
-        {
-          "slot": "10:00",
-          "price": 29857.75,
-          "vs_settle": -630.5,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30182.00\u201330488.00."
-        },
-        {
-          "slot": "10:30",
-          "price": 29940.0,
-          "vs_settle": -548.25,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30182.00\u201330488.00."
-        },
-        {
-          "slot": "11:00",
-          "price": 29827.25,
-          "vs_settle": -661.0,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30182.00\u201330488.00."
-        }
-      ]
+      "models": []
     },
     {
       "date": "2026-06-03",
