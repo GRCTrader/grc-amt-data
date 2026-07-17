@@ -1,12 +1,12 @@
 {
-  "updated": "2026-07-17T09:00:39.251077-04:00",
+  "updated": "2026-07-17T11:05:15.812290-04:00",
   "stats": {
-    "total_graded": 30,
+    "total_graded": 31,
     "correct": 12,
-    "accuracy_pct": 40.0,
-    "top2_graded": 17,
-    "top2_hits": 8,
-    "top2_pct": 47.1,
+    "accuracy_pct": 38.7,
+    "top2_graded": 18,
+    "top2_hits": 9,
+    "top2_pct": 50.0,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -157,13 +157,18 @@
         "date": "2026-07-16",
         "pct": 35.0,
         "n": 20
+      },
+      {
+        "date": "2026-07-17",
+        "pct": 30.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 29,
+        "total": 30,
         "correct": 12,
-        "pct": 41.4
+        "pct": 40.0
       },
       "?": {
         "total": 1,
@@ -184,8 +189,8 @@
       },
       "70\u201380%": {
         "correct": 5,
-        "total": 22,
-        "pct": 22.7
+        "total": 23,
+        "pct": 21.7
       },
       "80%+": {
         "correct": 0,
@@ -231,10 +236,10 @@
         "pct": 0.0
       },
       "trend_down": {
-        "total": 2,
+        "total": 3,
         "correct": 1,
         "label": "\ud83d\udcc9 Trend Continuation Down",
-        "pct": 50.0
+        "pct": 33.3
       }
     },
     "win_rate_by_model": {
@@ -277,10 +282,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-17T09:00:39.251090-04:00",
+    "generated_at": "2026-07-17T11:05:15.812328-04:00",
     "last_brief_date": "2026-07-17",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-07-16",
+    "last_grade_date": "2026-07-17",
     "recent_failures": [
       {
         "ts": "2026-07-17 02:06:32",
@@ -383,6 +388,21 @@
           "abort": ""
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Two-sided, range 28408-28896, close 28761",
+        "notes": null,
+        "gemini": "SCENARIO: The open immediately drove below the OVN Low of 28550.0, hitting 28408.25. While the final downside target of 28227.75 was not met, the initial trend down and subsequent rally indicate that the high-ranked \"Trend Continuation Down\" and \"Range Expansion\" models accurately captured the session's volatility.\n\nLEVELS: The overnight low of 28550.0 broke, leading to 28408.25, validating the initial short plan. The target 28227.75 was not tested. Price rallied to 28896.0, near the 28911.0 OVN VAL, which held as resistance, preventing invalidation.\n\nGAMMA: The session behaved like a predicted MOMENTUM day with moves extending significantly both down to 28408.25 and back up to 28896.0, consistent with a short gamma regime.\n\nVERDICT: The 09:00 read was useful for the 09:30\u201311:00 session, as the top predicted \"Trend Continuation Down\" and high-ranked \"Range Expansion\" models played out with significant initial downside below 28550.0.",
+        "close": 28756.5,
+        "high": 28896.0,
+        "low": 28408.25,
+        "predicted_model": "trend_down",
+        "actual_model": "range_expansion",
+        "model_correct": false,
+        "top2_hit": true
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -390,6 +410,34 @@
           "vs_settle": -551.25,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 28613.25,
+          "vs_settle": -612.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29099.00\u201329395.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 28499.25,
+          "vs_settle": -726.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29099.00\u201329395.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 28850.25,
+          "vs_settle": -375.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29099.00\u201329395.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 28790.25,
+          "vs_settle": -435.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29099.00\u201329395.00."
         }
       ]
     },
