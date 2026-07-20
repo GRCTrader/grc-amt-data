@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T17:00:21.523422-04:00",
+  "updated": "2026-07-20T09:03:55.824243-04:00",
   "stats": {
     "total_graded": 31,
     "correct": 12,
@@ -282,18 +282,11 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-19T17:00:21.523455-04:00",
-    "last_brief_date": "2026-07-17",
+    "generated_at": "2026-07-20T09:03:55.824273-04:00",
+    "last_brief_date": "2026-07-20",
     "last_brief_time": "09:00:00",
     "last_grade_date": "2026-07-17",
-    "recent_failures": [
-      {
-        "ts": "2026-07-17 02:06:32",
-        "label": "command",
-        "status": "error",
-        "detail": "/ictstudy: Command 'ictstudy' raised an exception: NameError: name 'OWNER_DISCORD_ID' is not defined"
-      }
-    ]
+    "recent_failures": []
   },
   "coach": null,
   "mentor_review": {
@@ -301,6 +294,103 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2014 Reclaiming 29,570 lows was brilliant, but you completely ignored your read on July 16.\nLevel Selection: 8/10 \u2014 The 29,570 level was a high-value magnet that paid off.\nExecution: 6/10 \u2014 Flawless when waiting for confirmation, but slipped into sloppy limit and emotional fills.\nRisk Management: 4/10 \u2014 Losing -$800 on a single MNQ trade is unacceptable risk control.\nPsychology: 5/10 \u2014 Acted out of a rushed mindset on July 16, leading to FOMO and revenge.\nDiscipline: 4/10 \u2014 Took an unplanned, emotional trade against your morning read on July 16.\n\nPNL:\nNet +$988, Best Day +$1135 (July 14), Worst Day -$200 (July 16), Profit Factor 1.93.\n\nWHAT WORKED:\n* Waited for orderflow confirmation: 100% win rate (2W/0L, +$653) when letting the market prove the level before entering.\n* HTF reclaim setup: The 29,570 low-reclaim structure delivered +$1400 across two flawless NQ longs on July 14.\n\nBIGGEST LEAK:\nSloppy, rushed first trades of the day. You went 0W/2L (-$1065) on your first attempts, forcing you to dig out of a hole. On July 16, a rushed, against-read limit entry cost you -$800 on MNQ. You got \"lucky\" recovering +$600 on an unplanned, emotional second trade, but reinforcing that behavior is toxic.\n\nBEST & WORST TRADE:\nBEST: July 14 NQ long reclaiming 29,570 (+$800) \u2014 perfect execution, letting volume and orderflow confirm the level.\nWORST: July 16 MNQ long (-$800) \u2014 rushing a limit entry against your morning bias, resulting in a devastating out-of-bounds loss.\n\nNEXT WEEK:\nYour first trade of the day must be a confirmation-only entry taken in direction with your morning read\u2014no resting limits on trade one."
   },
   "days": [
+    {
+      "date": "2026-07-20",
+      "inventory": "100L",
+      "vah": 28857.0,
+      "poc": 28593.0,
+      "val": 28447.0,
+      "settle": 28773.25,
+      "ovn_high": 29109.5,
+      "ovn_low": 28712.5,
+      "ovn_poc": 28736.0,
+      "ovn_vah": 28971.0,
+      "ovn_val": 28732.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.75,
+      "confidence_b": 0.12,
+      "confidence_c": 0.13,
+      "post_time": "09:00:00",
+      "day_shape": "trend_up",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Imbalance \u2014 Bullish Trend Continuation setup driven by a gap open above overnight value in a short gamma environment.",
+      "invalidation": "Acceptance inside the overnight value area below 28971.0 and a subsequent breakdown below the overnight POC of 28736.0.",
+      "plan": "If NQ opens above 28971.0 and immediately pushes higher, we will monitor the reaction at the Gamma Flip level of 29075.0; sustained holding above 29075.0 triggers an acceleration target of the OVN High at 29109.5 and PDH at 29220.0. If NQ pulls back to test 28971.0 and displays strong passive buying absorption, we will execute longs targeting 29075.0. If NQ rejects the open and falls below 28971.0, we sit on our hands and wait to see if buyers defend the overnight POC of 28736.0 before formulating any intraday long setups.",
+      "risk": "Dealers are short gamma (-0.3$Bn) below 29075.0, which means volatility is amplified and price moves will be highly extended and rapid. Reduce contract size to handle wider stops.",
+      "predicted_model": "trend_up",
+      "vol_regime": "normal",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "trend_up",
+          "probability": 81,
+          "confidence": "high",
+          "why": "The open is well above prior RTH value (28857.0) and OVN VAH (28971.0) while dealer short gamma positioning below 29075.0 acts as an accelerant for upward momentum.",
+          "stat_support": "base rate 44%",
+          "trigger": "Acceptance above the OVN VAH of 28971.0 on the RTH open.",
+          "confirm": "Sustained one-timeframing higher past the Gamma Flip level of 29075.0.",
+          "target": "The OVN High of 29109.5 and the PDH of 29220.0.",
+          "abort": "A clear breakdown and acceptance back below the OVN VAH of 28971.0."
+        },
+        {
+          "model": "range_expansion",
+          "probability": 28,
+          "confidence": "medium",
+          "why": "A normal overnight range of 397.0 points paired with negative dealer gamma below 29075.0 favors a fast breakout expansion.",
+          "stat_support": "base rate 23%",
+          "trigger": "Sustained price action breaking outside of the overnight range boundaries (28712.5 - 29109.5).",
+          "confirm": "Heavy directional volume and delta closing above the OVN High of 29109.5.",
+          "target": "PDH at 29220.0 and the call wall up at 30145.0.",
+          "abort": "Price rotating back to the overnight POC of 28736.0."
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 8,
+          "confidence": "low",
+          "why": "Extreme distance from the prior session POC of 28593.0 mathematically favors reversion, but the negative gamma regime actively limits fade viability.",
+          "stat_support": "base rate 11%",
+          "trigger": "A rejection of the Gamma Flip level at 29075.0 early in the morning.",
+          "confirm": "A loss of the OVN VAH at 28971.0, transforming it into resistance on the retest.",
+          "target": "The overnight POC at 28736.0 and the prior session VAH at 28857.0.",
+          "abort": "Acceptance and trading above the Gamma Flip level of 29075.0."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 7,
+          "confidence": "low",
+          "why": "A substantial gap of +0.82% above prior value heavily reduces the probability of a balanced, two-sided trading day.",
+          "stat_support": "base rate 13%",
+          "trigger": "Failure to break or sustain price outside of the OVN VAH 28971.0 and OVN VAL 28732.0.",
+          "confirm": "Responsive buying at 28732.0 and responsive selling at 28971.0 leading to choppy trade.",
+          "target": "The overnight POC of 28736.0.",
+          "abort": "A sustained breakout above 29109.5 or breakdown below 28712.5."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 5,
+          "confidence": "low",
+          "why": "+ unswept liquidity to trap into",
+          "stat_support": "base rate 4%",
+          "trigger": "",
+          "confirm": "",
+          "target": "",
+          "abort": ""
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29008.0,
+          "vs_settle": 234.75,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-07-17",
       "inventory": "100S",
@@ -3432,43 +3522,6 @@
         "predicted_model": null,
         "actual_model": null
       },
-      "intraday": [
-        {
-          "slot": "09:00",
-          "price": 29736.75,
-          "vs_settle": 282.0,
-          "inside_va": false,
-          "call": "Morning brief anchor"
-        },
-        {
-          "slot": "09:30",
-          "price": 29698.0,
-          "vs_settle": 243.25,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29375.00\u201329590.00."
-        },
-        {
-          "slot": "10:00",
-          "price": 29843.75,
-          "vs_settle": 389.0,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29375.00\u201329590.00."
-        },
-        {
-          "slot": "10:30",
-          "price": 29410.25,
-          "vs_settle": -44.5,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29375.00/29590.00, target POC 29452.00."
-        },
-        {
-          "slot": "11:00",
-          "price": 29116.5,
-          "vs_settle": -338.25,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29375.00\u201329590.00."
-        }
-      ],
       "trades_summary": {
         "count": 2,
         "pnl": 1831.0
