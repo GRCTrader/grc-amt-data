@@ -1,12 +1,12 @@
 {
-  "updated": "2026-07-20T09:29:56.084066-04:00",
+  "updated": "2026-07-20T11:05:14.116851-04:00",
   "stats": {
-    "total_graded": 31,
+    "total_graded": 32,
     "correct": 12,
-    "accuracy_pct": 38.7,
-    "top2_graded": 18,
-    "top2_hits": 9,
-    "top2_pct": 50.0,
+    "accuracy_pct": 37.5,
+    "top2_graded": 19,
+    "top2_hits": 10,
+    "top2_pct": 52.6,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -162,13 +162,18 @@
         "date": "2026-07-17",
         "pct": 30.0,
         "n": 20
+      },
+      {
+        "date": "2026-07-20",
+        "pct": 30.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 30,
+        "total": 31,
         "correct": 12,
-        "pct": 40.0
+        "pct": 38.7
       },
       "?": {
         "total": 1,
@@ -189,8 +194,8 @@
       },
       "70\u201380%": {
         "correct": 5,
-        "total": 23,
-        "pct": 21.7
+        "total": 24,
+        "pct": 20.8
       },
       "80%+": {
         "correct": 0,
@@ -230,7 +235,7 @@
         "pct": 50.0
       },
       "trend_up": {
-        "total": 2,
+        "total": 3,
         "correct": 0,
         "label": "\ud83d\udcc8 Trend Continuation Up",
         "pct": 0.0
@@ -282,10 +287,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-20T09:29:56.084089-04:00",
+    "generated_at": "2026-07-20T11:05:14.116876-04:00",
     "last_brief_date": "2026-07-20",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-07-17",
+    "last_grade_date": "2026-07-20",
     "recent_failures": []
   },
   "coach": null,
@@ -381,6 +386,21 @@
           "abort": ""
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Two-sided, range 28896-29192, close 28914",
+        "notes": null,
+        "gemini": "SCENARIO: The top predicted model, Trend Continuation Up (81%), partially played out. The market initiated a strong upward push to 29192.5, consistent with bullish trend continuation, before retreating significantly.\n\nLEVELS: NQ opened above OVN VAH 28971.0 and immediately pushed past Gamma Flip 29075.0, reaching 29192.5, successfully targeting OVN High and PDH. However, NQ subsequently pulled back, breaking below OVN VAH 28971.0, though the full invalidation below OVN POC 28736.0 was not met.\n\nGAMMA: The session behaved like a MOMENTUM day; the move extended significantly higher past the 29075.0 Gamma Flip, consistent with short gamma.\n\nVERDICT: The 09:00 read was useful for the initial session dynamics and targets, but the prediction of a sustained \"Trend Continuation Up\" was not fully realized due to the significant fade.",
+        "close": 28913.5,
+        "high": 29192.5,
+        "low": 28895.75,
+        "predicted_model": "trend_up",
+        "actual_model": "range_expansion",
+        "model_correct": false,
+        "top2_hit": true
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -388,6 +408,34 @@
           "vs_settle": 234.75,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29040.5,
+          "vs_settle": 267.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28743.00\u201328959.50."
+        },
+        {
+          "slot": "10:00",
+          "price": 29117.75,
+          "vs_settle": 344.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28743.00\u201328959.50."
+        },
+        {
+          "slot": "10:30",
+          "price": 28959.75,
+          "vs_settle": 186.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28743.00\u201328959.50."
+        },
+        {
+          "slot": "11:00",
+          "price": 28927.75,
+          "vs_settle": 154.5,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 28743.00/28959.50, target POC 28815.25."
         }
       ]
     },
