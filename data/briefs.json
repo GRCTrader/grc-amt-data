@@ -1,12 +1,12 @@
 {
-  "updated": "2026-07-21T09:00:32.286934-04:00",
+  "updated": "2026-07-21T11:05:11.781016-04:00",
   "stats": {
-    "total_graded": 32,
-    "correct": 12,
-    "accuracy_pct": 37.5,
-    "top2_graded": 19,
-    "top2_hits": 10,
-    "top2_pct": 52.6,
+    "total_graded": 33,
+    "correct": 13,
+    "accuracy_pct": 39.4,
+    "top2_graded": 20,
+    "top2_hits": 11,
+    "top2_pct": 55.0,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -167,13 +167,18 @@
         "date": "2026-07-20",
         "pct": 30.0,
         "n": 20
+      },
+      {
+        "date": "2026-07-21",
+        "pct": 35.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 31,
-        "correct": 12,
-        "pct": 38.7
+        "total": 32,
+        "correct": 13,
+        "pct": 40.6
       },
       "?": {
         "total": 1,
@@ -194,8 +199,8 @@
       },
       "70\u201380%": {
         "correct": 5,
-        "total": 24,
-        "pct": 20.8
+        "total": 25,
+        "pct": 20.0
       },
       "80%+": {
         "correct": 0,
@@ -217,10 +222,10 @@
         "pct": 20.0
       },
       "short_covering": {
-        "total": 1,
-        "correct": 0,
+        "total": 2,
+        "correct": 1,
         "label": "\ud83d\ude80 Short-Covering Rally",
-        "pct": 0.0
+        "pct": 50.0
       },
       "range_expansion": {
         "total": 5,
@@ -287,10 +292,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-21T09:00:32.286993-04:00",
+    "generated_at": "2026-07-21T11:05:11.781048-04:00",
     "last_brief_date": "2026-07-21",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-07-20",
+    "last_grade_date": "2026-07-21",
     "recent_failures": []
   },
   "coach": null,
@@ -386,6 +391,21 @@
           "abort": "Any acceptance above PDH 29192.5 or continued upside from the open."
         }
       ],
+      "grade": {
+        "actual": "B",
+        "predicted": "A",
+        "correct": true,
+        "detail": "Accepted above VAH 29014, closed 29230 (top of range)",
+        "notes": null,
+        "gemini": "**SCENARIO:**\nThe top predicted model, Short-Covering Rally (42%), played out. Price initially probed lower towards OVN VAH 29070.0, rejected higher, then rallied strongly, consistent with the described short-covering trigger.\n\n**LEVELS:**\nThe session low of 29064.25 probed just below OVN VAH 29070.0, finding demand and rejecting higher as per the plan. Price then accepted above Gamma Flip 29160.0 (implied) and pushed significantly beyond OVNH 29207.0, reaching 29256.5. The Call Wall 29365.0 was not tested.\n\n**GAMMA:**\nThe session behaved opposite to the predicted MEAN-REVERT day; price showed strong trend extension (momentum extended) rather than fading edges. The Call Wall 29365.0 was approached but not directly engaged.\n\n**VERDICT:**\nThe 09:00 read was highly useful for the 09:30\u201311:00 session, as the top predicted Short-Covering Rally model played out according to the specified plan conditions.",
+        "close": 29230.25,
+        "high": 29256.5,
+        "low": 29064.25,
+        "predicted_model": "short_covering",
+        "actual_model": "short_covering",
+        "model_correct": true,
+        "top2_hit": true
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -393,6 +413,34 @@
           "vs_settle": 356.75,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29169.0,
+          "vs_settle": 390.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28788.00\u201329014.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 29140.5,
+          "vs_settle": 361.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28788.00\u201329014.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 29157.0,
+          "vs_settle": 378.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28788.00\u201329014.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 29228.25,
+          "vs_settle": 449.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28788.00\u201329014.00."
         }
       ]
     },
