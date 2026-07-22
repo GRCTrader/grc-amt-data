@@ -1,12 +1,12 @@
 {
-  "updated": "2026-07-22T09:00:24.044406-04:00",
+  "updated": "2026-07-22T11:05:09.064406-04:00",
   "stats": {
-    "total_graded": 33,
+    "total_graded": 34,
     "correct": 13,
-    "accuracy_pct": 39.4,
-    "top2_graded": 20,
+    "accuracy_pct": 38.2,
+    "top2_graded": 21,
     "top2_hits": 11,
-    "top2_pct": 55.0,
+    "top2_pct": 52.4,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -172,13 +172,18 @@
         "date": "2026-07-21",
         "pct": 35.0,
         "n": 20
+      },
+      {
+        "date": "2026-07-22",
+        "pct": 30.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 32,
+        "total": 33,
         "correct": 13,
-        "pct": 40.6
+        "pct": 39.4
       },
       "?": {
         "total": 1,
@@ -199,8 +204,8 @@
       },
       "70\u201380%": {
         "correct": 5,
-        "total": 25,
-        "pct": 20.0
+        "total": 26,
+        "pct": 19.2
       },
       "80%+": {
         "correct": 0,
@@ -246,10 +251,10 @@
         "pct": 0.0
       },
       "trend_down": {
-        "total": 3,
+        "total": 4,
         "correct": 1,
         "label": "\ud83d\udcc9 Trend Continuation Down",
-        "pct": 33.3
+        "pct": 25.0
       }
     },
     "win_rate_by_model": {
@@ -292,10 +297,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-22T09:00:24.044427-04:00",
+    "generated_at": "2026-07-22T11:05:09.064420-04:00",
     "last_brief_date": "2026-07-22",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-07-21",
+    "last_grade_date": "2026-07-22",
     "recent_failures": []
   },
   "coach": null,
@@ -391,6 +396,21 @@
           "abort": ""
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Held value 29129-29320",
+        "notes": null,
+        "gemini": "**SCENARIO:** \nThe top predicted model (Trend Down 55%) failed entirely as price bottomed at 29090.0 and squeezed upward to 29283.75, matching the low-ranked Failed Auction (8%) and Rotational (7%) models instead.\n\n**LEVELS:** \nPrice quickly accepted above VAL 29129.0, triggering the stated invalidation for shorts; key downside targets like OVNL 28995.0, Put Wall 28960.0, and PDL 28701.0 were never tested.\n\n**GAMMA:** \nThe predicted short gamma momentum extension did not happen, as price chopped within a range well above the 28960.0 Put Wall and below the 29495.0 Gamma Flip.\n\n**VERDICT:** \nThe 09:00 read missed the directional trend, but the explicit invalidation above VAL 29129.0 successfully prevented taking bad short trades.",
+        "close": 29203.5,
+        "high": 29283.75,
+        "low": 29090.0,
+        "predicted_model": "trend_down",
+        "actual_model": "rotational_balance",
+        "model_correct": false,
+        "top2_hit": false
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -398,6 +418,34 @@
           "vs_settle": -259.5,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29079.25,
+          "vs_settle": -236.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29129.00\u201329320.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 29172.75,
+          "vs_settle": -143.25,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29129.00/29320.00, target POC 29320.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 29253.25,
+          "vs_settle": -62.75,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29129.00/29320.00, target POC 29320.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 29224.5,
+          "vs_settle": -91.5,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29129.00/29320.00, target POC 29320.00."
         }
       ]
     },
