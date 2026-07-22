@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-21T11:05:11.781016-04:00",
+  "updated": "2026-07-22T09:00:24.044406-04:00",
   "stats": {
     "total_graded": 33,
     "correct": 13,
@@ -292,8 +292,8 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-21T11:05:11.781048-04:00",
-    "last_brief_date": "2026-07-21",
+    "generated_at": "2026-07-22T09:00:24.044427-04:00",
+    "last_brief_date": "2026-07-22",
     "last_brief_time": "09:00:00",
     "last_grade_date": "2026-07-21",
     "recent_failures": []
@@ -304,6 +304,103 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2014 Reclaiming 29,570 lows was brilliant, but you completely ignored your read on July 16.\nLevel Selection: 8/10 \u2014 The 29,570 level was a high-value magnet that paid off.\nExecution: 6/10 \u2014 Flawless when waiting for confirmation, but slipped into sloppy limit and emotional fills.\nRisk Management: 4/10 \u2014 Losing -$800 on a single MNQ trade is unacceptable risk control.\nPsychology: 5/10 \u2014 Acted out of a rushed mindset on July 16, leading to FOMO and revenge.\nDiscipline: 4/10 \u2014 Took an unplanned, emotional trade against your morning read on July 16.\n\nPNL:\nNet +$988, Best Day +$1135 (July 14), Worst Day -$200 (July 16), Profit Factor 1.93.\n\nWHAT WORKED:\n* Waited for orderflow confirmation: 100% win rate (2W/0L, +$653) when letting the market prove the level before entering.\n* HTF reclaim setup: The 29,570 low-reclaim structure delivered +$1400 across two flawless NQ longs on July 14.\n\nBIGGEST LEAK:\nSloppy, rushed first trades of the day. You went 0W/2L (-$1065) on your first attempts, forcing you to dig out of a hole. On July 16, a rushed, against-read limit entry cost you -$800 on MNQ. You got \"lucky\" recovering +$600 on an unplanned, emotional second trade, but reinforcing that behavior is toxic.\n\nBEST & WORST TRADE:\nBEST: July 14 NQ long reclaiming 29,570 (+$800) \u2014 perfect execution, letting volume and orderflow confirm the level.\nWORST: July 16 MNQ long (-$800) \u2014 rushing a limit entry against your morning bias, resulting in a devastating out-of-bounds loss.\n\nNEXT WEEK:\nYour first trade of the day must be a confirmation-only entry taken in direction with your morning read\u2014no resting limits on trade one."
   },
   "days": [
+    {
+      "date": "2026-07-22",
+      "inventory": "100S",
+      "vah": 29320.0,
+      "poc": 29320.0,
+      "val": 29129.0,
+      "settle": 29316.0,
+      "ovn_high": 29337.0,
+      "ovn_low": 28995.0,
+      "ovn_poc": 29298.0,
+      "ovn_vah": 29326.0,
+      "ovn_val": 29297.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.75,
+      "confidence_b": 0.12,
+      "confidence_c": 0.13,
+      "post_time": "09:00:00",
+      "day_shape": "trend_down",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Imbalance day with a potential trend down and range expansion.",
+      "invalidation": "The primary downside read is invalidated if price reclaims and accepts above VAL 29129.0.",
+      "plan": "If 09:30 ET open is between OVNL 28995.0 and VAL 29129.0 (current 29056.5): 1. Primary Downside Scenario: Observe interaction with OVNL 28995.0. If price sweeps OVNL 28995.0 (potentially extending to Put wall 28960.0) and then accepts below 28995.0, look for shorts targeting PDL 28701.0. If PDL fails to hold as support, target PWL 28408.25. 2. Failed Auction / Reversal Scenario: If price sweeps below OVNL 28995.0 (or Put wall 28960.0) but quickly rejects it and reclaims acceptance above 28995.0, look for longs targeting VAL 29129.0, then POC 29320.0. 3. Rotation Scenario: If price opens and re",
+      "risk": "Negative GEX at -3.6$Bn means dealers are SHORT gamma, which will amplify moves in either direction. Be mindful of rapid shifts, especially if price pushes above the gamma flip at 29495.",
+      "predicted_model": "trend_down",
+      "vol_regime": "normal",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "trend_down",
+          "probability": 55,
+          "confidence": "high",
+          "why": "Open below prior value and below the gamma flip (29495) in a negative GEX momentum regime, supporting a drive lower to find new value.",
+          "stat_support": "base rate 30%",
+          "trigger": "Price breaking below the Overnight Low (OVNL) at 28995.0.",
+          "confirm": "Acceptance (multiple TPOs/volume) below 28995.0, indicating price rejection of higher levels and sustained selling.",
+          "target": "PDL 28701.0, then PWL 28408.25.",
+          "abort": "Reclaiming VAL 29129.0 or rejecting OVNL and moving significantly higher."
+        },
+        {
+          "model": "range_expansion",
+          "probability": 36,
+          "confidence": "medium",
+          "why": "Negative GEX fuels extended moves from the overnight range, especially given the open below value in a momentum regime favoring downside continuation.",
+          "stat_support": "base rate 25%",
+          "trigger": "A clear break of the Overnight Low (OVNL) at 28995.0 or Overnight High (OVNH) at 29337.0.",
+          "confirm": "Sustained acceptance beyond the broken overnight extreme, indicated by volume and TPO distribution outside the overnight range.",
+          "target": "If down: PDL 28701.0. If up: VAL 29129.0, then PDH 29364.75.",
+          "abort": "Price returning inside the overnight range (28995.0 - 29337.0) after initial break."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 8,
+          "confidence": "low",
+          "why": "Price could sweep an extreme like OVNL 28995.0 (or the Put wall at 28960.0), fail to accept lower, and quickly reverse to trap shorts into unswept liquidity.",
+          "stat_support": "base rate 9%",
+          "trigger": "Sweep below OVNL 28995.0 (or Put wall 28960.0) with immediate reversal.",
+          "confirm": "Immediate rejection back above 28995.0, followed by aggressive buying/absorption at the level.",
+          "target": "VAL 29129.0, then POC 29320.0.",
+          "abort": "Acceptance below 28995.0 (multiple TPOs/volume) and continued downward pressure."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 7,
+          "confidence": "low",
+          "why": "Despite strong downside drivers, if initial directional moves fail to accept, price could consolidate within the prior RTH value or ONVP range.",
+          "stat_support": "base rate 16%",
+          "trigger": "Initial move after open fails to break OVNL 28995.0 or OVNH 29337.0 with acceptance.",
+          "confirm": "Price contained between VAL 29129.0 and OVNL 28995.0, rotating without clear acceptance outside this area.",
+          "target": "Range-bound trades between OVNL 28995.0 and VAL 29129.0.",
+          "abort": "Acceptance above VAL 29129.0 or below OVNL 28995.0."
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 7,
+          "confidence": "low",
+          "why": "\u2212 extended open far from POC; \u2212 price below gamma flip 29495 \u2014 fades lose fuel",
+          "stat_support": "base rate 9%",
+          "trigger": "",
+          "confirm": "",
+          "target": "",
+          "abort": ""
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29056.5,
+          "vs_settle": -259.5,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-07-21",
       "inventory": "SL",
@@ -3575,43 +3672,6 @@
         "actual_model": "trend_down",
         "model_correct": false
       },
-      "intraday": [
-        {
-          "slot": "09:00",
-          "price": 28751.5,
-          "vs_settle": 197.5,
-          "inside_va": true,
-          "call": "Morning brief anchor"
-        },
-        {
-          "slot": "09:30",
-          "price": 28773.25,
-          "vs_settle": 219.25,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 28718.00/29196.00, target POC 29109.00."
-        },
-        {
-          "slot": "10:00",
-          "price": 28815.25,
-          "vs_settle": 261.25,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 28718.00/29196.00, target POC 29109.00."
-        },
-        {
-          "slot": "10:30",
-          "price": 28762.5,
-          "vs_settle": 208.5,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 28718.00/29196.00, target POC 29109.00."
-        },
-        {
-          "slot": "11:00",
-          "price": 28790.0,
-          "vs_settle": 236.0,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 28718.00/29196.00, target POC 29109.00."
-        }
-      ],
       "trades_summary": {
         "count": 1,
         "pnl": 353.0
