@@ -1,78 +1,69 @@
 {
-  "asof": "2026-07-23 11:01 ET",
-  "slot": "11:01",
-  "price": 28618.5,
+  "asof": "2026-07-24 09:31 ET",
+  "slot": "09:31",
+  "price": 28596.75,
   "bias": "SHORT",
   "scenarios": [
     {
-      "model": "trend_down",
-      "probability": 44,
-      "base_rate": 22,
-      "drivers": [
-        "+ open below value",
-        "+ price below gamma flip 29530 \u2014 momentum regime",
-        "\u2212 25 similar days: 36% historically"
-      ]
-    },
-    {
       "model": "range_expansion",
-      "probability": 34,
-      "base_rate": 25,
+      "probability": 22,
+      "base_rate": 24,
       "drivers": [
+        "\u2212 OVN range compressed \u2014 coiled",
         "+ -GEX fuels expansion",
-        "+ price below gamma flip 29530 \u2014 momentum regime"
+        "+ price below gamma flip 29095 \u2014 momentum regime"
       ]
     },
     {
-      "model": "mean_reversion",
-      "probability": 13,
-      "base_rate": 14,
+      "model": "rotational_balance",
+      "probability": 20,
+      "base_rate": 16,
       "drivers": [
-        "\u2212 extended open far from POC",
-        "\u2212 price below gamma flip 29530 \u2014 fades lose fuel",
-        "+ 25 similar days: 20% historically"
+        "+ open inside value",
+        "\u2212 -GEX amplifies moves",
+        "\u2212 price below gamma flip 29095 \u2014 fades lose fuel"
       ]
     },
     {
-      "model": "short_covering",
-      "probability": 9,
+      "model": "failed_auction",
+      "probability": 18,
       "base_rate": 18,
       "drivers": [
-        "\u2212 shorts extended below value",
-        "+ price below gamma flip 29530 \u2014 momentum regime"
+        "+ unswept liquidity to trap into"
+      ]
+    },
+    {
+      "model": "trend_up",
+      "probability": 16,
+      "base_rate": 20,
+      "drivers": [
+        "\u2212 open not above value",
+        "+ price below gamma flip 29095 \u2014 momentum regime"
       ]
     }
   ],
   "invalidations": [
     {
-      "scenario": "trend_down",
+      "scenario": "range_expansion",
       "status": "armed",
-      "condition": "close_above",
-      "level": 29175.0,
-      "closes_needed": 2,
-      "meaning": "trend_down dead \u2014 acceptance back above POC 29175.0"
-    },
-    {
-      "scenario": "trend_down",
-      "status": "tripped",
       "condition": "close_below",
-      "level": 28910.0,
+      "level": 28515.0,
       "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance below the put wall 28910 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
+      "meaning": "\u26a1 GAMMA: acceptance below the put wall 28515 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
     },
     {
-      "scenario": "trend_down",
+      "scenario": "range_expansion",
       "status": "armed",
       "condition": "close_above",
-      "level": 30150.0,
+      "level": 30170.0,
       "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance above the call wall 30150 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
+      "meaning": "\u26a1 GAMMA: acceptance above the call wall 30170 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
     }
   ],
   "gex": {
-    "total_gex_bn": -4.18,
-    "flip_nq": 29410,
-    "call_wall_nq": 30195,
-    "put_wall_nq": 28540
+    "total_gex_bn": -3.76,
+    "flip_nq": 29095,
+    "call_wall_nq": 30170,
+    "put_wall_nq": 28515
   }
 }
