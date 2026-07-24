@@ -1,12 +1,12 @@
 {
-  "updated": "2026-07-24T09:26:39.919370-04:00",
+  "updated": "2026-07-24T11:05:19.495923-04:00",
   "stats": {
-    "total_graded": 35,
+    "total_graded": 36,
     "correct": 14,
-    "accuracy_pct": 40.0,
-    "top2_graded": 22,
+    "accuracy_pct": 38.9,
+    "top2_graded": 23,
     "top2_hits": 12,
-    "top2_pct": 54.5,
+    "top2_pct": 52.2,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -182,13 +182,18 @@
         "date": "2026-07-23",
         "pct": 35.0,
         "n": 20
+      },
+      {
+        "date": "2026-07-24",
+        "pct": 35.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 34,
+        "total": 35,
         "correct": 14,
-        "pct": 41.2
+        "pct": 40.0
       },
       "?": {
         "total": 1,
@@ -199,7 +204,7 @@
     "calibration": {
       "50\u201360%": {
         "correct": 0,
-        "total": 5,
+        "total": 6,
         "pct": 0.0
       },
       "60\u201370%": {
@@ -238,10 +243,10 @@
         "pct": 50.0
       },
       "range_expansion": {
-        "total": 5,
+        "total": 6,
         "correct": 3,
         "label": "\ud83d\udca5 Range Expansion",
-        "pct": 60.0
+        "pct": 50.0
       },
       "rotational_balance": {
         "total": 2,
@@ -302,10 +307,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-24T09:26:39.919395-04:00",
+    "generated_at": "2026-07-24T11:05:19.495948-04:00",
     "last_brief_date": "2026-07-24",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-07-23",
+    "last_grade_date": "2026-07-24",
     "recent_failures": []
   },
   "coach": null,
@@ -401,6 +406,21 @@
           "abort": "Reclaim of OVN VAL 28676.0"
         }
       ],
+      "grade": {
+        "actual": "B",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Accepted below VAL 28582, closed 28349 (low of range)",
+        "notes": null,
+        "gemini": "SCENARIO: The top predicted model, Range Expansion (22%), played out. Price exhibited a strong downside expansion from the open, falling from 28622.0 to 28254.5.\n\nLEVELS: Price opened near Settle 28620.75 but immediately pushed down. OVN VAL 28676.0 and OVN POC 28682.0 were never tested. The Put Wall 28515.0 and OVN Low 28481.0 were broken, and the required reclaim of RTH VAL 28571.0 for a failed auction long never occurred.\n\nGAMMA: The session behaved as a MOMENTUM day with short gamma, as the downside move extended significantly through the Put Wall 28515.0.\n\nVERDICT: The 09:00 read was useful; the top model of Range Expansion played out to the downside.",
+        "close": 28349.25,
+        "high": 28622.0,
+        "low": 28254.5,
+        "predicted_model": "range_expansion",
+        "actual_model": "trend_down",
+        "model_correct": false,
+        "top2_hit": false
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -408,6 +428,34 @@
           "vs_settle": 8.0,
           "inside_va": true,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 28604.75,
+          "vs_settle": -16.0,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 28582.50/28717.00, target POC 28671.75."
+        },
+        {
+          "slot": "10:00",
+          "price": 28505.0,
+          "vs_settle": -115.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28582.50\u201328717.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 28333.75,
+          "vs_settle": -287.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28582.50\u201328717.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 28321.5,
+          "vs_settle": -299.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28582.50\u201328717.00."
         }
       ]
     },
