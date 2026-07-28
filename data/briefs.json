@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T11:05:10.184754-04:00",
+  "updated": "2026-07-28T09:00:16.632509-04:00",
   "stats": {
     "total_graded": 37,
     "correct": 14,
@@ -299,9 +299,9 @@
       },
       "trend_up": {
         "label": "\ud83d\udcc8 Trend Continuation Up",
-        "trades": 7,
-        "win_rate": 85.7,
-        "exp": 564.01
+        "trades": 8,
+        "win_rate": 87.5,
+        "exp": 534.51
       },
       "trend_down": {
         "label": "\ud83d\udcc9 Trend Continuation Down",
@@ -312,8 +312,8 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-27T11:05:10.184766-04:00",
-    "last_brief_date": "2026-07-27",
+    "generated_at": "2026-07-28T09:00:16.632536-04:00",
+    "last_brief_date": "2026-07-28",
     "last_brief_time": "09:00:00",
     "last_grade_date": "2026-07-27",
     "recent_failures": []
@@ -324,6 +324,103 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2014 Took 5 of 6 trades against the morning bot read; you won, but you're swimming upstream.\nLevel Selection: 9/10 \u2014 4H gap and NDOG levels were surgical, yielding 0.0pt MAE on your best entries.\nExecution: 9/10 \u2014 100% win rate when using confirmation or planned_limit entries ($2,741 total).\nRisk Management: 9/10 \u2014 Loss capped tightly at -$200 on 07-20 a1; no account-bleeding escalation.\nPsychology: 8/10 \u2014 Tagged calm/confident throughout; reset cleanly after your opening loss on Monday.\nDiscipline: 5/10 \u2014 Severe exit inefficiency; choked trades prematurely instead of letting your HTF levels work.\n\nPNL: Net +$3,422 | Best Day: $1,496 (07-22) | Worst Day: $681 (07-20) | Profit Factor: 18.11 | Avg R: 8.61R\n\nWHAT WORKED:\n- Location + Trigger Execution: 100% win rate across Confirmation (3W/0L) and Planned Limit (1W/0L) entry models, proving your edge lies purely in waiting for the level.\n- HTF Key Setups: 4H Gap entries and NDOG rejections generated $2,341, led by your 22.02R trade on 07-20 a2 and 7.0R trade on 07-23 a1.\n\nBIGGEST LEAK:\nPremature profit-taking. You captured an average of just 3.71R out of an available 48.77R\u2014leaving 45.05R per trade on the table (only 7.6% efficiency). Look at 07-23 a2: a valid confluence zone trade where you bailed at a tiny 0.42R ($400). You are doing the hard work identifying precise HTF inflection points, then micro-managing the exit out of fear.\n\nBEST & WORST TRADE:\nBest: 2026-07-23 a1 NQ short (+$845, 7.0R) \u2014 resting limit at NDOG rejection, zero MAE, calm mindset; repeat this precise mechanical execution.\nWorst: 2026-07-20 a1 MNQ short (-$200) \u2014 rushed first attempt that got stopped before you nailed the real move on a2.\n\nNEXT WEEK:\nLeave a 1-micro runner active on every A-setup entry, trailing your stop exclusively behind 15-minute structural swings until 11:00 ET."
   },
   "days": [
+    {
+      "date": "2026-07-28",
+      "inventory": "100S",
+      "vah": 28209.0,
+      "poc": 28031.0,
+      "val": 28010.0,
+      "settle": 28190.0,
+      "ovn_high": 28230.0,
+      "ovn_low": 27839.5,
+      "ovn_poc": 28200.0,
+      "ovn_vah": 28200.0,
+      "ovn_val": 28014.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.71,
+      "confidence_b": 0.11,
+      "confidence_c": 0.17,
+      "post_time": "09:00:00",
+      "day_shape": "range_expansion",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Imbalance \u2014 -GEX momentum regime favoring downside range expansion and trend continuation below VAL 28010.0",
+      "invalidation": "Acceptance above Put Wall 28115.0 holding into ONVP POC 28200.0 invalidates the primary downside expansion read.",
+      "plan": "If price opens at 28010.0 and rallies into RTH POC 28031.0 or Put Wall 28115.0 but fails to accept, enter short targeting PDL 27939.0 and OVN Low 27839.5. If price opens and immediately breaks below VAL 28010.0 and accepts below PDL 27939.0, take breakdown shorts toward OVN Low 27839.5. If price sweeps PDL 27939.0, fails to push lower, and rapidly reclaims VAL 28010.0, look for a short-covering rotation up to Put Wall 28115.0.",
+      "risk": "Short gamma regime (-$4.4B GEX) amplifies market velocity; expect slippage and rapid expansion outside overnight boundaries.",
+      "predicted_model": "range_expansion",
+      "vol_regime": "normal",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 34,
+          "confidence": "medium",
+          "why": "Dealers are short -$4.4B gamma below the 29025.0 gamma flip, driving high volatility and range expansion past OVN Low 27839.5.",
+          "stat_support": "base rate 25%",
+          "trigger": "Break and acceptance below PDL 27939.0",
+          "confirm": "Sustained offers holding below PDL 27939.0 with expanding volume",
+          "target": "OVN Low 27839.5",
+          "abort": "Reclaim and acceptance back inside value above POC 28031.0"
+        },
+        {
+          "model": "trend_down",
+          "probability": 28,
+          "confidence": "medium",
+          "why": "Value is migrating lower with 100% short overnight inventory and price positioned in discount near VAL 28010.0.",
+          "stat_support": "base rate 28%",
+          "trigger": "Failure to hold retest of RTH POC 28031.0 or VAL 28010.0 after open",
+          "confirm": "One-timeframing lower on 5m timeframe taking out PDL 27939.0",
+          "target": "OVN Low 27839.5",
+          "abort": "Acceptance back above Put Wall 28115.0"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 16,
+          "confidence": "low",
+          "why": "Open location sits at lower value edge 28010.0 allowing two-sided rotation inside 28010.0\u201328209.0 if selling momentum stalls.",
+          "stat_support": "base rate 18%",
+          "trigger": "Passive absorption at VAL 28010.0 or PDL 27939.0 on initial probe",
+          "confirm": "Price reclaims and holds above RTH POC 28031.0",
+          "target": "Put Wall 28115.0 and ONVP VAH 28200.0",
+          "abort": "Clear breakdown and acceptance below PDL 27939.0"
+        },
+        {
+          "model": "short_covering",
+          "probability": 11,
+          "confidence": "low",
+          "why": "Overnight inventory is 100% short, leaving sellers vulnerable to a squeeze toward Settle 28190.0 if lower prices reject.",
+          "stat_support": "base rate 14%",
+          "trigger": "Sweep of PDL 27939.0 with sharp orderflow absorption and immediate reclaim of VAL 28010.0",
+          "confirm": "Acceptance above RTH POC 28031.0 pushing toward Put Wall 28115.0",
+          "target": "Settle 28190.0 and ONVP POC 28200.0",
+          "abort": "Failure to maintain bid above VAL 28010.0"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 10,
+          "confidence": "low",
+          "why": "Extended overnight gap of -0.64% creates stretched conditions back toward prior value mean POC 28031.0 and Settle 28190.0.",
+          "stat_support": "base rate 10%",
+          "trigger": "Reclaim of Put Wall 28115.0 following early downside failure",
+          "confirm": "Sustained bid holding above Put Wall 28115.0",
+          "target": "Settle 28190.0 and ONVP VAH 28200.0",
+          "abort": "Breakdown below VAL 28010.0"
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 28010.0,
+          "vs_settle": -180.0,
+          "inside_va": true,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-07-27",
       "inventory": "100L",
@@ -415,7 +512,7 @@
         "actual": "B",
         "predicted": "A",
         "correct": false,
-        "detail": "Accepted below VAL 28598, closed 28102 (low of range)",
+        "detail": "Accepted below VAL 28598, closed 28142 (low of range)",
         "notes": null,
         "gemini": "SCENARIO: The top predicted model (Trend Continuation Up, 73%) failed immediately at the open. Instead, price executed an aggressive downward Range Expansion (24%) after triggering the plan's invalidation.\n\nLEVELS: Price rejected at VAH 28601.0 (High 28615.75), completely breaking invalidation and slicing through POC 28620.75, Settle 28282.25, and OVN VAL 28270.0 down to 27939.0, while upside targets (28705.0, 28763.25) were never tested.\n\nGAMMA: The short gamma Momentum prediction proved accurate as volatility extended heavily downward, overshooting the 28085 Put Wall to print a low of 27939.0.\n\nVERDICT: The primary bullish prediction was entirely wrong on direction, though the stated invalidation level below 28601.0 was critical for preventing long losses.",
         "close": 28102.25,
@@ -464,8 +561,8 @@
         }
       ],
       "trades_summary": {
-        "count": 1,
-        "pnl": 392.0
+        "count": 2,
+        "pnl": 720.0
       }
     },
     {
@@ -3825,44 +3922,7 @@
         "low": 29923.0,
         "predicted_model": null,
         "actual_model": null
-      },
-      "intraday": [
-        {
-          "slot": "09:00",
-          "price": 30506.5,
-          "vs_settle": 511.5,
-          "inside_va": true,
-          "call": "Morning brief anchor"
-        },
-        {
-          "slot": "09:30",
-          "price": 30505.25,
-          "vs_settle": 510.25,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30310.00/30642.00, target POC 30334.00."
-        },
-        {
-          "slot": "10:00",
-          "price": 30452.25,
-          "vs_settle": 457.25,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30310.00/30642.00, target POC 30334.00."
-        },
-        {
-          "slot": "10:30",
-          "price": 30469.75,
-          "vs_settle": 474.75,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30310.00/30642.00, target POC 30334.00."
-        },
-        {
-          "slot": "11:00",
-          "price": 30370.75,
-          "vs_settle": 375.75,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 30310.00/30642.00, target POC 30334.00."
-        }
-      ]
+      }
     },
     {
       "date": "2026-06-16",
