@@ -1,12 +1,12 @@
 {
-  "updated": "2026-07-29T09:00:19.910183-04:00",
+  "updated": "2026-07-29T11:05:21.785849-04:00",
   "stats": {
-    "total_graded": 38,
+    "total_graded": 39,
     "correct": 15,
-    "accuracy_pct": 39.5,
-    "top2_graded": 25,
+    "accuracy_pct": 38.5,
+    "top2_graded": 26,
     "top2_hits": 13,
-    "top2_pct": 52.0,
+    "top2_pct": 50.0,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -197,13 +197,18 @@
         "date": "2026-07-28",
         "pct": 40.0,
         "n": 20
+      },
+      {
+        "date": "2026-07-29",
+        "pct": 40.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 37,
+        "total": 38,
         "correct": 15,
-        "pct": 40.5
+        "pct": 39.5
       },
       "?": {
         "total": 1,
@@ -214,7 +219,7 @@
     "calibration": {
       "50\u201360%": {
         "correct": 0,
-        "total": 6,
+        "total": 7,
         "pct": 0.0
       },
       "60\u201370%": {
@@ -253,10 +258,10 @@
         "pct": 50.0
       },
       "range_expansion": {
-        "total": 7,
+        "total": 8,
         "correct": 4,
         "label": "\ud83d\udca5 Range Expansion",
-        "pct": 57.1
+        "pct": 50.0
       },
       "rotational_balance": {
         "total": 2,
@@ -317,10 +322,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-29T09:00:19.910209-04:00",
+    "generated_at": "2026-07-29T11:05:21.785874-04:00",
     "last_brief_date": "2026-07-29",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-07-28",
+    "last_grade_date": "2026-07-29",
     "recent_failures": []
   },
   "coach": null,
@@ -416,6 +421,21 @@
           "abort": "Acceptance beyond the overnight extremes (28178.25 / 27640.0)."
         }
       ],
+      "grade": {
+        "actual": "B",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Accepted below VAL 27625, closed 27600 (low of range)",
+        "notes": null,
+        "gemini": "**SCENARIO:** \nThe top predicted model, Range Expansion (53%), played out perfectly as price expanded heavily to the downside from a high of 27996.0 to a low of 27510.0.\n\n**LEVELS:** \nPrice rejected OVN VAH (27983.0), broke Settle (27922.0), and swiftly sliced through ON VAL (27767.0) and POC (27726.0) to hit expansion targets past OVN Low (27640.0) and PDL (27603.5). Upside targets at 28178.25 and 28228.0 were never tested.\n\n**GAMMA:** \nThe session behaved as a classic short gamma momentum day, with sell-side moves extending aggressively below the 28395 flip level without edge fading.\n\n**VERDICT:** \nThe 09:00 read was highly accurate, as the top model (Range Expansion) played out and the downside plan executed precisely level-by-level.",
+        "close": 27600.0,
+        "high": 27996.0,
+        "low": 27510.0,
+        "predicted_model": "range_expansion",
+        "actual_model": "trend_down",
+        "model_correct": false,
+        "top2_hit": false
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -423,6 +443,34 @@
           "vs_settle": -10.25,
           "inside_va": true,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 27869.25,
+          "vs_settle": -52.75,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 27625.00/27974.00, target POC 27726.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 27849.25,
+          "vs_settle": -72.75,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 27625.00/27974.00, target POC 27726.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 27663.25,
+          "vs_settle": -258.75,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 27625.00/27974.00, target POC 27726.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 27566.25,
+          "vs_settle": -355.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 27625.00\u201327974.00."
         }
       ]
     },
