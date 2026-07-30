@@ -1,12 +1,12 @@
 {
-  "updated": "2026-07-30T08:00:21.158980-04:00",
+  "updated": "2026-07-30T11:05:07.455190-04:00",
   "stats": {
-    "total_graded": 39,
+    "total_graded": 40,
     "correct": 15,
-    "accuracy_pct": 38.5,
-    "top2_graded": 26,
-    "top2_hits": 13,
-    "top2_pct": 50.0,
+    "accuracy_pct": 37.5,
+    "top2_graded": 27,
+    "top2_hits": 14,
+    "top2_pct": 51.9,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -202,13 +202,18 @@
         "date": "2026-07-29",
         "pct": 40.0,
         "n": 20
+      },
+      {
+        "date": "2026-07-30",
+        "pct": 40.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 38,
+        "total": 39,
         "correct": 15,
-        "pct": 39.5
+        "pct": 38.5
       },
       "?": {
         "total": 1,
@@ -229,8 +234,8 @@
       },
       "70\u201380%": {
         "correct": 5,
-        "total": 29,
-        "pct": 17.2
+        "total": 30,
+        "pct": 16.7
       },
       "80%+": {
         "correct": 0,
@@ -258,10 +263,10 @@
         "pct": 50.0
       },
       "range_expansion": {
-        "total": 8,
+        "total": 9,
         "correct": 4,
         "label": "\ud83d\udca5 Range Expansion",
-        "pct": 50.0
+        "pct": 44.4
       },
       "rotational_balance": {
         "total": 2,
@@ -322,10 +327,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-30T08:00:21.158997-04:00",
+    "generated_at": "2026-07-30T11:05:07.455221-04:00",
     "last_brief_date": "2026-07-30",
     "last_brief_time": "08:00:01",
-    "last_grade_date": "2026-07-29",
+    "last_grade_date": "2026-07-30",
     "recent_failures": []
   },
   "coach": null,
@@ -355,8 +360,8 @@
       "post_time": "08:00:01",
       "day_shape": "range_expansion",
       "day_shape_note": null,
-      "htf_bias": null,
-      "htf_text": null,
+      "htf_bias": "SHORT",
+      "htf_text": "DAILY: Daily market structure remains firmly bearish following a strong downward displacement that established a dealing range between the 28178.25 high and 27201.50 low. Price is currently trading in the upper premium half of this range, with nearest untapped buyside liquidity resting above 28178.25 and sellside liquidity anchored below 27201.50.\n\n4H: Structure since the 27201.50 displacement low shows a corrective upside retracement testing into the previous 4H breakdown zone around 27800. A daily expansion lower is confirmed by a loss of 27464.50 targeting the 27201.50 low, while a sustained hold above 27962.75 denies the immediate bearish continuation.\n\n1H: Overnight structure formed a steady bullish trend from the 27337.50 low, driving price to a high of 27787.75 heading into the morning session. The immediate draw on liquidity into the NY open is the overnight buyside pool above 27787.75, with secondary downside liquidity resting at 27469.75.\n\nBIAS: SHORT \u2014 If price sweeps overnight buyside liquidity above 27787.75 and exhibits orderflow exhaustion or absorption at premium levels, then look for a short setup targeting 27469.75 and 27201.50.",
       "regime": "Imbalance / Range Expansion \u2014 100% long overnight inventory inside negative GEX environment (-4.1$Bn) favoring upside volatility break toward 28178.25",
       "invalidation": "Acceptance and sustained trading back below 27700.0 into prior day value area invalidates the upside range expansion thesis.",
       "plan": "If price opens and accepts above OVNH 27735.0 and VAH 27770.0, then look for retest long entries targeting PDH 28178.25 and Gamma Flip 28300.0. If price rejects VAH 27770.0 and breaks below 27700.0, then expect rotational balance down toward RTH POC 27363.0 and Settle 27342.0. If 27342.0 breaks with aggressive selling, then expect a mean-reversion drive toward ONVP POC 27272.0 and OVNL 27201.5.",
@@ -421,6 +426,21 @@
           "abort": "Holding above 27363.0 (RTH POC)"
         }
       ],
+      "grade": {
+        "actual": "B",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Accepted above VAH 27770, closed 28069 (top of range)",
+        "notes": null,
+        "gemini": "**SCENARIO**\nThe top predicted model, Range Expansion (52%), played out perfectly as price expanded forcefully to the upside from the open.\n\n**LEVELS**\nPrice held above invalidation at 27700.0 (session low 27715.25) and accepted above VAH 27770.0, triggering the long trade plan that easily surpassed target PDH 28178.25 to peak at 28246.5. Lower levels like POC 27363.0 and Settle 27342.0 were never tested.\n\n**GAMMA**\nThe short gamma momentum regime performed as expected, with moves extending strongly past the 28090 flip level up toward the 28340 call wall.\n\n**VERDICT**\nThe 09:00 read was highly accurate and actionable, as the top predicted Range Expansion model hit all primary upside targets.",
+        "close": 28068.75,
+        "high": 28246.5,
+        "low": 27715.25,
+        "predicted_model": "range_expansion",
+        "actual_model": "trend_up",
+        "model_correct": false,
+        "top2_hit": true
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -428,6 +448,34 @@
           "vs_settle": 386.25,
           "inside_va": true,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 27850.5,
+          "vs_settle": 508.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 27272.00\u201327770.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 28064.5,
+          "vs_settle": 722.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 27272.00\u201327770.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 28113.0,
+          "vs_settle": 771.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 27272.00\u201327770.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 28166.75,
+          "vs_settle": 824.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 27272.00\u201327770.00."
         }
       ]
     },
