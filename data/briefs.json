@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-29T11:05:21.785849-04:00",
+  "updated": "2026-07-30T08:00:21.158980-04:00",
   "stats": {
     "total_graded": 39,
     "correct": 15,
@@ -322,9 +322,9 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-29T11:05:21.785874-04:00",
-    "last_brief_date": "2026-07-29",
-    "last_brief_time": "09:00:00",
+    "generated_at": "2026-07-30T08:00:21.158997-04:00",
+    "last_brief_date": "2026-07-30",
+    "last_brief_time": "08:00:01",
     "last_grade_date": "2026-07-29",
     "recent_failures": []
   },
@@ -334,6 +334,103 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2014 Took 5 of 6 trades against the morning bot read; you won, but you're swimming upstream.\nLevel Selection: 9/10 \u2014 4H gap and NDOG levels were surgical, yielding 0.0pt MAE on your best entries.\nExecution: 9/10 \u2014 100% win rate when using confirmation or planned_limit entries ($2,741 total).\nRisk Management: 9/10 \u2014 Loss capped tightly at -$200 on 07-20 a1; no account-bleeding escalation.\nPsychology: 8/10 \u2014 Tagged calm/confident throughout; reset cleanly after your opening loss on Monday.\nDiscipline: 5/10 \u2014 Severe exit inefficiency; choked trades prematurely instead of letting your HTF levels work.\n\nPNL: Net +$3,422 | Best Day: $1,496 (07-22) | Worst Day: $681 (07-20) | Profit Factor: 18.11 | Avg R: 8.61R\n\nWHAT WORKED:\n- Location + Trigger Execution: 100% win rate across Confirmation (3W/0L) and Planned Limit (1W/0L) entry models, proving your edge lies purely in waiting for the level.\n- HTF Key Setups: 4H Gap entries and NDOG rejections generated $2,341, led by your 22.02R trade on 07-20 a2 and 7.0R trade on 07-23 a1.\n\nBIGGEST LEAK:\nPremature profit-taking. You captured an average of just 3.71R out of an available 48.77R\u2014leaving 45.05R per trade on the table (only 7.6% efficiency). Look at 07-23 a2: a valid confluence zone trade where you bailed at a tiny 0.42R ($400). You are doing the hard work identifying precise HTF inflection points, then micro-managing the exit out of fear.\n\nBEST & WORST TRADE:\nBest: 2026-07-23 a1 NQ short (+$845, 7.0R) \u2014 resting limit at NDOG rejection, zero MAE, calm mindset; repeat this precise mechanical execution.\nWorst: 2026-07-20 a1 MNQ short (-$200) \u2014 rushed first attempt that got stopped before you nailed the real move on a2.\n\nNEXT WEEK:\nLeave a 1-micro runner active on every A-setup entry, trailing your stop exclusively behind 15-minute structural swings until 11:00 ET."
   },
   "days": [
+    {
+      "date": "2026-07-30",
+      "inventory": "100L",
+      "vah": 27770.0,
+      "poc": 27363.0,
+      "val": 27272.0,
+      "settle": 27342.0,
+      "ovn_high": 27735.0,
+      "ovn_low": 27201.5,
+      "ovn_poc": 27272.0,
+      "ovn_vah": 27297.0,
+      "ovn_val": 27245.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.71,
+      "confidence_b": 0.11,
+      "confidence_c": 0.17,
+      "post_time": "08:00:01",
+      "day_shape": "range_expansion",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Imbalance / Range Expansion \u2014 100% long overnight inventory inside negative GEX environment (-4.1$Bn) favoring upside volatility break toward 28178.25",
+      "invalidation": "Acceptance and sustained trading back below 27700.0 into prior day value area invalidates the upside range expansion thesis.",
+      "plan": "If price opens and accepts above OVNH 27735.0 and VAH 27770.0, then look for retest long entries targeting PDH 28178.25 and Gamma Flip 28300.0. If price rejects VAH 27770.0 and breaks below 27700.0, then expect rotational balance down toward RTH POC 27363.0 and Settle 27342.0. If 27342.0 breaks with aggressive selling, then expect a mean-reversion drive toward ONVP POC 27272.0 and OVNL 27201.5.",
+      "risk": "Dealers are short gamma (-4.1$Bn), which will accelerate volatility and price swings once value boundaries are broken.",
+      "predicted_model": "range_expansion",
+      "vol_regime": "normal",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 52,
+          "confidence": "high",
+          "why": "Overnight range expanded 533.5 pts and short GEX (-4.1$Bn) amplifies momentum above OVNH 27735.0.",
+          "stat_support": "base rate 31%",
+          "trigger": "Break and acceptance above OVNH 27735.0 and VAH 27770.0",
+          "confirm": "Sustained buying orderflow holding above 27770.0 (VAH) on retest",
+          "target": "PDH 28178.25 and Gamma Flip 28300.0",
+          "abort": "Acceptance back below 27700.0 inside prior value"
+        },
+        {
+          "model": "trend_up",
+          "probability": 27,
+          "confidence": "medium",
+          "why": "One-timeframing higher with 100% long inventory driving toward upper value boundary VAH 27770.0.",
+          "stat_support": "base rate 33%",
+          "trigger": "Open drive cleanly holding above current price 27728.25 through 27770.0",
+          "confirm": "Higher low formation above 27770.0 without visiting RTH POC 27363.0",
+          "target": "PDH 28178.25",
+          "abort": "Loss of 27700.0 and rotation into value"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 17,
+          "confidence": "low",
+          "why": "Open location sits inside upper RTH value area (27272.0\u201327770.0), offering two-sided rotation if VAH rejects.",
+          "stat_support": "base rate 14%",
+          "trigger": "Failure to break OVNH 27735.0 / VAH 27770.0 at RTH open",
+          "confirm": "Passive absorption at VAH 27770.0 followed by selling back through 27700.0",
+          "target": "RTH POC 27363.0 and Settle 27342.0",
+          "abort": "Acceptance and hold above VAH 27770.0"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 8,
+          "confidence": "low",
+          "why": "Extended gap (+1.41%) above Settle 27342.0 creates downside rotation risk if longs fail to expand value.",
+          "stat_support": "base rate 12%",
+          "trigger": "Acceptance back inside RTH value below 27700.0",
+          "confirm": "Sustained orderflow selling pushing through 27600.0",
+          "target": "RTH POC 27363.0 and ONVP POC 27272.0",
+          "abort": "Reclaim and hold above OVNH 27735.0"
+        },
+        {
+          "model": "long_liquidation",
+          "probability": 4,
+          "confidence": "low",
+          "why": "100% long overnight inventory becomes trapped if price breaks lower value boundaries.",
+          "stat_support": "base rate 3%",
+          "trigger": "Rejection at 27770.0 followed by aggressive breakdown under 27342.0",
+          "confirm": "Sustained selling acceptance below RTH POC 27363.0",
+          "target": "OVNL 27201.5 and PDL 27201.5",
+          "abort": "Holding above 27363.0 (RTH POC)"
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 27728.25,
+          "vs_settle": 386.25,
+          "inside_va": true,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-07-29",
       "inventory": "N",
@@ -3947,44 +4044,7 @@
         "low": 30388.0,
         "predicted_model": null,
         "actual_model": null
-      },
-      "intraday": [
-        {
-          "slot": "09:00",
-          "price": 30506.5,
-          "vs_settle": 243.150390625,
-          "inside_va": false,
-          "call": "Morning brief anchor"
-        },
-        {
-          "slot": "09:30",
-          "price": 30506.5,
-          "vs_settle": 243.150390625,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30528.00\u201330721.00."
-        },
-        {
-          "slot": "10:00",
-          "price": 30506.5,
-          "vs_settle": 243.150390625,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30528.00\u201330721.00."
-        },
-        {
-          "slot": "10:30",
-          "price": 30506.5,
-          "vs_settle": 243.150390625,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30528.00\u201330721.00."
-        },
-        {
-          "slot": "11:00",
-          "price": 30506.5,
-          "vs_settle": 243.150390625,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30528.00\u201330721.00."
-        }
-      ]
+      }
     },
     {
       "date": "2026-06-18",
