@@ -1,12 +1,12 @@
 {
-  "updated": "2026-07-31T08:00:21.958125-04:00",
+  "updated": "2026-07-31T11:05:11.414170-04:00",
   "stats": {
-    "total_graded": 40,
+    "total_graded": 41,
     "correct": 15,
-    "accuracy_pct": 37.5,
-    "top2_graded": 27,
+    "accuracy_pct": 36.6,
+    "top2_graded": 28,
     "top2_hits": 14,
-    "top2_pct": 51.9,
+    "top2_pct": 50.0,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -207,13 +207,18 @@
         "date": "2026-07-30",
         "pct": 40.0,
         "n": 20
+      },
+      {
+        "date": "2026-07-31",
+        "pct": 40.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 39,
+        "total": 40,
         "correct": 15,
-        "pct": 38.5
+        "pct": 37.5
       },
       "?": {
         "total": 1,
@@ -234,8 +239,8 @@
       },
       "70\u201380%": {
         "correct": 5,
-        "total": 30,
-        "pct": 16.7
+        "total": 31,
+        "pct": 16.1
       },
       "80%+": {
         "correct": 0,
@@ -275,7 +280,7 @@
         "pct": 50.0
       },
       "trend_up": {
-        "total": 4,
+        "total": 5,
         "correct": 0,
         "label": "\ud83d\udcc8 Trend Continuation Up",
         "pct": 0.0
@@ -327,10 +332,10 @@
     }
   },
   "ops": {
-    "generated_at": "2026-07-31T08:00:21.958138-04:00",
+    "generated_at": "2026-07-31T11:05:11.414241-04:00",
     "last_brief_date": "2026-07-31",
     "last_brief_time": "08:00:01",
-    "last_grade_date": "2026-07-30",
+    "last_grade_date": "2026-07-31",
     "recent_failures": []
   },
   "coach": null,
@@ -360,8 +365,8 @@
       "post_time": "08:00:01",
       "day_shape": "trend_up",
       "day_shape_note": null,
-      "htf_bias": null,
-      "htf_text": null,
+      "htf_bias": "LONG",
+      "htf_text": "DAILY: Daily structure remains overall bearish within the 29364.75 to 27201.50 dealing range, but yesterday produced strong bullish displacement off the 27201.50 swing low. Price currently trades in equilibrium approaching premium, with the nearest untapped buyside liquidity resting above 28763.25 and sellside liquidity anchored below 27201.50.\n\n4H: Market structure shifted bullish via powerful displacement from 27201.50 up to 28640.75, leaving a large unfilled 4H fair value gap between 27745.25 and 28054.50. A 4H body close above 28763.25 confirms higher-timeframe expansion toward 29342.25, whereas a loss of 28205.50 denies the immediate bullish continuation.\n\n1H: Overnight structure formed a high-level consolidation zone, setting a high at 28640.75 before pulling back to establish higher-low support near 28448.00. The immediate draw on liquidity for the New York open is the 28640.75 overnight high, with secondary draw into the 28763.25 buyside pool.\n\nBIAS: LONG \u2014 If price sweeps overnight sellside liquidity around 28448.00 at the open and confirms absorption or a Q3 inversion, then enter long targeting 28640.75 and 28763.25.",
       "regime": "IMBALANCE \u2014 Developing Trend Continuation / Range Expansion out of gap open above prior value",
       "invalidation": "Acceptance back below PDH 28414.5 and ONVP VAH 28370.0, neutralizing overnight long inventory",
       "plan": "If price opens and holds above Weekly Open 28500.0 / Call Wall 28480.0, expect buyers to drive price toward OVNH 28640.75. If OVNH 28640.75 breaks with aggressive buying, expect range expansion toward 28800.0. If price sweeps OVNH 28640.75 and immediately rejects back below 28545.25, expect rotational balancing toward 28500.0. If price fails Weekly Open 28500.0 and accepts below Gamma Flip 28435.0 / PDH 28414.5, expect long liquidation down to ONVP POC 28303.0 and prior RTH POC 28232.0.",
@@ -426,6 +431,21 @@
           "abort": ""
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Reverted to POC 28232",
+        "notes": null,
+        "gemini": "**SCENARIO:** The top predicted model (Trend Continuation Up) failed; after a brief open push to 28725.75, price suffered a severe reversal that played out the 6% ranked Long Liquidation model.\n\n**LEVELS:** Price swept past OVNH 28640.75 to 28725.75, immediately rejected below 28545.25, and broke Weekly Open 28500.0, Gamma Flip 28435.0, and invalidation level OVN VAH 28370.0 down to Put Wall 28105 / VAL 28091 (low 28079.75).\n\n**GAMMA:** The session validated the mean-reversion prediction at extreme edges, violently fading the initial upward momentum and bouncing cleanly at Put Wall 28105 back to VAH 28303.\n\n**VERDICT:** The read was very useful because the specified contingency (sweep of 28640.75, failure below 28545.25/28435.0, and invalidation below 28370.0) accurately guided the entire session move.",
+        "close": 28295.0,
+        "high": 28725.75,
+        "low": 28079.75,
+        "predicted_model": "trend_up",
+        "actual_model": "mean_reversion",
+        "model_correct": false,
+        "top2_hit": false
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -433,6 +453,34 @@
           "vs_settle": 307.5,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 28539.0,
+          "vs_settle": 301.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28091.00\u201328303.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 28360.5,
+          "vs_settle": 122.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28091.00\u201328303.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 28177.25,
+          "vs_settle": -60.5,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 28091.00/28303.00, target POC 28232.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 28332.5,
+          "vs_settle": 94.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28091.00\u201328303.00."
         }
       ]
     },
