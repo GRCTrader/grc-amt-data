@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26T15:34:04.903438-04:00",
+  "updated": "2026-08-01T17:27:15.863502-04:00",
   "reports": [
     {
       "market_code": "ES",
@@ -4570,6 +4570,76 @@
             }
           }
         ]
+      },
+      "week_review": {
+        "week_start": "2026-07-27",
+        "week_end": "2026-07-31",
+        "bias": "Strongly Bearish",
+        "days": [
+          {
+            "date": "2026-07-27",
+            "weekday": "Monday",
+            "open": 7490.0,
+            "high": 7524.75,
+            "low": 7416.25,
+            "close": 7448.25,
+            "direction": -1,
+            "narrative": "opened 7490, pushed up to 7525, faded to close 7448 (-42)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-07-28",
+            "weekday": "Tuesday",
+            "open": 7453.0,
+            "high": 7485.75,
+            "low": 7417.0,
+            "close": 7465.25,
+            "direction": 1,
+            "narrative": "opened 7453, sold down to 7417, recovered to close 7465 (+12)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-07-29",
+            "weekday": "Wednesday",
+            "open": 7464.0,
+            "high": 7501.0,
+            "low": 7324.0,
+            "close": 7351.25,
+            "direction": -1,
+            "narrative": "opened 7464, pushed up to 7501, faded to close 7351 (-113)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-07-30",
+            "weekday": "Thursday",
+            "open": 7338.0,
+            "high": 7498.0,
+            "low": 7331.0,
+            "close": 7472.5,
+            "direction": 1,
+            "narrative": "opened 7338, closed higher at 7472 (+134)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-07-31",
+            "weekday": "Friday",
+            "open": 7479.5,
+            "high": 7541.0,
+            "low": 7427.5,
+            "close": 7519.25,
+            "direction": 1,
+            "narrative": "opened 7480, sold down to 7428, recovered to close 7519 (+40)",
+            "bot_read": null
+          }
+        ],
+        "week_net_pct": 0.39,
+        "verdict": "incorrect",
+        "score": 16,
+        "components": {
+          "net_direction": 0,
+          "daily_agreement": 16
+        },
+        "review_text": "WHAT HAPPENED:\nThe engine issued a High confidence Strongly Bearish bias on ES, but price rose +0.39% over the week. Strong rebounds on Thursday (+134) and Friday (+40) completely erased the midweek decline.\n\nWHY IT MISSED:\nThe engine misread a 14,388 contract decrease in commercial net short positioning as bearish deterioration rather than bullish short covering. Furthermore, assigning High confidence while commercial positioning sat at a 100% range extreme ignored positioning exhaustion, declaring a strong sell signal just as commercial short exposure was actively contracting.\n\nSUGGESTED IMPROVEMENT:\nSuggest reviewing engine rules to require a confidence downgrade from High to Low whenever commercial net short exposure is decreasing from a 100% percentile extreme."
       }
     },
     {
@@ -9141,6 +9211,101 @@
             }
           }
         ]
+      },
+      "week_review": {
+        "week_start": "2026-07-27",
+        "week_end": "2026-07-31",
+        "bias": "Bearish",
+        "days": [
+          {
+            "date": "2026-07-27",
+            "weekday": "Monday",
+            "open": 28500.0,
+            "high": 28763.25,
+            "low": 27939.0,
+            "close": 28190.0,
+            "direction": -1,
+            "narrative": "opened 28500, pushed up to 28763, faded to close 28190 (-310)",
+            "bot_read": {
+              "predicted_model": "trend_up",
+              "actual_model": "long_liquidation",
+              "model_correct": 0,
+              "detail": "Accepted below VAL 28598, closed 28142 (low of range)"
+            }
+          },
+          {
+            "date": "2026-07-28",
+            "weekday": "Tuesday",
+            "open": 28210.5,
+            "high": 28228.0,
+            "low": 27603.5,
+            "close": 27922.0,
+            "direction": -1,
+            "narrative": "opened 28210, closed lower at 27922 (-288)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "range_expansion",
+              "model_correct": 1,
+              "detail": "Two-sided, range 27604-27992, close 27853"
+            }
+          },
+          {
+            "date": "2026-07-29",
+            "weekday": "Wednesday",
+            "open": 27962.0,
+            "high": 28178.25,
+            "low": 27201.5,
+            "close": 27342.0,
+            "direction": -1,
+            "narrative": "opened 27962, pushed up to 28178, faded to close 27342 (-620)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "trend_down",
+              "model_correct": 0,
+              "detail": "Accepted below VAL 27625, closed 27600 (low of range)"
+            }
+          },
+          {
+            "date": "2026-07-30",
+            "weekday": "Thursday",
+            "open": 27202.0,
+            "high": 28414.5,
+            "low": 27202.0,
+            "close": 28237.75,
+            "direction": 1,
+            "narrative": "opened 27202, closed higher at 28238 (+1036)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "trend_up",
+              "model_correct": 0,
+              "detail": "Accepted above VAH 27770, closed 28069 (top of range)"
+            }
+          },
+          {
+            "date": "2026-07-31",
+            "weekday": "Friday",
+            "open": 28317.0,
+            "high": 28725.75,
+            "low": 28079.75,
+            "close": 28404.25,
+            "direction": 0,
+            "narrative": "opened 28317, closed flat at 28404 (+87)",
+            "bot_read": {
+              "predicted_model": "trend_up",
+              "actual_model": "mean_reversion",
+              "model_correct": 0,
+              "detail": "Reverted to POC 28232"
+            }
+          }
+        ],
+        "week_net_pct": -0.34,
+        "verdict": "correct",
+        "score": 84,
+        "components": {
+          "net_direction": 60,
+          "daily_agreement": 24
+        },
+        "review_text": "WHAT HAPPENED:\nThe macro bearish call correctly predicted the week's net decline (-0.34%), but the engine failed on daily regime reads, missing four out of five morning calls due to large intra-week swings.\n\nWHY IT MISSED:\nHigh confidence was assigned despite conflicting short-term inputs: commercials reduced net shorts by 4,011 contracts alongside a bullish nodule. Because positioning percentiles (53% six-month, 68% twelve-month) were mid-range rather than at bearish extremes, this weekly short-covering directly fueled Thursday's violent 1,036-point rally and threw off daily AM regime classifications.\n\nSUGGESTED IMPROVEMENT:\nAutomatically cap the engine's macro confidence score at Medium when week-over-week commercial flow direction explicitly opposes the multi-month program bias."
       }
     }
   ]
