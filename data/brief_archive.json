@@ -1,6 +1,132 @@
 {
-  "updated": "2026-08-03T07:17:02.686066-04:00",
+  "updated": "2026-08-03T12:00:00.014034-04:00",
   "days": [
+    {
+      "date": "2026-08-03",
+      "regime": "Imbalance \u2014 Developing Trend Continuation Up above prior RTH Value Area",
+      "predicted_model": "trend_up",
+      "models": [
+        {
+          "model": "trend_up",
+          "probability": 83,
+          "confidence": "high",
+          "why": "Price opened above prior value (28433.0) with a 2-day uptrend and 100% long overnight inventory favoring directional continuation.",
+          "stat_support": "base rate 44%",
+          "trigger": "Hold above prior RTH VAH (28433.0) or pull back to test Settle (28404.25)",
+          "confirm": "Acceptance above Weekly Open (28565.0) with passive absorption on pullbacks",
+          "target": "OVN High (28688.5) and PDH (28725.75)",
+          "abort": "Acceptance back inside prior RTH Value below Settle (28404.25)"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 26,
+          "confidence": "medium",
+          "why": "Overnight range of 430.25pts coiling for a breakout beyond the overnight session extremes.",
+          "stat_support": "base rate 23%",
+          "trigger": "Breakout above OVN High (28688.5) or breakdown below OVN Low (28258.25)",
+          "confirm": "One-timeframing expansion on heavy aggressor volume past 28688.5",
+          "target": "PDH (28725.75) and PWH (28763.25)",
+          "abort": "Rejection at 28688.5 returning inside OVN VAH (28554.0)"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 14,
+          "confidence": "low",
+          "why": "Price stalls between Weekly Open (28565.0) and OVN POC (28379.0) establishing a two-sided balance area.",
+          "stat_support": "base rate 13%",
+          "trigger": "Failure to hold momentum above Weekly Open (28565.0)",
+          "confirm": "Responsive selling pushing price back inside ONVP range (28347.0\u201328554.0)",
+          "target": "OVN POC (28379.0) and ONVP VAL (28347.0)",
+          "abort": "Clean breakout and acceptance above 28565.0 or below 28347.0"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 11,
+          "confidence": "low",
+          "why": "Unfair high pricing gets rejected, driving price back toward the mean of prior session value.",
+          "stat_support": "base rate 11%",
+          "trigger": "Rejection back below prior RTH VAH (28433.0) and Settle (28404.25)",
+          "confirm": "Sustained trading below OVN POC (28379.0)",
+          "target": "Prior RTH POC (28157.0) and prior RTH VAL (28143.0)",
+          "abort": "Reclaim and acceptance above 28433.0"
+        },
+        {
+          "model": "long_liquidation",
+          "probability": 6,
+          "confidence": "low",
+          "why": "100% long overnight inventory gets trapped if Settle fails, causing a rapid unwind.",
+          "stat_support": "base rate 6%",
+          "trigger": "Aggressive market sell orders breaking OVN POC (28379.0) and ONVP VAL (28347.0)",
+          "confirm": "Failure to find buyers at ONVP VAL (28347.0) driving price toward OVN Low (28258.25)",
+          "target": "Prior RTH POC (28157.0) and PDL (28079.75)",
+          "abort": "Buyers defend Settle (28404.25) and hold price above 28433.0"
+        }
+      ],
+      "plan": "If NQ opens above prior RTH VAH (28433.0) and holds Settle (28404.25) on pullbacks, look for long confirmation (absorption/finished auction) targeting 28554.0 (OVN VAH) and 28565.0 (Weekly Open). If price accepts above 28565.0, hold for trend expansion toward 28688.5 (OVN High) and 28725.75 (PDH). If NQ fails to hold 28404.25 and trades below 28379.0 (OVN POC), pivot to mean-reversion shorting down to 28157.0 (prior RTH POC).",
+      "invalidation": "Acceptance and sustained trading below Settle (28404.25) and OVN POC (28379.0)",
+      "risk_note": "100% long overnight inventory creates sharp unwind risk if Settle (28404.25) fails; historical 97% London low sweep probability implies downside tail risk if open drive fails.",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": "trend_up",
+      "day_grade": null,
+      "actual_model": "B",
+      "correct": 0,
+      "grade_detail": "Accepted above VAH 28433, closed 28780 (top of range)",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 28433.0
+        },
+        {
+          "label": "POC",
+          "price": 28157.0
+        },
+        {
+          "label": "VAL",
+          "price": 28143.0
+        },
+        {
+          "label": "OVN High",
+          "price": 28688.5
+        },
+        {
+          "label": "OVN Low",
+          "price": 28258.25
+        },
+        {
+          "label": "OVN VAH",
+          "price": 28554.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 28379.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 28347.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 28303.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 28232.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 28091.0
+        },
+        {
+          "label": "Prior High",
+          "price": 28725.75
+        },
+        {
+          "label": "Prior Low",
+          "price": 28079.75
+        }
+      ]
+    },
     {
       "date": "2026-07-31",
       "regime": "IMBALANCE \u2014 Developing Trend Continuation / Range Expansion out of gap open above prior value",
