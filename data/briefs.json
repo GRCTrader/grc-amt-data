@@ -1,15 +1,15 @@
 {
-  "updated": "2026-08-03T09:00:21.134696-04:00",
+  "updated": "2026-08-03T11:05:13.011457-04:00",
   "stats": {
-    "total_graded": 41,
-    "correct": 15,
-    "accuracy_pct": 36.6,
-    "total_modern": 30,
-    "correct_modern": 9,
-    "accuracy_modern_pct": 30.0,
-    "top2_graded": 28,
-    "top2_hits": 14,
-    "top2_pct": 50.0,
+    "total_graded": 42,
+    "correct": 16,
+    "accuracy_pct": 38.1,
+    "total_modern": 31,
+    "correct_modern": 10,
+    "accuracy_modern_pct": 32.3,
+    "top2_graded": 29,
+    "top2_hits": 15,
+    "top2_pct": 51.7,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -215,13 +215,18 @@
         "date": "2026-07-31",
         "pct": 40.0,
         "n": 20
+      },
+      {
+        "date": "2026-08-03",
+        "pct": 45.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 40,
-        "correct": 15,
-        "pct": 37.5
+        "total": 41,
+        "correct": 16,
+        "pct": 39.0
       },
       "?": {
         "total": 1,
@@ -242,8 +247,8 @@
       },
       "70\u201380%": {
         "correct": 5,
-        "total": 31,
-        "pct": 16.1
+        "total": 32,
+        "pct": 15.6
       },
       "80%+": {
         "correct": 0,
@@ -288,10 +293,10 @@
         "thin": true
       },
       "trend_up": {
-        "total": 5,
-        "correct": 0,
+        "total": 6,
+        "correct": 1,
         "label": "\ud83d\udcc8 Trend Continuation Up",
-        "pct": 0.0,
+        "pct": 16.7,
         "thin": true
       },
       "trend_down": {
@@ -344,10 +349,10 @@
     "weekly_diagnostics_all": []
   },
   "ops": {
-    "generated_at": "2026-08-03T09:00:21.134733-04:00",
+    "generated_at": "2026-08-03T11:05:13.011489-04:00",
     "last_brief_date": "2026-08-03",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-07-31",
+    "last_grade_date": "2026-08-03",
     "recent_failures": [
       {
         "ts": "2026-08-02 17:00:00",
@@ -450,6 +455,21 @@
           "abort": "Buyers defend Settle (28404.25) and hold price above 28433.0"
         }
       ],
+      "grade": {
+        "actual": "B",
+        "predicted": "A",
+        "correct": true,
+        "detail": "Accepted above VAH 28433, closed 28780 (top of range)",
+        "notes": null,
+        "gemini": "SCENARIO:\nThe top predicted model, Trend Continuation Up (83%), decisively played out. Price initiated a strong upward trend from its low.\n\nLEVELS:\nNQ opened near Settle (28404.25), then briefly traded below OVN POC (28379.0) and OVN VAL (28347.0), hitting 28313.5. Price quickly reversed, breaking above RTH VAH (28433.0), then surpassed OVN VAH (28554.0), and extended significantly past all higher targets (28565.0, 28688.5, 28725.75) to 28798.25. The initial long conditions were not met, and the invalidation was briefly triggered but immediately reversed.\n\nGAMMA:\nThe session did not behave like the predicted MEAN-REVERT day; momentum extended significantly, breaking through the call wall (28495) rather than fading edges.\n\nVERDICT:\nThe 09:00 read was useful for identifying the overall trend direction, as the top predicted model (Trend Continuation Up) played out very strongly, despite initial breaching of invalidation levels.",
+        "close": 28779.5,
+        "high": 28798.25,
+        "low": 28313.5,
+        "predicted_model": "trend_up",
+        "actual_model": "trend_up",
+        "model_correct": true,
+        "top2_hit": true
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -457,6 +477,34 @@
           "vs_settle": 83.0,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 28487.5,
+          "vs_settle": 83.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28143.00\u201328433.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 28474.0,
+          "vs_settle": 69.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28143.00\u201328433.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 28614.0,
+          "vs_settle": 209.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28143.00\u201328433.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 28738.75,
+          "vs_settle": 334.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28143.00\u201328433.00."
         }
       ]
     },
