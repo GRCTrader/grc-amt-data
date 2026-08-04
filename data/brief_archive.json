@@ -1,6 +1,132 @@
 {
-  "updated": "2026-08-03T12:00:00.014034-04:00",
+  "updated": "2026-08-04T12:00:00.009157-04:00",
   "days": [
+    {
+      "date": "2026-08-04",
+      "regime": "imbalance, developing into a trend continuation up day",
+      "predicted_model": "trend_up",
+      "models": [
+        {
+          "model": "trend_up",
+          "probability": 65,
+          "confidence": "high",
+          "why": "Open significantly above RTH value and ONVP, coupled with 3d+ uptrend and 100% long overnight inventory, strongly favors continuation higher.",
+          "stat_support": "base rate 33%",
+          "trigger": "Price acceptance above OVNH 29245.75",
+          "confirm": "Sustained volume and higher highs above 29245.75, indicating continued buying pressure and market acceptance.",
+          "target": "29633.5 (1x overnight range extension from open)",
+          "abort": "Failure to hold above 29219.5 and acceptance back below the current open"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 32,
+          "confidence": "medium",
+          "why": "The overnight session experienced normal volatility, suggesting potential for an expansion from an initial balance formed at the open.",
+          "stat_support": "base rate 26%",
+          "trigger": "Strong break and acceptance above OVNH 29245.75 after an initial balance phase.",
+          "confirm": "Increased volume and momentum on the breakout, followed by price acceptance above the initial range.",
+          "target": "29633.5 (extension beyond OVNH)",
+          "abort": "Price fails to break out and instead consolidates within the overnight range (28831.75 - 29245.75)"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 17,
+          "confidence": "low",
+          "why": "Despite the gap and open above RTH value, the +GEX regime and price above gamma flip 28550 might lead to dealer hedging that pins price in a range around the OVNH.",
+          "stat_support": "base rate 16%",
+          "trigger": "Initial probe above OVNH 29245.75, followed by swift rejection back into the overnight range.",
+          "confirm": "Price remaining contained within the overnight range (28831.75 - 29245.75) and rotating around ONVP POC 28888.0.",
+          "target": "ONVP POC 28888.0",
+          "abort": "Acceptance above OVNH 29245.75 or below OVNL 28831.75"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 8,
+          "confidence": "low",
+          "why": "While less probable, unswept liquidity could act as a trap if the current strength fails, leading to a reversal back through a key extreme.",
+          "stat_support": "base rate 12%",
+          "trigger": "Price breaks above OVNH 29245.75 then fails to accept, aggressively reversing back below it.",
+          "confirm": "Swift rejection and acceptance below OVNH 29245.75, indicating a failed new high and a move back into the overnight range.",
+          "target": "ONVP POC 28888.0",
+          "abort": "Price successfully accepts above OVNH 29245.75 and continues to trend higher"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 8,
+          "confidence": "low",
+          "why": "Despite the extended open, +GEX favoring fade-the-extreme and price being above the gamma flip 28550 in a rotation regime suggests a potential fade back towards value.",
+          "stat_support": "base rate 4%",
+          "trigger": "Strong rejection from OVNH 29245.75, leading to a break below the current open 29219.5.",
+          "confirm": "Price acceptance below 29219.5 and sustained downside momentum towards ONVP POC.",
+          "target": "ONVP POC 28888.0",
+          "abort": "Price holds above OVNH 29245.75 or reclaims 29219.5 after breaking it"
+        }
+      ],
+      "plan": "IF price opens and holds above OVNH 29245.75, then look for longs with acceptance for a push higher into price discovery towards 29633.5. IF price initially pushes above OVNH 29245.75 and accepts, anticipate a range expansion day, targeting 29633.5. IF price sweeps OVNH 29245.75 and swiftly rejects with orderflow confirmation (exhaustion/absorption), then look for a fade back towards the ONVP POC 28888.0. IF price fails to establish acceptance above 29219.5 and accepts below the current open, look for a retest of ONVP POC 28888.0.",
+      "invalidation": "A decisive break and acceptance below ONVP POC 28888.0.",
+      "risk_note": "Potential for MTF conflict due to undefined HTF bias.",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": "trend_up",
+      "day_grade": null,
+      "actual_model": "B",
+      "correct": 0,
+      "grade_detail": "Accepted above VAH 28884, closed 29545 (top of range)",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 28884.0
+        },
+        {
+          "label": "POC",
+          "price": 28376.0
+        },
+        {
+          "label": "VAL",
+          "price": 28376.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29245.75
+        },
+        {
+          "label": "OVN Low",
+          "price": 28831.75
+        },
+        {
+          "label": "OVN VAH",
+          "price": 28929.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 28888.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 28851.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 28433.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 28157.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 28143.0
+        },
+        {
+          "label": "Prior High",
+          "price": 28964.25
+        },
+        {
+          "label": "Prior Low",
+          "price": 28313.5
+        }
+      ]
+    },
     {
       "date": "2026-08-03",
       "regime": "Imbalance \u2014 Developing Trend Continuation Up above prior RTH Value Area",
