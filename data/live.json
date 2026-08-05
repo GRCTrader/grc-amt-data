@@ -1,50 +1,44 @@
 {
-  "asof": "2026-08-04 11:01 ET",
-  "slot": "11:01",
-  "price": 29540.25,
+  "asof": "2026-08-05 09:31 ET",
+  "slot": "09:31",
+  "price": 29918.75,
   "bias": "LONG",
   "scenarios": [
     {
       "model": "trend_up",
-      "probability": 65,
-      "base_rate": 33,
+      "probability": 42,
+      "base_rate": 20,
       "drivers": [
         "+ open above value",
-        "+ 2d+ up-trend intact",
-        "+ already 100% long overnight \u2014 historically a continuation tell, not a fade",
-        "\u2212 large +GEX dampens trends",
-        "\u2212 25 similar days: 36% historically"
-      ]
-    },
-    {
-      "model": "range_expansion",
-      "probability": 32,
-      "base_rate": 26,
-      "drivers": [
-        "+ 25 similar days: 60% historically",
-        "\u2212 calibration: engine ran hot on this model (31% real vs 36% claimed)"
+        "+ 2d+ up-trend intact"
       ]
     },
     {
       "model": "rotational_balance",
-      "probability": 17,
-      "base_rate": 16,
+      "probability": 18,
+      "base_rate": 19,
       "drivers": [
-        "\u2212 gap argues against balance",
-        "+ +GEX pins price",
-        "+ price above gamma flip 28550 in +GEX \u2014 rotation regime",
         "\u2212 25 similar days: 0% historically",
-        "+ calibration: engine ran cold on this model (25% real vs 13% claimed)"
+        "+ calibration: engine ran cold on this model (23% real vs 14% claimed)"
+      ]
+    },
+    {
+      "model": "range_expansion",
+      "probability": 17,
+      "base_rate": 21,
+      "drivers": [
+        "\u2212 OVN range compressed \u2014 discount; compression here doesn't reliably release into RTH",
+        "+ 25 similar days: 32% historically",
+        "\u2212 calibration: engine ran hot on this model (30% real vs 36% claimed)"
       ]
     },
     {
       "model": "failed_auction",
-      "probability": 8,
-      "base_rate": 12,
+      "probability": 17,
+      "base_rate": 20,
       "drivers": [
         "\u2212 open out of value near an OVN extreme \u2014 mild discount; proximity alone rarely confirms the reversal",
-        "+ unswept liquidity to trap into",
-        "\u2212 25 similar days: 0% historically"
+        "+ unswept liquidity to trap into"
       ]
     }
   ],
@@ -53,23 +47,15 @@
       "scenario": "trend_up",
       "status": "armed",
       "condition": "close_below",
-      "level": 28376.0,
+      "level": 29873.0,
       "closes_needed": 2,
-      "meaning": "trend_up dead \u2014 acceptance back below POC 28376.0"
-    },
-    {
-      "scenario": "trend_up",
-      "status": "armed",
-      "condition": "close_below",
-      "level": 28300.0,
-      "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance below the put wall 28300 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
+      "meaning": "trend_up dead \u2014 acceptance back below POC 29873.0"
     }
   ],
   "gex": {
-    "total_gex_bn": 3.68,
-    "flip_nq": 28795,
-    "call_wall_nq": 29335,
-    "put_wall_nq": 28095
+    "total_gex_bn": 3.11,
+    "flip_nq": 29375,
+    "call_wall_nq": 30365,
+    "put_wall_nq": 28090
   }
 }
