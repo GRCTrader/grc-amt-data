@@ -1,6 +1,132 @@
 {
-  "updated": "2026-08-05T06:48:41.857124-04:00",
+  "updated": "2026-08-05T12:00:00.009753-04:00",
   "days": [
+    {
+      "date": "2026-08-05",
+      "regime": "Imbalance, developing into a trend_up day.",
+      "predicted_model": "trend_up",
+      "models": [
+        {
+          "model": "trend_up",
+          "probability": 42,
+          "confidence": "medium",
+          "why": "Open above RTH VAH 29940.0 and 3-day uptrend suggests continued discovery higher, with an overnight inventory lean to the long side.",
+          "stat_support": "base rate 20%",
+          "trigger": "Acceptance above OVN high 29990.0 with sustained demand.",
+          "confirm": "Continued one-timeframing above 29990.0 and lack of selling pressure.",
+          "target": "PM high 30553.75",
+          "abort": "Rejection and acceptance back below RTH VAH 29940.0"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 18,
+          "confidence": "low",
+          "why": "The compressed OVN range (6th percentile) could lead to initial two-sided trade within the overnight value area if upper extremes like OVNH 29990.0 are rejected.",
+          "stat_support": "base rate 19%",
+          "trigger": "Rejection of OVNH 29990.0 or PDH 29956.5 with immediate selling pressure on open.",
+          "confirm": "Price rotating between ONVP VAH 29983.0 and ONVP VAL 29834.0, failing to accept outside these levels.",
+          "target": "ONVP POC 29877.0",
+          "abort": "Acceptance above OVN high 29990.0 or below ONVP VAL 29834.0"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 17,
+          "confidence": "low",
+          "why": "The extremely compressed OVN range (6th percentile) could lead to a sudden volatility break and acceptance out of the overnight range (29761.25 - 29990.0).",
+          "stat_support": "base rate 21%",
+          "trigger": "A decisive break and acceptance either above OVN high 29990.0 or below OVN low 29761.25.",
+          "confirm": "Aggressive order flow confirming the break and acceptance beyond 29990.0 or 29761.25.",
+          "target": "PM high 30553.75",
+          "abort": "Failure to hold acceptance beyond the OVN range, reversing quickly"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 17,
+          "confidence": "low",
+          "why": "Open near OVN high 29990.0 combined with unswept liquidity (PDL 28831.75) could set up for a failed auction if highs are rejected.",
+          "stat_support": "base rate 20%",
+          "trigger": "Initial sweep above OVN high 29990.0 or PDH 29956.5 followed by immediate absorption and reversal.",
+          "confirm": "Aggressive selling pushing price back below 29956.5 and then below RTH VAH 29940.0.",
+          "target": "RTH POC 29873.0",
+          "abort": "Strong acceptance above 29990.0"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 10,
+          "confidence": "low",
+          "why": "Current price 29941.0 at RTH VAH 29940.0 and above OVN POC 29877.0, coupled with a compressed range, could lead to a fade back to mean.",
+          "stat_support": "base rate 7%",
+          "trigger": "Rejection of RTH VAH 29940.0 or PDH 29956.5 on open, pulling price back into value.",
+          "confirm": "Acceptance below RTH VAH 29940.0 with continued selling pressure.",
+          "target": "RTH POC 29873.0",
+          "abort": "Acceptance and sustained trade above PDH 29956.5"
+        }
+      ],
+      "plan": "If the open drives higher, look for acceptance above OVNH 29990.0. A retest of 29990.0 as support with orderflow confirmation would be a prime long entry, targeting PM high 30553.75. If the open sweeps OVNH 29990.0 or PDH 29956.5 and immediately reverses with strong selling pressure, look for a failed auction scenario targeting RTH VAH 29940.0 and RTH POC 29873.0. If the open retests RTH VAH 29940.0, observe orderflow; absorption and defense of this level would favor long entries targeting PDH 29956.5 and OVNH 29990.0. Rejection and acceptance below RTH VAH 29940.0 would pivot to a mean revers",
+      "invalidation": "Acceptance back below RTH VAH 29940.0 invalidates the primary bullish read.",
+      "risk_note": "Low volatility regime with an extremely compressed OVN range could lead to a sudden displacement. Be mindful of potential two-way action around the OVN range extremes (29761.25 - 29990.0) before committing to a directional bias.",
+      "htf_bias": "LONG",
+      "htf_text": "DAILY:\nNQ has confirmed a bullish market structure shift with a break of structure above the 07-22 high of 29342.25, originating from the 07-29 low at 27201.50 and currently forming a new swing high at 08-05's 29990.00, placing price in a premium within this daily dealing range. Untapped buyside liquidity exists above 30094.00 (07-06/07-10 equal highs), with a large daily fair value gap between 28964.25 and 29776.50 providing a potential retracement draw on liquidity below current price.\n\n4H:\nThe 4H timeframe exhibits clear bullish market structure after significant displacement on 08-04, with the latest break of structure confirmed as price moved decisively above 28964.25. A substantial bullish fair value gap between 29245.75 and 29661.25 remains open below current price, which if rejected, would confirm the daily bullish thesis towards higher buyside liquidity, whereas a decisive break and acceptance below it would deny the current momentum.\n\n1H:\nThe overnight session shows a bullish inventory bias, having printed a higher high at 29990.00 relative to the prior RTH close, while currently consolidating slightly below this extreme. The immediate draw on liquidity for the NY open is towards the overnight high at 29990.00 and daily buyside liquidity above 30094.00, with a small bullish fair value gap (29871.75 - 29891.25) offering a short-term rebalance level below current price.\n\nBIAS: LONG - If price sustains above the 1H FVG between 29871.75 and 29891.25 and shows displacement above 29942.00, I will target the overnight high at 29990.00 and daily buyside liquidity.",
+      "day_shape": "trend_up",
+      "day_grade": null,
+      "actual_model": "failed_auction",
+      "correct": 0,
+      "grade_detail": "Swept OVN high 29990, failed, closed 29822",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29940.0
+        },
+        {
+          "label": "POC",
+          "price": 29873.0
+        },
+        {
+          "label": "VAL",
+          "price": 29542.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29990.0
+        },
+        {
+          "label": "OVN Low",
+          "price": 29761.25
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29983.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29877.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29834.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 28884.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 28376.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 28376.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29956.5
+        },
+        {
+          "label": "Prior Low",
+          "price": 28831.75
+        }
+      ]
+    },
     {
       "date": "2026-08-04",
       "regime": "imbalance, developing into a trend continuation up day",
