@@ -1,15 +1,15 @@
 {
-  "updated": "2026-08-05T08:00:52.273332-04:00",
+  "updated": "2026-08-05T11:05:12.640958-04:00",
   "stats": {
-    "total_graded": 43,
+    "total_graded": 44,
     "correct": 17,
-    "accuracy_pct": 39.5,
-    "total_modern": 32,
+    "accuracy_pct": 38.6,
+    "total_modern": 33,
     "correct_modern": 11,
-    "accuracy_modern_pct": 34.4,
-    "top2_graded": 30,
+    "accuracy_modern_pct": 33.3,
+    "top2_graded": 31,
     "top2_hits": 16,
-    "top2_pct": 53.3,
+    "top2_pct": 51.6,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -225,13 +225,18 @@
         "date": "2026-08-04",
         "pct": 45.0,
         "n": 20
+      },
+      {
+        "date": "2026-08-05",
+        "pct": 45.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 42,
+        "total": 43,
         "correct": 17,
-        "pct": 40.5
+        "pct": 39.5
       },
       "?": {
         "total": 1,
@@ -241,9 +246,9 @@
     },
     "calibration": {
       "50\u201360%": {
-        "correct": 0,
-        "total": 7,
-        "pct": 0.0
+        "correct": 1,
+        "total": 8,
+        "pct": 12.5
       },
       "60\u201370%": {
         "correct": 2,
@@ -298,10 +303,10 @@
         "thin": true
       },
       "trend_up": {
-        "total": 7,
+        "total": 8,
         "correct": 2,
         "label": "\ud83d\udcc8 Trend Continuation Up",
-        "pct": 28.6,
+        "pct": 25.0,
         "thin": true
       },
       "trend_down": {
@@ -354,10 +359,10 @@
     "weekly_diagnostics_all": []
   },
   "ops": {
-    "generated_at": "2026-08-05T08:00:52.273365-04:00",
+    "generated_at": "2026-08-05T11:05:12.640976-04:00",
     "last_brief_date": "2026-08-05",
     "last_brief_time": "08:00:01",
-    "last_grade_date": "2026-08-04",
+    "last_grade_date": "2026-08-05",
     "recent_failures": []
   },
   "coach": null,
@@ -387,8 +392,8 @@
       "post_time": "08:00:01",
       "day_shape": "trend_up",
       "day_shape_note": null,
-      "htf_bias": null,
-      "htf_text": null,
+      "htf_bias": "LONG",
+      "htf_text": "DAILY:\nNQ has confirmed a bullish market structure shift with a break of structure above the 07-22 high of 29342.25, originating from the 07-29 low at 27201.50 and currently forming a new swing high at 08-05's 29990.00, placing price in a premium within this daily dealing range. Untapped buyside liquidity exists above 30094.00 (07-06/07-10 equal highs), with a large daily fair value gap between 28964.25 and 29776.50 providing a potential retracement draw on liquidity below current price.\n\n4H:\nThe 4H timeframe exhibits clear bullish market structure after significant displacement on 08-04, with the latest break of structure confirmed as price moved decisively above 28964.25. A substantial bullish fair value gap between 29245.75 and 29661.25 remains open below current price, which if rejected, would confirm the daily bullish thesis towards higher buyside liquidity, whereas a decisive break and acceptance below it would deny the current momentum.\n\n1H:\nThe overnight session shows a bullish inventory bias, having printed a higher high at 29990.00 relative to the prior RTH close, while currently consolidating slightly below this extreme. The immediate draw on liquidity for the NY open is towards the overnight high at 29990.00 and daily buyside liquidity above 30094.00, with a small bullish fair value gap (29871.75 - 29891.25) offering a short-term rebalance level below current price.\n\nBIAS: LONG - If price sustains above the 1H FVG between 29871.75 and 29891.25 and shows displacement above 29942.00, I will target the overnight high at 29990.00 and daily buyside liquidity.",
       "regime": "Imbalance, developing into a trend_up day.",
       "invalidation": "Acceptance back below RTH VAH 29940.0 invalidates the primary bullish read.",
       "plan": "If the open drives higher, look for acceptance above OVNH 29990.0. A retest of 29990.0 as support with orderflow confirmation would be a prime long entry, targeting PM high 30553.75. If the open sweeps OVNH 29990.0 or PDH 29956.5 and immediately reverses with strong selling pressure, look for a failed auction scenario targeting RTH VAH 29940.0 and RTH POC 29873.0. If the open retests RTH VAH 29940.0, observe orderflow; absorption and defense of this level would favor long entries targeting PDH 29956.5 and OVNH 29990.0. Rejection and acceptance below RTH VAH 29940.0 would pivot to a mean revers",
@@ -453,6 +458,21 @@
           "abort": "Acceptance and sustained trade above PDH 29956.5"
         }
       ],
+      "grade": {
+        "actual": "A",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Swept OVN high 29990, failed, closed 29822",
+        "notes": null,
+        "gemini": "**SCENARIO:** \nThe top predicted model (Trend Up) failed; instead, the **Failed Auction** (17%) scenario played out after an initial drive higher quickly stalled and reversed. \n\n**LEVELS:** \nPrice extended past OVN VAH 29983 to a high of 30074.0 before breaking back below RTH VAH 29940.0 (triggering invalidation), subsequently slicing down through RTH POC 29873.0 to a low of 29788.0 as outlined in the backup plan.\n\n**GAMMA:** \nThe session aligned with the predicted mean-revert regime as early momentum at the upper edge faded sharply, remaining safely above the 29375 flip level.\n\n**VERDICT:** \nAlthough the primary directional bias was wrong, the pre-market read was very useful because the invalidation at 29940.0 and the failed auction targets were spot-on.",
+        "close": 29821.5,
+        "high": 30074.0,
+        "low": 29788.0,
+        "predicted_model": "trend_up",
+        "actual_model": "failed_auction",
+        "model_correct": false,
+        "top2_hit": false
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -460,6 +480,34 @@
           "vs_settle": 77.5,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29917.5,
+          "vs_settle": 54.0,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29542.00/29940.00, target POC 29873.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 30055.5,
+          "vs_settle": 192.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29542.00\u201329940.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 29973.25,
+          "vs_settle": 109.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29542.00\u201329940.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 29892.0,
+          "vs_settle": 28.5,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29542.00/29940.00, target POC 29873.00."
         }
       ]
     },
