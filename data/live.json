@@ -1,61 +1,89 @@
 {
-  "asof": "2026-08-05 11:01 ET",
-  "slot": "11:01",
-  "price": 29874.0,
-  "bias": "NEUTRAL",
+  "asof": "2026-08-06 09:31 ET",
+  "slot": "09:31",
+  "price": 29537.25,
+  "bias": "SHORT",
   "scenarios": [
     {
-      "model": "trend_up",
-      "probability": 42,
-      "base_rate": 20,
-      "drivers": [
-        "+ open above value",
-        "+ 2d+ up-trend intact"
-      ]
-    },
-    {
       "model": "rotational_balance",
-      "probability": 18,
-      "base_rate": 19,
+      "probability": 30,
+      "base_rate": 25,
       "drivers": [
-        "\u2212 25 similar days: 0% historically",
-        "+ calibration: engine ran cold on this model (23% real vs 14% claimed)"
-      ]
-    },
-    {
-      "model": "range_expansion",
-      "probability": 17,
-      "base_rate": 21,
-      "drivers": [
-        "\u2212 OVN range compressed \u2014 discount; compression here doesn't reliably release into RTH",
-        "+ 25 similar days: 32% historically",
-        "\u2212 calibration: engine ran hot on this model (30% real vs 36% claimed)"
+        "+ +GEX pins price",
+        "+ price above gamma flip 29145 in +GEX \u2014 rotation regime",
+        "\u2212 25 similar days: 8% historically",
+        "+ calibration: engine ran cold on this model (22% real vs 14% claimed)"
       ]
     },
     {
       "model": "failed_auction",
-      "probability": 17,
-      "base_rate": 20,
+      "probability": 24,
+      "base_rate": 25,
       "drivers": [
-        "\u2212 open out of value near an OVN extreme \u2014 mild discount; proximity alone rarely confirms the reversal",
-        "+ unswept liquidity to trap into"
+        "+ unswept liquidity to trap into",
+        "\u2212 25 similar days: 16% historically"
+      ]
+    },
+    {
+      "model": "mean_reversion",
+      "probability": 20,
+      "base_rate": 10,
+      "drivers": [
+        "+ compressed range \u2014 slight lean toward reversion, not the expansion-risk discount originally assumed",
+        "+ +GEX favors fade-the-extreme",
+        "+ price above gamma flip 29145 in +GEX \u2014 rotation regime",
+        "+ 25 similar days: 24% historically",
+        "+ calibration: engine ran cold on this model (22% real vs 9% claimed)"
+      ]
+    },
+    {
+      "model": "range_expansion",
+      "probability": 19,
+      "base_rate": 27,
+      "drivers": [
+        "\u2212 OVN range compressed \u2014 discount; compression here doesn't reliably release into RTH",
+        "\u2212 calibration: engine ran hot on this model (29% real vs 35% claimed)"
       ]
     }
   ],
   "invalidations": [
     {
-      "scenario": "trend_up",
+      "scenario": "rotational_balance",
+      "status": "armed",
+      "condition": "close_above",
+      "level": 30049.0,
+      "closes_needed": 2,
+      "meaning": "balance dead \u2014 acceptance above VAH 30049.0"
+    },
+    {
+      "scenario": "rotational_balance",
+      "status": "near",
+      "condition": "close_below",
+      "level": 29767.0,
+      "closes_needed": 2,
+      "meaning": "balance dead \u2014 acceptance below VAL 29767.0"
+    },
+    {
+      "scenario": "rotational_balance",
       "status": "armed",
       "condition": "close_below",
-      "level": 29873.0,
+      "level": 28030.0,
       "closes_needed": 2,
-      "meaning": "trend_up dead \u2014 acceptance back below POC 29873.0"
+      "meaning": "\u26a1 GAMMA: acceptance below the put wall 28030 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
+    },
+    {
+      "scenario": "rotational_balance",
+      "status": "armed",
+      "condition": "close_above",
+      "level": 30295.0,
+      "closes_needed": 2,
+      "meaning": "\u26a1 GAMMA: acceptance above the call wall 30295 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
     }
   ],
   "gex": {
-    "total_gex_bn": 3.11,
-    "flip_nq": 29375,
-    "call_wall_nq": 30365,
-    "put_wall_nq": 28090
+    "total_gex_bn": -0.21,
+    "flip_nq": 29565,
+    "call_wall_nq": 30265,
+    "put_wall_nq": 29025
   }
 }
