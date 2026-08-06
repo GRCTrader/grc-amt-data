@@ -1,15 +1,15 @@
 {
-  "updated": "2026-08-06T08:00:22.309401-04:00",
+  "updated": "2026-08-06T11:05:17.299912-04:00",
   "stats": {
-    "total_graded": 44,
+    "total_graded": 45,
     "correct": 17,
-    "accuracy_pct": 38.6,
-    "total_modern": 33,
+    "accuracy_pct": 37.8,
+    "total_modern": 34,
     "correct_modern": 11,
-    "accuracy_modern_pct": 33.3,
-    "top2_graded": 31,
+    "accuracy_modern_pct": 32.4,
+    "top2_graded": 32,
     "top2_hits": 16,
-    "top2_pct": 51.6,
+    "top2_pct": 50.0,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -230,13 +230,18 @@
         "date": "2026-08-05",
         "pct": 45.0,
         "n": 20
+      },
+      {
+        "date": "2026-08-06",
+        "pct": 40.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 43,
+        "total": 44,
         "correct": 17,
-        "pct": 39.5
+        "pct": 38.6
       },
       "?": {
         "total": 1,
@@ -257,8 +262,8 @@
       },
       "70\u201380%": {
         "correct": 5,
-        "total": 33,
-        "pct": 15.2
+        "total": 34,
+        "pct": 14.7
       },
       "80%+": {
         "correct": 0,
@@ -296,10 +301,10 @@
         "thin": true
       },
       "rotational_balance": {
-        "total": 2,
+        "total": 3,
         "correct": 1,
         "label": "\u2696\ufe0f Rotational / Balance",
-        "pct": 50.0,
+        "pct": 33.3,
         "thin": true
       },
       "trend_up": {
@@ -344,9 +349,9 @@
       },
       "trend_up": {
         "label": "\ud83d\udcc8 Trend Continuation Up",
-        "trades": 14,
-        "win_rate": 85.7,
-        "exp": 569.58
+        "trades": 15,
+        "win_rate": 80.0,
+        "exp": -535.06
       },
       "trend_down": {
         "label": "\ud83d\udcc9 Trend Continuation Down",
@@ -359,10 +364,10 @@
     "weekly_diagnostics_all": []
   },
   "ops": {
-    "generated_at": "2026-08-06T08:00:22.309436-04:00",
+    "generated_at": "2026-08-06T11:05:17.299949-04:00",
     "last_brief_date": "2026-08-06",
     "last_brief_time": "08:00:01",
-    "last_grade_date": "2026-08-05",
+    "last_grade_date": "2026-08-06",
     "recent_failures": []
   },
   "coach": null,
@@ -392,8 +397,8 @@
       "post_time": "08:00:01",
       "day_shape": "rotational_balance",
       "day_shape_note": null,
-      "htf_bias": null,
-      "htf_text": null,
+      "htf_bias": "NEUTRAL",
+      "htf_text": "DAILY: Daily structure remains bullish following strong displacement off the 27201.50 swing low up to 30074.00, keeping price around 29537.25 in the upper premium of this dealing range. Untapped buyside liquidity rests above at the 30074.00 high, while sellside liquidity sits below at yesterday's 29454.25 low and the 28831.75 swing low.\n\n4H: Following the bullish displacement to 30074.00, 4H structure shifted into a pullback that is currently testing an open 4H fair value gap between 29245.75 and 29661.25. Holding above 29245.75 confirms daily bullish continuation, whereas a break below 29188.00 denies the daily read and expands toward deeper discount liquidity.\n\n1H: Overnight structure established a balanced rotational range bounded by the overnight low of 29454.25 and overnight high of 29621.00. The immediate draw on liquidity for the NY open is a sweep of overnight buyside liquidity at 29621.00 or sellside liquidity at 29454.25 to initiate directional discovery.\n\nBIAS: NEUTRAL \u2014 If 09:30 opens with a sellside sweep of 29454.25 that shows orderflow absorption inside the 4H fair value gap, then I will target a long rotation back to 29621.00 and 29848.00, but if price accepts below 29454.25 with downside displacement, then I will target 29188.00.",
       "regime": "BALANCE / ROTATIONAL \u2014 Price opened below prior value in +GEX (+1.5$Bn), favoring mean-reverting rotational trading between PDL 29530.75 and Settle 29615.0",
       "invalidation": "Acceptance and building volume below OVNL 29454.25 invalidates the balance read and opens a trend drive down toward 29145.0.",
       "plan": "If price sweeps below PDL 29530.75 and immediately reclaims OVN VAL 29557.0, go long targeting OVN POC 29588.0 and Settle 29615.0. If price fails to hold 29530.75 and accepts below OVNL 29454.25, pivot bias to trend_down toward 29145.0. If price tests up into OVN VAH 29664.0 / OVNH 29679.5 and shows exhaustion, fade back toward OVN POC 29588.0.",
@@ -458,6 +463,21 @@
           "abort": "Reclaim and acceptance above OVN POC 29588.0"
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Two-sided, range 29537-29537, close 29537",
+        "notes": null,
+        "gemini": "**SCENARIO:**\nThe top-ranked model, **Rotational / Balance** (30%), played out perfectly as price oscillated entirely within the morning range, topping out at 29679.5 and bottoming at 29454.25 before closing at 29537.25.\n\n**LEVELS:**\nThe fade plan at OVNH 29679.5 played out cleanly, while OVNL 29454.25 held as low of the session without accepting below it\u2014keeping invalidation intact and allowing price to rotate back through PDL 29530.75 and Settle 29615.0.\n\n**GAMMA:**\nPrice resisted short-gamma momentum extension and instead faded the edges, though it continually pinned and pivoted around the 29565 Gamma Flip level.\n\n**VERDICT:**\nThe 09:00 read was highly effective as the top-predicted Rotational/Balance model played out accurately within the specified key levels.",
+        "close": 29537.25,
+        "high": 29679.5,
+        "low": 29454.25,
+        "predicted_model": "rotational_balance",
+        "actual_model": "range_expansion",
+        "model_correct": false,
+        "top2_hit": false
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -465,6 +485,41 @@
           "vs_settle": -77.75,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29537.25,
+          "vs_settle": -77.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29767.00\u201330049.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 29537.25,
+          "vs_settle": -77.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29767.00\u201330049.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 29537.25,
+          "vs_settle": -77.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29767.00\u201330049.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 29537.25,
+          "vs_settle": -77.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29767.00\u201330049.00."
+        },
+        {
+          "slot": "news_follow",
+          "price": 29537.25,
+          "vs_settle": -77.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29767.00\u201330049.00."
         }
       ]
     },
@@ -608,8 +663,8 @@
         }
       ],
       "trades_summary": {
-        "count": 1,
-        "pnl": -800.0
+        "count": 2,
+        "pnl": -16800.0
       }
     },
     {
