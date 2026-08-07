@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-06T11:05:17.299912-04:00",
+  "updated": "2026-08-07T09:00:17.017599-04:00",
   "stats": {
     "total_graded": 45,
     "correct": 17,
@@ -364,11 +364,18 @@
     "weekly_diagnostics_all": []
   },
   "ops": {
-    "generated_at": "2026-08-06T11:05:17.299949-04:00",
-    "last_brief_date": "2026-08-06",
-    "last_brief_time": "08:00:01",
+    "generated_at": "2026-08-07T09:00:17.017630-04:00",
+    "last_brief_date": "2026-08-07",
+    "last_brief_time": "09:00:00",
     "last_grade_date": "2026-08-06",
-    "recent_failures": []
+    "recent_failures": [
+      {
+        "ts": "2026-08-07 08:00:00",
+        "label": "early_brief",
+        "status": "error",
+        "detail": "name '_brief_posted_date' is not defined"
+      }
+    ]
   },
   "coach": null,
   "mentor_review": {
@@ -376,6 +383,103 @@
     "text": "SCORECARD:\nMarket Read: 9/10 \u2014 Nailed key levels on 07-27 and caught both directions cleanly on 07-31.\nLevel Selection: 8/10 \u2014 OTE retracements into swing low imbalances yielded high-probability 1.83R setups.\nExecution: 6/10 \u2014 Left setup tags unlogged on 07-31, letting outcome bias mask execution details.\nRisk Management: 4/10 \u2014 Absorbed 615.5 pts of MAE heat on 07-27 MNQ, holding through invalidation to protect a green card.\nPsychology: 7/10 \u2014 Maintained calm mindset on planned limits, but sitting through massive MAE indicates reluctance to accept a loss.\nDiscipline: 5/10 \u2014 Breached your mandatory cap of 2 attempts/day by logging 3 trades on July 31.\n\nPNL: Net +$3,920 | Best Day: July 31 (+$3,200) | Worst Day: July 28 ($0) | PF: N/A | Avg R: 1.83R\n\nWHAT WORKED:\n- Planned limit entries at HTF levels (OTE + swing low imbalance) produced a 100% win rate and crisp execution on 07-27.\n- Short-side conviction generated +$2,200 across two trades on 07-31, proving strong orderflow read even when fading morning bot bias.\n\nBIGGEST LEAK:\nRule-breaking masked by green P&L. On July 31, you took 3 trades\u2014violating your non-negotiable 2-attempt daily limit\u2014and stopped logging your entry models. Combine that with holding through 615.5 points of MAE heat on 07-27, and the data shows you are over-trading across accounts and refusing to take a loss. Green metrics this week are hiding dangerous behavior.\n\nBEST & WORST TRADE:\nBest: 07-27 a1 MNQ Long (+$420) \u2014 Text-book planned limit at OTE retracement, executed with a calm mindset.\nWorst: 07-31 3rd Trade NQ Short (+$700) \u2014 Generated P&L, but directly violated your daily attempt cap.\n\nNEXT WEEK:\nEnforce a hard lockout after attempt #2 each day across all accounts\u2014once trade 2 completes, shut down your platform immediately regardless of P&L or market conditions."
   },
   "days": [
+    {
+      "date": "2026-08-07",
+      "inventory": "100L",
+      "vah": 29559.0,
+      "poc": 29318.0,
+      "val": 29318.0,
+      "settle": 29488.25,
+      "ovn_high": 29814.0,
+      "ovn_low": 29453.5,
+      "ovn_poc": 29528.0,
+      "ovn_vah": 29621.0,
+      "ovn_val": 29494.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.75,
+      "confidence_b": 0.12,
+      "confidence_c": 0.13,
+      "post_time": "09:00:00",
+      "day_shape": "trend_up",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Imbalance \u2014 Developing Trend Continuation / Range Expansion above prior Value Area",
+      "invalidation": "Acceptance and value building below ON POC 29528.0 kills the bullish continuation read and opens a flush to Settle 29488.25",
+      "plan": "If the open holds above PDH 29686.25, look for a retest to show passive absorption on the tape; enter long targeting OVNH 29814.0 and higher. If price breaks above OVNH 29814.0 with strong buy volume and accepts, hold for range expansion toward 30000.0. If the open fails at OVNH 29814.0 and pushes below PDH 29686.25, stand aside until price interacts with ON POC 29528.0 to re-evaluate for long liquidation risk toward RTH VAH 29559.0. All trading activity must be complete by 11:00 ET.",
+      "risk": "Trader performance shows historical difficulty on trend_up setups ($-535/trade); keep sizing disciplined (micros on attempt 2) and wait for strict orderflow confirmation before entering.",
+      "predicted_model": "trend_up",
+      "vol_regime": "normal",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "trend_up",
+          "probability": 66,
+          "confidence": "high",
+          "why": "Price is opening well above prior RTH value (29318.0\u201329559.0) with 100% long overnight inventory historically acting as a continuation signal.",
+          "stat_support": "base rate 34%",
+          "trigger": "Shallow pullback holding above PDH 29686.25 or ON VAH 29621.0 after the open",
+          "confirm": "Acceptance above OVNH 29814.0 with sustained passive absorption turning to aggressive buying",
+          "target": "HTF extension psychological levels above 29814.0 toward 30000.0",
+          "abort": "Acceptance back inside ONVP below ON POC 29528.0"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 35,
+          "confidence": "medium",
+          "why": "A tight 360.5pt overnight range combined with a +1.06% gap provides energy for a volatility break outside overnight boundaries.",
+          "stat_support": "base rate 32%",
+          "trigger": "Consolidation between PDH 29686.25 and OVNH 29814.0 coiling for an explosive break",
+          "confirm": "High-volume displacement breaking and holding above OVNH 29814.0",
+          "target": "Psychological 30000.0 and extension levels beyond OVNH 29814.0",
+          "abort": "Rejection at OVNH 29814.0 with rapid retreat below PDH 29686.25"
+        },
+        {
+          "model": "long_liquidation",
+          "probability": 12,
+          "confidence": "low",
+          "why": "100% long overnight inventory creates downside vulnerability if buyers fail to hold price above former structural resistance.",
+          "stat_support": "base rate 11%",
+          "trigger": "Failure to hold OVNH 29814.0 followed by a breakdown under PDH 29686.25",
+          "confirm": "Heavy aggressive selling driving price below ON POC 29528.0 and ON VAL 29494.0",
+          "target": "Settle 29488.25 and RTH VAH 29559.0 / RTH POC 29318.0",
+          "abort": "Reclaim and acceptance back above PDH 29686.25"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 9,
+          "confidence": "low",
+          "why": "Historical calibration engine indicates rotational tendencies if the gap above 29559.0 fails to sustain momentum.",
+          "stat_support": "base rate 11%",
+          "trigger": "Price slips back below ON VAH 29621.0 and stalls without directional driver",
+          "confirm": "Two-sided rotational orderflow oscillating around ON POC 29528.0 and RTH VAH 29559.0",
+          "target": "RTH POC 29318.0",
+          "abort": "Sustained breakout above OVNH 29814.0 or breakdown below PDL 29241.25"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 9,
+          "confidence": "low",
+          "why": "An extended open at 29801.75 far from RTH POC 29318.0 creates auction pull back toward fair value if buying exhausts.",
+          "stat_support": "base rate 6%",
+          "trigger": "Sweep of OVNH 29814.0 with aggressive delta divergence and exhaustion",
+          "confirm": "Loss of PDH 29686.25 with delta turning strongly negative",
+          "target": "ON POC 29528.0 down to RTH VAH 29559.0",
+          "abort": "Acceptance and new value building above OVNH 29814.0"
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29801.75,
+          "vs_settle": 313.5,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-08-06",
       "inventory": "SS",
@@ -4316,36 +4420,6 @@
         "model_correct": false,
         "top2_hit": false
       },
-      "intraday": [
-        {
-          "slot": "09:30",
-          "price": 29254.75,
-          "vs_settle": -470.0,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29161.00/29646.50, target POC 29369.25."
-        },
-        {
-          "slot": "10:00",
-          "price": 29267.25,
-          "vs_settle": -457.5,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29161.00/29646.50, target POC 29369.25."
-        },
-        {
-          "slot": "10:30",
-          "price": 29529.25,
-          "vs_settle": -195.5,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29161.00/29646.50, target POC 29369.25."
-        },
-        {
-          "slot": "11:00",
-          "price": 29532.75,
-          "vs_settle": -192.0,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29161.00/29646.50, target POC 29369.25."
-        }
-      ],
       "trades_summary": {
         "count": 2,
         "pnl": 1733.26
