@@ -1,6 +1,132 @@
 {
-  "updated": "2026-08-06T12:00:00.015933-04:00",
+  "updated": "2026-08-07T12:00:00.018448-04:00",
   "days": [
+    {
+      "date": "2026-08-07",
+      "regime": "Imbalance \u2014 Developing Trend Continuation / Range Expansion above prior Value Area",
+      "predicted_model": "trend_up",
+      "models": [
+        {
+          "model": "trend_up",
+          "probability": 66,
+          "confidence": "high",
+          "why": "Price is opening well above prior RTH value (29318.0\u201329559.0) with 100% long overnight inventory historically acting as a continuation signal.",
+          "stat_support": "base rate 34%",
+          "trigger": "Shallow pullback holding above PDH 29686.25 or ON VAH 29621.0 after the open",
+          "confirm": "Acceptance above OVNH 29814.0 with sustained passive absorption turning to aggressive buying",
+          "target": "HTF extension psychological levels above 29814.0 toward 30000.0",
+          "abort": "Acceptance back inside ONVP below ON POC 29528.0"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 35,
+          "confidence": "medium",
+          "why": "A tight 360.5pt overnight range combined with a +1.06% gap provides energy for a volatility break outside overnight boundaries.",
+          "stat_support": "base rate 32%",
+          "trigger": "Consolidation between PDH 29686.25 and OVNH 29814.0 coiling for an explosive break",
+          "confirm": "High-volume displacement breaking and holding above OVNH 29814.0",
+          "target": "Psychological 30000.0 and extension levels beyond OVNH 29814.0",
+          "abort": "Rejection at OVNH 29814.0 with rapid retreat below PDH 29686.25"
+        },
+        {
+          "model": "long_liquidation",
+          "probability": 12,
+          "confidence": "low",
+          "why": "100% long overnight inventory creates downside vulnerability if buyers fail to hold price above former structural resistance.",
+          "stat_support": "base rate 11%",
+          "trigger": "Failure to hold OVNH 29814.0 followed by a breakdown under PDH 29686.25",
+          "confirm": "Heavy aggressive selling driving price below ON POC 29528.0 and ON VAL 29494.0",
+          "target": "Settle 29488.25 and RTH VAH 29559.0 / RTH POC 29318.0",
+          "abort": "Reclaim and acceptance back above PDH 29686.25"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 9,
+          "confidence": "low",
+          "why": "Historical calibration engine indicates rotational tendencies if the gap above 29559.0 fails to sustain momentum.",
+          "stat_support": "base rate 11%",
+          "trigger": "Price slips back below ON VAH 29621.0 and stalls without directional driver",
+          "confirm": "Two-sided rotational orderflow oscillating around ON POC 29528.0 and RTH VAH 29559.0",
+          "target": "RTH POC 29318.0",
+          "abort": "Sustained breakout above OVNH 29814.0 or breakdown below PDL 29241.25"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 9,
+          "confidence": "low",
+          "why": "An extended open at 29801.75 far from RTH POC 29318.0 creates auction pull back toward fair value if buying exhausts.",
+          "stat_support": "base rate 6%",
+          "trigger": "Sweep of OVNH 29814.0 with aggressive delta divergence and exhaustion",
+          "confirm": "Loss of PDH 29686.25 with delta turning strongly negative",
+          "target": "ON POC 29528.0 down to RTH VAH 29559.0",
+          "abort": "Acceptance and new value building above OVNH 29814.0"
+        }
+      ],
+      "plan": "If the open holds above PDH 29686.25, look for a retest to show passive absorption on the tape; enter long targeting OVNH 29814.0 and higher. If price breaks above OVNH 29814.0 with strong buy volume and accepts, hold for range expansion toward 30000.0. If the open fails at OVNH 29814.0 and pushes below PDH 29686.25, stand aside until price interacts with ON POC 29528.0 to re-evaluate for long liquidation risk toward RTH VAH 29559.0. All trading activity must be complete by 11:00 ET.",
+      "invalidation": "Acceptance and value building below ON POC 29528.0 kills the bullish continuation read and opens a flush to Settle 29488.25",
+      "risk_note": "Trader performance shows historical difficulty on trend_up setups ($-535/trade); keep sizing disciplined (micros on attempt 2) and wait for strict orderflow confirmation before entering.",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": "trend_up",
+      "day_grade": null,
+      "actual_model": "range_expansion",
+      "correct": 0,
+      "grade_detail": "Two-sided, range 29564-29868, close 29682",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29559.0
+        },
+        {
+          "label": "POC",
+          "price": 29318.0
+        },
+        {
+          "label": "VAL",
+          "price": 29318.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29814.0
+        },
+        {
+          "label": "OVN Low",
+          "price": 29453.5
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29621.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29528.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29494.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 30049.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29987.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29767.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29686.25
+        },
+        {
+          "label": "Prior Low",
+          "price": 29241.25
+        }
+      ]
+    },
     {
       "date": "2026-08-06",
       "regime": "BALANCE / ROTATIONAL \u2014 Price opened below prior value in +GEX (+1.5$Bn), favoring mean-reverting rotational trading between PDL 29530.75 and Settle 29615.0",
