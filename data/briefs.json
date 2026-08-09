@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T11:05:08.537698-04:00",
+  "updated": "2026-08-09T17:00:15.878096-04:00",
   "stats": {
     "total_graded": 46,
     "correct": 17,
@@ -365,11 +365,29 @@
         "exp": 420.56
       }
     },
-    "weekly_diagnostic": null,
-    "weekly_diagnostics_all": []
+    "weekly_diagnostic": {
+      "week_start": "2026-08-03",
+      "week_end": "2026-08-07",
+      "total_graded": 5,
+      "correct": 2,
+      "accuracy_pct": 40.0,
+      "review_text": "WHAT HAPPENED:\nThe model accurately captured strong upward momentum early in the week but failed to adapt when price met overhead resistance and market structure shifted into failed auctions and chop.\n\nBIGGEST MISS:\nOn 2026-08-05, the model called trend_up, but price swept the overnight high of 29990, failed, and reversed into a failed_auction to close at 29822.\n\nSUGGESTED IMPROVEMENT:\nGiven n=5 this week and only 35 graded days overall, the sample size is too thin to draw firm conclusions or modify scenarios.py without overreaching. However, as a hypothesis to backtest against the 19-year history, test adding a condition that reduces trend_up weights when an opening drive sweeps overnight highs following consecutive trend days.",
+      "created_at": "2026-08-07 15:20:08"
+    },
+    "weekly_diagnostics_all": [
+      {
+        "week_start": "2026-08-03",
+        "week_end": "2026-08-07",
+        "total_graded": 5,
+        "correct": 2,
+        "accuracy_pct": 40.0,
+        "review_text": "WHAT HAPPENED:\nThe model accurately captured strong upward momentum early in the week but failed to adapt when price met overhead resistance and market structure shifted into failed auctions and chop.\n\nBIGGEST MISS:\nOn 2026-08-05, the model called trend_up, but price swept the overnight high of 29990, failed, and reversed into a failed_auction to close at 29822.\n\nSUGGESTED IMPROVEMENT:\nGiven n=5 this week and only 35 graded days overall, the sample size is too thin to draw firm conclusions or modify scenarios.py without overreaching. However, as a hypothesis to backtest against the 19-year history, test adding a condition that reduces trend_up weights when an opening drive sweeps overnight highs following consecutive trend days.",
+        "created_at": "2026-08-07 15:20:08"
+      }
+    ]
   },
   "ops": {
-    "generated_at": "2026-08-07T11:05:08.537715-04:00",
+    "generated_at": "2026-08-09T17:00:15.878112-04:00",
     "last_brief_date": "2026-08-07",
     "last_brief_time": "09:00:00",
     "last_grade_date": "2026-08-07",
@@ -384,8 +402,8 @@
   },
   "coach": null,
   "mentor_review": {
-    "date": "2026-08-02",
-    "text": "SCORECARD:\nMarket Read: 9/10 \u2014 Nailed key levels on 07-27 and caught both directions cleanly on 07-31.\nLevel Selection: 8/10 \u2014 OTE retracements into swing low imbalances yielded high-probability 1.83R setups.\nExecution: 6/10 \u2014 Left setup tags unlogged on 07-31, letting outcome bias mask execution details.\nRisk Management: 4/10 \u2014 Absorbed 615.5 pts of MAE heat on 07-27 MNQ, holding through invalidation to protect a green card.\nPsychology: 7/10 \u2014 Maintained calm mindset on planned limits, but sitting through massive MAE indicates reluctance to accept a loss.\nDiscipline: 5/10 \u2014 Breached your mandatory cap of 2 attempts/day by logging 3 trades on July 31.\n\nPNL: Net +$3,920 | Best Day: July 31 (+$3,200) | Worst Day: July 28 ($0) | PF: N/A | Avg R: 1.83R\n\nWHAT WORKED:\n- Planned limit entries at HTF levels (OTE + swing low imbalance) produced a 100% win rate and crisp execution on 07-27.\n- Short-side conviction generated +$2,200 across two trades on 07-31, proving strong orderflow read even when fading morning bot bias.\n\nBIGGEST LEAK:\nRule-breaking masked by green P&L. On July 31, you took 3 trades\u2014violating your non-negotiable 2-attempt daily limit\u2014and stopped logging your entry models. Combine that with holding through 615.5 points of MAE heat on 07-27, and the data shows you are over-trading across accounts and refusing to take a loss. Green metrics this week are hiding dangerous behavior.\n\nBEST & WORST TRADE:\nBest: 07-27 a1 MNQ Long (+$420) \u2014 Text-book planned limit at OTE retracement, executed with a calm mindset.\nWorst: 07-31 3rd Trade NQ Short (+$700) \u2014 Generated P&L, but directly violated your daily attempt cap.\n\nNEXT WEEK:\nEnforce a hard lockout after attempt #2 each day across all accounts\u2014once trade 2 completes, shut down your platform immediately regardless of P&L or market conditions."
+    "date": "2026-08-09",
+    "text": "SCORECARD:\nMarket Read: 7/10 \u2014 Good HTF level identification on Aug 3.\nLevel Selection: 7/10 \u2014 Clean 50% retrace and FVG confluence hits.\nExecution: 4/10 \u2014 Solid confirmation entries on Aug 3, but you left 4.77R (89% of the move) on the table.\nRisk Management: 1/10 \u2014 A catastrophic -$16,000 single-trade loss on Aug 5 destroyed your desk risk limits.\nPsychology: 2/10 \u2014 Shifted from calm on Aug 3 to complete tilt control loss on Aug 5.\nDiscipline: 1/10 \u2014 Completely abandoned max position limits and stop rules after your first loss on Aug 5.\n\nPNL: Net -$15,502 | Best: +$1,298 ('2026-08-03') / Worst: -$16,800 ('2026-08-05') | PF: 0.08 | Avg Win: 0.69R\n\nWHAT WORKED:\n- Confirmation entries at location: 100% win rate (2W/0L) returning +$1,298 (+0.69R) on long 50% retrace/FVG setups when patient.\n- Calm, with-read alignment: Both Aug 3 winners were taken calm and matched the morning read perfectly.\n\nBIGGEST LEAK:\nCatastrophic tilt sizing on Aug 5. After an initial -$800 loss on attempt 1, you stayed at the screen while tilted and fired a reckless, unsized -$16,000 trade. You proved on Aug 3 that your location + confirmation model prints money, but a single unmanaged emotional meltdown erased weeks of progress and blew your risk parameters.\n\nBEST & WORST TRADE:\nBest: 2026-08-03 a2 (+ $798) \u2014 patient long confirmation entry at 50% retrace/FVG; repeat this exact execution.\nWorst: 2026-08-05 a1 (-$16,000) \u2014 tilted sizing violation after loss 1; hard cut trading under tilt immediately.\n\nNEXT WEEK:\nEnforce a mandatory automated platform risk lock at -$1,000 daily max loss\u2014if attempt 1 loses, attempt 2 must strictly be micros with zero size expansion allowed."
   },
   "days": [
     {
