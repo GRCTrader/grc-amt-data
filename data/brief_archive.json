@@ -1,6 +1,132 @@
 {
-  "updated": "2026-08-07T12:00:00.018448-04:00",
+  "updated": "2026-08-10T12:00:00.014104-04:00",
   "days": [
+    {
+      "date": "2026-08-10",
+      "regime": "Balance regime \u2014 rotational value-to-value trading driven by +$2.4B positive gamma pinning price within value area.",
+      "predicted_model": "rotational_balance",
+      "models": [
+        {
+          "model": "rotational_balance",
+          "probability": 49,
+          "confidence": "high",
+          "why": "Price opens inside upper prior value (29714.0\u201329840.0) with +$2.4B GEX pinning price above gamma flip 29555 to damp directional expansion.",
+          "stat_support": "base rate 22%",
+          "trigger": "Open rotates between OVN VAL 29796.0 and prior VAH 29840.0 without establishing acceptance beyond prior value.",
+          "confirm": "Failure to hold outside 29840.0 with passive absorption at RTH VAH and responsive buying near POC 29767.0.",
+          "target": "Rotational migration between VAH 29840.0 and RTH POC 29767.0 / VAL 29714.0.",
+          "abort": "Sustained acceptance above PDH 29867.75 or breakdown below RTH VAL 29714.0."
+        },
+        {
+          "model": "short_covering",
+          "probability": 31,
+          "confidence": "medium",
+          "why": "Slightly long overnight inventory and low OVN range (201.75 pts) setup potential upside short squeeze if price reclaims settle 29834.75.",
+          "stat_support": "base rate 35%",
+          "trigger": "Sweep of OVNL 29782.25 followed by immediate aggressive buy delta reclaiming OVN VAL 29796.0.",
+          "confirm": "Acceptance above settle 29834.75 and VAH 29840.0 with aggressive buying volume.",
+          "target": "PDH 29867.75 then OVN High 29984.0.",
+          "abort": "Acceptance below OVNL 29782.25 targeting RTH VAL 29714.0."
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 17,
+          "confidence": "low",
+          "why": "Compressed overnight range and high positive GEX (+2.4B) favor fading moves to extremes back toward POC 29767.0.",
+          "stat_support": "base rate 10%",
+          "trigger": "Push into VAH 29840.0 or PDH 29867.75 showing exhaustion and delta divergence.",
+          "confirm": "Passive absorption on orderflow and swift rejection back below settle 29834.75.",
+          "target": "RTH POC 29767.0 and OVN VAL 29796.0.",
+          "abort": "Strong directional buying breaking and holding above PDH 29867.75."
+        },
+        {
+          "model": "range_expansion",
+          "probability": 12,
+          "confidence": "low",
+          "why": "Extremely compressed overnight range (201.75 pts, 2nd percentile) could break out if balance breaks despite gamma suppression.",
+          "stat_support": "base rate 18%",
+          "trigger": "Displacement outside OVN range limits (29782.25 - 29984.0).",
+          "confirm": "Consecutive 5-minute bar closes beyond 29867.75 (PDH) or 29714.0 (VAL) with heavy volume.",
+          "target": "Call wall 30090.0 on upside or PDL 29453.5 on downside.",
+          "abort": "Quick rejection back inside the 29782.25\u201329840.0 overnight bracket."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 10,
+          "confidence": "low",
+          "why": "Unswept liquidity at PDH 29867.75 provides a clear trap level for buyers under positive gamma market conditions.",
+          "stat_support": "base rate 8%",
+          "trigger": "Probe above PDH 29867.75 that fails to find aggressive buying follow-through.",
+          "confirm": "Sharp drop back inside prior value below VAH 29840.0 with selling delta.",
+          "target": "OVN VAL 29796.0 and RTH POC 29767.0.",
+          "abort": "Acceptance and one-timeframing above 29867.75 towards OVN High 29984.0."
+        }
+      ],
+      "plan": "If price opens between 29796.0 and 29834.75, monitor for a push toward VAH 29840.0; if buyers absorb and fail to hold above 29840.0, look for mean reversion shorts to POC 29767.0. If price dips at the open to sweep OVNL 29782.25 and immediately reclaims OVN VAL 29796.0 with delta confirmation, execute a long targeting Settle 29834.75 and PDH 29867.75. If price breaks and accepts below RTH VAL 29714.0, pivot to downside rotation targeting 29555 gamma flip.",
+      "invalidation": "Acceptance and 15-minute bar close outside the prior value area (above 29840.0 or below 29714.0) invalidates the rotational balance read.",
+      "risk_note": "+$2.4B positive gamma regime suppresses volatility and promotes rotational chop inside prior value area (29714.0\u201329840.0).",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": "rotational_balance",
+      "day_grade": null,
+      "actual_model": "range_expansion",
+      "correct": 0,
+      "grade_detail": "Two-sided, range 29719-29900, close 29796",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29840.0
+        },
+        {
+          "label": "POC",
+          "price": 29767.0
+        },
+        {
+          "label": "VAL",
+          "price": 29714.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29984.0
+        },
+        {
+          "label": "OVN Low",
+          "price": 29782.25
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29924.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29826.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29796.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29559.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29318.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29318.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29867.75
+        },
+        {
+          "label": "Prior Low",
+          "price": 29453.5
+        }
+      ]
+    },
     {
       "date": "2026-08-07",
       "regime": "Imbalance \u2014 Developing Trend Continuation / Range Expansion above prior Value Area",
