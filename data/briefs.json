@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-09T17:00:15.878096-04:00",
+  "updated": "2026-08-10T09:00:20.531072-04:00",
   "stats": {
     "total_graded": 46,
     "correct": 17,
@@ -387,18 +387,11 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-08-09T17:00:15.878112-04:00",
-    "last_brief_date": "2026-08-07",
+    "generated_at": "2026-08-10T09:00:20.531113-04:00",
+    "last_brief_date": "2026-08-10",
     "last_brief_time": "09:00:00",
     "last_grade_date": "2026-08-07",
-    "recent_failures": [
-      {
-        "ts": "2026-08-07 08:00:00",
-        "label": "early_brief",
-        "status": "error",
-        "detail": "name '_brief_posted_date' is not defined"
-      }
-    ]
+    "recent_failures": []
   },
   "coach": null,
   "mentor_review": {
@@ -406,6 +399,103 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2014 Good HTF level identification on Aug 3.\nLevel Selection: 7/10 \u2014 Clean 50% retrace and FVG confluence hits.\nExecution: 4/10 \u2014 Solid confirmation entries on Aug 3, but you left 4.77R (89% of the move) on the table.\nRisk Management: 1/10 \u2014 A catastrophic -$16,000 single-trade loss on Aug 5 destroyed your desk risk limits.\nPsychology: 2/10 \u2014 Shifted from calm on Aug 3 to complete tilt control loss on Aug 5.\nDiscipline: 1/10 \u2014 Completely abandoned max position limits and stop rules after your first loss on Aug 5.\n\nPNL: Net -$15,502 | Best: +$1,298 ('2026-08-03') / Worst: -$16,800 ('2026-08-05') | PF: 0.08 | Avg Win: 0.69R\n\nWHAT WORKED:\n- Confirmation entries at location: 100% win rate (2W/0L) returning +$1,298 (+0.69R) on long 50% retrace/FVG setups when patient.\n- Calm, with-read alignment: Both Aug 3 winners were taken calm and matched the morning read perfectly.\n\nBIGGEST LEAK:\nCatastrophic tilt sizing on Aug 5. After an initial -$800 loss on attempt 1, you stayed at the screen while tilted and fired a reckless, unsized -$16,000 trade. You proved on Aug 3 that your location + confirmation model prints money, but a single unmanaged emotional meltdown erased weeks of progress and blew your risk parameters.\n\nBEST & WORST TRADE:\nBest: 2026-08-03 a2 (+ $798) \u2014 patient long confirmation entry at 50% retrace/FVG; repeat this exact execution.\nWorst: 2026-08-05 a1 (-$16,000) \u2014 tilted sizing violation after loss 1; hard cut trading under tilt immediately.\n\nNEXT WEEK:\nEnforce a mandatory automated platform risk lock at -$1,000 daily max loss\u2014if attempt 1 loses, attempt 2 must strictly be micros with zero size expansion allowed."
   },
   "days": [
+    {
+      "date": "2026-08-10",
+      "inventory": "SL",
+      "vah": 29840.0,
+      "poc": 29767.0,
+      "val": 29714.0,
+      "settle": 29834.75,
+      "ovn_high": 29984.0,
+      "ovn_low": 29782.25,
+      "ovn_poc": 29826.0,
+      "ovn_vah": 29924.0,
+      "ovn_val": 29796.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.57,
+      "confidence_b": 0.26,
+      "confidence_c": 0.17,
+      "post_time": "09:00:00",
+      "day_shape": "rotational_balance",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Balance regime \u2014 rotational value-to-value trading driven by +$2.4B positive gamma pinning price within value area.",
+      "invalidation": "Acceptance and 15-minute bar close outside the prior value area (above 29840.0 or below 29714.0) invalidates the rotational balance read.",
+      "plan": "If price opens between 29796.0 and 29834.75, monitor for a push toward VAH 29840.0; if buyers absorb and fail to hold above 29840.0, look for mean reversion shorts to POC 29767.0. If price dips at the open to sweep OVNL 29782.25 and immediately reclaims OVN VAL 29796.0 with delta confirmation, execute a long targeting Settle 29834.75 and PDH 29867.75. If price breaks and accepts below RTH VAL 29714.0, pivot to downside rotation targeting 29555 gamma flip.",
+      "risk": "+$2.4B positive gamma regime suppresses volatility and promotes rotational chop inside prior value area (29714.0\u201329840.0).",
+      "predicted_model": "rotational_balance",
+      "vol_regime": "low",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "rotational_balance",
+          "probability": 49,
+          "confidence": "high",
+          "why": "Price opens inside upper prior value (29714.0\u201329840.0) with +$2.4B GEX pinning price above gamma flip 29555 to damp directional expansion.",
+          "stat_support": "base rate 22%",
+          "trigger": "Open rotates between OVN VAL 29796.0 and prior VAH 29840.0 without establishing acceptance beyond prior value.",
+          "confirm": "Failure to hold outside 29840.0 with passive absorption at RTH VAH and responsive buying near POC 29767.0.",
+          "target": "Rotational migration between VAH 29840.0 and RTH POC 29767.0 / VAL 29714.0.",
+          "abort": "Sustained acceptance above PDH 29867.75 or breakdown below RTH VAL 29714.0."
+        },
+        {
+          "model": "short_covering",
+          "probability": 31,
+          "confidence": "medium",
+          "why": "Slightly long overnight inventory and low OVN range (201.75 pts) setup potential upside short squeeze if price reclaims settle 29834.75.",
+          "stat_support": "base rate 35%",
+          "trigger": "Sweep of OVNL 29782.25 followed by immediate aggressive buy delta reclaiming OVN VAL 29796.0.",
+          "confirm": "Acceptance above settle 29834.75 and VAH 29840.0 with aggressive buying volume.",
+          "target": "PDH 29867.75 then OVN High 29984.0.",
+          "abort": "Acceptance below OVNL 29782.25 targeting RTH VAL 29714.0."
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 17,
+          "confidence": "low",
+          "why": "Compressed overnight range and high positive GEX (+2.4B) favor fading moves to extremes back toward POC 29767.0.",
+          "stat_support": "base rate 10%",
+          "trigger": "Push into VAH 29840.0 or PDH 29867.75 showing exhaustion and delta divergence.",
+          "confirm": "Passive absorption on orderflow and swift rejection back below settle 29834.75.",
+          "target": "RTH POC 29767.0 and OVN VAL 29796.0.",
+          "abort": "Strong directional buying breaking and holding above PDH 29867.75."
+        },
+        {
+          "model": "range_expansion",
+          "probability": 12,
+          "confidence": "low",
+          "why": "Extremely compressed overnight range (201.75 pts, 2nd percentile) could break out if balance breaks despite gamma suppression.",
+          "stat_support": "base rate 18%",
+          "trigger": "Displacement outside OVN range limits (29782.25 - 29984.0).",
+          "confirm": "Consecutive 5-minute bar closes beyond 29867.75 (PDH) or 29714.0 (VAL) with heavy volume.",
+          "target": "Call wall 30090.0 on upside or PDL 29453.5 on downside.",
+          "abort": "Quick rejection back inside the 29782.25\u201329840.0 overnight bracket."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 10,
+          "confidence": "low",
+          "why": "Unswept liquidity at PDH 29867.75 provides a clear trap level for buyers under positive gamma market conditions.",
+          "stat_support": "base rate 8%",
+          "trigger": "Probe above PDH 29867.75 that fails to find aggressive buying follow-through.",
+          "confirm": "Sharp drop back inside prior value below VAH 29840.0 with selling delta.",
+          "target": "OVN VAL 29796.0 and RTH POC 29767.0.",
+          "abort": "Acceptance and one-timeframing above 29867.75 towards OVN High 29984.0."
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29806.0,
+          "vs_settle": -28.75,
+          "inside_va": true,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-08-07",
       "inventory": "100L",
@@ -4376,43 +4466,6 @@
         "model_correct": false,
         "top2_hit": true
       },
-      "intraday": [
-        {
-          "slot": "09:00",
-          "price": 29672.0,
-          "vs_settle": 303.75,
-          "inside_va": false,
-          "call": "Morning brief anchor"
-        },
-        {
-          "slot": "09:30",
-          "price": 29713.5,
-          "vs_settle": 345.25,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29457.50/29745.00, target POC 29660.75."
-        },
-        {
-          "slot": "10:00",
-          "price": 29768.0,
-          "vs_settle": 399.75,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29457.50\u201329745.00."
-        },
-        {
-          "slot": "10:30",
-          "price": 29381.5,
-          "vs_settle": 13.25,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29457.50\u201329745.00."
-        },
-        {
-          "slot": "11:00",
-          "price": 29569.5,
-          "vs_settle": 201.25,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29457.50/29745.00, target POC 29660.75."
-        }
-      ],
       "trades_summary": {
         "count": 1,
         "pnl": 209.94
