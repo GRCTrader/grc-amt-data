@@ -1,15 +1,15 @@
 {
-  "updated": "2026-08-11T09:00:20.369485-04:00",
+  "updated": "2026-08-11T11:05:11.966719-04:00",
   "stats": {
-    "total_graded": 47,
+    "total_graded": 48,
     "correct": 17,
-    "accuracy_pct": 36.2,
-    "total_modern": 36,
+    "accuracy_pct": 35.4,
+    "total_modern": 37,
     "correct_modern": 11,
-    "accuracy_modern_pct": 30.6,
-    "top2_graded": 34,
+    "accuracy_modern_pct": 29.7,
+    "top2_graded": 35,
     "top2_hits": 17,
-    "top2_pct": 50.0,
+    "top2_pct": 48.6,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -245,13 +245,18 @@
         "date": "2026-08-10",
         "pct": 30.0,
         "n": 20
+      },
+      {
+        "date": "2026-08-11",
+        "pct": 25.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 46,
+        "total": 47,
         "correct": 17,
-        "pct": 37.0
+        "pct": 36.2
       },
       "?": {
         "total": 1,
@@ -271,9 +276,9 @@
         "pct": 100.0
       },
       "70\u201380%": {
-        "correct": 5,
-        "total": 35,
-        "pct": 14.3
+        "correct": 6,
+        "total": 36,
+        "pct": 16.7
       },
       "80%+": {
         "correct": 0,
@@ -297,10 +302,10 @@
         "thin": true
       },
       "short_covering": {
-        "total": 2,
+        "total": 3,
         "correct": 1,
         "label": "\ud83d\ude80 Short-Covering Rally",
-        "pct": 50.0,
+        "pct": 33.3,
         "thin": true
       },
       "range_expansion": {
@@ -392,10 +397,10 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-08-11T09:00:20.369517-04:00",
+    "generated_at": "2026-08-11T11:05:11.966754-04:00",
     "last_brief_date": "2026-08-11",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-08-10",
+    "last_grade_date": "2026-08-11",
     "recent_failures": []
   },
   "coach": null,
@@ -491,6 +496,21 @@
           "abort": "Acceptance and value building above OVNH 29886.75"
         }
       ],
+      "grade": {
+        "actual": "A",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Swept OVN low 29666, failed, closed 29794",
+        "notes": null,
+        "gemini": "**SCENARIO:** \nThe top model (Short-Covering) failed immediately as price opened below RTH VAH 29804.0, triggering the stated invalidation and executing the 3rd-ranked Mean Reversion (14%) model.\n\n**LEVELS:** \nPrice accepted below RTH VAH 29804.0 early, breaking OVN POC 29747.0 and VAL 29741.0 down to a low of 29631.75 before reverting back to accept above POC 29773.0. Targets at OVNH 29886.75 and PDH 29984.0 were never tested.\n\n**GAMMA:** \nThe long gamma Mean-Revert call was accurate as aggressive edge-fading took hold off the 29631.75 low, directly above the 29625 gamma flip level.\n\n**VERDICT:** \nYes, the read was very useful because the explicit invalidation below 29804.0 accurately pivoted expectations to mean-reversion targets at 29747.0 and 29773.0.",
+        "close": 29794.5,
+        "high": 29842.5,
+        "low": 29631.75,
+        "predicted_model": "short_covering",
+        "actual_model": "failed_auction",
+        "model_correct": false,
+        "top2_hit": false
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -498,6 +518,34 @@
           "vs_settle": 110.25,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29829.5,
+          "vs_settle": 92.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29741.00\u201329804.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 29660.0,
+          "vs_settle": -77.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29741.00\u201329804.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 29748.5,
+          "vs_settle": 11.5,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29741.00/29804.00, target POC 29773.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 29780.0,
+          "vs_settle": 43.0,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29741.00/29804.00, target POC 29773.00."
         }
       ]
     },
