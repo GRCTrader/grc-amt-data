@@ -1,6 +1,132 @@
 {
-  "updated": "2026-08-10T12:00:00.014104-04:00",
+  "updated": "2026-08-11T12:00:00.026016-04:00",
   "days": [
+    {
+      "date": "2026-08-11",
+      "regime": "Imbalance favoring early upside short-covering above OVN VAH 29834.0, but +2.1$Bn GEX dampens momentum toward higher targets",
+      "predicted_model": "short_covering",
+      "models": [
+        {
+          "model": "short_covering",
+          "probability": 32,
+          "confidence": "medium",
+          "why": "Open above RTH VAH 29804.0 and OVN VAH 29834.0 puts overnight short inventory under pressure toward Weekly Open 29851.25 and OVNH 29886.75.",
+          "stat_support": "base rate 21%",
+          "trigger": "Acceptance and holding above OVN VAH 29834.0 at RTH open",
+          "confirm": "Break and hold above Weekly Open 29851.25 with positive delta",
+          "target": "OVNH 29886.75 and PDH 29984.0",
+          "abort": "Acceptance back below OVN VAH 29834.0 into RTH VAH 29804.0"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 23,
+          "confidence": "low",
+          "why": "An 8th percentile compressed OVN range of 220.75 points sets up potential volatility release outside overnight balance extremes.",
+          "stat_support": "base rate 29%",
+          "trigger": "Sustained displacement above OVNH 29886.75 or below OVN POC 29747.0",
+          "confirm": "Acceptance outside the OVN range with expanding volume",
+          "target": "PDH 29984.0 on upside or PDL 29718.75 on downside",
+          "abort": "Reversion back inside the OVN value area 29732.0\u201329834.0"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 14,
+          "confidence": "low",
+          "why": "Positive GEX (+2.1$Bn) acts as a dampener, drawing extended prices back toward high-volume nodes if upside fails.",
+          "stat_support": "base rate 11%",
+          "trigger": "Rejection at Weekly Open 29851.25 or OVNH 29886.75",
+          "confirm": "Acceptance back inside RTH value below VAH 29804.0",
+          "target": "RTH POC 29773.0 and OVN POC 29747.0",
+          "abort": "Sustained hold above OVNH 29886.75"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 10,
+          "confidence": "low",
+          "why": "Dealer long gamma position above flip level 29655 pins price and encourages two-way rotation within value.",
+          "stat_support": "base rate 12%",
+          "trigger": "Failure to hold extensions above Weekly Open 29851.25",
+          "confirm": "Rotational two-sided orderflow bouncing between 29804.0 and 29741.0",
+          "target": "RTH POC 29773.0",
+          "abort": "Clear break and acceptance beyond OVNH 29886.75 or OVN low 29666.0"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 10,
+          "confidence": "low",
+          "why": "A sweep of unswept OVNH 29886.75 without initiative buying can trap aggressive buyers and trigger a sharp reversal.",
+          "stat_support": "base rate 14%",
+          "trigger": "Probe above OVNH 29886.75 showing immediate orderflow absorption",
+          "confirm": "Quick reclaim back below OVN VAH 29834.0 with negative delta divergence",
+          "target": "RTH VAH 29804.0 and POC 29773.0",
+          "abort": "Acceptance and value building above OVNH 29886.75"
+        }
+      ],
+      "plan": "If open holds above OVN VAH 29834.0 and Weekly Open 29851.25, look for long retest entries confirming absorption, targeting OVNH 29886.75 and PDH 29984.0. If price sweeps OVNH 29886.75, meets aggressive absorption, and fails back below 29834.0, execute short targeting RTH VAH 29804.0 and POC 29773.0. If price accepts below 29804.0 early, target OVN POC 29747.0 and VAL 29741.0.",
+      "invalidation": "Acceptance inside RTH value below VAH 29804.0 invalidates the short-covering scenario and shifts the auction to mean-reversion toward 29773.0",
+      "risk_note": "+2.1$Bn GEX long gamma regime suppresses high-conviction trends; compressed OVN range (220.75 pts) increases sudden expansion risk.",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": "short_covering",
+      "day_grade": null,
+      "actual_model": "failed_auction",
+      "correct": 0,
+      "grade_detail": "Swept OVN low 29666, failed, closed 29794",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29804.0
+        },
+        {
+          "label": "POC",
+          "price": 29773.0
+        },
+        {
+          "label": "VAL",
+          "price": 29741.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29886.75
+        },
+        {
+          "label": "OVN Low",
+          "price": 29666.0
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29834.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29747.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29732.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29840.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29767.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29714.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29984.0
+        },
+        {
+          "label": "Prior Low",
+          "price": 29718.75
+        }
+      ]
+    },
     {
       "date": "2026-08-10",
       "regime": "Balance regime \u2014 rotational value-to-value trading driven by +$2.4B positive gamma pinning price within value area.",
