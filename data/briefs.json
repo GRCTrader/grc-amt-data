@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-11T11:05:11.966719-04:00",
+  "updated": "2026-08-12T08:00:20.379113-04:00",
   "stats": {
     "total_graded": 48,
     "correct": 17,
@@ -397,9 +397,9 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-08-11T11:05:11.966754-04:00",
-    "last_brief_date": "2026-08-11",
-    "last_brief_time": "09:00:00",
+    "generated_at": "2026-08-12T08:00:20.379147-04:00",
+    "last_brief_date": "2026-08-12",
+    "last_brief_time": "08:00:01",
     "last_grade_date": "2026-08-11",
     "recent_failures": []
   },
@@ -409,6 +409,103 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2014 Good HTF level identification on Aug 3.\nLevel Selection: 7/10 \u2014 Clean 50% retrace and FVG confluence hits.\nExecution: 4/10 \u2014 Solid confirmation entries on Aug 3, but you left 4.77R (89% of the move) on the table.\nRisk Management: 1/10 \u2014 A catastrophic -$16,000 single-trade loss on Aug 5 destroyed your desk risk limits.\nPsychology: 2/10 \u2014 Shifted from calm on Aug 3 to complete tilt control loss on Aug 5.\nDiscipline: 1/10 \u2014 Completely abandoned max position limits and stop rules after your first loss on Aug 5.\n\nPNL: Net -$15,502 | Best: +$1,298 ('2026-08-03') / Worst: -$16,800 ('2026-08-05') | PF: 0.08 | Avg Win: 0.69R\n\nWHAT WORKED:\n- Confirmation entries at location: 100% win rate (2W/0L) returning +$1,298 (+0.69R) on long 50% retrace/FVG setups when patient.\n- Calm, with-read alignment: Both Aug 3 winners were taken calm and matched the morning read perfectly.\n\nBIGGEST LEAK:\nCatastrophic tilt sizing on Aug 5. After an initial -$800 loss on attempt 1, you stayed at the screen while tilted and fired a reckless, unsized -$16,000 trade. You proved on Aug 3 that your location + confirmation model prints money, but a single unmanaged emotional meltdown erased weeks of progress and blew your risk parameters.\n\nBEST & WORST TRADE:\nBest: 2026-08-03 a2 (+ $798) \u2014 patient long confirmation entry at 50% retrace/FVG; repeat this exact execution.\nWorst: 2026-08-05 a1 (-$16,000) \u2014 tilted sizing violation after loss 1; hard cut trading under tilt immediately.\n\nNEXT WEEK:\nEnforce a mandatory automated platform risk lock at -$1,000 daily max loss\u2014if attempt 1 loses, attempt 2 must strictly be micros with zero size expansion allowed."
   },
   "days": [
+    {
+      "date": "2026-08-12",
+      "inventory": "100L",
+      "vah": 29788.0,
+      "poc": 29708.0,
+      "val": 29633.0,
+      "settle": 29626.0,
+      "ovn_high": 29848.25,
+      "ovn_low": 29614.75,
+      "ovn_poc": 29630.0,
+      "ovn_vah": 29746.0,
+      "ovn_val": 29629.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.75,
+      "confidence_b": 0.12,
+      "confidence_c": 0.13,
+      "post_time": "08:00:01",
+      "day_shape": "trend_up",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Imbalance: Bullish Continuation / Gap Acceptance above RTH VAH 29788.0",
+      "invalidation": "Acceptance back inside prior value below 29788.0 and loss of OVN VAH 29746.0 invalidates the bullish continuation read.",
+      "plan": "If open holds above RTH VAH 29788.0 and shows passive absorption on retest, enter long targeting OVNH 29848.25, Weekly Open 29851.25, and PDH 29886.75. If price sweeps OVNH 29848.25 but shows exhaustion and fails to hold, enter mean reversion shorts back toward RTH POC 29708.0. If selling accelerates below OVN VAH 29746.0, pivot to long liquidation shorts targeting OVN POC 29630.0.",
+      "risk": "Trader historically struggles on trend_up days ($-535/trade average). Keep risk strictly defined and require orderflow absorption before execution.",
+      "predicted_model": "trend_up",
+      "vol_regime": "low",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "trend_up",
+          "probability": 67,
+          "confidence": "high",
+          "why": "Opening out of value (+0.66% gap) with 100% long overnight inventory favors upside auction continuation toward high time frame liquidity.",
+          "stat_support": "base rate 35%",
+          "trigger": "Pullback test and hold above RTH VAH 29788.0",
+          "confirm": "Acceptance above OVNH 29848.25 and Weekly Open 29851.25 with active buyer delta",
+          "target": "PDH 29886.75 and Call Wall 30125.0",
+          "abort": "Break and acceptance back inside prior value below 29788.0"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 15,
+          "confidence": "low",
+          "why": "Compressed overnight range (233.5 pts) offers potential for volatility expansion if early RTH volume breaks overnight extremes.",
+          "stat_support": "base rate 19%",
+          "trigger": "Decisive drive out of overnight range above 29848.25",
+          "confirm": "Volume surge and single prints forming above 29851.25",
+          "target": "PWH 30074.0",
+          "abort": "Price rotates back into overnight range below 29848.25"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 12,
+          "confidence": "low",
+          "why": "Dealers in positive gamma (+0.1$Bn above gamma flip 29630.0) dampen momentum and enforce mean-reverting rotational behavior.",
+          "stat_support": "base rate 19%",
+          "trigger": "Rejection at OVNH 29848.25 / Weekly Open 29851.25",
+          "confirm": "Two-sided trading rotation developing between 29788.0 and 29848.25",
+          "target": "RTH POC 29708.0",
+          "abort": "Directional breakout and acceptance above 29851.25 or below 29746.0"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 12,
+          "confidence": "low",
+          "why": "Stretched open far from POC 29708.0 in positive gamma environment can snap back if buying pressure exhausts at overhead supply.",
+          "stat_support": "base rate 10%",
+          "trigger": "Exhaustion at Weekly Open 29851.25 or PDH 29886.75",
+          "confirm": "Reclaim of RTH VAH 29788.0 to the downside with aggressive selling delta",
+          "target": "RTH POC 29708.0 and OVN POC 29630.0",
+          "abort": "Sustained bid stacking above 29851.25"
+        },
+        {
+          "model": "long_liquidation",
+          "probability": 11,
+          "confidence": "low",
+          "why": "100% long overnight inventory creates structural vulnerability for a sharp flush if buyers fail to hold value attempt.",
+          "stat_support": "base rate 10%",
+          "trigger": "Break and acceptance below OVN VAH 29746.0",
+          "confirm": "Aggressive market sell orders driving through RTH POC 29708.0",
+          "target": "OVN POC 29630.0 and Settle 29626.0",
+          "abort": "Reclaim and hold back above RTH VAH 29788.0"
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29822.5,
+          "vs_settle": 196.5,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-08-11",
       "inventory": "SL",
@@ -4432,43 +4529,6 @@
         "model_correct": false,
         "top2_hit": false
       },
-      "intraday": [
-        {
-          "slot": "09:00",
-          "price": 30371.0,
-          "vs_settle": -152.5,
-          "inside_va": true,
-          "call": "Morning brief anchor"
-        },
-        {
-          "slot": "09:30",
-          "price": 30282.75,
-          "vs_settle": -240.75,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30369.00\u201330544.50."
-        },
-        {
-          "slot": "10:00",
-          "price": 30205.0,
-          "vs_settle": -318.5,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30369.00\u201330544.50."
-        },
-        {
-          "slot": "10:30",
-          "price": 30301.75,
-          "vs_settle": -221.75,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30369.00\u201330544.50."
-        },
-        {
-          "slot": "11:00",
-          "price": 30190.5,
-          "vs_settle": -333.0,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 30369.00\u201330544.50."
-        }
-      ],
       "trades_summary": {
         "count": 2,
         "pnl": -403.24
