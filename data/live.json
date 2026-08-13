@@ -1,80 +1,83 @@
 {
-  "asof": "2026-08-12 11:01 ET",
-  "slot": "11:01",
-  "price": 29876.25,
+  "asof": "2026-08-13 09:31 ET",
+  "slot": "09:31",
+  "price": 29914.75,
   "bias": "LONG",
   "scenarios": [
     {
-      "model": "trend_up",
-      "probability": 67,
-      "base_rate": 35,
+      "model": "rotational_balance",
+      "probability": 51,
+      "base_rate": 24,
       "drivers": [
-        "+ open above value",
-        "+ already 100% long overnight \u2014 historically a continuation tell, not a fade",
-        "\u2212 25 similar days: 60% historically",
-        "\u2212 calibration: engine ran hot on this model (20% real vs 42% claimed)"
+        "+ open inside value",
+        "+ +GEX pins price",
+        "+ price above gamma flip 29570 in +GEX \u2014 rotation regime",
+        "\u2212 25 similar days: 40% historically"
+      ]
+    },
+    {
+      "model": "short_covering",
+      "probability": 23,
+      "base_rate": 24,
+      "drivers": []
+    },
+    {
+      "model": "failed_auction",
+      "probability": 18,
+      "base_rate": 16,
+      "drivers": [
+        "+ unswept liquidity to trap into"
       ]
     },
     {
       "model": "range_expansion",
-      "probability": 15,
-      "base_rate": 19,
+      "probability": 18,
+      "base_rate": 24,
       "drivers": [
-        "\u2212 OVN range compressed \u2014 discount; compression here doesn't reliably release into RTH"
-      ]
-    },
-    {
-      "model": "rotational_balance",
-      "probability": 12,
-      "base_rate": 19,
-      "drivers": [
-        "\u2212 gap argues against balance",
-        "+ price above gamma flip 29630 in +GEX \u2014 rotation regime",
-        "\u2212 25 similar days: 0% historically"
-      ]
-    },
-    {
-      "model": "mean_reversion",
-      "probability": 12,
-      "base_rate": 10,
-      "drivers": [
-        "\u2212 extended open far from POC \u2014 mild discount; an extended gap doesn't reliably snap back",
-        "+ compressed range \u2014 slight lean toward reversion, not the expansion-risk discount originally assumed",
-        "+ price above gamma flip 29630 in +GEX \u2014 rotation regime",
-        "+ calibration: engine ran cold on this model (17% real vs 10% claimed)"
+        "\u2212 OVN range compressed \u2014 discount; compression here doesn't reliably release into RTH",
+        "\u2212 25 similar days: 8% historically",
+        "+ calibration: engine ran cold on this model (38% real vs 32% claimed)"
       ]
     }
   ],
   "invalidations": [
     {
-      "scenario": "trend_up",
-      "status": "armed",
-      "condition": "close_below",
-      "level": 29708.0,
-      "closes_needed": 2,
-      "meaning": "trend_up dead \u2014 acceptance back below POC 29708.0"
-    },
-    {
-      "scenario": "trend_up",
-      "status": "armed",
-      "condition": "close_below",
-      "level": 29505.0,
-      "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance below the put wall 29505 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
-    },
-    {
-      "scenario": "trend_up",
+      "scenario": "rotational_balance",
       "status": "armed",
       "condition": "close_above",
-      "level": 30125.0,
+      "level": 29935.0,
       "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance above the call wall 30125 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
+      "meaning": "balance dead \u2014 acceptance above VAH 29935.0"
+    },
+    {
+      "scenario": "rotational_balance",
+      "status": "armed",
+      "condition": "close_below",
+      "level": 29874.0,
+      "closes_needed": 2,
+      "meaning": "balance dead \u2014 acceptance below VAL 29874.0"
+    },
+    {
+      "scenario": "rotational_balance",
+      "status": "armed",
+      "condition": "close_below",
+      "level": 29490.0,
+      "closes_needed": 2,
+      "meaning": "\u26a1 GAMMA: acceptance below the put wall 29490 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
+    },
+    {
+      "scenario": "rotational_balance",
+      "status": "armed",
+      "condition": "close_above",
+      "level": 30105.0,
+      "closes_needed": 2,
+      "meaning": "\u26a1 GAMMA: acceptance above the call wall 30105 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
     }
   ],
   "gex": {
-    "total_gex_bn": 4.61,
-    "flip_nq": 29585,
+    "total_gex_bn": 3.44,
+    "flip_nq": 29710,
     "call_wall_nq": 30120,
-    "put_wall_nq": 29500
+    "put_wall_nq": 29505
   }
 }
