@@ -1,6 +1,132 @@
 {
-  "updated": "2026-08-12T12:00:00.028534-04:00",
+  "updated": "2026-08-13T12:00:00.019626-04:00",
   "days": [
+    {
+      "date": "2026-08-13",
+      "regime": "Balance: expecting a rotational day within RTH value, with potential mean-reversion tendencies due to +GEX and a tight overnight range.",
+      "predicted_model": "rotational_balance",
+      "models": [
+        {
+          "model": "rotational_balance",
+          "probability": 51,
+          "confidence": "high",
+          "why": "Price opened inside RTH value and above the gamma flip, with +GEX pinning price for a rotational regime.",
+          "stat_support": "base rate 24%",
+          "trigger": "Open and immediate rotation around OVN POC 29866.0, holding above RTH VAL 29874.0.",
+          "confirm": "Acceptance within the RTH value area 29874.0\u201329935.0, with two-sided trade and lack of strong directional conviction.",
+          "target": "RTH POC 29919.0, OVN High 29924.0, RTH VAL 29874.0.",
+          "abort": "Acceptance or sustained push and acceptance beyond RTH VAH 29935.0 or RTH VAL 29874.0."
+        },
+        {
+          "model": "short_covering",
+          "probability": 23,
+          "confidence": "low",
+          "why": "Overnight inventory is slightly long, and a push above RTH VAH could trap shorts, especially with unswept liquidity overhead at PDH 30001.75.",
+          "stat_support": "base rate 24%",
+          "trigger": "Strong push and break above OVNH 29924.0 and RTH VAH 29935.0.",
+          "confirm": "Sustained acceptance above RTH VAH 29935.0 on increased volume and positive delta.",
+          "target": "PDH 30001.75, PWH 30074.0.",
+          "abort": "Rejection and return below RTH VAH 29935.0, or absorption at PDH 30001.75."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 18,
+          "confidence": "low",
+          "why": "A probe above OVNH 29924.0 or PDH 30001.75 failing to find acceptance could reverse sharply, trapping late buyers.",
+          "stat_support": "base rate 16%",
+          "trigger": "Price sweeps OVNH 29924.0 or PDH 30001.75, then shows immediate rejection.",
+          "confirm": "Failure to accept above the extreme (e.g., OVNH 29924.0) and rapid return below that level, confirmed by negative delta.",
+          "target": "RTH VAH 29935.0, RTH POC 29919.0.",
+          "abort": "Acceptance and sustained trade above the swept extreme (e.g., OVNH 29924.0)."
+        },
+        {
+          "model": "range_expansion",
+          "probability": 18,
+          "confidence": "low",
+          "why": "A tight overnight range 143.5pts could coil for a breakout, though historical context suggests this is less probable for RTH.",
+          "stat_support": "base rate 24%",
+          "trigger": "Strong aggressive push and acceptance above OVNH 29924.0 or below OVL 29780.5.",
+          "confirm": "Clear acceptance beyond the overnight range 29780.5-29924.0, sustained by strong buying/selling pressure without retest.",
+          "target": "PDH 30001.75 (upside), PDL 29624.5 (downside).",
+          "abort": "Price fails to hold acceptance beyond the overnight range or immediately pulls back inside after a probe."
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 11,
+          "confidence": "low",
+          "why": "The compressed range and +GEX environment favor fading extremes back towards value, aligning with rotational tendencies.",
+          "stat_support": "base rate 7%",
+          "trigger": "Price extends aggressively towards PDH 30001.75 or OVL 29780.5, showing exhaustion or absorption.",
+          "confirm": "Orderflow confirmation (exhaustion/absorption) at the extreme (e.g., PDH 30001.75) and reversal back towards RTH POC 29919.0.",
+          "target": "RTH POC 29919.0, OVN POC 29866.0.",
+          "abort": "Sustained acceptance beyond the extreme with one-timeframing, or lack of orderflow confirmation at the extreme."
+        }
+      ],
+      "plan": "If NQ opens near current price 29889.75 and immediately pushes toward OVN High 29924.0 or RTH VAH 29935.0, look for absorption or exhaustion at these levels for a fade back towards RTH POC 29919.0. If price instead moves toward RTH VAL 29874.0 or OVN POC 29866.0, watch for passive defense for a rotation back to RTH POC 29919.0. Should price sweep OVN High 29924.0 or RTH VAH 29935.0 and fail to accept, look for a swift rejection back into the range. Only if there is sustained acceptance above RTH VAH 29935.0 should we consider a directional move toward PDH 30001.75.",
+      "invalidation": "Sustained acceptance and one-timeframing above RTH VAH 29935.0.",
+      "risk_note": "+GEX environment favors mean-reversion, making sustained trends challenging without strong catalysts.",
+      "htf_bias": "LONG",
+      "htf_text": "DAILY: NQ daily structure remains bullish, having established a recent Break of Structure above 29956.50 and forming a higher high at 30001.75 on 08-12. The current daily dealing range, from 29533.50 to 30001.75, finds price trading in a premium, with immediate buyside liquidity resting above 30001.75 and significant sellside liquidity below 29533.50.\n\n4H: Following the last bullish displacement on 08-12 to 30001.75, the 4H structure remains bullish, consolidating above a significant 4H Fair Value Gap (BISI) at 29710.00-29748.25 which remains open below current price. Continued acceptance above this FVG would reinforce the daily bullish bias, while a break and close below 29533.50 would challenge the higher timeframe bullish structure.\n\n1H: The overnight session has established a slightly bullish structure, having traded up to 29924.00 before retracing to current levels. The immediate draw for the NY open is buyside liquidity above the overnight high at 29924.00 and the prior day's high at 30001.75.\n\nBIAS: LONG \u2014 If price accepts above the overnight balance and shows orderflow confirmation, then a push towards 29924.00 and 30001.75 buyside liquidity is probable.",
+      "day_shape": "rotational_balance",
+      "day_grade": null,
+      "actual_model": "short_covering",
+      "correct": 0,
+      "grade_detail": "Accepted above VAH 29935, closed 30224 (top of range)",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29935.0
+        },
+        {
+          "label": "POC",
+          "price": 29919.0
+        },
+        {
+          "label": "VAL",
+          "price": 29874.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29924.0
+        },
+        {
+          "label": "OVN Low",
+          "price": 29780.5
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29875.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29866.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29808.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29788.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29708.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29633.0
+        },
+        {
+          "label": "Prior High",
+          "price": 30001.75
+        },
+        {
+          "label": "Prior Low",
+          "price": 29624.5
+        }
+      ]
+    },
     {
       "date": "2026-08-12",
       "regime": "Imbalance: Bullish Continuation / Gap Acceptance above RTH VAH 29788.0",
