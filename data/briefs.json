@@ -1,15 +1,15 @@
 {
-  "updated": "2026-08-14T08:00:37.748830-04:00",
+  "updated": "2026-08-14T11:05:11.569905-04:00",
   "stats": {
-    "total_graded": 50,
+    "total_graded": 51,
     "correct": 17,
-    "accuracy_pct": 34.0,
-    "total_modern": 39,
+    "accuracy_pct": 33.3,
+    "total_modern": 40,
     "correct_modern": 11,
-    "accuracy_modern_pct": 28.2,
-    "top2_graded": 37,
+    "accuracy_modern_pct": 27.5,
+    "top2_graded": 38,
     "top2_hits": 19,
-    "top2_pct": 51.4,
+    "top2_pct": 50.0,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -260,13 +260,18 @@
         "date": "2026-08-13",
         "pct": 25.0,
         "n": 20
+      },
+      {
+        "date": "2026-08-14",
+        "pct": 25.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 49,
+        "total": 50,
         "correct": 17,
-        "pct": 34.7
+        "pct": 34.0
       },
       "?": {
         "total": 1,
@@ -276,9 +281,9 @@
     },
     "calibration": {
       "50\u201360%": {
-        "correct": 1,
-        "total": 9,
-        "pct": 11.1
+        "correct": 2,
+        "total": 10,
+        "pct": 20.0
       },
       "60\u201370%": {
         "correct": 2,
@@ -333,10 +338,10 @@
         "thin": true
       },
       "trend_up": {
-        "total": 10,
+        "total": 11,
         "correct": 2,
         "label": "\ud83d\udcc8 Trend Continuation Up",
-        "pct": 20.0,
+        "pct": 18.2,
         "thin": true
       },
       "trend_down": {
@@ -407,10 +412,10 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-08-14T08:00:37.748847-04:00",
+    "generated_at": "2026-08-14T11:05:11.569921-04:00",
     "last_brief_date": "2026-08-14",
     "last_brief_time": "08:00:02",
-    "last_grade_date": "2026-08-13",
+    "last_grade_date": "2026-08-14",
     "recent_failures": []
   },
   "coach": null,
@@ -440,8 +445,8 @@
       "post_time": "08:00:02",
       "day_shape": "trend_up",
       "day_shape_note": null,
-      "htf_bias": null,
-      "htf_text": null,
+      "htf_bias": "LONG",
+      "htf_text": "DAILY: The daily market structure is clearly bullish, confirmed by a consistent series of higher highs and higher lows since the 07-29 low. The current dealing range is defined by the 08-06 low at 29241.25 and the 08-14 high at 30280.25, with price currently trading in a premium, targeting buyside liquidity above 30280.25 while leaving an untapped bullish FVG between 30001.75 and 30124.25 below.\n\n4H: The 4H structure is strongly bullish following the decisive displacement on 08-13 08:00, maintaining higher highs and higher lows. A significant bullish FVG between 29895.00 (08-13 04:00 H) and 30114.25 (08-13 12:00 L) remains largely unmitigated; acceptance above 30280.25 would confirm the daily bullish narrative, while a break below 29812.25 would begin to challenge it.\n\n1H: The overnight session (08-13 16:00 ET onwards) has established a bullish structure, marked by a strong push higher from 04:00 ET that has sustained price near current overnight highs. The immediate draw for the NY open is to run the buyside liquidity above 30280.25; however, a rejection could see price target the immediate 1H bullish FVG around 30203.75-30207.00 for mitigation.\n\nBIAS: LONG - If price accepts above 30280.25 at the open, I will look for long opportunities targeting higher buyside liquidity, otherwise a retracement into an untapped FVG for a long entry in discount will be sought.",
       "regime": "above value open, overlapping value, low vol (rule-based read \u2014 AI unavailable)",
       "invalidation": "",
       "plan": "",
@@ -486,6 +491,21 @@
           "stat_support": "base rate 8%"
         }
       ],
+      "grade": {
+        "actual": "A",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Swept OVN high 30265, failed, closed 30144",
+        "notes": null,
+        "gemini": "SCENARIO: The top predicted model, Trend Continuation Up, did not play out. The session exhibited characteristics of a Failed Auction (18%), with price moving above VAH 30212 to 30283.0, then failing and reversing sharply.\n\nLEVELS: Price moved above OVN VAH 30222 and VAH 30212. It then broke below VAH, POC 30188, OVN POC 30189, and OVN VAL 30156, with VAL 29919 remaining untested.\n\nGAMMA: The session did not behave like a mean-revert day; momentum extended with price breaking levels rather than edges fading, despite the call wall at 30300 and flip at 29885.\n\nVERDICT: The 09:00 read was not useful as the top predicted model failed and the gamma regime was incorrect.",
+        "close": 30144.25,
+        "high": 30283.0,
+        "low": 30129.0,
+        "predicted_model": "trend_up",
+        "actual_model": "failed_auction",
+        "model_correct": false,
+        "top2_hit": false
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -493,6 +513,41 @@
           "vs_settle": 74.75,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 30248.25,
+          "vs_settle": 59.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29919.00\u201330212.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 30238.0,
+          "vs_settle": 49.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29919.00\u201330212.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 30173.25,
+          "vs_settle": -15.25,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29919.00/30212.00, target POC 30188.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 30151.25,
+          "vs_settle": -37.25,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29919.00/30212.00, target POC 30188.00."
+        },
+        {
+          "slot": "news_follow",
+          "price": 30275.75,
+          "vs_settle": 87.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29919.00\u201330212.00."
         }
       ]
     },
