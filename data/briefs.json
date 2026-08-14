@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-13T11:05:11.890576-04:00",
+  "updated": "2026-08-14T08:00:37.748830-04:00",
   "stats": {
     "total_graded": 50,
     "correct": 17,
@@ -407,8 +407,8 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-08-13T11:05:11.890681-04:00",
-    "last_brief_date": "2026-08-13",
+    "generated_at": "2026-08-14T08:00:37.748847-04:00",
+    "last_brief_date": "2026-08-14",
     "last_brief_time": "08:00:02",
     "last_grade_date": "2026-08-13",
     "recent_failures": []
@@ -419,6 +419,83 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2014 Good HTF level identification on Aug 3.\nLevel Selection: 7/10 \u2014 Clean 50% retrace and FVG confluence hits.\nExecution: 4/10 \u2014 Solid confirmation entries on Aug 3, but you left 4.77R (89% of the move) on the table.\nRisk Management: 1/10 \u2014 A catastrophic -$16,000 single-trade loss on Aug 5 destroyed your desk risk limits.\nPsychology: 2/10 \u2014 Shifted from calm on Aug 3 to complete tilt control loss on Aug 5.\nDiscipline: 1/10 \u2014 Completely abandoned max position limits and stop rules after your first loss on Aug 5.\n\nPNL: Net -$15,502 | Best: +$1,298 ('2026-08-03') / Worst: -$16,800 ('2026-08-05') | PF: 0.08 | Avg Win: 0.69R\n\nWHAT WORKED:\n- Confirmation entries at location: 100% win rate (2W/0L) returning +$1,298 (+0.69R) on long 50% retrace/FVG setups when patient.\n- Calm, with-read alignment: Both Aug 3 winners were taken calm and matched the morning read perfectly.\n\nBIGGEST LEAK:\nCatastrophic tilt sizing on Aug 5. After an initial -$800 loss on attempt 1, you stayed at the screen while tilted and fired a reckless, unsized -$16,000 trade. You proved on Aug 3 that your location + confirmation model prints money, but a single unmanaged emotional meltdown erased weeks of progress and blew your risk parameters.\n\nBEST & WORST TRADE:\nBest: 2026-08-03 a2 (+ $798) \u2014 patient long confirmation entry at 50% retrace/FVG; repeat this exact execution.\nWorst: 2026-08-05 a1 (-$16,000) \u2014 tilted sizing violation after loss 1; hard cut trading under tilt immediately.\n\nNEXT WEEK:\nEnforce a mandatory automated platform risk lock at -$1,000 daily max loss\u2014if attempt 1 loses, attempt 2 must strictly be micros with zero size expansion allowed."
   },
   "days": [
+    {
+      "date": "2026-08-14",
+      "inventory": "N",
+      "vah": 30212.0,
+      "poc": 30188.0,
+      "val": 29919.0,
+      "settle": 30188.5,
+      "ovn_high": 30264.75,
+      "ovn_low": 30124.25,
+      "ovn_poc": 30189.0,
+      "ovn_vah": 30222.0,
+      "ovn_val": 30156.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.53,
+      "confidence_b": 0.37,
+      "confidence_c": 0.1,
+      "post_time": "08:00:02",
+      "day_shape": "trend_up",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "above value open, overlapping value, low vol (rule-based read \u2014 AI unavailable)",
+      "invalidation": "",
+      "plan": "",
+      "risk": "",
+      "predicted_model": "trend_up",
+      "vol_regime": "low",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "trend_up",
+          "probability": 26,
+          "confidence": "medium",
+          "why": "+ open above value; + 2d+ up-trend intact",
+          "stat_support": "base rate 20%"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 20,
+          "confidence": "low",
+          "why": "\u2212 OVN range compressed \u2014 discount; compression here doesn't reliably release into RTH; + calibration: engine ran cold on this model (37% real vs 32% claimed)",
+          "stat_support": "base rate 24%"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 18,
+          "confidence": "low",
+          "why": "+ +GEX pins price; + price above gamma flip 29655 in +GEX \u2014 rotation regime",
+          "stat_support": "base rate 16%"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 18,
+          "confidence": "low",
+          "why": "\u2212 open out of value near an OVN extreme \u2014 mild discount; proximity alone rarely confirms the reversal; + unswept liquidity to trap into",
+          "stat_support": "base rate 18%"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 11,
+          "confidence": "low",
+          "why": "+ compressed range \u2014 slight lean toward reversion, not the expansion-risk discount originally assumed; + +GEX favors fade-the-extreme",
+          "stat_support": "base rate 8%"
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 30263.25,
+          "vs_settle": 74.75,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-08-13",
       "inventory": "SL",
@@ -4516,36 +4593,6 @@
         "actual_model": "rotational_balance",
         "model_correct": false
       },
-      "intraday": [
-        {
-          "slot": "09:30",
-          "price": 29768.0,
-          "vs_settle": 212.0,
-          "inside_va": true,
-          "call": "\u2705 Price within OVN range \u2014 **Scenario A still primary**. Watch 29522.00\u201329535.00 for entry."
-        },
-        {
-          "slot": "10:00",
-          "price": 29768.0,
-          "vs_settle": 212.0,
-          "inside_va": true,
-          "call": "\u2705 Price within OVN range \u2014 **Scenario A still primary**. Watch 29522.00\u201329535.00 for entry."
-        },
-        {
-          "slot": "10:30",
-          "price": 29768.0,
-          "vs_settle": 212.0,
-          "inside_va": true,
-          "call": "\u2705 Price within OVN range \u2014 **Scenario A still primary**. Watch 29522.00\u201329535.00 for entry."
-        },
-        {
-          "slot": "11:00",
-          "price": 29768.0,
-          "vs_settle": 212.0,
-          "inside_va": true,
-          "call": "\u2705 Price within OVN range \u2014 **Scenario A still primary**. Watch 29522.00\u201329535.00 for entry."
-        }
-      ],
       "trades_summary": {
         "count": 1,
         "pnl": 0
