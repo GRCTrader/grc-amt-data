@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-14T11:05:11.569905-04:00",
+  "updated": "2026-08-16T17:00:22.588971-04:00",
   "stats": {
     "total_graded": 51,
     "correct": 17,
@@ -391,15 +391,24 @@
       }
     },
     "weekly_diagnostic": {
-      "week_start": "2026-08-03",
-      "week_end": "2026-08-07",
+      "week_start": "2026-08-10",
+      "week_end": "2026-08-14",
       "total_graded": 5,
-      "correct": 2,
-      "accuracy_pct": 40.0,
-      "review_text": "WHAT HAPPENED:\nThe model accurately captured strong upward momentum early in the week but failed to adapt when price met overhead resistance and market structure shifted into failed auctions and chop.\n\nBIGGEST MISS:\nOn 2026-08-05, the model called trend_up, but price swept the overnight high of 29990, failed, and reversed into a failed_auction to close at 29822.\n\nSUGGESTED IMPROVEMENT:\nGiven n=5 this week and only 35 graded days overall, the sample size is too thin to draw firm conclusions or modify scenarios.py without overreaching. However, as a hypothesis to backtest against the 19-year history, test adding a condition that reduces trend_up weights when an opening drive sweeps overnight highs following consecutive trend days.",
-      "created_at": "2026-08-07 15:20:08"
+      "correct": 0,
+      "accuracy_pct": 0.0,
+      "review_text": "WHAT HAPPENED: The model completely failed this week, incorrectly predicting the market's behavior on all five trading days. It struggled to identify both directional moves and balanced conditions.\n\nBIGGEST MISS: The biggest miss was on 2026-08-13, when the model called for 'rotational_balance' but the market experienced strong 'short_covering', accepting above VAH and closing at the top of its range (30224), indicating clear upward conviction rather than balance.\n\nSUGGESTED IMPROVEMENT: The sample of five incorrect calls this week is too thin to draw definitive conclusions about specific condition or weight adjustments. Further data is needed to identify patterns in the model's errors.",
+      "created_at": "2026-08-14 15:20:09"
     },
     "weekly_diagnostics_all": [
+      {
+        "week_start": "2026-08-10",
+        "week_end": "2026-08-14",
+        "total_graded": 5,
+        "correct": 0,
+        "accuracy_pct": 0.0,
+        "review_text": "WHAT HAPPENED: The model completely failed this week, incorrectly predicting the market's behavior on all five trading days. It struggled to identify both directional moves and balanced conditions.\n\nBIGGEST MISS: The biggest miss was on 2026-08-13, when the model called for 'rotational_balance' but the market experienced strong 'short_covering', accepting above VAH and closing at the top of its range (30224), indicating clear upward conviction rather than balance.\n\nSUGGESTED IMPROVEMENT: The sample of five incorrect calls this week is too thin to draw definitive conclusions about specific condition or weight adjustments. Further data is needed to identify patterns in the model's errors.",
+        "created_at": "2026-08-14 15:20:09"
+      },
       {
         "week_start": "2026-08-03",
         "week_end": "2026-08-07",
@@ -412,7 +421,7 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-08-14T11:05:11.569921-04:00",
+    "generated_at": "2026-08-16T17:00:22.589004-04:00",
     "last_brief_date": "2026-08-14",
     "last_brief_time": "08:00:02",
     "last_grade_date": "2026-08-14",
@@ -420,8 +429,8 @@
   },
   "coach": null,
   "mentor_review": {
-    "date": "2026-08-09",
-    "text": "SCORECARD:\nMarket Read: 7/10 \u2014 Good HTF level identification on Aug 3.\nLevel Selection: 7/10 \u2014 Clean 50% retrace and FVG confluence hits.\nExecution: 4/10 \u2014 Solid confirmation entries on Aug 3, but you left 4.77R (89% of the move) on the table.\nRisk Management: 1/10 \u2014 A catastrophic -$16,000 single-trade loss on Aug 5 destroyed your desk risk limits.\nPsychology: 2/10 \u2014 Shifted from calm on Aug 3 to complete tilt control loss on Aug 5.\nDiscipline: 1/10 \u2014 Completely abandoned max position limits and stop rules after your first loss on Aug 5.\n\nPNL: Net -$15,502 | Best: +$1,298 ('2026-08-03') / Worst: -$16,800 ('2026-08-05') | PF: 0.08 | Avg Win: 0.69R\n\nWHAT WORKED:\n- Confirmation entries at location: 100% win rate (2W/0L) returning +$1,298 (+0.69R) on long 50% retrace/FVG setups when patient.\n- Calm, with-read alignment: Both Aug 3 winners were taken calm and matched the morning read perfectly.\n\nBIGGEST LEAK:\nCatastrophic tilt sizing on Aug 5. After an initial -$800 loss on attempt 1, you stayed at the screen while tilted and fired a reckless, unsized -$16,000 trade. You proved on Aug 3 that your location + confirmation model prints money, but a single unmanaged emotional meltdown erased weeks of progress and blew your risk parameters.\n\nBEST & WORST TRADE:\nBest: 2026-08-03 a2 (+ $798) \u2014 patient long confirmation entry at 50% retrace/FVG; repeat this exact execution.\nWorst: 2026-08-05 a1 (-$16,000) \u2014 tilted sizing violation after loss 1; hard cut trading under tilt immediately.\n\nNEXT WEEK:\nEnforce a mandatory automated platform risk lock at -$1,000 daily max loss\u2014if attempt 1 loses, attempt 2 must strictly be micros with zero size expansion allowed."
+    "date": "2026-08-16",
+    "text": "SCORECARD:\nMarket Read: 7/10 \u2014 Daily market reads are crucial, but without executed trades, we cannot assess the effectiveness of your application this week. Maintain your rigorous pre-market analysis.\nLevel Selection: 6/10 \u2014 Quality level selection is paramount, but its impact is unmeasurable without you acting on those levels. You need to translate read into actionable locations.\nExecution: 0/10 \u2014 Zero trades taken means no P&L generation. For a funded trader, this represents a significant missed opportunity cost.\nRisk Management: 10/10 \u2014 Perfect capital preservation. By taking no trades, you eliminated all market risk this week.\nPsychology: 5/10 \u2014 While you avoided reactive emotional trades, the complete lack of engagement raises questions about translating conviction into action when your edge potentially presented.\nDiscipline: 7/10 \u2014 You successfully disciplined yourself to avoid \"Trader B\" type trades. The next step is disciplined *action* on your high-quality A-setups.\n\nPNL: Net 0.00, best/worst day 0.00, profit factor N/A, avg R N/A.\n\nWHAT WORKED:\n*   Complete capital preservation, successfully avoiding any instances of your biggest leak\u2014premature/emotional anticipation\u2014by not engaging in suboptimal setups.\n*   Zero instances of over-trading multiple funded accounts, as no accounts were traded. This adherence to focus by inaction is a step towards building better habits.\n\nBIGGEST LEAK:\nYour biggest leak this week was a complete lack of market engagement and opportunity cost. Despite maintaining your market read and identifying potential levels, your **net P&L of 0.00** shows you failed to translate your edge into any executed trades. This indicates either an inability to find valid A-setups or a failure to act when your conditions may have aligned.\n\nBEST TRADE: N/A \u2013 No trades were taken this week. You preserved 100% of your capital.\nWORST TRADE: N/A \u2013 No trades were taken this week. You incurred zero losses.\n\nNEXT WEEK:\nNext week, your focus is to *actively identify and execute* your first high-quality A-setup, based on location-first principles with confirmation or resting-limit. Do not overthink; your goal is to find ONE trade that aligns perfectly with your edge and take it. You must log the clear trigger for that A-setup."
   },
   "days": [
     {
