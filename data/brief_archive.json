@@ -1,6 +1,112 @@
 {
-  "updated": "2026-08-14T12:00:00.024111-04:00",
+  "updated": "2026-08-17T12:00:00.027481-04:00",
   "days": [
+    {
+      "date": "2026-08-17",
+      "regime": "in value lower open, overlapping value, low vol (rule-based read \u2014 AI unavailable)",
+      "predicted_model": null,
+      "models": [
+        {
+          "model": "trend_up",
+          "probability": 35,
+          "confidence": "medium",
+          "why": "\u2212 open not above value; + already 100% long overnight \u2014 historically a continuation tell, not a fade",
+          "stat_support": "base rate 41%"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 31,
+          "confidence": "medium",
+          "why": "+ open inside value; + +GEX pins price",
+          "stat_support": "base rate 15%"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 15,
+          "confidence": "low",
+          "why": "\u2212 OVN range compressed \u2014 discount; compression here doesn't reliably release into RTH; \u2212 25 similar days: 0% historically",
+          "stat_support": "base rate 22%"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 13,
+          "confidence": "low",
+          "why": "+ unswept liquidity to trap into; + calibration: engine ran cold on this model (17% real vs 12% claimed)",
+          "stat_support": "base rate 10%"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 12,
+          "confidence": "low",
+          "why": "+ compressed range \u2014 slight lean toward reversion, not the expansion-risk discount originally assumed; + +GEX favors fade-the-extreme",
+          "stat_support": "base rate 8%"
+        }
+      ],
+      "plan": "",
+      "invalidation": "",
+      "risk_note": "",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": null,
+      "day_grade": null,
+      "actual_model": "rotational_balance",
+      "correct": 0,
+      "grade_detail": "Held value 30082-30248",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 30248.0
+        },
+        {
+          "label": "POC",
+          "price": 30227.0
+        },
+        {
+          "label": "VAL",
+          "price": 30082.0
+        },
+        {
+          "label": "OVN High",
+          "price": 30343.0
+        },
+        {
+          "label": "OVN Low",
+          "price": 30127.25
+        },
+        {
+          "label": "OVN VAH",
+          "price": 30298.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 30145.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 30130.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 30212.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 30188.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29919.0
+        },
+        {
+          "label": "Prior High",
+          "price": 30283.0
+        },
+        {
+          "label": "Prior Low",
+          "price": 30028.5
+        }
+      ]
+    },
     {
       "date": "2026-08-14",
       "regime": "above value open, overlapping value, low vol (rule-based read \u2014 AI unavailable)",
