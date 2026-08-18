@@ -1,6 +1,112 @@
 {
-  "updated": "2026-08-17T12:00:00.027481-04:00",
+  "updated": "2026-08-18T12:00:00.015541-04:00",
   "days": [
+    {
+      "date": "2026-08-18",
+      "regime": "below value open, overlapping value, normal vol (rule-based read \u2014 AI unavailable)",
+      "predicted_model": "trend_down",
+      "models": [
+        {
+          "model": "trend_down",
+          "probability": 57,
+          "confidence": "high",
+          "why": "+ open below value; + already 100% short overnight \u2014 historically a continuation tell, not a squeeze risk",
+          "stat_support": "base rate 28%"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 37,
+          "confidence": "medium",
+          "why": "+ -GEX fuels expansion; + price below gamma flip 30040 \u2014 momentum regime",
+          "stat_support": "base rate 25%"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 10,
+          "confidence": "low",
+          "why": "\u2212 extended open far from POC \u2014 mild discount; an extended gap doesn't reliably snap back; \u2212 price below gamma flip 30040 \u2014 fades lose fuel",
+          "stat_support": "base rate 10%"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 7,
+          "confidence": "low",
+          "why": "\u2212 gap argues against balance; \u2212 -GEX amplifies moves",
+          "stat_support": "base rate 18%"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 6,
+          "confidence": "low",
+          "why": "\u2212 open out of value near an OVN extreme \u2014 mild discount; proximity alone rarely confirms the reversal; + unswept liquidity to trap into",
+          "stat_support": "base rate 5%"
+        }
+      ],
+      "plan": "",
+      "invalidation": "",
+      "risk_note": "",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": "trend_down",
+      "day_grade": null,
+      "actual_model": "trend_down",
+      "correct": 1,
+      "grade_detail": "Accepted below VAL 30114, closed 29558 (low of range)",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 30271.0
+        },
+        {
+          "label": "POC",
+          "price": 30218.0
+        },
+        {
+          "label": "VAL",
+          "price": 30114.0
+        },
+        {
+          "label": "OVN High",
+          "price": 30121.25
+        },
+        {
+          "label": "OVN Low",
+          "price": 29685.25
+        },
+        {
+          "label": "OVN VAH",
+          "price": 30111.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 30085.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 30083.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 30248.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 30227.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 30082.0
+        },
+        {
+          "label": "Prior High",
+          "price": 30343.0
+        },
+        {
+          "label": "Prior Low",
+          "price": 30054.5
+        }
+      ]
+    },
     {
       "date": "2026-08-17",
       "regime": "in value lower open, overlapping value, low vol (rule-based read \u2014 AI unavailable)",
