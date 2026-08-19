@@ -1,6 +1,112 @@
 {
-  "updated": "2026-08-18T12:00:00.015541-04:00",
+  "updated": "2026-08-19T12:00:00.040989-04:00",
   "days": [
+    {
+      "date": "2026-08-19",
+      "regime": "at poc open, lower value, low vol (rule-based read \u2014 AI unavailable)",
+      "predicted_model": null,
+      "models": [
+        {
+          "model": "short_covering",
+          "probability": 24,
+          "confidence": "low",
+          "why": "+ price below gamma flip 29770 \u2014 momentum regime (soft; unconfirmed live); \u2212 25 similar days: 12% historically",
+          "stat_support": "base rate 26%"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 20,
+          "confidence": "low",
+          "why": "\u2212 OVN range compressed \u2014 discount; compression here doesn't reliably release into RTH; + -GEX fuels expansion",
+          "stat_support": "base rate 22%"
+        },
+        {
+          "model": "trend_down",
+          "probability": 17,
+          "confidence": "low",
+          "why": "+ value migrating lower; \u2212 open not below value",
+          "stat_support": "base rate 18%"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 16,
+          "confidence": "low",
+          "why": "\u2212 extended open far from POC \u2014 mild discount; an extended gap doesn't reliably snap back; + compressed range \u2014 slight lean toward reversion, not the expansion-risk discount originally assumed",
+          "stat_support": "base rate 16%"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 13,
+          "confidence": "low",
+          "why": "+ open inside value; \u2212 -GEX amplifies moves",
+          "stat_support": "base rate 10%"
+        }
+      ],
+      "plan": "",
+      "invalidation": "",
+      "risk_note": "",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": null,
+      "day_grade": null,
+      "actual_model": "failed_auction",
+      "correct": 1,
+      "grade_detail": "Swept OVN low 29430, failed, closed 29596",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29716.0
+        },
+        {
+          "label": "POC",
+          "price": 29691.0
+        },
+        {
+          "label": "VAL",
+          "price": 29590.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29685.0
+        },
+        {
+          "label": "OVN Low",
+          "price": 29430.5
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29674.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29636.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29533.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 30271.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 30218.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 30114.0
+        },
+        {
+          "label": "Prior High",
+          "price": 30121.25
+        },
+        {
+          "label": "Prior Low",
+          "price": 29514.0
+        }
+      ]
+    },
     {
       "date": "2026-08-18",
       "regime": "below value open, overlapping value, normal vol (rule-based read \u2014 AI unavailable)",
