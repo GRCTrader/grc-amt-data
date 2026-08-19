@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T11:05:07.292541-04:00",
+  "updated": "2026-08-19T09:00:30.055473-04:00",
   "stats": {
     "total_graded": 53,
     "correct": 18,
@@ -431,8 +431,8 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-08-18T11:05:07.292578-04:00",
-    "last_brief_date": "2026-08-18",
+    "generated_at": "2026-08-19T09:00:30.055489-04:00",
+    "last_brief_date": "2026-08-19",
     "last_brief_time": "09:00:00",
     "last_grade_date": "2026-08-18",
     "recent_failures": []
@@ -443,6 +443,83 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2014 Daily market reads are crucial, but without executed trades, we cannot assess the effectiveness of your application this week. Maintain your rigorous pre-market analysis.\nLevel Selection: 6/10 \u2014 Quality level selection is paramount, but its impact is unmeasurable without you acting on those levels. You need to translate read into actionable locations.\nExecution: 0/10 \u2014 Zero trades taken means no P&L generation. For a funded trader, this represents a significant missed opportunity cost.\nRisk Management: 10/10 \u2014 Perfect capital preservation. By taking no trades, you eliminated all market risk this week.\nPsychology: 5/10 \u2014 While you avoided reactive emotional trades, the complete lack of engagement raises questions about translating conviction into action when your edge potentially presented.\nDiscipline: 7/10 \u2014 You successfully disciplined yourself to avoid \"Trader B\" type trades. The next step is disciplined *action* on your high-quality A-setups.\n\nPNL: Net 0.00, best/worst day 0.00, profit factor N/A, avg R N/A.\n\nWHAT WORKED:\n*   Complete capital preservation, successfully avoiding any instances of your biggest leak\u2014premature/emotional anticipation\u2014by not engaging in suboptimal setups.\n*   Zero instances of over-trading multiple funded accounts, as no accounts were traded. This adherence to focus by inaction is a step towards building better habits.\n\nBIGGEST LEAK:\nYour biggest leak this week was a complete lack of market engagement and opportunity cost. Despite maintaining your market read and identifying potential levels, your **net P&L of 0.00** shows you failed to translate your edge into any executed trades. This indicates either an inability to find valid A-setups or a failure to act when your conditions may have aligned.\n\nBEST TRADE: N/A \u2013 No trades were taken this week. You preserved 100% of your capital.\nWORST TRADE: N/A \u2013 No trades were taken this week. You incurred zero losses.\n\nNEXT WEEK:\nNext week, your focus is to *actively identify and execute* your first high-quality A-setup, based on location-first principles with confirmation or resting-limit. Do not overthink; your goal is to find ONE trade that aligns perfectly with your edge and take it. You must log the clear trigger for that A-setup."
   },
   "days": [
+    {
+      "date": "2026-08-19",
+      "inventory": "SS",
+      "vah": 29716.0,
+      "poc": 29691.0,
+      "val": 29590.0,
+      "settle": 29586.0,
+      "ovn_high": 29685.0,
+      "ovn_low": 29430.5,
+      "ovn_poc": 29636.0,
+      "ovn_vah": 29674.0,
+      "ovn_val": 29533.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.57,
+      "confidence_b": 0.26,
+      "confidence_c": 0.17,
+      "post_time": "09:00:00",
+      "day_shape": null,
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "at poc open, lower value, low vol (rule-based read \u2014 AI unavailable)",
+      "invalidation": "",
+      "plan": "",
+      "risk": "",
+      "predicted_model": null,
+      "vol_regime": "low",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "short_covering",
+          "probability": 24,
+          "confidence": "low",
+          "why": "+ price below gamma flip 29770 \u2014 momentum regime (soft; unconfirmed live); \u2212 25 similar days: 12% historically",
+          "stat_support": "base rate 26%"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 20,
+          "confidence": "low",
+          "why": "\u2212 OVN range compressed \u2014 discount; compression here doesn't reliably release into RTH; + -GEX fuels expansion",
+          "stat_support": "base rate 22%"
+        },
+        {
+          "model": "trend_down",
+          "probability": 17,
+          "confidence": "low",
+          "why": "+ value migrating lower; \u2212 open not below value",
+          "stat_support": "base rate 18%"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 16,
+          "confidence": "low",
+          "why": "\u2212 extended open far from POC \u2014 mild discount; an extended gap doesn't reliably snap back; + compressed range \u2014 slight lean toward reversion, not the expansion-risk discount originally assumed",
+          "stat_support": "base rate 16%"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 13,
+          "confidence": "low",
+          "why": "+ open inside value; \u2212 -GEX amplifies moves",
+          "stat_support": "base rate 10%"
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29683.25,
+          "vs_settle": 97.25,
+          "inside_va": true,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-08-18",
       "inventory": "100S",
@@ -4572,43 +4649,6 @@
         "model_correct": false,
         "top2_hit": false
       },
-      "intraday": [
-        {
-          "slot": "09:00",
-          "price": 29183.0,
-          "vs_settle": -208.5,
-          "inside_va": false,
-          "call": "Morning brief anchor"
-        },
-        {
-          "slot": "09:30",
-          "price": 29216.75,
-          "vs_settle": -174.75,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29144.50/29559.00, target POC 29419.75."
-        },
-        {
-          "slot": "10:00",
-          "price": 29304.25,
-          "vs_settle": -87.25,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29144.50/29559.00, target POC 29419.75."
-        },
-        {
-          "slot": "10:30",
-          "price": 29290.25,
-          "vs_settle": -101.25,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29144.50/29559.00, target POC 29419.75."
-        },
-        {
-          "slot": "11:00",
-          "price": 29173.75,
-          "vs_settle": -217.75,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29144.50/29559.00, target POC 29419.75."
-        }
-      ],
       "trades_summary": {
         "count": 5,
         "pnl": -857.08
