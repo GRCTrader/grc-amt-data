@@ -1,15 +1,15 @@
 {
-  "updated": "2026-08-20T08:00:23.762024-04:00",
+  "updated": "2026-08-20T11:05:16.484084-04:00",
   "stats": {
-    "total_graded": 54,
-    "correct": 19,
-    "accuracy_pct": 35.2,
-    "total_modern": 43,
-    "correct_modern": 13,
-    "accuracy_modern_pct": 30.2,
-    "top2_graded": 41,
-    "top2_hits": 21,
-    "top2_pct": 51.2,
+    "total_graded": 55,
+    "correct": 20,
+    "accuracy_pct": 36.4,
+    "total_modern": 44,
+    "correct_modern": 14,
+    "accuracy_modern_pct": 31.8,
+    "top2_graded": 42,
+    "top2_hits": 22,
+    "top2_pct": 52.4,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -280,13 +280,18 @@
         "date": "2026-08-19",
         "pct": 30.0,
         "n": 20
+      },
+      {
+        "date": "2026-08-20",
+        "pct": 30.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 53,
-        "correct": 19,
-        "pct": 35.8
+        "total": 54,
+        "correct": 20,
+        "pct": 37.0
       },
       "?": {
         "total": 1,
@@ -302,8 +307,8 @@
       },
       "60\u201370%": {
         "correct": 2,
-        "total": 2,
-        "pct": 100.0
+        "total": 3,
+        "pct": 66.7
       },
       "70\u201380%": {
         "correct": 6,
@@ -339,10 +344,10 @@
         "thin": true
       },
       "range_expansion": {
-        "total": 9,
-        "correct": 4,
+        "total": 10,
+        "correct": 5,
         "label": "\ud83d\udca5 Range Expansion",
-        "pct": 44.4,
+        "pct": 50.0,
         "thin": true
       },
       "rotational_balance": {
@@ -436,10 +441,10 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-08-20T08:00:23.762054-04:00",
+    "generated_at": "2026-08-20T11:05:16.484119-04:00",
     "last_brief_date": "2026-08-20",
     "last_brief_time": "08:00:01",
-    "last_grade_date": "2026-08-19",
+    "last_grade_date": "2026-08-20",
     "recent_failures": []
   },
   "coach": null,
@@ -469,8 +474,8 @@
       "post_time": "08:00:01",
       "day_shape": "range_expansion",
       "day_shape_note": null,
-      "htf_bias": null,
-      "htf_text": null,
+      "htf_bias": "SHORT",
+      "htf_text": "DAILY: The daily market structure shifted bearish via a strong CHoCH below the 29514.00 swing low, driving price into the discount of the 28313.50 to 30343.00 dealing range. Nearest untapped buyside liquidity sits above at the 29757.25 high, while untapped sellside liquidity rests below at the 29241.25 and 28964.25 swing lows.\n\n4H: Structure since the 30343.00 high remains decisively bearish with continuous downside displacement, leaving an open 4H fair value gap between 29375.00 and 29587.75. Reclaiming and accepting above 29587.75 would deny the daily bearish pressure, whereas rejection at or below the 4H FVG confirms sustained downside discovery.\n\n1H: Overnight structure broke out of balance with a sharp displacement from the 29689.75 overnight high down to the 29252.25 low. The immediate draw on liquidity for the NY open is the sellside liquidity pool below 29241.25, with potential upside rotation back toward the overnight low-volume node at 29375.00 prior to expansion.\n\nBIAS: SHORT \u2014 If price retraces into the 29375.00-29450.00 region at the open and shows orderflow absorption or exhaustion, then look for short entries targeting 29241.25 sellside liquidity and 28964.25.",
       "regime": "IMBALANCE \u2014 Open below value (29384.0) in negative GEX (-1.9$Bn) below gamma flip 29685 favoring downside expansion",
       "invalidation": "Sustained acceptance back above 29512.0 (RTH VAL) and reclaiming the 29685 Gamma Flip invalidates the downside imbalance thesis",
       "plan": "If open drives down and accepts below 29372.25 (OVNL), look for short continuation retests targeting 29250.0. If open pushes into 29394.0 (ONVP VAL) / 29475.0 (Put Wall) and shows passive absorption with delta divergence, look for short entry back down to 29375.75. If price sweeps 29372.25, shows seller exhaustion, and rapidly reclaims 29394.0, look for a long failed auction trade targeting 29475.0 Put Wall and 29532.0 ONVP POC.",
@@ -535,6 +540,21 @@
           "abort": "Break down below PDL 29375.75"
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": true,
+        "detail": "Two-sided, range 29240-29470, close 29360",
+        "notes": null,
+        "gemini": "**SCENARIO**\nThe top predicted model, Range Expansion (41%), played out directly as price pushed up to 29470.25 before expanding lower to a session low of 29240.0.\n\n**LEVELS**\nPrice pushed through OVN VAL 29394.0 to test 29470.25 (near the 29475.0 short zone), where sellers absorbed the move and broke OVNL 29372.25 to achieve the 29250.0 downside target (Low 29240.0). Higher invalidation levels like RTH VAL 29512.0 were never tested.\n\n**GAMMA**\nThe session behaved as a short gamma momentum day, extending moves rapidly on the downside while holding well below the 29580 gamma flip.\n\n**VERDICT**\nThe 09:00 read was highly accurate and actionable, as the top predicted model played out plainly to reach the 29250.0 target.",
+        "close": 29360.0,
+        "high": 29470.25,
+        "low": 29240.0,
+        "predicted_model": "range_expansion",
+        "actual_model": "range_expansion",
+        "model_correct": true,
+        "top2_hit": true
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -542,6 +562,41 @@
           "vs_settle": -128.75,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29340.25,
+          "vs_settle": -172.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29512.00\u201329688.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 29384.25,
+          "vs_settle": -128.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29512.00\u201329688.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 29319.0,
+          "vs_settle": -193.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29512.00\u201329688.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 29379.25,
+          "vs_settle": -133.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29512.00\u201329688.00."
+        },
+        {
+          "slot": "news_follow",
+          "price": 29359.25,
+          "vs_settle": -153.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29512.00\u201329688.00."
         }
       ]
     },
