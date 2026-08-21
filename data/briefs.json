@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-20T11:05:16.484084-04:00",
+  "updated": "2026-08-21T09:00:20.747242-04:00",
   "stats": {
     "total_graded": 55,
     "correct": 20,
@@ -441,9 +441,9 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-08-20T11:05:16.484119-04:00",
-    "last_brief_date": "2026-08-20",
-    "last_brief_time": "08:00:01",
+    "generated_at": "2026-08-21T09:00:20.747277-04:00",
+    "last_brief_date": "2026-08-21",
+    "last_brief_time": "09:00:00",
     "last_grade_date": "2026-08-20",
     "recent_failures": []
   },
@@ -453,6 +453,103 @@
     "text": "SCORECARD:\nMarket Read: 7/10 \u2014 Daily market reads are crucial, but without executed trades, we cannot assess the effectiveness of your application this week. Maintain your rigorous pre-market analysis.\nLevel Selection: 6/10 \u2014 Quality level selection is paramount, but its impact is unmeasurable without you acting on those levels. You need to translate read into actionable locations.\nExecution: 0/10 \u2014 Zero trades taken means no P&L generation. For a funded trader, this represents a significant missed opportunity cost.\nRisk Management: 10/10 \u2014 Perfect capital preservation. By taking no trades, you eliminated all market risk this week.\nPsychology: 5/10 \u2014 While you avoided reactive emotional trades, the complete lack of engagement raises questions about translating conviction into action when your edge potentially presented.\nDiscipline: 7/10 \u2014 You successfully disciplined yourself to avoid \"Trader B\" type trades. The next step is disciplined *action* on your high-quality A-setups.\n\nPNL: Net 0.00, best/worst day 0.00, profit factor N/A, avg R N/A.\n\nWHAT WORKED:\n*   Complete capital preservation, successfully avoiding any instances of your biggest leak\u2014premature/emotional anticipation\u2014by not engaging in suboptimal setups.\n*   Zero instances of over-trading multiple funded accounts, as no accounts were traded. This adherence to focus by inaction is a step towards building better habits.\n\nBIGGEST LEAK:\nYour biggest leak this week was a complete lack of market engagement and opportunity cost. Despite maintaining your market read and identifying potential levels, your **net P&L of 0.00** shows you failed to translate your edge into any executed trades. This indicates either an inability to find valid A-setups or a failure to act when your conditions may have aligned.\n\nBEST TRADE: N/A \u2013 No trades were taken this week. You preserved 100% of your capital.\nWORST TRADE: N/A \u2013 No trades were taken this week. You incurred zero losses.\n\nNEXT WEEK:\nNext week, your focus is to *actively identify and execute* your first high-quality A-setup, based on location-first principles with confirmation or resting-limit. Do not overthink; your goal is to find ONE trade that aligns perfectly with your edge and take it. You must log the clear trigger for that A-setup."
   },
   "days": [
+    {
+      "date": "2026-08-21",
+      "inventory": "100L",
+      "vah": 29430.0,
+      "poc": 29362.0,
+      "val": 29312.0,
+      "settle": 29300.5,
+      "ovn_high": 29539.0,
+      "ovn_low": 29262.5,
+      "ovn_poc": 29313.0,
+      "ovn_vah": 29451.0,
+      "ovn_val": 29274.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.75,
+      "confidence_b": 0.12,
+      "confidence_c": 0.13,
+      "post_time": "09:00:00",
+      "day_shape": "trend_up",
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Imbalance \u2014 Trend Continuation / Range Expansion above value driven by 100% long overnight inventory",
+      "invalidation": "Acceptance back below OVN VAH 29451.0 and RTH VAH 29430.0 invalidates the upside imbalance read",
+      "plan": "If open holds above PWL 29533.5 and breaks OVNH 29539.0 with aggressive buy delta, go LONG targeting Call Wall 29675.0 and PDH 29689.75. If open pulls back to Gamma Flip 29510.0, look for passive buyer absorption and delta flip to enter LONG targeting 29539.0 and 29675.0. If 29510.0 fails to hold and price accepts below OVN VAH 29451.0, pivot SHORT targeting RTH VAH 29430.0 and RTH POC 29362.0.",
+      "risk": "Trader historically struggles on Trend Continuation Up setups (-$535/trade); maintain strict execution triggers at key levels and reduce size if signal edge weakens.",
+      "predicted_model": "trend_up",
+      "vol_regime": "normal",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "trend_up",
+          "probability": 59,
+          "confidence": "high",
+          "why": "Price opens out-of-value above 29430.0 with 100% long overnight inventory establishing strong directional upside bias above Gamma Flip 29510.0.",
+          "stat_support": "base rate 34%",
+          "trigger": "Hold and retest of Gamma Flip 29510.0 or immediate drive above OVNH 29539.0",
+          "confirm": "Acceptance above 29539.0 with sustained buy delta and high volume at the open",
+          "target": "Call Wall 29675.0 and PDH 29689.75",
+          "abort": "Loss of PWL 29533.5 and acceptance back below 29510.0"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 34,
+          "confidence": "medium",
+          "why": "Tight OVN range relative to gap size sets up an expansion of volatility away from overnight balance.",
+          "stat_support": "base rate 32%",
+          "trigger": "Sustained displacement beyond OVN High 29539.0",
+          "confirm": "Expanding volume and delta expansion away from overnight high 29539.0",
+          "target": "PDH 29689.75",
+          "abort": "Price rotates back into overnight range 29262.5-29539.0 with low volume"
+        },
+        {
+          "model": "long_liquidation",
+          "probability": 12,
+          "confidence": "low",
+          "why": "100% long overnight inventory creates downside flush risk if buyers fail to hold premium above 29510.0.",
+          "stat_support": "base rate 11%",
+          "trigger": "Break below Gamma Flip 29510.0 following rejection at OVNH 29539.0",
+          "confirm": "Aggressive sell delta absorption at 29510.0 failing to hold buyers",
+          "target": "OVN VAH 29451.0 and RTH VAH 29430.0",
+          "abort": "Reclaim of PWL 29533.5 and push back above 29539.0"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 8,
+          "confidence": "low",
+          "why": "Positive GEX (+0.3$Bn) encourages dealer mean-reversion around the 29510.0 gamma flip level.",
+          "stat_support": "base rate 11%",
+          "trigger": "Rejection at OVNH 29539.0 with immediate bid response at Gamma Flip 29510.0",
+          "confirm": "Two-sided rotational volume profile forming around PWL 29533.5",
+          "target": "Gamma Flip 29510.0 and OVNH 29539.0",
+          "abort": "Displacement past 29539.0 or acceptance below 29451.0"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 8,
+          "confidence": "low",
+          "why": "Extended open far from RTH POC 29362.0 inside long gamma regime can pull price back to value if buying exhausts.",
+          "stat_support": "base rate 6%",
+          "trigger": "Acceptance below OVN VAH 29451.0",
+          "confirm": "Cumulative Delta divergence turning sharply negative below 29451.0",
+          "target": "RTH VAH 29430.0 and RTH POC 29362.0",
+          "abort": "Sustained price holding above PWL 29533.5"
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29528.5,
+          "vs_settle": 228.0,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-08-20",
       "inventory": "SL",
@@ -4581,43 +4678,6 @@
         "model_correct": true,
         "top2_hit": true
       },
-      "intraday": [
-        {
-          "slot": "09:00",
-          "price": 29824.5,
-          "vs_settle": -112.5,
-          "inside_va": true,
-          "call": "Morning brief anchor"
-        },
-        {
-          "slot": "09:30",
-          "price": 29818.0,
-          "vs_settle": -119.0,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29773.50/29912.00, target POC 29827.75."
-        },
-        {
-          "slot": "10:00",
-          "price": 29940.75,
-          "vs_settle": 3.75,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29773.50\u201329912.00."
-        },
-        {
-          "slot": "10:30",
-          "price": 29904.5,
-          "vs_settle": -32.5,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29773.50/29912.00, target POC 29827.75."
-        },
-        {
-          "slot": "11:00",
-          "price": 29902.0,
-          "vs_settle": -35.0,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29773.50/29912.00, target POC 29827.75."
-        }
-      ],
       "trades_summary": {
         "count": 3,
         "pnl": 400.56
