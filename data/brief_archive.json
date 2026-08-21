@@ -1,6 +1,132 @@
 {
-  "updated": "2026-08-20T12:00:00.023555-04:00",
+  "updated": "2026-08-21T12:00:00.030341-04:00",
   "days": [
+    {
+      "date": "2026-08-21",
+      "regime": "Imbalance \u2014 Trend Continuation / Range Expansion above value driven by 100% long overnight inventory",
+      "predicted_model": "trend_up",
+      "models": [
+        {
+          "model": "trend_up",
+          "probability": 59,
+          "confidence": "high",
+          "why": "Price opens out-of-value above 29430.0 with 100% long overnight inventory establishing strong directional upside bias above Gamma Flip 29510.0.",
+          "stat_support": "base rate 34%",
+          "trigger": "Hold and retest of Gamma Flip 29510.0 or immediate drive above OVNH 29539.0",
+          "confirm": "Acceptance above 29539.0 with sustained buy delta and high volume at the open",
+          "target": "Call Wall 29675.0 and PDH 29689.75",
+          "abort": "Loss of PWL 29533.5 and acceptance back below 29510.0"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 34,
+          "confidence": "medium",
+          "why": "Tight OVN range relative to gap size sets up an expansion of volatility away from overnight balance.",
+          "stat_support": "base rate 32%",
+          "trigger": "Sustained displacement beyond OVN High 29539.0",
+          "confirm": "Expanding volume and delta expansion away from overnight high 29539.0",
+          "target": "PDH 29689.75",
+          "abort": "Price rotates back into overnight range 29262.5-29539.0 with low volume"
+        },
+        {
+          "model": "long_liquidation",
+          "probability": 12,
+          "confidence": "low",
+          "why": "100% long overnight inventory creates downside flush risk if buyers fail to hold premium above 29510.0.",
+          "stat_support": "base rate 11%",
+          "trigger": "Break below Gamma Flip 29510.0 following rejection at OVNH 29539.0",
+          "confirm": "Aggressive sell delta absorption at 29510.0 failing to hold buyers",
+          "target": "OVN VAH 29451.0 and RTH VAH 29430.0",
+          "abort": "Reclaim of PWL 29533.5 and push back above 29539.0"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 8,
+          "confidence": "low",
+          "why": "Positive GEX (+0.3$Bn) encourages dealer mean-reversion around the 29510.0 gamma flip level.",
+          "stat_support": "base rate 11%",
+          "trigger": "Rejection at OVNH 29539.0 with immediate bid response at Gamma Flip 29510.0",
+          "confirm": "Two-sided rotational volume profile forming around PWL 29533.5",
+          "target": "Gamma Flip 29510.0 and OVNH 29539.0",
+          "abort": "Displacement past 29539.0 or acceptance below 29451.0"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 8,
+          "confidence": "low",
+          "why": "Extended open far from RTH POC 29362.0 inside long gamma regime can pull price back to value if buying exhausts.",
+          "stat_support": "base rate 6%",
+          "trigger": "Acceptance below OVN VAH 29451.0",
+          "confirm": "Cumulative Delta divergence turning sharply negative below 29451.0",
+          "target": "RTH VAH 29430.0 and RTH POC 29362.0",
+          "abort": "Sustained price holding above PWL 29533.5"
+        }
+      ],
+      "plan": "If open holds above PWL 29533.5 and breaks OVNH 29539.0 with aggressive buy delta, go LONG targeting Call Wall 29675.0 and PDH 29689.75. If open pulls back to Gamma Flip 29510.0, look for passive buyer absorption and delta flip to enter LONG targeting 29539.0 and 29675.0. If 29510.0 fails to hold and price accepts below OVN VAH 29451.0, pivot SHORT targeting RTH VAH 29430.0 and RTH POC 29362.0.",
+      "invalidation": "Acceptance back below OVN VAH 29451.0 and RTH VAH 29430.0 invalidates the upside imbalance read",
+      "risk_note": "Trader historically struggles on Trend Continuation Up setups (-$535/trade); maintain strict execution triggers at key levels and reduce size if signal edge weakens.",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": "trend_up",
+      "day_grade": null,
+      "actual_model": "long_liquidation",
+      "correct": 0,
+      "grade_detail": "Accepted below VAL 29312, closed 29296 (low of range)",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29430.0
+        },
+        {
+          "label": "POC",
+          "price": 29362.0
+        },
+        {
+          "label": "VAL",
+          "price": 29312.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29539.0
+        },
+        {
+          "label": "OVN Low",
+          "price": 29262.5
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29451.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29313.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29274.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29688.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29688.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29512.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29689.75
+        },
+        {
+          "label": "Prior Low",
+          "price": 29202.75
+        }
+      ]
+    },
     {
       "date": "2026-08-20",
       "regime": "IMBALANCE \u2014 Open below value (29384.0) in negative GEX (-1.9$Bn) below gamma flip 29685 favoring downside expansion",
