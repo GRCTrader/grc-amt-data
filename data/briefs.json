@@ -1,15 +1,15 @@
 {
-  "updated": "2026-08-21T09:00:20.747242-04:00",
+  "updated": "2026-08-21T11:05:41.543135-04:00",
   "stats": {
-    "total_graded": 55,
+    "total_graded": 56,
     "correct": 20,
-    "accuracy_pct": 36.4,
-    "total_modern": 44,
+    "accuracy_pct": 35.7,
+    "total_modern": 45,
     "correct_modern": 14,
-    "accuracy_modern_pct": 31.8,
-    "top2_graded": 42,
+    "accuracy_modern_pct": 31.1,
+    "top2_graded": 43,
     "top2_hits": 22,
-    "top2_pct": 52.4,
+    "top2_pct": 51.2,
     "accuracy_series": [
       {
         "date": "2026-05-29",
@@ -285,13 +285,18 @@
         "date": "2026-08-20",
         "pct": 30.0,
         "n": 20
+      },
+      {
+        "date": "2026-08-21",
+        "pct": 30.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 54,
+        "total": 55,
         "correct": 20,
-        "pct": 37.0
+        "pct": 36.4
       },
       "?": {
         "total": 1,
@@ -312,8 +317,8 @@
       },
       "70\u201380%": {
         "correct": 6,
-        "total": 39,
-        "pct": 15.4
+        "total": 40,
+        "pct": 15.0
       },
       "80%+": {
         "correct": 0,
@@ -358,10 +363,10 @@
         "thin": true
       },
       "trend_up": {
-        "total": 11,
+        "total": 12,
         "correct": 2,
         "label": "\ud83d\udcc8 Trend Continuation Up",
-        "pct": 18.2,
+        "pct": 16.7,
         "thin": true
       },
       "trend_down": {
@@ -441,10 +446,10 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-08-21T09:00:20.747277-04:00",
+    "generated_at": "2026-08-21T11:05:41.543176-04:00",
     "last_brief_date": "2026-08-21",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-08-20",
+    "last_grade_date": "2026-08-21",
     "recent_failures": []
   },
   "coach": null,
@@ -540,6 +545,21 @@
           "abort": "Sustained price holding above PWL 29533.5"
         }
       ],
+      "grade": {
+        "actual": "B",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Accepted below VAL 29312, closed 29296 (low of range)",
+        "notes": null,
+        "gemini": "**SCENARIO:**\nThe top predicted model (Trend Continuation Up) failed completely; instead, the 3rd-ranked model, Long Liquidation (12%), played out as overnight long inventory unwound down to a low of 29220.0.\n\n**LEVELS:**\nPrice opened below the invalidation zone (OVN VAH 29451.0 / RTH VAH 29430.0), executing the contingency short plan which cleanly sliced through target RTH POC 29362.0, VAL 29312.0, and OVN VAL 29274.0; upside targets (29539.0, 29675.0) were never tested.\n\n**GAMMA:**\nThe session displayed mean-reverting behavior around Settle 29300.0 and VAL 29312.0 after the initial selloff, though price traded entirely below the 29485.0 gamma flip.\n\n**VERDICT:**\nWhile the primary prediction (Trend Up) was wrong, the pre-market plan's explicit invalidation level below 29430.0 successfully salvaged the read and provided the correct short target path.",
+        "close": 29296.25,
+        "high": 29476.0,
+        "low": 29220.0,
+        "predicted_model": "trend_up",
+        "actual_model": "long_liquidation",
+        "model_correct": false,
+        "top2_hit": false
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -547,6 +567,34 @@
           "vs_settle": 228.0,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29449.5,
+          "vs_settle": 149.0,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29312.00\u201329430.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 29339.75,
+          "vs_settle": 39.25,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29312.00/29430.00, target POC 29362.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 29230.25,
+          "vs_settle": -70.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29312.00\u201329430.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 29311.0,
+          "vs_settle": 10.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29312.00\u201329430.00."
         }
       ]
     },
