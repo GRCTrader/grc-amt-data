@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T11:05:41.543135-04:00",
+  "updated": "2026-08-23T17:00:20.704159-04:00",
   "stats": {
     "total_graded": 56,
     "correct": 20,
@@ -416,15 +416,24 @@
       }
     },
     "weekly_diagnostic": {
-      "week_start": "2026-08-10",
-      "week_end": "2026-08-14",
+      "week_start": "2026-08-17",
+      "week_end": "2026-08-21",
       "total_graded": 5,
-      "correct": 0,
-      "accuracy_pct": 0.0,
-      "review_text": "WHAT HAPPENED: The model completely failed this week, incorrectly predicting the market's behavior on all five trading days. It struggled to identify both directional moves and balanced conditions.\n\nBIGGEST MISS: The biggest miss was on 2026-08-13, when the model called for 'rotational_balance' but the market experienced strong 'short_covering', accepting above VAH and closing at the top of its range (30224), indicating clear upward conviction rather than balance.\n\nSUGGESTED IMPROVEMENT: The sample of five incorrect calls this week is too thin to draw definitive conclusions about specific condition or weight adjustments. Further data is needed to identify patterns in the model's errors.",
-      "created_at": "2026-08-14 15:20:09"
+      "correct": 3,
+      "accuracy_pct": 60.0,
+      "review_text": "WHAT HAPPENED:\nThe model correctly called three out of five days, successfully anticipating trend_down, failed_auction, and range_expansion. However, it failed on both bookend days by misjudging Monday's rotational balance and opposing Friday's liquidation.\n\nBIGGEST MISS:\nThe worst call occurred on August 21, when the model predicted trend_up, but the market experienced long liquidation, accepting below value area low at 29312 and closing at the range low of 29296.\n\nSUGGESTED IMPROVEMENT:\nHypothesize reducing the bullish scenario weighting in scenarios.py when price opens and accepts below the prior day's value area low. That said, a single week with five trades is too thin a sample size to justify structural changes, so this must be backtested against the full 19-year dataset first.",
+      "created_at": "2026-08-21 15:20:43"
     },
     "weekly_diagnostics_all": [
+      {
+        "week_start": "2026-08-17",
+        "week_end": "2026-08-21",
+        "total_graded": 5,
+        "correct": 3,
+        "accuracy_pct": 60.0,
+        "review_text": "WHAT HAPPENED:\nThe model correctly called three out of five days, successfully anticipating trend_down, failed_auction, and range_expansion. However, it failed on both bookend days by misjudging Monday's rotational balance and opposing Friday's liquidation.\n\nBIGGEST MISS:\nThe worst call occurred on August 21, when the model predicted trend_up, but the market experienced long liquidation, accepting below value area low at 29312 and closing at the range low of 29296.\n\nSUGGESTED IMPROVEMENT:\nHypothesize reducing the bullish scenario weighting in scenarios.py when price opens and accepts below the prior day's value area low. That said, a single week with five trades is too thin a sample size to justify structural changes, so this must be backtested against the full 19-year dataset first.",
+        "created_at": "2026-08-21 15:20:43"
+      },
       {
         "week_start": "2026-08-10",
         "week_end": "2026-08-14",
@@ -446,7 +455,7 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-08-21T11:05:41.543176-04:00",
+    "generated_at": "2026-08-23T17:00:20.704184-04:00",
     "last_brief_date": "2026-08-21",
     "last_brief_time": "09:00:00",
     "last_grade_date": "2026-08-21",
@@ -454,8 +463,8 @@
   },
   "coach": null,
   "mentor_review": {
-    "date": "2026-08-16",
-    "text": "SCORECARD:\nMarket Read: 7/10 \u2014 Daily market reads are crucial, but without executed trades, we cannot assess the effectiveness of your application this week. Maintain your rigorous pre-market analysis.\nLevel Selection: 6/10 \u2014 Quality level selection is paramount, but its impact is unmeasurable without you acting on those levels. You need to translate read into actionable locations.\nExecution: 0/10 \u2014 Zero trades taken means no P&L generation. For a funded trader, this represents a significant missed opportunity cost.\nRisk Management: 10/10 \u2014 Perfect capital preservation. By taking no trades, you eliminated all market risk this week.\nPsychology: 5/10 \u2014 While you avoided reactive emotional trades, the complete lack of engagement raises questions about translating conviction into action when your edge potentially presented.\nDiscipline: 7/10 \u2014 You successfully disciplined yourself to avoid \"Trader B\" type trades. The next step is disciplined *action* on your high-quality A-setups.\n\nPNL: Net 0.00, best/worst day 0.00, profit factor N/A, avg R N/A.\n\nWHAT WORKED:\n*   Complete capital preservation, successfully avoiding any instances of your biggest leak\u2014premature/emotional anticipation\u2014by not engaging in suboptimal setups.\n*   Zero instances of over-trading multiple funded accounts, as no accounts were traded. This adherence to focus by inaction is a step towards building better habits.\n\nBIGGEST LEAK:\nYour biggest leak this week was a complete lack of market engagement and opportunity cost. Despite maintaining your market read and identifying potential levels, your **net P&L of 0.00** shows you failed to translate your edge into any executed trades. This indicates either an inability to find valid A-setups or a failure to act when your conditions may have aligned.\n\nBEST TRADE: N/A \u2013 No trades were taken this week. You preserved 100% of your capital.\nWORST TRADE: N/A \u2013 No trades were taken this week. You incurred zero losses.\n\nNEXT WEEK:\nNext week, your focus is to *actively identify and execute* your first high-quality A-setup, based on location-first principles with confirmation or resting-limit. Do not overthink; your goal is to find ONE trade that aligns perfectly with your edge and take it. You must log the clear trigger for that A-setup."
+    "date": "2026-08-23",
+    "text": "SCORECARD:\nMarket Read: 8/10 \u2014 Preserved clarity and didn't force a read on low-conviction structure.\nLevel Selection: 8/10 \u2014 Maintained key HTF profile levels without diluting your chart with minor zones.\nExecution: 10/10 \u2014 Complete restraint; zero premature or anticipatory entries fired.\nRisk Management: 10/10 \u2014 Zero capital exposed and zero drawdowns across your funded accounts.\nPsychology: 8/10 \u2014 Conquered FOMO and the need to feel productive during the NY AM window.\nDiscipline: 10/10 \u2014 Perfect compliance with your max trade limit and A-setup filtering rules.\n\nPNL:\nNet: $0.00 | Best/Worst Day: $0.00 / $0.00 | Profit Factor: N/A | Avg R: N/A\n\nWHAT WORKED:\n- Total elimination of Trader B leak: You didn't front-run levels, chase price outside value, or force revenge trades.\n- Multi-account preservation: You kept your focus locked without blowing capital or fragmenting discipline across multiple funded setups.\n\nBIGGEST LEAK:\nPotential hesitation. With 0 trades taken, your leak this week wasn't over-trading\u2014it was ensuring that high selectivity doesn't turn into execution fear when price hits a valid HTF location (ONVP VAH/VAL/POC or liquidity sweep) with orderflow confirmation.\n\nBEST & WORST TRADE:\nBest Trade: None taken \u2014 sitting on your hands preserved 100% of your mental and financial capital.\nWorst Trade: None taken \u2014 zero execution errors and zero bad habits reinforced.\n\nNEXT WEEK:\nTake your next trade on a single account using strictly a planned-limit or confirmation entry at a clear HTF location before 11:00 ET, and log the exact orderflow trigger."
   },
   "days": [
     {
