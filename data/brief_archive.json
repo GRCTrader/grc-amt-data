@@ -1,6 +1,132 @@
 {
-  "updated": "2026-08-21T12:00:00.030341-04:00",
+  "updated": "2026-08-24T12:00:00.015078-04:00",
   "days": [
+    {
+      "date": "2026-08-24",
+      "regime": "Imbalance / Trend Continuation Down \u2014 opening below value in negative gamma with 100% short overnight inventory favoring downside discovery.",
+      "predicted_model": "trend_down",
+      "models": [
+        {
+          "model": "trend_down",
+          "probability": 51,
+          "confidence": "high",
+          "why": "Open below prior VAL 29247.0 with 100% short overnight inventory and price below gamma flip 29360.0 favors downside continuation.",
+          "stat_support": "base rate 24%",
+          "trigger": "Acceptance below PWL 29202.75 / OVN VAL 29193.0 on the RTH open.",
+          "confirm": "Failure to reclaim VAL 29247.0 on a retest, confirmed by aggressive selling or passive absorption.",
+          "target": "OVN Low 29116.75 and Put Wall 29035.0.",
+          "abort": "Acceptance back inside prior value above VAL 29247.0."
+        },
+        {
+          "model": "range_expansion",
+          "probability": 44,
+          "confidence": "medium",
+          "why": "Short gamma regime (-2.3$Bn) amplifies moves once price breaks overnight range limits.",
+          "stat_support": "base rate 32%",
+          "trigger": "Breakout below OVN Low 29116.75 or above OVN High 29398.0.",
+          "confirm": "Volume expansion and sustained directional delta driving outside the overnight range.",
+          "target": "Put Wall 29035.0 on downside or Call Wall 29445.0 on upside.",
+          "abort": "Price rotates back inside the OVN range 29116.75\u201329398.0."
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 11,
+          "confidence": "low",
+          "why": "Extended open below value offers a discount, but short gamma limits fade reliability.",
+          "stat_support": "base rate 12%",
+          "trigger": "Sweep below OVN Low 29116.75 with immediate rejection back above PWL 29202.75.",
+          "confirm": "Delta divergence and passive absorption at the extreme, turning into buy orderflow.",
+          "target": "VAL 29247.0 and POC 29298.0.",
+          "abort": "Acceptance and building volume below OVN Low 29116.75."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 7,
+          "confidence": "low",
+          "why": "Unswept liquidity below PWL 29202.75 could trap aggressive short sellers if participation drops.",
+          "stat_support": "base rate 9%",
+          "trigger": "Push below PDL 29220.0 / PWL 29202.75 that fails to build volume or market orders.",
+          "confirm": "Sharp reclaim above OVN VAL 29193.0 and VAL 29247.0.",
+          "target": "POC 29298.0 and Gamma Flip 29360.0.",
+          "abort": "Sustained prints and aggressive delta pressing below 29193.0."
+        },
+        {
+          "model": "short_covering",
+          "probability": 7,
+          "confidence": "low",
+          "why": "100% short overnight inventory creates squeeze potential if price re-enters prior value.",
+          "stat_support": "base rate 14%",
+          "trigger": "Reclaim of VAL 29247.0 holding as support.",
+          "confirm": "Aggressive buy volume pushing price through POC 29298.0.",
+          "target": "Gamma Flip 29360.0 and ONVP POC 29388.0.",
+          "abort": "Rejection back below VAL 29247.0."
+        }
+      ],
+      "plan": "If NQ opens below VAL 29247.0 and retests it with passive absorption/selling delta, enter short targeting 29116.75 and 29035.0. If price breaks directly below PWL 29202.75 and accepts, join downside momentum toward 29035.0. If price reclaims VAL 29247.0 with aggressive buying, stand aside as price likely rotates toward POC 29298.0.",
+      "invalidation": "Acceptance and sustained trading inside value above VAL 29247.0, invalidating the downside imbalance read.",
+      "risk_note": "Dealers are short gamma (-2.3$Bn) below 29360.0; moves will be fast and slippery \u2014 require strict orderflow confirmation before entry.",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": "trend_down",
+      "day_grade": null,
+      "actual_model": "range_expansion",
+      "correct": 0,
+      "grade_detail": "Two-sided, range 28947-29243, close 29096",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29399.0
+        },
+        {
+          "label": "POC",
+          "price": 29298.0
+        },
+        {
+          "label": "VAL",
+          "price": 29247.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29398.0
+        },
+        {
+          "label": "OVN Low",
+          "price": 29116.75
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29388.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29388.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29193.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29430.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29362.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29312.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29539.0
+        },
+        {
+          "label": "Prior Low",
+          "price": 29220.0
+        }
+      ]
+    },
     {
       "date": "2026-08-21",
       "regime": "Imbalance \u2014 Trend Continuation / Range Expansion above value driven by 100% long overnight inventory",
