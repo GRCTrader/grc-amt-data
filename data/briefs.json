@@ -1,15 +1,15 @@
 {
-  "updated": "2026-08-27T09:19:37.538317-04:00",
+  "updated": "2026-08-27T11:05:08.889872-04:00",
   "stats": {
-    "total_graded": 55,
+    "total_graded": 56,
     "correct": 18,
-    "accuracy_pct": 32.7,
-    "total_modern": 46,
+    "accuracy_pct": 32.1,
+    "total_modern": 47,
     "correct_modern": 14,
-    "accuracy_modern_pct": 30.4,
-    "top2_graded": 44,
+    "accuracy_modern_pct": 29.8,
+    "top2_graded": 45,
     "top2_hits": 23,
-    "top2_pct": 52.3,
+    "top2_pct": 51.1,
     "accuracy_series": [
       {
         "date": "2026-06-09",
@@ -285,13 +285,18 @@
         "date": "2026-08-24",
         "pct": 30.0,
         "n": 20
+      },
+      {
+        "date": "2026-08-27",
+        "pct": 25.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 54,
+        "total": 55,
         "correct": 18,
-        "pct": 33.3
+        "pct": 32.7
       },
       "?": {
         "total": 1,
@@ -312,8 +317,8 @@
       },
       "70\u201380%": {
         "correct": 4,
-        "total": 39,
-        "pct": 10.3
+        "total": 40,
+        "pct": 10.0
       },
       "80%+": {
         "correct": 0,
@@ -358,10 +363,10 @@
         "thin": true
       },
       "trend_up": {
-        "total": 12,
+        "total": 13,
         "correct": 2,
         "label": "\ud83d\udcc8 Trend Continuation Up",
-        "pct": 16.7,
+        "pct": 15.4,
         "thin": true
       },
       "trend_down": {
@@ -450,11 +455,17 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-08-27T09:19:37.538349-04:00",
+    "generated_at": "2026-08-27T11:05:08.889906-04:00",
     "last_brief_date": "2026-08-27",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-08-24",
+    "last_grade_date": "2026-08-27",
     "recent_failures": [
+      {
+        "ts": "2026-08-27 09:26:23",
+        "label": "bias_publish",
+        "status": "error",
+        "detail": "pushed 2/2; bias_live.py : name 'sys' is not defined; bias_grade.py record: name 'sys' is not defined; bias_grade.py grade: name 'sys' is not defined; bias_grade.py scorecard: name 'sys' is not defined"
+      },
       {
         "ts": "2026-08-27 09:16:00",
         "label": "bias_publish",
@@ -478,12 +489,6 @@
         "label": "session_note",
         "status": "error",
         "detail": "Connection timeout to host https://discord.com/api/v10/users/379248765644832768"
-      },
-      {
-        "ts": "2026-08-26 11:33:21",
-        "label": "eod_accuracy",
-        "status": "missed",
-        "detail": "watchdog"
       }
     ]
   },
@@ -580,6 +585,21 @@
           "abort": ""
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Held value 29476-29635",
+        "notes": null,
+        "gemini": "**SCENARIO**\nThe top predicted model, **Trend Continuation Up (59%)**, played out as NQ pushed higher from an early low of 29423.75 to a peak of 29623.5.\n\n**LEVELS**\nPrice briefly dipped into VAL 29476 / PDH 29437.75 near 09:30, held, and triggered long entries before breaking above ONVP VAH 29581 toward the 29640 target; OVN POC 29340 and OVN VAL 29323 were never tested.\n\n**GAMMA**\nPrice extended momentum rather than mean-reverting, though the rally capped out just below the 29640/29665 Call Wall edge.\n\n**VERDICT**\nThe 09:00 read was highly accurate and actionable, as the top predicted model correctly anticipated the upside trend move and target levels.",
+        "close": 29579.0,
+        "high": 29623.5,
+        "low": 29423.75,
+        "predicted_model": "trend_up",
+        "actual_model": "rotational_balance",
+        "model_correct": false,
+        "top2_hit": false
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -587,6 +607,34 @@
           "vs_settle": 246.75,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29550.25,
+          "vs_settle": 260.75,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29475.50/29635.00, target POC 29537.75."
+        },
+        {
+          "slot": "10:00",
+          "price": 29476.5,
+          "vs_settle": 187.0,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29475.50/29635.00, target POC 29537.75."
+        },
+        {
+          "slot": "10:30",
+          "price": 29577.25,
+          "vs_settle": 287.75,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29475.50/29635.00, target POC 29537.75."
+        },
+        {
+          "slot": "11:00",
+          "price": 29593.75,
+          "vs_settle": 304.25,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29475.50/29635.00, target POC 29537.75."
         },
         {
           "slot": "news_follow",
