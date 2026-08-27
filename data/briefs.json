@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-27T08:00:19.394499-04:00",
+  "updated": "2026-08-27T09:00:39.003273-04:00",
   "stats": {
     "total_graded": 55,
     "correct": 18,
@@ -450,9 +450,9 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-08-27T08:00:19.394515-04:00",
+    "generated_at": "2026-08-27T09:00:39.003305-04:00",
     "last_brief_date": "2026-08-27",
-    "last_brief_time": "08:00:03",
+    "last_brief_time": "09:00:00",
     "last_grade_date": "2026-08-24",
     "recent_failures": [
       {
@@ -503,7 +503,7 @@
       "ovn_high": 29662.0,
       "ovn_low": 29283.25,
       "ovn_poc": 29340.0,
-      "ovn_vah": 29586.0,
+      "ovn_vah": 29581.0,
       "ovn_val": 29323.0,
       "scenario_a": "A",
       "scenario_b": "B",
@@ -511,15 +511,15 @@
       "confidence_a": 0.75,
       "confidence_b": 0.12,
       "confidence_c": 0.13,
-      "post_time": "08:00:03",
+      "post_time": "09:00:00",
       "day_shape": "trend_up",
       "day_shape_note": null,
       "htf_bias": null,
       "htf_text": null,
-      "regime": "Imbalance \u2014 bullish trend continuation above prior value driving toward overnight high",
-      "invalidation": "Acceptance back below PDH 29437.75 into prior RTH value area invalidates the primary trend_up bias",
-      "plan": "If open drives above OVN VAH 29586.0 and holds, enter long targeting OVN High 29662.0. If open pulls back to retest PDH 29437.75, look for bid absorption to go long toward 29586.0 and 29662.0. If price sweeps OVN High 29662.0 and aggressively fails back below it, stand aside or execute a quick short fade toward 29518.25/29437.75.",
-      "risk": "100% long overnight inventory carries minor flash-liquidation risk if PDH 29437.75 fails; trader signal edge is negative on range_expansion setups.",
+      "regime": "Imbalance \u2014 Bullish Auction Discovery above Prior Value",
+      "invalidation": "Acceptance back below PDH 29437.75 and rotation into prior RTH value area below 29319.0 invalidates the bullish imbalance read",
+      "plan": "IF NQ holds a retest of PDH 29437.75 or ONVP VAH 29581.0 with buying absorption on RTH open, THEN enter long targeting Call wall 29640.0 and OVN high 29662.0. IF price sweeps Call wall 29640.0 / OVN high 29662.0 and shows aggressive seller absorption with negative delta divergence, THEN fade back to ONVP VAH 29581.0 and ONVP POC 29340.0. IF price accepts below 29323.0 (ONVP VAL), THEN stand aside as MTF conflict increases toward prior RTH POC 29238.0.",
+      "risk": "+4.0$Bn positive gamma regime acts as a dampener on extreme directional moves; shadow sim shows negative edge on range expansion setups ($-6,036 over 9 trades).",
       "predicted_model": "trend_up",
       "vol_regime": "normal",
       "tpo_read": null,
@@ -528,63 +528,63 @@
           "model": "trend_up",
           "probability": 59,
           "confidence": "high",
-          "why": "Opens above prior value area (29319.0) with 100% long overnight inventory and a 2-day up-trend intact.",
+          "why": "Price opened 129% of prior-day range above prior RTH value (29319.0) with 100% long OVN inventory, favoring continuation toward upside magnets.",
           "stat_support": "base rate 33%",
-          "trigger": "Open accepts above OVN VAH 29586.0 or holds a shallow retest of PDH 29437.75",
-          "confirm": "One-timeframing higher above 29586.0 with positive CVD and passive absorption on dips",
-          "target": "OVN High 29662.0, followed by PWH 30343.0",
-          "abort": "Sustained re-entry and acceptance back below PDH 29437.75"
+          "trigger": "Retest and hold of PDH 29437.75 or acceptance above ONVP VAH 29581.0",
+          "confirm": "Buying absorption/exhaustion of sellers at 29437.75 with positive delta drive",
+          "target": "Call wall 29640.0 and OVN high 29662.0",
+          "abort": "Acceptance back below PDH 29437.75 and into prior RTH value below 29319.0"
         },
         {
           "model": "range_expansion",
           "probability": 35,
           "confidence": "medium",
-          "why": "Overnight range is 378.75 points (50th percentile) and 25 similar days show a 40% historical rate of breaking OVN boundaries.",
+          "why": "Breakout beyond prior-day range premium supported by normal overnight volatility (378.75 pts) driving range expansion outside OVN profile.",
           "stat_support": "base rate 31%",
-          "trigger": "Price consolidates tightly between 29518.25 and 29586.0 before a high-volume break",
-          "confirm": "Strong directional volume expansion pushing beyond OVN High 29662.0",
-          "target": "30000 psychological handle / PWH 30343.0",
-          "abort": "Breakout fails immediately and rotates back inside OVN range below 29518.25"
+          "trigger": "Displacement and volume expansion outside OVN range limits (29283.25\u201329662.0)",
+          "confirm": "Sustained directional speed breaking OVN high 29662.0",
+          "target": "PWH 30343.0 on upside expansion or ONVP VAL 29323.0 on downside pull",
+          "abort": "Rotational containment between ONVP VAH 29581.0 and ONVP VAL 29323.0"
         },
         {
           "model": "mean_reversion",
-          "probability": 12,
+          "probability": 15,
           "confidence": "low",
-          "why": "Price is extended +0.78% above settlement (29289.5) and 124% of prior-day range, though extended gaps rarely snap back fully.",
+          "why": "Extends +0.84% above settle in a +4.0$Bn positive gamma environment where dealer hedging dampens runaway moves and favors fades at extremes.",
           "stat_support": "base rate 12%",
-          "trigger": "Rejection at OVN VAH 29586.0 or OVN High 29662.0 with aggressive selling delta",
-          "confirm": "Loss and acceptance below PDH 29437.75",
-          "target": "ONVP POC 29340.0 and RTH VAH 29319.0",
-          "abort": "Acceptance and hold above OVN VAH 29586.0"
+          "trigger": "Sweep of Call wall 29640.0 / OVN high 29662.0 followed by immediate rejection",
+          "confirm": "Delta divergence and absorption at 29640.0 returning below ONVP VAH 29581.0",
+          "target": "ONVP POC 29340.0 and prior RTH VAH 29319.0",
+          "abort": "Acceptance and building value above OVN high 29662.0"
         },
         {
           "model": "rotational_balance",
-          "probability": 9,
+          "probability": 12,
           "confidence": "low",
-          "why": "The +0.78% open gap and 100% long inventory strongly argue against two-sided rotational balance.",
+          "why": "High positive gamma (+4.0$Bn) pins price and keeps auction rotational above gamma flip 29225.0 despite gap open.",
           "stat_support": "base rate 14%",
-          "trigger": "Price fails to break 29586.0 and stalls between 29437.75 and 29586.0",
-          "confirm": "Rotational two-way orderflow churning around 29518.25 with flat VWAP slope",
-          "target": "ONVP POC 29340.0",
-          "abort": "Displacement outside the 29437.75\u201329586.0 bracket"
+          "trigger": "Failure to break OVN high 29662.0 combined with defense of PDH 29437.75",
+          "confirm": "Two-sided rotational volume centered around ONVP POC 29340.0",
+          "target": "ONVP VAH 29581.0 and ONVP VAL 29323.0",
+          "abort": "Directional displacement outside 29323.0\u201329662.0"
         },
         {
           "model": "failed_auction",
           "probability": 6,
           "confidence": "low",
-          "why": "A sweep of OVN High 29662.0 that lacks buying follow-through could trap late breakout longs into a sharp reversal.",
+          "why": "+ unswept liquidity to trap into",
           "stat_support": "base rate 7%",
-          "trigger": "Probe above OVN High 29662.0 followed by immediate passive absorption and selling",
-          "confirm": "Fast reclaim back below 29662.0 with aggressive delta flipping negative",
-          "target": "PDH 29437.75",
-          "abort": "Acceptance and sustained trading above 29662.0"
+          "trigger": "",
+          "confirm": "",
+          "target": "",
+          "abort": ""
         }
       ],
       "intraday": [
         {
           "slot": "09:00",
-          "price": 29518.25,
-          "vs_settle": 228.75,
+          "price": 29536.25,
+          "vs_settle": 246.75,
           "inside_va": false,
           "call": "Morning brief anchor"
         }
