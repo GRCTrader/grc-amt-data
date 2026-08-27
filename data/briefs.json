@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-27T09:00:39.003273-04:00",
+  "updated": "2026-08-27T09:19:37.538317-04:00",
   "stats": {
     "total_graded": 55,
     "correct": 18,
@@ -450,11 +450,23 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-08-27T09:00:39.003305-04:00",
+    "generated_at": "2026-08-27T09:19:37.538349-04:00",
     "last_brief_date": "2026-08-27",
     "last_brief_time": "09:00:00",
     "last_grade_date": "2026-08-24",
     "recent_failures": [
+      {
+        "ts": "2026-08-27 09:16:00",
+        "label": "bias_publish",
+        "status": "error",
+        "detail": "ops_alert() takes 1 positional argument but 2 were given"
+      },
+      {
+        "ts": "2026-08-27 09:16:00",
+        "label": "bias_publish",
+        "status": "error",
+        "detail": "pushed 0/2; bias_live.py : name 'sys' is not defined; bias_grade.py record: name 'sys' is not defined; bias_grade.py grade: name 'sys' is not defined; bias_grade.py scorecard: name 'sys' is not defined; bias_today.json was not produced; bias_scorecard.json was not produced"
+      },
       {
         "ts": "2026-08-26 16:22:16",
         "label": "gex_fetch_eod",
@@ -472,18 +484,6 @@
         "label": "eod_accuracy",
         "status": "missed",
         "detail": "watchdog"
-      },
-      {
-        "ts": "2026-08-26 09:10:47",
-        "label": "brief",
-        "status": "missed",
-        "detail": "watchdog"
-      },
-      {
-        "ts": "2026-08-26 08:02:34",
-        "label": "early_brief",
-        "status": "error",
-        "detail": "Connection timeout to host https://discord.com/api/v10/channels/1509674316281679912/messages"
       }
     ]
   },
@@ -496,12 +496,12 @@
     {
       "date": "2026-08-27",
       "inventory": "100L",
-      "vah": 29319.0,
-      "poc": 29238.0,
-      "val": 29216.0,
+      "vah": 29635.0,
+      "poc": 29537.75,
+      "val": 29475.5,
       "settle": 29289.5,
       "ovn_high": 29662.0,
-      "ovn_low": 29283.25,
+      "ovn_low": 29401.75,
       "ovn_poc": 29340.0,
       "ovn_vah": 29581.0,
       "ovn_val": 29323.0,
@@ -587,6 +587,13 @@
           "vs_settle": 246.75,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "news_follow",
+          "price": 29538.0,
+          "vs_settle": 248.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29216.00\u201329319.00."
         }
       ]
     },
