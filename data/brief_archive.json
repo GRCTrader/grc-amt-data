@@ -1,6 +1,140 @@
 {
-  "updated": "2026-08-24T12:00:00.015078-04:00",
+  "updated": "2026-08-27T12:00:00.013077-04:00",
   "days": [
+    {
+      "date": "2026-08-27",
+      "regime": "Imbalance \u2014 Bullish Auction Discovery above Prior Value",
+      "predicted_model": "trend_up",
+      "models": [
+        {
+          "model": "trend_up",
+          "probability": 59,
+          "confidence": "high",
+          "why": "Price opened 129% of prior-day range above prior RTH value (29319.0) with 100% long OVN inventory, favoring continuation toward upside magnets.",
+          "stat_support": "base rate 33%",
+          "trigger": "Retest and hold of PDH 29437.75 or acceptance above ONVP VAH 29581.0",
+          "confirm": "Buying absorption/exhaustion of sellers at 29437.75 with positive delta drive",
+          "target": "Call wall 29640.0 and OVN high 29662.0",
+          "abort": "Acceptance back below PDH 29437.75 and into prior RTH value below 29319.0"
+        },
+        {
+          "model": "range_expansion",
+          "probability": 35,
+          "confidence": "medium",
+          "why": "Breakout beyond prior-day range premium supported by normal overnight volatility (378.75 pts) driving range expansion outside OVN profile.",
+          "stat_support": "base rate 31%",
+          "trigger": "Displacement and volume expansion outside OVN range limits (29283.25\u201329662.0)",
+          "confirm": "Sustained directional speed breaking OVN high 29662.0",
+          "target": "PWH 30343.0 on upside expansion or ONVP VAL 29323.0 on downside pull",
+          "abort": "Rotational containment between ONVP VAH 29581.0 and ONVP VAL 29323.0"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 15,
+          "confidence": "low",
+          "why": "Extends +0.84% above settle in a +4.0$Bn positive gamma environment where dealer hedging dampens runaway moves and favors fades at extremes.",
+          "stat_support": "base rate 12%",
+          "trigger": "Sweep of Call wall 29640.0 / OVN high 29662.0 followed by immediate rejection",
+          "confirm": "Delta divergence and absorption at 29640.0 returning below ONVP VAH 29581.0",
+          "target": "ONVP POC 29340.0 and prior RTH VAH 29319.0",
+          "abort": "Acceptance and building value above OVN high 29662.0"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 12,
+          "confidence": "low",
+          "why": "High positive gamma (+4.0$Bn) pins price and keeps auction rotational above gamma flip 29225.0 despite gap open.",
+          "stat_support": "base rate 14%",
+          "trigger": "Failure to break OVN high 29662.0 combined with defense of PDH 29437.75",
+          "confirm": "Two-sided rotational volume centered around ONVP POC 29340.0",
+          "target": "ONVP VAH 29581.0 and ONVP VAL 29323.0",
+          "abort": "Directional displacement outside 29323.0\u201329662.0"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 6,
+          "confidence": "low",
+          "why": "+ unswept liquidity to trap into",
+          "stat_support": "base rate 7%",
+          "trigger": "",
+          "confirm": "",
+          "target": "",
+          "abort": ""
+        }
+      ],
+      "plan": "IF NQ holds a retest of PDH 29437.75 or ONVP VAH 29581.0 with buying absorption on RTH open, THEN enter long targeting Call wall 29640.0 and OVN high 29662.0. IF price sweeps Call wall 29640.0 / OVN high 29662.0 and shows aggressive seller absorption with negative delta divergence, THEN fade back to ONVP VAH 29581.0 and ONVP POC 29340.0. IF price accepts below 29323.0 (ONVP VAL), THEN stand aside as MTF conflict increases toward prior RTH POC 29238.0.",
+      "invalidation": "Acceptance back below PDH 29437.75 and rotation into prior RTH value area below 29319.0 invalidates the bullish imbalance read",
+      "risk_note": "+4.0$Bn positive gamma regime acts as a dampener on extreme directional moves; shadow sim shows negative edge on range expansion setups ($-6,036 over 9 trades).",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": "trend_up",
+      "day_grade": null,
+      "actual_model": "rotational_balance",
+      "correct": 0,
+      "grade_detail": "Held value 29476-29635",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29635.0
+        },
+        {
+          "label": "POC",
+          "price": 29537.75
+        },
+        {
+          "label": "VAL",
+          "price": 29475.5
+        },
+        {
+          "label": "OVN High",
+          "price": 29662.0
+        },
+        {
+          "label": "OVN Low",
+          "price": 29401.75
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29581.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29340.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29323.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29346.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29274.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29231.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29437.75
+        },
+        {
+          "label": "Prior Low",
+          "price": 29096.0
+        },
+        {
+          "label": "HVN 1",
+          "price": 29448.5
+        },
+        {
+          "label": "HVN 2",
+          "price": 29343.25
+        }
+      ]
+    },
     {
       "date": "2026-08-24",
       "regime": "Imbalance / Trend Continuation Down \u2014 opening below value in negative gamma with 100% short overnight inventory favoring downside discovery.",
