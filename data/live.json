@@ -1,79 +1,84 @@
 {
-  "asof": "2026-08-24 11:01 ET",
-  "slot": "11:01",
-  "price": 29095.0,
-  "bias": "SHORT",
+  "asof": "2026-08-27 09:32 ET",
+  "slot": "09:31",
+  "price": 29549.75,
+  "bias": "LONG",
   "scenarios": [
     {
-      "model": "trend_down",
-      "probability": 51,
-      "base_rate": 24,
+      "model": "trend_up",
+      "probability": 59,
+      "base_rate": 33,
       "drivers": [
-        "+ open below value",
-        "+ already 100% short overnight \u2014 historically a continuation tell, not a squeeze risk",
-        "+ price below gamma flip 29360 \u2014 momentum regime (soft; unconfirmed live)"
+        "+ open above value",
+        "+ 2d+ up-trend intact",
+        "+ already 100% long overnight \u2014 historically a continuation tell, not a fade",
+        "\u2212 large +GEX dampens trends",
+        "\u2212 25 similar days: 48% historically",
+        "\u2212 calibration: engine ran hot on this model (15% real vs 43% claimed)"
       ]
     },
     {
       "model": "range_expansion",
-      "probability": 44,
-      "base_rate": 32,
+      "probability": 35,
+      "base_rate": 31,
       "drivers": [
-        "+ -GEX fuels expansion",
-        "+ price below gamma flip 29360 \u2014 momentum regime",
-        "\u2212 25 similar days: 32% historically"
+        "+ 25 similar days: 40% historically",
+        "+ calibration: engine ran cold on this model (35% real vs 32% claimed)"
       ]
     },
     {
       "model": "mean_reversion",
-      "probability": 11,
+      "probability": 15,
       "base_rate": 12,
       "drivers": [
         "\u2212 extended open far from POC \u2014 mild discount; an extended gap doesn't reliably snap back",
-        "\u2212 price below gamma flip 29360 \u2014 fades lose fuel",
-        "+ calibration: engine ran cold on this model (16% real vs 10% claimed)"
+        "+ +GEX favors fade-the-extreme",
+        "+ price above gamma flip 29225 in +GEX \u2014 rotation regime",
+        "+ calibration: engine ran cold on this model (15% real vs 10% claimed)"
       ]
     },
     {
-      "model": "failed_auction",
-      "probability": 7,
-      "base_rate": 9,
+      "model": "rotational_balance",
+      "probability": 12,
+      "base_rate": 14,
       "drivers": [
-        "+ unswept liquidity to trap into",
+        "\u2212 gap argues against balance",
+        "+ +GEX pins price",
+        "+ price above gamma flip 29225 in +GEX \u2014 rotation regime",
         "\u2212 25 similar days: 0% historically"
       ]
     }
   ],
   "invalidations": [
     {
-      "scenario": "trend_down",
+      "scenario": "trend_up",
       "status": "armed",
-      "condition": "close_above",
-      "level": 29298.0,
-      "closes_needed": 2,
-      "meaning": "trend_down dead \u2014 acceptance back above POC 29298.0"
-    },
-    {
-      "scenario": "trend_down",
-      "status": "tripped",
       "condition": "close_below",
-      "level": 29035.0,
+      "level": 29238.0,
       "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance below the put wall 29035 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
+      "meaning": "trend_up dead \u2014 acceptance back below POC 29238.0"
     },
     {
-      "scenario": "trend_down",
+      "scenario": "trend_up",
+      "status": "armed",
+      "condition": "close_below",
+      "level": 28815.0,
+      "closes_needed": 2,
+      "meaning": "\u26a1 GAMMA: acceptance below the put wall 28815 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
+    },
+    {
+      "scenario": "trend_up",
       "status": "armed",
       "condition": "close_above",
-      "level": 29445.0,
+      "level": 29640.0,
       "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance above the call wall 29445 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
+      "meaning": "\u26a1 GAMMA: acceptance above the call wall 29640 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
     }
   ],
   "gex": {
-    "total_gex_bn": -2.41,
-    "flip_nq": 29365,
-    "call_wall_nq": 29445,
-    "put_wall_nq": 29035
+    "total_gex_bn": 3.68,
+    "flip_nq": 29255,
+    "call_wall_nq": 29665,
+    "put_wall_nq": 28840
   }
 }
