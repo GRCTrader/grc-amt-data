@@ -1,6 +1,132 @@
 {
-  "updated": "2026-08-27T12:00:00.013077-04:00",
+  "updated": "2026-08-28T12:00:00.010007-04:00",
   "days": [
+    {
+      "date": "2026-08-28",
+      "regime": "Balance / Rotational \u2014 Price open above prior RTH value inside positive gamma environment (+2.6B), favoring rotational fading and short covering over directional expansion.",
+      "predicted_model": "rotational_balance",
+      "models": [
+        {
+          "model": "rotational_balance",
+          "probability": 32,
+          "confidence": "medium",
+          "why": "Price is above the gamma flip (29445) in a strong +2.6B GEX regime while holding between OVN VAL 29616.0 and OVN VAH 29698.0.",
+          "stat_support": "base rate 29%",
+          "trigger": "Open remains responsive inside OVN range 29616.0\u201329698.0 without establishing acceptance above PDH 29708.0.",
+          "confirm": "Two-sided rotational orderflow and absorption around OVN POC 29685.0 and OVN VAL 29616.0.",
+          "target": "Rotations between OVN VAH 29698.0 / Settle 29695.75 down to OVN VAL 29616.0 and prior RTH VAH 29605.0.",
+          "abort": "Acceptance and sustained one-timeframing above PDH 29708.0 or below prior RTH POC 29502.0."
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 24,
+          "confidence": "low",
+          "why": "Opening out of prior RTH value (29605.0) in high positive gamma incentivizes dealer mean-reversion toward lower value references.",
+          "stat_support": "base rate 18%",
+          "trigger": "Rejection at OVN VAH 29698.0 or Settle 29695.75 back inside prior RTH VAH 29605.0.",
+          "confirm": "Aggressive selling delta at 29698.0 and acceptance below OVN VAL 29616.0.",
+          "target": "Prior RTH POC 29502.0 and prior RTH VAL 29474.0.",
+          "abort": "Sustained acceptance above OVN VAH 29698.0 with delta expansion."
+        },
+        {
+          "model": "short_covering",
+          "probability": 23,
+          "confidence": "low",
+          "why": "100% short overnight inventory into a compressed range leaves overnight shorts vulnerable to a squeeze above local resistance.",
+          "stat_support": "base rate 11%",
+          "trigger": "Sustained push above OVN POC 29685.0 holding above OVN VAH 29698.0.",
+          "confirm": "Buying absorption of passive asks at PDH 29708.0 leading to short liquidation acceleration.",
+          "target": "Call Wall 29815.0 and higher HTF liquidity references.",
+          "abort": "Failure to hold OVN VAL 29616.0 and re-entry into prior RTH value."
+        },
+        {
+          "model": "range_expansion",
+          "probability": 14,
+          "confidence": "low",
+          "why": "Ultra-compressed OVN range (129.75 pts) could release into an RTH breakout, though dampening +GEX reduces probability.",
+          "stat_support": "base rate 14%",
+          "trigger": "Clear breakout and acceptance beyond PDH/OVNH 29708.0 or OVN low 29578.25.",
+          "confirm": "Consecutive 5-min bar closes outside the OVN range with expanding volume and delta.",
+          "target": "Call Wall 29815.0 on upside expansion; Prior RTH POC 29502.0 on downside expansion.",
+          "abort": "Immediate re-entry into the OVN range 29616.0\u201329698.0."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 13,
+          "confidence": "low",
+          "why": "Unswept liquidity above PDH/OVNH 29708.0 provides a clear target for a stop-run before reversing back into value.",
+          "stat_support": "base rate 14%",
+          "trigger": "Sweep of PDH/OVNH 29708.0 that immediately runs out of aggressive buying.",
+          "confirm": "Passive absorption at 29708.0 followed by swift delta flip back below OVN VAH 29698.0.",
+          "target": "OVN VAL 29616.0 and prior RTH VAH 29605.0.",
+          "abort": "Sustained one-timeframing and acceptance above 29708.0."
+        }
+      ],
+      "plan": "IF price opens near 29659.5 and pushes into PDH/OVNH 29708.0, WATCH for absorption at 29698.0\u201329708.0; IF passive sellers absorb aggressive buyers and price reclaims below 29695.75 (Settle), THEN short targeting OVN VAL 29616.0 and prior RTH VAH 29605.0 with stop above 29715.0. IF price instead breaks below OVN VAL 29616.0 and accepts inside prior RTH value, THEN target prior RTH POC 29502.0. IF price accepts above 29708.0 with strong buy delta, THEN step aside or evaluate long continuation toward 29815.0 Call Wall.",
+      "invalidation": "Sustained multi-bar acceptance above 29708.0 invalidates the rotational/mean-reversion bias and opens a short-covering run toward 29815.0.",
+      "risk_note": "Low overnight volatility regime (130 pts) combined with +2.6B GEX can trap impulse traders mid-range; trade location only at extremes.",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": "rotational_balance",
+      "day_grade": null,
+      "actual_model": "failed_auction",
+      "correct": 0,
+      "grade_detail": "Swept OVN low 29578, failed, closed 29770",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29605.0
+        },
+        {
+          "label": "POC",
+          "price": 29502.0
+        },
+        {
+          "label": "VAL",
+          "price": 29474.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29708.0
+        },
+        {
+          "label": "OVN Low",
+          "price": 29578.25
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29698.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29685.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29616.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29319.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29238.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29216.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29708.0
+        },
+        {
+          "label": "Prior Low",
+          "price": 29401.75
+        }
+      ]
+    },
     {
       "date": "2026-08-27",
       "regime": "Imbalance \u2014 Bullish Auction Discovery above Prior Value",
