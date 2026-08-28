@@ -1,15 +1,15 @@
 {
-  "updated": "2026-08-28T09:01:26.613162-04:00",
+  "updated": "2026-08-28T11:05:23.024416-04:00",
   "stats": {
-    "total_graded": 56,
+    "total_graded": 57,
     "correct": 18,
-    "accuracy_pct": 32.1,
-    "total_modern": 47,
+    "accuracy_pct": 31.6,
+    "total_modern": 48,
     "correct_modern": 14,
-    "accuracy_modern_pct": 29.8,
-    "top2_graded": 45,
+    "accuracy_modern_pct": 29.2,
+    "top2_graded": 46,
     "top2_hits": 23,
-    "top2_pct": 51.1,
+    "top2_pct": 50.0,
     "accuracy_series": [
       {
         "date": "2026-06-09",
@@ -290,13 +290,18 @@
         "date": "2026-08-27",
         "pct": 25.0,
         "n": 20
+      },
+      {
+        "date": "2026-08-28",
+        "pct": 25.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 55,
+        "total": 56,
         "correct": 18,
-        "pct": 32.7
+        "pct": 32.1
       },
       "?": {
         "total": 1,
@@ -311,9 +316,9 @@
         "pct": 25.0
       },
       "60\u201370%": {
-        "correct": 2,
-        "total": 3,
-        "pct": 66.7
+        "correct": 3,
+        "total": 4,
+        "pct": 75.0
       },
       "70\u201380%": {
         "correct": 4,
@@ -356,10 +361,10 @@
         "thin": true
       },
       "rotational_balance": {
-        "total": 5,
+        "total": 6,
         "correct": 1,
         "label": "\u2696\ufe0f Rotational / Balance",
-        "pct": 20.0,
+        "pct": 16.7,
         "thin": true
       },
       "trend_up": {
@@ -455,11 +460,23 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-08-28T09:01:26.613179-04:00",
+    "generated_at": "2026-08-28T11:05:23.024458-04:00",
     "last_brief_date": "2026-08-28",
     "last_brief_time": "09:00:00",
-    "last_grade_date": "2026-08-27",
+    "last_grade_date": "2026-08-28",
     "recent_failures": [
+      {
+        "ts": "2026-08-28 09:32:02",
+        "label": "bias_publish",
+        "status": "error",
+        "detail": "pushed 2/2; bias_live.py : name 'sys' is not defined; bias_grade.py record: name 'sys' is not defined; bias_grade.py grade: name 'sys' is not defined; bias_grade.py scorecard: name 'sys' is not defined"
+      },
+      {
+        "ts": "2026-08-28 09:16:02",
+        "label": "bias_publish",
+        "status": "error",
+        "detail": "pushed 2/2; bias_live.py : name 'sys' is not defined; bias_grade.py record: name 'sys' is not defined; bias_grade.py grade: name 'sys' is not defined; bias_grade.py scorecard: name 'sys' is not defined"
+      },
       {
         "ts": "2026-08-27 09:26:23",
         "label": "bias_publish",
@@ -477,18 +494,6 @@
         "label": "bias_publish",
         "status": "error",
         "detail": "pushed 0/2; bias_live.py : name 'sys' is not defined; bias_grade.py record: name 'sys' is not defined; bias_grade.py grade: name 'sys' is not defined; bias_grade.py scorecard: name 'sys' is not defined; bias_today.json was not produced; bias_scorecard.json was not produced"
-      },
-      {
-        "ts": "2026-08-26 16:22:16",
-        "label": "gex_fetch_eod",
-        "status": "error",
-        "detail": "timed out"
-      },
-      {
-        "ts": "2026-08-26 13:35:21",
-        "label": "session_note",
-        "status": "error",
-        "detail": "Connection timeout to host https://discord.com/api/v10/users/379248765644832768"
       }
     ]
   },
@@ -585,6 +590,21 @@
           "abort": "Sustained one-timeframing and acceptance above 29708.0."
         }
       ],
+      "grade": {
+        "actual": "A",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Swept OVN low 29578, failed, closed 29770",
+        "notes": null,
+        "gemini": "**SCENARIO**  \nAfter an initial pullback to 29505.0, price launched into the #3 ranked **Short-Covering Rally** (23%).\n\n**LEVELS**  \nBreaking below OVN VAL 29616.0 filled the downside plan near prior RTH POC 29502.0 (low 29505.0); price then reversed above OVN VAH 29698.0 and triggered the 29708.0 invalidation run up to 29778.5.\n\n**GAMMA**  \nThe predicted long gamma mean-reversion failed to hold the range as directional momentum broke out toward the 29830 call wall.\n\n**VERDICT**  \nThe 09:00 read was highly useful, perfectly hitting the 29502.0 downside target before cleanly activating the upside breakout plan above 29708.0.",
+        "close": 29769.5,
+        "high": 29778.5,
+        "low": 29505.0,
+        "predicted_model": "rotational_balance",
+        "actual_model": "failed_auction",
+        "model_correct": false,
+        "top2_hit": false
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -592,6 +612,34 @@
           "vs_settle": -36.25,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "09:30",
+          "price": 29653.25,
+          "vs_settle": -42.5,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29474.00\u201329605.00."
+        },
+        {
+          "slot": "10:00",
+          "price": 29658.0,
+          "vs_settle": -37.75,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29474.00\u201329605.00."
+        },
+        {
+          "slot": "10:30",
+          "price": 29605.0,
+          "vs_settle": -90.75,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29474.00/29605.00, target POC 29502.00."
+        },
+        {
+          "slot": "11:00",
+          "price": 29750.0,
+          "vs_settle": 54.25,
+          "inside_va": false,
+          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29474.00\u201329605.00."
         }
       ]
     },
