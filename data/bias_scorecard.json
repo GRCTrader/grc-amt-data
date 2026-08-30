@@ -1,14 +1,26 @@
 {
-  "generated_at": "2026-08-27T09:26:03.627304-04:00",
+  "generated_at": "2026-08-30T19:30:14.781066-04:00",
   "live": {
     "lon_high": {
-      "n": 0
+      "n": 1,
+      "brier": 0.21809,
+      "accuracy": 100.0,
+      "avg_predicted": 53.3,
+      "actual_rate": 100.0
     },
     "lon_low": {
-      "n": 0
+      "n": 1,
+      "brier": 0.29594,
+      "accuracy": 0.0,
+      "avg_predicted": 45.6,
+      "actual_rate": 100.0
     },
     "first_high": {
-      "n": 0
+      "n": 1,
+      "brier": 0.26112,
+      "accuracy": 0.0,
+      "avg_predicted": 51.1,
+      "actual_rate": 0.0
     }
   },
   "backtested": {
@@ -97,8 +109,42 @@
       "label": "NY AM closes above the 09:15 open"
     }
   },
-  "live_days": 0,
-  "recent": [],
+  "live_days": 1,
+  "recent": [
+    {
+      "date": "2026-08-27",
+      "weekday": "Thursday",
+      "open_state": "inside_range",
+      "scores": {
+        "lon_high": {
+          "p": 0.533,
+          "actual": 1,
+          "brier": 0.21809,
+          "correct": 1
+        },
+        "lon_low": {
+          "p": 0.456,
+          "actual": 1,
+          "brier": 0.29594,
+          "correct": 0
+        },
+        "first_high": {
+          "p": 0.511,
+          "actual": 0,
+          "brier": 0.26112,
+          "correct": 0
+        }
+      },
+      "actual": {
+        "out_high": 29662.0,
+        "out_low": 29401.75,
+        "lon_high": 1,
+        "lon_low": 1,
+        "first_side": "low",
+        "first_high": 0
+      }
+    }
+  ],
   "model_version": 3,
   "anchor_min": 555,
   "trained_rows": 4716
