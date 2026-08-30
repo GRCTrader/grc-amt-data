@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-28T11:05:23.024416-04:00",
+  "updated": "2026-08-30T17:00:15.177612-04:00",
   "stats": {
     "total_graded": 57,
     "correct": 18,
@@ -421,15 +421,24 @@
       }
     },
     "weekly_diagnostic": {
-      "week_start": "2026-08-17",
-      "week_end": "2026-08-21",
-      "total_graded": 5,
-      "correct": 3,
-      "accuracy_pct": 60.0,
-      "review_text": "WHAT HAPPENED:\nThe model correctly called three out of five days, successfully anticipating trend_down, failed_auction, and range_expansion. However, it failed on both bookend days by misjudging Monday's rotational balance and opposing Friday's liquidation.\n\nBIGGEST MISS:\nThe worst call occurred on August 21, when the model predicted trend_up, but the market experienced long liquidation, accepting below value area low at 29312 and closing at the range low of 29296.\n\nSUGGESTED IMPROVEMENT:\nHypothesize reducing the bullish scenario weighting in scenarios.py when price opens and accepts below the prior day's value area low. That said, a single week with five trades is too thin a sample size to justify structural changes, so this must be backtested against the full 19-year dataset first.",
-      "created_at": "2026-08-21 15:20:43"
+      "week_start": "2026-08-24",
+      "week_end": "2026-08-28",
+      "total_graded": 3,
+      "correct": 0,
+      "accuracy_pct": 0.0,
+      "review_text": "WHAT HAPPENED:\nThe model went 0 for 3 this week, misinterpreting directional conviction when the market delivered two-sided rotation or structural sweeps. It projected strong trends into balanced conditions and missed a key failed auction.\n\nBIGGEST MISS:\nThe worst miss occurred on August 24, when the model predicted trend_down, but price established a two-sided range_expansion between 28947 and 29243, closing near the middle at 29096.\n\nSUGGESTED IMPROVEMENT:\nA three-day sample is too thin to justify immediate code adjustments. As a hypothesis to backtest against the 19-year history, consider modifying scenarios.py to reduce the weight of directional trend signals unless price accepts beyond the prior session's high or low during the open auction.",
+      "created_at": "2026-08-28 15:20:15"
     },
     "weekly_diagnostics_all": [
+      {
+        "week_start": "2026-08-24",
+        "week_end": "2026-08-28",
+        "total_graded": 3,
+        "correct": 0,
+        "accuracy_pct": 0.0,
+        "review_text": "WHAT HAPPENED:\nThe model went 0 for 3 this week, misinterpreting directional conviction when the market delivered two-sided rotation or structural sweeps. It projected strong trends into balanced conditions and missed a key failed auction.\n\nBIGGEST MISS:\nThe worst miss occurred on August 24, when the model predicted trend_down, but price established a two-sided range_expansion between 28947 and 29243, closing near the middle at 29096.\n\nSUGGESTED IMPROVEMENT:\nA three-day sample is too thin to justify immediate code adjustments. As a hypothesis to backtest against the 19-year history, consider modifying scenarios.py to reduce the weight of directional trend signals unless price accepts beyond the prior session's high or low during the open auction.",
+        "created_at": "2026-08-28 15:20:15"
+      },
       {
         "week_start": "2026-08-17",
         "week_end": "2026-08-21",
@@ -460,7 +469,7 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-08-28T11:05:23.024458-04:00",
+    "generated_at": "2026-08-30T17:00:15.177648-04:00",
     "last_brief_date": "2026-08-28",
     "last_brief_time": "09:00:00",
     "last_grade_date": "2026-08-28",
@@ -476,31 +485,13 @@
         "label": "bias_publish",
         "status": "error",
         "detail": "pushed 2/2; bias_live.py : name 'sys' is not defined; bias_grade.py record: name 'sys' is not defined; bias_grade.py grade: name 'sys' is not defined; bias_grade.py scorecard: name 'sys' is not defined"
-      },
-      {
-        "ts": "2026-08-27 09:26:23",
-        "label": "bias_publish",
-        "status": "error",
-        "detail": "pushed 2/2; bias_live.py : name 'sys' is not defined; bias_grade.py record: name 'sys' is not defined; bias_grade.py grade: name 'sys' is not defined; bias_grade.py scorecard: name 'sys' is not defined"
-      },
-      {
-        "ts": "2026-08-27 09:16:00",
-        "label": "bias_publish",
-        "status": "error",
-        "detail": "ops_alert() takes 1 positional argument but 2 were given"
-      },
-      {
-        "ts": "2026-08-27 09:16:00",
-        "label": "bias_publish",
-        "status": "error",
-        "detail": "pushed 0/2; bias_live.py : name 'sys' is not defined; bias_grade.py record: name 'sys' is not defined; bias_grade.py grade: name 'sys' is not defined; bias_grade.py scorecard: name 'sys' is not defined; bias_today.json was not produced; bias_scorecard.json was not produced"
       }
     ]
   },
   "coach": null,
   "mentor_review": {
-    "date": "2026-08-23",
-    "text": "SCORECARD:\nMarket Read: 8/10 \u2014 Preserved clarity and didn't force a read on low-conviction structure.\nLevel Selection: 8/10 \u2014 Maintained key HTF profile levels without diluting your chart with minor zones.\nExecution: 10/10 \u2014 Complete restraint; zero premature or anticipatory entries fired.\nRisk Management: 10/10 \u2014 Zero capital exposed and zero drawdowns across your funded accounts.\nPsychology: 8/10 \u2014 Conquered FOMO and the need to feel productive during the NY AM window.\nDiscipline: 10/10 \u2014 Perfect compliance with your max trade limit and A-setup filtering rules.\n\nPNL:\nNet: $0.00 | Best/Worst Day: $0.00 / $0.00 | Profit Factor: N/A | Avg R: N/A\n\nWHAT WORKED:\n- Total elimination of Trader B leak: You didn't front-run levels, chase price outside value, or force revenge trades.\n- Multi-account preservation: You kept your focus locked without blowing capital or fragmenting discipline across multiple funded setups.\n\nBIGGEST LEAK:\nPotential hesitation. With 0 trades taken, your leak this week wasn't over-trading\u2014it was ensuring that high selectivity doesn't turn into execution fear when price hits a valid HTF location (ONVP VAH/VAL/POC or liquidity sweep) with orderflow confirmation.\n\nBEST & WORST TRADE:\nBest Trade: None taken \u2014 sitting on your hands preserved 100% of your mental and financial capital.\nWorst Trade: None taken \u2014 zero execution errors and zero bad habits reinforced.\n\nNEXT WEEK:\nTake your next trade on a single account using strictly a planned-limit or confirmation entry at a clear HTF location before 11:00 ET, and log the exact orderflow trigger."
+    "date": "2026-08-30",
+    "text": "SCORECARD:\nMarket Read: 8/10 \u2014 You recognized poor conditions or lack of HTF alignment and chose not to force a narrative.\nLevel Selection: 8/10 \u2014 Refused to trade in the middle of value; respected your profile levels by waiting.\nExecution: N/A \u2014 Zero trades executed; execution engine was not put to work this week.\nRisk Management: 10/10 \u2014 Zero capital risked across all funded accounts; absolute drawdown protection.\nPsychology: 9/10 \u2014 Perfect patience; zero signs of FOMO, bored trading, or forcing trades to get green.\nDiscipline: 10/10 \u2014 Full adherence to your 11:00 ET cutoff and max attempt rules by taking zero bad setups.\n\nPNL: Net: $0.00 | Best/Worst: $0.00 / $0.00 | Profit Factor: N/A | Avg R: N/A\n\nWHAT WORKED:\n- Absolute capital preservation: You stayed out of sub-optimal NY AM price action and didn't split focus across multiple accounts.\n- Iron discipline: You completely eliminated your biggest leak this week\u2014zero premature anticipation or emotional \"Trader B\" entries.\n\nBIGGEST LEAK:\nZero execution sample size: Sitting on your hands when market conditions are messy is elite discipline, but taking zero trades all week means you either had no A+ location taps or you hesitated when your confirmation trigger presented. We need data to refine your edge.\n\nBEST & WORST TRADE:\nBest Trade: N/A (Staying in cash when location wasn't clean was your best macro move).\nWorst Trade: N/A (No rules broken, no capital bled).\n\nNEXT WEEK:\nExecute attempt #1 on the very first A+ setup that touches your HTF profile level with valid confirmation before 11:00 ET, logging the exact entry model and R outcome."
   },
   "days": [
     {
