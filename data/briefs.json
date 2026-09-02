@@ -1,15 +1,15 @@
 {
-  "updated": "2026-09-02T08:00:45.755531-04:00",
+  "updated": "2026-09-02T11:05:08.665256-04:00",
   "stats": {
-    "total_graded": 58,
+    "total_graded": 59,
     "correct": 17,
-    "accuracy_pct": 29.3,
-    "total_modern": 48,
+    "accuracy_pct": 28.8,
+    "total_modern": 49,
     "correct_modern": 14,
-    "accuracy_modern_pct": 29.2,
-    "top2_graded": 46,
+    "accuracy_modern_pct": 28.6,
+    "top2_graded": 47,
     "top2_hits": 23,
-    "top2_pct": 50.0,
+    "top2_pct": 48.9,
     "accuracy_series": [
       {
         "date": "2026-06-10",
@@ -300,13 +300,18 @@
         "date": "2026-09-01",
         "pct": 25.0,
         "n": 20
+      },
+      {
+        "date": "2026-09-02",
+        "pct": 20.0,
+        "n": 20
       }
     ],
     "by_scenario": {
       "A": {
-        "total": 55,
+        "total": 56,
         "correct": 17,
-        "pct": 30.9
+        "pct": 30.4
       },
       "?": {
         "total": 3,
@@ -327,8 +332,8 @@
       },
       "70\u201380%": {
         "correct": 3,
-        "total": 39,
-        "pct": 7.7
+        "total": 40,
+        "pct": 7.5
       },
       "80%+": {
         "correct": 0,
@@ -338,10 +343,10 @@
     },
     "model_reliability": {
       "A": {
-        "total": 4,
+        "total": 5,
         "correct": 1,
         "label": "A",
-        "pct": 25.0,
+        "pct": 20.0,
         "thin": true
       },
       "failed_auction": {
@@ -474,10 +479,10 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-09-02T08:00:45.755561-04:00",
+    "generated_at": "2026-09-02T11:05:08.665287-04:00",
     "last_brief_date": "2026-09-02",
     "last_brief_time": "08:00:01",
-    "last_grade_date": "2026-09-01",
+    "last_grade_date": "2026-09-02",
     "recent_failures": [
       {
         "ts": "2026-08-31 16:45:45",
@@ -538,8 +543,8 @@
       "post_time": "08:00:01",
       "day_shape": null,
       "day_shape_note": null,
-      "htf_bias": null,
-      "htf_text": null,
+      "htf_bias": "SHORT",
+      "htf_text": "DAILY: Daily market structure shifted bearish following displacement below 29273.50, sweeping sellside liquidity down to 28927.25 within the active dealing range defined by the 29811.50 high and 28927.25 low. Currently trading in discount, the nearest untapped buyside liquidity sits at 29571.25 above, while major sellside liquidity rests at 28831.75 below.\n\n4H: Structure since the September 1st downward displacement remains bearish, leaving an open fair value gap between 29317.75 and 29430.00. A 4H candle close back above 29170.00 would deny immediate daily bearish momentum to induce a deeper pullback, while rejection beneath 29170.00 confirms continuation lower.\n\n1H: Overnight structure swept sellside liquidity at 28927.25 before displacing aggressively higher during the 07:00\u201308:00 ET window. The immediate draw on liquidity for the NY open is the internal buyside liquidity at 29170.00 and 29317.75 above, relative to the overnight low at 28927.25 below.\n\nBIAS: SHORT \u2014 If price retraces into the 29150.00\u201329200.00 premium zone and exhibits orderflow absorption or exhaustion at 09:30, then enter short targeting 28927.25 and 28831.75 sellside liquidity.",
       "regime": "Imbalance / Downward Discovery \u2014 Open below prior VAL (29029.0) in negative gamma (-2.9$Bn) with lower value migration.",
       "invalidation": "Acceptance back above OVN VAL 29047.0 and RTH POC 29096.0 kills the downside bias.",
       "plan": "IF open rejects at VAL 29029.0 or breaks PDL 29002.0 with aggressive selling, THEN enter short on retest targeting PWL 28946.75, OVNL 28927.25, and Put Wall 28810.0. IF price sweeps PDL 29002.0 / OVNL 28927.25, shows passive absorption, and reclaims VAL 29029.0, THEN execute a failed auction long targeting POC 29096.0. IF price accepts above 29047.0, stand down or pivot to mean reversion targeting ONVP POC 29136.0.",
@@ -604,6 +609,21 @@
           "abort": "Breakdown and acceptance below PDL 29002.0"
         }
       ],
+      "grade": {
+        "actual": "C",
+        "predicted": "A",
+        "correct": false,
+        "detail": "Held value 29029-29181",
+        "notes": null,
+        "gemini": "**SCENARIO:** The 12.4% probability Failed Auction model played out, sweeping lower before violently reversing into an upward Range Expansion (26.5%).\n\n**LEVELS:** Price bottomed at 29017.25, holding near VAL 29029.0; reclaiming OVN VAL 29047.0 triggered the stated invalidation plan, driving price through POC 29096.0 and VAH 29181.0 to a high of 29213.0.\n\n**GAMMA:** The short-gamma momentum prediction realized, but instead of continuing lower, it fueled a rapid short squeeze to the upside.\n\n**VERDICT:** The initial bearish bias was incorrect, but the 09:00 read was highly useful because the invalidation trigger at 29047.0 perfectly caught the massive 160-point reversal.",
+        "close": 29130.5,
+        "high": 29213.0,
+        "low": 29017.25,
+        "predicted_model": "A",
+        "actual_model": "rotational_balance",
+        "model_correct": false,
+        "top2_hit": false
+      },
       "intraday": [
         {
           "slot": "09:00",
@@ -611,6 +631,13 @@
           "vs_settle": -99.25,
           "inside_va": false,
           "call": "Morning brief anchor"
+        },
+        {
+          "slot": "news_follow",
+          "price": 29053.25,
+          "vs_settle": -72.25,
+          "inside_va": true,
+          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29029.00/29181.00, target POC 29096.00."
         }
       ]
     },
