@@ -1,110 +1,140 @@
 {
-  "generated_at": "2026-09-02T09:16:02.439274-04:00",
+  "generated_at": "2026-09-03T09:16:01.214975-04:00",
   "live": {
     "lon_high": {
       "n": 3,
       "brier": 0.32543,
       "accuracy": 33.3,
       "avg_predicted": 43.7,
-      "actual_rate": 100.0
+      "actual_rate": 100.0,
+      "evidence": {
+        "skill": null,
+        "days": 3,
+        "ci95": null,
+        "verdict": "INSUFFICIENT EVIDENCE \u2014 3 live days"
+      }
     },
     "lon_low": {
       "n": 1,
       "brier": 0.29594,
       "accuracy": 0.0,
       "avg_predicted": 45.6,
-      "actual_rate": 100.0
+      "actual_rate": 100.0,
+      "evidence": {
+        "skill": null,
+        "days": 1,
+        "ci95": null,
+        "verdict": "INSUFFICIENT EVIDENCE \u2014 1 live day"
+      }
     },
     "first_high": {
       "n": 1,
       "brier": 0.26112,
       "accuracy": 0.0,
       "avg_predicted": 51.1,
-      "actual_rate": 0.0
+      "actual_rate": 0.0,
+      "evidence": {
+        "skill": null,
+        "days": 1,
+        "ci95": null,
+        "verdict": "INSUFFICIENT EVIDENCE \u2014 1 live day"
+      }
+    },
+    "pdh": {
+      "n": 0
+    },
+    "pdl": {
+      "n": 0
+    },
+    "on_high": {
+      "n": 0
+    },
+    "on_low": {
+      "n": 0
     }
   },
   "backtested": {
     "lon_high": {
       "n": 2555,
-      "brier": 0.18226,
-      "brier_uncalibrated": 0.18397,
+      "brier": 0.18186,
+      "brier_uncalibrated": 0.18359,
       "base_rate": 56.3,
       "label": "London High taken"
     },
     "lon_low": {
       "n": 2841,
-      "brier": 0.19187,
-      "brier_uncalibrated": 0.19333,
+      "brier": 0.19205,
+      "brier_uncalibrated": 0.19347,
       "base_rate": 53.7,
       "label": "London Low taken"
     },
     "both": {
       "n": 1430,
-      "brier": 0.2034,
-      "brier_uncalibrated": 0.20624,
+      "brier": 0.20376,
+      "brier_uncalibrated": 0.20662,
       "base_rate": 37.8,
       "label": "Both London sides taken"
     },
     "neither": {
       "n": 1430,
-      "brier": 0.02456,
-      "brier_uncalibrated": 0.025,
+      "brier": 0.02458,
+      "brier_uncalibrated": 0.02504,
       "base_rate": 2.1,
       "label": "Neither London side taken"
     },
     "pdh": {
       "n": 2835,
-      "brier": 0.12199,
-      "brier_uncalibrated": 0.13289,
+      "brier": 0.12204,
+      "brier_uncalibrated": 0.13296,
       "base_rate": 29.3,
       "label": "Prior-day High taken"
     },
     "pdl": {
       "n": 3275,
-      "brier": 0.11082,
-      "brier_uncalibrated": 0.11897,
+      "brier": 0.11106,
+      "brier_uncalibrated": 0.11913,
       "base_rate": 23.7,
       "label": "Prior-day Low taken"
     },
     "on_high": {
       "n": 3965,
-      "brier": 0.17545,
-      "brier_uncalibrated": 0.17836,
+      "brier": 0.17563,
+      "brier_uncalibrated": 0.17847,
       "base_rate": 55.3,
       "label": "Overnight High taken"
     },
     "on_low": {
       "n": 3966,
-      "brier": 0.19023,
-      "brier_uncalibrated": 0.19219,
+      "brier": 0.1904,
+      "brier_uncalibrated": 0.19224,
       "base_rate": 49.0,
       "label": "Overnight Low taken"
     },
     "first_high": {
       "n": 1384,
-      "brier": 0.16728,
-      "brier_uncalibrated": 0.1686,
+      "brier": 0.16718,
+      "brier_uncalibrated": 0.16857,
       "base_rate": 51.3,
       "label": "First side tagged = High"
     },
     "expand_up": {
       "n": 3545,
-      "brier": 0.24879,
-      "brier_uncalibrated": 0.24997,
+      "brier": 0.24851,
+      "brier_uncalibrated": 0.24963,
       "base_rate": 48.9,
       "label": "First expansion is UP"
     },
     "reversal": {
       "n": 3545,
       "brier": 0.13406,
-      "brier_uncalibrated": 0.13488,
+      "brier_uncalibrated": 0.13481,
       "base_rate": 16.2,
       "label": "First move reverses"
     },
     "am_up": {
       "n": 3966,
-      "brier": 0.24828,
-      "brier_uncalibrated": 0.24908,
+      "brier": 0.24836,
+      "brier_uncalibrated": 0.24927,
       "base_rate": 52.6,
       "label": "NY AM closes above the 09:15 open"
     }
