@@ -1,6 +1,292 @@
 {
-  "updated": "2026-08-28T12:00:00.010007-04:00",
+  "updated": "2026-09-03T12:00:00.008315-04:00",
   "days": [
+    {
+      "date": "2026-09-03",
+      "regime": "Imbalance \u2014 opening below value in a compressed OVN range, favoring downside trend or range expansion.",
+      "predicted_model": "range_expansion",
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 27.8,
+          "confidence": "medium",
+          "why": "Overnight range is compressed (217.75 pts, 8th percentile), priming the session for a volatility break out of the 29075.0\u201329292.75 OVN range.",
+          "stat_support": "base rate 24%",
+          "trigger": "Displacement and break beyond OVNL 29075.0 or OVNH 29292.75.",
+          "confirm": "Acceptance and heavy volume building outside the overnight range boundaries.",
+          "target": "PWL 28946.75 and PDL 28927.25 on downside extension.",
+          "abort": "Price rotates back into the overnight value area (29166.0\u201329247.0) and builds volume."
+        },
+        {
+          "model": "trend_down",
+          "probability": 20.7,
+          "confidence": "low",
+          "why": "Price is opening below RTH value (29131.0) with negative HTF bias and trading below the London range.",
+          "stat_support": "base rate 12%",
+          "trigger": "Open drive lower or a weak retest/rejection at VAL 29131.0.",
+          "confirm": "One-timeframing lower with passive absorption holding price below 29131.0.",
+          "target": "OVNL 29075.0, followed by PWL 28946.75 and PDL 28927.25.",
+          "abort": "Reclaim and acceptance back above VAL 29131.0 into prior value."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 14.2,
+          "confidence": "low",
+          "why": "Open near OVNL 29075.0 offers unswept liquidity where a fast stop-run without acceptance can drive a sharp reversal.",
+          "stat_support": "base rate 18%",
+          "trigger": "Sweep below OVNL 29075.0 that immediately encounters passive absorption.",
+          "confirm": "Sharp reclaim of 29075.0 with aggressive delta turning positive.",
+          "target": "VAL 29131.0 and RTH POC 29170.0.",
+          "abort": "Sustained acceptance and continuous selling below 29075.0."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 12.0,
+          "confidence": "low",
+          "why": "If initial directional attempts fail, price will rotate back into prior value (29131.0\u201329197.0) to balance.",
+          "stat_support": "base rate 10%",
+          "trigger": "Price re-enters prior value above VAL 29131.0 and holds.",
+          "confirm": "Two-sided rotational trade developing around RTH POC 29170.0.",
+          "target": "RTH POC 29170.0 and OVN POC 29196.0.",
+          "abort": "Decisive breakout acceptance below 29075.0 or above 29213.0."
+        },
+        {
+          "model": "trend_up",
+          "probability": 10.2,
+          "confidence": "low",
+          "why": "Requires full gap fill and strong upside acceptance back inside value above 29131.0 toward OVN high.",
+          "stat_support": "base rate 31%",
+          "trigger": "Aggressive buying drive back over VAL 29131.0 and Settle 29186.25.",
+          "confirm": "Holding above VAH 29197.0 with continuous buying aggression.",
+          "target": "PDH 29213.0 and OVNH 29292.75.",
+          "abort": "Rejection at VAL 29131.0 sending price back below open print 29105.5."
+        }
+      ],
+      "plan": "If NQ pushes up to retest VAL 29131.0 and shows absorption/exhaustion, enter short targeting OVNL 29075.0 and PDL 28927.25. If price sweeps below OVNL 29075.0 and sharply reclaims it with strong positive delta, enter a mean-reversion long targeting VAL 29131.0 and RTH POC 29170.0. If price accepts above 29131.0, stand aside until new balance forms inside 29131.0\u201329197.0.",
+      "invalidation": "Acceptance back above VAL 29131.0 holding inside prior value invalidates the immediate downside imbalance read.",
+      "risk_note": "Tight overnight range (218 pts) creates high volatility expansion risk; shadow sim indicates low historical edge in range expansion, so strict orderflow confirmation is required.",
+      "htf_bias": "NEUTRAL",
+      "htf_text": "DAILY: Daily market structure remains bearish following displacement below 29273.50, placing price in discount of the dealing range between the 29811.50 high and 28927.25 low. Untapped sellside liquidity rests below the 28927.25 swing low, while buyside liquidity and an open daily fair value gap reside above near 29571.25.\n\n4H: The 4H structure reflects bearish order flow following the strong displacement from 29571.25, leaving an unmitigated 4H fair value gap open between 29317.75 and 29430.00. A shift above the 29292.75 swing high would confirm a daily bullish retracement toward premium, whereas a displacement lower denies the pull-back and targets 28927.25.\n\n1H: Overnight structure is rotational, bound between the 29075.00 low and 29292.75 high after sweeping internal sellside liquidity during the Asian session. The immediate draw on liquidity for the NY open is the overnight buyside liquidity at 29292.75, expanding toward the 29317.75 higher timeframe level.\n\nBIAS: NEUTRAL \u2014 If price dips to test the overnight value area low near 29100.00 and shows orderflow absorption, then look for long entries targeting the 29292.75 overnight high; if price rejects 29292.75 with exhaustion, look for shorts targeting 29075.00.",
+      "day_shape": "range_expansion",
+      "day_grade": null,
+      "actual_model": "trend_up",
+      "correct": 0,
+      "grade_detail": "Accepted above VAH 29197, closed 29314 (top of range)",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29197.0
+        },
+        {
+          "label": "POC",
+          "price": 29170.0
+        },
+        {
+          "label": "VAL",
+          "price": 29131.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29292.75
+        },
+        {
+          "label": "OVN Low",
+          "price": 29075.0
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29247.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29196.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29166.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29181.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29096.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29029.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29213.0
+        },
+        {
+          "label": "Prior Low",
+          "price": 28927.25
+        }
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "regime": "Imbalance / Downward Discovery \u2014 Open below prior VAL (29029.0) in negative gamma (-2.9$Bn) with lower value migration.",
+      "predicted_model": null,
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 26.5,
+          "confidence": "medium",
+          "why": "Compressed 242.75pt OVN range combined with short dealer gamma below the 29465 gamma flip fuels volatile expansion.",
+          "stat_support": "base rate 22%",
+          "trigger": "Displacement below OVNL 28927.25 or break above OVN VAL 29047.0",
+          "confirm": "Sustained volume acceptance outside the OVN range 28927.25\u201329170.0",
+          "target": "Put Wall 28810.0 on downside break, or ONVP POC 29136.0 on upside break",
+          "abort": "Rotation back inside ONVP value area (29047.0\u201329153.0) with passive absorption"
+        },
+        {
+          "model": "trend_down",
+          "probability": 25.4,
+          "confidence": "medium",
+          "why": "Price opens below VAL 29029.0 with value migrating lower in a negative GEX regime that extends downside runs.",
+          "stat_support": "base rate 18%",
+          "trigger": "Rejection at prior VAL 29029.0 or displacement through PDL 29002.0",
+          "confirm": "One-timeframing lower with aggressive selling accepting below PDL 29002.0",
+          "target": "PWL 28946.75, OVNL 28927.25, and Put Wall 28810.0",
+          "abort": "Reclaim and acceptance above VAL 29029.0 and OVN VAL 29047.0"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 12.4,
+          "confidence": "low",
+          "why": "Unswept liquidity below PDL 29002.0 and OVNL 28927.25 provides trap fuel if downside initiative fails.",
+          "stat_support": "base rate 10%",
+          "trigger": "Sweep below PDL 29002.0 or OVNL 28927.25 followed by immediate absorption",
+          "confirm": "Aggressive buying reclaiming PDL 29002.0 back into value above VAL 29029.0",
+          "target": "RTH POC 29096.0 and Settle 29125.5",
+          "abort": "Sustained acceptance and high-volume prints below OVNL 28927.25"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 9.1,
+          "confidence": "low",
+          "why": "Negative gamma amplifies direction, suppressing rotational balance inside prior range bounds.",
+          "stat_support": "base rate 10%",
+          "trigger": "Price remains contained between PDL 29002.0 and ONVP VAL 29047.0",
+          "confirm": "Two-sided rotational orderflow with absorption at both range extremes",
+          "target": "RTH POC 29096.0",
+          "abort": "Breakout and acceptance beyond 28927.25 or 29047.0"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 8.8,
+          "confidence": "low",
+          "why": "Open below value offers potential snapback to POC, but negative gamma makes fading extremes risky.",
+          "stat_support": "base rate 16%",
+          "trigger": "Exhaustion of aggressive sellers at PDL 29002.0 with delta divergence",
+          "confirm": "Reclaim of VAL 29029.0 holding as support on retest",
+          "target": "RTH POC 29096.0 and ONVP POC 29136.0",
+          "abort": "Breakdown and acceptance below PDL 29002.0"
+        }
+      ],
+      "plan": "IF open rejects at VAL 29029.0 or breaks PDL 29002.0 with aggressive selling, THEN enter short on retest targeting PWL 28946.75, OVNL 28927.25, and Put Wall 28810.0. IF price sweeps PDL 29002.0 / OVNL 28927.25, shows passive absorption, and reclaims VAL 29029.0, THEN execute a failed auction long targeting POC 29096.0. IF price accepts above 29047.0, stand down or pivot to mean reversion targeting ONVP POC 29136.0.",
+      "invalidation": "Acceptance back above OVN VAL 29047.0 and RTH POC 29096.0 kills the downside bias.",
+      "risk_note": "Dealer short gamma (-2.9$Bn) accelerates moves; exercise caution on range_expansion signals due to historical shadow edge loss.",
+      "htf_bias": "SHORT",
+      "htf_text": "DAILY: Daily market structure shifted bearish following displacement below 29273.50, sweeping sellside liquidity down to 28927.25 within the active dealing range defined by the 29811.50 high and 28927.25 low. Currently trading in discount, the nearest untapped buyside liquidity sits at 29571.25 above, while major sellside liquidity rests at 28831.75 below.\n\n4H: Structure since the September 1st downward displacement remains bearish, leaving an open fair value gap between 29317.75 and 29430.00. A 4H candle close back above 29170.00 would deny immediate daily bearish momentum to induce a deeper pullback, while rejection beneath 29170.00 confirms continuation lower.\n\n1H: Overnight structure swept sellside liquidity at 28927.25 before displacing aggressively higher during the 07:00\u201308:00 ET window. The immediate draw on liquidity for the NY open is the internal buyside liquidity at 29170.00 and 29317.75 above, relative to the overnight low at 28927.25 below.\n\nBIAS: SHORT \u2014 If price retraces into the 29150.00\u201329200.00 premium zone and exhibits orderflow absorption or exhaustion at 09:30, then enter short targeting 28927.25 and 28831.75 sellside liquidity.",
+      "day_shape": null,
+      "day_grade": null,
+      "actual_model": "rotational_balance",
+      "correct": 0,
+      "grade_detail": "Held value 29029-29181",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29181.0
+        },
+        {
+          "label": "POC",
+          "price": 29096.0
+        },
+        {
+          "label": "VAL",
+          "price": 29029.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29170.0
+        },
+        {
+          "label": "OVN Low",
+          "price": 28927.25
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29153.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29136.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29047.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29516.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29514.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29410.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29571.25
+        },
+        {
+          "label": "Prior Low",
+          "price": 29002.0
+        }
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "regime": null,
+      "predicted_model": null,
+      "models": [],
+      "plan": null,
+      "invalidation": null,
+      "risk_note": null,
+      "htf_bias": "SHORT",
+      "htf_text": "DAILY: Daily market structure has shifted bearish following a swing high at 29811.50, placing the current dealing range between 28946.75 and 29811.50 with price trading in deep discount at 29151.25. Untapped buyside liquidity rests above the 29811.50 high, while key sellside liquidity sits below the 28946.75 swing low.\n\n4H: The 4H timeframe reflects strong bearish displacement down from 29571.25, leaving a fair value gap open between 29243.25 and 29430.00. Acceptance below 29137.50 confirms daily downside continuation, whereas a reclaim above 29243.25 denies immediate bearish expansion.\n\n1H: Overnight structure broke down after sweeping buyside liquidity at 29571.25, establishing a lower low down to 29137.50. The immediate draw on liquidity for the NY open is sellside liquidity at 28946.75, following any corrective retest of the overnight 1H FVG.\n\nBIAS: SHORT \u2014 If price retraces into the 29243.25\u201329430.00 fair value gap near the open and shows orderflow confirmation of absorption, then enter short targeting sellside liquidity at 28946.75 with risk defined above 29450.00.",
+      "day_shape": null,
+      "day_grade": null,
+      "actual_model": "range_expansion",
+      "correct": 0,
+      "grade_detail": "Two-sided, range 29040-29268, close 29221",
+      "levels": []
+    },
+    {
+      "date": "2026-08-31",
+      "regime": null,
+      "predicted_model": null,
+      "models": [],
+      "plan": null,
+      "invalidation": null,
+      "risk_note": null,
+      "htf_bias": "LONG",
+      "htf_text": "DAILY: Daily structure remains bullish within the broader dealing range anchored by the August 24 low at 28946.75 and the August 17 high at 30343.00, positioning current price at 29423.50 in discount territory. Untapped buyside liquidity rests above at the August 28 high of 29811.50, while untapped sellside liquidity sits below at the August 24 swing low of 28946.75.\n\n4H: Following downward displacement from 29811.50, price swept into the open 4H bullish FVG between 29368.25 and 29432.50 before defending the 29273.50 low. Accepting above 29535.00 confirms the daily bullish thesis toward buyside liquidity, while breaking below 29273.50 denies it and shifts the draw to sellside liquidity at 28946.75.\n\n1H: Overnight structure formed a two-sided auction between the overnight low of 29273.50 and overnight high of 29535.00, reclaiming value above 29400. The immediate draw on liquidity for the NY open is the overnight high at 29535.00, with downside liquidity pooling below 29273.50.\n\nBIAS: LONG \u2014 If price holds above the 29368.25\u201329432.50 support zone and confirms via orderflow absorption at the open, then look to target the overnight high at 29535.00 and 29662.00.",
+      "day_shape": null,
+      "day_grade": null,
+      "actual_model": "range_expansion",
+      "correct": 0,
+      "grade_detail": "Two-sided, range 29355-29517, close 29411",
+      "levels": []
+    },
     {
       "date": "2026-08-28",
       "regime": "Balance / Rotational \u2014 Price open above prior RTH value inside positive gamma environment (+2.6B), favoring rotational fading and short covering over directional expansion.",
