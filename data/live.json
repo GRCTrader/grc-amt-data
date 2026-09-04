@@ -1,60 +1,71 @@
 {
-  "asof": "2026-09-03 11:01 ET",
-  "slot": "11:01",
-  "price": 29300.75,
-  "bias": "LONG",
+  "asof": "2026-09-04 09:31 ET",
+  "slot": "09:31",
+  "price": 29571.25,
+  "bias": "SHORT",
   "scenarios": [
     {
       "model": "range_expansion",
-      "probability": 27.8,
-      "base_rate": 24,
+      "probability": 26.5,
+      "base_rate": 23,
       "drivers": [
         "\u2212 OVN range compressed \u2014 discount; compression here doesn't reliably release into RTH",
         "+ 25 similar days: 28% historically",
-        "+ calibration: engine ran cold on this model (32% real vs 0% claimed)",
-        "calibrated: engine 32%; base rate 30%; engine runs cold on this one (1.25x)"
-      ],
-      "engine_probability": 32
-    },
-    {
-      "model": "trend_down",
-      "probability": 20.7,
-      "base_rate": 12,
-      "drivers": [
-        "+ open below value",
         "+ calibration: engine ran cold on this model (31% real vs 0% claimed)",
-        "calibrated: engine 31%; base rate 13%; engine runs cold on this one (1.87x)"
+        "calibrated: engine 31%; base rate 29%; engine runs cold on this one (1.21x)"
       ],
       "engine_probability": 31
     },
     {
-      "model": "failed_auction",
-      "probability": 14.2,
-      "base_rate": 18,
+      "model": "short_covering",
+      "probability": 17.2,
+      "base_rate": 23,
       "drivers": [
-        "\u2212 open out of value near an OVN extreme \u2014 mild discount; proximity alone rarely confirms the reversal",
-        "+ unswept liquidity to trap into",
-        "+ calibration: engine ran cold on this model (16% real vs 0% claimed)",
-        "calibrated: engine 24%; base rate 13%; engine runs cold on this one (1.17x)"
+        "+ open above value \u2014 boost; often the squeeze already underway, not 'nothing to cover'",
+        "calibrated: engine 35%; base rate 6%; engine runs cold on this one (1.82x)"
       ],
-      "engine_probability": 24
+      "engine_probability": 35
+    },
+    {
+      "model": "trend_down",
+      "probability": 13.2,
+      "base_rate": 10,
+      "drivers": [
+        "\u2212 open above value",
+        "+ calibration: engine ran cold on this model (29% real vs 0% claimed)",
+        "calibrated: engine 13%; base rate 12%; engine runs cold on this one (1.89x)"
+      ],
+      "engine_probability": 13
     },
     {
       "model": "rotational_balance",
-      "probability": 12.0,
-      "base_rate": 10,
+      "probability": 13.1,
+      "base_rate": 25,
       "drivers": [
+        "\u2212 gap argues against balance",
+        "+ +GEX pins price",
+        "+ price above gamma flip 29425 in +GEX \u2014 rotation regime",
+        "\u2212 25 similar days: 0% historically",
         "+ calibration: engine ran cold on this model (22% real vs 0% claimed)",
-        "calibrated: engine 19%; base rate 14%; engine runs hot on this one (0.67x)"
+        "calibrated: engine 29%; base rate 14%; engine runs hot on this one (0.67x)"
       ],
-      "engine_probability": 19
+      "engine_probability": 29
     }
   ],
-  "invalidations": [],
+  "invalidations": [
+    {
+      "scenario": "range_expansion",
+      "status": "armed",
+      "condition": "close_below",
+      "level": 28810.0,
+      "closes_needed": 2,
+      "meaning": "\u26a1 GAMMA: acceptance below the put wall 28810 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
+    }
+  ],
   "gex": {
-    "total_gex_bn": -0.96,
-    "flip_nq": 29285,
-    "call_wall_nq": 29410,
-    "put_wall_nq": 28790
+    "total_gex_bn": 1.06,
+    "flip_nq": 29475,
+    "call_wall_nq": 29600,
+    "put_wall_nq": 28775
   }
 }
