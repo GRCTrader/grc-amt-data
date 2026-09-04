@@ -1,6 +1,132 @@
 {
-  "updated": "2026-09-03T12:00:00.008315-04:00",
+  "updated": "2026-09-04T12:00:00.013988-04:00",
   "days": [
+    {
+      "date": "2026-09-04",
+      "regime": "Imbalance \u2014 Gap up above prior value area, capped by high positive GEX and Call Wall constraints",
+      "predicted_model": "range_expansion",
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 26.5,
+          "confidence": "medium",
+          "why": "The overnight range is highly compressed at 222.5 points, representing the 13th percentile, which historically resolves in an RTH volatility expansion.",
+          "stat_support": "base rate 23%",
+          "trigger": "A clean breakout and sustained trade beyond the overnight extremes of OVNH 29704.5 or OVNL 29482.0",
+          "confirm": "Heavy volume acceptance and one-timeframing bars outside the initial range",
+          "target": "PWH 29811.5 on the upside, or prior RTH VAH 29522.0 on the downside",
+          "abort": "Reverting and rotating back inside the overnight range 29482.0 to 29704.5"
+        },
+        {
+          "model": "short_covering",
+          "probability": 17.2,
+          "confidence": "low",
+          "why": "Opening far above the prior-day value area at 29677.25 forces trapped overnight sellers to cover if the market pushes through the overnight high.",
+          "stat_support": "base rate 23%",
+          "trigger": "An early RTH push that clears the OVNH 29704.5 with strong buying delta",
+          "confirm": "Aggressive bids lifting offer sheets and holding above the Call Wall 29630.0",
+          "target": "PWH 29811.5",
+          "abort": "A sharp drop and acceptance back below Call Wall 29630.0"
+        },
+        {
+          "model": "trend_down",
+          "probability": 13.2,
+          "confidence": "low",
+          "why": "The high premium open creates a gap-fade opportunity if long liquidation triggers, though the positive open location dampens the downside probability.",
+          "stat_support": "base rate 10%",
+          "trigger": "Loss of Call Wall 29630.0 after a failed attempt to test or breach OVNH 29704.5",
+          "confirm": "Sustained trading below OVN VAH 29564.0 and negative cumulative delta divergence",
+          "target": "Prior RTH POC 29289.0",
+          "abort": "An aggressive push and holding pattern above OVNH 29704.5"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 13.1,
+          "confidence": "low",
+          "why": "Dealer long gamma positioning of +1.1$Bn acts as a heavy anchor, favoring mean reversion and rotational behavior between key boundaries.",
+          "stat_support": "base rate 25%",
+          "trigger": "Testing the OVNH 29704.5 or OVN VAH 29564.0 and finding heavy passive defense",
+          "confirm": "Rotational, overlapping TPO structure with price reverting back and forth across 29630.0",
+          "target": "Overnight POC 29519.0",
+          "abort": "A sustained directional drive that breaks and accepts beyond OVNH 29704.5 or below OVN VAL 29485.0"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 12.2,
+          "confidence": "low",
+          "why": "Proximity to the major unswept weekly high at PWH 29811.5 offers a prime target to trap late buyers before reversing back into value.",
+          "stat_support": "base rate 14%",
+          "trigger": "A rapid sweep above PWH 29811.5 or OVNH 29704.5",
+          "confirm": "Aggressive selling pressure and passive absorption on the tape, followed by a swift reclaim back below the swept level",
+          "target": "Call Wall 29630.0 and OVN VAH 29564.0",
+          "abort": "Consecutive 15-minute candle closes above the swept high showing genuine value acceptance"
+        }
+      ],
+      "plan": "If we open near 29677.25 and push higher, watch the interaction at OVNH 29704.5; if we sweep and fail to accept, execute shorts targeting Call Wall 29630.0 and OVN VAH 29564.0. If we push through and accept above OVNH 29704.5, look for a momentum long targeting PWH 29811.5. If the open immediately rejects lower, look for bids to defend at Call Wall 29630.0; if that level fails, expect a gap fill toward prior settle 29524.75 and prior RTH VAH 29522.0.",
+      "invalidation": "Acceptance and sustained trading above PWH 29811.5 with positive delta growth kills any short-biased setups.",
+      "risk_note": "Friday low-volatility environment combined with long dealer gamma means price action may become exceptionally slow, choppy, and prone to sudden mean-reversion spikes.",
+      "htf_bias": "NEUTRAL",
+      "htf_text": "DAILY: Daily structure remains bearish after a market structure shift below 29202.75, with the current dealing range between 30283.00 and 28927.25 putting the current market price in discount. Buyside liquidity pools rest at 29811.50 and 30283.00, while untapped sellside liquidity remains at the 28927.25 swing low.\n\n4H: The 4H timeframe shifted to a bullish structure with strong displacement above 29516.75, leaving an open bullish fair value gap between 29292.75 and 29476.00. A daily bullish reversal would be confirmed by price finding support within this gap, while a 4H candle close below 29273.50 would deny the daily expansion thesis.\n\n1H: Overnight structure engineered a bullish run to 29704.50 before a swift downward displacement broke key hourly market structure at 29563.00. The immediate draw on liquidity for the New York open is the sellside liquidity pool below the overnight low of 29482.00 and the inefficiencies resting just below it.\n\nBIAS: NEUTRAL \u2014 If price sweeps the overnight sellside liquidity at 29482.00 and shows orderflow confirmation of buying absorption within the 29476.00 fair value gap, then I will execute longs targeting 29600.00 and the overnight high of 29704.50.",
+      "day_shape": "range_expansion",
+      "day_grade": null,
+      "actual_model": "range_expansion",
+      "correct": 1,
+      "grade_detail": "Two-sided, range 29502-29694, close 29516",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29522.0
+        },
+        {
+          "label": "POC",
+          "price": 29289.0
+        },
+        {
+          "label": "VAL",
+          "price": 29254.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29704.5
+        },
+        {
+          "label": "OVN Low",
+          "price": 29482.0
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29564.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29519.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29485.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29197.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29170.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29131.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29584.25
+        },
+        {
+          "label": "Prior Low",
+          "price": 29075.0
+        }
+      ]
+    },
     {
       "date": "2026-09-03",
       "regime": "Imbalance \u2014 opening below value in a compressed OVN range, favoring downside trend or range expansion.",
