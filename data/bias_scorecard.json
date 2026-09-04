@@ -1,37 +1,53 @@
 {
-  "generated_at": "2026-09-03T09:32:01.390224-04:00",
+  "generated_at": "2026-09-04T09:16:02.312767-04:00",
   "live": {
     "lon_high": {
-      "n": 3,
-      "brier": 0.32543,
-      "accuracy": 33.3,
-      "avg_predicted": 43.7,
+      "n": 4,
+      "brier": 0.25895,
+      "accuracy": 50.0,
+      "avg_predicted": 51.7,
       "actual_rate": 100.0,
       "evidence": {
         "skill": null,
-        "days": 3,
+        "days": 4,
         "ci95": null,
-        "verdict": "INSUFFICIENT EVIDENCE \u2014 3 live days"
+        "verdict": "INSUFFICIENT EVIDENCE \u2014 4 live days"
       }
     },
     "lon_low": {
-      "n": 1,
-      "brier": 0.29594,
-      "accuracy": 0.0,
-      "avg_predicted": 45.6,
+      "n": 2,
+      "brier": 0.23284,
+      "accuracy": 50.0,
+      "avg_predicted": 52.2,
       "actual_rate": 100.0,
       "evidence": {
         "skill": null,
-        "days": 1,
+        "days": 2,
         "ci95": null,
-        "verdict": "INSUFFICIENT EVIDENCE \u2014 1 live day"
+        "verdict": "INSUFFICIENT EVIDENCE \u2014 2 live days"
       }
     },
     "first_high": {
-      "n": 1,
+      "n": 2,
       "brier": 0.26112,
       "accuracy": 0.0,
       "avg_predicted": 51.1,
+      "actual_rate": 0.0,
+      "evidence": {
+        "skill": null,
+        "days": 2,
+        "ci95": null,
+        "verdict": "INSUFFICIENT EVIDENCE \u2014 2 live days"
+      }
+    },
+    "pdh": {
+      "n": 0
+    },
+    "pdl": {
+      "n": 1,
+      "brier": 0.02341,
+      "accuracy": 100.0,
+      "avg_predicted": 15.3,
       "actual_rate": 0.0,
       "evidence": {
         "skill": null,
@@ -40,17 +56,31 @@
         "verdict": "INSUFFICIENT EVIDENCE \u2014 1 live day"
       }
     },
-    "pdh": {
-      "n": 0
-    },
-    "pdl": {
-      "n": 0
-    },
     "on_high": {
-      "n": 0
+      "n": 1,
+      "brier": 0.11222,
+      "accuracy": 100.0,
+      "avg_predicted": 66.5,
+      "actual_rate": 100.0,
+      "evidence": {
+        "skill": null,
+        "days": 1,
+        "ci95": null,
+        "verdict": "INSUFFICIENT EVIDENCE \u2014 1 live day"
+      }
     },
     "on_low": {
-      "n": 0
+      "n": 1,
+      "brier": 0.39188,
+      "accuracy": 0.0,
+      "avg_predicted": 37.4,
+      "actual_rate": 100.0,
+      "evidence": {
+        "skill": null,
+        "days": 1,
+        "ci95": null,
+        "verdict": "INSUFFICIENT EVIDENCE \u2014 1 live day"
+      }
     }
   },
   "backtested": {
@@ -139,8 +169,63 @@
       "label": "NY AM closes above the 09:15 open"
     }
   },
-  "live_days": 3,
+  "live_days": 4,
   "recent": [
+    {
+      "date": "2026-09-03",
+      "weekday": "Thursday",
+      "open_state": "inside_range",
+      "scores": {
+        "lon_high": {
+          "p": 0.756,
+          "actual": 1,
+          "brier": 0.05954,
+          "correct": 1
+        },
+        "lon_low": {
+          "p": 0.588,
+          "actual": 1,
+          "brier": 0.16974,
+          "correct": 1
+        },
+        "first_high": {
+          "p": 0.511,
+          "actual": 0,
+          "brier": 0.26112,
+          "correct": 0
+        },
+        "pdl": {
+          "p": 0.153,
+          "actual": 0,
+          "brier": 0.02341,
+          "correct": 1
+        },
+        "on_high": {
+          "p": 0.665,
+          "actual": 1,
+          "brier": 0.11222,
+          "correct": 1
+        },
+        "on_low": {
+          "p": 0.374,
+          "actual": 1,
+          "brier": 0.39188,
+          "correct": 0
+        }
+      },
+      "actual": {
+        "out_high": 29390.5,
+        "out_low": 29075.0,
+        "lon_high": 1,
+        "lon_low": 1,
+        "first_side": "low",
+        "first_high": 0,
+        "pdh": null,
+        "pdl": 0,
+        "on_high": 1,
+        "on_low": 1
+      }
+    },
     {
       "date": "2026-09-01",
       "weekday": "Tuesday",
