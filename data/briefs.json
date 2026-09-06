@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T11:05:11.286646-04:00",
+  "updated": "2026-09-06T17:00:21.130955-04:00",
   "stats": {
     "total_graded": 59,
     "correct": 18,
@@ -431,15 +431,24 @@
       }
     },
     "weekly_diagnostic": {
-      "week_start": "2026-08-24",
-      "week_end": "2026-08-28",
+      "week_start": "2026-08-31",
+      "week_end": "2026-09-04",
       "total_graded": 3,
-      "correct": 0,
-      "accuracy_pct": 0.0,
-      "review_text": "WHAT HAPPENED:\nThe model went 0 for 3 this week, misinterpreting directional conviction when the market delivered two-sided rotation or structural sweeps. It projected strong trends into balanced conditions and missed a key failed auction.\n\nBIGGEST MISS:\nThe worst miss occurred on August 24, when the model predicted trend_down, but price established a two-sided range_expansion between 28947 and 29243, closing near the middle at 29096.\n\nSUGGESTED IMPROVEMENT:\nA three-day sample is too thin to justify immediate code adjustments. As a hypothesis to backtest against the 19-year history, consider modifying scenarios.py to reduce the weight of directional trend signals unless price accepts beyond the prior session's high or low during the open auction.",
-      "created_at": "2026-08-28 15:20:15"
+      "correct": 1,
+      "accuracy_pct": 33.0,
+      "review_text": "The model's performance for the week was poor, correctly identifying only one out of three market types. It accurately predicted a range expansion day but failed to identify a rotational balance day and a trend up day.\n\nThe biggest miss occurred on 2026-09-02, when the model called for an 'A' type day but the market actually exhibited rotational balance, holding value within a tight range of 29029-29181.\n\nWith only three calls made this week, the sample size is too thin to reliably identify specific conditions or weights in scenarios.py that require adjustment. More data is needed to draw meaningful conclusions.",
+      "created_at": "2026-09-04 15:20:06"
     },
     "weekly_diagnostics_all": [
+      {
+        "week_start": "2026-08-31",
+        "week_end": "2026-09-04",
+        "total_graded": 3,
+        "correct": 1,
+        "accuracy_pct": 33.0,
+        "review_text": "The model's performance for the week was poor, correctly identifying only one out of three market types. It accurately predicted a range expansion day but failed to identify a rotational balance day and a trend up day.\n\nThe biggest miss occurred on 2026-09-02, when the model called for an 'A' type day but the market actually exhibited rotational balance, holding value within a tight range of 29029-29181.\n\nWith only three calls made this week, the sample size is too thin to reliably identify specific conditions or weights in scenarios.py that require adjustment. More data is needed to draw meaningful conclusions.",
+        "created_at": "2026-09-04 15:20:06"
+      },
       {
         "week_start": "2026-08-24",
         "week_end": "2026-08-28",
@@ -479,7 +488,7 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-09-04T11:05:11.286678-04:00",
+    "generated_at": "2026-09-06T17:00:21.130990-04:00",
     "last_brief_date": "2026-09-04",
     "last_brief_time": "08:00:02",
     "last_grade_date": "2026-09-04",
@@ -487,8 +496,8 @@
   },
   "coach": null,
   "mentor_review": {
-    "date": "2026-08-30",
-    "text": "SCORECARD:\nMarket Read: 8/10 \u2014 You recognized poor conditions or lack of HTF alignment and chose not to force a narrative.\nLevel Selection: 8/10 \u2014 Refused to trade in the middle of value; respected your profile levels by waiting.\nExecution: N/A \u2014 Zero trades executed; execution engine was not put to work this week.\nRisk Management: 10/10 \u2014 Zero capital risked across all funded accounts; absolute drawdown protection.\nPsychology: 9/10 \u2014 Perfect patience; zero signs of FOMO, bored trading, or forcing trades to get green.\nDiscipline: 10/10 \u2014 Full adherence to your 11:00 ET cutoff and max attempt rules by taking zero bad setups.\n\nPNL: Net: $0.00 | Best/Worst: $0.00 / $0.00 | Profit Factor: N/A | Avg R: N/A\n\nWHAT WORKED:\n- Absolute capital preservation: You stayed out of sub-optimal NY AM price action and didn't split focus across multiple accounts.\n- Iron discipline: You completely eliminated your biggest leak this week\u2014zero premature anticipation or emotional \"Trader B\" entries.\n\nBIGGEST LEAK:\nZero execution sample size: Sitting on your hands when market conditions are messy is elite discipline, but taking zero trades all week means you either had no A+ location taps or you hesitated when your confirmation trigger presented. We need data to refine your edge.\n\nBEST & WORST TRADE:\nBest Trade: N/A (Staying in cash when location wasn't clean was your best macro move).\nWorst Trade: N/A (No rules broken, no capital bled).\n\nNEXT WEEK:\nExecute attempt #1 on the very first A+ setup that touches your HTF profile level with valid confirmation before 11:00 ET, logging the exact entry model and R outcome."
+    "date": "2026-09-06",
+    "text": "SCORECARD:\nMarket Read: 7/10 \u2013 Your 'acceptance back inside range' setup demonstrated a strong understanding of market context, leading to high-conviction trades.\nLevel Selection: 9/10 \u2013 The 100% win rate on 'acceptance back inside range' setups (+$2245) confirms your ability to identify high-probability locations.\nExecution: 6/10 \u2013 While profitable, the sheer number of daily trades indicates reactive execution, straying from your planned maximum of two attempts.\nRisk Management: 4/10 \u2013 The 'avg NoneR' is a critical gap. More importantly, exceeding your 2-attempt rule daily leaves you exposed to larger downside volatility.\nPsychology: 5/10 \u2013 The 11 trades on Sept 1st after initial losses clearly point to emotional chasing to get green, a direct manifestation of \"Trader B\" behavior.\nDiscipline: 3/10 \u2013 Consistently violated your rule of max 2 attempts per day, logging 21 trades over 3 days instead of a planned 6.\n\nPNL: Net $+3473 over 21 trades / 3 days; profit factor 5.16; avg NoneR; best day ('2026-09-03', 2404.8); worst day ('2026-09-01', 454.0); best trade 2026-09-03 $+1587; worst trade 2026-09-01 $-359.\n\nWHAT WORKED:\n- Your 'acceptance back inside range' setup is a clear edge, delivering 2W/0L for $+2245. This confirms your location-first approach works when you wait for the specific trigger.\n- Your short trades were 100% winners (4W/0L, +$652), indicating a strong read on downside continuation or rejection levels.\n\nBIGGEST LEAK: The single most costly leak this week was the consistent over-trading beyond your self-imposed limit of two attempts per day. You took 21 trades across 3 days, not 6. On September 1st, after an initial win, you logged 10 more trades, including three consecutive losses (a2-a4), indicating emotional chasing to get green rather than disciplined execution. This fragments focus and invites lower-quality entries, even if the P&L was positive this week.\n\nBEST & WORST TRADE:\n- Repeat: 2026-09-03 $+1587, an 'acceptance back inside range' setup taken with conviction.\n- Cut: 2026-09-01 $-359, one of many emotional attempts after your first trade, violating your daily attempt limit.\n\nNEXT WEEK: Strict adherence to your \"max 2 attempts per day\" rule. Your daily trade count must not exceed two, ensuring your first attempt is always an A-setup."
   },
   "days": [
     {
