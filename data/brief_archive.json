@@ -1,6 +1,132 @@
 {
-  "updated": "2026-09-04T12:00:00.013988-04:00",
+  "updated": "2026-09-07T12:00:00.025237-04:00",
   "days": [
+    {
+      "date": "2026-09-07",
+      "regime": "Imbalance due to extremely compressed overnight range and negative GEX, setting up for a potential range expansion or directional trend.",
+      "predicted_model": "range_expansion",
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 26.0,
+          "confidence": "medium",
+          "why": "\u2212 OVN range compressed \u2014 discount; compression here doesn't reliably release into RTH; + -GEX fuels expansion; + price below gamma flip 29595 \u2014 momentum regime",
+          "stat_support": "base rate 14%",
+          "trigger": "Price breaks either OVNH 29569.0 or OVL 29514.5.",
+          "confirm": "Acceptance, demonstrated by sustained trade, beyond the broken OVN extreme.",
+          "target": "PDH 29704.5 (upside) or PDL 29468.0 (downside).",
+          "abort": "Price quickly reclaims the OVN extreme and returns inside the OVN range."
+        },
+        {
+          "model": "trend_down",
+          "probability": 19.7,
+          "confidence": "low",
+          "why": "\u2212 open not below value; + price below gamma flip 29595 \u2014 momentum regime (soft; unconfirmed live); + calibration: engine ran cold on this model (27% real vs 0% claimed)",
+          "stat_support": "base rate 18%",
+          "trigger": "Price rejects OVNH 29569.0 and drives below OVL 29514.5.",
+          "confirm": "Acceptance (e.g., two 30-min candles closing) below RTH VAL 29520.0.",
+          "target": "PDL 29468.0, then Put wall 29390.",
+          "abort": "Acceptance back above Gamma flip 29595.0 or a sustained hold above RTH VAL 29520.0."
+        },
+        {
+          "model": "trend_up",
+          "probability": 14.3,
+          "confidence": "low",
+          "why": "\u2212 open not above value; + price below gamma flip 29595 \u2014 momentum regime (soft; unconfirmed live); + calibration: engine ran cold on this model (19% real vs 0% claimed)",
+          "stat_support": "base rate 30%",
+          "trigger": "Price accepts above OVNH 29569.0 after opening within value.",
+          "confirm": "Acceptance above Gamma flip 29595.0.",
+          "target": "RTH POC 29620.0, then Call wall 29640 and potentially PDH 29704.5.",
+          "abort": "Rejection below OVN VAH 29552.0 or failure to accept above Gamma flip 29595.0."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 12.7,
+          "confidence": "low",
+          "why": "+ open inside value; \u2212 -GEX amplifies moves; \u2212 price below gamma flip 29595 \u2014 fades lose fuel",
+          "stat_support": "base rate 16%",
+          "trigger": "Price remains contained within the OVN range (29514.5-29569.0) post-open.",
+          "confirm": "Continued two-sided auction within RTH value (29520.0-29678.0) without clear acceptance outside the OVN range.",
+          "target": "OVN POC 29552.0, RTH POC 29620.0.",
+          "abort": "Clear acceptance beyond OVNH 29569.0 or OVL 29514.5."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 11.7,
+          "confidence": "low",
+          "why": "+ unswept liquidity to trap into; + calibration: engine ran cold on this model (15% real vs 0% claimed); calibrated: engine 15%; base rate 12%; engine runs cold on this one (1.18x)",
+          "stat_support": "base rate 10%",
+          "trigger": "Price sweeps OVL 29514.5 or OVNH 29569.0.",
+          "confirm": "Immediate rejection of the swept extreme and acceptance back within the OVN range (e.g., inside OVN VAL 29534.0 after an OVL sweep).",
+          "target": "Opposite extreme of the OVN range or OVN POC 29552.0.",
+          "abort": "Acceptance (sustained trade) beyond the swept extreme."
+        }
+      ],
+      "plan": "On the open (09:30 ET), observe initial auction behavior at OVN levels. IF price opens and immediately drives down, failing to reclaim OVN VAL 29534.0, look for acceptance below RTH VAL 29520.0 for a continuation to PDL 29468.0. IF price sweeps OVL 29514.5 then quickly reclaims and accepts above OVN VAL 29534.0, consider a failed auction move back towards OVN POC 29552.0. IF price opens and drives up, clearing OVNH 29569.0, observe for acceptance above Gamma flip 29595.0. If accepted, target RTH POC 29620.0. IF price fails to accept beyond the OVN range (OVNH 29569.0 or OVL 29514.5) and rotate",
+      "invalidation": "Sustained acceptance above Gamma flip 29595.0 and RTH POC 29620.0, suggesting a shift to an upside directional bias.",
+      "risk_note": "MTF Conflict: HTF bias is '-'. The extremely compressed overnight range with negative GEX presents higher volatility risk if an expansion occurs. Monitor for orderflow confirmation at key levels.",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": "range_expansion",
+      "day_grade": null,
+      "actual_model": "rotational_balance",
+      "correct": 0,
+      "grade_detail": "Held value 29520-29678",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29678.0
+        },
+        {
+          "label": "POC",
+          "price": 29620.0
+        },
+        {
+          "label": "VAL",
+          "price": 29520.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29569.0
+        },
+        {
+          "label": "OVN Low",
+          "price": 29514.5
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29552.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29552.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29534.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29522.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29289.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29254.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29704.5
+        },
+        {
+          "label": "Prior Low",
+          "price": 29468.0
+        }
+      ]
+    },
     {
       "date": "2026-09-04",
       "regime": "Imbalance \u2014 Gap up above prior value area, capped by high positive GEX and Call Wall constraints",
