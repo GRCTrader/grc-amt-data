@@ -1,6 +1,132 @@
 {
-  "updated": "2026-09-07T12:00:00.025237-04:00",
+  "updated": "2026-09-08T12:00:00.014078-04:00",
   "days": [
+    {
+      "date": "2026-09-08",
+      "regime": "BALANCE \u2014 Price opening inside RTH value near POC (29620.0) with +1.5$Bn positive gamma promoting rotational containment.",
+      "predicted_model": "range_expansion",
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 29.1,
+          "confidence": "medium",
+          "why": "Compressed 287pt overnight range opening inside value near POC 29620.0 creates a coiling structure prone to volatility expansion.",
+          "stat_support": "base rate 33%",
+          "trigger": "Break and trade sustained outside ONVP VAH 29609.0 or OVN Low 29477.75.",
+          "confirm": "Acceptance and volume build beyond RTH VAH 29678.0 or RTH VAL 29520.0.",
+          "target": "PDH 29704.5 on upside expansion; PDL 29468.0 on downside expansion.",
+          "abort": "Price rotates back into and stays trapped inside RTH POC 29620.0."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 15.4,
+          "confidence": "low",
+          "why": "Open inside value at POC 29620.0 combined with positive GEX (+1.5$Bn) above gamma flip 29560.0 dampens directional drive.",
+          "stat_support": "base rate 14%",
+          "trigger": "Rotational trade oscillating between ONVP VAH 29609.0 and Gamma Flip 29560.0.",
+          "confirm": "Passive absorption at RTH VAH 29678.0 or RTH VAL 29520.0 maintaining range bounds.",
+          "target": "RTH POC 29620.0 and Settle 29565.25.",
+          "abort": "One-timeframing acceptance past RTH VAH 29678.0 or RTH VAL 29520.0."
+        },
+        {
+          "model": "trend_down",
+          "probability": 14.2,
+          "confidence": "low",
+          "why": "Breaching key support at gamma flip 29560.0 opens downside auction toward unswept liquidity at PDL 29468.0.",
+          "stat_support": "base rate 7%",
+          "trigger": "Sustained downside push through Gamma Flip 29560.0 and ONVP POC 29552.0.",
+          "confirm": "Acceptance below RTH VAL 29520.0 with seller aggression on delta.",
+          "target": "PDL 29468.0 and PWL 28927.25.",
+          "abort": "Reclaim and hold back above Settle 29565.25."
+        },
+        {
+          "model": "short_covering",
+          "probability": 13.4,
+          "confidence": "low",
+          "why": "Overnight inventory slightly long could trap early shorts on a push past ONVP VAH 29609.0.",
+          "stat_support": "base rate 27%",
+          "trigger": "Probe above ONVP VAH 29609.0 with rising delta.",
+          "confirm": "Break and hold above Call Wall 29685.0.",
+          "target": "PDH 29704.5 and OVN High 29764.75.",
+          "abort": "Failure to hold RTH POC 29620.0."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 11.0,
+          "confidence": "low",
+          "why": "Unswept liquidity above RTH VAH 29678.0 sets up a classic trap and reverse inside a long gamma regime.",
+          "stat_support": "base rate 8%",
+          "trigger": "Probe beyond RTH VAH 29678.0 or ONVP POC 29552.0 that quickly stalls.",
+          "confirm": "Heavy passive absorption at the extreme followed by rapid rejection back inside value.",
+          "target": "RTH POC 29620.0 and ONVP POC 29552.0.",
+          "abort": "Value acceptance established outside RTH extremes."
+        }
+      ],
+      "plan": "If price opens near POC 29620.0 and pushes into RTH VAH 29678.0 / Call Wall 29685.0 with passive absorption, short the rejection targeting RTH POC 29620.0 and Settle 29565.25. If price instead breaks below Settle 29565.25 and Gamma Flip 29560.0 with acceptance, take retest shorts targeting RTH VAL 29520.0 and PDL 29468.0.",
+      "invalidation": "Sustained value acceptance building above OVN High 29764.75 or below PDL 29468.0.",
+      "risk_note": "+1.5$Bn long gamma dampens breakout momentum; range expansion signals show negative historical performance for this profile.",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": "range_expansion",
+      "day_grade": null,
+      "actual_model": "range_expansion",
+      "correct": 1,
+      "grade_detail": "Two-sided, range 29425-29686, close 29549",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29678.0
+        },
+        {
+          "label": "POC",
+          "price": 29620.0
+        },
+        {
+          "label": "VAL",
+          "price": 29520.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29764.75
+        },
+        {
+          "label": "OVN Low",
+          "price": 29477.75
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29609.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29552.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29501.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29522.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29289.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29254.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29704.5
+        },
+        {
+          "label": "Prior Low",
+          "price": 29468.0
+        }
+      ]
+    },
     {
       "date": "2026-09-07",
       "regime": "Imbalance due to extremely compressed overnight range and negative GEX, setting up for a potential range expansion or directional trend.",
