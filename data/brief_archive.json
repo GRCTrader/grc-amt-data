@@ -1,6 +1,132 @@
 {
-  "updated": "2026-09-08T12:00:00.014078-04:00",
+  "updated": "2026-09-09T12:00:00.019511-04:00",
   "days": [
+    {
+      "date": "2026-09-09",
+      "regime": "Imbalance / Downside Range Expansion \u2014 Price opening in discount below value (29382.0) with short gamma (-2.8$Bn) fueling volatility below 29575 flip.",
+      "predicted_model": "range_expansion",
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 32.5,
+          "confidence": "medium",
+          "why": "Dealers short gamma (-2.8$Bn) and price positioned below the 29575 gamma flip create ideal conditions for volatile expansion out of the overnight range.",
+          "stat_support": "base rate 26%",
+          "trigger": "Break and acceptance outside OVNL 29333.0 or retest failure at PDL 29424.75 at the open.",
+          "confirm": "Sustained volume expansion and one-timeframing away from RTH VAL 29456.0.",
+          "target": "Put Wall at 29000.0 and PWL 28927.25.",
+          "abort": "Re-entry and acceptance back inside RTH Value Area above 29456.0."
+        },
+        {
+          "model": "trend_down",
+          "probability": 21.1,
+          "confidence": "low",
+          "why": "Open below value (29382.0) and negative GEX setup a continuation drive toward downside liquidity.",
+          "stat_support": "base rate 12%",
+          "trigger": "Open drive selling that holds below PDL 29424.75.",
+          "confirm": "Break and acceptance below OVN VAL 29344.0 and OVNL 29333.0 with persistent selling delta.",
+          "target": "Put Wall 29000.0 and PWL 28927.25.",
+          "abort": "Absorption at OVNL 29333.0 followed by a reclaim of PDL 29424.75."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 11.2,
+          "confidence": "low",
+          "why": "Two-sided rotational trade inside prior value is heavily discounted by the overnight gap and negative gamma regime.",
+          "stat_support": "base rate 17%",
+          "trigger": "Failure to breakdown through OVNL 29333.0 followed by a push back into RTH VAL 29456.0.",
+          "confirm": "Two-way rotational auction between PDL 29424.75 and RTH POC 29508.0 without directional delta divergence.",
+          "target": "RTH POC 29508.0 and ONVP VAH 29572.0.",
+          "abort": "Clear directional break and acceptance below 29333.0."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 11.2,
+          "confidence": "low",
+          "why": "Unswept low at OVNL 29333.0 offers potential to trap late aggressive shorts into a fast mean-reverting squeeze.",
+          "stat_support": "base rate 10%",
+          "trigger": "Liquidity sweep below OVNL 29333.0 that immediately finds passive buy absorption.",
+          "confirm": "Aggressive buy response reclaiming OVN VAL 29344.0 and pushing back above PDL 29424.75.",
+          "target": "RTH VAL 29456.0 and RTH POC 29508.0.",
+          "abort": "Sustained one-timeframing printed below 29333.0 with market order selling persistence."
+        },
+        {
+          "model": "trend_up",
+          "probability": 9.8,
+          "confidence": "low",
+          "why": "Low-probability upside trend requiring full gap fill and reclaim of the 29575 gamma flip level.",
+          "stat_support": "base rate 19%",
+          "trigger": "Immediate buying off the open reclaiming RTH VAL 29456.0.",
+          "confirm": "Acceptance above RTH POC 29508.0 and sustained trade above gamma flip 29575.0.",
+          "target": "OVN High 29633.75 and PWH 29704.5.",
+          "abort": "Rejection at RTH VAL 29456.0 leading to a breakdown below 29382.0."
+        }
+      ],
+      "plan": "If price opens below 29424.75 (PDL) and fails to accept back into RTH VAL 29456.0, then look for short execution on retest rejection targeting 29333.0 (OVNL) and 29000.0 (Put Wall). If 29333.0 is swept with heavy buy absorption and immediate delta divergence reclaiming 29344.0 (OVN VAL), then look for a failed auction long targeting 29424.75 and 29508.0.",
+      "invalidation": "Acceptance back above gamma flip 29575.0 and RTH POC 29508.0 kills the downside extension thesis.",
+      "risk_note": "Negative GEX (-2.8$Bn) regime amplifies move velocity and slippage below 29575; trade size carefully and keep stops predefined.",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": "range_expansion",
+      "day_grade": null,
+      "actual_model": "rotational_balance",
+      "correct": 0,
+      "grade_detail": "Held value 29456-29595",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29595.0
+        },
+        {
+          "label": "POC",
+          "price": 29508.0
+        },
+        {
+          "label": "VAL",
+          "price": 29456.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29633.75
+        },
+        {
+          "label": "OVN Low",
+          "price": 29333.0
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29572.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29525.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29344.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29678.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29620.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29520.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29764.75
+        },
+        {
+          "label": "Prior Low",
+          "price": 29424.75
+        }
+      ]
+    },
     {
       "date": "2026-09-08",
       "regime": "BALANCE \u2014 Price opening inside RTH value near POC (29620.0) with +1.5$Bn positive gamma promoting rotational containment.",
