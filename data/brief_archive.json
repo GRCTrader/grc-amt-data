@@ -1,6 +1,132 @@
 {
-  "updated": "2026-09-09T12:00:00.019511-04:00",
+  "updated": "2026-09-10T12:00:00.018357-04:00",
   "days": [
+    {
+      "date": "2026-09-10",
+      "regime": "Imbalance \u2014 open below prior value (29447.0) with short gamma (-3.5$Bn) favoring range expansion / downside continuation.",
+      "predicted_model": null,
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 30.8,
+          "confidence": "medium",
+          "why": "Dealer short gamma (-3.5$Bn) and price below gamma flip 29410.0 fuel volatility expansion outside the overnight range (29082.0\u201329508.25).",
+          "stat_support": "base rate 25%",
+          "trigger": "Break and hold outside overnight low 29082.0 or overnight high 29508.25.",
+          "confirm": "Sustained volume acceptance below 29082.0 with aggressive selling displacement.",
+          "target": "PWL 28927.25 and Put Wall 28875.0.",
+          "abort": "Re-entry and balance acceptance back above OVN POC 29156.0."
+        },
+        {
+          "model": "trend_down",
+          "probability": 26.2,
+          "confidence": "medium",
+          "why": "Open below prior value (29447.0) under gamma flip (29410.0) maintains the 2-day downtrend structure.",
+          "stat_support": "base rate 22%",
+          "trigger": "Failure to reclaim OVN VAL 29099.0 / OVN POC 29156.0 on initial pullback.",
+          "confirm": "Acceptance below OVNL 29082.0 with negative orderflow delta and passive offer stacking.",
+          "target": "PWL 28927.25 and Put Wall 28875.0.",
+          "abort": "Reclaim and acceptance above gamma flip 29410.0."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 11.8,
+          "confidence": "low",
+          "why": "Overnight inventory sits within OVN VAL 29099.0 and OVN POC 29156.0, though short gamma limits sustained two-sided containment.",
+          "stat_support": "base rate 9%",
+          "trigger": "Price holds between OVNL 29082.0 and OVN POC 29156.0 without directional acceptance.",
+          "confirm": "Rotational orderflow with absorption at OVNL 29082.0 and exhaustion near OVN POC 29156.0.",
+          "target": "OVN POC 29156.0 and OVN VAH 29443.0.",
+          "abort": "Displacement below 29082.0 or above 29156.0 with volume expansion."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 10.3,
+          "confidence": "low",
+          "why": "Proximity to OVNL 29082.0 offers trap potential into unswept liquidity if aggressive sellers absorb.",
+          "stat_support": "base rate 10%",
+          "trigger": "Sweep below OVNL 29082.0 that fails to find lower acceptance.",
+          "confirm": "Aggressive buyers reclaim OVN VAL 29099.0 with delta divergence and absorption.",
+          "target": "OVN POC 29156.0 and gamma flip 29410.0.",
+          "abort": "Acceptance and one-timeframing continuation below 29082.0."
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 7.6,
+          "confidence": "low",
+          "why": "Large gap (-1.18%) creates structural stretch from prior POC 29465.0, but negative gamma hinders snapback potential.",
+          "stat_support": "base rate 14%",
+          "trigger": "Reclaim of OVN POC 29156.0 from discount open.",
+          "confirm": "Sustained buying accepting price above OVN VAH 29443.0.",
+          "target": "Prior RTH VAL 29447.0 and prior POC 29465.0.",
+          "abort": "Rejection at OVN POC 29156.0 and break below OVNL 29082.0."
+        }
+      ],
+      "plan": "If price opens near 29102.5 and tests into OVN VAL 29099.0 / OVN POC 29156.0 with passive absorption on delta, enter short targeting OVNL 29082.0 and PWL 28927.25. If price breaks directly below OVNL 29082.0 and accepts with aggressive selling, follow the trend down toward Put Wall 28875.0. If OVNL 29082.0 is swept and immediately reclaimed above 29099.0 with passive buying absorption, evaluate a quick failed auction long back to OVN POC 29156.0.",
+      "invalidation": "Sustained acceptance back above gamma flip 29410.0 and prior VAL 29447.0 invalidates the short/downside expansion bias.",
+      "risk_note": "Dealer short gamma (-3.5$Bn) amplifies move velocity; expect rapid expansion and potential slippage on breaks below 29082.0.",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": null,
+      "day_grade": null,
+      "actual_model": "range_expansion",
+      "correct": 0,
+      "grade_detail": "Two-sided, range 29043-29275, close 29244",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29576.0
+        },
+        {
+          "label": "POC",
+          "price": 29465.0
+        },
+        {
+          "label": "VAL",
+          "price": 29447.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29508.25
+        },
+        {
+          "label": "OVN Low",
+          "price": 29082.0
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29443.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29156.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29099.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29595.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29508.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29456.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29633.75
+        },
+        {
+          "label": "Prior Low",
+          "price": 29333.0
+        }
+      ]
+    },
     {
       "date": "2026-09-09",
       "regime": "Imbalance / Downside Range Expansion \u2014 Price opening in discount below value (29382.0) with short gamma (-2.8$Bn) fueling volatility below 29575 flip.",
