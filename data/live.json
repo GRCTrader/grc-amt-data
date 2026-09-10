@@ -1,58 +1,58 @@
 {
-  "asof": "2026-09-09 11:01 ET",
-  "slot": "11:01",
-  "price": 29527.0,
+  "asof": "2026-09-10 09:31 ET",
+  "slot": "09:31",
+  "price": 29058.25,
   "bias": "NEUTRAL",
   "scenarios": [
     {
       "model": "range_expansion",
-      "probability": 32.5,
-      "base_rate": 26,
+      "probability": 30.8,
+      "base_rate": 25,
       "drivers": [
         "+ -GEX fuels expansion",
-        "+ price below gamma flip 29575 \u2014 momentum regime",
-        "+ calibration: engine ran cold on this model (34% real vs 0% claimed)",
-        "calibrated: engine 50%; base rate 31%; engine runs cold on this one (1.28x)"
+        "+ price below gamma flip 29410 \u2014 momentum regime",
+        "+ 25 similar days: 48% historically",
+        "+ calibration: engine ran cold on this model (33% real vs 0% claimed)",
+        "calibrated: engine 51%; base rate 30%; engine runs cold on this one (1.25x)"
       ],
-      "engine_probability": 50
+      "engine_probability": 51
     },
     {
       "model": "trend_down",
-      "probability": 21.1,
-      "base_rate": 12,
+      "probability": 26.2,
+      "base_rate": 22,
       "drivers": [
         "+ open below value",
-        "+ price below gamma flip 29575 \u2014 momentum regime (soft; unconfirmed live)",
-        "+ calibration: engine ran cold on this model (24% real vs 0% claimed)",
-        "calibrated: engine 31%; base rate 12%; engine runs cold on this one (1.96x)"
+        "+ price below gamma flip 29410 \u2014 momentum regime (soft; unconfirmed live)",
+        "+ calibration: engine ran cold on this model (23% real vs 0% claimed)",
+        "calibrated: engine 49%; base rate 12%; engine runs cold on this one (1.98x)"
       ],
-      "engine_probability": 31
+      "engine_probability": 49
     },
     {
       "model": "rotational_balance",
-      "probability": 11.2,
-      "base_rate": 17,
+      "probability": 11.8,
+      "base_rate": 9,
       "drivers": [
         "\u2212 gap argues against balance",
         "\u2212 -GEX amplifies moves",
-        "\u2212 price below gamma flip 29575 \u2014 fades lose fuel",
-        "+ calibration: engine ran cold on this model (23% real vs 0% claimed)",
-        "calibrated: engine 18%; base rate 15%; engine runs hot on this one (0.67x)"
+        "\u2212 price below gamma flip 29410 \u2014 fades lose fuel",
+        "+ calibration: engine ran cold on this model (25% real vs 0% claimed)",
+        "calibrated: engine 15%; base rate 16%; engine runs hot on this one (0.67x)"
       ],
-      "engine_probability": 18
+      "engine_probability": 15
     },
     {
       "model": "failed_auction",
-      "probability": 11.2,
+      "probability": 10.3,
       "base_rate": 10,
       "drivers": [
         "\u2212 open out of value near an OVN extreme \u2014 mild discount; proximity alone rarely confirms the reversal",
         "+ unswept liquidity to trap into",
-        "+ 25 similar days: 20% historically",
-        "+ calibration: engine ran cold on this model (14% real vs 0% claimed)",
-        "calibrated: engine 16%; base rate 12%; engine runs cold on this one (1.20x)"
+        "+ calibration: engine ran cold on this model (13% real vs 0% claimed)",
+        "calibrated: engine 14%; base rate 12%; engine runs cold on this one (1.21x)"
       ],
-      "engine_probability": 16
+      "engine_probability": 14
     }
   ],
   "invalidations": [
@@ -60,23 +60,23 @@
       "scenario": "range_expansion",
       "status": "armed",
       "condition": "close_below",
-      "level": 29000.0,
+      "level": 28875.0,
       "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance below the put wall 29000 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
+      "meaning": "\u26a1 GAMMA: acceptance below the put wall 28875 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
     },
     {
       "scenario": "range_expansion",
       "status": "armed",
       "condition": "close_above",
-      "level": 29825.0,
+      "level": 29695.0,
       "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance above the call wall 29825 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
+      "meaning": "\u26a1 GAMMA: acceptance above the call wall 29695 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
     }
   ],
   "gex": {
-    "total_gex_bn": -2.4,
-    "flip_nq": 29560,
-    "call_wall_nq": 29805,
-    "put_wall_nq": 28780
+    "total_gex_bn": -4.52,
+    "flip_nq": 29500,
+    "call_wall_nq": 29785,
+    "put_wall_nq": 28965
   }
 }
