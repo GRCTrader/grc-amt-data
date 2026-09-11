@@ -1,6 +1,132 @@
 {
-  "updated": "2026-09-10T12:00:00.018357-04:00",
+  "updated": "2026-09-11T12:00:00.032538-04:00",
   "days": [
+    {
+      "date": "2026-09-11",
+      "regime": "Imbalance developing: Open above prior value (29216.0) and ONVP VAH (29306.0) with short gamma (-3.1$Bn) favoring directional range expansion.",
+      "predicted_model": "range_expansion",
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 31.9,
+          "confidence": "medium",
+          "why": "Negative gamma (-3.1$Bn) below gamma flip 29490 fuels volatility expansion beyond the 299.25pt overnight range.",
+          "stat_support": "base rate 20%",
+          "trigger": "Displacement beyond OVNH 29339.75 or OVNL 29040.5 at RTH open.",
+          "confirm": "Acceptance outside overnight range holding 29339.75 on retest with cumulative volume acceleration.",
+          "target": "PDH 29508.25 to upside, or PDL 29043.25 / PWL 28927.25 to downside.",
+          "abort": "Re-entry inside ONVP value area (29107.0\u201329306.0) with rotational price action."
+        },
+        {
+          "model": "trend_up",
+          "probability": 17.8,
+          "confidence": "low",
+          "why": "Opening above prior day value (29216.0) and ONVP VAH (29306.0) establishes bullish initiative context toward gamma flip 29490.",
+          "stat_support": "base rate 25%",
+          "trigger": "Open-drive holding above ONVP VAH 29306.0.",
+          "confirm": "One-timeframing higher with continuous market orders holding above OVNH 29339.75.",
+          "target": "Gamma flip 29490 and PDH 29508.25.",
+          "abort": "Breakdown and acceptance inside prior RTH value below 29216.0."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 13.3,
+          "confidence": "low",
+          "why": "Lower value migration counteracts the gap up, leaving price susceptible to rotation if 29339.75 holds as resistance.",
+          "stat_support": "base rate 16%",
+          "trigger": "Rejection at OVNH 29339.75 and move back below ONVP VAH 29306.0.",
+          "confirm": "Absorption at 29306.0 leading to two-sided rotation inside ONVP range.",
+          "target": "ONVP POC 29137.0 and prior RTH VAH 29216.0.",
+          "abort": "Sustained acceptance above 29350.0."
+        },
+        {
+          "model": "trend_down",
+          "probability": 12.5,
+          "confidence": "low",
+          "why": "Lower value migration indicates overhead supply that could trigger sharp liquidations if overnight longs fail.",
+          "stat_support": "base rate 17%",
+          "trigger": "Failure to hold 29306.0 (ONVP VAH) followed by break below 29216.0 (RTH VAH).",
+          "confirm": "One-timeframing lower accepting through RTH POC 29143.0 and PDL 29043.25.",
+          "target": "Put Wall 28995.0 and PWL 28927.25.",
+          "abort": "Reclaim and acceptance above OVNH 29339.75."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 11.1,
+          "confidence": "low",
+          "why": "Unswept liquidity at PDH 29508.25 provides a trap location if a break above OVNH 29339.75 lacks initiative buying.",
+          "stat_support": "base rate 14%",
+          "trigger": "Sweep above OVNH 29339.75 with immediate delta divergence or absorption.",
+          "confirm": "Reclaim below ONVP VAH 29306.0 with aggressive market selling.",
+          "target": "RTH VAH 29216.0 and ONVP POC 29137.0.",
+          "abort": "Holding 15-minute acceptance above 29350.0."
+        }
+      ],
+      "plan": "If price holds above ONVP VAH 29306.0 and breaks OVNH 29339.75 with buying delta, enter long targeting Gamma Flip 29490 and PDH 29508.25. If price sweeps OVNH 29339.75, shows absorption, and reclaims back below 29306.0, enter short targeting RTH VAH 29216.0 and RTH POC 29143.0. If 29216.0 breaks down, target PDL 29043.25.",
+      "invalidation": "Acceptance back inside prior day RTH value below 29216.0 invalidates the open initiative and primary bullish read.",
+      "risk_note": "Short gamma regime (-3.1$Bn) increases slippage and accelerates directional moves; range expansion signals carry poor historical trade edge.",
+      "htf_bias": "SHORT",
+      "htf_text": "DAILY: Daily structure shifted bearish following displacement below 29075.00, leaving price in discount of the 29764.75 to 29040.50 dealing range. Nearest untapped buyside liquidity rests above at 29508.25 and 29764.75, while sellside liquidity sits below at 29040.50 and 28927.25.\n\n4H: Following the downward displacement, 4H structure remains bearish with a partially filled bearish fair value gap open from 29399.50 to 29417.25. Continued rejection from this zone would confirm daily bearish continuation, whereas displacement above 29508.25 would deny the daily bearish bias.\n\n1H: Overnight structure printed an internal CHoCH as price expanded upward from the 29040.50 low toward the 4H premium zone. The immediate draw on liquidity for the NY open is the overnight high at 29399.50 above, or a retest of the overnight fair value gap at 29268.75\u201329289.50 below.\n\nBIAS: SHORT \u2014 If price sweeps the overnight high at 29399.50 into the 4H fair value gap and shows orderflow absorption, then look to short targeting 29268.75 and sellside liquidity at 29040.50.",
+      "day_shape": "range_expansion",
+      "day_grade": null,
+      "actual_model": "range_expansion",
+      "correct": 1,
+      "grade_detail": "Two-sided, range 29204-29500, close 29370",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29216.0
+        },
+        {
+          "label": "POC",
+          "price": 29143.0
+        },
+        {
+          "label": "VAL",
+          "price": 29093.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29339.75
+        },
+        {
+          "label": "OVN Low",
+          "price": 29040.5
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29306.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29137.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29107.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29576.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29465.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29447.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29508.25
+        },
+        {
+          "label": "Prior Low",
+          "price": 29043.25
+        }
+      ]
+    },
     {
       "date": "2026-09-10",
       "regime": "Imbalance \u2014 open below prior value (29447.0) with short gamma (-3.5$Bn) favoring range expansion / downside continuation.",
