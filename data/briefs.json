@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-11T11:05:41.059054-04:00",
+  "updated": "2026-09-13T17:00:14.688222-04:00",
   "stats": {
     "total_graded": 59,
     "correct": 18,
@@ -449,15 +449,24 @@
       }
     },
     "weekly_diagnostic": {
-      "week_start": "2026-08-31",
-      "week_end": "2026-09-04",
-      "total_graded": 3,
-      "correct": 1,
-      "accuracy_pct": 33.0,
-      "review_text": "The model's performance for the week was poor, correctly identifying only one out of three market types. It accurately predicted a range expansion day but failed to identify a rotational balance day and a trend up day.\n\nThe biggest miss occurred on 2026-09-02, when the model called for an 'A' type day but the market actually exhibited rotational balance, holding value within a tight range of 29029-29181.\n\nWith only three calls made this week, the sample size is too thin to reliably identify specific conditions or weights in scenarios.py that require adjustment. More data is needed to draw meaningful conclusions.",
-      "created_at": "2026-09-04 15:20:06"
+      "week_start": "2026-09-07",
+      "week_end": "2026-09-11",
+      "total_graded": 5,
+      "correct": 2,
+      "accuracy_pct": 40.0,
+      "review_text": "WHAT HAPPENED:\nThe model scored 40% (2/5) this week, struggling primarily with over-calling range expansion during tight balance days. It defaulted to expansion reads on four out of five days, misreading two rotational regimes and missing a profile shift.\n\nBIGGEST MISS:\nThe worst call occurred on September 10, when the model predicted a B-shaped profile, but the market instead delivered a wide 232-point two-sided range expansion from 29043 to 29275.\n\nSUGGESTED IMPROVEMENT:\nA five-day sample is too thin to draw structural conclusions without overreaching. However, a testable hypothesis for scenarios.py is to raise the required overnight range or volatility threshold before range_expansion can trigger, then backtest this change against the 19-year historical dataset to measure if it reduces false-positive expansion calls during rotational balance regimes.",
+      "created_at": "2026-09-11 15:20:15"
     },
     "weekly_diagnostics_all": [
+      {
+        "week_start": "2026-09-07",
+        "week_end": "2026-09-11",
+        "total_graded": 5,
+        "correct": 2,
+        "accuracy_pct": 40.0,
+        "review_text": "WHAT HAPPENED:\nThe model scored 40% (2/5) this week, struggling primarily with over-calling range expansion during tight balance days. It defaulted to expansion reads on four out of five days, misreading two rotational regimes and missing a profile shift.\n\nBIGGEST MISS:\nThe worst call occurred on September 10, when the model predicted a B-shaped profile, but the market instead delivered a wide 232-point two-sided range expansion from 29043 to 29275.\n\nSUGGESTED IMPROVEMENT:\nA five-day sample is too thin to draw structural conclusions without overreaching. However, a testable hypothesis for scenarios.py is to raise the required overnight range or volatility threshold before range_expansion can trigger, then backtest this change against the 19-year historical dataset to measure if it reduces false-positive expansion calls during rotational balance regimes.",
+        "created_at": "2026-09-11 15:20:15"
+      },
       {
         "week_start": "2026-08-31",
         "week_end": "2026-09-04",
@@ -506,7 +515,7 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-09-11T11:05:41.059083-04:00",
+    "generated_at": "2026-09-13T17:00:14.688239-04:00",
     "last_brief_date": "2026-09-11",
     "last_brief_time": "08:00:01",
     "last_grade_date": "2026-09-11",
@@ -514,8 +523,8 @@
   },
   "coach": null,
   "mentor_review": {
-    "date": "2026-09-06",
-    "text": "SCORECARD:\nMarket Read: 7/10 \u2013 Your 'acceptance back inside range' setup demonstrated a strong understanding of market context, leading to high-conviction trades.\nLevel Selection: 9/10 \u2013 The 100% win rate on 'acceptance back inside range' setups (+$2245) confirms your ability to identify high-probability locations.\nExecution: 6/10 \u2013 While profitable, the sheer number of daily trades indicates reactive execution, straying from your planned maximum of two attempts.\nRisk Management: 4/10 \u2013 The 'avg NoneR' is a critical gap. More importantly, exceeding your 2-attempt rule daily leaves you exposed to larger downside volatility.\nPsychology: 5/10 \u2013 The 11 trades on Sept 1st after initial losses clearly point to emotional chasing to get green, a direct manifestation of \"Trader B\" behavior.\nDiscipline: 3/10 \u2013 Consistently violated your rule of max 2 attempts per day, logging 21 trades over 3 days instead of a planned 6.\n\nPNL: Net $+3473 over 21 trades / 3 days; profit factor 5.16; avg NoneR; best day ('2026-09-03', 2404.8); worst day ('2026-09-01', 454.0); best trade 2026-09-03 $+1587; worst trade 2026-09-01 $-359.\n\nWHAT WORKED:\n- Your 'acceptance back inside range' setup is a clear edge, delivering 2W/0L for $+2245. This confirms your location-first approach works when you wait for the specific trigger.\n- Your short trades were 100% winners (4W/0L, +$652), indicating a strong read on downside continuation or rejection levels.\n\nBIGGEST LEAK: The single most costly leak this week was the consistent over-trading beyond your self-imposed limit of two attempts per day. You took 21 trades across 3 days, not 6. On September 1st, after an initial win, you logged 10 more trades, including three consecutive losses (a2-a4), indicating emotional chasing to get green rather than disciplined execution. This fragments focus and invites lower-quality entries, even if the P&L was positive this week.\n\nBEST & WORST TRADE:\n- Repeat: 2026-09-03 $+1587, an 'acceptance back inside range' setup taken with conviction.\n- Cut: 2026-09-01 $-359, one of many emotional attempts after your first trade, violating your daily attempt limit.\n\nNEXT WEEK: Strict adherence to your \"max 2 attempts per day\" rule. Your daily trade count must not exceed two, ensuring your first attempt is always an A-setup."
+    "date": "2026-09-13",
+    "text": "SCORECARD:\nMarket Read: 10/10 \u2014 Correctly identified Labor Day holiday conditions and chose not to trade low-liquidity chop.\nLevel Selection: N/A \u2014 No levels engaged this week.\nExecution: 10/10 \u2014 Perfect execution of the plan to stay flat; zero rule breaks.\nRisk Management: 10/10 \u2014 Preserved 100% of funded capital while handling major off-desk events.\nPsychology: 10/10 \u2014 Elite self-awareness recognizing euphoric state (apartment purchase) would compromise objective orderflow reading.\nDiscipline: 10/10 \u2014 Complete restraint; did not touch the software or force trades out of FOMO.\n\nPNL: Net $0.00 | Best/Worst Day: $0.00 / $0.00 | Profit Factor: N/A | Avg R: N/A\n\nWHAT WORKED:\n- Emotional risk management: Recognizing that positive emotional high-arousal states impair discretionary location reading just as much as tilt.\n- Holiday protocol: Respecting bank-holiday liquidity gaps by remaining flat during NY AM.\n\nBIGGEST LEAK:\n- None on the ledger this week, but your primary vulnerability shifts to post-break over-eagerness next week. Coming off a flat week with high off-desk dopamine creates a tendency to force premature Trader B entries on Monday just to feel back in the game.\n\nBEST & WORST TRADE:\n- Best Trade: Staying flat on Sep 7 \u2014 protected equity and focused on your personal milestone.\n- Worst Trade: None executed.\n\nNEXT WEEK:\n- On your first NY AM session back, execute on strictly ONE funded account and require a written confirmation trigger at an HTF level before placing attempt 1."
   },
   "days": [
     {
