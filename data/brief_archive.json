@@ -1,6 +1,112 @@
 {
-  "updated": "2026-09-14T12:00:00.017358-04:00",
+  "updated": "2026-09-15T12:00:00.024614-04:00",
   "days": [
+    {
+      "date": "2026-09-15",
+      "regime": "at poc open, overlapping value, normal vol (rule-based read \u2014 AI unavailable)",
+      "predicted_model": "range_expansion",
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 32.7,
+          "confidence": "medium",
+          "why": "+ -GEX fuels expansion; + price below gamma flip 29680 \u2014 momentum regime",
+          "stat_support": "base rate 26%"
+        },
+        {
+          "model": "trend_up",
+          "probability": 18.2,
+          "confidence": "low",
+          "why": "\u2212 open not above value; + already 100% long overnight \u2014 historically a continuation tell, not a fade",
+          "stat_support": "base rate 33%"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 14.4,
+          "confidence": "low",
+          "why": "+ open inside value; \u2212 gap argues against balance",
+          "stat_support": "base rate 16%"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 11.7,
+          "confidence": "low",
+          "why": "+ unswept liquidity to trap into; + calibration: engine ran cold on this model (12% real vs 0% claimed)",
+          "stat_support": "base rate 12%"
+        },
+        {
+          "model": "long_liquidation",
+          "probability": 7.6,
+          "confidence": "low",
+          "why": "+ 100% long overnight \u2014 historically the strongest tell for a flush (raw lift 3.83x, capped 1.8x); + price below gamma flip 29680 \u2014 momentum regime (soft; unconfirmed live)",
+          "stat_support": "base rate 9%"
+        }
+      ],
+      "plan": "",
+      "invalidation": "",
+      "risk_note": "",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": "range_expansion",
+      "day_grade": null,
+      "actual_model": "rotational_balance",
+      "correct": 0,
+      "grade_detail": "Held value 28896-29500",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29500.0
+        },
+        {
+          "label": "POC",
+          "price": 29462.0
+        },
+        {
+          "label": "VAL",
+          "price": 28896.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29495.25
+        },
+        {
+          "label": "OVN Low",
+          "price": 29231.0
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29490.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29456.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29354.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29435.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29417.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29366.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29303.0
+        },
+        {
+          "label": "Prior Low",
+          "price": 28816.25
+        }
+      ]
+    },
     {
       "date": "2026-09-14",
       "regime": null,
