@@ -1,5 +1,5 @@
 {
-  "asof": "2026-09-16 15:57 ET",
+  "asof": "2026-09-16 15:58 ET",
   "models": [
     {
       "model": "pdhl",
@@ -7,35 +7,35 @@
       "tally": {
         "market": {
           "mode": "market",
-          "posted": 2,
-          "taken": 2,
+          "posted": 3,
+          "taken": 3,
           "no_trade": 0,
-          "wins": 1,
+          "wins": 2,
           "losses": 1,
-          "win_rate": 50.0,
-          "pts": -17.75,
-          "nq_usd": -355.0,
-          "mnq_usd": -35.5,
-          "avg_pts": -8.88,
-          "best_pts": 9.0,
+          "win_rate": 66.7,
+          "pts": 64.25,
+          "nq_usd": 1285.0,
+          "mnq_usd": 128.5,
+          "avg_pts": 21.42,
+          "best_pts": 82.0,
           "worst_pts": -26.75,
-          "profit_factor": 0.34
+          "profit_factor": 3.4
         },
         "retest": {
           "mode": "retest",
-          "posted": 2,
-          "taken": 2,
+          "posted": 3,
+          "taken": 3,
           "no_trade": 0,
           "wins": 1,
-          "losses": 1,
-          "win_rate": 50.0,
-          "pts": 11.5,
-          "nq_usd": 230.0,
-          "mnq_usd": 23.0,
-          "avg_pts": 5.75,
+          "losses": 2,
+          "win_rate": 33.3,
+          "pts": 6.0,
+          "nq_usd": 120.0,
+          "mnq_usd": 12.0,
+          "avg_pts": 2.0,
           "best_pts": 26.5,
           "worst_pts": -15.0,
-          "profit_factor": 1.77
+          "profit_factor": 1.29
         }
       },
       "setups": [
@@ -80,8 +80,76 @@
             "opposite previous-day extreme 29,453.50"
           ],
           "context": "better \u2014 session VWAP is sloping down with the trade",
-          "graded": false,
-          "result": null
+          "graded": true,
+          "result": {
+            "market": {
+              "status": "target",
+              "side": "short",
+              "entry_mode": "market",
+              "entry": 29172.0,
+              "stop": 29213.0,
+              "targets": [
+                29090.0,
+                29453.5
+              ],
+              "targets_hit": [
+                {
+                  "i": 0,
+                  "price": 29090.0,
+                  "at": "2026-09-16 15:22:00-04:00",
+                  "pts": 82.0
+                },
+                {
+                  "i": 1,
+                  "price": 29453.5,
+                  "at": "2026-09-16 15:22:00-04:00",
+                  "pts": -281.5
+                }
+              ],
+              "notes": [],
+              "pts": 82.0,
+              "nq_usd": 1640.0,
+              "mnq_usd": 164.0,
+              "mae_pts": 0.0,
+              "mfe_pts": 88.75,
+              "r_multiple": 2.0,
+              "risk_pts": 41.0,
+              "window_end": "2026-09-16 17:00:00-04:00",
+              "exit": 29090.0,
+              "exit_at": "2026-09-16 15:22:00-04:00"
+            },
+            "retest": {
+              "status": "stop",
+              "side": "short",
+              "entry_mode": "retest",
+              "entry": 29207.5,
+              "stop": 29213.0,
+              "targets": [
+                29090.0,
+                29453.5
+              ],
+              "targets_hit": [
+                {
+                  "i": 1,
+                  "price": 29453.5,
+                  "at": "2026-09-16 15:41:00-04:00",
+                  "pts": -246.0
+                }
+              ],
+              "notes": [],
+              "pts": -5.5,
+              "nq_usd": -110.0,
+              "mnq_usd": -11.0,
+              "mae_pts": 7.25,
+              "mfe_pts": 56.5,
+              "r_multiple": -1.0,
+              "risk_pts": 5.5,
+              "window_end": "2026-09-16 17:00:00-04:00",
+              "fill_at": "2026-09-16 15:41:00-04:00",
+              "exit": 29213.0,
+              "exit_at": "2026-09-16 15:45:00-04:00"
+            }
+          }
         },
         {
           "id": 2,
