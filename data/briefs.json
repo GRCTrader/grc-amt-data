@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15T11:05:24.729277-04:00",
+  "updated": "2026-09-16T08:00:30.687145-04:00",
   "stats": {
     "total_graded": 59,
     "correct": 17,
@@ -343,8 +343,8 @@
       },
       "70\u201380%": {
         "correct": 4,
-        "total": 37,
-        "pct": 10.8
+        "total": 36,
+        "pct": 11.1
       },
       "80%+": {
         "correct": 0,
@@ -515,9 +515,9 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-09-15T11:05:24.729304-04:00",
-    "last_brief_date": "2026-09-15",
-    "last_brief_time": "09:00:00",
+    "generated_at": "2026-09-16T08:00:30.687176-04:00",
+    "last_brief_date": "2026-09-16",
+    "last_brief_time": "08:00:01",
     "last_grade_date": "2026-09-15",
     "recent_failures": []
   },
@@ -527,6 +527,103 @@
     "text": "SCORECARD:\nMarket Read: 10/10 \u2014 Correctly identified Labor Day holiday conditions and chose not to trade low-liquidity chop.\nLevel Selection: N/A \u2014 No levels engaged this week.\nExecution: 10/10 \u2014 Perfect execution of the plan to stay flat; zero rule breaks.\nRisk Management: 10/10 \u2014 Preserved 100% of funded capital while handling major off-desk events.\nPsychology: 10/10 \u2014 Elite self-awareness recognizing euphoric state (apartment purchase) would compromise objective orderflow reading.\nDiscipline: 10/10 \u2014 Complete restraint; did not touch the software or force trades out of FOMO.\n\nPNL: Net $0.00 | Best/Worst Day: $0.00 / $0.00 | Profit Factor: N/A | Avg R: N/A\n\nWHAT WORKED:\n- Emotional risk management: Recognizing that positive emotional high-arousal states impair discretionary location reading just as much as tilt.\n- Holiday protocol: Respecting bank-holiday liquidity gaps by remaining flat during NY AM.\n\nBIGGEST LEAK:\n- None on the ledger this week, but your primary vulnerability shifts to post-break over-eagerness next week. Coming off a flat week with high off-desk dopamine creates a tendency to force premature Trader B entries on Monday just to feel back in the game.\n\nBEST & WORST TRADE:\n- Best Trade: Staying flat on Sep 7 \u2014 protected equity and focused on your personal milestone.\n- Worst Trade: None executed.\n\nNEXT WEEK:\n- On your first NY AM session back, execute on strictly ONE funded account and require a written confirmation trigger at an HTF level before placing attempt 1."
   },
   "days": [
+    {
+      "date": "2026-09-16",
+      "inventory": "100L",
+      "vah": 29315.0,
+      "poc": 29245.0,
+      "val": 29222.0,
+      "settle": 29251.5,
+      "ovn_high": 29419.25,
+      "ovn_low": 29226.0,
+      "ovn_poc": 29381.0,
+      "ovn_vah": 29409.0,
+      "ovn_val": 29307.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.27,
+      "confidence_b": 0.46,
+      "confidence_c": 0.27,
+      "post_time": "08:00:01",
+      "day_shape": null,
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": "Imbalance \u2014 Out-of-value open with 100% long overnight inventory coiling for Range Expansion or Trend Continuation",
+      "invalidation": "Acceptance below OVN POC 29381.0 and back inside prior RTH VAH 29315.0 kills the bullish continuation/expansion bias",
+      "plan": "If open holds above OVN VAH 29409.0 and retests show absorption, enter long targeting PDH 29453.5 and GBXH 29495.25. If price sweeps PDH 29453.5 but rejects sharply back below OVNH 29419.25, look for a failed auction short toward OVN POC 29381.0. If price breaks below 29381.0 and accepts inside prior VAH 29315.0, pivot to mean reversion targeting RTH POC 29245.0.",
+      "risk": "Overnight range is heavily compressed (193.25 pts, 7th percentile) which increases initial chop risk; trader signal edge is negative in range expansion models ($-9,079), requiring strict orderflow confirmation before entering.",
+      "predicted_model": null,
+      "vol_regime": "low",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 27.5,
+          "confidence": "medium",
+          "why": "Heavily compressed overnight range (193.25 pts, 7th percentile) coiling above prior value signals potential volatility release at RTH open.",
+          "stat_support": "base rate 19%",
+          "trigger": "Displacement out of compressed OVN range breaking OVNH 29419.25 or OVN POC 29381.0",
+          "confirm": "Acceptance above OVNH 29419.25 with volume driving past PDH 29453.5",
+          "target": "GBXH 29495.25 and PWH 29764.75",
+          "abort": "Rotation back inside OVN value area below OVN POC 29381.0"
+        },
+        {
+          "model": "trend_up",
+          "probability": 26.1,
+          "confidence": "medium",
+          "why": "Open above prior value (29315.0) with 100% long overnight inventory acts as a historical continuation tell toward higher targets.",
+          "stat_support": "base rate 35%",
+          "trigger": "Pullback holding OVN VAH 29409.0 or OVN POC 29381.0 on initial RTH retest",
+          "confirm": "Passive absorption at OVN VAH 29409.0 followed by aggressive buying breaking OVNH 29419.25",
+          "target": "PDH 29453.5 then GBXH 29495.25",
+          "abort": "Loss of OVN POC 29381.0 and re-entry into RTH value below 29315.0"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 14.1,
+          "confidence": "low",
+          "why": "Compressed overnight volatility may keep price contained in two-sided rotation between OVN boundaries if gap fails to drive.",
+          "stat_support": "base rate 19%",
+          "trigger": "Failure to accept above OVNH 29419.25 or below OVN POC 29381.0 in early RTH",
+          "confirm": "Rotational orderflow with responsive buyers at OVN POC 29381.0 and sellers at OVNH 29419.25",
+          "target": "OVN POC 29381.0 and RTH VAH 29315.0",
+          "abort": "Sustained single-print drive above PDH 29453.5 or below RTH VAH 29315.0"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 10.0,
+          "confidence": "low",
+          "why": "Proximity to unswept liquidity at PDH 29453.5 and OVNH 29419.25 provides potential for a sweep-and-fail trap.",
+          "stat_support": "base rate 8%",
+          "trigger": "Sweep of PDH 29453.5 or OVNH 29419.25 followed by aggressive market sell orders",
+          "confirm": "Delta divergence and sharp rejection back below OVNH 29419.25 into overnight range",
+          "target": "OVN POC 29381.0 and RTH VAH 29315.0",
+          "abort": "Acceptance and hold above PDH 29453.5"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 7.5,
+          "confidence": "low",
+          "why": "Extended open above prior value can snap back toward RTH POC 29245.0 if 100% long OVN inventory gets liquidated.",
+          "stat_support": "base rate 10%",
+          "trigger": "Break below OVN POC 29381.0 and acceptance back inside RTH VAH 29315.0",
+          "confirm": "Sustained aggressive sell delta accepting inside prior value below 29315.0",
+          "target": "RTH POC 29245.0 and RTH VAL 29222.0",
+          "abort": "Reclaim of OVN VAH 29409.0"
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29408.25,
+          "vs_settle": 156.75,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-09-15",
       "inventory": "100L",
@@ -4413,43 +4510,6 @@
         "model_correct": true,
         "top2_hit": true
       },
-      "intraday": [
-        {
-          "slot": "09:00",
-          "price": 28487.25,
-          "vs_settle": 83.0,
-          "inside_va": false,
-          "call": "Morning brief anchor"
-        },
-        {
-          "slot": "09:30",
-          "price": 28487.5,
-          "vs_settle": 83.25,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28143.00\u201328433.00."
-        },
-        {
-          "slot": "10:00",
-          "price": 28474.0,
-          "vs_settle": 69.75,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28143.00\u201328433.00."
-        },
-        {
-          "slot": "10:30",
-          "price": 28614.0,
-          "vs_settle": 209.75,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28143.00\u201328433.00."
-        },
-        {
-          "slot": "11:00",
-          "price": 28738.75,
-          "vs_settle": 334.5,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 28143.00\u201328433.00."
-        }
-      ],
       "trades_summary": {
         "count": 2,
         "pnl": 1298.0
@@ -7138,42 +7198,6 @@
       "trades_summary": {
         "count": 1,
         "pnl": 412.4
-      }
-    },
-    {
-      "date": "2026-06-22",
-      "inventory": "100L",
-      "vah": 30721.0,
-      "poc": 30720.0,
-      "val": 30528.0,
-      "settle": 30263.349609375,
-      "ovn_high": 30869.75,
-      "ovn_low": 30505.5,
-      "ovn_poc": 30707.0,
-      "ovn_vah": 30743.0,
-      "ovn_val": 30546.0,
-      "scenario_a": "A",
-      "scenario_b": "B",
-      "scenario_c": "C",
-      "confidence_a": 0.78,
-      "confidence_b": 0.1,
-      "confidence_c": 0.12,
-      "post_time": "09:25:34",
-      "day_shape": null,
-      "day_shape_note": null,
-      "htf_bias": null,
-      "htf_text": null,
-      "regime": null,
-      "invalidation": null,
-      "plan": null,
-      "risk": null,
-      "predicted_model": null,
-      "vol_regime": null,
-      "tpo_read": null,
-      "models": [],
-      "trades_summary": {
-        "count": 2,
-        "pnl": 339.42
       }
     }
   ]
