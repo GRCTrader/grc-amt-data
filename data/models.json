@@ -1,5 +1,5 @@
 {
-  "asof": "2026-09-16 15:58 ET",
+  "asof": "2026-09-16 17:08 ET",
   "models": [
     {
       "model": "pdhl",
@@ -7,25 +7,25 @@
       "tally": {
         "market": {
           "mode": "market",
-          "posted": 3,
-          "taken": 3,
+          "posted": 4,
+          "taken": 4,
           "no_trade": 0,
-          "wins": 2,
+          "wins": 3,
           "losses": 1,
-          "win_rate": 66.7,
-          "pts": 64.25,
-          "nq_usd": 1285.0,
-          "mnq_usd": 128.5,
-          "avg_pts": 21.42,
+          "win_rate": 75.0,
+          "pts": 107.25,
+          "nq_usd": 2145.0,
+          "mnq_usd": 214.5,
+          "avg_pts": 26.81,
           "best_pts": 82.0,
           "worst_pts": -26.75,
-          "profit_factor": 3.4
+          "profit_factor": 5.01
         },
         "retest": {
           "mode": "retest",
-          "posted": 3,
+          "posted": 4,
           "taken": 3,
-          "no_trade": 0,
+          "no_trade": 1,
           "wins": 1,
           "losses": 2,
           "win_rate": 33.3,
@@ -58,8 +58,55 @@
             "opposite previous-day extreme 29,453.50"
           ],
           "context": "worse \u2014 session VWAP is sloping down against the trade",
-          "graded": false,
-          "result": null
+          "graded": true,
+          "result": {
+            "market": {
+              "status": "session_close",
+              "side": "long",
+              "entry_mode": "market",
+              "entry": 29223.75,
+              "stop": 29053.0,
+              "targets": [
+                29380.0,
+                29453.5
+              ],
+              "targets_hit": [],
+              "notes": [],
+              "pts": 43.0,
+              "nq_usd": 860.0,
+              "mnq_usd": 86.0,
+              "mae_pts": 0.0,
+              "mfe_pts": 59.5,
+              "r_multiple": 0.25,
+              "risk_pts": 170.75,
+              "window_end": "2026-09-16 17:00:00-04:00",
+              "exit": 29266.75,
+              "exit_at": "2026-09-16 16:58:54-04:00"
+            },
+            "retest": {
+              "status": "not_filled",
+              "side": "long",
+              "entry_mode": "retest",
+              "entry": 29207.5,
+              "stop": 29053.0,
+              "targets": [
+                29380.0,
+                29453.5
+              ],
+              "targets_hit": [],
+              "notes": [
+                "price never came back to the level"
+              ],
+              "pts": 0.0,
+              "nq_usd": 0.0,
+              "mnq_usd": 0.0,
+              "mae_pts": null,
+              "mfe_pts": null,
+              "r_multiple": null,
+              "risk_pts": null,
+              "window_end": "2026-09-16 17:00:00-04:00"
+            }
+          }
         },
         {
           "id": 3,
