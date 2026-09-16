@@ -1,6 +1,132 @@
 {
-  "updated": "2026-09-15T12:00:00.024614-04:00",
+  "updated": "2026-09-16T12:00:00.021391-04:00",
   "days": [
+    {
+      "date": "2026-09-16",
+      "regime": "Imbalance / Developing Range Expansion above prior VAH (29315.0) driven by negative gamma (-2.4$Bn).",
+      "predicted_model": null,
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 28.6,
+          "confidence": "medium",
+          "why": "Compressed 213pt overnight range paired with short dealer gamma (-2.4$Bn) below the 29530.0 flip favors volatility expansion out of the overnight range.",
+          "stat_support": "base rate 19%",
+          "trigger": "Acceptance above OVNH 29439.0 or failure through OVN VAL 29317.0 at open",
+          "confirm": "Sustained 15m volume acceptance outside the 29317.0\u201329439.0 range with expanding delta",
+          "target": "Gamma flip 29530.0 on upside expansion or prior POC 29245.0 on downside breakdown",
+          "abort": "Rotational trading coiling around OVN POC 29381.0 inside overnight value"
+        },
+        {
+          "model": "trend_up",
+          "probability": 25.6,
+          "confidence": "medium",
+          "why": "Opening above prior VAH 29315.0 with 100% long overnight inventory statistically favors directional continuation when value holds.",
+          "stat_support": "base rate 35%",
+          "trigger": "Pullback hold and buyer defense of OVN VAL / VAH support at 29315.0\u201329317.0",
+          "confirm": "Passive bid absorption at 29317.0 followed by aggressor buying lifting price above OVN POC 29381.0",
+          "target": "PDH 29453.5 then Gamma Flip 29530.0",
+          "abort": "Acceptance back inside prior value below VAH 29315.0"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 13.5,
+          "confidence": "low",
+          "why": "Trading inside the London session range around OVN POC 29381.0 can compress auction momentum back into two-sided rotation.",
+          "stat_support": "base rate 19%",
+          "trigger": "Rejection at OVNH 29439.0 or support at VAH 29315.0 on declining volume",
+          "confirm": "Rotational orderflow alternating across OVN POC 29381.0 without acceptance outside 29317.0\u201329431.0",
+          "target": "OVN POC 29381.0 and VAH 29315.0",
+          "abort": "Clean breakout and 15m acceptance beyond OVNH 29439.0 or VAH 29315.0"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 10.2,
+          "confidence": "low",
+          "why": "Unswept liquidity overhead at OVNH 29439.0 and PDH 29453.5 presents a prime target for a stop run and sharp reversal.",
+          "stat_support": "base rate 8%",
+          "trigger": "Sweep above PDH 29453.5 or OVNH 29439.0 followed by immediate selling delta",
+          "confirm": "Aggressive selling delta pushing price back under OVNH 29439.0 with offer stacking",
+          "target": "OVN POC 29381.0 then prior VAH 29315.0",
+          "abort": "Sustained 15-minute acceptance above PDH 29453.5"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 7.2,
+          "confidence": "low",
+          "why": "100% long overnight inventory leaves buyers exposed to a sharp retest of prior value down to POC 29245.0 if 29315.0 fails.",
+          "stat_support": "base rate 10%",
+          "trigger": "Failure of buyers to defend OVN VAL 29317.0 post-open",
+          "confirm": "Aggressors selling through prior VAH 29315.0 with strongly negative cumulative volume delta",
+          "target": "Settle 29251.5 and prior session POC 29245.0",
+          "abort": "Buyer absorption defending 29317.0 leading to new highs above 29381.0"
+        }
+      ],
+      "plan": "If open holds above 29317.0 (OVN VAL) and tests 29315.0 with buyer absorption, execute LONG targeting OVN POC 29381.0 and PDH 29453.5. If price sweeps OVNH 29439.0 / PDH 29453.5 and fails with heavy delta divergence, look for SHORT failed auction back to OVN POC 29381.0. If price breaks below 29315.0 and accepts, switch to mean reversion back to prior POC 29245.0.",
+      "invalidation": "Acceptance and 15-minute building of volume below prior VAH 29315.0 invalidates the bullish continuation read.",
+      "risk_note": "Short gamma regime (-2.4$Bn) below 29530.0 flip amplifies directional velocity and stop sweeps.",
+      "htf_bias": null,
+      "htf_text": null,
+      "day_shape": null,
+      "day_grade": null,
+      "actual_model": "trend_up",
+      "correct": 1,
+      "grade_detail": "Accepted above VAH 29315, closed 29464 (top of range)",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29315.0
+        },
+        {
+          "label": "POC",
+          "price": 29245.0
+        },
+        {
+          "label": "VAL",
+          "price": 29222.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29439.0
+        },
+        {
+          "label": "OVN Low",
+          "price": 29226.0
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29431.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29381.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29317.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29500.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29462.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 28896.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29453.5
+        },
+        {
+          "label": "Prior Low",
+          "price": 29207.5
+        }
+      ]
+    },
     {
       "date": "2026-09-15",
       "regime": "at poc open, overlapping value, normal vol (rule-based read \u2014 AI unavailable)",
