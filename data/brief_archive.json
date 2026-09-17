@@ -1,6 +1,132 @@
 {
-  "updated": "2026-09-16T12:00:00.021391-04:00",
+  "updated": "2026-09-17T12:00:00.016701-04:00",
   "days": [
+    {
+      "date": "2026-09-17",
+      "regime": "IMBALANCE: Bullish open-gap above prior value targeting range expansion, capped by +3.5$Bn long gamma dealer positioning.",
+      "predicted_model": "range_expansion",
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 36.5,
+          "confidence": "medium",
+          "why": "The overnight range is already highly expanded at 505.5 points (83rd percentile) inside a high-volatility regime, historically favoring two-sided expansion over a clean directional run.",
+          "stat_support": "base rate 37%",
+          "trigger": "An initial drive fails to sustain above the overnight high of 29753.25, rotating back into the overnight volume profile.",
+          "confirm": "Acceptance below overnight VAH 29636.0 with sustained negative cumulative delta.",
+          "target": "Prior-day high of 29549.75 and the overnight POC at 29448.75.",
+          "abort": "Sustained price acceptance and building value above PWH 29764.75."
+        },
+        {
+          "model": "trend_up",
+          "probability": 23.8,
+          "confidence": "low",
+          "why": "Overnight inventory is 100% long and the open resides far above prior value, indicating absolute control by overnight buyers if they can clear high-timeframe liquidity.",
+          "stat_support": "base rate 37%",
+          "trigger": "Open at 29730.25 prints a shallow retest and holds above overnight VAH 29636.0.",
+          "confirm": "A decisive break and acceptance above PWH 29764.75 with one-timeframing higher on the 5-minute chart.",
+          "target": "HTF swing high of 29811.50 and the Call Wall at 29880.00.",
+          "abort": "Breakdown and acceptance below overnight VAH 29636.0."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 12.6,
+          "confidence": "low",
+          "why": "Large positive GEX of +3.5$Bn pins price fluctuations above the 29505 gamma flip, suppressing clean trend extensions and forcing a wide rotational structure.",
+          "stat_support": "base rate 13%",
+          "trigger": "Price fails to break out of the initial balance (first 30 minutes of trade) bounded by 29764.75 and 29636.0.",
+          "confirm": "Rotational, two-sided orderflow inside the overnight VAH 29636.0 and the open price of 29730.25.",
+          "target": "Overnight VAH 29636.0 and internal overnight High Volume Nodes.",
+          "abort": "Clean breakout and acceptance above 29764.75 or below 29549.75."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 8.3,
+          "confidence": "low",
+          "why": "The close proximity of the open to major liquidity pools at OVN High 29753.25 and PWH 29764.75 invites a fast sweep that traps late buyers before a swift reversal.",
+          "stat_support": "base rate 3%",
+          "trigger": "A rapid push above OVN High 29753.25 and PWH 29764.75 that immediately encounters passive absorption and aggressive selling.",
+          "confirm": "A sharp push back below 29730.25, confirming trapped longs at the highs.",
+          "target": "Overnight VAH 29636.0 and prior-day high of 29549.75.",
+          "abort": "Sustained buying pressure holding price above 29764.75."
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 6.1,
+          "confidence": "low",
+          "why": "An extremely extended open gap (+1.63% vs settle) and 100% long overnight inventory face a long-gamma dealer backdrop, which historically favors fading the extremes.",
+          "stat_support": "base rate 3%",
+          "trigger": "Failure to hold above OVN VAH 29636.0 on the initial morning descent.",
+          "confirm": "Price acceptance inside the prior-day range below PDH 29549.75.",
+          "target": "Prior-day VAH 29464.0 and RTH POC 29443.0.",
+          "abort": "Reclaim of 29730.25 and holding above overnight VAH 29636.0."
+        }
+      ],
+      "plan": "If NQ opens at 29730.25 and drives higher to sweep OVN High 29753.25 and PWH 29764.75 but fails to accept above, then execute shorts on the reclaim of 29730.25, targeting OVN VAH 29636.0. If NQ rejects the open immediately and accepts below OVN VAH 29636.0, then look for retest shorts targeting PDH 29549.75 and the gamma flip at 29505.00. If price accepts above 29764.75 with aggressive buying delta, stand aside and let the Trend Up model test toward the 29811.50 daily swing high.",
+      "invalidation": "Sustained acceptance (consecutive 15-minute candle closes) above PWH 29764.75 or a breakdown and acceptance below the Gamma Flip of 29505.00.",
+      "risk_note": "The extreme overnight range of 505.5 points indicates high volatility; wide structural swings may occur, requiring smaller position sizing to manage risk effectively.",
+      "htf_bias": "LONG",
+      "htf_text": "DAILY: The daily structure shows a bearish trend that is transitioning bullish, with the current dealing range established between the swing high of 30343.00 and the swing low of 28763.75, placing the current price in premium territory. The nearest untapped buyside liquidity pool sits at the swing high of 29811.50, while the nearest sellside liquidity rests at the recent swing low of 28763.75.\n4H: Following aggressive upward displacement from the swing low, market structure has shifted bullish with an active fair value gap resting between 29478.00 and 29485.00. Acceptance above 29753.25 will confirm the daily bullish expansion, whereas a break back below the swing low of 29368.75 will deny this thesis.\n1H: Overnight market structure is strongly bullish with a succession of higher highs and higher lows developing after a clean break of structure at 29471.50. The immediate draw on liquidity heading into the New York open is the overnight high of 29753.25, followed closely by the daily buyside liquidity at 29811.50.\nBIAS: LONG \u2014 If the open displays a retracement into the overnight value area high or the 1H fair value gap near 29595.50 followed by orderflow confirmation of buy-side absorption, then I will enter long targeting the overnight high at 29753.25 and the daily buyside liquidity pool at 29811.50.",
+      "day_shape": "range_expansion",
+      "day_grade": null,
+      "actual_model": "range_expansion",
+      "correct": 1,
+      "grade_detail": "Two-sided, range 29606-29753, close 29674",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29464.0
+        },
+        {
+          "label": "POC",
+          "price": 29443.0
+        },
+        {
+          "label": "VAL",
+          "price": 29107.0
+        },
+        {
+          "label": "OVN High",
+          "price": 29753.25
+        },
+        {
+          "label": "OVN Low",
+          "price": 29247.75
+        },
+        {
+          "label": "OVN VAH",
+          "price": 29636.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 29448.75
+        },
+        {
+          "label": "OVN VAL",
+          "price": 29341.5
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29315.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29245.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29222.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29549.75
+        },
+        {
+          "label": "Prior Low",
+          "price": 29053.0
+        }
+      ]
+    },
     {
       "date": "2026-09-16",
       "regime": "Imbalance / Developing Range Expansion above prior VAH (29315.0) driven by negative gamma (-2.4$Bn).",
