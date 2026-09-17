@@ -1,45 +1,48 @@
 {
-  "asof": "2026-09-17 08:24 ET",
+  "asof": "2026-09-17 08:28 ET",
   "models": [
     {
-      "model": "pdhl",
-      "name": "Previous-day high/low",
+      "model": "pdhl_v1",
+      "name": "Previous-day high/low \u00b7 first rules",
+      "rules_note": "Alerts from before 17 Sep 01:45 ET, when this model still used its first rules. Kept for the record \u2014 the current rules are on their own tab.",
       "tally": {
         "market": {
           "mode": "market",
           "posted": 6,
-          "taken": 6,
+          "taken": 5,
           "no_trade": 0,
-          "wins": 4,
+          "wins": 3,
           "losses": 2,
-          "win_rate": 66.7,
-          "pts": 95.5,
-          "nq_usd": 1910.0,
-          "mnq_usd": 191.0,
-          "avg_pts": 15.92,
+          "win_rate": 60.0,
+          "pts": 88.5,
+          "nq_usd": 1770.0,
+          "mnq_usd": 177.0,
+          "avg_pts": 17.7,
           "best_pts": 82.0,
           "worst_pts": -26.75,
-          "profit_factor": 3.36
+          "profit_factor": 3.08
         },
         "retest": {
           "mode": "retest",
           "posted": 6,
-          "taken": 5,
+          "taken": 3,
           "no_trade": 1,
-          "wins": 2,
-          "losses": 3,
-          "win_rate": 40.0,
-          "pts": 6.75,
-          "nq_usd": 135.0,
-          "mnq_usd": 13.5,
-          "avg_pts": 1.35,
+          "wins": 1,
+          "losses": 2,
+          "win_rate": 33.3,
+          "pts": 8.5,
+          "nq_usd": 170.0,
+          "mnq_usd": 17.0,
+          "avg_pts": 2.83,
           "best_pts": 26.5,
-          "worst_pts": -15.0,
-          "profit_factor": 1.25
+          "worst_pts": -12.5,
+          "profit_factor": 1.47
         }
       },
       "setups": [
         {
+          "level_key": "pdh",
+          "sim_version": 2,
           "id": 6,
           "date": "2026-09-17",
           "posted_at": "2026-09-17T00:31:08.066072-04:00",
@@ -61,7 +64,7 @@
           "graded": true,
           "result": {
             "market": {
-              "status": "target",
+              "status": "stop",
               "side": "short",
               "entry_mode": "market",
               "entry": 29450.25,
@@ -70,28 +73,26 @@
                 29455.5,
                 29207.5
               ],
-              "targets_hit": [
-                {
-                  "i": 0,
-                  "price": 29455.5,
-                  "at": "2026-09-17 00:32:00-04:00",
-                  "pts": -5.25
-                }
+              "targets_hit": [],
+              "notes": [
+                "T1 29,455.50 is not beyond the entry 29,450.25, so it was ignored"
               ],
-              "notes": [],
-              "pts": 2.0,
-              "nq_usd": 40.0,
-              "mnq_usd": 4.0,
-              "mae_pts": 0.0,
-              "mfe_pts": 8.5,
-              "r_multiple": 0.13,
+              "pts": -15.75,
+              "nq_usd": -315.0,
+              "mnq_usd": -31.5,
+              "mae_pts": 17.25,
+              "mfe_pts": 10.5,
+              "r_multiple": -1.0,
               "risk_pts": 15.75,
+              "targets_void": [
+                0
+              ],
               "window_end": "2026-09-17 17:00:00-04:00",
-              "exit": 29448.25,
-              "exit_at": "2026-09-17 00:32:00-04:00"
+              "exit": 29466.0,
+              "exit_at": "2026-09-17 00:43:00-04:00"
             },
             "retest": {
-              "status": "target",
+              "status": "stop",
               "side": "short",
               "entry_mode": "retest",
               "entry": 29453.5,
@@ -100,30 +101,30 @@
                 29455.5,
                 29207.5
               ],
-              "targets_hit": [
-                {
-                  "i": 0,
-                  "price": 29455.5,
-                  "at": "2026-09-17 00:37:00-04:00",
-                  "pts": -2.0
-                }
+              "targets_hit": [],
+              "notes": [
+                "T1 29,455.50 is not beyond the entry 29,453.50, so it was ignored"
               ],
-              "notes": [],
-              "pts": 7.5,
-              "nq_usd": 150.0,
-              "mnq_usd": 15.0,
-              "mae_pts": 0.75,
+              "pts": -12.5,
+              "nq_usd": -250.0,
+              "mnq_usd": -25.0,
+              "mae_pts": 14.0,
               "mfe_pts": 7.5,
-              "r_multiple": 0.6,
+              "r_multiple": -1.0,
               "risk_pts": 12.5,
+              "targets_void": [
+                0
+              ],
               "window_end": "2026-09-17 17:00:00-04:00",
               "fill_at": "2026-09-17 00:37:00-04:00",
-              "exit": 29446.0,
-              "exit_at": "2026-09-17 00:37:00-04:00"
+              "exit": 29466.0,
+              "exit_at": "2026-09-17 00:43:00-04:00"
             }
           }
         },
         {
+          "level_key": "pdh",
+          "sim_version": 2,
           "id": 5,
           "date": "2026-09-17",
           "posted_at": "2026-09-17T00:22:06.092681-04:00",
@@ -145,7 +146,7 @@
           "graded": true,
           "result": {
             "market": {
-              "status": "stop",
+              "status": "invalid",
               "side": "long",
               "entry_mode": "market",
               "entry": 29460.5,
@@ -154,28 +155,20 @@
                 29464.0,
                 29207.5
               ],
-              "targets_hit": [
-                {
-                  "i": 1,
-                  "price": 29207.5,
-                  "at": "2026-09-17 00:23:00-04:00",
-                  "pts": -253.0
-                }
+              "targets_hit": [],
+              "notes": [
+                "the stop 29,462.25 is on the wrong side of the entry 29,460.50"
               ],
-              "notes": [],
-              "pts": -13.75,
-              "nq_usd": -275.0,
-              "mnq_usd": -27.5,
-              "mae_pts": 14.5,
-              "mfe_pts": 0.0,
-              "r_multiple": -7.86,
-              "risk_pts": 1.75,
-              "window_end": "2026-09-17 17:00:00-04:00",
-              "exit": 29446.75,
-              "exit_at": "2026-09-17 00:23:00-04:00"
+              "pts": null,
+              "nq_usd": null,
+              "mnq_usd": null,
+              "mae_pts": null,
+              "mfe_pts": null,
+              "r_multiple": null,
+              "risk_pts": null
             },
             "retest": {
-              "status": "stop",
+              "status": "invalid",
               "side": "long",
               "entry_mode": "retest",
               "entry": 29453.5,
@@ -184,30 +177,23 @@
                 29464.0,
                 29207.5
               ],
-              "targets_hit": [
-                {
-                  "i": 1,
-                  "price": 29207.5,
-                  "at": "2026-09-17 00:23:00-04:00",
-                  "pts": -246.0
-                }
+              "targets_hit": [],
+              "notes": [
+                "the stop 29,462.25 is on the wrong side of the entry 29,453.50"
               ],
-              "notes": [],
-              "pts": -6.75,
-              "nq_usd": -135.0,
-              "mnq_usd": -13.5,
-              "mae_pts": 7.5,
-              "mfe_pts": 0.0,
-              "r_multiple": -0.77,
-              "risk_pts": 8.75,
-              "window_end": "2026-09-17 17:00:00-04:00",
-              "fill_at": "2026-09-17 00:23:00-04:00",
-              "exit": 29446.75,
-              "exit_at": "2026-09-17 00:23:00-04:00"
+              "pts": null,
+              "nq_usd": null,
+              "mnq_usd": null,
+              "mae_pts": null,
+              "mfe_pts": null,
+              "r_multiple": null,
+              "risk_pts": null
             }
           }
         },
         {
+          "level_key": "pdl",
+          "sim_version": 2,
           "id": 4,
           "date": "2026-09-16",
           "posted_at": "2026-09-16T15:57:31.312654-04:00",
@@ -240,16 +226,17 @@
               ],
               "targets_hit": [],
               "notes": [],
-              "pts": 43.0,
-              "nq_usd": 860.0,
-              "mnq_usd": 86.0,
+              "pts": 40.0,
+              "nq_usd": 800.0,
+              "mnq_usd": 80.0,
               "mae_pts": 0.0,
               "mfe_pts": 59.5,
-              "r_multiple": 0.25,
+              "r_multiple": 0.23,
               "risk_pts": 170.75,
+              "targets_void": [],
               "window_end": "2026-09-16 17:00:00-04:00",
-              "exit": 29266.75,
-              "exit_at": "2026-09-16 16:58:54-04:00"
+              "exit": 29263.75,
+              "exit_at": "2026-09-16 16:59:00-04:00"
             },
             "retest": {
               "status": "not_filled",
@@ -272,11 +259,14 @@
               "mfe_pts": null,
               "r_multiple": null,
               "risk_pts": null,
+              "targets_void": [],
               "window_end": "2026-09-16 17:00:00-04:00"
             }
           }
         },
         {
+          "level_key": "pdl",
+          "sim_version": 2,
           "id": 3,
           "date": "2026-09-16",
           "posted_at": "2026-09-16T15:21:23.358256-04:00",
@@ -313,15 +303,11 @@
                   "price": 29090.0,
                   "at": "2026-09-16 15:22:00-04:00",
                   "pts": 82.0
-                },
-                {
-                  "i": 1,
-                  "price": 29453.5,
-                  "at": "2026-09-16 15:22:00-04:00",
-                  "pts": -281.5
                 }
               ],
-              "notes": [],
+              "notes": [
+                "T2 29,453.50 is not beyond the entry 29,172.00, so it was ignored"
+              ],
               "pts": 82.0,
               "nq_usd": 1640.0,
               "mnq_usd": 164.0,
@@ -329,6 +315,9 @@
               "mfe_pts": 88.75,
               "r_multiple": 2.0,
               "risk_pts": 41.0,
+              "targets_void": [
+                1
+              ],
               "window_end": "2026-09-16 17:00:00-04:00",
               "exit": 29090.0,
               "exit_at": "2026-09-16 15:22:00-04:00"
@@ -343,15 +332,10 @@
                 29090.0,
                 29453.5
               ],
-              "targets_hit": [
-                {
-                  "i": 1,
-                  "price": 29453.5,
-                  "at": "2026-09-16 15:41:00-04:00",
-                  "pts": -246.0
-                }
+              "targets_hit": [],
+              "notes": [
+                "T2 29,453.50 is not beyond the entry 29,207.50, so it was ignored"
               ],
-              "notes": [],
               "pts": -5.5,
               "nq_usd": -110.0,
               "mnq_usd": -11.0,
@@ -359,6 +343,9 @@
               "mfe_pts": 56.5,
               "r_multiple": -1.0,
               "risk_pts": 5.5,
+              "targets_void": [
+                1
+              ],
               "window_end": "2026-09-16 17:00:00-04:00",
               "fill_at": "2026-09-16 15:41:00-04:00",
               "exit": 29213.0,
@@ -367,6 +354,8 @@
           }
         },
         {
+          "level_key": "pdh",
+          "sim_version": 2,
           "id": 2,
           "date": "2026-09-16",
           "posted_at": "2026-09-16T10:14:56.186685-04:00",
@@ -413,6 +402,7 @@
               "mfe_pts": 10.25,
               "r_multiple": 0.19,
               "risk_pts": 48.25,
+              "targets_void": [],
               "window_end": "2026-09-16 17:00:00-04:00",
               "exit": 29427.0,
               "exit_at": "2026-09-16 10:37:00-04:00"
@@ -443,6 +433,7 @@
               "mfe_pts": 27.75,
               "r_multiple": 0.86,
               "risk_pts": 30.75,
+              "targets_void": [],
               "window_end": "2026-09-16 17:00:00-04:00",
               "fill_at": "2026-09-16 10:15:00-04:00",
               "exit": 29427.0,
@@ -451,6 +442,8 @@
           }
         },
         {
+          "level_key": "pdh",
+          "sim_version": 2,
           "id": 1,
           "date": "2026-09-16",
           "posted_at": "2026-09-16T10:02:53.898617-04:00",
@@ -481,15 +474,10 @@
                 29485.25,
                 29207.5
               ],
-              "targets_hit": [
-                {
-                  "i": 1,
-                  "price": 29207.5,
-                  "at": "2026-09-16 10:03:00-04:00",
-                  "pts": -257.75
-                }
+              "targets_hit": [],
+              "notes": [
+                "T2 29,207.50 is not beyond the entry 29,465.25, so it was ignored"
               ],
-              "notes": [],
               "pts": -26.75,
               "nq_usd": -535.0,
               "mnq_usd": -53.5,
@@ -497,12 +485,15 @@
               "mfe_pts": 0.0,
               "r_multiple": -2.67,
               "risk_pts": 10.0,
+              "targets_void": [
+                1
+              ],
               "window_end": "2026-09-16 17:00:00-04:00",
               "exit": 29438.5,
               "exit_at": "2026-09-16 10:03:00-04:00"
             },
             "retest": {
-              "status": "stop",
+              "status": "invalid",
               "side": "long",
               "entry_mode": "retest",
               "entry": 29453.5,
@@ -511,26 +502,17 @@
                 29485.25,
                 29207.5
               ],
-              "targets_hit": [
-                {
-                  "i": 1,
-                  "price": 29207.5,
-                  "at": "2026-09-16 10:03:00-04:00",
-                  "pts": -246.0
-                }
+              "targets_hit": [],
+              "notes": [
+                "the stop 29,455.25 is on the wrong side of the entry 29,453.50"
               ],
-              "notes": [],
-              "pts": -15.0,
-              "nq_usd": -300.0,
-              "mnq_usd": -30.0,
-              "mae_pts": 22.5,
-              "mfe_pts": 0.0,
-              "r_multiple": -8.57,
-              "risk_pts": 1.75,
-              "window_end": "2026-09-16 17:00:00-04:00",
-              "fill_at": "2026-09-16 10:03:00-04:00",
-              "exit": 29438.5,
-              "exit_at": "2026-09-16 10:03:00-04:00"
+              "pts": null,
+              "nq_usd": null,
+              "mnq_usd": null,
+              "mae_pts": null,
+              "mfe_pts": null,
+              "r_multiple": null,
+              "risk_pts": null
             }
           }
         }
