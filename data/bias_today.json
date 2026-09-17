@@ -1,24 +1,9 @@
 {
   "meta": {
-    "status": "provisional",
-    "generated_at": "2026-09-17T09:16:01.220173-04:00",
+    "status": "ok",
+    "generated_at": "2026-09-17T09:32:01.280017-04:00",
     "inputs_blank": [
-      "atr_pctile",
-      "d_midnight_open_atr",
-      "d_naked_poc_above_atr",
-      "d_naked_poc_below_atr",
-      "d_nearest_pool_above_atr",
-      "d_nearest_pool_below_atr",
-      "d_on_poc_atr",
-      "d_on_vah_atr",
-      "d_on_val_atr",
-      "d_on_vwap_lvl_atr",
-      "drift_atr_20d",
-      "naked_poc_count",
-      "pwh_swept_by_0900",
-      "pwl_swept_by_0900",
-      "unswept_above",
-      "unswept_below"
+      "d_nearest_pool_above_atr"
     ]
   },
   "engine": {
@@ -32,16 +17,16 @@
       },
       "lon_low": {
         "label": "London Low taken",
-        "probability": 27.9,
-        "probability_raw": 30.5,
+        "probability": 6.3,
+        "probability_raw": 16.8,
         "models": {
           "hierarchical": 36.8,
-          "logistic": 26.6,
-          "boosted_trees": 28.0
+          "logistic": 5.9,
+          "boosted_trees": 7.6
         },
-        "model_agreement": 89.8,
-        "model_spread_pts": 10.2,
-        "confidence": "High",
+        "model_agreement": 69.0,
+        "model_spread_pts": 31.0,
+        "confidence": "Medium",
         "base_rate": 53.7,
         "exact_condition_n": 289,
         "evidence": [
@@ -89,14 +74,14 @@
       "pdl": {
         "label": "Prior-day Low taken",
         "probability": 0.5,
-        "probability_raw": 6.5,
+        "probability_raw": 6.3,
         "models": {
           "hierarchical": 17.9,
-          "logistic": 0.4,
-          "boosted_trees": 1.1
+          "logistic": 0.1,
+          "boosted_trees": 0.7
         },
-        "model_agreement": 82.5,
-        "model_spread_pts": 17.5,
+        "model_agreement": 82.2,
+        "model_spread_pts": 17.8,
         "confidence": "Medium",
         "base_rate": 23.7,
         "exact_condition_n": 282,
@@ -123,16 +108,16 @@
       },
       "on_high": {
         "label": "Overnight High taken",
-        "probability": 60.1,
-        "probability_raw": 63.7,
+        "probability": 87.8,
+        "probability_raw": 79.0,
         "models": {
           "hierarchical": 75.3,
-          "logistic": 41.1,
-          "boosted_trees": 74.8
+          "logistic": 80.4,
+          "boosted_trees": 81.2
         },
-        "model_agreement": 65.9,
-        "model_spread_pts": 34.1,
-        "confidence": "Medium",
+        "model_agreement": 94.1,
+        "model_spread_pts": 5.9,
+        "confidence": "High",
         "base_rate": 55.3,
         "exact_condition_n": 289,
         "evidence": [
@@ -158,15 +143,15 @@
       },
       "on_low": {
         "label": "Overnight Low taken",
-        "probability": 11.5,
-        "probability_raw": 17.0,
+        "probability": 7.0,
+        "probability_raw": 11.6,
         "models": {
           "hierarchical": 28.6,
-          "logistic": 6.8,
-          "boosted_trees": 15.4
+          "logistic": 0.9,
+          "boosted_trees": 5.3
         },
-        "model_agreement": 78.1,
-        "model_spread_pts": 21.9,
+        "model_agreement": 72.2,
+        "model_spread_pts": 27.8,
         "confidence": "Medium",
         "base_rate": 49.0,
         "exact_condition_n": 289,
@@ -200,15 +185,15 @@
       },
       "expand_up": {
         "label": "First expansion is UP",
-        "probability": 43.7,
-        "probability_raw": 41.1,
+        "probability": 44.2,
+        "probability_raw": 41.7,
         "models": {
           "hierarchical": 41.6,
-          "logistic": 43.4,
-          "boosted_trees": 38.4
+          "logistic": 34.5,
+          "boosted_trees": 49.2
         },
-        "model_agreement": 95.0,
-        "model_spread_pts": 5.0,
+        "model_agreement": 85.3,
+        "model_spread_pts": 14.7,
         "confidence": "High",
         "base_rate": 48.9,
         "exact_condition_n": 272,
@@ -235,15 +220,15 @@
       },
       "reversal": {
         "label": "First move reverses",
-        "probability": 11.7,
-        "probability_raw": 13.1,
+        "probability": 11.6,
+        "probability_raw": 12.7,
         "models": {
           "hierarchical": 14.8,
-          "logistic": 12.2,
-          "boosted_trees": 12.4
+          "logistic": 13.4,
+          "boosted_trees": 9.9
         },
-        "model_agreement": 97.4,
-        "model_spread_pts": 2.6,
+        "model_agreement": 95.1,
+        "model_spread_pts": 4.9,
         "confidence": "High",
         "base_rate": 16.2,
         "exact_condition_n": 272,
@@ -270,16 +255,16 @@
       },
       "am_up": {
         "label": "NY AM closes above the 09:15 open",
-        "probability": 49.4,
-        "probability_raw": 45.0,
+        "probability": 50.1,
+        "probability_raw": 50.3,
         "models": {
           "hierarchical": 47.2,
-          "logistic": 56.2,
-          "boosted_trees": 31.7
+          "logistic": 48.2,
+          "boosted_trees": 55.6
         },
-        "model_agreement": 75.5,
-        "model_spread_pts": 24.5,
-        "confidence": "Medium",
+        "model_agreement": 91.6,
+        "model_spread_pts": 8.4,
+        "confidence": "High",
         "base_rate": 52.6,
         "exact_condition_n": 289,
         "evidence": [
@@ -332,9 +317,9 @@
       "_lean": {
         "lean_label": "UPSIDE LIQUIDITY FAVOURED",
         "favoured_side": "up",
-        "lean": 33.6,
-        "up_excess": 4.8,
-        "down_excess": -28.8,
+        "lean": 70.0,
+        "up_excess": 32.5,
+        "down_excess": -37.5,
         "basis": "mean EXCESS reach-probability (each pool vs its own base rate) of pools above minus pools below",
         "predicts_direction": false,
         "means": "which side's liquidity is more likely to be REACHED \u2014 this is a target-selection input, not a forecast of which way price closes",
@@ -356,9 +341,9 @@
         }
       },
       "_agreement": {
-        "mean_agreement": 83.5,
-        "min_agreement": 65.9,
-        "forecast_uncertainty": 16.5
+        "mean_agreement": 84.2,
+        "min_agreement": 69.0,
+        "forecast_uncertainty": 15.8
       }
     },
     "model_version": 3,
@@ -379,6 +364,11 @@
     "gap_atr": 1.5256,
     "on_range_vs_atr": 1.6426,
     "lon_range_vs_atr": 0.6458,
+    "regime": "gap_mean_reversion",
+    "atr_pctile": 0.444,
+    "drift_atr_20d": -1.058,
+    "on_vwap": 29528.24,
+    "naked_poc_count": 5,
     "lon_high": 29567.5,
     "d_lon_high_pts": 162.75,
     "d_lon_high_lonrng": 0.8189,
@@ -459,16 +449,46 @@
     "d_prior_val_lonrng": 2.3141,
     "d_prior_val_atr": 1.4945,
     "above_prior_val": 1,
-    "midnight_open": null,
-    "d_midnight_open_pts": null,
-    "d_midnight_open_lonrng": null,
-    "d_midnight_open_atr": null,
-    "above_midnight_open": null,
+    "midnight_open": 29466.0,
+    "d_midnight_open_pts": 264.25,
+    "d_midnight_open_lonrng": 1.3296,
+    "d_midnight_open_atr": 0.8587,
+    "above_midnight_open": 1,
     "daily_open": 29271.0,
     "d_daily_open_pts": 459.25,
     "d_daily_open_lonrng": 2.3107,
     "d_daily_open_atr": 1.4923,
     "above_daily_open": 1,
+    "on_poc": 29443.63,
+    "d_on_poc_pts": 286.62,
+    "d_on_poc_lonrng": 1.4421,
+    "d_on_poc_atr": 0.9313,
+    "above_on_poc": 1,
+    "on_vah": 29595.28,
+    "d_on_vah_pts": 134.97,
+    "d_on_vah_lonrng": 0.6791,
+    "d_on_vah_atr": 0.4386,
+    "above_on_vah": 1,
+    "on_val": 29342.53,
+    "d_on_val_pts": 387.72,
+    "d_on_val_lonrng": 1.9508,
+    "d_on_val_atr": 1.2598,
+    "above_on_val": 1,
+    "on_vwap_lvl": 29528.24,
+    "d_on_vwap_lvl_pts": 202.01,
+    "d_on_vwap_lvl_lonrng": 1.0164,
+    "d_on_vwap_lvl_atr": 0.6564,
+    "above_on_vwap_lvl": 1,
+    "naked_poc_above": 30082.05,
+    "d_naked_poc_above_pts": -351.8,
+    "d_naked_poc_above_lonrng": -1.7701,
+    "d_naked_poc_above_atr": -1.1431,
+    "above_naked_poc_above": 0,
+    "naked_poc_below": 29247.47,
+    "d_naked_poc_below_pts": 482.78,
+    "d_naked_poc_below_lonrng": 2.4291,
+    "d_naked_poc_below_atr": 1.5687,
+    "above_naked_poc_below": 1,
     "lon_loc": 1.8189,
     "open_state": "above_range",
     "inside_third": null,
@@ -477,6 +497,15 @@
     "asia_high_swept_by_0900": 1,
     "asia_low_swept_by_0900": 0,
     "pdh_swept_by_0900": 1,
-    "pdl_swept_by_0900": 0
+    "pdl_swept_by_0900": 0,
+    "pwh_swept_by_0900": 1,
+    "pwl_swept_by_0900": 0,
+    "unswept_above": 0,
+    "unswept_below": 4,
+    "unswept_count": 4,
+    "nearest_pool_above": null,
+    "nearest_pool_below": 29368.75,
+    "d_nearest_pool_above_atr": null,
+    "d_nearest_pool_below_atr": 1.1747
   }
 }
