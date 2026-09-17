@@ -1,10 +1,10 @@
 {
-  "asof": "2026-09-17 03:37:20 ET",
-  "asof_epoch": 1789630640,
+  "asof": "2026-09-17 03:42:24 ET",
+  "asof_epoch": 1789630944,
   "session_date": "2026-09-17",
   "price": {
-    "NQ": 29535.5,
-    "ES": 7682.75
+    "NQ": 29549.25,
+    "ES": 7686.25
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "London",
       "start": "2026-09-17T00:00:00-04:00",
       "end": "2026-09-17T06:00:00-04:00",
-      "left_sec": 8559,
+      "left_sec": 8255,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
@@ -48,7 +48,7 @@
       "span": "block 3 of 4",
       "start": "2026-09-17T03:00:00-04:00",
       "end": "2026-09-17T04:30:00-04:00",
-      "left_sec": 3159,
+      "left_sec": 2855,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -59,21 +59,21 @@
       "span": "22.5 min",
       "start": "2026-09-17T03:22:30-04:00",
       "end": "2026-09-17T03:45:00-04:00",
-      "left_sec": 459,
+      "left_sec": 155,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
     },
     {
       "level": "Nano",
-      "q": 2,
+      "q": 3,
       "span": "5.625 min",
-      "start": "2026-09-17T03:33:45-04:00",
-      "end": "2026-09-17T03:39:22.500000-04:00",
-      "left_sec": 121,
-      "phase": "Q3",
-      "phase_name": "Distribution",
-      "phase_why": "The actual move. The quarter you want to be in."
+      "start": "2026-09-17T03:39:22.500000-04:00",
+      "end": "2026-09-17T03:45:00-04:00",
+      "left_sec": 155,
+      "phase": "Q4",
+      "phase_name": "Continuation / Reversal",
+      "phase_why": "It extends or it turns. The handover."
     }
   ],
   "chains": [],
@@ -140,24 +140,25 @@
       },
       "cur": {
         "open": 29271.0,
-        "high": 29544.0,
+        "high": 29567.5,
         "low": 29247.75,
-        "close": 29535.5,
+        "close": 29549.75,
         "n": 11,
         "start": "2026-09-16T18:00:00-04:00",
-        "end": "2026-09-17T03:37:20.892371-04:00"
+        "end": "2026-09-17T03:42:24.765723-04:00"
       },
       "sweep": {
-        "swept": null,
+        "swept": "high",
         "prev_high": 29549.75,
         "prev_low": 29053.0,
-        "note": "still inside 29,053.00-29,549.75"
+        "note": "took the previous quarter high 29,549.75"
       },
       "ssmt": {
-        "type": null,
-        "note": "both markets did the same thing at this seam - no divergence",
-        "leader": null,
-        "filter_ok": null
+        "type": "bearish",
+        "note": "NQ took the previous quarter high, ES did not",
+        "leader": "NQ",
+        "filter_ok": true,
+        "filter_note": "both above this quarter's open"
       },
       "shape": "X-AMD",
       "shape_why": "Q1 expanded 2.0x the usual range and closed 62% of the way in one direction - a reversal or continuation, not accumulation",
@@ -178,12 +179,12 @@
       },
       "cur": {
         "open": 29466.0,
-        "high": 29544.0,
+        "high": 29567.5,
         "low": 29368.75,
-        "close": 29535.5,
+        "close": 29549.75,
         "n": 5,
         "start": "2026-09-17T00:00:00-04:00",
-        "end": "2026-09-17T03:37:20.892371-04:00"
+        "end": "2026-09-17T03:42:24.765723-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -216,12 +217,12 @@
       },
       "cur": {
         "open": 29469.5,
-        "high": 29544.0,
+        "high": 29567.5,
         "low": 29462.25,
-        "close": 29535.5,
-        "n": 29,
+        "close": 29549.25,
+        "n": 34,
         "start": "2026-09-17T03:00:00-04:00",
-        "end": "2026-09-17T03:37:20.892371-04:00"
+        "end": "2026-09-17T03:42:24.765723-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -254,12 +255,12 @@
       },
       "cur": {
         "open": 29521.0,
-        "high": 29544.0,
+        "high": 29567.5,
         "low": 29520.25,
-        "close": 29535.5,
-        "n": 6,
+        "close": 29549.25,
+        "n": 11,
         "start": "2026-09-17T03:22:30-04:00",
-        "end": "2026-09-17T03:37:20.892371-04:00"
+        "end": "2026-09-17T03:42:24.765723-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -268,11 +269,10 @@
         "note": "took the previous quarter high 29,535.50"
       },
       "ssmt": {
-        "type": "bearish",
-        "note": "NQ took the previous quarter high, ES did not",
-        "leader": "NQ",
-        "filter_ok": true,
-        "filter_note": "both above this quarter's open"
+        "type": null,
+        "note": "both markets did the same thing at this seam - no divergence",
+        "leader": null,
+        "filter_ok": null
       },
       "shape": "X-AMD",
       "shape_why": "Q1 expanded 2.5x the usual range and closed 70% of the way in one direction - a reversal or continuation, not accumulation",
@@ -284,8 +284,8 @@
   },
   "gb": {
     "on": false,
-    "minute": 37,
-    "next_in_min": 52
+    "minute": 42,
+    "next_in_min": 47
   },
   "checklist": [
     {
@@ -310,7 +310,7 @@
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 52 min"
+      "detail": "next one in 47 min"
     },
     {
       "n": 5,
