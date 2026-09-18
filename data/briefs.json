@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-18T09:07:01.925949-04:00",
+  "updated": "2026-09-18T09:16:32.977770-04:00",
   "stats": {
     "total_graded": 59,
     "correct": 18,
@@ -515,9 +515,9 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-09-18T09:07:01.925976-04:00",
+    "generated_at": "2026-09-18T09:16:32.977798-04:00",
     "last_brief_date": "2026-09-18",
-    "last_brief_time": null,
+    "last_brief_time": "09:16:03",
     "last_grade_date": "2026-09-17",
     "recent_failures": []
   },
@@ -529,35 +529,100 @@
   "days": [
     {
       "date": "2026-09-18",
-      "inventory": null,
-      "vah": null,
-      "poc": null,
-      "val": null,
-      "settle": null,
-      "ovn_high": null,
-      "ovn_low": null,
-      "ovn_poc": null,
-      "ovn_vah": null,
-      "ovn_val": null,
-      "scenario_a": null,
-      "scenario_b": null,
-      "scenario_c": null,
-      "confidence_a": null,
-      "confidence_b": null,
-      "confidence_c": null,
-      "post_time": null,
-      "day_shape": null,
+      "inventory": "N",
+      "vah": 29772.0,
+      "poc": 29750.0,
+      "val": 29681.0,
+      "settle": 29744.5,
+      "ovn_high": 29966.75,
+      "ovn_low": 29648.0,
+      "ovn_poc": 29741.5,
+      "ovn_vah": 29862.5,
+      "ovn_val": 29649.5,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.09,
+      "confidence_b": 0.47,
+      "confidence_c": 0.44,
+      "post_time": "09:16:03",
+      "day_shape": "range_expansion",
       "day_shape_note": null,
       "htf_bias": "LONG",
       "htf_text": "DAILY: The daily timeframe has shown a bullish Change of Character (CHoCH) by taking out significant swing highs from the prior bearish move, establishing a new dealing range from 28763.75 (09-16 low) to 29966.75 (09-18 high). Price is currently trading in a Premium within this range, with the nearest significant Buyside Liquidity (BSL) residing above the 30000 level towards the 30343.00 (08-17 high) old high.\n4H: Following a strong bullish displacement on the 09-18 00:00 4H candle, the market broke structure higher, leaving a partially filled Fair Value Gap between 29764.75 (09-17 20:00 high) and 29822.50 (09-18 04:00 low). Price holding above this FVG and making new highs would confirm the daily bullish sentiment, while a move below 29764.75 targeting prior swing lows would negate it.\n1H: Overnight structure saw a clear bullish Break of Structure (BOS) between 09-17 23:00 and 09-18 03:00, followed by a retracement that has now entered a 1H Fair Value Gap (29764.75 - 29803.00) during the pre-NY open. The immediate draw for the NY open is either to complete the fill of this FVG and seek the overnight high at 29966.75, or to purge Sellside Liquidity below 29689.00 if the FVG fails to hold as support.\nBIAS: LONG - If price holds the partially filled 4H Fair Value Gap around 29764.75-29822.50 and shows bullish displacement, then the primary draw is for Buyside Liquidity above the 29966.75 overnight high.",
-      "regime": null,
-      "invalidation": null,
-      "plan": null,
-      "risk": null,
-      "predicted_model": null,
-      "vol_regime": null,
+      "regime": "Initial imbalance to the upside as price opens above value, potentially developing into a wider two-sided range expansion or seeking new balance higher given the mean-reverting GEX and HTF bullish bias.",
+      "invalidation": "Sustained acceptance and one-timeframing below RTH POC 29750.0 would invalidate the primary bullish read from the open location and HTF bias.",
+      "plan": "IF price opens and immediately drives above PDH 29793.25, THEN look for continuation LONGS on first retest and acceptance of PDH 29793.25 (now support) with orderflow confirmation (absorption/exhaustion), targeting the call wall at 29880. IF price sweeps above PDH 29793.25 and quickly rejects, showing exhaustion and acceptance back below PDH 29793.25, THEN look for SHORTS on a retest of the swept level, targeting RTH POC 29750.0 or RTH VAL 29681.0. IF price opens and rotates between RTH VAH 29772.0 and Gamma flip 29755.0, THEN wait for a clear break and acceptance or rejection of these levels ",
+      "risk": "MTF conflict (mean-reverting GEX vs HTF bullish bias) and the range_expansion being the highest probability model suggest potential for choppy, two-sided action in the AM window. Be cautious with entries without strong orderflow confirmation at key levels.",
+      "predicted_model": "range_expansion",
+      "vol_regime": "normal",
       "tpo_read": null,
-      "models": []
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 29.5,
+          "confidence": "medium",
+          "why": "Tight overnight balance (48th pctile) combined with an open above prior value and positive GEX indicates potential for volatility breakout around the open, mostly contained within a wider range.",
+          "stat_support": "base rate 20%",
+          "trigger": "Break and acceptance above PDH 29793.25 OR below RTH VAL 29681.0.",
+          "confirm": "Sustained two-sided trade above/below these levels, with exhaustion at extremes.",
+          "target": "OVN high 29966.75 on an upside expansion, or PDL 29605.75 on a downside expansion.",
+          "abort": "Price failing to sustain a move beyond PDH 29793.25 / RTH VAL 29681.0, returning into the OVN range."
+        },
+        {
+          "model": "trend_up",
+          "probability": 18.0,
+          "confidence": "low",
+          "why": "Open above RTH value with a strong HTF bullish bias and value migration higher suggests one-timeframing continuation, driving away from prior balance.",
+          "stat_support": "base rate 25%",
+          "trigger": "Open drive or sustained acceptance above PDH 29793.25.",
+          "confirm": "One-timeframing higher with little rotation back into prior value, showing absorption on pullbacks to RTH VAH 29772.0 or PDH 29793.25.",
+          "target": "Call wall 29880 or Buyside Liquidity above 30000 towards 30343.00.",
+          "abort": "Rejection of PDH 29793.25 and acceptance back below RTH VAH 29772.0 or POC 29750.0."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 13.9,
+          "confidence": "low",
+          "why": "Price trading above the gamma flip 29755 in a positive GEX environment suggests dealers will absorb directional moves, leading to two-sided trade contained within a defined range.",
+          "stat_support": "base rate 16%",
+          "trigger": "Open printing and holding within the RTH value area (29681.0-29772.0) or between PDH 29793.25 and RTH VAL 29681.0, with immediate two-sided trade.",
+          "confirm": "Multiple rejections of range extremes (e.g., PDH 29793.25, RTH VAL 29681.0) with price returning to RTH POC 29750.0.",
+          "target": "RTH POC 29750.0.",
+          "abort": "Sustained acceptance and drive above PDH 29793.25 or below RTH VAL 29681.0."
+        },
+        {
+          "model": "trend_down",
+          "probability": 13.6,
+          "confidence": "low",
+          "why": "Despite open above value, a rejection of key resistance like PDH 29793.25 could lead to a swift move lower, accepting below prior RTH value.",
+          "stat_support": "base rate 17%",
+          "trigger": "Open rejection from PDH 29793.25 or RTH VAH 29772.0, with sellers pushing price below RTH POC 29750.0.",
+          "confirm": "Acceptance below RTH VAL 29681.0 and continued one-timeframing lower, with absorption on rallies to RTH VAL 29681.0.",
+          "target": "PDL 29605.75, or PWL 29040.5.",
+          "abort": "Acceptance above RTH VAH 29772.0 and continued strength, invalidating the rejection."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 11.3,
+          "confidence": "low",
+          "why": "An initial push to new extremes (e.g., above PDH 29793.25) could fail to attract sustained participation, leading to a sharp reversal as early aggressive players are trapped and price reclaims prior levels.",
+          "stat_support": "base rate 14%",
+          "trigger": "A sweep above PDH 29793.25 (or OVN high 29966.75) followed by immediate rejection and reclaim of that level.",
+          "confirm": "Orderflow confirmation (exhaustion/absorption) at the extreme, leading to a fast move back through the swept level and acceptance below it (e.g., acceptance bel",
+          "target": "RTH POC 29750.0, or RTH VAL 29681.0.",
+          "abort": "Sustained acceptance above the swept extreme (e.g., PDH 29793.25), leading to a trend."
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 29774.75,
+          "vs_settle": 30.25,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
     },
     {
       "date": "2026-09-17",
