@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-18T11:05:15.448363-04:00",
+  "updated": "2026-09-20T17:00:25.371679-04:00",
   "stats": {
     "total_graded": 59,
     "correct": 18,
@@ -449,15 +449,24 @@
       }
     },
     "weekly_diagnostic": {
-      "week_start": "2026-09-07",
-      "week_end": "2026-09-11",
+      "week_start": "2026-09-14",
+      "week_end": "2026-09-18",
       "total_graded": 5,
       "correct": 2,
       "accuracy_pct": 40.0,
-      "review_text": "WHAT HAPPENED:\nThe model scored 40% (2/5) this week, struggling primarily with over-calling range expansion during tight balance days. It defaulted to expansion reads on four out of five days, misreading two rotational regimes and missing a profile shift.\n\nBIGGEST MISS:\nThe worst call occurred on September 10, when the model predicted a B-shaped profile, but the market instead delivered a wide 232-point two-sided range expansion from 29043 to 29275.\n\nSUGGESTED IMPROVEMENT:\nA five-day sample is too thin to draw structural conclusions without overreaching. However, a testable hypothesis for scenarios.py is to raise the required overnight range or volatility threshold before range_expansion can trigger, then backtest this change against the 19-year historical dataset to measure if it reduces false-positive expansion calls during rotational balance regimes.",
-      "created_at": "2026-09-11 15:20:15"
+      "review_text": "WHAT HAPPENED:\nThe model struggled to identify regime transitions this week, finishing at 40 percent accuracy as it repeatedly flipped its expansion and balance expectations. It failed to capture the market's true rhythm, incorrectly predicting expansion during rotational periods and vice versa.\n\nBIGGEST MISS:\nThe worst call occurred on September 15, when the model expected range expansion but the market instead stayed in rotational balance, holding within the 28896 to 29500 value range.\n\nSUGGESTED IMPROVEMENT:\nBecause the five-day sample this week is too thin to conclude any systematic flaw, we should not attempt to adjust scenarios.py yet, as doing so would risk overinterpreting a brief period of noise. We must wait for more data to see if these regime-shift errors persist.",
+      "created_at": "2026-09-18 15:23:48"
     },
     "weekly_diagnostics_all": [
+      {
+        "week_start": "2026-09-14",
+        "week_end": "2026-09-18",
+        "total_graded": 5,
+        "correct": 2,
+        "accuracy_pct": 40.0,
+        "review_text": "WHAT HAPPENED:\nThe model struggled to identify regime transitions this week, finishing at 40 percent accuracy as it repeatedly flipped its expansion and balance expectations. It failed to capture the market's true rhythm, incorrectly predicting expansion during rotational periods and vice versa.\n\nBIGGEST MISS:\nThe worst call occurred on September 15, when the model expected range expansion but the market instead stayed in rotational balance, holding within the 28896 to 29500 value range.\n\nSUGGESTED IMPROVEMENT:\nBecause the five-day sample this week is too thin to conclude any systematic flaw, we should not attempt to adjust scenarios.py yet, as doing so would risk overinterpreting a brief period of noise. We must wait for more data to see if these regime-shift errors persist.",
+        "created_at": "2026-09-18 15:23:48"
+      },
       {
         "week_start": "2026-09-07",
         "week_end": "2026-09-11",
@@ -515,7 +524,7 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-09-18T11:05:15.448388-04:00",
+    "generated_at": "2026-09-20T17:00:25.371696-04:00",
     "last_brief_date": "2026-09-18",
     "last_brief_time": "09:16:03",
     "last_grade_date": "2026-09-18",
@@ -523,8 +532,8 @@
   },
   "coach": null,
   "mentor_review": {
-    "date": "2026-09-13",
-    "text": "SCORECARD:\nMarket Read: 10/10 \u2014 Correctly identified Labor Day holiday conditions and chose not to trade low-liquidity chop.\nLevel Selection: N/A \u2014 No levels engaged this week.\nExecution: 10/10 \u2014 Perfect execution of the plan to stay flat; zero rule breaks.\nRisk Management: 10/10 \u2014 Preserved 100% of funded capital while handling major off-desk events.\nPsychology: 10/10 \u2014 Elite self-awareness recognizing euphoric state (apartment purchase) would compromise objective orderflow reading.\nDiscipline: 10/10 \u2014 Complete restraint; did not touch the software or force trades out of FOMO.\n\nPNL: Net $0.00 | Best/Worst Day: $0.00 / $0.00 | Profit Factor: N/A | Avg R: N/A\n\nWHAT WORKED:\n- Emotional risk management: Recognizing that positive emotional high-arousal states impair discretionary location reading just as much as tilt.\n- Holiday protocol: Respecting bank-holiday liquidity gaps by remaining flat during NY AM.\n\nBIGGEST LEAK:\n- None on the ledger this week, but your primary vulnerability shifts to post-break over-eagerness next week. Coming off a flat week with high off-desk dopamine creates a tendency to force premature Trader B entries on Monday just to feel back in the game.\n\nBEST & WORST TRADE:\n- Best Trade: Staying flat on Sep 7 \u2014 protected equity and focused on your personal milestone.\n- Worst Trade: None executed.\n\nNEXT WEEK:\n- On your first NY AM session back, execute on strictly ONE funded account and require a written confirmation trigger at an HTF level before placing attempt 1."
+    "date": "2026-09-20",
+    "text": "SCORECARD:\nMarket Read: 8/10 \u2014 Good identification of the structural expansion on Sept 17.\nLevel Selection: 9/10 \u2014 Waited for high-HTF AMT location before committing risk.\nExecution: 10/10 \u2014 Pristine. You waited for the confirmation trigger instead of front-running.\nRisk Management: 9/10 \u2014 Clean 1.38R win on your mini contract, keeping risk tight.\nPsychology: 9/10 \u2014 Logged as \"confident\" and executed with zero emotional friction.\nDiscipline: 7/10 \u2014 Great execution on the 17th, but leaving the 18th as \"not_logged\" is a process gap.\n\nPNL:\nNet +$550 | Best Day: +$550 (Sept 17) | Worst Day: N/A | PF: N/A | Avg R: 1.38R\n\nWHAT WORKED:\n* The Confirmation Entry Model: Your single trade on Sept 17 proved that waiting for location + orderflow trigger is your highest-edge behavior.\n* One-and-Done discipline: You took your mini attempt, hit your 1.38R target, and walked away without forcing a second trade.\n\nBIGGEST LEAK:\nThe \"Ghost Session\" vulnerability. Your Sept 18 session is marked \"not_logged.\" If you didn't trade, that needs to be recorded as a disciplined \"no-trade\" day. If you traded and omitted the data, you are hiding execution flaws from the desk. This ultra-low volume week also sets a psychological trap for next Monday: the \"Trader B\" urge to over-compensate and over-trade to make up for a lack of action.\n\nBEST & WORST TRADE:\nBest Trade: Sept 17 NQ (+$550) \u2014 A-grade confirmation entry, waited for the trigger, kept your stop protected. Repeat this.\nWorst Trade: None taken.\n\nNEXT WEEK:\nLog every single NY AM session by 11:15 AM ET\u2014even if it is a \"no-setup, no-trade\" day\u2014and trade strictly one funded account to maintain this elite execution quality."
   },
   "days": [
     {
