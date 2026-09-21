@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20T17:00:25.371679-04:00",
+  "updated": "2026-09-21T09:21:39.764282-04:00",
   "stats": {
     "total_graded": 59,
     "correct": 18,
@@ -343,8 +343,8 @@
       },
       "70\u201380%": {
         "correct": 3,
-        "total": 34,
-        "pct": 8.8
+        "total": 33,
+        "pct": 9.1
       },
       "80%+": {
         "correct": 0,
@@ -524,9 +524,9 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-09-20T17:00:25.371696-04:00",
-    "last_brief_date": "2026-09-18",
-    "last_brief_time": "09:16:03",
+    "generated_at": "2026-09-21T09:21:39.764309-04:00",
+    "last_brief_date": "2026-09-21",
+    "last_brief_time": "09:16:02",
     "last_grade_date": "2026-09-18",
     "recent_failures": []
   },
@@ -536,6 +536,103 @@
     "text": "SCORECARD:\nMarket Read: 8/10 \u2014 Good identification of the structural expansion on Sept 17.\nLevel Selection: 9/10 \u2014 Waited for high-HTF AMT location before committing risk.\nExecution: 10/10 \u2014 Pristine. You waited for the confirmation trigger instead of front-running.\nRisk Management: 9/10 \u2014 Clean 1.38R win on your mini contract, keeping risk tight.\nPsychology: 9/10 \u2014 Logged as \"confident\" and executed with zero emotional friction.\nDiscipline: 7/10 \u2014 Great execution on the 17th, but leaving the 18th as \"not_logged\" is a process gap.\n\nPNL:\nNet +$550 | Best Day: +$550 (Sept 17) | Worst Day: N/A | PF: N/A | Avg R: 1.38R\n\nWHAT WORKED:\n* The Confirmation Entry Model: Your single trade on Sept 17 proved that waiting for location + orderflow trigger is your highest-edge behavior.\n* One-and-Done discipline: You took your mini attempt, hit your 1.38R target, and walked away without forcing a second trade.\n\nBIGGEST LEAK:\nThe \"Ghost Session\" vulnerability. Your Sept 18 session is marked \"not_logged.\" If you didn't trade, that needs to be recorded as a disciplined \"no-trade\" day. If you traded and omitted the data, you are hiding execution flaws from the desk. This ultra-low volume week also sets a psychological trap for next Monday: the \"Trader B\" urge to over-compensate and over-trade to make up for a lack of action.\n\nBEST & WORST TRADE:\nBest Trade: Sept 17 NQ (+$550) \u2014 A-grade confirmation entry, waited for the trigger, kept your stop protected. Repeat this.\nWorst Trade: None taken.\n\nNEXT WEEK:\nLog every single NY AM session by 11:15 AM ET\u2014even if it is a \"no-setup, no-trade\" day\u2014and trade strictly one funded account to maintain this elite execution quality."
   },
   "days": [
+    {
+      "date": "2026-09-21",
+      "inventory": "100L",
+      "vah": 29910.0,
+      "poc": 29910.0,
+      "val": 29732.0,
+      "settle": 29915.75,
+      "ovn_high": 30275.0,
+      "ovn_low": 29904.0,
+      "ovn_poc": 30230.0,
+      "ovn_vah": 30266.0,
+      "ovn_val": 30089.0,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.17,
+      "confidence_b": 0.52,
+      "confidence_c": 0.31,
+      "post_time": "09:16:02",
+      "day_shape": null,
+      "day_shape_note": null,
+      "htf_bias": "LONG",
+      "htf_text": "DAILY: Daily market structure shifted bullish via strong displacement out of the 28763.75 low, leaving price in Premium of the current 28763.75\u201330275.00 dealing range. Untapped buyside liquidity rests directly above at the 30283.00 and 30343.00 old highs, while sellside liquidity remains unpurged below at 29904.00 and 29352.75.\n\n4H: Market structure shows continuous bullish displacement since breaking 29753.25, leaving a Fair Value Gap open between 29937.75 and 29945.00. Acceptance above 30275.00 confirms daily expansion toward higher liquidity draws, whereas a 4H close below 29904.00 denies the daily bullish momentum.\n\n1H: Overnight structure maintained higher highs and higher lows from the 29904.00 low up to 30275.00 before coiling in an intraday high-level consolidation. The immediate draw on liquidity for the NY open is the buyside pool above 30275.00\u201330283.00, with an extended draw toward 30343.00.\n\nBIAS: LONG \u2014 If price dips into the 30172.50\u201330216.00 discount array early in RTH and shows orderflow absorption, then look for long entries targeting 30275.00 and 30343.00, with invalidation below 29904.00.",
+      "regime": "Imbalance \u2014 Gap up out of prior value with developing Range Expansion or Trend Up bias.",
+      "invalidation": "A breakdown and acceptance below the overnight VAL of 30089.0, which shifts the auction back into the prior RTH value area of 29732.0 to 29910.0.",
+      "plan": "If the open drives higher and accepts above overnight VAH (30266.0), then look to join longs on retests of 30266.0 targeting 30305.0 and 30343.0. If the open rejects the overnight high (30275.0) and breaks below overnight POC (30230.0), then look for a mean reversion short toward overnight VAL (30089.0) on a retest of 30230.0 as resistance. If price trades rotationally within 30089.0 and 30266.0, we sit on hands or fade the extremes only on clear orderflow absorption.",
+      "risk": "High dealer positive gamma of +7.9Bn may suppress volatility and lead to choppy, slow-moving rotations inside the overnight range, making breakout attempts prone to failure.",
+      "predicted_model": null,
+      "vol_regime": "normal",
+      "tpo_read": null,
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 29.7,
+          "confidence": "medium",
+          "why": "Coiling overnight range of 371.0 points above prior-day value combined with high positive dealer gamma of 7.9Bn limits runaway trends, favoring a volatility breakout that struggles to sustain.",
+          "stat_support": "base rate 23%",
+          "trigger": "A push outside the overnight range extremes of 30275.0 or 29904.0.",
+          "confirm": "Acceptance outside the overnight range with high volume and expanding cumulative volume delta.",
+          "target": "30343.0 on the upside, or 29910.0 on the downside.",
+          "abort": "Price returning to trade inside the overnight value area of 30089.0 to 30266.0."
+        },
+        {
+          "model": "trend_up",
+          "probability": 27.5,
+          "confidence": "medium",
+          "why": "Strong daily bullish shift with overnight inventory 100% long and price opening in a gap above prior value supports continuation toward high-timeframe liquidity draws.",
+          "stat_support": "base rate 44%",
+          "trigger": "An open that holds above the overnight POC of 30230.0.",
+          "confirm": "Aggressive buying tail on the 5-minute chart at the overnight VAH of 30266.0.",
+          "target": "30305.0 Call Wall and the monthly high of 30343.0.",
+          "abort": "Acceptance and trading below the overnight value area low of 30089.0."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 12.9,
+          "confidence": "low",
+          "why": "Heavy positive gamma of 7.9Bn above the 29850.0 flip level acts as a strong price dampener, promoting rotational two-sided trade within overnight boundaries.",
+          "stat_support": "base rate 13%",
+          "trigger": "Failed breakout attempts at the overnight high of 30275.0 or low of 29904.0.",
+          "confirm": "Price returning inside the overnight value area of 30089.0 to 30266.0 with passive absorption on delta.",
+          "target": "Overnight POC of 30230.0.",
+          "abort": "Clean breakout and acceptance above 30283.0 or below 29904.0."
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 8.6,
+          "confidence": "low",
+          "why": "The large 1.05% gap from 29915.75 settle and 100% long overnight inventory present overextended buyers, risking a liquidation back to 29910.0 if the Call Wall at 30305.0 holds.",
+          "stat_support": "base rate 11%",
+          "trigger": "Exhaustion or passive absorption near the 30305.0 Call Wall or overnight high of 30275.0.",
+          "confirm": "A swift breakdown and acceptance below the overnight POC of 30230.0.",
+          "target": "Overnight VAL of 30089.0 and the prior RTH value area high of 29910.0.",
+          "abort": "Strong acceptance and continuous buying above the monthly high of 30343.0."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 8.5,
+          "confidence": "low",
+          "why": "\u2212 open out of value near an OVN extreme \u2014 mild discount; proximity alone rarely confirms the reversal; + unswept liquidity to trap into",
+          "stat_support": "base rate 4%",
+          "trigger": "",
+          "confirm": "",
+          "target": "",
+          "abort": ""
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 30229.5,
+          "vs_settle": 313.75,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
+    },
     {
       "date": "2026-09-18",
       "inventory": "N",
@@ -4428,51 +4525,7 @@
         "actual_model": "range_expansion",
         "model_correct": false,
         "top2_hit": false
-      },
-      "intraday": [
-        {
-          "slot": "09:00",
-          "price": 29537.25,
-          "vs_settle": -77.75,
-          "inside_va": false,
-          "call": "Morning brief anchor"
-        },
-        {
-          "slot": "09:30",
-          "price": 29537.25,
-          "vs_settle": -77.75,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29767.00\u201330049.00."
-        },
-        {
-          "slot": "10:00",
-          "price": 29537.25,
-          "vs_settle": -77.75,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29767.00\u201330049.00."
-        },
-        {
-          "slot": "10:30",
-          "price": 29537.25,
-          "vs_settle": -77.75,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29767.00\u201330049.00."
-        },
-        {
-          "slot": "11:00",
-          "price": 29537.25,
-          "vs_settle": -77.75,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29767.00\u201330049.00."
-        },
-        {
-          "slot": "news_follow",
-          "price": 29537.25,
-          "vs_settle": -77.75,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29767.00\u201330049.00."
-        }
-      ]
+      }
     },
     {
       "date": "2026-08-05",
@@ -7255,64 +7308,6 @@
       "trades_summary": {
         "count": 2,
         "pnl": 1733.26
-      }
-    },
-    {
-      "date": "2026-06-25",
-      "inventory": "100L",
-      "vah": 30221.5,
-      "poc": 30106.25,
-      "val": 29993.0,
-      "settle": 29514.25,
-      "ovn_high": 30219.0,
-      "ovn_low": 29486.75,
-      "ovn_poc": 29660.0,
-      "ovn_vah": 30037.0,
-      "ovn_val": 29660.0,
-      "scenario_a": "A",
-      "scenario_b": "B",
-      "scenario_c": "C",
-      "confidence_a": 0.75,
-      "confidence_b": 0.12,
-      "confidence_c": 0.13,
-      "post_time": "08:00:01",
-      "day_shape": "failed_auction",
-      "day_shape_note": null,
-      "htf_bias": "SHORT",
-      "htf_text": "DAILY: Daily market structure shows a recent CHoCH to the downside on June 23rd with a significant displacement, establishing a bearish dealing range from the 06-22 high of 30968.00 to the 06-24 low of 29264.75. Current price at 30205.75 sits in the premium of this range, with untapped buyside liquidity above 30701.25 and sellside liquidity below 29264.75.\n\n4H: The 4H structure shows a decisive displacement and bearish market structure break on 06-23, leaving a significant bearish FVG from 30301.00 to 29933.75, which NQ is currently trading within. Sustained rejection from this 4H FVG, confirming the daily bearish premise, is anticipated, while acceptance above 30301.00 would negate it and suggest a deeper rally.\n\n1H: Overnight price action has been largely bullish, forming higher highs and higher lows since the 06-24 16:00 RTH close, pushing into the 4H bearish FVG. The immediate draw is to the overnight high at 30263.75 to collect buyside liquidity, potentially extending towards the 4H FVG ceiling at 30301.00 for a deeper retracement before a potential rejection.\n\nBIAS: SHORT \u2014 The higher timeframes dictate a bearish stance given the daily market structure shift and current price residing in the premium of the dealing range and within a 4H bearish FVG, so I will look for rejection and orderflow confirmation at or above the overnight high (30263.75) or the 4H FVG top (30301.00) for a short entry targeting sellside liquidity below 29924.50.",
-      "regime": "Rule-based seed (AI unavailable).",
-      "invalidation": "",
-      "plan": "",
-      "risk": "",
-      "predicted_model": "failed_auction",
-      "vol_regime": "high",
-      "tpo_read": null,
-      "models": [
-        {
-          "model": "failed_auction",
-          "probability": 75,
-          "confidence": "medium",
-          "why": "Directional overnight inventory favours a probe-and-revert.",
-          "stat_support": ""
-        },
-        {
-          "model": "rotational_balance",
-          "probability": 13,
-          "confidence": "low",
-          "why": "Two-sided trade holds value if neither extreme accepts.",
-          "stat_support": ""
-        },
-        {
-          "model": "trend_up",
-          "probability": 12,
-          "confidence": "medium",
-          "why": "Acceptance beyond the overnight extreme would extend the move.",
-          "stat_support": ""
-        }
-      ],
-      "trades_summary": {
-        "count": 3,
-        "pnl": 718.42
       }
     }
   ]
