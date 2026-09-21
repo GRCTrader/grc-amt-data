@@ -1,10 +1,10 @@
 {
-  "asof": "2026-09-21 13:30:25 ET",
-  "asof_epoch": 1790011825,
+  "asof": "2026-09-21 13:35:30 ET",
+  "asof_epoch": 1790012130,
   "session_date": "2026-09-21",
   "price": {
-    "NQ": 30690.5,
-    "ES": 7827.0
+    "NQ": 30670.25,
+    "ES": 7823.25
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "New York PM",
       "start": "2026-09-21T12:00:00-04:00",
       "end": "2026-09-21T18:00:00-04:00",
-      "left_sec": 16174,
+      "left_sec": 15869,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
@@ -48,7 +48,7 @@
       "span": "block 2 of 4",
       "start": "2026-09-21T13:30:00-04:00",
       "end": "2026-09-21T15:00:00-04:00",
-      "left_sec": 5374,
+      "left_sec": 5069,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
@@ -59,7 +59,7 @@
       "span": "22.5 min",
       "start": "2026-09-21T13:30:00-04:00",
       "end": "2026-09-21T13:52:30-04:00",
-      "left_sec": 1324,
+      "left_sec": 1019,
       "phase": "Q1",
       "phase_name": "Accumulation",
       "phase_why": "Range builds. The market is loading, not going anywhere."
@@ -70,7 +70,7 @@
       "span": "5.625 min",
       "start": "2026-09-21T13:30:00-04:00",
       "end": "2026-09-21T13:35:37.500000-04:00",
-      "left_sec": 312,
+      "left_sec": 7,
       "phase": "Q1",
       "phase_name": "Accumulation",
       "phase_why": "Range builds. The market is loading, not going anywhere."
@@ -145,10 +145,10 @@
         "open": 29946.5,
         "high": 30704.25,
         "low": 29945.0,
-        "close": 30690.5,
+        "close": 30670.0,
         "n": 21,
         "start": "2026-09-20T18:00:00-04:00",
-        "end": "2026-09-21T13:30:25.080928-04:00"
+        "end": "2026-09-21T13:35:30.108211-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -163,7 +163,7 @@
         "filter_ok": null
       },
       "shape": "X-AMD",
-      "shape_why": "Q1 expanded 1.5x the usual range and closed 98% of the way in one direction - a reversal or continuation, not accumulation",
+      "shape_why": "Q1 expanded 1.5x the usual range and closed 95% of the way in one direction - a reversal or continuation, not accumulation",
       "quarter": "Q1",
       "job": "X - reversal / continuation",
       "start": "2026-09-20T18:00:00-04:00",
@@ -183,10 +183,10 @@
         "open": 30610.25,
         "high": 30704.25,
         "low": 30601.5,
-        "close": 30690.5,
+        "close": 30670.0,
         "n": 3,
         "start": "2026-09-21T12:00:00-04:00",
-        "end": "2026-09-21T13:30:25.080928-04:00"
+        "end": "2026-09-21T13:35:30.108211-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -212,8 +212,8 @@
         "open": 30610.25,
         "high": 30704.25,
         "low": 30601.5,
-        "close": 30690.5,
-        "n": 82,
+        "close": 30670.25,
+        "n": 87,
         "start": "2026-09-21T12:00:00-04:00",
         "end": "2026-09-21T13:30:00-04:00"
       },
@@ -228,10 +228,10 @@
         "leader": null,
         "filter_ok": null
       },
-      "shape": "X-AMD",
-      "shape_why": "Q1 expanded 1.5x the usual range and closed 78% of the way in one direction - a reversal or continuation, not accumulation",
+      "shape": "AMD-X",
+      "shape_why": "Q1 ranged 1.5x the usual with 58% directional body - it behaved like accumulation",
       "quarter": "Q2",
-      "job": "Accumulation",
+      "job": "Manipulation",
       "start": "2026-09-21T13:30:00-04:00",
       "end": "2026-09-21T15:00:00-04:00"
     },
@@ -239,9 +239,9 @@
       "prev": {
         "open": 30682.25,
         "high": 30694.25,
-        "low": 30675.75,
-        "close": 30690.5,
-        "n": 14,
+        "low": 30667.75,
+        "close": 30670.25,
+        "n": 19,
         "start": "2026-09-21T13:07:30-04:00",
         "end": "2026-09-21T13:30:00-04:00"
       },
@@ -265,16 +265,16 @@
     }
   },
   "gb": {
-    "on": false,
-    "minute": 30,
-    "next_in_min": 5
+    "on": true,
+    "minute": 35,
+    "next_in_min": 0
   },
   "checklist": [
     {
       "n": 1,
       "step": "Identify XAMD / AMDX",
       "ok": true,
-      "detail": "X-AMD - Q1 expanded 1.5x the usual range and closed 78% of the way in one direction - a reversal or continuation, not accumulation"
+      "detail": "AMD-X - Q1 ranged 1.5x the usual with 58% directional body - it behaved like accumulation"
     },
     {
       "n": 2,
@@ -291,8 +291,8 @@
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
-      "ok": false,
-      "detail": "next one in 5 min"
+      "ok": true,
+      "detail": "on the anchor now"
     },
     {
       "n": 5,
