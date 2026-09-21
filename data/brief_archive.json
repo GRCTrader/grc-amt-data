@@ -1,6 +1,132 @@
 {
-  "updated": "2026-09-18T12:00:00.022569-04:00",
+  "updated": "2026-09-21T12:00:00.026153-04:00",
   "days": [
+    {
+      "date": "2026-09-21",
+      "regime": "Imbalance \u2014 Gap up out of prior value with developing Range Expansion or Trend Up bias.",
+      "predicted_model": null,
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 29.7,
+          "confidence": "medium",
+          "why": "Coiling overnight range of 371.0 points above prior-day value combined with high positive dealer gamma of 7.9Bn limits runaway trends, favoring a volatility breakout that struggles to sustain.",
+          "stat_support": "base rate 23%",
+          "trigger": "A push outside the overnight range extremes of 30275.0 or 29904.0.",
+          "confirm": "Acceptance outside the overnight range with high volume and expanding cumulative volume delta.",
+          "target": "30343.0 on the upside, or 29910.0 on the downside.",
+          "abort": "Price returning to trade inside the overnight value area of 30089.0 to 30266.0."
+        },
+        {
+          "model": "trend_up",
+          "probability": 27.5,
+          "confidence": "medium",
+          "why": "Strong daily bullish shift with overnight inventory 100% long and price opening in a gap above prior value supports continuation toward high-timeframe liquidity draws.",
+          "stat_support": "base rate 44%",
+          "trigger": "An open that holds above the overnight POC of 30230.0.",
+          "confirm": "Aggressive buying tail on the 5-minute chart at the overnight VAH of 30266.0.",
+          "target": "30305.0 Call Wall and the monthly high of 30343.0.",
+          "abort": "Acceptance and trading below the overnight value area low of 30089.0."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 12.9,
+          "confidence": "low",
+          "why": "Heavy positive gamma of 7.9Bn above the 29850.0 flip level acts as a strong price dampener, promoting rotational two-sided trade within overnight boundaries.",
+          "stat_support": "base rate 13%",
+          "trigger": "Failed breakout attempts at the overnight high of 30275.0 or low of 29904.0.",
+          "confirm": "Price returning inside the overnight value area of 30089.0 to 30266.0 with passive absorption on delta.",
+          "target": "Overnight POC of 30230.0.",
+          "abort": "Clean breakout and acceptance above 30283.0 or below 29904.0."
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 8.6,
+          "confidence": "low",
+          "why": "The large 1.05% gap from 29915.75 settle and 100% long overnight inventory present overextended buyers, risking a liquidation back to 29910.0 if the Call Wall at 30305.0 holds.",
+          "stat_support": "base rate 11%",
+          "trigger": "Exhaustion or passive absorption near the 30305.0 Call Wall or overnight high of 30275.0.",
+          "confirm": "A swift breakdown and acceptance below the overnight POC of 30230.0.",
+          "target": "Overnight VAL of 30089.0 and the prior RTH value area high of 29910.0.",
+          "abort": "Strong acceptance and continuous buying above the monthly high of 30343.0."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 8.5,
+          "confidence": "low",
+          "why": "\u2212 open out of value near an OVN extreme \u2014 mild discount; proximity alone rarely confirms the reversal; + unswept liquidity to trap into",
+          "stat_support": "base rate 4%",
+          "trigger": "",
+          "confirm": "",
+          "target": "",
+          "abort": ""
+        }
+      ],
+      "plan": "If the open drives higher and accepts above overnight VAH (30266.0), then look to join longs on retests of 30266.0 targeting 30305.0 and 30343.0. If the open rejects the overnight high (30275.0) and breaks below overnight POC (30230.0), then look for a mean reversion short toward overnight VAL (30089.0) on a retest of 30230.0 as resistance. If price trades rotationally within 30089.0 and 30266.0, we sit on hands or fade the extremes only on clear orderflow absorption.",
+      "invalidation": "A breakdown and acceptance below the overnight VAL of 30089.0, which shifts the auction back into the prior RTH value area of 29732.0 to 29910.0.",
+      "risk_note": "High dealer positive gamma of +7.9Bn may suppress volatility and lead to choppy, slow-moving rotations inside the overnight range, making breakout attempts prone to failure.",
+      "htf_bias": "LONG",
+      "htf_text": "DAILY: Daily market structure shifted bullish via strong displacement out of the 28763.75 low, leaving price in Premium of the current 28763.75\u201330275.00 dealing range. Untapped buyside liquidity rests directly above at the 30283.00 and 30343.00 old highs, while sellside liquidity remains unpurged below at 29904.00 and 29352.75.\n\n4H: Market structure shows continuous bullish displacement since breaking 29753.25, leaving a Fair Value Gap open between 29937.75 and 29945.00. Acceptance above 30275.00 confirms daily expansion toward higher liquidity draws, whereas a 4H close below 29904.00 denies the daily bullish momentum.\n\n1H: Overnight structure maintained higher highs and higher lows from the 29904.00 low up to 30275.00 before coiling in an intraday high-level consolidation. The immediate draw on liquidity for the NY open is the buyside pool above 30275.00\u201330283.00, with an extended draw toward 30343.00.\n\nBIAS: LONG \u2014 If price dips into the 30172.50\u201330216.00 discount array early in RTH and shows orderflow absorption, then look for long entries targeting 30275.00 and 30343.00, with invalidation below 29904.00.",
+      "day_shape": null,
+      "day_grade": null,
+      "actual_model": "trend_up",
+      "correct": 1,
+      "grade_detail": "Accepted above VAH 29910, closed 30528 (top of range)",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 29910.0
+        },
+        {
+          "label": "POC",
+          "price": 29910.0
+        },
+        {
+          "label": "VAL",
+          "price": 29732.0
+        },
+        {
+          "label": "OVN High",
+          "price": 30275.0
+        },
+        {
+          "label": "OVN Low",
+          "price": 29904.0
+        },
+        {
+          "label": "OVN VAH",
+          "price": 30266.0
+        },
+        {
+          "label": "OVN POC",
+          "price": 30230.0
+        },
+        {
+          "label": "OVN VAL",
+          "price": 30089.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 29772.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 29750.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 29681.0
+        },
+        {
+          "label": "Prior High",
+          "price": 29937.75
+        },
+        {
+          "label": "Prior Low",
+          "price": 29659.25
+        }
+      ]
+    },
     {
       "date": "2026-09-18",
       "regime": "Initial imbalance to the upside as price opens above value, potentially developing into a wider two-sided range expansion or seeking new balance higher given the mean-reverting GEX and HTF bullish bias.",
