@@ -1,10 +1,10 @@
 {
-  "asof": "2026-09-22 05:39:31 ET",
-  "asof_epoch": 1790069971,
+  "asof": "2026-09-22 05:44:35 ET",
+  "asof_epoch": 1790070275,
   "session_date": "2026-09-22",
   "price": {
-    "NQ": 30770.25,
-    "ES": 7827.25
+    "NQ": 30779.0,
+    "ES": 7829.25
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "London",
       "start": "2026-09-22T00:00:00-04:00",
       "end": "2026-09-22T06:00:00-04:00",
-      "left_sec": 1228,
+      "left_sec": 924,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
@@ -48,7 +48,7 @@
       "span": "block 4 of 4",
       "start": "2026-09-22T04:30:00-04:00",
       "end": "2026-09-22T06:00:00-04:00",
-      "left_sec": 1228,
+      "left_sec": 924,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
@@ -59,30 +59,24 @@
       "span": "22.5 min",
       "start": "2026-09-22T05:37:30-04:00",
       "end": "2026-09-22T06:00:00-04:00",
-      "left_sec": 1228,
+      "left_sec": 924,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
     },
     {
       "level": "Nano",
-      "q": 0,
+      "q": 1,
       "span": "5.625 min",
-      "start": "2026-09-22T05:37:30-04:00",
-      "end": "2026-09-22T05:43:07.500000-04:00",
-      "left_sec": 215,
-      "phase": "Q1",
-      "phase_name": "Accumulation",
-      "phase_why": "Range builds. The market is loading, not going anywhere."
+      "start": "2026-09-22T05:43:07.500000-04:00",
+      "end": "2026-09-22T05:48:45-04:00",
+      "left_sec": 249,
+      "phase": "Q2",
+      "phase_name": "Manipulation",
+      "phase_why": "The Judas swing. Price runs the obvious stops."
     }
   ],
-  "chains": [
-    [
-      "90 minute",
-      "Micro",
-      "Nano"
-    ]
-  ],
+  "chains": [],
   "true_opens": [
     {
       "code": "TMO",
@@ -117,22 +111,22 @@
       "name": "true micro-session open",
       "at": "2026-09-22T04:52:30-04:00",
       "px": 30777.75,
-      "side": "below"
+      "side": "above"
     }
   ],
   "opens_filter": {
     "above": [
-      "TMO"
+      "TMO",
+      "TMSO"
     ],
     "below": [
       "TWO",
       "TDO",
-      "TSO",
-      "TMSO"
+      "TSO"
     ],
     "known": 5,
     "buy_ok": true,
-    "sell_ok": false
+    "sell_ok": true
   },
   "detail": {
     "Weekly": {
@@ -149,10 +143,10 @@
         "open": 30780.0,
         "high": 30916.5,
         "low": 30670.0,
-        "close": 30770.25,
+        "close": 30779.0,
         "n": 13,
         "start": "2026-09-21T18:00:00-04:00",
-        "end": "2026-09-22T05:39:31.588642-04:00"
+        "end": "2026-09-22T05:44:35.642351-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -188,10 +182,10 @@
         "open": 30846.75,
         "high": 30866.5,
         "low": 30670.0,
-        "close": 30770.25,
+        "close": 30779.0,
         "n": 7,
         "start": "2026-09-22T00:00:00-04:00",
-        "end": "2026-09-22T05:39:31.588642-04:00"
+        "end": "2026-09-22T05:44:35.642351-04:00"
       },
       "sweep": {
         "swept": "low",
@@ -226,10 +220,10 @@
         "open": 30686.75,
         "high": 30800.25,
         "low": 30670.0,
-        "close": 30770.25,
-        "n": 61,
+        "close": 30779.0,
+        "n": 66,
         "start": "2026-09-22T04:30:00-04:00",
-        "end": "2026-09-22T05:39:31.588642-04:00"
+        "end": "2026-09-22T05:44:35.642351-04:00"
       },
       "sweep": {
         "swept": "both",
@@ -256,8 +250,8 @@
         "open": 30763.5,
         "high": 30787.75,
         "low": 30759.0,
-        "close": 30770.25,
-        "n": 16,
+        "close": 30779.0,
+        "n": 21,
         "start": "2026-09-22T05:15:00-04:00",
         "end": "2026-09-22T05:37:30-04:00"
       },
@@ -282,8 +276,8 @@
   },
   "gb": {
     "on": false,
-    "minute": 39,
-    "next_in_min": 50
+    "minute": 44,
+    "next_in_min": 45
   },
   "checklist": [
     {
@@ -302,13 +296,13 @@
       "n": 3,
       "step": "SSMT / ISMT, above or below true opens",
       "ok": true,
-      "detail": "bearish - NQ took the previous quarter high, ES did not; both above this quarter's open; price is above 1 and below 4 of 5 true opens"
+      "detail": "bearish - NQ took the previous quarter high, ES did not; both above this quarter's open; price is above 2 and below 3 of 5 true opens"
     },
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 50 min"
+      "detail": "next one in 45 min"
     },
     {
       "n": 5,
