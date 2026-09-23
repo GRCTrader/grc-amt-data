@@ -1,5 +1,5 @@
 {
-  "asof": "2026-09-23 11:20 ET",
+  "asof": "2026-09-23 11:52 ET",
   "models": [
     {
       "model": "pdhl",
@@ -8,41 +8,41 @@
       "tally": {
         "market": {
           "mode": "market",
-          "posted": 1,
-          "taken": 1,
+          "posted": 2,
+          "taken": 2,
           "no_trade": 0,
-          "wins": 1,
+          "wins": 2,
           "losses": 0,
           "win_rate": 100.0,
-          "pts": 32.75,
-          "nq_usd": 655.0,
-          "mnq_usd": 65.5,
-          "avg_pts": 32.75,
+          "pts": 42.75,
+          "nq_usd": 855.0,
+          "mnq_usd": 85.5,
+          "avg_pts": 21.38,
           "best_pts": 32.75,
-          "worst_pts": 32.75,
+          "worst_pts": 10.0,
           "profit_factor": "inf"
         },
         "retest": {
           "mode": "retest",
-          "posted": 1,
-          "taken": 0,
+          "posted": 2,
+          "taken": 1,
           "no_trade": 1,
           "wins": 0,
-          "losses": 0,
-          "win_rate": null,
-          "pts": 0,
-          "nq_usd": 0.0,
-          "mnq_usd": 0.0,
-          "avg_pts": null,
-          "best_pts": 0,
-          "worst_pts": 0,
-          "profit_factor": null
+          "losses": 1,
+          "win_rate": 0.0,
+          "pts": -8.75,
+          "nq_usd": -175.0,
+          "mnq_usd": -17.5,
+          "avg_pts": -8.75,
+          "best_pts": -8.75,
+          "worst_pts": -8.75,
+          "profit_factor": 0.0
         }
       },
       "setups": [
         {
           "level_key": "pdl",
-          "sim_version": null,
+          "sim_version": 4,
           "id": 8,
           "date": "2026-09-23",
           "posted_at": "2026-09-23T11:20:03.926214-04:00",
@@ -61,8 +61,239 @@
             "opposite previous-day extreme 31,065.50"
           ],
           "context": null,
-          "graded": false,
-          "result": null
+          "graded": true,
+          "result": {
+            "market": {
+              "status": "target",
+              "side": "long",
+              "entry_mode": "market",
+              "entry": 30783.5,
+              "stop": 30754.75,
+              "targets": [
+                30793.5,
+                31065.5
+              ],
+              "targets_hit": [
+                {
+                  "i": 0,
+                  "price": 30793.5,
+                  "at": "2026-09-23 11:21:00-04:00",
+                  "pts": 10.0
+                }
+              ],
+              "notes": [],
+              "pts": 10.0,
+              "nq_usd": 200.0,
+              "mnq_usd": 20.0,
+              "mae_pts": 4.0,
+              "mfe_pts": 18.75,
+              "r_multiple": 0.35,
+              "risk_pts": 28.75,
+              "alert_px": 30785.25,
+              "targets_void": [],
+              "window_end": "2026-09-23 17:00:00-04:00",
+              "exit": 30793.5,
+              "exit_at": "2026-09-23 11:21:00-04:00"
+            },
+            "retest": {
+              "status": "stop",
+              "side": "long",
+              "entry_mode": "retest",
+              "entry": 30763.5,
+              "stop": 30754.75,
+              "targets": [
+                30793.5,
+                31065.5
+              ],
+              "targets_hit": [],
+              "notes": [],
+              "pts": -8.75,
+              "nq_usd": -175.0,
+              "mnq_usd": -17.5,
+              "mae_pts": 9.5,
+              "mfe_pts": 14.5,
+              "r_multiple": -1.0,
+              "risk_pts": 8.75,
+              "targets_void": [],
+              "window_end": "2026-09-23 17:00:00-04:00",
+              "fill_at": "2026-09-23 11:35:00-04:00",
+              "exit": 30754.75,
+              "exit_at": "2026-09-23 11:41:00-04:00"
+            },
+            "ladder": {
+              "market": {
+                "status": "stopped",
+                "entry_mode": "market",
+                "side": "long",
+                "entry": 30783.5,
+                "stop": 30754.75,
+                "step": 10.0,
+                "step_src": "T1",
+                "tps": [
+                  30793.5,
+                  30803.5,
+                  30813.5
+                ],
+                "legs": [
+                  3,
+                  3,
+                  2,
+                  2
+                ],
+                "reached": [
+                  true,
+                  true,
+                  true
+                ],
+                "reached_at": [
+                  "2026-09-23 11:21:00-04:00",
+                  "2026-09-23 11:22:00-04:00",
+                  "2026-09-23 11:22:00-04:00"
+                ],
+                "mfe_px": 30817.75,
+                "mfe_pts": 34.25,
+                "mfe_steps": 3.42,
+                "mfe_at": "2026-09-23 11:22:00-04:00",
+                "mfe_r": 1.19,
+                "risk_pts": 28.75,
+                "nq": {
+                  "contracts": 1,
+                  "exit": 30793.5,
+                  "how": "TP1",
+                  "pts": 10.0,
+                  "usd": 200.0
+                },
+                "mnq": {
+                  "contracts": 10,
+                  "legs": [
+                    {
+                      "n": 3,
+                      "leg": "TP1",
+                      "exit": 30793.5,
+                      "how": "TP1",
+                      "pts": 10.0,
+                      "usd": 60.0
+                    },
+                    {
+                      "n": 3,
+                      "leg": "TP2",
+                      "exit": 30803.5,
+                      "how": "TP2",
+                      "pts": 20.0,
+                      "usd": 120.0
+                    },
+                    {
+                      "n": 2,
+                      "leg": "TP3",
+                      "exit": 30813.5,
+                      "how": "TP3",
+                      "pts": 30.0,
+                      "usd": 120.0
+                    },
+                    {
+                      "n": 2,
+                      "leg": "runner",
+                      "exit": 30817.75,
+                      "how": "best",
+                      "pts": 34.25,
+                      "usd": 137.0
+                    }
+                  ],
+                  "usd": 437.0,
+                  "pts_avg": 21.85
+                },
+                "notes": [],
+                "alert_px": 30785.25,
+                "fill_at": "2026-09-23 11:21:00-04:00",
+                "exit_at": "2026-09-23 11:41:00-04:00"
+              },
+              "retest": {
+                "status": "stopped",
+                "entry_mode": "retest",
+                "side": "long",
+                "entry": 30763.5,
+                "stop": 30754.75,
+                "step": 30.0,
+                "step_src": "T1",
+                "tps": [
+                  30793.5,
+                  30823.5,
+                  30853.5
+                ],
+                "legs": [
+                  3,
+                  3,
+                  2,
+                  2
+                ],
+                "reached": [
+                  false,
+                  false,
+                  false
+                ],
+                "reached_at": [
+                  null,
+                  null,
+                  null
+                ],
+                "mfe_px": 30778.0,
+                "mfe_pts": 14.5,
+                "mfe_steps": 0.48,
+                "mfe_at": "2026-09-23 11:35:00-04:00",
+                "mfe_r": 1.66,
+                "risk_pts": 8.75,
+                "nq": {
+                  "contracts": 1,
+                  "exit": 30754.75,
+                  "how": "stop",
+                  "pts": -8.75,
+                  "usd": -175.0
+                },
+                "mnq": {
+                  "contracts": 10,
+                  "legs": [
+                    {
+                      "n": 3,
+                      "leg": "TP1",
+                      "exit": 30754.75,
+                      "how": "stop",
+                      "pts": -8.75,
+                      "usd": -52.5
+                    },
+                    {
+                      "n": 3,
+                      "leg": "TP2",
+                      "exit": 30754.75,
+                      "how": "stop",
+                      "pts": -8.75,
+                      "usd": -52.5
+                    },
+                    {
+                      "n": 2,
+                      "leg": "TP3",
+                      "exit": 30754.75,
+                      "how": "stop",
+                      "pts": -8.75,
+                      "usd": -35.0
+                    },
+                    {
+                      "n": 2,
+                      "leg": "runner",
+                      "exit": 30754.75,
+                      "how": "stop",
+                      "pts": -8.75,
+                      "usd": -35.0
+                    }
+                  ],
+                  "usd": -175.0,
+                  "pts_avg": -8.75
+                },
+                "notes": [],
+                "fill_at": "2026-09-23 11:35:00-04:00",
+                "exit_at": "2026-09-23 11:41:00-04:00"
+              }
+            }
+          }
         },
         {
           "level_key": "pdh",
