@@ -1,6 +1,132 @@
 {
-  "updated": "2026-09-22T12:00:00.022101-04:00",
+  "updated": "2026-09-23T12:00:00.014420-04:00",
   "days": [
+    {
+      "date": "2026-09-23",
+      "regime": "Balanced-to-rotational regime with underlying mean-reverting tendencies, opening at RTH POC after a compressed overnight session.",
+      "predicted_model": "range_expansion",
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 25.6,
+          "confidence": "medium",
+          "why": "Despite historical unreliability of OVN range compression leading to RTH expansion, calibrated models now assign a higher probability given current context for a volatility breakout.",
+          "stat_support": "base rate 21%",
+          "trigger": "Price breaks below RTH VAL 30902.0.",
+          "confirm": "Sustained acceptance (one-timeframing) for 15+ minutes below RTH VAL 30902.0.",
+          "target": "PDL 30763.5",
+          "abort": "Rejection and quick return above RTH VAL 30902.0."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 17.4,
+          "confidence": "low",
+          "why": "Open within value and significant positive GEX above the gamma flip favor two-sided price action contained within value.",
+          "stat_support": "base rate 19%",
+          "trigger": "Price approaches RTH VAH 30984.0 or RTH VAL 30902.0.",
+          "confirm": "Orderflow confirmation (exhaustion/absorption) at RTH VAH 30984.0 or RTH VAL 30902.0.",
+          "target": "RTH POC 30956.0",
+          "abort": "Sustained acceptance (one-timeframing) above RTH VAH 30984.0 or below RTH VAL 30902.0."
+        },
+        {
+          "model": "trend_down",
+          "probability": 15.0,
+          "confidence": "low",
+          "why": "Despite a dampening positive GEX and open not below value, calibrated models show a sustained probability for a directional downside move.",
+          "stat_support": "base rate 13%",
+          "trigger": "Open drives lower and rejects below RTH VAL 30902.0.",
+          "confirm": "Acceptance (one-timeframing) below RTH VAL 30902.0 with aggressive selling pressure.",
+          "target": "PDL 30763.5",
+          "abort": "Reclaim of RTH VAL 30902.0 or absorption at PDL 30763.5."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 13.5,
+          "confidence": "low",
+          "why": "Unswept liquidity below PDL 30763.5 provides a target for a potential trap before reversing, with calibrated models showing higher conviction.",
+          "stat_support": "base rate 20%",
+          "trigger": "Price sweeps below PDL 30763.5.",
+          "confirm": "Quick reclaim of PDL 30763.5 and acceptance above OVNL 30910.75 within 15 minutes.",
+          "target": "RTH POC 30956.0",
+          "abort": "Sustained acceptance below PDL 30763.5."
+        },
+        {
+          "model": "trend_up",
+          "probability": 13.1,
+          "confidence": "low",
+          "why": "A two-day uptrend persists, but positive GEX and open within value act as headwinds against sustained upside acceptance.",
+          "stat_support": "base rate 20%",
+          "trigger": "Open drives higher and accepts above RTH VAH 30984.0.",
+          "confirm": "Sustained acceptance (one-timeframing) above RTH VAH 30984.0 with aggressive buying pressure.",
+          "target": "OVN High 31094.75",
+          "abort": "Rejection and quick return below RTH VAH 30984.0."
+        }
+      ],
+      "plan": "Opens near RTH POC 30956.0. If price pushes higher from the open towards RTH VAH 30984.0, look for orderflow exhaustion or absorption at 30984.0 for a fade back to RTH POC 30956.0. If price pushes lower from the open towards RTH VAL 30902.0, look for orderflow absorption at 30902.0 for a bounce back to RTH POC 30956.0. Should price decisively break RTH VAL 30902.0, observe for a sweep below OVNL 30910.75 and a subsequent failed auction (quick reclaim above OVNL 30910.75) for a long entry targeting RTH POC 30956.0. If RTH VAH 30984.0 is decisively accepted with one-timeframing, consider a trend",
+      "invalidation": "Sustained acceptance and one-timeframing above OVN High 31094.75 or below PDL 30763.5.",
+      "risk_note": "Increased chop and potential for quick reversals due to significant positive GEX and MTF conflict (HTF bias short, daily/4H bullish).",
+      "htf_bias": "SHORT",
+      "htf_text": "DAILY: Daily structure is strongly bullish with consecutive BOS to the upside, currently trading in a premium within the dealing range defined by the 09-21 L29904.00 and 09-23 H31094.75. The nearest untapped buyside liquidity rests above 09-23 H31094.75, while sellside liquidity rests below 09-23 L30910.75, followed by 09-22 L30670.00 and the significant FVG between 09-18 H29665.25 and 09-21 L29904.00.\n\n4H: Since the displacement from 09-21 08:00, 4H structure remains bullish, with an unmitigated FVG at [30850.75, 30889.25] remaining below current price. Continued acceptance above 09-23 H31094.75 would confirm the daily bullishness, while a sustained break below 09-22 L30670.00 would invalidate it.\n\n1H: Overnight, price initially extended to create a new high at 31094.75 before experiencing a break in structure to the downside, leaving a bearish FVG between [30966.00, 31009.75] above current price and the immediate draw being a retracement to mitigate this FVG or to target the sellside liquidity below the overnight low at 30910.75.\n\nBIAS: SHORT \u2014 If price fails to reclaim the 1H bearish FVG [30966.00, 31009.75] and accepts below the overnight low at 30910.75, I will look for continuation to the downside into the 4H FVG at [30850.75, 30889.25].",
+      "day_shape": "range_expansion",
+      "day_grade": null,
+      "actual_model": "range_expansion",
+      "correct": 1,
+      "grade_detail": "Two-sided, range 30643-31013, close 30813",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 30984.0
+        },
+        {
+          "label": "POC",
+          "price": 30956.0
+        },
+        {
+          "label": "VAL",
+          "price": 30902.0
+        },
+        {
+          "label": "OVN High",
+          "price": 31094.75
+        },
+        {
+          "label": "OVN Low",
+          "price": 30910.75
+        },
+        {
+          "label": "OVN VAH",
+          "price": 31055.5
+        },
+        {
+          "label": "OVN POC",
+          "price": 31022.25
+        },
+        {
+          "label": "OVN VAL",
+          "price": 31000.0
+        },
+        {
+          "label": "Prior VAH",
+          "price": 30850.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 30790.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 30518.0
+        },
+        {
+          "label": "Prior High",
+          "price": 31065.5
+        },
+        {
+          "label": "Prior Low",
+          "price": 30763.5
+        }
+      ]
+    },
     {
       "date": "2026-09-22",
       "regime": "The market opens in balance around current value with mean-reverting tendencies due to positive GEX, but a compressed overnight range presents potential for range expansion in either direction.",
