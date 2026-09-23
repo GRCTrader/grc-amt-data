@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-23T09:17:07.031256-04:00",
+  "updated": "2026-09-23T09:17:36.731448-04:00",
   "stats": {
     "total_graded": 59,
     "correct": 19,
@@ -524,7 +524,7 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-09-23T09:17:07.031283-04:00",
+    "generated_at": "2026-09-23T09:17:36.731476-04:00",
     "last_brief_date": "2026-09-23",
     "last_brief_time": "09:16:07",
     "last_grade_date": "2026-09-22",
@@ -584,10 +584,10 @@
       "day_shape_note": null,
       "htf_bias": "SHORT",
       "htf_text": "DAILY: Daily structure is strongly bullish with consecutive BOS to the upside, currently trading in a premium within the dealing range defined by the 09-21 L29904.00 and 09-23 H31094.75. The nearest untapped buyside liquidity rests above 09-23 H31094.75, while sellside liquidity rests below 09-23 L30910.75, followed by 09-22 L30670.00 and the significant FVG between 09-18 H29665.25 and 09-21 L29904.00.\n\n4H: Since the displacement from 09-21 08:00, 4H structure remains bullish, with an unmitigated FVG at [30850.75, 30889.25] remaining below current price. Continued acceptance above 09-23 H31094.75 would confirm the daily bullishness, while a sustained break below 09-22 L30670.00 would invalidate it.\n\n1H: Overnight, price initially extended to create a new high at 31094.75 before experiencing a break in structure to the downside, leaving a bearish FVG between [30966.00, 31009.75] above current price and the immediate draw being a retracement to mitigate this FVG or to target the sellside liquidity below the overnight low at 30910.75.\n\nBIAS: SHORT \u2014 If price fails to reclaim the 1H bearish FVG [30966.00, 31009.75] and accepts below the overnight low at 30910.75, I will look for continuation to the downside into the 4H FVG at [30850.75, 30889.25].",
-      "regime": "Balanced with potential for two-sided range expansion or rotational activity",
-      "invalidation": "Sustained acceptance (multiple 30min candles) above OVN high 31094.75 or below OVN low 30910.75, indicating a directional drive.",
-      "plan": "IF NQ opens and consolidates within RTH value 30902.0-30984.0, THEN look for fades from RTH VAH 30984.0 or RTH VAL 30902.0 back to RTH POC 30956.0. IF price opens and drives up towards OVN high 31094.75 / call wall 31025, THEN look for exhaustion or absorption for SHORTS, targeting RTH POC 30956.0. IF accepted above OVN high 31094.75, then range expansion is in play. IF price opens and drives down towards OVN low 30910.75 / RTH VAL 30902.0, THEN look for absorption or a sweep-and-fail for LONGS, targeting RTH POC 30956.0. IF accepted below OVN low 30910.75, then trend down or range expansion i",
-      "risk": "MTF conflict (HTF SHORT vs Daily/4H bullish) suggests potential choppiness. Low volatility regime could lead to whipsaws around key levels, requiring precise execution.",
+      "regime": "Balanced-to-rotational regime with underlying mean-reverting tendencies, opening at RTH POC after a compressed overnight session.",
+      "invalidation": "Sustained acceptance and one-timeframing above OVN High 31094.75 or below PDL 30763.5.",
+      "plan": "Opens near RTH POC 30956.0. If price pushes higher from the open towards RTH VAH 30984.0, look for orderflow exhaustion or absorption at 30984.0 for a fade back to RTH POC 30956.0. If price pushes lower from the open towards RTH VAL 30902.0, look for orderflow absorption at 30902.0 for a bounce back to RTH POC 30956.0. Should price decisively break RTH VAL 30902.0, observe for a sweep below OVNL 30910.75 and a subsequent failed auction (quick reclaim above OVNL 30910.75) for a long entry targeting RTH POC 30956.0. If RTH VAH 30984.0 is decisively accepted with one-timeframing, consider a trend",
+      "risk": "Increased chop and potential for quick reversals due to significant positive GEX and MTF conflict (HTF bias short, daily/4H bullish).",
       "predicted_model": "range_expansion",
       "vol_regime": "low",
       "tpo_read": null,
@@ -596,56 +596,56 @@
           "model": "range_expansion",
           "probability": 25.6,
           "confidence": "medium",
-          "why": "A compressed 184.0pt overnight range suggests potential for a volatility break out of the overnight range into RTH, despite historical unreliability for this type of compression.",
+          "why": "Despite historical unreliability of OVN range compression leading to RTH expansion, calibrated models now assign a higher probability given current context for a volatility breakout.",
           "stat_support": "base rate 21%",
-          "trigger": "Price moves aggressively and accepts beyond OVN high 31094.75 or OVN low 30910.75.",
-          "confirm": "Acceptance (multiple 30min candles) above OVN high 31094.75 or below OVN low 30910.75.",
-          "target": "If up: Untapped buyside liquidity above 09-23 H31094.75. If down: PDL 30763.5, then 4H FVG [30850.75, 30889.25].",
-          "abort": "Rejection and failure to accept outside the OVN range, reclaiming OVN high/low back into range."
+          "trigger": "Price breaks below RTH VAL 30902.0.",
+          "confirm": "Sustained acceptance (one-timeframing) for 15+ minutes below RTH VAL 30902.0.",
+          "target": "PDL 30763.5",
+          "abort": "Rejection and quick return above RTH VAL 30902.0."
         },
         {
           "model": "rotational_balance",
           "probability": 17.4,
           "confidence": "low",
-          "why": "Opening within RTH value 30902.0-30984.0 and above the gamma flip 30405, combined with a positive GEX of +4.1$Bn, suggests price will remain contained and two-sided.",
+          "why": "Open within value and significant positive GEX above the gamma flip favor two-sided price action contained within value.",
           "stat_support": "base rate 19%",
-          "trigger": "Open price rotating between RTH VAH 30984.0 and RTH VAL 30902.0.",
-          "confirm": "Sustained trade within RTH value 30902.0-30984.0 without clear acceptance above or below.",
-          "target": "RTH POC 30956.0, or fading RTH VAH 30984.0 / RTH VAL 30902.0 for moves back to center.",
-          "abort": "Acceptance (multiple 30min candles) outside RTH value 30902.0-30984.0."
+          "trigger": "Price approaches RTH VAH 30984.0 or RTH VAL 30902.0.",
+          "confirm": "Orderflow confirmation (exhaustion/absorption) at RTH VAH 30984.0 or RTH VAL 30902.0.",
+          "target": "RTH POC 30956.0",
+          "abort": "Sustained acceptance (one-timeframing) above RTH VAH 30984.0 or below RTH VAL 30902.0."
         },
         {
           "model": "trend_down",
           "probability": 15.0,
           "confidence": "low",
-          "why": "Despite a 4-day uptrend, a negative gap of -0.25% and HTF short bias could lead to one-timeframing lower if OVN low 30910.75 breaks and fails to hold.",
+          "why": "Despite a dampening positive GEX and open not below value, calibrated models show a sustained probability for a directional downside move.",
           "stat_support": "base rate 13%",
-          "trigger": "Price rejects OVN POC 31022.25 or RTH POC 30956.0 and drives below OVN low 30910.75.",
-          "confirm": "Acceptance (multiple 30min candles) below OVN low 30910.75 and RTH VAL 30902.0, followed by trade-through of PDL 30763.5.",
-          "target": "PDL 30763.5, then 4H FVG [30850.75, 30889.25] or 09-22 L30670.00.",
-          "abort": "Acceptance (multiple 30min candles) back above RTH VAL 30902.0 or strong absorption at OVN low 30910.75."
+          "trigger": "Open drives lower and rejects below RTH VAL 30902.0.",
+          "confirm": "Acceptance (one-timeframing) below RTH VAL 30902.0 with aggressive selling pressure.",
+          "target": "PDL 30763.5",
+          "abort": "Reclaim of RTH VAL 30902.0 or absorption at PDL 30763.5."
         },
         {
           "model": "failed_auction",
           "probability": 13.5,
           "confidence": "low",
-          "why": "Untapped liquidity below OVN low 30910.75 or above OVN high 31094.75 could trap participants for a swift reversal back into the OVN range 30910.75-31094.75.",
+          "why": "Unswept liquidity below PDL 30763.5 provides a target for a potential trap before reversing, with calibrated models showing higher conviction.",
           "stat_support": "base rate 20%",
-          "trigger": "Sweep of OVN low 30910.75 or OVN high 31094.75 with immediate rejection.",
-          "confirm": "Reclaim and acceptance back within the OVN range 30910.75-31094.75 after sweeping an extreme.",
-          "target": "The opposite end of the OVN range (OVN high 31094.75 or OVN low 30910.75), then OVN POC 31022.25 or RTH POC 30956.0.",
-          "abort": "Sustained acceptance (multiple 30min candles) beyond the swept extreme."
+          "trigger": "Price sweeps below PDL 30763.5.",
+          "confirm": "Quick reclaim of PDL 30763.5 and acceptance above OVNL 30910.75 within 15 minutes.",
+          "target": "RTH POC 30956.0",
+          "abort": "Sustained acceptance below PDL 30763.5."
         },
         {
           "model": "trend_up",
           "probability": 13.1,
           "confidence": "low",
-          "why": "The intact 4-day uptrend and bullish daily/4H structure could lead to continuation if RTH VAH 30984.0 and OVN VAL 31000.0 are cleared and accepted.",
+          "why": "A two-day uptrend persists, but positive GEX and open within value act as headwinds against sustained upside acceptance.",
           "stat_support": "base rate 20%",
-          "trigger": "Price drives and holds above RTH VAH 30984.0 and OVN VAL 31000.0.",
-          "confirm": "Acceptance (multiple 30min candles) above OVN high 31094.75, clearing the call wall at 31025.",
-          "target": "Untapped buyside liquidity above 09-23 H31094.75, then higher.",
-          "abort": "Rejection and failure to accept above RTH VAH 30984.0 or OVN VAL 31000.0, or quick re-entry into RTH value."
+          "trigger": "Open drives higher and accepts above RTH VAH 30984.0.",
+          "confirm": "Sustained acceptance (one-timeframing) above RTH VAH 30984.0 with aggressive buying pressure.",
+          "target": "OVN High 31094.75",
+          "abort": "Rejection and quick return below RTH VAH 30984.0."
         }
       ],
       "intraday": [
