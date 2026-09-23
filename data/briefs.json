@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22T11:05:25.086921-04:00",
+  "updated": "2026-09-23T09:12:43.521232-04:00",
   "stats": {
     "total_graded": 59,
     "correct": 19,
@@ -343,8 +343,8 @@
       },
       "70\u201380%": {
         "correct": 3,
-        "total": 32,
-        "pct": 9.4
+        "total": 31,
+        "pct": 9.7
       },
       "80%+": {
         "correct": 0,
@@ -524,11 +524,29 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-09-22T11:05:25.086939-04:00",
-    "last_brief_date": "2026-09-22",
-    "last_brief_time": "09:16:03",
+    "generated_at": "2026-09-23T09:12:43.521261-04:00",
+    "last_brief_date": "2026-09-23",
+    "last_brief_time": null,
     "last_grade_date": "2026-09-22",
     "recent_failures": [
+      {
+        "ts": "2026-09-23 00:12:34",
+        "label": "github_push",
+        "status": "error",
+        "detail": "data/profiles/btc-spot.json HTTP 409"
+      },
+      {
+        "ts": "2026-09-22 23:22:02",
+        "label": "wallet",
+        "status": "error",
+        "detail": "FileNotFoundError: [Errno 2] No such file or directory: '/root/AMT-Bot/wallet_site.json.tmp' -> '/root/AMT-Bot/wallet_site.json'"
+      },
+      {
+        "ts": "2026-09-22 18:12:42",
+        "label": "github_push",
+        "status": "error",
+        "detail": "data/profiles/btc-spot.json HTTP 409"
+      },
       {
         "ts": "2026-09-22 09:27:50",
         "label": "brief",
@@ -543,6 +561,38 @@
     "text": "SCORECARD:\nMarket Read: 8/10 \u2014 Good identification of the structural expansion on Sept 17.\nLevel Selection: 9/10 \u2014 Waited for high-HTF AMT location before committing risk.\nExecution: 10/10 \u2014 Pristine. You waited for the confirmation trigger instead of front-running.\nRisk Management: 9/10 \u2014 Clean 1.38R win on your mini contract, keeping risk tight.\nPsychology: 9/10 \u2014 Logged as \"confident\" and executed with zero emotional friction.\nDiscipline: 7/10 \u2014 Great execution on the 17th, but leaving the 18th as \"not_logged\" is a process gap.\n\nPNL:\nNet +$550 | Best Day: +$550 (Sept 17) | Worst Day: N/A | PF: N/A | Avg R: 1.38R\n\nWHAT WORKED:\n* The Confirmation Entry Model: Your single trade on Sept 17 proved that waiting for location + orderflow trigger is your highest-edge behavior.\n* One-and-Done discipline: You took your mini attempt, hit your 1.38R target, and walked away without forcing a second trade.\n\nBIGGEST LEAK:\nThe \"Ghost Session\" vulnerability. Your Sept 18 session is marked \"not_logged.\" If you didn't trade, that needs to be recorded as a disciplined \"no-trade\" day. If you traded and omitted the data, you are hiding execution flaws from the desk. This ultra-low volume week also sets a psychological trap for next Monday: the \"Trader B\" urge to over-compensate and over-trade to make up for a lack of action.\n\nBEST & WORST TRADE:\nBest Trade: Sept 17 NQ (+$550) \u2014 A-grade confirmation entry, waited for the trigger, kept your stop protected. Repeat this.\nWorst Trade: None taken.\n\nNEXT WEEK:\nLog every single NY AM session by 11:15 AM ET\u2014even if it is a \"no-setup, no-trade\" day\u2014and trade strictly one funded account to maintain this elite execution quality."
   },
   "days": [
+    {
+      "date": "2026-09-23",
+      "inventory": null,
+      "vah": null,
+      "poc": null,
+      "val": null,
+      "settle": null,
+      "ovn_high": null,
+      "ovn_low": null,
+      "ovn_poc": null,
+      "ovn_vah": null,
+      "ovn_val": null,
+      "scenario_a": null,
+      "scenario_b": null,
+      "scenario_c": null,
+      "confidence_a": null,
+      "confidence_b": null,
+      "confidence_c": null,
+      "post_time": null,
+      "day_shape": null,
+      "day_shape_note": null,
+      "htf_bias": "SHORT",
+      "htf_text": "DAILY: Daily structure is strongly bullish with consecutive BOS to the upside, currently trading in a premium within the dealing range defined by the 09-21 L29904.00 and 09-23 H31094.75. The nearest untapped buyside liquidity rests above 09-23 H31094.75, while sellside liquidity rests below 09-23 L30910.75, followed by 09-22 L30670.00 and the significant FVG between 09-18 H29665.25 and 09-21 L29904.00.\n\n4H: Since the displacement from 09-21 08:00, 4H structure remains bullish, with an unmitigated FVG at [30850.75, 30889.25] remaining below current price. Continued acceptance above 09-23 H31094.75 would confirm the daily bullishness, while a sustained break below 09-22 L30670.00 would invalidate it.\n\n1H: Overnight, price initially extended to create a new high at 31094.75 before experiencing a break in structure to the downside, leaving a bearish FVG between [30966.00, 31009.75] above current price and the immediate draw being a retracement to mitigate this FVG or to target the sellside liquidity below the overnight low at 30910.75.\n\nBIAS: SHORT \u2014 If price fails to reclaim the 1H bearish FVG [30966.00, 31009.75] and accepts below the overnight low at 30910.75, I will look for continuation to the downside into the 4H FVG at [30850.75, 30889.25].",
+      "regime": null,
+      "invalidation": null,
+      "plan": null,
+      "risk": null,
+      "predicted_model": null,
+      "vol_regime": null,
+      "tpo_read": null,
+      "models": []
+    },
     {
       "date": "2026-09-22",
       "inventory": "SL",
@@ -4421,44 +4471,7 @@
         "actual_model": "range_expansion",
         "model_correct": false,
         "top2_hit": false
-      },
-      "intraday": [
-        {
-          "slot": "09:00",
-          "price": 29806.0,
-          "vs_settle": -28.75,
-          "inside_va": true,
-          "call": "Morning brief anchor"
-        },
-        {
-          "slot": "09:30",
-          "price": 29814.5,
-          "vs_settle": -20.25,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29714.00/29840.00, target POC 29767.00."
-        },
-        {
-          "slot": "10:00",
-          "price": 29817.25,
-          "vs_settle": -17.5,
-          "inside_va": true,
-          "call": "\u2705 Price inside VA \u2014 **Scenario C (Rotational)** in play. Fade 29714.00/29840.00, target POC 29767.00."
-        },
-        {
-          "slot": "10:30",
-          "price": 29862.75,
-          "vs_settle": 28.0,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29714.00\u201329840.00."
-        },
-        {
-          "slot": "11:00",
-          "price": 29869.25,
-          "vs_settle": 34.5,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29714.00\u201329840.00."
-        }
-      ]
+      }
     },
     {
       "date": "2026-08-07",
@@ -7294,64 +7307,6 @@
       "trades_summary": {
         "count": 2,
         "pnl": 809.7
-      }
-    },
-    {
-      "date": "2026-06-29",
-      "inventory": "100L",
-      "vah": 29745.0,
-      "poc": 29660.75,
-      "val": 29457.5,
-      "settle": 29368.25,
-      "ovn_high": 29759.75,
-      "ovn_low": 29280.25,
-      "ovn_poc": 29326.0,
-      "ovn_vah": 29670.0,
-      "ovn_val": 29270.0,
-      "scenario_a": "A",
-      "scenario_b": "B",
-      "scenario_c": "C",
-      "confidence_a": 0.75,
-      "confidence_b": 0.12,
-      "confidence_c": 0.13,
-      "post_time": "09:00:00",
-      "day_shape": "failed_auction",
-      "day_shape_note": null,
-      "htf_bias": null,
-      "htf_text": null,
-      "regime": "Rule-based seed (AI unavailable).",
-      "invalidation": "",
-      "plan": "",
-      "risk": "",
-      "predicted_model": "failed_auction",
-      "vol_regime": "normal",
-      "tpo_read": null,
-      "models": [
-        {
-          "model": "failed_auction",
-          "probability": 75,
-          "confidence": "medium",
-          "why": "Directional overnight inventory favours a probe-and-revert.",
-          "stat_support": ""
-        },
-        {
-          "model": "rotational_balance",
-          "probability": 13,
-          "confidence": "low",
-          "why": "Two-sided trade holds value if neither extreme accepts.",
-          "stat_support": ""
-        },
-        {
-          "model": "trend_up",
-          "probability": 12,
-          "confidence": "medium",
-          "why": "Acceptance beyond the overnight extreme would extend the move.",
-          "stat_support": ""
-        }
-      ],
-      "trades_summary": {
-        "count": 1,
-        "pnl": 209.94
       }
     }
   ]
