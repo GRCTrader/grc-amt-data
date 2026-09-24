@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T09:05:58.448464-04:00",
+  "updated": "2026-09-24T09:16:30.624004-04:00",
   "stats": {
     "total_graded": 59,
     "correct": 20,
@@ -524,9 +524,9 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-09-24T09:05:58.448491-04:00",
+    "generated_at": "2026-09-24T09:16:30.624034-04:00",
     "last_brief_date": "2026-09-24",
-    "last_brief_time": null,
+    "last_brief_time": "09:16:02",
     "last_grade_date": "2026-09-23",
     "recent_failures": [
       {
@@ -569,35 +569,100 @@
   "days": [
     {
       "date": "2026-09-24",
-      "inventory": null,
-      "vah": null,
-      "poc": null,
-      "val": null,
-      "settle": null,
-      "ovn_high": null,
-      "ovn_low": null,
-      "ovn_poc": null,
-      "ovn_vah": null,
-      "ovn_val": null,
-      "scenario_a": null,
-      "scenario_b": null,
-      "scenario_c": null,
-      "confidence_a": null,
-      "confidence_b": null,
-      "confidence_c": null,
-      "post_time": null,
-      "day_shape": null,
+      "inventory": "SS",
+      "vah": 30955.0,
+      "poc": 30757.0,
+      "val": 30730.0,
+      "settle": 30770.5,
+      "ovn_high": 30813.0,
+      "ovn_low": 30370.0,
+      "ovn_poc": 30441.5,
+      "ovn_vah": 30690.5,
+      "ovn_val": 30370.5,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.14,
+      "confidence_b": 0.6,
+      "confidence_c": 0.26,
+      "post_time": "09:16:02",
+      "day_shape": "range_expansion",
       "day_shape_note": null,
-      "htf_bias": null,
-      "htf_text": null,
-      "regime": null,
-      "invalidation": null,
-      "plan": null,
-      "risk": null,
-      "predicted_model": null,
-      "vol_regime": null,
+      "htf_bias": "SHORT",
+      "htf_text": "DAILY: The daily timeframe, after a strong bullish displacement and clear BOS on 09-21, has shifted to a short-term bearish market structure with consecutive lower lows and lower highs. The current dealing range from 31094.75 to 30370.00 places price in a discount, with buyside liquidity resting above 31094.75 and sellside liquidity below 30370.00.\n\n4H: The 4H structure, after the peak at 31094.75 (09-23 00:00 H), formed a clear CHoCH at 31013.25 followed by a strong bearish displacement, confirming the short-term bearish market flow. An untapped bearish FVG exists from 30782.50 to 30910.75, serving as a potential target for retracement, while acceptance below 30370.00 would confirm the daily bearish bias.\n\n1H: The overnight session has been characterized by consistent bearish market structure shifts, printing lower lows and lower highs, with the most recent bearish displacement creating a low at 30370.00. The immediate draw for the NY open is likely targeting the sellside liquidity resting below the 30370.00 low, with price currently trading within the 1H bearish FVG (30464.50-30512.75) which could serve as resistance.\n\nBIAS: SHORT \u2014 If price rejects the 1H bearish FVG (30464.50-30512.75) or a higher premium zone at the NY open, I will seek short entries, targeting sellside liquidity below 30370.00.",
+      "regime": "Given the significant gap down and high overnight volatility, the market is in an initial state of imbalance, likely transitioning towards either a two-sided range expansion or a continuation of the downside trend.",
+      "invalidation": "Acceptance above RTH VAL 30730.0 would invalidate the strong bearish bias and suggest a much deeper mean reversion or rotational day.",
+      "plan": "If open drives lower from 30491.5 and accepts below OVN VAL 30370.5, look for continuation shorts on retest failures of 30370.5, targeting weekly PWL 28763.75. If open rallies towards OVN POC 30441.5 or Call wall 30565.0, watch for orderflow exhaustion/absorption to initiate shorts back towards OVN low 30370.0. If price opens within the OVN value area (30370.5-30690.5) and finds two-sided absorption at OVN VAH 30690.5 and OVN VAL 30370.5, consider rotations within this range, targeting the opposite extreme or OVN POC 30441.5. If price sweeps OVN low 30370.0 and immediately reclaims it with str",
+      "risk": "High volatility regime suggests potential for fast, two-sided movements. The bearish HTF bias is strong, but +GEX can dampen trends and lead to chop around key gamma levels.",
+      "predicted_model": "range_expansion",
+      "vol_regime": "high",
       "tpo_read": null,
-      "models": []
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 37.6,
+          "confidence": "medium",
+          "why": "High overnight volatility and an already expanded OVN range suggest the market will continue to explore both sides, with the +GEX regime encouraging price to stretch and pull back around magnets like the Call wall 30565.0 or OVN POC 30441.5.",
+          "stat_support": "base rate 43%",
+          "trigger": "Price accepts above OVN VAH 30690.5 or below OVN VAL 30370.5",
+          "confirm": "Two consecutive 30-min candles accepting above/below OVN VAH 30690.5 or OVN VAL 30370.5",
+          "target": "RTH VAL 30730.0, or PWL 28763.75",
+          "abort": "Price fails to accept and reverses back into the OVN range (30370.5-30690.5)"
+        },
+        {
+          "model": "trend_down",
+          "probability": 25.1,
+          "confidence": "medium",
+          "why": "Open significantly below RTH value, a negative gap, and a bearish HTF bias combined with slightly short OVN inventory provides a strong setup for continued downside, potentially rejecting the OVN POC 30441.5 or prior PDL 30642.75.",
+          "stat_support": "base rate 22%",
+          "trigger": "Open prints below OVN VAL 30370.5 or fails to reclaim OVN POC 30441.5 after an initial probe",
+          "confirm": "Acceptance below OVN VAL 30370.5 or rejection with exhaustion at OVN POC 30441.5",
+          "target": "PWL 28763.75",
+          "abort": "Price accepts back above ONVP VAH 30690.5 and shows absorption there"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 10.1,
+          "confidence": "low",
+          "why": "Despite the gap, the +GEX environment and proximity to the Call wall 30565.0 suggest price could find a new intraday balance, rotating between the OVN VAH 30690.5 and OVN VAL 30370.5, possibly centered around OVN POC 30441.5.",
+          "stat_support": "base rate 6%",
+          "trigger": "Price opens within the OVN Value Area (30370.5-30690.5) and remains contained, showing two-sided absorption at its extremes",
+          "confirm": "Lack of acceptance above OVN VAH 30690.5 or below OVN VAL 30370.5, with volume activity centered around OVN POC 30441.5",
+          "target": "OVN VAH 30690.5 from OVN VAL 30370.5, or OVN VAL 30370.5 from OVN VAH 30690.5",
+          "abort": "Decisive acceptance above OVN VAH 30690.5 or below OVN VAL 30370.5"
+        },
+        {
+          "model": "failed_auction",
+          "probability": 6.9,
+          "confidence": "low",
+          "why": "+ unswept liquidity to trap into; \u2212 wide OVN range already explored both sides",
+          "stat_support": "base rate 4%",
+          "trigger": "",
+          "confirm": "",
+          "target": "",
+          "abort": ""
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 6.7,
+          "confidence": "low",
+          "why": "An extended gap and the +GEX regime often favor fading extremes back towards a central point like the OVN POC 30441.5 or the RTH POC 30757.0, especially if the initial move is stretched away from value.",
+          "stat_support": "base rate 4%",
+          "trigger": "Extreme open outside the OVN range (30370.5-30690.5) followed by exhaustion of initial aggressors and absorption at the session extreme (e.g., OVN low 30370.0)",
+          "confirm": "Rejection of OVN low 30370.0 with an immediate reclaim above it, showing exhaustion on attempts to push lower, or delta divergence",
+          "target": "OVN POC 30441.5, then potentially the Call wall 30565.0 or OVN VAH 30690.5",
+          "abort": "Acceptance below OVN VAL 30370.5 for a short fade, or acceptance above OVN VAH 30690.5 for a long fade"
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 30491.5,
+          "vs_settle": -279.0,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
     },
     {
       "date": "2026-09-23",
