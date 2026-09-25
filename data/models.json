@@ -1,5 +1,5 @@
 {
-  "asof": "2026-09-25 11:17 ET",
+  "asof": "2026-09-25 11:27 ET",
   "models": [
     {
       "model": "pdhl",
@@ -8,41 +8,41 @@
       "tally": {
         "market": {
           "mode": "market",
-          "posted": 5,
-          "taken": 5,
+          "posted": 6,
+          "taken": 6,
           "no_trade": 0,
           "wins": 3,
-          "losses": 2,
-          "win_rate": 60.0,
-          "pts": 51.75,
-          "nq_usd": 1035.0,
-          "mnq_usd": 103.5,
-          "avg_pts": 10.35,
+          "losses": 3,
+          "win_rate": 50.0,
+          "pts": 32.5,
+          "nq_usd": 650.0,
+          "mnq_usd": 65.0,
+          "avg_pts": 5.42,
           "best_pts": 54.75,
           "worst_pts": -35.0,
-          "profit_factor": 2.13
+          "profit_factor": 1.5
         },
         "retest": {
           "mode": "retest",
-          "posted": 5,
-          "taken": 3,
+          "posted": 6,
+          "taken": 4,
           "no_trade": 2,
           "wins": 0,
-          "losses": 3,
+          "losses": 4,
           "win_rate": 0.0,
-          "pts": -20.0,
-          "nq_usd": -400.0,
-          "mnq_usd": -40.0,
-          "avg_pts": -6.67,
+          "pts": -33.75,
+          "nq_usd": -675.0,
+          "mnq_usd": -67.5,
+          "avg_pts": -8.44,
           "best_pts": -2.5,
-          "worst_pts": -8.75,
+          "worst_pts": -13.75,
           "profit_factor": 0.0
         }
       },
       "setups": [
         {
           "level_key": "pdh",
-          "sim_version": null,
+          "sim_version": 4,
           "id": 12,
           "date": "2026-09-25",
           "posted_at": "2026-09-25T11:10:03.007169-04:00",
@@ -59,8 +59,230 @@
             "2R \u2014 no value area level beyond 30,912.00"
           ],
           "context": "weaker \u2014 VWAP is flat, buyers and sellers still arguing",
-          "graded": false,
-          "result": null
+          "graded": true,
+          "result": {
+            "market": {
+              "status": "stop",
+              "side": "long",
+              "entry_mode": "market",
+              "entry": 30833.0,
+              "stop": 30813.75,
+              "targets": [
+                30912.0
+              ],
+              "targets_hit": [],
+              "notes": [],
+              "pts": -19.25,
+              "nq_usd": -385.0,
+              "mnq_usd": -38.5,
+              "mae_pts": 27.0,
+              "mfe_pts": 2.5,
+              "r_multiple": -1.0,
+              "risk_pts": 19.25,
+              "alert_px": 30846.5,
+              "targets_void": [],
+              "window_end": "2026-09-25 17:00:00-04:00",
+              "exit": 30813.75,
+              "exit_at": "2026-09-25 11:11:00-04:00"
+            },
+            "retest": {
+              "status": "stop",
+              "side": "long",
+              "entry_mode": "retest",
+              "entry": 30827.5,
+              "stop": 30813.75,
+              "targets": [
+                30912.0
+              ],
+              "targets_hit": [],
+              "notes": [],
+              "pts": -13.75,
+              "nq_usd": -275.0,
+              "mnq_usd": -27.5,
+              "mae_pts": 21.5,
+              "mfe_pts": 8.0,
+              "r_multiple": -1.0,
+              "risk_pts": 13.75,
+              "targets_void": [],
+              "window_end": "2026-09-25 17:00:00-04:00",
+              "fill_at": "2026-09-25 11:11:00-04:00",
+              "exit": 30813.75,
+              "exit_at": "2026-09-25 11:11:00-04:00"
+            },
+            "ladder": {
+              "market": {
+                "status": "stopped",
+                "entry_mode": "market",
+                "side": "long",
+                "entry": 30833.0,
+                "stop": 30813.75,
+                "step": 79.0,
+                "step_src": "T1",
+                "tps": [
+                  30912.0,
+                  30991.0,
+                  31070.0
+                ],
+                "legs": [
+                  3,
+                  3,
+                  2,
+                  2
+                ],
+                "reached": [
+                  false,
+                  false,
+                  false
+                ],
+                "reached_at": [
+                  null,
+                  null,
+                  null
+                ],
+                "mfe_px": 30833.0,
+                "mfe_pts": 0.0,
+                "mfe_steps": 0.0,
+                "mfe_at": "2026-09-25 11:11:00-04:00",
+                "mfe_r": 0.0,
+                "risk_pts": 19.25,
+                "nq": {
+                  "contracts": 1,
+                  "exit": 30813.75,
+                  "how": "stop",
+                  "pts": -19.25,
+                  "usd": -385.0
+                },
+                "mnq": {
+                  "contracts": 10,
+                  "legs": [
+                    {
+                      "n": 3,
+                      "leg": "TP1",
+                      "exit": 30813.75,
+                      "how": "stop",
+                      "pts": -19.25,
+                      "usd": -115.5
+                    },
+                    {
+                      "n": 3,
+                      "leg": "TP2",
+                      "exit": 30813.75,
+                      "how": "stop",
+                      "pts": -19.25,
+                      "usd": -115.5
+                    },
+                    {
+                      "n": 2,
+                      "leg": "TP3",
+                      "exit": 30813.75,
+                      "how": "stop",
+                      "pts": -19.25,
+                      "usd": -77.0
+                    },
+                    {
+                      "n": 2,
+                      "leg": "runner",
+                      "exit": 30813.75,
+                      "how": "stop",
+                      "pts": -19.25,
+                      "usd": -77.0
+                    }
+                  ],
+                  "usd": -385.0,
+                  "pts_avg": -19.25
+                },
+                "notes": [],
+                "alert_px": 30846.5,
+                "fill_at": "2026-09-25 11:11:00-04:00",
+                "exit_at": "2026-09-25 11:11:00-04:00"
+              },
+              "retest": {
+                "status": "stopped",
+                "entry_mode": "retest",
+                "side": "long",
+                "entry": 30827.5,
+                "stop": 30813.75,
+                "step": 84.5,
+                "step_src": "T1",
+                "tps": [
+                  30912.0,
+                  30996.5,
+                  31081.0
+                ],
+                "legs": [
+                  3,
+                  3,
+                  2,
+                  2
+                ],
+                "reached": [
+                  false,
+                  false,
+                  false
+                ],
+                "reached_at": [
+                  null,
+                  null,
+                  null
+                ],
+                "mfe_px": 30827.5,
+                "mfe_pts": 0.0,
+                "mfe_steps": 0.0,
+                "mfe_at": "2026-09-25 11:11:00-04:00",
+                "mfe_r": 0.0,
+                "risk_pts": 13.75,
+                "nq": {
+                  "contracts": 1,
+                  "exit": 30813.75,
+                  "how": "stop",
+                  "pts": -13.75,
+                  "usd": -275.0
+                },
+                "mnq": {
+                  "contracts": 10,
+                  "legs": [
+                    {
+                      "n": 3,
+                      "leg": "TP1",
+                      "exit": 30813.75,
+                      "how": "stop",
+                      "pts": -13.75,
+                      "usd": -82.5
+                    },
+                    {
+                      "n": 3,
+                      "leg": "TP2",
+                      "exit": 30813.75,
+                      "how": "stop",
+                      "pts": -13.75,
+                      "usd": -82.5
+                    },
+                    {
+                      "n": 2,
+                      "leg": "TP3",
+                      "exit": 30813.75,
+                      "how": "stop",
+                      "pts": -13.75,
+                      "usd": -55.0
+                    },
+                    {
+                      "n": 2,
+                      "leg": "runner",
+                      "exit": 30813.75,
+                      "how": "stop",
+                      "pts": -13.75,
+                      "usd": -55.0
+                    }
+                  ],
+                  "usd": -275.0,
+                  "pts_avg": -13.75
+                },
+                "notes": [],
+                "fill_at": "2026-09-25 11:11:00-04:00",
+                "exit_at": "2026-09-25 11:11:00-04:00"
+              }
+            }
+          }
         },
         {
           "level_key": "pdh",
