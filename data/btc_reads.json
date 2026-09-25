@@ -1,24 +1,23 @@
 {
-  "asof": "2026-09-25 07:48 ET",
+  "asof": "2026-09-25 18:10 ET",
   "venue": "Binance USD-M perpetual (BTCUSDT)",
-  "method": "The day runs 18:00-18:00 New York. Levels are the prior day's range and value area, plus Asia+London (18:00-09:30). The read is graded at 18:00 against the move from the read price.",
-  "sim_note": "bias = take the side at the read price, stop at the nearest level the other way, target the next level along. plan = wait for a trigger to be accepted, then trade it from there. Both are 1 coin, no costs.",
+  "method": "The day runs 18:00\u219218:00 New York. Levels are the prior day's range and value area, plus Asia+London (18:00\u219209:30). The read is graded at 18:00 against the move from the read price.",
   "record": {
-    "graded": 1,
-    "correct": 1,
+    "graded": 2,
+    "correct": 2,
     "hit_rate": 100.0,
     "by_bias": {
       "NEUTRAL": {
-        "n": 1,
-        "correct": 1,
+        "n": 2,
+        "correct": 2,
         "hit_rate": 100.0,
-        "avg_move_pct": 0.75
+        "avg_move_pct": 0.72
       }
     },
     "sims": {
       "bias": {
         "trades": 0,
-        "no_trade": 1,
+        "no_trade": 2,
         "wins": 0,
         "record": "0\u20130",
         "total_r": 0.0,
@@ -27,18 +26,78 @@
         "avg_pct": null
       },
       "plan": {
-        "trades": 1,
+        "trades": 2,
         "no_trade": 0,
-        "wins": 1,
-        "record": "1\u20130",
-        "total_r": 0.81,
-        "avg_r": 0.81,
-        "usd_per_coin": 479.5,
-        "avg_pct": 0.57
+        "wins": 2,
+        "record": "2\u20130",
+        "total_r": 1.81,
+        "avg_r": 0.91,
+        "usd_per_coin": 754.5,
+        "avg_pct": 0.45
       }
     }
   },
+  "sim_note": "bias = take the side at the read price, stop at the nearest level the other way, target the next level along. plan = wait for a trigger to be accepted, then trade it from there. Both are 1 coin, no costs.",
   "reads": [
+    {
+      "date": "2026-09-25",
+      "posted_at": "2026-09-25T08:45:01.935148-04:00",
+      "price": 84392.4,
+      "bias": "NEUTRAL",
+      "location": "inside prior value",
+      "note": "Inside yesterday's value (83,612\u201384,612), around above the point of control 84,338. Balance until one edge is accepted \u2014 the edges are the trade, not the middle.",
+      "levels": {
+        "prior_high": 84901.6,
+        "prior_low": 82832.0,
+        "vah": 84612.5,
+        "poc": 84337.5,
+        "val": 83612.5,
+        "ovn_high": 85224.0,
+        "ovn_low": 83683.7,
+        "adr_14": 2495.57,
+        "basis": -48.62
+      },
+      "up_level": 84612.5,
+      "dn_level": 84337.5,
+      "result": {
+        "status": "graded",
+        "bias": "NEUTRAL",
+        "correct": true,
+        "from_price": 84392.4,
+        "close": 83818.1,
+        "move": -574.3,
+        "move_pct": -0.68,
+        "high": 84528.5,
+        "low": 83130.1,
+        "up_pct": 0.16,
+        "down_pct": -1.5,
+        "trigger_first": "down",
+        "trigger_at": "2026-09-25T08:50:00-04:00",
+        "bars": 111,
+        "sim": {
+          "bias": {
+            "why": "no trade",
+            "usd": 0.0,
+            "pct": 0.0,
+            "r": 0.0,
+            "side": "none",
+            "entry": null
+          },
+          "plan": {
+            "side": "short",
+            "entry": 84337.5,
+            "stop": 84612.5,
+            "target": 84062.5,
+            "exit": 84062.5,
+            "why": "target",
+            "usd": 275.0,
+            "pct": 0.33,
+            "r": 1.0,
+            "at": "2026-09-25T09:25:00-04:00"
+          }
+        }
+      }
+    },
     {
       "date": "2026-09-24",
       "posted_at": "2026-09-24T09:09:22.056072-04:00",
