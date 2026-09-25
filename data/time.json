@@ -1,10 +1,10 @@
 {
-  "asof": "2026-09-25 03:48:11 ET",
-  "asof_epoch": 1790322491,
+  "asof": "2026-09-25 03:53:16 ET",
+  "asof_epoch": 1790322796,
   "session_date": "2026-09-25",
   "price": {
-    "NQ": 30869.0,
-    "ES": 7776.25
+    "NQ": 30866.0,
+    "ES": 7776.5
   },
   "cycles": [
     {
@@ -34,7 +34,7 @@
       "span": "London",
       "start": "2026-09-25T00:00:00-04:00",
       "end": "2026-09-25T06:00:00-04:00",
-      "left_sec": 7908,
+      "left_sec": 7603,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
@@ -45,7 +45,7 @@
       "span": "block 3 of 4",
       "start": "2026-09-25T03:00:00-04:00",
       "end": "2026-09-25T04:30:00-04:00",
-      "left_sec": 2508,
+      "left_sec": 2203,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -56,21 +56,21 @@
       "span": "22.5 min",
       "start": "2026-09-25T03:45:00-04:00",
       "end": "2026-09-25T04:07:30-04:00",
-      "left_sec": 1158,
+      "left_sec": 853,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
     },
     {
       "level": "Nano",
-      "q": 0,
+      "q": 1,
       "span": "5.625 min",
-      "start": "2026-09-25T03:45:00-04:00",
-      "end": "2026-09-25T03:50:37.500000-04:00",
-      "left_sec": 145,
-      "phase": "Q1",
-      "phase_name": "Accumulation",
-      "phase_why": "Range builds. The market is loading, not going anywhere."
+      "start": "2026-09-25T03:50:37.500000-04:00",
+      "end": "2026-09-25T03:56:15-04:00",
+      "left_sec": 178,
+      "phase": "Q2",
+      "phase_name": "Manipulation",
+      "phase_why": "The Judas swing. Price runs the obvious stops."
     }
   ],
   "chains": [],
@@ -140,10 +140,10 @@
         "open": 30726.5,
         "high": 30906.0,
         "low": 30679.0,
-        "close": 30869.0,
+        "close": 30866.0,
         "n": 11,
         "start": "2026-09-24T18:00:00-04:00",
-        "end": "2026-09-25T03:48:11.863586-04:00"
+        "end": "2026-09-25T03:53:16.391699-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -159,7 +159,7 @@
         "filter_note": "both above this quarter's open"
       },
       "shape": "AMD-X",
-      "shape_why": "Q1 ranged 0.5x the usual with 63% directional body - it behaved like accumulation",
+      "shape_why": "Q1 ranged 0.5x the usual with 61% directional body - it behaved like accumulation",
       "quarter": "Q1",
       "job": "Accumulation",
       "start": "2026-09-24T18:00:00-04:00",
@@ -179,10 +179,10 @@
         "open": 30776.25,
         "high": 30906.0,
         "low": 30763.25,
-        "close": 30869.0,
+        "close": 30866.0,
         "n": 5,
         "start": "2026-09-25T00:00:00-04:00",
-        "end": "2026-09-25T03:48:11.863586-04:00"
+        "end": "2026-09-25T03:53:16.391699-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -216,11 +216,11 @@
       "cur": {
         "open": 30866.75,
         "high": 30905.0,
-        "low": 30861.25,
-        "close": 30869.0,
-        "n": 40,
+        "low": 30856.25,
+        "close": 30866.0,
+        "n": 45,
         "start": "2026-09-25T03:00:00-04:00",
-        "end": "2026-09-25T03:48:11.863586-04:00"
+        "end": "2026-09-25T03:53:16.391699-04:00"
       },
       "sweep": {
         "swept": null,
@@ -232,8 +232,8 @@
         "type": "bearish",
         "note": "ES took the previous quarter high, NQ did not",
         "leader": "ES",
-        "filter_ok": true,
-        "filter_note": "both above this quarter's open"
+        "filter_ok": false,
+        "filter_note": "he wants BOTH above this quarter's open for a short"
       },
       "shape": "AMD-X",
       "shape_why": "Q1 ranged 0.5x the usual with 57% directional body - it behaved like accumulation",
@@ -246,9 +246,9 @@
       "prev": {
         "open": 30884.0,
         "high": 30905.0,
-        "low": 30861.25,
-        "close": 30869.0,
-        "n": 17,
+        "low": 30856.25,
+        "close": 30866.0,
+        "n": 22,
         "start": "2026-09-25T03:22:30-04:00",
         "end": "2026-09-25T03:45:00-04:00"
       },
@@ -273,8 +273,8 @@
   },
   "gb": {
     "on": false,
-    "minute": 48,
-    "next_in_min": 41
+    "minute": 53,
+    "next_in_min": 36
   },
   "checklist": [
     {
@@ -292,14 +292,14 @@
     {
       "n": 3,
       "step": "SSMT / ISMT, above or below true opens",
-      "ok": true,
-      "detail": "bearish - ES took the previous quarter high, NQ did not; both above this quarter's open; price is above 4 and below 1 of 5 true opens"
+      "ok": false,
+      "detail": "bearish - ES took the previous quarter high, NQ did not; he wants BOTH above this quarter's open for a short; price is above 4 and below 1 of 5 true opens"
     },
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 41 min"
+      "detail": "next one in 36 min"
     },
     {
       "n": 5,
