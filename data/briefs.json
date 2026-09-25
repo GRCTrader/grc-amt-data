@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T11:05:23.356147-04:00",
+  "updated": "2026-09-25T09:11:34.529201-04:00",
   "stats": {
     "total_graded": 59,
     "correct": 21,
@@ -343,8 +343,8 @@
       },
       "70\u201380%": {
         "correct": 4,
-        "total": 32,
-        "pct": 12.5
+        "total": 31,
+        "pct": 12.9
       },
       "80%+": {
         "correct": 0,
@@ -517,11 +517,17 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-09-24T11:05:23.356177-04:00",
-    "last_brief_date": "2026-09-24",
-    "last_brief_time": "09:16:02",
+    "generated_at": "2026-09-25T09:11:34.529219-04:00",
+    "last_brief_date": "2026-09-25",
+    "last_brief_time": null,
     "last_grade_date": "2026-09-24",
     "recent_failures": [
+      {
+        "ts": "2026-09-24 16:20:00",
+        "label": "gex_fetch_eod",
+        "status": "error",
+        "detail": "Redirect response '307 Temporary Redirect' for url 'https://cdn.cboe.com/api/global/delayed_quotes/options/QQQ.json'\nRedirect location: 'https://cdn-api.cboe.com/api/global/delayed_quotes/options/QQQ.json'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/307"
+      },
       {
         "ts": "2026-09-23 11:05:31",
         "label": "gemini",
@@ -539,18 +545,6 @@
         "label": "github_push",
         "status": "error",
         "detail": "data/profiles/btc-spot.json HTTP 409"
-      },
-      {
-        "ts": "2026-09-22 23:22:02",
-        "label": "wallet",
-        "status": "error",
-        "detail": "FileNotFoundError: [Errno 2] No such file or directory: '/root/AMT-Bot/wallet_site.json.tmp' -> '/root/AMT-Bot/wallet_site.json'"
-      },
-      {
-        "ts": "2026-09-22 18:12:42",
-        "label": "github_push",
-        "status": "error",
-        "detail": "data/profiles/btc-spot.json HTTP 409"
       }
     ]
   },
@@ -560,6 +554,38 @@
     "text": "SCORECARD:\nMarket Read: 8/10 \u2014 Good identification of the structural expansion on Sept 17.\nLevel Selection: 9/10 \u2014 Waited for high-HTF AMT location before committing risk.\nExecution: 10/10 \u2014 Pristine. You waited for the confirmation trigger instead of front-running.\nRisk Management: 9/10 \u2014 Clean 1.38R win on your mini contract, keeping risk tight.\nPsychology: 9/10 \u2014 Logged as \"confident\" and executed with zero emotional friction.\nDiscipline: 7/10 \u2014 Great execution on the 17th, but leaving the 18th as \"not_logged\" is a process gap.\n\nPNL:\nNet +$550 | Best Day: +$550 (Sept 17) | Worst Day: N/A | PF: N/A | Avg R: 1.38R\n\nWHAT WORKED:\n* The Confirmation Entry Model: Your single trade on Sept 17 proved that waiting for location + orderflow trigger is your highest-edge behavior.\n* One-and-Done discipline: You took your mini attempt, hit your 1.38R target, and walked away without forcing a second trade.\n\nBIGGEST LEAK:\nThe \"Ghost Session\" vulnerability. Your Sept 18 session is marked \"not_logged.\" If you didn't trade, that needs to be recorded as a disciplined \"no-trade\" day. If you traded and omitted the data, you are hiding execution flaws from the desk. This ultra-low volume week also sets a psychological trap for next Monday: the \"Trader B\" urge to over-compensate and over-trade to make up for a lack of action.\n\nBEST & WORST TRADE:\nBest Trade: Sept 17 NQ (+$550) \u2014 A-grade confirmation entry, waited for the trigger, kept your stop protected. Repeat this.\nWorst Trade: None taken.\n\nNEXT WEEK:\nLog every single NY AM session by 11:15 AM ET\u2014even if it is a \"no-setup, no-trade\" day\u2014and trade strictly one funded account to maintain this elite execution quality."
   },
   "days": [
+    {
+      "date": "2026-09-25",
+      "inventory": null,
+      "vah": null,
+      "poc": null,
+      "val": null,
+      "settle": null,
+      "ovn_high": null,
+      "ovn_low": null,
+      "ovn_poc": null,
+      "ovn_vah": null,
+      "ovn_val": null,
+      "scenario_a": null,
+      "scenario_b": null,
+      "scenario_c": null,
+      "confidence_a": null,
+      "confidence_b": null,
+      "confidence_c": null,
+      "post_time": null,
+      "day_shape": null,
+      "day_shape_note": null,
+      "htf_bias": null,
+      "htf_text": null,
+      "regime": null,
+      "invalidation": null,
+      "plan": null,
+      "risk": null,
+      "predicted_model": null,
+      "vol_regime": null,
+      "tpo_read": null,
+      "models": []
+    },
     {
       "date": "2026-09-24",
       "inventory": "SS",
@@ -4442,51 +4468,7 @@
         "actual_model": "range_expansion",
         "model_correct": false,
         "top2_hit": true
-      },
-      "intraday": [
-        {
-          "slot": "09:00",
-          "price": 29822.5,
-          "vs_settle": 196.5,
-          "inside_va": false,
-          "call": "Morning brief anchor"
-        },
-        {
-          "slot": "09:30",
-          "price": 29961.75,
-          "vs_settle": 335.75,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29633.00\u201329788.00."
-        },
-        {
-          "slot": "10:00",
-          "price": 29962.0,
-          "vs_settle": 336.0,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29633.00\u201329788.00."
-        },
-        {
-          "slot": "10:30",
-          "price": 29878.5,
-          "vs_settle": 252.5,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29633.00\u201329788.00."
-        },
-        {
-          "slot": "11:00",
-          "price": 29903.0,
-          "vs_settle": 277.0,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29633.00\u201329788.00."
-        },
-        {
-          "slot": "news_follow",
-          "price": 29918.75,
-          "vs_settle": 292.75,
-          "inside_va": false,
-          "call": "Price outside VA \u2014 watch for 80% rule acceptance back into 29633.00\u201329788.00."
-        }
-      ]
+      }
     },
     {
       "date": "2026-08-11",
@@ -7368,64 +7350,6 @@
       "trades_summary": {
         "count": 2,
         "pnl": 68.76
-      }
-    },
-    {
-      "date": "2026-07-01",
-      "inventory": "SS",
-      "vah": 30544.5,
-      "poc": 30533.25,
-      "val": 30369.0,
-      "settle": 30523.5,
-      "ovn_high": 30553.75,
-      "ovn_low": 30233.25,
-      "ovn_poc": 30525.0,
-      "ovn_vah": 30541.0,
-      "ovn_val": 30452.0,
-      "scenario_a": "A",
-      "scenario_b": "B",
-      "scenario_c": "C",
-      "confidence_a": 0.74,
-      "confidence_b": 0.1,
-      "confidence_c": 0.16,
-      "post_time": "08:00:01",
-      "day_shape": "failed_auction",
-      "day_shape_note": null,
-      "htf_bias": "SHORT",
-      "htf_text": "DAILY: The daily structure is currently bearish after the 06-23 Change of Character, with price trading within the premium of the dealing range defined by 06-26 L29160.50 and 06-30 H30599.75, having rejected the upper extreme. Untapped buyside liquidity exists above 30599.75 and 30968.00, while sellside liquidity pools lie beneath 30297.25 and significantly below the equal lows around 29160.50.\n\n4H: The 4H structure turned bearish following the recent displacement from 06-30 H30599.75, with price currently trading beneath an untapped bearish FVG between 30317.50 and 30474.50. Confirmation of the daily bearish structure would come with acceptance below the 06-26 L29160.50, while a rally and acceptance above the 06-30 H30599.75 would deny it.\n\n1H: The overnight session has established a clear bearish structure, making lower highs and lower lows from H30553.75 down to the current low of L30297.25, leaving an untapped bearish FVG between 30355.00 and 30386.25 above price. The immediate draw for the NY open is to sweep the overnight sellside liquidity below 30297.25, with potential targets at the 06-30 08:00 L29997.00 to fully rebalance the prior 4H displacement.\n\nBIAS: SHORT - If price rejects an entry into the 1H bearish FVG (30355.00-30386.25) and confirms downside orderflow, I will look to engage shorts targeting the sweep of the overnight low and further downside to 29997.00.",
-      "regime": "Rule-based seed (AI unavailable).",
-      "invalidation": "",
-      "plan": "",
-      "risk": "",
-      "predicted_model": "failed_auction",
-      "vol_regime": "low",
-      "tpo_read": "PROFILE: The histogram displays an elongated distribution with two distinct volume nodes. The upper node's POC is at 30533.25, while the overall true profile POC for the overnight session is at 30358.5, which is also a significant HVN. Single prints and LVNs are present below 30358.5 leading to the OVNL 30233.25, which forms an apparent excess low.\n\nLOCATION: Current price at 30249 is significantly below the drawn VAL 30369.0 and the true profile POC 30358.5, hovering just above the OVNL 30233.25. This indicates a market in imbalance, probing for acceptance at new lows, with overnight inventory heavily skewed short.\n\nDELIVERY: With a high probability of a failed auction, if price fails to accept below the OVNL 30233.25, it will likely reverse sharply higher, targeting the true profile POC 30358.5, then the drawn VAL 30369.0, and subsequently the drawn POC 30533.25 to correct short inventory. Should price instead accept below 30233.25, the auction would seek liquidity towards the PDL 29934.75.\n\nBIAS: Long bias for 09:30-11:00 ET, invalidated by acceptance below 30233.25.",
-      "models": [
-        {
-          "model": "failed_auction",
-          "probability": 74,
-          "confidence": "medium",
-          "why": "Directional overnight inventory favours a probe-and-revert.",
-          "stat_support": ""
-        },
-        {
-          "model": "rotational_balance",
-          "probability": 16,
-          "confidence": "low",
-          "why": "Two-sided trade holds value if neither extreme accepts.",
-          "stat_support": ""
-        },
-        {
-          "model": "trend_down",
-          "probability": 10,
-          "confidence": "medium",
-          "why": "Acceptance beyond the overnight extreme would extend the move.",
-          "stat_support": ""
-        }
-      ],
-      "trades_summary": {
-        "count": 2,
-        "pnl": -403.24
       }
     }
   ]
