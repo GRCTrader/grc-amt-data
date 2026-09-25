@@ -1,6 +1,132 @@
 {
-  "updated": "2026-09-24T12:00:00.018649-04:00",
+  "updated": "2026-09-25T12:00:00.014011-04:00",
   "days": [
+    {
+      "date": "2026-09-25",
+      "regime": "Initial imbalance on gap up, favoring range expansion or short-covering, with a strong potential for mean-reverting rotation given +GEX.",
+      "predicted_model": "range_expansion",
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 30.0,
+          "confidence": "medium",
+          "why": "Open above RTH value with a gap suggests a volatility break beyond the overnight range, while +GEX implies a new, wider two-sided balance rather than a strong trend.",
+          "stat_support": "base rate 20%",
+          "trigger": "Acceptance above OVNH 30999.5 or a strong rejection of OVN POC 30880.5 leading to a break below OVN VAL 30759.5.",
+          "confirm": "Sustained trade and volume acceptance above OVNH 30999.5 or below OVL 30679.0.",
+          "target": "Untapped buyside liquidity above 31065.50 or sellside liquidity below 30642.75, potentially extending towards call wall 31100.",
+          "abort": "Price returning and holding within the prior RTH value area 30524.0-30738.0."
+        },
+        {
+          "model": "short_covering",
+          "probability": 16.7,
+          "confidence": "low",
+          "why": "The open above prior value with a gap up (+0.43%) has the potential to trap shorts from the prior day's downward trend, fueling a sharp rally from key support levels.",
+          "stat_support": "base rate 26%",
+          "trigger": "Rejection of PDH 30827.5 or OVN POC 30880.5 with absorption on a dip, followed by aggressive buying.",
+          "confirm": "Acceptance and sustained trade above OVN VAH 30999.5 with positive delta.",
+          "target": "Untapped buyside liquidity above 31065.50 and call wall 31100.",
+          "abort": "Acceptance below prior RTH POC 30662.0."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 13.2,
+          "confidence": "low",
+          "why": "The +GEX environment and price being above the gamma flip 30645 favor price being pinned and rotating within a defined range, especially around the overnight value area.",
+          "stat_support": "base rate 17%",
+          "trigger": "Price opens, establishes a range, and fails to accept outside OVN VAH 30999.5 or OVN VAL 30759.5.",
+          "confirm": "Repeated rejections of overnight range extremes (OVNH 30999.5 / OVL 30679.0) with strong absorption/exhaustion, leading to trade back towards OVN POC 30880.5.",
+          "target": "OVN POC 30880.5, with rotations between OVN VAH 30999.5 and OVN VAL 30759.5.",
+          "abort": "Sustained acceptance above OVNH 30999.5 or below OVL 30679.0."
+        },
+        {
+          "model": "trend_down",
+          "probability": 12.2,
+          "confidence": "low",
+          "why": "\u2212 open above value; \u2212 large +GEX dampens trends",
+          "stat_support": "base rate 14%",
+          "trigger": "",
+          "confirm": "",
+          "target": "",
+          "abort": ""
+        },
+        {
+          "model": "failed_auction",
+          "probability": 10.8,
+          "confidence": "low",
+          "why": "+ unswept liquidity to trap into; \u2212 25 similar days: 4% historically",
+          "stat_support": "base rate 16%",
+          "trigger": "",
+          "confirm": "",
+          "target": "",
+          "abort": ""
+        }
+      ],
+      "plan": "If the open drives and accepts above OVNH 30999.5, look for continuation towards 31065.50 and 31100. If the open rejects OVNH 30999.5 or fails to hold OVN POC 30880.5, look for a retest of PDH 30827.5. Strong absorption at 30827.5 or OVN POC 30880.5 could offer long opportunities targeting OVNH 30999.5. Should price break and accept below OVN VAL 30759.5, expect a rotation lower towards prior RTH POC 30662.0 or gamma flip 30645, looking for confirmation of rejection or acceptance there.",
+      "invalidation": "Sustained acceptance and trade below prior RTH POC 30662.0 invalidates the bullish/range expansion lean.",
+      "risk_note": "Friday session with +GEX could lead to choppier, two-sided action as dealers hedge, reducing clear trending moves. Stay alert for whipsaws around key levels.",
+      "htf_bias": "LONG",
+      "htf_text": "DAILY: The Daily timeframe exhibits a strong bullish market structure shift (BOS) confirmed by the displacement above 30343.00 (08-17 high) on September 21-22, establishing a dealing range from the 09-21 open at 29938.00 to the 09-22 high at 31065.50, placing current price in a premium. Untapped buyside liquidity rests above 31065.50 (09-22 high), while sellside liquidity lies below the 09-23 low at 30642.75, with an open FVG at 29665.25-29904.00 below.\n\n4H: The 4H timeframe shows a recent bullish CHoCH from the 09-24 04:00 low (30370.00), with displacement creating a new higher high into 09-25 04:00 (30999.50), aiming for the 31094.75 (09-23 high) buyside liquidity pool. Continuation above 31065.50 would confirm the daily bullish structure, while a decisive break below 30642.75 would challenge it.\n\n1H: The overnight session has sustained a bullish order flow, establishing higher highs and higher lows from 30679.00 to 30999.50, followed by a slight retracement. The immediate draw for the NY open is to potentially sweep the 30999.50 overnight high (buyside liquidity) or seek a deeper retracement into the open 1H FVG between 30792.50 and 30849.50.\n\nBIAS: LONG \u2013 I anticipate a move to sweep buyside liquidity above 30999.50 (overnight high); if price first retraces into the 1H FVG at 30792.50-30849.50, I will look for orderflow confirmation for a long entry there.",
+      "day_shape": "range_expansion",
+      "day_grade": null,
+      "actual_model": "range_expansion",
+      "correct": 1,
+      "grade_detail": "Two-sided, range 30684-30926, close 30786",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 30738.0
+        },
+        {
+          "label": "POC",
+          "price": 30662.0
+        },
+        {
+          "label": "VAL",
+          "price": 30524.0
+        },
+        {
+          "label": "OVN High",
+          "price": 30999.5
+        },
+        {
+          "label": "OVN Low",
+          "price": 30679.0
+        },
+        {
+          "label": "OVN VAH",
+          "price": 30999.5
+        },
+        {
+          "label": "OVN POC",
+          "price": 30880.5
+        },
+        {
+          "label": "OVN VAL",
+          "price": 30759.5
+        },
+        {
+          "label": "Prior VAH",
+          "price": 30955.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 30757.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 30730.0
+        },
+        {
+          "label": "Prior High",
+          "price": 30827.5
+        },
+        {
+          "label": "Prior Low",
+          "price": 30493.25
+        }
+      ]
+    },
     {
       "date": "2026-09-24",
       "regime": "Given the significant gap down and high overnight volatility, the market is in an initial state of imbalance, likely transitioning towards either a two-sided range expansion or a continuation of the downside trend.",
