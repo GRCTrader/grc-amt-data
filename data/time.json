@@ -1,10 +1,10 @@
 {
-  "asof": "2026-09-25 02:01:34 ET",
-  "asof_epoch": 1790316094,
+  "asof": "2026-09-25 02:06:38 ET",
+  "asof_epoch": 1790316398,
   "session_date": "2026-09-25",
   "price": {
-    "NQ": 30859.5,
-    "ES": 7771.5
+    "NQ": 30853.0,
+    "ES": 7771.25
   },
   "cycles": [
     {
@@ -34,7 +34,7 @@
       "span": "London",
       "start": "2026-09-25T00:00:00-04:00",
       "end": "2026-09-25T06:00:00-04:00",
-      "left_sec": 14305,
+      "left_sec": 14001,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
@@ -45,7 +45,7 @@
       "span": "block 2 of 4",
       "start": "2026-09-25T01:30:00-04:00",
       "end": "2026-09-25T03:00:00-04:00",
-      "left_sec": 3505,
+      "left_sec": 3201,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
@@ -56,29 +56,28 @@
       "span": "22.5 min",
       "start": "2026-09-25T01:52:30-04:00",
       "end": "2026-09-25T02:15:00-04:00",
-      "left_sec": 805,
+      "left_sec": 501,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
     },
     {
       "level": "Nano",
-      "q": 1,
+      "q": 2,
       "span": "5.625 min",
-      "start": "2026-09-25T01:58:07.500000-04:00",
-      "end": "2026-09-25T02:03:45-04:00",
-      "left_sec": 130,
-      "phase": "Q2",
-      "phase_name": "Manipulation",
-      "phase_why": "The Judas swing. Price runs the obvious stops."
+      "start": "2026-09-25T02:03:45-04:00",
+      "end": "2026-09-25T02:09:22.500000-04:00",
+      "left_sec": 163,
+      "phase": "Q3",
+      "phase_name": "Distribution",
+      "phase_why": "The actual move. The quarter you want to be in."
     }
   ],
   "chains": [
     [
       "Daily",
       "90 minute",
-      "Micro",
-      "Nano"
+      "Micro"
     ]
   ],
   "true_opens": [
@@ -114,8 +113,8 @@
       "code": "TMSO",
       "name": "true micro-session open",
       "at": "2026-09-25T01:52:30-04:00",
-      "px": null,
-      "side": null
+      "px": 30862.75,
+      "side": "below"
     }
   ],
   "opens_filter": {
@@ -125,8 +124,10 @@
       "TDO",
       "TSO"
     ],
-    "below": [],
-    "known": 4,
+    "below": [
+      "TMSO"
+    ],
+    "known": 5,
     "buy_ok": false,
     "sell_ok": true
   },
@@ -145,10 +146,10 @@
         "open": 30726.5,
         "high": 30868.75,
         "low": 30679.0,
-        "close": 30859.5,
+        "close": 30853.0,
         "n": 7,
         "start": "2026-09-24T18:00:00-04:00",
-        "end": "2026-09-25T02:01:34.505818-04:00"
+        "end": "2026-09-25T02:06:38.509580-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -164,7 +165,7 @@
         "filter_note": "both above this quarter's open"
       },
       "shape": "AMD-X",
-      "shape_why": "Q1 ranged 0.4x the usual with 70% directional body - it behaved like accumulation",
+      "shape_why": "Q1 ranged 0.4x the usual with 67% directional body - it behaved like accumulation",
       "quarter": "Q1",
       "job": "Accumulation",
       "start": "2026-09-24T18:00:00-04:00",
@@ -184,10 +185,10 @@
         "open": 30776.25,
         "high": 30868.75,
         "low": 30763.25,
-        "close": 30859.5,
+        "close": 30853.0,
         "n": 3,
         "start": "2026-09-25T00:00:00-04:00",
-        "end": "2026-09-25T02:01:34.505818-04:00"
+        "end": "2026-09-25T02:06:38.509580-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -222,10 +223,10 @@
         "open": 30805.75,
         "high": 30868.75,
         "low": 30803.25,
-        "close": 30859.5,
-        "n": 23,
+        "close": 30853.0,
+        "n": 28,
         "start": "2026-09-25T01:30:00-04:00",
-        "end": "2026-09-25T02:01:34.505818-04:00"
+        "end": "2026-09-25T02:06:38.509580-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -251,24 +252,34 @@
         "open": 30805.75,
         "high": 30868.75,
         "low": 30803.25,
-        "close": 30859.5,
+        "close": 30864.25,
         "n": 23,
         "start": "2026-09-25T01:30:00-04:00",
         "end": "2026-09-25T01:52:30-04:00"
       },
-      "cur": null,
+      "cur": {
+        "open": 30862.75,
+        "high": 30865.0,
+        "low": 30847.5,
+        "close": 30853.0,
+        "n": 5,
+        "start": "2026-09-25T01:52:30-04:00",
+        "end": "2026-09-25T02:06:38.509580-04:00"
+      },
       "sweep": {
         "swept": null,
-        "note": "not enough bars yet"
+        "prev_high": 30868.75,
+        "prev_low": 30803.25,
+        "note": "still inside 30,803.25-30,868.75"
       },
       "ssmt": {
         "type": null,
-        "note": "not enough bars in one of the quarters",
+        "note": "both markets did the same thing at this seam - no divergence",
         "leader": null,
         "filter_ok": null
       },
       "shape": "X-AMD",
-      "shape_why": "Q1 expanded 2.2x the usual range and closed 82% of the way in one direction - a reversal or continuation, not accumulation",
+      "shape_why": "Q1 expanded 2.2x the usual range and closed 89% of the way in one direction - a reversal or continuation, not accumulation",
       "quarter": "Q2",
       "job": "Accumulation",
       "start": "2026-09-25T01:52:30-04:00",
@@ -277,8 +288,8 @@
   },
   "gb": {
     "on": false,
-    "minute": 1,
-    "next_in_min": 28
+    "minute": 6,
+    "next_in_min": 23
   },
   "checklist": [
     {
@@ -297,13 +308,13 @@
       "n": 3,
       "step": "SSMT / ISMT, above or below true opens",
       "ok": false,
-      "detail": "no divergence - both markets did the same thing at this seam - no divergence; price is above 4 and below 0 of 4 true opens"
+      "detail": "no divergence - both markets did the same thing at this seam - no divergence; price is above 4 and below 1 of 5 true opens"
     },
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 28 min"
+      "detail": "next one in 23 min"
     },
     {
       "n": 5,
