@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25T11:05:16.109096-04:00",
+  "updated": "2026-09-27T17:00:12.773370-04:00",
   "stats": {
     "total_graded": 59,
     "correct": 22,
@@ -442,15 +442,24 @@
       }
     },
     "weekly_diagnostic": {
-      "week_start": "2026-09-14",
-      "week_end": "2026-09-18",
+      "week_start": "2026-09-21",
+      "week_end": "2026-09-25",
       "total_graded": 5,
-      "correct": 2,
-      "accuracy_pct": 40.0,
-      "review_text": "WHAT HAPPENED:\nThe model struggled to identify regime transitions this week, finishing at 40 percent accuracy as it repeatedly flipped its expansion and balance expectations. It failed to capture the market's true rhythm, incorrectly predicting expansion during rotational periods and vice versa.\n\nBIGGEST MISS:\nThe worst call occurred on September 15, when the model expected range expansion but the market instead stayed in rotational balance, holding within the 28896 to 29500 value range.\n\nSUGGESTED IMPROVEMENT:\nBecause the five-day sample this week is too thin to conclude any systematic flaw, we should not attempt to adjust scenarios.py yet, as doing so would risk overinterpreting a brief period of noise. We must wait for more data to see if these regime-shift errors persist.",
-      "created_at": "2026-09-18 15:23:48"
+      "correct": 4,
+      "accuracy_pct": 80.0,
+      "review_text": null,
+      "created_at": "2026-09-25 15:20:57"
     },
     "weekly_diagnostics_all": [
+      {
+        "week_start": "2026-09-21",
+        "week_end": "2026-09-25",
+        "total_graded": 5,
+        "correct": 4,
+        "accuracy_pct": 80.0,
+        "review_text": null,
+        "created_at": "2026-09-25 15:20:57"
+      },
       {
         "week_start": "2026-09-14",
         "week_end": "2026-09-18",
@@ -517,41 +526,29 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-09-25T11:05:16.109114-04:00",
+    "generated_at": "2026-09-27T17:00:12.773385-04:00",
     "last_brief_date": "2026-09-25",
     "last_brief_time": "09:16:03",
     "last_grade_date": "2026-09-25",
     "recent_failures": [
       {
-        "ts": "2026-09-24 16:20:00",
-        "label": "gex_fetch_eod",
+        "ts": "2026-09-27 10:02:31",
+        "label": "cot_publish_site",
         "status": "error",
-        "detail": "Redirect response '307 Temporary Redirect' for url 'https://cdn.cboe.com/api/global/delayed_quotes/options/QQQ.json'\nRedirect location: 'https://cdn-api.cboe.com/api/global/delayed_quotes/options/QQQ.json'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/307"
+        "detail": null
       },
       {
-        "ts": "2026-09-23 11:05:31",
-        "label": "gemini",
-        "status": "error",
-        "detail": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
-      },
-      {
-        "ts": "2026-09-23 11:05:31",
-        "label": "gemini",
-        "status": "error",
-        "detail": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
-      },
-      {
-        "ts": "2026-09-23 00:12:34",
+        "ts": "2026-09-27 10:02:30",
         "label": "github_push",
         "status": "error",
-        "detail": "data/profiles/btc-spot.json HTTP 409"
+        "detail": "data/cot/reports_index.json HTTP 422"
       }
     ]
   },
   "coach": null,
   "mentor_review": {
-    "date": "2026-09-20",
-    "text": "SCORECARD:\nMarket Read: 8/10 \u2014 Good identification of the structural expansion on Sept 17.\nLevel Selection: 9/10 \u2014 Waited for high-HTF AMT location before committing risk.\nExecution: 10/10 \u2014 Pristine. You waited for the confirmation trigger instead of front-running.\nRisk Management: 9/10 \u2014 Clean 1.38R win on your mini contract, keeping risk tight.\nPsychology: 9/10 \u2014 Logged as \"confident\" and executed with zero emotional friction.\nDiscipline: 7/10 \u2014 Great execution on the 17th, but leaving the 18th as \"not_logged\" is a process gap.\n\nPNL:\nNet +$550 | Best Day: +$550 (Sept 17) | Worst Day: N/A | PF: N/A | Avg R: 1.38R\n\nWHAT WORKED:\n* The Confirmation Entry Model: Your single trade on Sept 17 proved that waiting for location + orderflow trigger is your highest-edge behavior.\n* One-and-Done discipline: You took your mini attempt, hit your 1.38R target, and walked away without forcing a second trade.\n\nBIGGEST LEAK:\nThe \"Ghost Session\" vulnerability. Your Sept 18 session is marked \"not_logged.\" If you didn't trade, that needs to be recorded as a disciplined \"no-trade\" day. If you traded and omitted the data, you are hiding execution flaws from the desk. This ultra-low volume week also sets a psychological trap for next Monday: the \"Trader B\" urge to over-compensate and over-trade to make up for a lack of action.\n\nBEST & WORST TRADE:\nBest Trade: Sept 17 NQ (+$550) \u2014 A-grade confirmation entry, waited for the trigger, kept your stop protected. Repeat this.\nWorst Trade: None taken.\n\nNEXT WEEK:\nLog every single NY AM session by 11:15 AM ET\u2014even if it is a \"no-setup, no-trade\" day\u2014and trade strictly one funded account to maintain this elite execution quality."
+    "date": "2026-09-27",
+    "text": "SCORECARD:\nMarket Read: 9/10 \u2014 Nailed the expansion move on 9/23 for a massive 23.6R payoff.\nLevel Selection: 9/10 \u2014 Caught the exact turning point with zero unnecessary heat.\nExecution: 7/10 \u2014 Clean confirmation entry, but you banked early at 49.1% exit efficiency, leaving 24.5R on the table.\nRisk Management: 10/10 \u2014 Sized correctly on MNQ and gave the trade room to breathe.\nPsychology: 8/10 \u2014 Logged \"confident\" and executed without hesitation on your single attempt.\nDiscipline: 5/10 \u2014 Four consecutive days marked unlogged; desk visibility completely vanished outside of Wednesday.\n\nPNL: Net +$425 | Best Day: Sep 23 (+$425) / Worst Day: Sep 23 (+$425) | Profit Factor: N/A | Avg R: +23.61R across 1 trade.\n\nWHAT WORKED:\n- Confirmation Entry Model: On 9/23 you waited for the trigger instead of front-running the level, delivering a clean 100% win rate and +23.61R.\n- Attempt Discipline: You took one pristine first-attempt trade, bagged +$425, and walked away without forcing a second trade or over-trading.\n\nBIGGEST LEAK:\nDesk Opacity / Missing Execution Data. Four out of five sessions (Sep 21, 22, 24, 25) are unlogged. If you passed because price never reached your HTF auction levels, that is elite patience\u2014tag it as a disciplined no-trade day. If you traded other funded accounts and skipped logging, you are hiding data from the desk. A one-trade sample cannot sustain a prop allocation if four days are unaccounted for.\n\nBEST & WORST TRADE:\nBest Trade: 2026-09-23 MNQ (+$425, +23.61R) \u2014 waited for confirmed reaction at location and rode the inventory shift; repeat this patience every session.\nWorst Trade: None logged \u2014 the leak was total absence of documented market reads on the other four sessions.\n\nNEXT WEEK:\nLog every NY AM session by 11:30 ET\u2014including an explicit \"No-Trade / Outside Location\" entry when no A-setup triggers\u2014ensuring 5 of 5 days are accounted for on a single account."
   },
   "days": [
     {
