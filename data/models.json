@@ -1,5 +1,5 @@
 {
-  "asof": "2026-09-28 13:25 ET",
+  "asof": "2026-09-28 17:08 ET",
   "models": [
     {
       "model": "pdhl",
@@ -8,25 +8,25 @@
       "tally": {
         "market": {
           "mode": "market",
-          "posted": 6,
-          "taken": 6,
+          "posted": 7,
+          "taken": 7,
           "no_trade": 0,
-          "wins": 3,
+          "wins": 4,
           "losses": 3,
-          "win_rate": 50.0,
-          "pts": 32.5,
-          "nq_usd": 650.0,
-          "mnq_usd": 65.0,
-          "avg_pts": 5.42,
-          "best_pts": 54.75,
+          "win_rate": 57.1,
+          "pts": 104.75,
+          "nq_usd": 2095.0,
+          "mnq_usd": 209.5,
+          "avg_pts": 14.96,
+          "best_pts": 72.25,
           "worst_pts": -35.0,
-          "profit_factor": 1.5
+          "profit_factor": 2.61
         },
         "retest": {
           "mode": "retest",
-          "posted": 6,
+          "posted": 7,
           "taken": 4,
-          "no_trade": 2,
+          "no_trade": 3,
           "wins": 0,
           "losses": 4,
           "win_rate": 0.0,
@@ -42,7 +42,7 @@
       "setups": [
         {
           "level_key": "pdl",
-          "sim_version": null,
+          "sim_version": 4,
           "id": 13,
           "date": "2026-09-28",
           "posted_at": "2026-09-28T13:25:03.106026-04:00",
@@ -59,8 +59,183 @@
             "2R \u2014 no value area level beyond 30,496.25"
           ],
           "context": "worse \u2014 VWAP is sloping up against the breakout",
-          "graded": false,
-          "result": null
+          "graded": true,
+          "result": {
+            "market": {
+              "status": "session_close",
+              "side": "short",
+              "entry_mode": "market",
+              "entry": 30630.5,
+              "stop": 30691.25,
+              "targets": [
+                30496.25
+              ],
+              "targets_hit": [],
+              "notes": [],
+              "pts": 72.25,
+              "nq_usd": 1445.0,
+              "mnq_usd": 144.5,
+              "mae_pts": 19.5,
+              "mfe_pts": 97.5,
+              "r_multiple": 1.19,
+              "risk_pts": 60.75,
+              "alert_px": 30626.25,
+              "targets_void": [],
+              "window_end": "2026-09-28 17:00:00-04:00",
+              "exit": 30558.25,
+              "exit_at": "2026-09-28 16:58:02-04:00"
+            },
+            "retest": {
+              "status": "not_filled",
+              "side": "short",
+              "entry_mode": "retest",
+              "entry": 30684.0,
+              "stop": 30691.25,
+              "targets": [
+                30496.25
+              ],
+              "targets_hit": [],
+              "notes": [
+                "price never came back to the level"
+              ],
+              "pts": 0.0,
+              "nq_usd": 0.0,
+              "mnq_usd": 0.0,
+              "mae_pts": null,
+              "mfe_pts": null,
+              "r_multiple": null,
+              "risk_pts": null,
+              "targets_void": [],
+              "window_end": "2026-09-28 17:00:00-04:00"
+            },
+            "ladder": {
+              "market": {
+                "status": "session_close",
+                "entry_mode": "market",
+                "side": "short",
+                "entry": 30630.5,
+                "stop": 30691.25,
+                "step": 134.25,
+                "step_src": "T1",
+                "tps": [
+                  30496.25,
+                  30362.0,
+                  30227.75
+                ],
+                "legs": [
+                  3,
+                  3,
+                  2,
+                  2
+                ],
+                "reached": [
+                  false,
+                  false,
+                  false
+                ],
+                "reached_at": [
+                  null,
+                  null,
+                  null
+                ],
+                "mfe_px": 30533.0,
+                "mfe_pts": 97.5,
+                "mfe_steps": 0.73,
+                "mfe_at": "2026-09-28 16:51:00-04:00",
+                "mfe_r": 1.6,
+                "risk_pts": 60.75,
+                "nq": {
+                  "contracts": 1,
+                  "exit": 30558.25,
+                  "how": "close",
+                  "pts": 72.25,
+                  "usd": 1445.0
+                },
+                "mnq": {
+                  "contracts": 10,
+                  "legs": [
+                    {
+                      "n": 3,
+                      "leg": "TP1",
+                      "exit": 30558.25,
+                      "how": "close",
+                      "pts": 72.25,
+                      "usd": 433.5
+                    },
+                    {
+                      "n": 3,
+                      "leg": "TP2",
+                      "exit": 30558.25,
+                      "how": "close",
+                      "pts": 72.25,
+                      "usd": 433.5
+                    },
+                    {
+                      "n": 2,
+                      "leg": "TP3",
+                      "exit": 30558.25,
+                      "how": "close",
+                      "pts": 72.25,
+                      "usd": 289.0
+                    },
+                    {
+                      "n": 2,
+                      "leg": "runner",
+                      "exit": 30558.25,
+                      "how": "close",
+                      "pts": 72.25,
+                      "usd": 289.0
+                    }
+                  ],
+                  "usd": 1445.0,
+                  "pts_avg": 72.25
+                },
+                "notes": [],
+                "alert_px": 30626.25,
+                "fill_at": "2026-09-28 13:26:00-04:00",
+                "exit_at": "2026-09-28 16:58:02-04:00"
+              },
+              "retest": {
+                "status": "not_filled",
+                "entry_mode": "retest",
+                "side": "short",
+                "entry": 30684.0,
+                "stop": 30691.25,
+                "step": 187.75,
+                "step_src": "T1",
+                "tps": [
+                  30496.25,
+                  30308.5,
+                  30120.75
+                ],
+                "legs": [
+                  3,
+                  3,
+                  2,
+                  2
+                ],
+                "reached": [
+                  false,
+                  false,
+                  false
+                ],
+                "reached_at": [
+                  null,
+                  null,
+                  null
+                ],
+                "mfe_px": null,
+                "mfe_pts": null,
+                "mfe_steps": null,
+                "mfe_at": null,
+                "mfe_r": null,
+                "risk_pts": null,
+                "nq": null,
+                "mnq": null,
+                "notes": []
+              }
+            }
+          }
         },
         {
           "level_key": "pdh",
