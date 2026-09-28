@@ -1,12 +1,18 @@
 {
-  "asof": "2026-09-25 18:10 ET",
+  "asof": "2026-09-28 18:10 ET",
   "venue": "Binance USD-M perpetual (BTCUSDT)",
   "method": "The day runs 18:00\u219218:00 New York. Levels are the prior day's range and value area, plus Asia+London (18:00\u219209:30). The read is graded at 18:00 against the move from the read price.",
   "record": {
-    "graded": 2,
-    "correct": 2,
+    "graded": 3,
+    "correct": 3,
     "hit_rate": 100.0,
     "by_bias": {
+      "SHORT": {
+        "n": 1,
+        "correct": 1,
+        "hit_rate": 100.0,
+        "avg_move_pct": 0.2
+      },
       "NEUTRAL": {
         "n": 2,
         "correct": 2,
@@ -16,29 +22,92 @@
     },
     "sims": {
       "bias": {
-        "trades": 0,
+        "trades": 1,
         "no_trade": 2,
         "wins": 0,
-        "record": "0\u20130",
-        "total_r": 0.0,
-        "avg_r": null,
-        "usd_per_coin": 0.0,
-        "avg_pct": null
+        "record": "0\u20131",
+        "total_r": -1.0,
+        "avg_r": -1.0,
+        "usd_per_coin": -165.6,
+        "avg_pct": -0.2
       },
       "plan": {
-        "trades": 2,
+        "trades": 3,
         "no_trade": 0,
-        "wins": 2,
-        "record": "2\u20130",
-        "total_r": 1.81,
-        "avg_r": 0.91,
-        "usd_per_coin": 754.5,
-        "avg_pct": 0.45
+        "wins": 3,
+        "record": "3\u20130",
+        "total_r": 1.94,
+        "avg_r": 0.65,
+        "usd_per_coin": 864.3,
+        "avg_pct": 0.34
       }
     }
   },
   "sim_note": "bias = take the side at the read price, stop at the nearest level the other way, target the next level along. plan = wait for a trigger to be accepted, then trade it from there. Both are 1 coin, no costs.",
   "reads": [
+    {
+      "date": "2026-09-28",
+      "posted_at": "2026-09-28T08:45:02.918156-04:00",
+      "price": 83312.1,
+      "bias": "SHORT",
+      "location": "below prior value",
+      "note": "Trading -1.22% below yesterday's value area. Acceptance below 84,338 keeps sellers in control; a reclaim of it says the flush was absorbed.",
+      "levels": {
+        "prior_high": 85146.4,
+        "prior_low": 84118.6,
+        "vah": 84812.5,
+        "poc": 84437.5,
+        "val": 84337.5,
+        "ovn_high": 84966.8,
+        "ovn_low": 82551.6,
+        "adr_14": 1230.5,
+        "basis": -39.31
+      },
+      "up_level": 83477.7,
+      "dn_level": 82617.8,
+      "result": {
+        "status": "graded",
+        "bias": "SHORT",
+        "correct": true,
+        "from_price": 83312.1,
+        "close": 83146.3,
+        "move": -165.8,
+        "move_pct": -0.2,
+        "high": 84350.0,
+        "low": 82500.1,
+        "up_pct": 1.25,
+        "down_pct": -0.97,
+        "trigger_first": "up",
+        "trigger_at": "2026-09-28T08:50:00-04:00",
+        "bars": 111,
+        "sim": {
+          "bias": {
+            "side": "short",
+            "entry": 83312.1,
+            "stop": 83477.7,
+            "target": 82587.5,
+            "exit": 83477.7,
+            "why": "stop",
+            "usd": -165.6,
+            "pct": -0.2,
+            "r": -1.0,
+            "at": "2026-09-28T08:50:00-04:00"
+          },
+          "plan": {
+            "side": "long",
+            "entry": 83477.7,
+            "stop": 82617.8,
+            "target": 83587.5,
+            "exit": 83587.5,
+            "why": "target",
+            "usd": 109.8,
+            "pct": 0.13,
+            "r": 0.13,
+            "at": "2026-09-28T08:55:00-04:00"
+          }
+        }
+      }
+    },
     {
       "date": "2026-09-25",
       "posted_at": "2026-09-25T08:45:01.935148-04:00",
