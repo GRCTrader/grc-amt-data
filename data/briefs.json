@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28T09:11:46.138615-04:00",
+  "updated": "2026-09-28T09:17:39.354957-04:00",
   "stats": {
     "total_graded": 59,
     "correct": 22,
@@ -526,9 +526,9 @@
     ]
   },
   "ops": {
-    "generated_at": "2026-09-28T09:11:46.138659-04:00",
+    "generated_at": "2026-09-28T09:17:39.354987-04:00",
     "last_brief_date": "2026-09-28",
-    "last_brief_time": null,
+    "last_brief_time": "09:16:03",
     "last_grade_date": "2026-09-25",
     "recent_failures": [
       {
@@ -553,35 +553,100 @@
   "days": [
     {
       "date": "2026-09-28",
-      "inventory": null,
-      "vah": null,
-      "poc": null,
-      "val": null,
-      "settle": null,
-      "ovn_high": null,
-      "ovn_low": null,
-      "ovn_poc": null,
-      "ovn_vah": null,
-      "ovn_val": null,
-      "scenario_a": null,
-      "scenario_b": null,
-      "scenario_c": null,
-      "confidence_a": null,
-      "confidence_b": null,
-      "confidence_c": null,
-      "post_time": null,
+      "inventory": "100S",
+      "vah": 30893.0,
+      "poc": 30823.0,
+      "val": 30719.0,
+      "settle": 30891.5,
+      "ovn_high": 30920.75,
+      "ovn_low": 30531.0,
+      "ovn_poc": 30596.75,
+      "ovn_vah": 30763.0,
+      "ovn_val": 30554.5,
+      "scenario_a": "A",
+      "scenario_b": "B",
+      "scenario_c": "C",
+      "confidence_a": 0.16,
+      "confidence_b": 0.54,
+      "confidence_c": 0.3,
+      "post_time": "09:16:03",
       "day_shape": null,
       "day_shape_note": null,
-      "htf_bias": null,
-      "htf_text": null,
-      "regime": null,
-      "invalidation": null,
-      "plan": null,
-      "risk": null,
+      "htf_bias": "LONG",
+      "htf_text": "DAILY: Daily market structure remains bullish following the displacement to 31094.75, placing price in the premium of the 28763.75 to 31094.75 dealing range. Nearest untapped buyside liquidity sits above the 31094.75 high, while key sellside liquidity rests below the 30370.00 low.\n\n4H: The 4H structure shows a recent bounce from 30531.00, keeping the broader order flow intact with an open fair value gap at 30814.50 to 30838.00. Acceptance above 30850.00 confirms daily expansion toward the high, while a 4H CHoCH below 30370.00 denies the bullish continuation.\n\n1H: Overnight structure swept sellside liquidity at 30531.00 before aggressive displacement pushed price back into the upper profile range. The immediate draw on liquidity for the NY open is targeted at the 30898.25 overnight high and the 30999.50 old high.\n\nBIAS: LONG \u2014 If price holds the 30650.00\u201330680.00 retest zone at the 09:30 open and displays orderflow absorption, then enter long targeting the 30898.25 overnight high and 30999.50 buyside liquidity pool.",
+      "regime": "Imbalance with a strong downside bias, likely to develop into a trend down or an expansion of the overnight range.",
+      "invalidation": "Sustained acceptance and multiple 30-min candle closes above Gamma flip 30740.0.",
+      "plan": "Upon the 09:30 ET open, NQ is currently below RTH VAL 30719.0 and the Gamma flip 30740.0. If the market opens and drives lower, look for acceptance below PDL 30684.0/GBXL 30679.0 to confirm a trend down or range expansion towards OVN POC 30596.75. If price sweeps below GBXL 30679.0 but rejects immediately and reclaims PDL 30684.0 with strong orderflow, look for a failed auction scenario to trade back towards RTH VAL 30719.0 or Gamma flip 30740.0. If price retests RTH VAL 30719.0 from below, look for orderflow confirmation (e.g., exhaustion of buyers, absorption of sellers) for short entries, t",
+      "risk": "MTF conflict (HTF long bias vs. intraday short/momentum) suggests potential for sharp counter-trend moves from key lows, especially if market attempts to clear unswept liquidity. -GEX amplifies moves, increasing volatility and the risk of fast invalidations.",
       "predicted_model": null,
-      "vol_regime": null,
+      "vol_regime": "normal",
       "tpo_read": null,
-      "models": []
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 31.5,
+          "confidence": "medium",
+          "why": "Negative GEX at -1.1$Bn fuels volatility and amplifies moves, while price below the gamma flip at 30740.0 indicates a momentum regime, pushing for an expansion of the overnight range.",
+          "stat_support": "base rate 32%",
+          "trigger": "Acceptance below GBXL 30679.0 or a failed retest of RTH VAL 30719.0 from below",
+          "confirm": "Consecutive 30-min candle closes below GBXL 30679.0, or sustained selling pressure and absorption below RTH VAL 30719.0",
+          "target": "OVN POC 30596.75 initially, then potentially OVN Low 30531.0 and 4H CHoCH 30370.00 if selling persists.",
+          "abort": "Acceptance and hold above Gamma flip 30740.0, or a clear reclaim of RTH VAL 30719.0"
+        },
+        {
+          "model": "trend_down",
+          "probability": 28.4,
+          "confidence": "medium",
+          "why": "Open below RTH value (30719.0) with 100% short overnight inventory, combined with price below the gamma flip 30740.0, points to continuation of downside momentum.",
+          "stat_support": "base rate 24%",
+          "trigger": "Open drive below PDL 30684.0, or a failed retest of RTH VAL 30719.0 with strong absorption of buyers",
+          "confirm": "Acceptance below PDL 30684.0 with continued one-timeframing lower on smaller timeframes and sustained negative delta.",
+          "target": "OVN POC 30596.75, followed by OVN Low 30531.0.",
+          "abort": "Reclaim and sustained acceptance above RTH VAL 30719.0"
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 10.3,
+          "confidence": "low",
+          "why": "\u2212 gap argues against balance; \u2212 -GEX amplifies moves",
+          "stat_support": "base rate 9%",
+          "trigger": "",
+          "confirm": "",
+          "target": "",
+          "abort": ""
+        },
+        {
+          "model": "failed_auction",
+          "probability": 8.3,
+          "confidence": "low",
+          "why": "Unswept liquidity below PDL 30684.0 and GBXL 30679.0 presents a trap for aggressive shorts, potentially leading to a sharp reversal if acceptance fails below these levels.",
+          "stat_support": "base rate 9%",
+          "trigger": "Sweep below PDL 30684.0 (or GBXL 30679.0) followed by immediate rejection and reclaim of 30684.0.",
+          "confirm": "Rapid price movement back above PDL 30684.0 with strong buy orderflow (e.g., delta divergence, pulling/stacking) after the sweep.",
+          "target": "RTH VAL 30719.0, then Gamma flip 30740.0, and potentially OVN VAH 30763.0.",
+          "abort": "Sustained acceptance and multiple 30-min candle closes below GBXL 30679.0"
+        },
+        {
+          "model": "mean_reversion",
+          "probability": 7.3,
+          "confidence": "low",
+          "why": "\u2212 extended open far from POC \u2014 mild discount; an extended gap doesn't reliably snap back; \u2212 price below gamma flip 30740 \u2014 fades lose fuel",
+          "stat_support": "base rate 12%",
+          "trigger": "",
+          "confirm": "",
+          "target": "",
+          "abort": ""
+        }
+      ],
+      "intraday": [
+        {
+          "slot": "09:00",
+          "price": 30701.5,
+          "vs_settle": -190.0,
+          "inside_va": false,
+          "call": "Morning brief anchor"
+        }
+      ]
     },
     {
       "date": "2026-09-25",
