@@ -1,6 +1,132 @@
 {
-  "updated": "2026-09-28T12:00:00.009512-04:00",
+  "updated": "2026-09-29T12:00:00.014435-04:00",
   "days": [
+    {
+      "date": "2026-09-29",
+      "regime": "Imbalance, with potential for range expansion or upward continuation driven by momentum.",
+      "predicted_model": "range_expansion",
+      "models": [
+        {
+          "model": "range_expansion",
+          "probability": 34.6,
+          "confidence": "medium",
+          "why": "Negative GEX and price below the gamma flip 30665 suggest momentum will extend price beyond the overnight range, supported by calibration data.",
+          "stat_support": "base rate 30%",
+          "trigger": "Price consolidates near 30620.5 (OVN VAH) or 30624.0 (RTH VAH) then breaks above OVNH 30717.75 or below OVN low 30372.25.",
+          "confirm": "Acceptance (multiple TPOs, volume) above OVNH 30717.75 or below OVN low 30372.25.",
+          "target": "Towards PDH 30759.25 / PWH 31094.75 or PDL 30356.75 / PWL 29904.0.",
+          "abort": "Failure to accept beyond OVN extremes, or quick reclaim of the OVN range."
+        },
+        {
+          "model": "trend_up",
+          "probability": 19.0,
+          "confidence": "low",
+          "why": "An open above value and price below the gamma flip 30665 indicate a momentum regime, favoring continued upside.",
+          "stat_support": "base rate 23%",
+          "trigger": "Open drive or retest of 30620.5 (OVN VAH) or 30624.0 (RTH VAH) with absorption.",
+          "confirm": "Acceptance (multiple TPOs, volume) above 30624.0 (RTH VAH) and then above OVNH 30717.75.",
+          "target": "NY AM KZ high 30680, PDH 30759.25, and then PWH 31094.75.",
+          "abort": "Acceptance below 30620.5 (OVN VAH) or a decisive break below RTH POC 30559.0."
+        },
+        {
+          "model": "trend_down",
+          "probability": 12.3,
+          "confidence": "low",
+          "why": "Value migrating lower and price in a momentum regime suggest potential for downside continuation, despite an open above value.",
+          "stat_support": "base rate 13%",
+          "trigger": "Failure to hold 30624.0 (RTH VAH) and a break below 30559.0 (RTH POC).",
+          "confirm": "Acceptance (multiple TPOs, volume) below 30559.0 (RTH POC) and then below OVN VAL 30478.5.",
+          "target": "PDL 30356.75 and PWL 29904.0.",
+          "abort": "Reclaim of 30559.0 (RTH POC) or strong absorption at OVN VAL 30478.5."
+        },
+        {
+          "model": "rotational_balance",
+          "probability": 11.4,
+          "confidence": "low",
+          "why": "Despite negative GEX and historical data suggesting fades lose fuel, calibration indicates potential for rotation around value areas.",
+          "stat_support": "base rate 14%",
+          "trigger": "Open rejects 30624.0 (RTH VAH) or 30620.5 (OVN VAH) and rotates down towards 30559.0 (RTH POC).",
+          "confirm": "Price remains contained within 30478.5 (OVN VAL) and 30624.0 (RTH VAH) with two-sided trade.",
+          "target": "Rotation between 30624.0 (RTH VAH) and 30478.5 (OVN VAL), or 30559.0 (RTH POC).",
+          "abort": "Acceptance (multiple TPOs, volume) above 30624.0 (RTH VAH) or below 30478.5 (OVN VAL)."
+        },
+        {
+          "model": "failed_auction",
+          "probability": 9.7,
+          "confidence": "low",
+          "why": "Unswept liquidity at PDH 30759.25 and PDL 30356.75 provides levels to trap participants before reversing sharply.",
+          "stat_support": "base rate 9%",
+          "trigger": "Price sweeps OVNH 30717.75, PDH 30759.25, or PDL 30356.75, then fails to accept.",
+          "confirm": "Strong rejection and quick reclaim of the swept level, with orderflow confirmation (exhaustion/absorption).",
+          "target": "Opposite end of the prior range or value area, e.g., if PDH is swept, target RTH POC 30559.0.",
+          "abort": "Acceptance (multiple TPOs, volume) beyond the swept extreme."
+        }
+      ],
+      "plan": "If price opens and immediately drives up, look for acceptance above 30624.0 (RTH VAH) and then 30717.75 (OVNH) targeting 30759.25 (PDH). If price pulls back early, look for absorption at 30615.75 (half gap) or 30568.25 (London close) for LONGS, targeting 30680.50 (NY AM KZ high) and 30705.50. If price fails to hold 30635.25 (London KZ high) and accepts below it, the primary bullish read is invalidated. If price sweeps PDH 30759.25 and fails to accept, look for a rejection for a potential short towards RTH POC 30559.0. If price accepts below 30559.0 (RTH POC), look for continuation lower toward",
+      "invalidation": "Acceptance below today's London KZ high of 30635.25.",
+      "risk_note": "Negative GEX suggests extended moves; be mindful of potential volatility and swift reversals near key liquidity levels like PDH 30759.25 or PDL 30356.75.",
+      "htf_bias": "LONG",
+      "htf_text": "BIAS: LONG \u2014 If price pulls back early to test the half gap of 30,615.75 or today's London (00:00\u201306:00 ET) session close of 30,568.25 and shows absorption on the overnight profile, then enter long targeting 30,680.50 and 30,705.50; if price accepts below the today London KZ (02:00\u201305:00 ET) high of 30,635.25, stand aside as the setup is invalidated.\nCONTEXT: Price sits above the previous month's high of 30,343.00 and resides in the premium quadrant of both the previous week (above equilibrium 30,519.88) and previous day ranges.\nDRAW: The this morning's NY AM KZ (08:30\u201309:30 ET) high of 30,680.50, with the intermediate objective of yesterday's London (00:00\u201306:00 ET) high of 30,705.50.\nNOT: Price should not accept below the today London KZ (02:00\u201305:00 ET) high of 30,635.25 or yesterday's Asia (18:00\u201300:00 ET) low of 30,644.00.\nINVALIDATION: Sustained trading or a 15-minute close below the previous weekly equilibrium of 30,519.88.\nTIMING: The 09:50\u201310:10 ET macro window, which aligns with the 10:00 ET CB Consumer Confidence and JOLTS Job Openings releases, where the primary expansion should deliver.",
+      "day_shape": "range_expansion",
+      "day_grade": null,
+      "actual_model": "range_expansion",
+      "correct": 1,
+      "grade_detail": "Two-sided, range 30546-30726, close 30698",
+      "levels": [
+        {
+          "label": "VAH",
+          "price": 30624.0
+        },
+        {
+          "label": "POC",
+          "price": 30559.0
+        },
+        {
+          "label": "VAL",
+          "price": 30389.0
+        },
+        {
+          "label": "OVN High",
+          "price": 30717.75
+        },
+        {
+          "label": "OVN Low",
+          "price": 30372.25
+        },
+        {
+          "label": "OVN VAH",
+          "price": 30620.5
+        },
+        {
+          "label": "OVN POC",
+          "price": 30553.5
+        },
+        {
+          "label": "OVN VAL",
+          "price": 30478.5
+        },
+        {
+          "label": "Prior VAH",
+          "price": 30893.0
+        },
+        {
+          "label": "Prior POC",
+          "price": 30823.0
+        },
+        {
+          "label": "Prior VAL",
+          "price": 30719.0
+        },
+        {
+          "label": "Prior High",
+          "price": 30759.25
+        },
+        {
+          "label": "Prior Low",
+          "price": 30356.75
+        }
+      ]
+    },
     {
       "date": "2026-09-28",
       "regime": "Imbalance with a strong downside bias, likely to develop into a trend down or an expansion of the overnight range.",
