@@ -1,10 +1,10 @@
 {
-  "asof": "2026-09-30 11:32:39 ET",
-  "asof_epoch": 1790782359,
+  "asof": "2026-09-30 11:37:44 ET",
+  "asof_epoch": 1790782664,
   "session_date": "2026-09-30",
   "price": {
-    "NQ": 30815.0,
-    "ES": 7767.5
+    "NQ": 30833.75,
+    "ES": 7769.5
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "New York AM",
       "start": "2026-09-30T06:00:00-04:00",
       "end": "2026-09-30T12:00:00-04:00",
-      "left_sec": 1640,
+      "left_sec": 1335,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -48,35 +48,41 @@
       "span": "block 4 of 4",
       "start": "2026-09-30T10:30:00-04:00",
       "end": "2026-09-30T12:00:00-04:00",
-      "left_sec": 1640,
+      "left_sec": 1335,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
     },
     {
       "level": "Micro",
-      "q": 2,
-      "span": "22.5 min",
-      "start": "2026-09-30T11:15:00-04:00",
-      "end": "2026-09-30T11:37:30-04:00",
-      "left_sec": 290,
-      "phase": "Q3",
-      "phase_name": "Distribution",
-      "phase_why": "The actual move. The quarter you want to be in."
-    },
-    {
-      "level": "Nano",
       "q": 3,
-      "span": "5.625 min",
-      "start": "2026-09-30T11:31:52.500000-04:00",
-      "end": "2026-09-30T11:37:30-04:00",
-      "left_sec": 290,
+      "span": "22.5 min",
+      "start": "2026-09-30T11:37:30-04:00",
+      "end": "2026-09-30T12:00:00-04:00",
+      "left_sec": 1335,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
+    },
+    {
+      "level": "Nano",
+      "q": 0,
+      "span": "5.625 min",
+      "start": "2026-09-30T11:37:30-04:00",
+      "end": "2026-09-30T11:43:07.500000-04:00",
+      "left_sec": 323,
+      "phase": "Q1",
+      "phase_name": "Accumulation",
+      "phase_why": "Range builds. The market is loading, not going anywhere."
     }
   ],
-  "chains": [],
+  "chains": [
+    [
+      "90 minute",
+      "Micro",
+      "Nano"
+    ]
+  ],
   "true_opens": [
     {
       "code": "TMO",
@@ -143,10 +149,10 @@
         "open": 30657.25,
         "high": 30894.75,
         "low": 30512.25,
-        "close": 30815.0,
+        "close": 30833.75,
         "n": 19,
         "start": "2026-09-29T18:00:00-04:00",
-        "end": "2026-09-30T11:32:39.726185-04:00"
+        "end": "2026-09-30T11:37:44.191682-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -181,10 +187,10 @@
         "open": 30614.25,
         "high": 30894.75,
         "low": 30512.25,
-        "close": 30815.0,
+        "close": 30833.75,
         "n": 7,
         "start": "2026-09-30T06:00:00-04:00",
-        "end": "2026-09-30T11:32:39.726185-04:00"
+        "end": "2026-09-30T11:37:44.191682-04:00"
       },
       "sweep": {
         "swept": "both",
@@ -219,10 +225,10 @@
         "open": 30827.5,
         "high": 30882.5,
         "low": 30780.25,
-        "close": 30815.0,
-        "n": 54,
+        "close": 30833.75,
+        "n": 59,
         "start": "2026-09-30T10:30:00-04:00",
-        "end": "2026-09-30T11:32:39.726185-04:00"
+        "end": "2026-09-30T11:37:44.191682-04:00"
       },
       "sweep": {
         "swept": null,
@@ -234,8 +240,8 @@
         "type": "bearish",
         "note": "ES took the previous quarter high, NQ did not",
         "leader": "ES",
-        "filter_ok": false,
-        "filter_note": "he wants BOTH above this quarter's open for a short"
+        "filter_ok": true,
+        "filter_note": "both above this quarter's open"
       },
       "shape": "AMD-X",
       "shape_why": "Q1 ranged 1.2x the usual with 38% directional body - it behaved like accumulation",
@@ -246,48 +252,37 @@
     },
     "Micro": {
       "prev": {
-        "open": 30850.5,
-        "high": 30882.5,
-        "low": 30813.25,
-        "close": 30827.75,
-        "n": 22,
-        "start": "2026-09-30T10:52:30-04:00",
-        "end": "2026-09-30T11:15:00-04:00"
-      },
-      "cur": {
         "open": 30827.25,
         "high": 30857.5,
         "low": 30806.0,
-        "close": 30815.0,
-        "n": 9,
+        "close": 30833.75,
+        "n": 14,
         "start": "2026-09-30T11:15:00-04:00",
-        "end": "2026-09-30T11:32:39.726185-04:00"
+        "end": "2026-09-30T11:37:30-04:00"
       },
+      "cur": null,
       "sweep": {
-        "swept": "low",
-        "prev_high": 30882.5,
-        "prev_low": 30813.25,
-        "note": "took the previous quarter low 30,813.25"
+        "swept": null,
+        "note": "not enough bars yet"
       },
       "ssmt": {
-        "type": "bullish",
-        "note": "NQ took the previous quarter low, ES did not",
-        "leader": "NQ",
-        "filter_ok": true,
-        "filter_note": "both below this quarter's open"
+        "type": null,
+        "note": "not enough bars in one of the quarters",
+        "leader": null,
+        "filter_ok": null
       },
       "shape": "AMD-X",
       "shape_why": "Q1 ranged 1.0x the usual with 32% directional body - it behaved like accumulation",
-      "quarter": "Q3",
-      "job": "Distribution",
-      "start": "2026-09-30T11:15:00-04:00",
-      "end": "2026-09-30T11:37:30-04:00"
+      "quarter": "Q4",
+      "job": "X - continuation / reversal",
+      "start": "2026-09-30T11:37:30-04:00",
+      "end": "2026-09-30T12:00:00-04:00"
     }
   },
   "gb": {
     "on": false,
-    "minute": 32,
-    "next_in_min": 3
+    "minute": 37,
+    "next_in_min": 52
   },
   "checklist": [
     {
@@ -305,14 +300,14 @@
     {
       "n": 3,
       "step": "SSMT / ISMT, above or below true opens",
-      "ok": false,
-      "detail": "bearish - ES took the previous quarter high, NQ did not; he wants BOTH above this quarter's open for a short; price is above 4 and below 1 of 5 true opens"
+      "ok": true,
+      "detail": "bearish - ES took the previous quarter high, NQ did not; both above this quarter's open; price is above 4 and below 1 of 5 true opens"
     },
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 3 min"
+      "detail": "next one in 52 min"
     },
     {
       "n": 5,
