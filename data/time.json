@@ -1,10 +1,10 @@
 {
-  "asof": "2026-10-01 04:19:25 ET",
-  "asof_epoch": 1790842765,
+  "asof": "2026-10-01 04:24:29 ET",
+  "asof_epoch": 1790843069,
   "session_date": "2026-10-01",
   "price": {
-    "NQ": 30842.5,
-    "ES": 7717.5
+    "NQ": 30826.0,
+    "ES": 7716.0
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "London",
       "start": "2026-10-01T00:00:00-04:00",
       "end": "2026-10-01T06:00:00-04:00",
-      "left_sec": 6034,
+      "left_sec": 5730,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
@@ -48,7 +48,7 @@
       "span": "block 3 of 4",
       "start": "2026-10-01T03:00:00-04:00",
       "end": "2026-10-01T04:30:00-04:00",
-      "left_sec": 634,
+      "left_sec": 330,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -59,21 +59,21 @@
       "span": "22.5 min",
       "start": "2026-10-01T04:07:30-04:00",
       "end": "2026-10-01T04:30:00-04:00",
-      "left_sec": 634,
+      "left_sec": 330,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
     },
     {
       "level": "Nano",
-      "q": 2,
+      "q": 3,
       "span": "5.625 min",
-      "start": "2026-10-01T04:18:45-04:00",
-      "end": "2026-10-01T04:24:22.500000-04:00",
-      "left_sec": 296,
-      "phase": "Q3",
-      "phase_name": "Distribution",
-      "phase_why": "The actual move. The quarter you want to be in."
+      "start": "2026-10-01T04:24:22.500000-04:00",
+      "end": "2026-10-01T04:30:00-04:00",
+      "left_sec": 330,
+      "phase": "Q4",
+      "phase_name": "Continuation / Reversal",
+      "phase_why": "It extends or it turns. The handover."
     }
   ],
   "chains": [
@@ -148,10 +148,10 @@
         "open": 30707.0,
         "high": 31151.5,
         "low": 30684.5,
-        "close": 30842.5,
+        "close": 30826.0,
         "n": 12,
         "start": "2026-09-30T18:00:00-04:00",
-        "end": "2026-10-01T04:19:25.812594-04:00"
+        "end": "2026-10-01T04:24:29.551553-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -187,10 +187,10 @@
         "open": 30941.0,
         "high": 31151.5,
         "low": 30796.5,
-        "close": 30842.5,
+        "close": 30826.0,
         "n": 6,
         "start": "2026-10-01T00:00:00-04:00",
-        "end": "2026-10-01T04:19:25.812594-04:00"
+        "end": "2026-10-01T04:24:29.551553-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -226,10 +226,10 @@
         "open": 31024.25,
         "high": 31043.25,
         "low": 30796.5,
-        "close": 30842.5,
-        "n": 71,
+        "close": 30826.0,
+        "n": 76,
         "start": "2026-10-01T03:00:00-04:00",
-        "end": "2026-10-01T04:19:25.812594-04:00"
+        "end": "2026-10-01T04:24:29.551553-04:00"
       },
       "sweep": {
         "swept": "low",
@@ -263,23 +263,24 @@
       "cur": {
         "open": 30873.5,
         "high": 30873.75,
-        "low": 30823.25,
-        "close": 30842.5,
-        "n": 3,
+        "low": 30816.75,
+        "close": 30826.0,
+        "n": 8,
         "start": "2026-10-01T04:07:30-04:00",
-        "end": "2026-10-01T04:19:25.812594-04:00"
+        "end": "2026-10-01T04:24:29.551553-04:00"
       },
       "sweep": {
-        "swept": null,
+        "swept": "low",
         "prev_high": 30906.75,
         "prev_low": 30818.25,
-        "note": "still inside 30,818.25-30,906.75"
+        "note": "took the previous quarter low 30,818.25"
       },
       "ssmt": {
-        "type": null,
-        "note": "both markets did the same thing at this seam - no divergence",
-        "leader": null,
-        "filter_ok": null
+        "type": "bullish",
+        "note": "NQ took the previous quarter low, ES did not",
+        "leader": "NQ",
+        "filter_ok": true,
+        "filter_note": "both below this quarter's open"
       },
       "shape": "X-AMD",
       "shape_why": "Q1 expanded 2.3x the usual range and closed 78% of the way in one direction - a reversal or continuation, not accumulation",
@@ -291,8 +292,8 @@
   },
   "gb": {
     "on": false,
-    "minute": 19,
-    "next_in_min": 10
+    "minute": 24,
+    "next_in_min": 5
   },
   "checklist": [
     {
@@ -317,7 +318,7 @@
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 10 min"
+      "detail": "next one in 5 min"
     },
     {
       "n": 5,
