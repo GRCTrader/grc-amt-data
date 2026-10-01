@@ -1,10 +1,10 @@
 {
-  "asof": "2026-10-01 09:50:45 ET",
-  "asof_epoch": 1790862645,
+  "asof": "2026-10-01 09:55:50 ET",
+  "asof_epoch": 1790862950,
   "session_date": "2026-10-01",
   "price": {
-    "NQ": 30799.75,
-    "ES": 7728.75
+    "NQ": 30752.5,
+    "ES": 7724.0
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "New York AM",
       "start": "2026-10-01T06:00:00-04:00",
       "end": "2026-10-01T12:00:00-04:00",
-      "left_sec": 7754,
+      "left_sec": 7449,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -48,7 +48,7 @@
       "span": "block 3 of 4",
       "start": "2026-10-01T09:00:00-04:00",
       "end": "2026-10-01T10:30:00-04:00",
-      "left_sec": 2354,
+      "left_sec": 2049,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -59,7 +59,7 @@
       "span": "22.5 min",
       "start": "2026-10-01T09:45:00-04:00",
       "end": "2026-10-01T10:07:30-04:00",
-      "left_sec": 1004,
+      "left_sec": 699,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -70,7 +70,7 @@
       "span": "5.625 min",
       "start": "2026-10-01T09:50:37.500000-04:00",
       "end": "2026-10-01T09:56:15-04:00",
-      "left_sec": 329,
+      "left_sec": 24,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
@@ -153,10 +153,10 @@
         "open": 30707.0,
         "high": 31151.5,
         "low": 30684.5,
-        "close": 30799.75,
+        "close": 30755.0,
         "n": 17,
         "start": "2026-09-30T18:00:00-04:00",
-        "end": "2026-10-01T09:50:45.473517-04:00"
+        "end": "2026-10-01T09:55:50.567699-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -192,10 +192,10 @@
         "open": 30853.25,
         "high": 30949.75,
         "low": 30734.25,
-        "close": 30799.75,
+        "close": 30755.0,
         "n": 5,
         "start": "2026-10-01T06:00:00-04:00",
-        "end": "2026-10-01T09:50:45.473517-04:00"
+        "end": "2026-10-01T09:55:50.567699-04:00"
       },
       "sweep": {
         "swept": "low",
@@ -207,8 +207,8 @@
         "type": "bullish",
         "note": "NQ took the previous quarter low, ES did not",
         "leader": "NQ",
-        "filter_ok": false,
-        "filter_note": "he wants BOTH below this quarter's open for a long"
+        "filter_ok": true,
+        "filter_note": "both below this quarter's open"
       },
       "shape": "AMD-X",
       "shape_why": "Q1 ranged 1.2x the usual with 91% directional body - it behaved like accumulation",
@@ -231,10 +231,10 @@
         "open": 30817.25,
         "high": 30858.0,
         "low": 30734.25,
-        "close": 30799.75,
-        "n": 42,
+        "close": 30752.5,
+        "n": 47,
         "start": "2026-10-01T09:00:00-04:00",
-        "end": "2026-10-01T09:50:45.473517-04:00"
+        "end": "2026-10-01T09:55:50.567699-04:00"
       },
       "sweep": {
         "swept": "low",
@@ -260,19 +260,29 @@
         "open": 30827.0,
         "high": 30856.0,
         "low": 30734.25,
-        "close": 30799.75,
-        "n": 19,
+        "close": 30759.75,
+        "n": 22,
         "start": "2026-10-01T09:22:30-04:00",
         "end": "2026-10-01T09:45:00-04:00"
       },
-      "cur": null,
+      "cur": {
+        "open": 30759.75,
+        "high": 30799.0,
+        "low": 30734.5,
+        "close": 30752.5,
+        "n": 2,
+        "start": "2026-10-01T09:45:00-04:00",
+        "end": "2026-10-01T09:55:50.567699-04:00"
+      },
       "sweep": {
         "swept": null,
-        "note": "not enough bars yet"
+        "prev_high": 30856.0,
+        "prev_low": 30734.25,
+        "note": "still inside 30,734.25-30,856.00"
       },
       "ssmt": {
         "type": null,
-        "note": "not enough bars in one of the quarters",
+        "note": "both markets did the same thing at this seam - no divergence",
         "leader": null,
         "filter_ok": null
       },
@@ -286,8 +296,8 @@
   },
   "gb": {
     "on": false,
-    "minute": 50,
-    "next_in_min": 39
+    "minute": 55,
+    "next_in_min": 34
   },
   "checklist": [
     {
@@ -312,7 +322,7 @@
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 39 min"
+      "detail": "next one in 34 min"
     },
     {
       "n": 5,
