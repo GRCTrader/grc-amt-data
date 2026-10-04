@@ -1,6 +1,28 @@
 {
-  "updated": "2026-09-30T05:16:41.317910-04:00",
+  "updated": "2026-10-04T10:03:51.018294-04:00",
   "reports": [
+    {
+      "market_code": "ES",
+      "report_date": "2026-09-29",
+      "publish_date": "2026-10-04",
+      "site_url": "https://grctrader.netlify.app/cot/es",
+      "status": "ok",
+      "correction_note": null,
+      "bias": "Bullish",
+      "report_url": "data/cot/reports/es-2026-09-29.json",
+      "week_review": null
+    },
+    {
+      "market_code": "NQ",
+      "report_date": "2026-09-29",
+      "publish_date": "2026-10-04",
+      "site_url": "https://grctrader.netlify.app/cot/nq",
+      "status": "ok",
+      "correction_note": null,
+      "bias": "Neutral",
+      "report_url": "data/cot/reports/nq-2026-09-29.json",
+      "week_review": null
+    },
     {
       "market_code": "ES",
       "report_date": "2026-09-22",
@@ -10,7 +32,76 @@
       "correction_note": null,
       "bias": "Bullish",
       "report_url": "data/cot/reports/es-2026-09-22.json",
-      "week_review": null
+      "week_review": {
+        "week_start": "2026-09-28",
+        "week_end": "2026-10-02",
+        "bias": "Bullish",
+        "days": [
+          {
+            "date": "2026-09-28",
+            "weekday": "Monday",
+            "open": 7796.0,
+            "high": 7803.0,
+            "low": 7726.0,
+            "close": 7746.75,
+            "direction": -1,
+            "narrative": "opened 7796, closed lower at 7747 (-49)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-09-29",
+            "weekday": "Tuesday",
+            "open": 7746.5,
+            "high": 7770.75,
+            "low": 7712.25,
+            "close": 7732.0,
+            "direction": -1,
+            "narrative": "opened 7746, pushed up to 7771, faded to close 7732 (-14)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-09-30",
+            "weekday": "Wednesday",
+            "open": 7739.0,
+            "high": 7782.0,
+            "low": 7705.5,
+            "close": 7715.5,
+            "direction": -1,
+            "narrative": "opened 7739, pushed up to 7782, faded to close 7716 (-24)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-10-01",
+            "weekday": "Thursday",
+            "open": 7719.5,
+            "high": 7767.75,
+            "low": 7672.75,
+            "close": 7724.0,
+            "direction": 0,
+            "narrative": "opened 7720, closed flat at 7724 (+4)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-10-02",
+            "weekday": "Friday",
+            "open": 7724.0,
+            "high": 7810.25,
+            "low": 7723.25,
+            "close": 7777.25,
+            "direction": 1,
+            "narrative": "opened 7724, closed higher at 7777 (+53)",
+            "bot_read": null
+          }
+        ],
+        "week_net_pct": -0.24,
+        "verdict": "incorrect",
+        "score": 8,
+        "components": {
+          "net_direction": 0,
+          "daily_agreement": 8
+        },
+        "review_text": "WHAT HAPPENED: The E-mini S&P 500 largely trended downward for the week, closing with a net loss of 0.24%, despite a strong recovery on Friday.\n\nWHY IT MISSED: The engine's high confidence bullish call, based on improving and elevated commercial net long positioning, did not align with the week's overall bearish price action. While commercials showed strong conviction, the market either absorbed this buying or was influenced by other factors, delaying the expected rally. The \"upper 68%\" range suggests commercials were already significantly committed.\n\nSUGGESTED IMPROVEMENT: Review the confidence weighting for improving commercial positioning when it is already in the upper quartile of its historical range, considering if this warrants a tempered confidence unless immediate price strength is also present."
+      }
     },
     {
       "market_code": "NQ",
@@ -21,7 +112,101 @@
       "correction_note": null,
       "bias": "Strongly Bearish",
       "report_url": "data/cot/reports/nq-2026-09-22.json",
-      "week_review": null
+      "week_review": {
+        "week_start": "2026-09-28",
+        "week_end": "2026-10-02",
+        "bias": "Strongly Bearish",
+        "days": [
+          {
+            "date": "2026-09-28",
+            "weekday": "Monday",
+            "open": 30870.0,
+            "high": 30920.75,
+            "low": 30356.75,
+            "close": 30566.25,
+            "direction": -1,
+            "narrative": "opened 30870, closed lower at 30566 (-304)",
+            "bot_read": {
+              "predicted_model": "B",
+              "actual_model": "trend_down",
+              "model_correct": 1,
+              "detail": "Accepted below VAL 30719, closed 30380 (low of range)"
+            }
+          },
+          {
+            "date": "2026-09-29",
+            "weekday": "Tuesday",
+            "open": 30560.5,
+            "high": 30725.5,
+            "low": 30372.25,
+            "close": 30613.25,
+            "direction": 0,
+            "narrative": "opened 30560, closed flat at 30613 (+53)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "range_expansion",
+              "model_correct": 1,
+              "detail": "Two-sided, range 30546-30726, close 30698"
+            }
+          },
+          {
+            "date": "2026-09-30",
+            "weekday": "Wednesday",
+            "open": 30657.25,
+            "high": 30906.0,
+            "low": 30512.25,
+            "close": 30698.75,
+            "direction": 0,
+            "narrative": "opened 30657, closed flat at 30699 (+42)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "trend_up",
+              "model_correct": 0,
+              "detail": "Accepted above VAH 30630, closed 30867 (top of range)"
+            }
+          },
+          {
+            "date": "2026-10-01",
+            "weekday": "Thursday",
+            "open": 30707.0,
+            "high": 31151.5,
+            "low": 30529.25,
+            "close": 30760.5,
+            "direction": 0,
+            "narrative": "opened 30707, closed flat at 30760 (+54)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "long_liquidation",
+              "model_correct": 0,
+              "detail": "Accepted below VAL 30708, closed 30640 (low of range)"
+            }
+          },
+          {
+            "date": "2026-10-02",
+            "weekday": "Friday",
+            "open": 30771.25,
+            "high": 31282.5,
+            "low": 30760.25,
+            "close": 31061.75,
+            "direction": 1,
+            "narrative": "opened 30771, closed higher at 31062 (+290)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "trend_up",
+              "model_correct": 0,
+              "detail": "Accepted above VAH 30800, closed 31164 (top of range)"
+            }
+          }
+        ],
+        "week_net_pct": 0.62,
+        "verdict": "incorrect",
+        "score": 8,
+        "components": {
+          "net_direction": 0,
+          "daily_agreement": 8
+        },
+        "review_text": "WHAT HAPPENED: The engine called for a Strongly Bearish week, yet NQ experienced an overall increase, closing higher by +0.62%. Daily price action diverged significantly from the bearish call after Monday's initial dip, with multiple days closing flat or higher.\n\nWHY IT MISSED: The engine correctly identified extreme commercial net short positioning and its continued deterioration, including a bearish hedging nodule. However, extreme commercial net short positions, particularly near 2yr and 4yr lows, can often precede price reversals due to oversold conditions or short-covering rallies, rather than sustained downside. The model interpreted these extremes as a high-confidence continuation signal for bearishness, which did not materialize this week.\n\nSUGGESTED IMPROVEMENT: Review integrating a condition where if commercial net positioning is already at a multi-year extreme (e.g., lower 1% of 2-year range), further deterioration in isolation does not automatically elevate confidence for continuation, potentially instead reducing it or triggering a search for reversal patterns."
+      }
     },
     {
       "market_code": "ES",
