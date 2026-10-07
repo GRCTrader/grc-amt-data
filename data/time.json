@@ -1,10 +1,10 @@
 {
-  "asof": "2026-10-07 02:33:36 ET",
-  "asof_epoch": 1791354816,
+  "asof": "2026-10-07 02:38:41 ET",
+  "asof_epoch": 1791355121,
   "session_date": "2026-10-07",
   "price": {
-    "NQ": 31460.25,
-    "ES": 7874.0
+    "NQ": 31463.75,
+    "ES": 7874.25
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "London",
       "start": "2026-10-07T00:00:00-04:00",
       "end": "2026-10-07T06:00:00-04:00",
-      "left_sec": 12383,
+      "left_sec": 12078,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
@@ -48,32 +48,32 @@
       "span": "block 2 of 4",
       "start": "2026-10-07T01:30:00-04:00",
       "end": "2026-10-07T03:00:00-04:00",
-      "left_sec": 1583,
+      "left_sec": 1278,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
     },
     {
       "level": "Micro",
-      "q": 2,
-      "span": "22.5 min",
-      "start": "2026-10-07T02:15:00-04:00",
-      "end": "2026-10-07T02:37:30-04:00",
-      "left_sec": 233,
-      "phase": "Q3",
-      "phase_name": "Distribution",
-      "phase_why": "The actual move. The quarter you want to be in."
-    },
-    {
-      "level": "Nano",
       "q": 3,
-      "span": "5.625 min",
-      "start": "2026-10-07T02:31:52.500000-04:00",
-      "end": "2026-10-07T02:37:30-04:00",
-      "left_sec": 233,
+      "span": "22.5 min",
+      "start": "2026-10-07T02:37:30-04:00",
+      "end": "2026-10-07T03:00:00-04:00",
+      "left_sec": 1278,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
+    },
+    {
+      "level": "Nano",
+      "q": 0,
+      "span": "5.625 min",
+      "start": "2026-10-07T02:37:30-04:00",
+      "end": "2026-10-07T02:43:07.500000-04:00",
+      "left_sec": 266,
+      "phase": "Q1",
+      "phase_name": "Accumulation",
+      "phase_why": "Range builds. The market is loading, not going anywhere."
     }
   ],
   "chains": [],
@@ -143,10 +143,10 @@
         "open": 31510.0,
         "high": 31521.0,
         "low": 31430.0,
-        "close": 31460.25,
+        "close": 31463.5,
         "n": 9,
         "start": "2026-10-06T18:00:00-04:00",
-        "end": "2026-10-07T02:33:36.675527-04:00"
+        "end": "2026-10-07T02:38:41.029490-04:00"
       },
       "sweep": {
         "swept": null,
@@ -181,10 +181,10 @@
         "open": 31472.25,
         "high": 31497.75,
         "low": 31451.0,
-        "close": 31460.25,
+        "close": 31463.5,
         "n": 4,
         "start": "2026-10-07T00:00:00-04:00",
-        "end": "2026-10-07T02:33:36.675527-04:00"
+        "end": "2026-10-07T02:38:41.029490-04:00"
       },
       "sweep": {
         "swept": null,
@@ -219,11 +219,11 @@
       "cur": {
         "open": 31484.5,
         "high": 31497.75,
-        "low": 31456.75,
-        "close": 31460.25,
-        "n": 55,
+        "low": 31456.5,
+        "close": 31463.75,
+        "n": 60,
         "start": "2026-10-07T01:30:00-04:00",
-        "end": "2026-10-07T02:33:36.675527-04:00"
+        "end": "2026-10-07T02:38:41.029490-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -247,47 +247,37 @@
     },
     "Micro": {
       "prev": {
-        "open": 31484.0,
-        "high": 31484.0,
-        "low": 31459.75,
-        "close": 31461.75,
-        "n": 22,
-        "start": "2026-10-07T01:52:30-04:00",
-        "end": "2026-10-07T02:15:00-04:00"
-      },
-      "cur": {
         "open": 31462.5,
         "high": 31468.25,
-        "low": 31456.75,
-        "close": 31460.25,
-        "n": 10,
+        "low": 31456.5,
+        "close": 31463.75,
+        "n": 15,
         "start": "2026-10-07T02:15:00-04:00",
-        "end": "2026-10-07T02:33:36.675527-04:00"
+        "end": "2026-10-07T02:37:30-04:00"
       },
+      "cur": null,
       "sweep": {
-        "swept": "low",
-        "prev_high": 31484.0,
-        "prev_low": 31459.75,
-        "note": "took the previous quarter low 31,459.75"
+        "swept": null,
+        "note": "not enough bars yet"
       },
       "ssmt": {
         "type": null,
-        "note": "both markets did the same thing at this seam - no divergence",
+        "note": "not enough bars in one of the quarters",
         "leader": null,
         "filter_ok": null
       },
       "shape": "AMD-X",
       "shape_why": "Q1 ranged 1.3x the usual with 1% directional body - it behaved like accumulation",
-      "quarter": "Q3",
-      "job": "Distribution",
-      "start": "2026-10-07T02:15:00-04:00",
-      "end": "2026-10-07T02:37:30-04:00"
+      "quarter": "Q4",
+      "job": "X - continuation / reversal",
+      "start": "2026-10-07T02:37:30-04:00",
+      "end": "2026-10-07T03:00:00-04:00"
     }
   },
   "gb": {
     "on": false,
-    "minute": 33,
-    "next_in_min": 2
+    "minute": 38,
+    "next_in_min": 51
   },
   "checklist": [
     {
@@ -312,7 +302,7 @@
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 2 min"
+      "detail": "next one in 51 min"
     },
     {
       "n": 5,
