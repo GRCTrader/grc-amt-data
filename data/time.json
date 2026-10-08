@@ -1,10 +1,10 @@
 {
-  "asof": "2026-10-07 23:51:02 ET",
-  "asof_epoch": 1791431462,
+  "asof": "2026-10-07 23:56:06 ET",
+  "asof_epoch": 1791431766,
   "session_date": "2026-10-08",
   "price": {
-    "NQ": 31385.25,
-    "ES": 7848.0
+    "NQ": 31380.5,
+    "ES": 7847.75
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "Asia",
       "start": "2026-10-07T18:00:00-04:00",
       "end": "2026-10-08T00:00:00-04:00",
-      "left_sec": 537,
+      "left_sec": 233,
       "phase": "Q1",
       "phase_name": "Accumulation",
       "phase_why": "Range builds. The market is loading, not going anywhere."
@@ -48,7 +48,7 @@
       "span": "block 4 of 4",
       "start": "2026-10-07T22:30:00-04:00",
       "end": "2026-10-08T00:00:00-04:00",
-      "left_sec": 537,
+      "left_sec": 233,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
@@ -59,21 +59,21 @@
       "span": "22.5 min",
       "start": "2026-10-07T23:37:30-04:00",
       "end": "2026-10-08T00:00:00-04:00",
-      "left_sec": 537,
+      "left_sec": 233,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
     },
     {
       "level": "Nano",
-      "q": 2,
+      "q": 3,
       "span": "5.625 min",
-      "start": "2026-10-07T23:48:45-04:00",
-      "end": "2026-10-07T23:54:22.500000-04:00",
-      "left_sec": 200,
-      "phase": "Q3",
-      "phase_name": "Distribution",
-      "phase_why": "The actual move. The quarter you want to be in."
+      "start": "2026-10-07T23:54:22.500000-04:00",
+      "end": "2026-10-08T00:00:00-04:00",
+      "left_sec": 233,
+      "phase": "Q4",
+      "phase_name": "Continuation / Reversal",
+      "phase_why": "It extends or it turns. The handover."
     }
   ],
   "chains": [
@@ -81,7 +81,8 @@
       "Weekly",
       "Daily",
       "90 minute",
-      "Micro"
+      "Micro",
+      "Nano"
     ]
   ],
   "true_opens": [
@@ -149,10 +150,10 @@
         "open": 31403.0,
         "high": 31466.0,
         "low": 31372.25,
-        "close": 31385.25,
+        "close": 31380.5,
         "n": 7,
         "start": "2026-10-07T18:00:00-04:00",
-        "end": "2026-10-07T23:51:02.156315-04:00"
+        "end": "2026-10-07T23:56:06.930488-04:00"
       },
       "sweep": {
         "swept": null,
@@ -187,10 +188,10 @@
         "open": 31403.0,
         "high": 31466.0,
         "low": 31372.25,
-        "close": 31385.25,
+        "close": 31380.5,
         "n": 7,
         "start": "2026-10-07T18:00:00-04:00",
-        "end": "2026-10-07T23:51:02.156315-04:00"
+        "end": "2026-10-07T23:56:06.930488-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -206,7 +207,7 @@
         "filter_note": "he wants BOTH above this quarter's open for a short"
       },
       "shape": "AMD-X",
-      "shape_why": "Q1 ranged 0.9x the usual with 19% directional body - it behaved like accumulation",
+      "shape_why": "Q1 ranged 0.9x the usual with 24% directional body - it behaved like accumulation",
       "quarter": "Q1",
       "job": "Accumulation",
       "start": "2026-10-07T18:00:00-04:00",
@@ -225,11 +226,11 @@
       "cur": {
         "open": 31440.5,
         "high": 31466.0,
-        "low": 31377.0,
-        "close": 31385.25,
-        "n": 72,
+        "low": 31375.5,
+        "close": 31380.5,
+        "n": 78,
         "start": "2026-10-07T22:30:00-04:00",
-        "end": "2026-10-07T23:51:02.156315-04:00"
+        "end": "2026-10-07T23:56:06.930488-04:00"
       },
       "sweep": {
         "swept": "both",
@@ -263,23 +264,24 @@
       "cur": {
         "open": 31396.5,
         "high": 31397.25,
-        "low": 31385.25,
-        "close": 31385.25,
-        "n": 4,
+        "low": 31375.5,
+        "close": 31380.5,
+        "n": 10,
         "start": "2026-10-07T23:37:30-04:00",
-        "end": "2026-10-07T23:51:02.156315-04:00"
+        "end": "2026-10-07T23:56:06.930488-04:00"
       },
       "sweep": {
-        "swept": null,
+        "swept": "low",
         "prev_high": 31418.5,
         "prev_low": 31377.0,
-        "note": "still inside 31,377.00-31,418.50"
+        "note": "took the previous quarter low 31,377.00"
       },
       "ssmt": {
-        "type": null,
-        "note": "both markets did the same thing at this seam - no divergence",
-        "leader": null,
-        "filter_ok": null
+        "type": "bullish",
+        "note": "NQ took the previous quarter low, ES did not",
+        "leader": "NQ",
+        "filter_ok": true,
+        "filter_note": "both below this quarter's open"
       },
       "shape": "AMD-X",
       "shape_why": "Q1 ranged 1.3x the usual with 39% directional body - it behaved like accumulation",
@@ -291,8 +293,8 @@
   },
   "gb": {
     "on": false,
-    "minute": 51,
-    "next_in_min": 38
+    "minute": 56,
+    "next_in_min": 33
   },
   "checklist": [
     {
@@ -317,7 +319,7 @@
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 38 min"
+      "detail": "next one in 33 min"
     },
     {
       "n": 5,
