@@ -1,10 +1,10 @@
 {
-  "asof": "2026-10-09 14:02:45 ET",
-  "asof_epoch": 1791568965,
+  "asof": "2026-10-09 14:07:49 ET",
+  "asof_epoch": 1791569269,
   "session_date": "2026-10-09",
   "price": {
-    "NQ": 31087.5,
-    "ES": 7856.75
+    "NQ": 31096.5,
+    "ES": 7860.0
   },
   "cycles": [
     {
@@ -34,7 +34,7 @@
       "span": "New York PM",
       "start": "2026-10-09T12:00:00-04:00",
       "end": "2026-10-09T18:00:00-04:00",
-      "left_sec": 14234,
+      "left_sec": 13930,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
@@ -45,7 +45,7 @@
       "span": "block 2 of 4",
       "start": "2026-10-09T13:30:00-04:00",
       "end": "2026-10-09T15:00:00-04:00",
-      "left_sec": 3434,
+      "left_sec": 3130,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
@@ -56,30 +56,24 @@
       "span": "22.5 min",
       "start": "2026-10-09T13:52:30-04:00",
       "end": "2026-10-09T14:15:00-04:00",
-      "left_sec": 734,
+      "left_sec": 430,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
     },
     {
       "level": "Nano",
-      "q": 1,
+      "q": 2,
       "span": "5.625 min",
-      "start": "2026-10-09T13:58:07.500000-04:00",
-      "end": "2026-10-09T14:03:45-04:00",
-      "left_sec": 59,
-      "phase": "Q2",
-      "phase_name": "Manipulation",
-      "phase_why": "The Judas swing. Price runs the obvious stops."
+      "start": "2026-10-09T14:03:45-04:00",
+      "end": "2026-10-09T14:09:22.500000-04:00",
+      "left_sec": 92,
+      "phase": "Q3",
+      "phase_name": "Distribution",
+      "phase_why": "The actual move. The quarter you want to be in."
     }
   ],
-  "chains": [
-    [
-      "90 minute",
-      "Micro",
-      "Nano"
-    ]
-  ],
+  "chains": [],
   "true_opens": [
     {
       "code": "TMO",
@@ -107,27 +101,29 @@
       "name": "true session open",
       "at": "2026-10-09T13:30:00-04:00",
       "px": 31088.5,
-      "side": "below"
+      "side": "above"
     },
     {
       "code": "TMSO",
       "name": "true micro-session open",
       "at": "2026-10-09T13:52:30-04:00",
-      "px": 31087.5,
-      "side": "below"
+      "px": 31091.5,
+      "side": "above"
     }
   ],
   "opens_filter": {
-    "above": [],
+    "above": [
+      "TSO",
+      "TMSO"
+    ],
     "below": [
       "TMO",
       "TWO",
-      "TDO",
-      "TSO"
+      "TDO"
     ],
     "known": 5,
     "buy_ok": true,
-    "sell_ok": false
+    "sell_ok": true
   },
   "detail": {
     "Weekly": {
@@ -144,10 +140,10 @@
         "open": 31020.5,
         "high": 31266.5,
         "low": 30953.0,
-        "close": 31090.5,
+        "close": 31096.5,
         "n": 21,
         "start": "2026-10-08T18:00:00-04:00",
-        "end": "2026-10-09T14:02:45.048599-04:00"
+        "end": "2026-10-09T14:07:49.809015-04:00"
       },
       "sweep": {
         "swept": null,
@@ -163,7 +159,7 @@
         "filter_note": "both above this quarter's open"
       },
       "shape": "AMD-X",
-      "shape_why": "Q1 ranged 0.7x the usual with 22% directional body - it behaved like accumulation",
+      "shape_why": "Q1 ranged 0.7x the usual with 24% directional body - it behaved like accumulation",
       "quarter": "Q1",
       "job": "Accumulation",
       "start": "2026-10-08T18:00:00-04:00",
@@ -183,10 +179,10 @@
         "open": 31063.5,
         "high": 31122.5,
         "low": 31036.25,
-        "close": 31090.5,
+        "close": 31096.5,
         "n": 3,
         "start": "2026-10-09T12:00:00-04:00",
-        "end": "2026-10-09T14:02:45.048599-04:00"
+        "end": "2026-10-09T14:07:49.809015-04:00"
       },
       "sweep": {
         "swept": null,
@@ -222,10 +218,10 @@
         "open": 31088.5,
         "high": 31101.0,
         "low": 31072.0,
-        "close": 31087.5,
-        "n": 24,
+        "close": 31096.5,
+        "n": 29,
         "start": "2026-10-09T13:30:00-04:00",
-        "end": "2026-10-09T14:02:45.048599-04:00"
+        "end": "2026-10-09T14:07:49.809015-04:00"
       },
       "sweep": {
         "swept": null,
@@ -257,13 +253,13 @@
         "end": "2026-10-09T13:52:30-04:00"
       },
       "cur": {
-        "open": 31087.5,
-        "high": 31087.5,
-        "low": 31087.5,
-        "close": 31087.5,
-        "n": 1,
+        "open": 31091.5,
+        "high": 31099.75,
+        "low": 31090.0,
+        "close": 31096.5,
+        "n": 6,
         "start": "2026-10-09T13:52:30-04:00",
-        "end": "2026-10-09T14:02:45.048599-04:00"
+        "end": "2026-10-09T14:07:49.809015-04:00"
       },
       "sweep": {
         "swept": null,
@@ -272,10 +268,11 @@
         "note": "still inside 31,072.00-31,101.00"
       },
       "ssmt": {
-        "type": null,
-        "note": "both markets did the same thing at this seam - no divergence",
-        "leader": null,
-        "filter_ok": null
+        "type": "bearish",
+        "note": "ES took the previous quarter high, NQ did not",
+        "leader": "ES",
+        "filter_ok": true,
+        "filter_note": "both above this quarter's open"
       },
       "shape": "AMD-X",
       "shape_why": "Q1 ranged 0.6x the usual with 14% directional body - it behaved like accumulation",
@@ -287,8 +284,8 @@
   },
   "gb": {
     "on": false,
-    "minute": 2,
-    "next_in_min": 27
+    "minute": 7,
+    "next_in_min": 22
   },
   "checklist": [
     {
@@ -307,13 +304,13 @@
       "n": 3,
       "step": "SSMT / ISMT, above or below true opens",
       "ok": false,
-      "detail": "no divergence - both markets did the same thing at this seam - no divergence; price is above 0 and below 4 of 5 true opens"
+      "detail": "no divergence - both markets did the same thing at this seam - no divergence; price is above 2 and below 3 of 5 true opens"
     },
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 27 min"
+      "detail": "next one in 22 min"
     },
     {
       "n": 5,
