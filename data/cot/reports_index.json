@@ -1,6 +1,28 @@
 {
-  "updated": "2026-10-04T10:03:51.018294-04:00",
+  "updated": "2026-10-11T10:01:11.203232-04:00",
   "reports": [
+    {
+      "market_code": "ES",
+      "report_date": "2026-10-06",
+      "publish_date": "2026-10-11",
+      "site_url": "https://grctrader.netlify.app/cot/es",
+      "status": "ok",
+      "correction_note": null,
+      "bias": "Strongly Bullish",
+      "report_url": "data/cot/reports/es-2026-10-06.json",
+      "week_review": null
+    },
+    {
+      "market_code": "NQ",
+      "report_date": "2026-10-06",
+      "publish_date": "2026-10-11",
+      "site_url": "https://grctrader.netlify.app/cot/nq",
+      "status": "ok",
+      "correction_note": null,
+      "bias": "Strongly Bearish",
+      "report_url": "data/cot/reports/nq-2026-10-06.json",
+      "week_review": null
+    },
     {
       "market_code": "ES",
       "report_date": "2026-09-29",
@@ -10,7 +32,76 @@
       "correction_note": null,
       "bias": "Bullish",
       "report_url": "data/cot/reports/es-2026-09-29.json",
-      "week_review": null
+      "week_review": {
+        "week_start": "2026-10-05",
+        "week_end": "2026-10-09",
+        "bias": "Bullish",
+        "days": [
+          {
+            "date": "2026-10-05",
+            "weekday": "Monday",
+            "open": 7781.5,
+            "high": 7847.5,
+            "low": 7760.25,
+            "close": 7826.25,
+            "direction": 1,
+            "narrative": "opened 7782, sold down to 7760, recovered to close 7826 (+45)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-10-06",
+            "weekday": "Tuesday",
+            "open": 7831.75,
+            "high": 7897.5,
+            "low": 7829.0,
+            "close": 7874.0,
+            "direction": 1,
+            "narrative": "opened 7832, closed higher at 7874 (+42)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-10-07",
+            "weekday": "Wednesday",
+            "open": 7881.5,
+            "high": 7884.5,
+            "low": 7815.75,
+            "close": 7852.75,
+            "direction": -1,
+            "narrative": "opened 7882, closed lower at 7853 (-29)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-10-08",
+            "weekday": "Thursday",
+            "open": 7850.75,
+            "high": 7858.25,
+            "low": 7783.0,
+            "close": 7816.25,
+            "direction": -1,
+            "narrative": "opened 7851, closed lower at 7816 (-34)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-10-09",
+            "weekday": "Friday",
+            "open": 7820.5,
+            "high": 7870.5,
+            "low": 7817.0,
+            "close": 7859.75,
+            "direction": 1,
+            "narrative": "opened 7820, closed higher at 7860 (+39)",
+            "bot_read": null
+          }
+        ],
+        "week_net_pct": 1.01,
+        "verdict": "correct",
+        "score": 84,
+        "components": {
+          "net_direction": 60,
+          "daily_agreement": 24
+        },
+        "review_text": "WHAT HAPPENED:\nThe engine correctly predicted the net bullish direction for the week (+1.01%), but lost points on daily agreement due to a sharp two-day pullback on Wednesday and Thursday.\n\nWHY IT MISSED:\nThe engine assigned High confidence based on upper 70% range positioning, but relied on an aging bullish nodule from nearly a month prior (2026-09-08) while active commercial hedging was classified as neutral. This neutral hedging allowed mid-week counter-trend chop, which conflicted with the High confidence output.\n\nSUGGESTED IMPROVEMENT:\nConsider adding a rule that automatically caps bias confidence at Moderate if the supporting nodule signal is older than 14 calendar days and active commercial hedging remains neutral."
+      }
     },
     {
       "market_code": "NQ",
@@ -21,7 +112,98 @@
       "correction_note": null,
       "bias": "Neutral",
       "report_url": "data/cot/reports/nq-2026-09-29.json",
-      "week_review": null
+      "week_review": {
+        "week_start": "2026-10-05",
+        "week_end": "2026-10-09",
+        "bias": "Neutral",
+        "days": [
+          {
+            "date": "2026-10-05",
+            "weekday": "Monday",
+            "open": 31059.0,
+            "high": 31371.0,
+            "low": 30957.5,
+            "close": 31317.75,
+            "direction": 1,
+            "narrative": "opened 31059, sold down to 30958, recovered to close 31318 (+259)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "rotational_balance",
+              "model_correct": 0,
+              "detail": "Held value 31065-31270"
+            }
+          },
+          {
+            "date": "2026-10-06",
+            "weekday": "Tuesday",
+            "open": 31346.75,
+            "high": 31616.5,
+            "low": 31309.25,
+            "close": 31483.25,
+            "direction": 1,
+            "narrative": "opened 31347, closed higher at 31483 (+136)",
+            "bot_read": {
+              "predicted_model": "B",
+              "actual_model": "trend_up",
+              "model_correct": 1,
+              "detail": "Accepted above VAH 31293, closed 31584 (top of range)"
+            }
+          },
+          {
+            "date": "2026-10-07",
+            "weekday": "Wednesday",
+            "open": 31510.0,
+            "high": 31521.0,
+            "low": 31143.0,
+            "close": 31402.25,
+            "direction": -1,
+            "narrative": "opened 31510, closed lower at 31402 (-108)",
+            "bot_read": {
+              "predicted_model": "B",
+              "actual_model": "range_expansion",
+              "model_correct": 0,
+              "detail": "Two-sided, range 31143-31288, close 31228"
+            }
+          },
+          {
+            "date": "2026-10-08",
+            "weekday": "Thursday",
+            "open": 31403.0,
+            "high": 31466.0,
+            "low": 30792.0,
+            "close": 30969.5,
+            "direction": -1,
+            "narrative": "opened 31403, closed lower at 30970 (-434)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "rotational_balance",
+              "model_correct": 0,
+              "detail": "Held value 31176-31352"
+            }
+          },
+          {
+            "date": "2026-10-09",
+            "weekday": "Friday",
+            "open": 31020.5,
+            "high": 31266.5,
+            "low": 30953.0,
+            "close": 31108.75,
+            "direction": 1,
+            "narrative": "opened 31020, sold down to 30953, recovered to close 31109 (+88)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "rotational_balance",
+              "model_correct": 0,
+              "detail": "Held value 30941-31272"
+            }
+          }
+        ],
+        "week_net_pct": 0.16,
+        "verdict": "no_call",
+        "score": null,
+        "components": {},
+        "review_text": null
+      }
     },
     {
       "market_code": "ES",
