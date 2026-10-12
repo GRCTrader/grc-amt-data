@@ -1,56 +1,51 @@
 {
-  "asof": "2026-10-09 11:01 ET",
-  "slot": "11:01",
-  "price": 31067.0,
+  "asof": "2026-10-12 09:31 ET",
+  "slot": "09:31",
+  "price": 31059.75,
   "bias": "NEUTRAL",
   "scenarios": [
     {
       "model": "range_expansion",
-      "probability": 32.3,
-      "base_rate": 32,
+      "probability": 29.3,
+      "base_rate": 29,
       "drivers": [
         "+ calibration: engine ran cold on this model (35% real vs 0% claimed)",
-        "calibrated: engine 42%; base rate 33%; engine runs cold on this one (1.20x)"
+        "calibrated: engine 42%; base rate 32%; engine runs cold on this one (1.19x)"
       ],
       "engine_probability": 42
     },
     {
-      "model": "trend_up",
-      "probability": 19.8,
-      "base_rate": 34,
-      "drivers": [
-        "\u2212 open not above value",
-        "+ already 100% long overnight \u2014 historically a continuation tell, not a fade",
-        "\u2212 large +GEX dampens trends",
-        "+ calibration: engine ran cold on this model (26% real vs 0% claimed)",
-        "calibrated: engine 45%; base rate 14%"
-      ],
-      "engine_probability": 45
-    },
-    {
       "model": "rotational_balance",
-      "probability": 14.8,
-      "base_rate": 11,
+      "probability": 14.7,
+      "base_rate": 14,
       "drivers": [
         "+ open inside value",
-        "\u2212 gap argues against balance",
-        "+ +GEX pins price",
-        "+ price above gamma flip 31095 in +GEX \u2014 rotation regime",
-        "+ calibration: engine ran cold on this model (23% real vs 0% claimed)",
-        "calibrated: engine 31%; base rate 16%; engine runs hot on this one (0.67x)"
+        "\u2212 25 similar days: 12% historically",
+        "+ calibration: engine ran cold on this model (25% real vs 0% claimed)",
+        "calibrated: engine 35%; base rate 17%; engine runs hot on this one (0.67x)"
       ],
-      "engine_probability": 31
+      "engine_probability": 35
     },
     {
-      "model": "failed_auction",
-      "probability": 9.1,
-      "base_rate": 6,
+      "model": "trend_down",
+      "probability": 14.7,
+      "base_rate": 14,
       "drivers": [
-        "+ unswept liquidity to trap into",
-        "+ calibration: engine ran cold on this model (7% real vs 0% claimed)",
-        "calibrated: engine 11%; base rate 9%; engine runs cold on this one (1.36x)"
+        "\u2212 open not below value",
+        "+ calibration: engine ran cold on this model (17% real vs 0% claimed)",
+        "calibrated: engine 18%; base rate 10%; engine runs cold on this one (2.21x)"
       ],
-      "engine_probability": 11
+      "engine_probability": 18
+    },
+    {
+      "model": "short_covering",
+      "probability": 13.7,
+      "base_rate": 21,
+      "drivers": [
+        "+ calibration: engine ran cold on this model (16% real vs 0% claimed)",
+        "calibrated: engine 24%; base rate 5%; engine runs cold on this one (1.93x)"
+      ],
+      "engine_probability": 24
     }
   ],
   "invalidations": [
@@ -58,23 +53,23 @@
       "scenario": "range_expansion",
       "status": "armed",
       "condition": "close_below",
-      "level": 30680.0,
+      "level": 30910.0,
       "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance below the put wall 30680 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
+      "meaning": "\u26a1 GAMMA: acceptance below the put wall 30910 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
     },
     {
       "scenario": "range_expansion",
       "status": "armed",
       "condition": "close_above",
-      "level": 31510.0,
+      "level": 31490.0,
       "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance above the call wall 31510 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
+      "meaning": "\u26a1 GAMMA: acceptance above the call wall 31490 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
     }
   ],
   "gex": {
-    "total_gex_bn": 1.77,
-    "flip_nq": 31095,
-    "call_wall_nq": 31510,
-    "put_wall_nq": 30680
+    "total_gex_bn": -0.16,
+    "flip_nq": 31075,
+    "call_wall_nq": 31490,
+    "put_wall_nq": 30910
   }
 }
