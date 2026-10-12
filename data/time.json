@@ -1,10 +1,10 @@
 {
-  "asof": "2026-10-12 19:11:34 ET",
-  "asof_epoch": 1791846694,
+  "asof": "2026-10-12 19:16:38 ET",
+  "asof_epoch": 1791846998,
   "session_date": "2026-10-13",
   "price": {
-    "NQ": 30875.5,
-    "ES": 7858.0
+    "NQ": 30856.25,
+    "ES": 7855.75
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "Asia",
       "start": "2026-10-12T18:00:00-04:00",
       "end": "2026-10-13T00:00:00-04:00",
-      "left_sec": 17305,
+      "left_sec": 17001,
       "phase": "Q1",
       "phase_name": "Accumulation",
       "phase_why": "Range builds. The market is loading, not going anywhere."
@@ -48,7 +48,7 @@
       "span": "block 1 of 4",
       "start": "2026-10-12T18:00:00-04:00",
       "end": "2026-10-12T19:30:00-04:00",
-      "left_sec": 1105,
+      "left_sec": 801,
       "phase": "Q1",
       "phase_name": "Accumulation",
       "phase_why": "Range builds. The market is loading, not going anywhere."
@@ -59,29 +59,28 @@
       "span": "22.5 min",
       "start": "2026-10-12T19:07:30-04:00",
       "end": "2026-10-12T19:30:00-04:00",
-      "left_sec": 1105,
+      "left_sec": 801,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
     },
     {
       "level": "Nano",
-      "q": 0,
+      "q": 1,
       "span": "5.625 min",
-      "start": "2026-10-12T19:07:30-04:00",
-      "end": "2026-10-12T19:13:07.500000-04:00",
-      "left_sec": 92,
-      "phase": "Q1",
-      "phase_name": "Accumulation",
-      "phase_why": "Range builds. The market is loading, not going anywhere."
+      "start": "2026-10-12T19:13:07.500000-04:00",
+      "end": "2026-10-12T19:18:45-04:00",
+      "left_sec": 126,
+      "phase": "Q2",
+      "phase_name": "Manipulation",
+      "phase_why": "The Judas swing. Price runs the obvious stops."
     }
   ],
   "chains": [
     [
       "Daily",
       "90 minute",
-      "Micro",
-      "Nano"
+      "Micro"
     ]
   ],
   "true_opens": [
@@ -146,11 +145,11 @@
       "cur": {
         "open": 30876.0,
         "high": 30906.0,
-        "low": 30872.25,
-        "close": 30875.5,
+        "low": 30849.25,
+        "close": 30856.25,
         "n": 3,
         "start": "2026-10-12T18:00:00-04:00",
-        "end": "2026-10-12T19:11:34.622435-04:00"
+        "end": "2026-10-12T19:16:38.414673-04:00"
       },
       "sweep": {
         "swept": null,
@@ -184,11 +183,11 @@
       "cur": {
         "open": 30876.0,
         "high": 30906.0,
-        "low": 30872.25,
-        "close": 30875.5,
+        "low": 30849.25,
+        "close": 30856.25,
         "n": 3,
         "start": "2026-10-12T18:00:00-04:00",
-        "end": "2026-10-12T19:11:34.622435-04:00"
+        "end": "2026-10-12T19:16:38.414673-04:00"
       },
       "sweep": {
         "swept": null,
@@ -203,7 +202,7 @@
         "filter_ok": null
       },
       "shape": "AMD-X",
-      "shape_why": "Q1 ranged 0.2x the usual with 1% directional body - it behaved like accumulation",
+      "shape_why": "Q1 ranged 0.3x the usual with 35% directional body - it behaved like accumulation",
       "quarter": "Q1",
       "job": "Accumulation",
       "start": "2026-10-12T18:00:00-04:00",
@@ -222,26 +221,27 @@
       "cur": {
         "open": 30876.0,
         "high": 30906.0,
-        "low": 30872.25,
-        "close": 30875.5,
-        "n": 63,
+        "low": 30849.25,
+        "close": 30856.25,
+        "n": 68,
         "start": "2026-10-12T18:00:00-04:00",
-        "end": "2026-10-12T19:11:34.622435-04:00"
+        "end": "2026-10-12T19:16:38.414673-04:00"
       },
       "sweep": {
-        "swept": "high",
+        "swept": "both",
         "prev_high": 30887.0,
         "prev_low": 30870.0,
-        "note": "took the previous quarter high 30,887.00"
+        "note": "both sides of the previous quarter taken"
       },
       "ssmt": {
-        "type": null,
-        "note": "both markets did the same thing at this seam - no divergence",
-        "leader": null,
-        "filter_ok": null
+        "type": "bullish",
+        "note": "NQ took the previous quarter low, ES did not",
+        "leader": "NQ",
+        "filter_ok": false,
+        "filter_note": "he wants BOTH below this quarter's open for a long"
       },
       "shape": "AMD-X",
-      "shape_why": "Q1 ranged 0.5x the usual with 1% directional body - it behaved like accumulation",
+      "shape_why": "Q1 ranged 0.8x the usual with 35% directional body - it behaved like accumulation",
       "quarter": "Q1",
       "job": "Accumulation",
       "start": "2026-10-12T18:00:00-04:00",
@@ -251,9 +251,9 @@
       "prev": {
         "open": 30897.25,
         "high": 30898.5,
-        "low": 30872.25,
-        "close": 30875.5,
-        "n": 18,
+        "low": 30849.25,
+        "close": 30856.25,
+        "n": 23,
         "start": "2026-10-12T18:45:00-04:00",
         "end": "2026-10-12T19:07:30-04:00"
       },
@@ -278,33 +278,33 @@
   },
   "gb": {
     "on": false,
-    "minute": 11,
-    "next_in_min": 18
+    "minute": 16,
+    "next_in_min": 13
   },
   "checklist": [
     {
       "n": 1,
       "step": "Identify XAMD / AMDX",
       "ok": true,
-      "detail": "AMD-X - Q1 ranged 0.5x the usual with 1% directional body - it behaved like accumulation"
+      "detail": "AMD-X - Q1 ranged 0.8x the usual with 35% directional body - it behaved like accumulation"
     },
     {
       "n": 2,
       "step": "Previous quarter sweep",
       "ok": true,
-      "detail": "took the previous quarter high 30,887.00"
+      "detail": "both sides of the previous quarter taken"
     },
     {
       "n": 3,
       "step": "SSMT / ISMT, above or below true opens",
       "ok": false,
-      "detail": "no divergence - both markets did the same thing at this seam - no divergence; price is above 0 and below 3 of 3 true opens"
+      "detail": "bullish - NQ took the previous quarter low, ES did not; he wants BOTH below this quarter's open for a long; price is above 0 and below 3 of 3 true opens"
     },
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 18 min"
+      "detail": "next one in 13 min"
     },
     {
       "n": 5,
