@@ -1,10 +1,10 @@
 {
-  "asof": "2026-10-13 11:30:51 ET",
-  "asof_epoch": 1791905451,
+  "asof": "2026-10-13 11:35:56 ET",
+  "asof_epoch": 1791905756,
   "session_date": "2026-10-13",
   "price": {
-    "NQ": 30712.25,
-    "ES": 7846.75
+    "NQ": 30683.0,
+    "ES": 7841.25
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "New York AM",
       "start": "2026-10-13T06:00:00-04:00",
       "end": "2026-10-13T12:00:00-04:00",
-      "left_sec": 1748,
+      "left_sec": 1443,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -48,7 +48,7 @@
       "span": "block 4 of 4",
       "start": "2026-10-13T10:30:00-04:00",
       "end": "2026-10-13T12:00:00-04:00",
-      "left_sec": 1748,
+      "left_sec": 1443,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
@@ -59,21 +59,21 @@
       "span": "22.5 min",
       "start": "2026-10-13T11:15:00-04:00",
       "end": "2026-10-13T11:37:30-04:00",
-      "left_sec": 398,
+      "left_sec": 93,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
     },
     {
       "level": "Nano",
-      "q": 2,
+      "q": 3,
       "span": "5.625 min",
-      "start": "2026-10-13T11:26:15-04:00",
-      "end": "2026-10-13T11:31:52.500000-04:00",
-      "left_sec": 61,
-      "phase": "Q3",
-      "phase_name": "Distribution",
-      "phase_why": "The actual move. The quarter you want to be in."
+      "start": "2026-10-13T11:31:52.500000-04:00",
+      "end": "2026-10-13T11:37:30-04:00",
+      "left_sec": 93,
+      "phase": "Q4",
+      "phase_name": "Continuation / Reversal",
+      "phase_why": "It extends or it turns. The handover."
     }
   ],
   "chains": [],
@@ -143,10 +143,10 @@
         "open": 30876.0,
         "high": 30906.0,
         "low": 30591.25,
-        "close": 30712.25,
+        "close": 30683.0,
         "n": 19,
         "start": "2026-10-12T18:00:00-04:00",
-        "end": "2026-10-13T11:30:51.456170-04:00"
+        "end": "2026-10-13T11:35:56.288863-04:00"
       },
       "sweep": {
         "swept": "low",
@@ -181,10 +181,10 @@
         "open": 30762.25,
         "high": 30814.75,
         "low": 30591.25,
-        "close": 30712.25,
+        "close": 30683.0,
         "n": 7,
         "start": "2026-10-13T06:00:00-04:00",
-        "end": "2026-10-13T11:30:51.456170-04:00"
+        "end": "2026-10-13T11:35:56.288863-04:00"
       },
       "sweep": {
         "swept": "both",
@@ -193,11 +193,10 @@
         "note": "both sides of the previous quarter taken"
       },
       "ssmt": {
-        "type": "bullish",
-        "note": "NQ took the previous quarter low, ES did not",
-        "leader": "NQ",
-        "filter_ok": true,
-        "filter_note": "both below this quarter's open"
+        "type": null,
+        "note": "both markets did the same thing at this seam - no divergence",
+        "leader": null,
+        "filter_ok": null
       },
       "shape": "X-AMD",
       "shape_why": "Q1 expanded 1.8x the usual range and closed 68% of the way in one direction - a reversal or continuation, not accumulation",
@@ -219,11 +218,11 @@
       "cur": {
         "open": 30752.25,
         "high": 30792.5,
-        "low": 30690.25,
-        "close": 30712.25,
-        "n": 52,
+        "low": 30673.0,
+        "close": 30683.0,
+        "n": 57,
         "start": "2026-10-13T10:30:00-04:00",
-        "end": "2026-10-13T11:30:51.456170-04:00"
+        "end": "2026-10-13T11:35:56.288863-04:00"
       },
       "sweep": {
         "swept": null,
@@ -258,17 +257,17 @@
       "cur": {
         "open": 30722.5,
         "high": 30731.0,
-        "low": 30704.0,
-        "close": 30712.25,
-        "n": 7,
+        "low": 30673.0,
+        "close": 30683.0,
+        "n": 12,
         "start": "2026-10-13T11:15:00-04:00",
-        "end": "2026-10-13T11:30:51.456170-04:00"
+        "end": "2026-10-13T11:35:56.288863-04:00"
       },
       "sweep": {
-        "swept": "high",
+        "swept": "both",
         "prev_high": 30728.0,
         "prev_low": 30690.25,
-        "note": "took the previous quarter high 30,728.00"
+        "note": "both sides of the previous quarter taken"
       },
       "ssmt": {
         "type": null,
@@ -285,9 +284,9 @@
     }
   },
   "gb": {
-    "on": false,
-    "minute": 30,
-    "next_in_min": 5
+    "on": true,
+    "minute": 35,
+    "next_in_min": 0
   },
   "checklist": [
     {
@@ -311,8 +310,8 @@
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
-      "ok": false,
-      "detail": "next one in 5 min"
+      "ok": true,
+      "detail": "on the anchor now"
     },
     {
       "n": 5,
