@@ -1,10 +1,10 @@
 {
-  "asof": "2026-10-13 03:33:04 ET",
-  "asof_epoch": 1791876784,
+  "asof": "2026-10-13 03:38:08 ET",
+  "asof_epoch": 1791877088,
   "session_date": "2026-10-13",
   "price": {
-    "NQ": 30663.25,
-    "ES": 7852.25
+    "NQ": 30643.25,
+    "ES": 7849.75
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "London",
       "start": "2026-10-13T00:00:00-04:00",
       "end": "2026-10-13T06:00:00-04:00",
-      "left_sec": 8815,
+      "left_sec": 8511,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
@@ -48,7 +48,7 @@
       "span": "block 3 of 4",
       "start": "2026-10-13T03:00:00-04:00",
       "end": "2026-10-13T04:30:00-04:00",
-      "left_sec": 3415,
+      "left_sec": 3111,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -59,21 +59,21 @@
       "span": "22.5 min",
       "start": "2026-10-13T03:22:30-04:00",
       "end": "2026-10-13T03:45:00-04:00",
-      "left_sec": 715,
+      "left_sec": 411,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
     },
     {
       "level": "Nano",
-      "q": 1,
+      "q": 2,
       "span": "5.625 min",
-      "start": "2026-10-13T03:28:07.500000-04:00",
-      "end": "2026-10-13T03:33:45-04:00",
-      "left_sec": 40,
-      "phase": "Q2",
-      "phase_name": "Manipulation",
-      "phase_why": "The Judas swing. Price runs the obvious stops."
+      "start": "2026-10-13T03:33:45-04:00",
+      "end": "2026-10-13T03:39:22.500000-04:00",
+      "left_sec": 74,
+      "phase": "Q3",
+      "phase_name": "Distribution",
+      "phase_why": "The actual move. The quarter you want to be in."
     }
   ],
   "chains": [],
@@ -111,18 +111,17 @@
       "name": "true micro-session open",
       "at": "2026-10-13T03:22:30-04:00",
       "px": 30662.75,
-      "side": "above"
+      "side": "below"
     }
   ],
   "opens_filter": {
-    "above": [
-      "TMSO"
-    ],
+    "above": [],
     "below": [
       "TMO",
       "TWO",
       "TDO",
-      "TSO"
+      "TSO",
+      "TMSO"
     ],
     "known": 5,
     "buy_ok": true,
@@ -143,10 +142,10 @@
         "open": 30876.0,
         "high": 30906.0,
         "low": 30604.75,
-        "close": 30662.0,
+        "close": 30643.25,
         "n": 11,
         "start": "2026-10-12T18:00:00-04:00",
-        "end": "2026-10-13T03:33:04.351070-04:00"
+        "end": "2026-10-13T03:38:08.378481-04:00"
       },
       "sweep": {
         "swept": "low",
@@ -181,10 +180,10 @@
         "open": 30679.25,
         "high": 30741.25,
         "low": 30628.5,
-        "close": 30662.0,
+        "close": 30643.25,
         "n": 5,
         "start": "2026-10-13T00:00:00-04:00",
-        "end": "2026-10-13T03:33:04.351070-04:00"
+        "end": "2026-10-13T03:38:08.378481-04:00"
       },
       "sweep": {
         "swept": null,
@@ -219,10 +218,10 @@
         "open": 30681.0,
         "high": 30691.75,
         "low": 30628.5,
-        "close": 30663.25,
-        "n": 24,
+        "close": 30643.25,
+        "n": 30,
         "start": "2026-10-13T03:00:00-04:00",
-        "end": "2026-10-13T03:33:04.351070-04:00"
+        "end": "2026-10-13T03:38:08.378481-04:00"
       },
       "sweep": {
         "swept": "low",
@@ -257,11 +256,11 @@
       "cur": {
         "open": 30662.75,
         "high": 30668.5,
-        "low": 30661.5,
-        "close": 30663.25,
-        "n": 1,
+        "low": 30634.75,
+        "close": 30643.25,
+        "n": 7,
         "start": "2026-10-13T03:22:30-04:00",
-        "end": "2026-10-13T03:33:04.351070-04:00"
+        "end": "2026-10-13T03:38:08.378481-04:00"
       },
       "sweep": {
         "swept": null,
@@ -285,8 +284,8 @@
   },
   "gb": {
     "on": false,
-    "minute": 33,
-    "next_in_min": 2
+    "minute": 38,
+    "next_in_min": 51
   },
   "checklist": [
     {
@@ -305,13 +304,13 @@
       "n": 3,
       "step": "SSMT / ISMT, above or below true opens",
       "ok": false,
-      "detail": "bearish - ES took the previous quarter high, NQ did not; he wants BOTH above this quarter's open for a short; price is above 1 and below 4 of 5 true opens"
+      "detail": "bearish - ES took the previous quarter high, NQ did not; he wants BOTH above this quarter's open for a short; price is above 0 and below 5 of 5 true opens"
     },
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 2 min"
+      "detail": "next one in 51 min"
     },
     {
       "n": 5,
