@@ -1,10 +1,10 @@
 {
-  "asof": "2026-10-13 15:50:38 ET",
-  "asof_epoch": 1791921038,
+  "asof": "2026-10-13 15:55:43 ET",
+  "asof_epoch": 1791921343,
   "session_date": "2026-10-13",
   "price": {
-    "NQ": 30780.0,
-    "ES": 7859.75
+    "NQ": 30768.75,
+    "ES": 7857.0
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "New York PM",
       "start": "2026-10-13T12:00:00-04:00",
       "end": "2026-10-13T18:00:00-04:00",
-      "left_sec": 7761,
+      "left_sec": 7456,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
@@ -48,7 +48,7 @@
       "span": "block 3 of 4",
       "start": "2026-10-13T15:00:00-04:00",
       "end": "2026-10-13T16:30:00-04:00",
-      "left_sec": 2361,
+      "left_sec": 2056,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -59,7 +59,7 @@
       "span": "22.5 min",
       "start": "2026-10-13T15:45:00-04:00",
       "end": "2026-10-13T16:07:30-04:00",
-      "left_sec": 1011,
+      "left_sec": 706,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -70,7 +70,7 @@
       "span": "5.625 min",
       "start": "2026-10-13T15:50:37.500000-04:00",
       "end": "2026-10-13T15:56:15-04:00",
-      "left_sec": 336,
+      "left_sec": 31,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
@@ -111,18 +111,18 @@
       "name": "true micro-session open",
       "at": "2026-10-13T15:22:30-04:00",
       "px": 30769.0,
-      "side": "above"
+      "side": "below"
     }
   ],
   "opens_filter": {
     "above": [
       "TDO",
-      "TSO",
-      "TMSO"
+      "TSO"
     ],
     "below": [
       "TMO",
-      "TWO"
+      "TWO",
+      "TMSO"
     ],
     "known": 5,
     "buy_ok": true,
@@ -143,10 +143,10 @@
         "open": 30876.0,
         "high": 30906.0,
         "low": 30591.25,
-        "close": 30780.0,
+        "close": 30769.0,
         "n": 23,
         "start": "2026-10-12T18:00:00-04:00",
-        "end": "2026-10-13T15:50:38.848858-04:00"
+        "end": "2026-10-13T15:55:43.940557-04:00"
       },
       "sweep": {
         "swept": "low",
@@ -181,10 +181,10 @@
         "open": 30704.25,
         "high": 30808.0,
         "low": 30688.0,
-        "close": 30780.0,
+        "close": 30769.0,
         "n": 5,
         "start": "2026-10-13T12:00:00-04:00",
-        "end": "2026-10-13T15:50:38.848858-04:00"
+        "end": "2026-10-13T15:55:43.940557-04:00"
       },
       "sweep": {
         "swept": null,
@@ -219,10 +219,10 @@
         "open": 30738.25,
         "high": 30793.5,
         "low": 30734.25,
-        "close": 30780.0,
-        "n": 42,
+        "close": 30768.75,
+        "n": 47,
         "start": "2026-10-13T15:00:00-04:00",
-        "end": "2026-10-13T15:50:38.848858-04:00"
+        "end": "2026-10-13T15:55:43.940557-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -247,20 +247,30 @@
       "prev": {
         "open": 30769.0,
         "high": 30793.5,
-        "low": 30762.25,
-        "close": 30780.0,
-        "n": 19,
+        "low": 30759.0,
+        "close": 30771.0,
+        "n": 22,
         "start": "2026-10-13T15:22:30-04:00",
         "end": "2026-10-13T15:45:00-04:00"
       },
-      "cur": null,
+      "cur": {
+        "open": 30771.5,
+        "high": 30772.75,
+        "low": 30764.0,
+        "close": 30768.75,
+        "n": 2,
+        "start": "2026-10-13T15:45:00-04:00",
+        "end": "2026-10-13T15:55:43.940557-04:00"
+      },
       "sweep": {
         "swept": null,
-        "note": "not enough bars yet"
+        "prev_high": 30793.5,
+        "prev_low": 30759.0,
+        "note": "still inside 30,759.00-30,793.50"
       },
       "ssmt": {
         "type": null,
-        "note": "not enough bars in one of the quarters",
+        "note": "both markets did the same thing at this seam - no divergence",
         "leader": null,
         "filter_ok": null
       },
@@ -274,8 +284,8 @@
   },
   "gb": {
     "on": false,
-    "minute": 50,
-    "next_in_min": 39
+    "minute": 55,
+    "next_in_min": 34
   },
   "checklist": [
     {
@@ -294,13 +304,13 @@
       "n": 3,
       "step": "SSMT / ISMT, above or below true opens",
       "ok": false,
-      "detail": "no divergence - both markets did the same thing at this seam - no divergence; price is above 3 and below 2 of 5 true opens"
+      "detail": "no divergence - both markets did the same thing at this seam - no divergence; price is above 2 and below 3 of 5 true opens"
     },
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 39 min"
+      "detail": "next one in 34 min"
     },
     {
       "n": 5,
