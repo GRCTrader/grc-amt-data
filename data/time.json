@@ -1,10 +1,10 @@
 {
-  "asof": "2026-10-15 00:50:46 ET",
-  "asof_epoch": 1792039846,
+  "asof": "2026-10-15 00:55:50 ET",
+  "asof_epoch": 1792040150,
   "session_date": "2026-10-15",
   "price": {
-    "NQ": 29930.0,
-    "ES": 7744.0
+    "NQ": 29941.5,
+    "ES": 7744.25
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "London",
       "start": "2026-10-15T00:00:00-04:00",
       "end": "2026-10-15T06:00:00-04:00",
-      "left_sec": 18553,
+      "left_sec": 18249,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
@@ -48,7 +48,7 @@
       "span": "block 1 of 4",
       "start": "2026-10-15T00:00:00-04:00",
       "end": "2026-10-15T01:30:00-04:00",
-      "left_sec": 2353,
+      "left_sec": 2049,
       "phase": "Q1",
       "phase_name": "Accumulation",
       "phase_why": "Range builds. The market is loading, not going anywhere."
@@ -59,7 +59,7 @@
       "span": "22.5 min",
       "start": "2026-10-15T00:45:00-04:00",
       "end": "2026-10-15T01:07:30-04:00",
-      "left_sec": 1003,
+      "left_sec": 699,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -70,7 +70,7 @@
       "span": "5.625 min",
       "start": "2026-10-15T00:50:37.500000-04:00",
       "end": "2026-10-15T00:56:15-04:00",
-      "left_sec": 328,
+      "left_sec": 24,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
@@ -142,10 +142,10 @@
         "open": 30154.75,
         "high": 30158.5,
         "low": 29823.5,
-        "close": 29929.25,
+        "close": 29941.5,
         "n": 8,
         "start": "2026-10-14T18:00:00-04:00",
-        "end": "2026-10-15T00:50:46.074082-04:00"
+        "end": "2026-10-15T00:55:50.022271-04:00"
       },
       "sweep": {
         "swept": "low",
@@ -178,12 +178,12 @@
       },
       "cur": {
         "open": 29833.25,
-        "high": 29942.25,
+        "high": 29944.0,
         "low": 29828.25,
-        "close": 29929.25,
+        "close": 29941.5,
         "n": 2,
         "start": "2026-10-15T00:00:00-04:00",
-        "end": "2026-10-15T00:50:46.074082-04:00"
+        "end": "2026-10-15T00:55:50.022271-04:00"
       },
       "sweep": {
         "swept": null,
@@ -216,12 +216,12 @@
       },
       "cur": {
         "open": 29833.25,
-        "high": 29942.25,
+        "high": 29944.0,
         "low": 29828.25,
-        "close": 29930.0,
-        "n": 33,
+        "close": 29941.5,
+        "n": 38,
         "start": "2026-10-15T00:00:00-04:00",
-        "end": "2026-10-15T00:50:46.074082-04:00"
+        "end": "2026-10-15T00:55:50.022271-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -236,7 +236,7 @@
         "filter_ok": null
       },
       "shape": "AMD-X",
-      "shape_why": "Q1 ranged 1.0x the usual with 85% directional body - it behaved like accumulation",
+      "shape_why": "Q1 ranged 1.0x the usual with 94% directional body - it behaved like accumulation",
       "quarter": "Q1",
       "job": "Accumulation",
       "start": "2026-10-15T00:00:00-04:00",
@@ -247,21 +247,32 @@
         "open": 29913.75,
         "high": 29942.25,
         "low": 29904.5,
-        "close": 29930.0,
-        "n": 19,
+        "close": 29939.0,
+        "n": 22,
         "start": "2026-10-15T00:22:30-04:00",
         "end": "2026-10-15T00:45:00-04:00"
       },
-      "cur": null,
+      "cur": {
+        "open": 29938.75,
+        "high": 29944.0,
+        "low": 29937.5,
+        "close": 29941.5,
+        "n": 2,
+        "start": "2026-10-15T00:45:00-04:00",
+        "end": "2026-10-15T00:55:50.022271-04:00"
+      },
       "sweep": {
-        "swept": null,
-        "note": "not enough bars yet"
+        "swept": "high",
+        "prev_high": 29942.25,
+        "prev_low": 29904.5,
+        "note": "took the previous quarter high 29,942.25"
       },
       "ssmt": {
-        "type": null,
-        "note": "not enough bars in one of the quarters",
-        "leader": null,
-        "filter_ok": null
+        "type": "bearish",
+        "note": "NQ took the previous quarter high, ES did not",
+        "leader": "NQ",
+        "filter_ok": false,
+        "filter_note": "he wants BOTH above this quarter's open for a short"
       },
       "shape": "X-AMD",
       "shape_why": "Q1 expanded 1.6x the usual range and closed 88% of the way in one direction - a reversal or continuation, not accumulation",
@@ -273,15 +284,15 @@
   },
   "gb": {
     "on": false,
-    "minute": 50,
-    "next_in_min": 39
+    "minute": 55,
+    "next_in_min": 34
   },
   "checklist": [
     {
       "n": 1,
       "step": "Identify XAMD / AMDX",
       "ok": true,
-      "detail": "AMD-X - Q1 ranged 1.0x the usual with 85% directional body - it behaved like accumulation"
+      "detail": "AMD-X - Q1 ranged 1.0x the usual with 94% directional body - it behaved like accumulation"
     },
     {
       "n": 2,
@@ -299,7 +310,7 @@
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 39 min"
+      "detail": "next one in 34 min"
     },
     {
       "n": 5,
