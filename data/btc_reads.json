@@ -1,12 +1,18 @@
 {
-  "asof": "2026-10-15 18:10 ET",
+  "asof": "2026-10-16 18:10 ET",
   "venue": "Binance USD-M perpetual (BTCUSDT)",
   "method": "The day runs 18:00\u219218:00 New York. Levels are the prior day's range and value area, plus Asia+London (18:00\u219209:30). The read is graded at 18:00 against the move from the read price.",
   "record": {
-    "graded": 16,
+    "graded": 17,
     "correct": 9,
-    "hit_rate": 56.2,
+    "hit_rate": 52.9,
     "by_bias": {
+      "LONG": {
+        "n": 5,
+        "correct": 1,
+        "hit_rate": 20.0,
+        "avg_move_pct": 1.06
+      },
       "SHORT": {
         "n": 4,
         "correct": 3,
@@ -18,39 +24,96 @@
         "correct": 5,
         "hit_rate": 62.5,
         "avg_move_pct": 0.71
-      },
-      "LONG": {
-        "n": 4,
-        "correct": 1,
-        "hit_rate": 25.0,
-        "avg_move_pct": 1.16
       }
     },
     "sims": {
       "bias": {
-        "trades": 8,
+        "trades": 9,
         "no_trade": 8,
         "wins": 5,
-        "record": "5\u20133",
-        "total_r": 4.19,
-        "avg_r": 0.52,
-        "usd_per_coin": 1026.9,
-        "avg_pct": 0.15
+        "record": "5\u20134",
+        "total_r": 3.19,
+        "avg_r": 0.35,
+        "usd_per_coin": 798.0,
+        "avg_pct": 0.1
       },
       "plan": {
-        "trades": 16,
+        "trades": 17,
         "no_trade": 0,
-        "wins": 10,
-        "record": "10\u20136",
-        "total_r": -2.84,
-        "avg_r": -0.18,
-        "usd_per_coin": -509.5,
-        "avg_pct": -0.04
+        "wins": 11,
+        "record": "11\u20136",
+        "total_r": -2.4,
+        "avg_r": -0.14,
+        "usd_per_coin": -309.5,
+        "avg_pct": -0.02
       }
     }
   },
   "sim_note": "bias = take the side at the read price, stop at the nearest level the other way, target the next level along. plan = wait for a trigger to be accepted, then trade it from there. Both are 1 coin, no costs.",
   "reads": [
+    {
+      "date": "2026-10-16",
+      "posted_at": "2026-10-16T08:45:02.215096-04:00",
+      "price": 82241.4,
+      "bias": "LONG",
+      "location": "above prior value",
+      "note": "Trading +0.52% above yesterday's value area. Acceptance above 81,812 keeps the auction looking higher; a return inside says the move was a probe, not a decision.",
+      "levels": {
+        "prior_high": 82639.2,
+        "prior_low": 79732.3,
+        "vah": 81812.5,
+        "poc": 80962.5,
+        "val": 80187.5,
+        "ovn_high": 82900.5,
+        "ovn_low": 81637.7,
+        "adr_14": 2588.17,
+        "basis": -40.6
+      },
+      "up_level": 82462.5,
+      "dn_level": 82012.5,
+      "result": {
+        "status": "graded",
+        "bias": "LONG",
+        "correct": false,
+        "from_price": 82241.4,
+        "close": 81720.2,
+        "move": -521.2,
+        "move_pct": -0.63,
+        "high": 82459.8,
+        "low": 80780.0,
+        "up_pct": 0.27,
+        "down_pct": -1.78,
+        "trigger_first": "down",
+        "trigger_at": "2026-10-16T08:50:00-04:00",
+        "bars": 111,
+        "sim": {
+          "bias": {
+            "side": "long",
+            "entry": 82241.4,
+            "stop": 82012.5,
+            "target": 82550.9,
+            "exit": 82012.5,
+            "why": "stop",
+            "usd": -228.9,
+            "pct": -0.28,
+            "r": -1.0,
+            "at": "2026-10-16T08:50:00-04:00"
+          },
+          "plan": {
+            "side": "short",
+            "entry": 82012.5,
+            "stop": 82462.5,
+            "target": 81812.5,
+            "exit": 81812.5,
+            "why": "target",
+            "usd": 200.0,
+            "pct": 0.24,
+            "r": 0.44,
+            "at": "2026-10-16T09:30:00-04:00"
+          }
+        }
+      }
+    },
     {
       "date": "2026-10-15",
       "posted_at": "2026-10-15T08:45:02.732106-04:00",
