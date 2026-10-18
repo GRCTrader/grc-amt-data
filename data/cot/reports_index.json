@@ -1,6 +1,28 @@
 {
-  "updated": "2026-10-11T10:01:11.203232-04:00",
+  "updated": "2026-10-18T10:01:37.829838-04:00",
   "reports": [
+    {
+      "market_code": "ES",
+      "report_date": "2026-10-13",
+      "publish_date": "2026-10-18",
+      "site_url": "https://grctrader.netlify.app/cot/es",
+      "status": "ok",
+      "correction_note": null,
+      "bias": "Neutral",
+      "report_url": "data/cot/reports/es-2026-10-13.json",
+      "week_review": null
+    },
+    {
+      "market_code": "NQ",
+      "report_date": "2026-10-13",
+      "publish_date": "2026-10-18",
+      "site_url": "https://grctrader.netlify.app/cot/nq",
+      "status": "ok",
+      "correction_note": null,
+      "bias": "Neutral",
+      "report_url": "data/cot/reports/nq-2026-10-13.json",
+      "week_review": null
+    },
     {
       "market_code": "ES",
       "report_date": "2026-10-06",
@@ -10,7 +32,76 @@
       "correction_note": null,
       "bias": "Strongly Bullish",
       "report_url": "data/cot/reports/es-2026-10-06.json",
-      "week_review": null
+      "week_review": {
+        "week_start": "2026-10-12",
+        "week_end": "2026-10-16",
+        "bias": "Strongly Bullish",
+        "days": [
+          {
+            "date": "2026-10-12",
+            "weekday": "Monday",
+            "open": 7873.0,
+            "high": 7887.0,
+            "low": 7846.25,
+            "close": 7858.0,
+            "direction": -1,
+            "narrative": "opened 7873, pushed up to 7887, faded to close 7858 (-15)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-10-13",
+            "weekday": "Tuesday",
+            "open": 7855.5,
+            "high": 7864.0,
+            "low": 7834.5,
+            "close": 7855.75,
+            "direction": 0,
+            "narrative": "opened 7856, closed flat at 7856 (+0)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-10-14",
+            "weekday": "Wednesday",
+            "open": 7856.25,
+            "high": 7879.75,
+            "low": 7741.0,
+            "close": 7770.25,
+            "direction": -1,
+            "narrative": "opened 7856, pushed up to 7880, faded to close 7770 (-86)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-10-15",
+            "weekday": "Thursday",
+            "open": 7768.25,
+            "high": 7801.75,
+            "low": 7717.25,
+            "close": 7791.0,
+            "direction": 1,
+            "narrative": "opened 7768, sold down to 7717, recovered to close 7791 (+23)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-10-16",
+            "weekday": "Friday",
+            "open": 7788.75,
+            "high": 7809.5,
+            "low": 7676.0,
+            "close": 7704.25,
+            "direction": -1,
+            "narrative": "opened 7789, pushed up to 7810, faded to close 7704 (-84)",
+            "bot_read": null
+          }
+        ],
+        "week_net_pct": -2.14,
+        "verdict": "incorrect",
+        "score": 8,
+        "components": {
+          "net_direction": 0,
+          "daily_agreement": 8
+        },
+        "review_text": "WHAT HAPPENED:\nThe engine called for a Strongly Bullish week, but the E-mini S&P 500 instead experienced a significant decline of over 2% with mostly negative daily closes throughout the week.\n\nWHY IT MISSED:\nThe engine's high confidence bullish call primarily focused on the improving commercial net long positioning and its percentile ranking. However, being in the \"upper 74%\" suggests commercial positioning was already extended. This high level, despite improvement, might have indicated a mature bullish stance where further upside was limited, or even prone to profit-taking, rather than continued strength. The \"bullish nodule\" was also several weeks old.\n\nSUGGESTED IMPROVEMENT:\nConsider adding a rule that moderates confidence or triggers a warning when commercial positioning reaches the upper quartile of its range, even if still improving."
+      }
     },
     {
       "market_code": "NQ",
@@ -21,7 +112,101 @@
       "correction_note": null,
       "bias": "Strongly Bearish",
       "report_url": "data/cot/reports/nq-2026-10-06.json",
-      "week_review": null
+      "week_review": {
+        "week_start": "2026-10-12",
+        "week_end": "2026-10-16",
+        "bias": "Strongly Bearish",
+        "days": [
+          {
+            "date": "2026-10-12",
+            "weekday": "Monday",
+            "open": 31145.5,
+            "high": 31289.25,
+            "low": 30844.25,
+            "close": 30898.25,
+            "direction": -1,
+            "narrative": "opened 31146, pushed up to 31289, faded to close 30898 (-247)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "trend_down",
+              "model_correct": 0,
+              "detail": "Accepted below VAL 31058, closed 30917 (low of range)"
+            }
+          },
+          {
+            "date": "2026-10-13",
+            "weekday": "Tuesday",
+            "open": 30876.0,
+            "high": 30906.0,
+            "low": 30591.25,
+            "close": 30791.5,
+            "direction": -1,
+            "narrative": "opened 30876, closed lower at 30792 (-84)",
+            "bot_read": {
+              "predicted_model": "B",
+              "actual_model": "range_expansion",
+              "model_correct": 0,
+              "detail": "Two-sided, range 30591-30815, close 30696"
+            }
+          },
+          {
+            "date": "2026-10-14",
+            "weekday": "Wednesday",
+            "open": 30791.5,
+            "high": 30891.5,
+            "low": 30078.0,
+            "close": 30182.75,
+            "direction": -1,
+            "narrative": "opened 30792, closed lower at 30183 (-609)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "trend_down",
+              "model_correct": 0,
+              "detail": "Accepted below VAL 30635, closed 30440 (low of range)"
+            }
+          },
+          {
+            "date": "2026-10-15",
+            "weekday": "Thursday",
+            "open": 30154.75,
+            "high": 30196.75,
+            "low": 29622.5,
+            "close": 30143.75,
+            "direction": 0,
+            "narrative": "opened 30155, closed flat at 30144 (-11)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "range_expansion",
+              "model_correct": 1,
+              "detail": "Two-sided, range 29622-29937, close 29917"
+            }
+          },
+          {
+            "date": "2026-10-16",
+            "weekday": "Friday",
+            "open": 30089.0,
+            "high": 30225.0,
+            "low": 29268.75,
+            "close": 29391.5,
+            "direction": -1,
+            "narrative": "opened 30089, closed lower at 29392 (-698)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "rotational_balance",
+              "model_correct": 0,
+              "detail": "Held value 29668-29995"
+            }
+          }
+        ],
+        "week_net_pct": -5.63,
+        "verdict": "correct",
+        "score": 92,
+        "components": {
+          "net_direction": 60,
+          "daily_agreement": 32
+        },
+        "review_text": "WHAT HAPPENED: The engine's \"Strongly Bearish\" call was validated by a significant weekly Nasdaq-100 decline of -5.63%. However, the daily AM reads often incorrectly predicted specific price action types.\n\nWHY IT MISSED: The COT bias engine correctly identified strong directional pressure. The discrepancy lies in the daily AM read's granular classification. Extreme commercial positioning indicated a sustained move, yet daily rules frequently identified \"range_expansion\" patterns, failing to capture actual trend_down or rotational_balance.\n\nSUGGESTED IMPROVEMENT: Owner to review: Adjust daily rule-set's weighting of \"Strongly Bearish\" bias to reduce false \"range_expansion\" predictions and increase \"trend_down\" or \"rotational_balance\" calls."
+      }
     },
     {
       "market_code": "ES",
