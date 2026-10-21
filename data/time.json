@@ -1,10 +1,10 @@
 {
-  "asof": "2026-10-21 10:56:10 ET",
-  "asof_epoch": 1792594570,
+  "asof": "2026-10-21 11:01:16 ET",
+  "asof_epoch": 1792594876,
   "session_date": "2026-10-21",
   "price": {
-    "NQ": 29884.0,
-    "ES": 7770.5
+    "NQ": 29931.5,
+    "ES": 7777.5
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "New York AM",
       "start": "2026-10-21T06:00:00-04:00",
       "end": "2026-10-21T12:00:00-04:00",
-      "left_sec": 3829,
+      "left_sec": 3523,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -48,7 +48,7 @@
       "span": "block 4 of 4",
       "start": "2026-10-21T10:30:00-04:00",
       "end": "2026-10-21T12:00:00-04:00",
-      "left_sec": 3829,
+      "left_sec": 3523,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
@@ -59,21 +59,21 @@
       "span": "22.5 min",
       "start": "2026-10-21T10:52:30-04:00",
       "end": "2026-10-21T11:15:00-04:00",
-      "left_sec": 1129,
+      "left_sec": 823,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
     },
     {
       "level": "Nano",
-      "q": 0,
+      "q": 1,
       "span": "5.625 min",
-      "start": "2026-10-21T10:52:30-04:00",
-      "end": "2026-10-21T10:58:07.500000-04:00",
-      "left_sec": 116,
-      "phase": "Q1",
-      "phase_name": "Accumulation",
-      "phase_why": "Range builds. The market is loading, not going anywhere."
+      "start": "2026-10-21T10:58:07.500000-04:00",
+      "end": "2026-10-21T11:03:45-04:00",
+      "left_sec": 148,
+      "phase": "Q2",
+      "phase_name": "Manipulation",
+      "phase_why": "The Judas swing. Price runs the obvious stops."
     }
   ],
   "chains": [],
@@ -97,7 +97,7 @@
       "name": "true day open",
       "at": "2026-10-21T00:00:00-04:00",
       "px": 29909.25,
-      "side": "below"
+      "side": "above"
     },
     {
       "code": "TSO",
@@ -118,11 +118,10 @@
     "above": [
       "TMO",
       "TWO",
+      "TDO",
       "TSO"
     ],
-    "below": [
-      "TDO"
-    ],
+    "below": [],
     "known": 4,
     "buy_ok": false,
     "sell_ok": true
@@ -142,10 +141,10 @@
         "open": 29925.0,
         "high": 30010.25,
         "low": 29727.5,
-        "close": 29884.0,
+        "close": 29931.5,
         "n": 18,
         "start": "2026-10-20T18:00:00-04:00",
-        "end": "2026-10-21T10:56:10.652742-04:00"
+        "end": "2026-10-21T11:01:16.077378-04:00"
       },
       "sweep": {
         "swept": "high",
@@ -178,12 +177,12 @@
       },
       "cur": {
         "open": 29795.5,
-        "high": 29934.25,
+        "high": 29943.75,
         "low": 29727.5,
-        "close": 29884.0,
+        "close": 29931.5,
         "n": 6,
         "start": "2026-10-21T06:00:00-04:00",
-        "end": "2026-10-21T10:56:10.652742-04:00"
+        "end": "2026-10-21T11:01:16.077378-04:00"
       },
       "sweep": {
         "swept": "both",
@@ -216,24 +215,25 @@
       },
       "cur": {
         "open": 29858.25,
-        "high": 29908.0,
+        "high": 29943.75,
         "low": 29829.75,
-        "close": 29884.0,
-        "n": 18,
+        "close": 29931.5,
+        "n": 23,
         "start": "2026-10-21T10:30:00-04:00",
-        "end": "2026-10-21T10:56:10.652742-04:00"
+        "end": "2026-10-21T11:01:16.077378-04:00"
       },
       "sweep": {
-        "swept": null,
+        "swept": "high",
         "prev_high": 29934.25,
         "prev_low": 29771.0,
-        "note": "still inside 29,771.00-29,934.25"
+        "note": "took the previous quarter high 29,934.25"
       },
       "ssmt": {
-        "type": null,
-        "note": "both markets did the same thing at this seam - no divergence",
-        "leader": null,
-        "filter_ok": null
+        "type": "bearish",
+        "note": "NQ took the previous quarter high, ES did not",
+        "leader": "NQ",
+        "filter_ok": true,
+        "filter_note": "both above this quarter's open"
       },
       "shape": "AMD-X",
       "shape_why": "Q1 ranged 1.3x the usual with 53% directional body - it behaved like accumulation",
@@ -245,10 +245,10 @@
     "Micro": {
       "prev": {
         "open": 29858.25,
-        "high": 29908.0,
+        "high": 29943.75,
         "low": 29829.75,
-        "close": 29884.0,
-        "n": 18,
+        "close": 29931.5,
+        "n": 23,
         "start": "2026-10-21T10:30:00-04:00",
         "end": "2026-10-21T10:52:30-04:00"
       },
@@ -263,18 +263,18 @@
         "leader": null,
         "filter_ok": null
       },
-      "shape": "AMD-X",
-      "shape_why": "Q1 ranged 1.4x the usual with 33% directional body - it behaved like accumulation",
+      "shape": "X-AMD",
+      "shape_why": "Q1 expanded 2.1x the usual range and closed 64% of the way in one direction - a reversal or continuation, not accumulation",
       "quarter": "Q2",
-      "job": "Manipulation",
+      "job": "Accumulation",
       "start": "2026-10-21T10:52:30-04:00",
       "end": "2026-10-21T11:15:00-04:00"
     }
   },
   "gb": {
     "on": false,
-    "minute": 56,
-    "next_in_min": 33
+    "minute": 1,
+    "next_in_min": 28
   },
   "checklist": [
     {
@@ -286,20 +286,20 @@
     {
       "n": 2,
       "step": "Previous quarter sweep",
-      "ok": false,
-      "detail": "still inside 29,771.00-29,934.25"
+      "ok": true,
+      "detail": "took the previous quarter high 29,934.25"
     },
     {
       "n": 3,
       "step": "SSMT / ISMT, above or below true opens",
-      "ok": false,
-      "detail": "no divergence - both markets did the same thing at this seam - no divergence; price is above 3 and below 1 of 4 true opens"
+      "ok": true,
+      "detail": "bearish - NQ took the previous quarter high, ES did not; both above this quarter's open; price is above 4 and below 0 of 4 true opens"
     },
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 33 min"
+      "detail": "next one in 28 min"
     },
     {
       "n": 5,
