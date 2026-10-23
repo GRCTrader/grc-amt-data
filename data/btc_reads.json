@@ -1,12 +1,18 @@
 {
-  "asof": "2026-10-22 18:10 ET",
+  "asof": "2026-10-23 18:10 ET",
   "venue": "Binance USD-M perpetual (BTCUSDT)",
   "method": "The day runs 18:00\u219218:00 New York. Levels are the prior day's range and value area, plus Asia+London (18:00\u219209:30). The read is graded at 18:00 against the move from the read price.",
   "record": {
-    "graded": 21,
-    "correct": 11,
-    "hit_rate": 52.4,
+    "graded": 22,
+    "correct": 12,
+    "hit_rate": 54.5,
     "by_bias": {
+      "NEUTRAL": {
+        "n": 9,
+        "correct": 6,
+        "hit_rate": 66.7,
+        "avg_move_pct": 0.68
+      },
       "SHORT": {
         "n": 6,
         "correct": 4,
@@ -18,18 +24,12 @@
         "correct": 2,
         "hit_rate": 28.6,
         "avg_move_pct": 1.02
-      },
-      "NEUTRAL": {
-        "n": 8,
-        "correct": 5,
-        "hit_rate": 62.5,
-        "avg_move_pct": 0.71
       }
     },
     "sims": {
       "bias": {
         "trades": 13,
-        "no_trade": 8,
+        "no_trade": 9,
         "wins": 6,
         "record": "6\u20137",
         "total_r": 0.31,
@@ -38,19 +38,78 @@
         "avg_pct": 0.02
       },
       "plan": {
-        "trades": 21,
+        "trades": 22,
         "no_trade": 0,
-        "wins": 13,
-        "record": "13\u20138",
-        "total_r": -4.11,
-        "avg_r": -0.2,
-        "usd_per_coin": -847.8,
-        "avg_pct": -0.05
+        "wins": 14,
+        "record": "14\u20138",
+        "total_r": -3.75,
+        "avg_r": -0.17,
+        "usd_per_coin": -722.5,
+        "avg_pct": -0.04
       }
     }
   },
   "sim_note": "bias = take the side at the read price, stop at the nearest level the other way, target the next level along. plan = wait for a trigger to be accepted, then trade it from there. Both are 1 coin, no costs.",
   "reads": [
+    {
+      "date": "2026-10-23",
+      "posted_at": "2026-10-23T08:45:02.684031-04:00",
+      "price": 81744.8,
+      "bias": "NEUTRAL",
+      "location": "inside prior value",
+      "note": "Inside yesterday's value (80,888\u201382,788), around below the point of control 81,762. Balance until one edge is accepted \u2014 the edges are the trade, not the middle.",
+      "levels": {
+        "prior_high": 84800.0,
+        "prior_low": 80888.9,
+        "vah": 82787.5,
+        "poc": 81762.5,
+        "val": 80887.5,
+        "ovn_high": 82008.7,
+        "ovn_low": 81087.3,
+        "adr_14": 2777.17,
+        "basis": -33.2
+      },
+      "up_level": 81762.5,
+      "dn_level": 81411.0,
+      "result": {
+        "status": "graded",
+        "bias": "NEUTRAL",
+        "correct": true,
+        "from_price": 81744.8,
+        "close": 81365.8,
+        "move": -379.0,
+        "move_pct": -0.46,
+        "high": 82035.3,
+        "low": 81051.4,
+        "up_pct": 0.36,
+        "down_pct": -0.85,
+        "trigger_first": "up",
+        "trigger_at": "2026-10-23T09:20:00-04:00",
+        "bars": 111,
+        "sim": {
+          "bias": {
+            "why": "no trade",
+            "usd": 0.0,
+            "pct": 0.0,
+            "r": 0.0,
+            "side": "none",
+            "entry": null
+          },
+          "plan": {
+            "side": "long",
+            "entry": 81762.5,
+            "stop": 81411.0,
+            "target": 81887.8,
+            "exit": 81887.8,
+            "why": "target",
+            "usd": 125.3,
+            "pct": 0.15,
+            "r": 0.36,
+            "at": "2026-10-23T09:30:00-04:00"
+          }
+        }
+      }
+    },
     {
       "date": "2026-10-22",
       "posted_at": "2026-10-22T08:45:01.737097-04:00",
