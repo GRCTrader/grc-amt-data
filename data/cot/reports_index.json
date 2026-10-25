@@ -1,6 +1,28 @@
 {
-  "updated": "2026-10-18T10:01:37.829838-04:00",
+  "updated": "2026-10-25T10:01:13.202019-04:00",
   "reports": [
+    {
+      "market_code": "ES",
+      "report_date": "2026-10-20",
+      "publish_date": "2026-10-25",
+      "site_url": "https://grctrader.netlify.app/cot/es",
+      "status": "ok",
+      "correction_note": null,
+      "bias": "Neutral",
+      "report_url": "data/cot/reports/es-2026-10-20.json",
+      "week_review": null
+    },
+    {
+      "market_code": "NQ",
+      "report_date": "2026-10-20",
+      "publish_date": "2026-10-25",
+      "site_url": "https://grctrader.netlify.app/cot/nq",
+      "status": "ok",
+      "correction_note": null,
+      "bias": "Strongly Bearish",
+      "report_url": "data/cot/reports/nq-2026-10-20.json",
+      "week_review": null
+    },
     {
       "market_code": "ES",
       "report_date": "2026-10-13",
@@ -10,7 +32,73 @@
       "correction_note": null,
       "bias": "Neutral",
       "report_url": "data/cot/reports/es-2026-10-13.json",
-      "week_review": null
+      "week_review": {
+        "week_start": "2026-10-19",
+        "week_end": "2026-10-23",
+        "bias": "Neutral",
+        "days": [
+          {
+            "date": "2026-10-19",
+            "weekday": "Monday",
+            "open": 7679.5,
+            "high": 7773.25,
+            "low": 7677.0,
+            "close": 7734.5,
+            "direction": 1,
+            "narrative": "opened 7680, closed higher at 7734 (+55)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-10-20",
+            "weekday": "Tuesday",
+            "open": 7740.75,
+            "high": 7791.5,
+            "low": 7704.5,
+            "close": 7755.25,
+            "direction": 1,
+            "narrative": "opened 7741, sold down to 7704, recovered to close 7755 (+14)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-10-21",
+            "weekday": "Wednesday",
+            "open": 7785.0,
+            "high": 7812.25,
+            "low": 7751.0,
+            "close": 7800.25,
+            "direction": 1,
+            "narrative": "opened 7785, sold down to 7751, recovered to close 7800 (+15)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-10-22",
+            "weekday": "Thursday",
+            "open": 7797.0,
+            "high": 7798.75,
+            "low": 7676.75,
+            "close": 7704.5,
+            "direction": -1,
+            "narrative": "opened 7797, closed lower at 7704 (-92)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-10-23",
+            "weekday": "Friday",
+            "open": 7706.25,
+            "high": 7714.25,
+            "low": 7648.5,
+            "close": 7659.75,
+            "direction": -1,
+            "narrative": "opened 7706, closed lower at 7660 (-46)",
+            "bot_read": null
+          }
+        ],
+        "week_net_pct": -0.26,
+        "verdict": "no_call",
+        "score": null,
+        "components": {},
+        "review_text": null
+      }
     },
     {
       "market_code": "NQ",
@@ -21,7 +109,98 @@
       "correction_note": null,
       "bias": "Neutral",
       "report_url": "data/cot/reports/nq-2026-10-13.json",
-      "week_review": null
+      "week_review": {
+        "week_start": "2026-10-19",
+        "week_end": "2026-10-23",
+        "bias": "Neutral",
+        "days": [
+          {
+            "date": "2026-10-19",
+            "weekday": "Monday",
+            "open": 29227.0,
+            "high": 29983.5,
+            "low": 29226.0,
+            "close": 29722.5,
+            "direction": 1,
+            "narrative": "opened 29227, closed higher at 29722 (+496)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "rotational_balance",
+              "model_correct": 0,
+              "detail": "Held value 29305-29838"
+            }
+          },
+          {
+            "date": "2026-10-20",
+            "weekday": "Tuesday",
+            "open": 29745.5,
+            "high": 29903.5,
+            "low": 29391.75,
+            "close": 29675.25,
+            "direction": 0,
+            "narrative": "opened 29746, closed flat at 29675 (-70)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "failed_auction",
+              "model_correct": 0,
+              "detail": "Swept OVN low 29478, failed, closed 29866"
+            }
+          },
+          {
+            "date": "2026-10-21",
+            "weekday": "Wednesday",
+            "open": 29925.0,
+            "high": 30113.0,
+            "low": 29727.5,
+            "close": 30007.0,
+            "direction": 1,
+            "narrative": "opened 29925, sold down to 29728, recovered to close 30007 (+82)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "trend_up",
+              "model_correct": 0,
+              "detail": "Accepted above VAH 29762, closed 29908 (top of range)"
+            }
+          },
+          {
+            "date": "2026-10-22",
+            "weekday": "Thursday",
+            "open": 29984.0,
+            "high": 29993.25,
+            "low": 29033.0,
+            "close": 29142.0,
+            "direction": -1,
+            "narrative": "opened 29984, closed lower at 29142 (-842)",
+            "bot_read": {
+              "predicted_model": "B",
+              "actual_model": "trend_down",
+              "model_correct": 1,
+              "detail": "Accepted below VAL 29812, closed 29291 (low of range)"
+            }
+          },
+          {
+            "date": "2026-10-23",
+            "weekday": "Friday",
+            "open": 29116.5,
+            "high": 29326.0,
+            "low": 28987.0,
+            "close": 29117.75,
+            "direction": 0,
+            "narrative": "opened 29116, closed flat at 29118 (+1)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "failed_auction",
+              "model_correct": 0,
+              "detail": "Swept OVN low 29022, failed, closed 29292"
+            }
+          }
+        ],
+        "week_net_pct": -0.37,
+        "verdict": "no_call",
+        "score": null,
+        "components": {},
+        "review_text": null
+      }
     },
     {
       "market_code": "ES",
