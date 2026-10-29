@@ -1,93 +1,92 @@
 {
-  "asof": "2026-10-28 11:01 ET",
-  "slot": "11:01",
-  "price": 29809.5,
+  "asof": "2026-10-29 09:31 ET",
+  "slot": "09:31",
+  "price": 29687.5,
   "bias": "NEUTRAL",
   "scenarios": [
     {
-      "model": "trend_up",
-      "probability": 31.1,
-      "base_rate": 35,
+      "model": "trend_down",
+      "probability": 36.3,
+      "base_rate": 30,
       "drivers": [
-        "+ open above value",
-        "+ already 100% long overnight \u2014 historically a continuation tell, not a fade",
-        "+ price below gamma flip 30035 \u2014 momentum regime (soft; unconfirmed live)",
-        "\u2212 25 similar days: 36% historically",
-        "+ calibration: engine ran cold on this model (26% real vs 0% claimed)",
-        "calibrated: engine 80%; base rate 14%"
+        "+ open below value",
+        "+ already 100% short overnight \u2014 historically a continuation tell, not a squeeze risk",
+        "+ price below gamma flip 30050 \u2014 momentum regime (soft; unconfirmed live)",
+        "\u2212 25 similar days: 32% historically",
+        "+ calibration: engine ran cold on this model (20% real vs 0% claimed)",
+        "calibrated: engine 68%; base rate 12%; engine runs cold on this one (1.88x)"
       ],
-      "engine_probability": 80
+      "engine_probability": 68
     },
     {
       "model": "range_expansion",
-      "probability": 26.4,
-      "base_rate": 19,
+      "probability": 27.0,
+      "base_rate": 32,
       "drivers": [
-        "\u2212 OVN range compressed \u2014 discount; compression here doesn't reliably release into RTH",
         "+ -GEX fuels expansion",
-        "+ price below gamma flip 30035 \u2014 momentum regime",
-        "+ 25 similar days: 48% historically",
-        "+ calibration: engine ran cold on this model (31% real vs 0% claimed)",
-        "calibrated: engine 38%; base rate 30%"
+        "+ price below gamma flip 30050 \u2014 momentum regime",
+        "+ calibration: engine ran cold on this model (32% real vs 0% claimed)",
+        "calibrated: engine 58%; base rate 31%"
       ],
-      "engine_probability": 38
+      "engine_probability": 58
     },
     {
       "model": "rotational_balance",
-      "probability": 12.0,
-      "base_rate": 19,
+      "probability": 9.1,
+      "base_rate": 9,
       "drivers": [
         "\u2212 gap argues against balance",
-        "\u2212 price below gamma flip 30035 \u2014 fades lose fuel",
-        "\u2212 25 similar days: 0% historically",
+        "\u2212 -GEX amplifies moves",
+        "\u2212 price below gamma flip 30050 \u2014 fades lose fuel",
         "+ calibration: engine ran cold on this model (23% real vs 0% claimed)",
-        "calibrated: engine 21%; base rate 17%; engine runs hot on this one (0.67x)"
+        "calibrated: engine 17%; base rate 17%; engine runs hot on this one (0.67x)"
       ],
-      "engine_probability": 21
+      "engine_probability": 17
     },
     {
-      "model": "failed_auction",
-      "probability": 9.7,
-      "base_rate": 8,
+      "model": "short_covering",
+      "probability": 7.2,
+      "base_rate": 9,
       "drivers": [
-        "\u2212 open out of value near an OVN extreme \u2014 mild discount; proximity alone rarely confirms the reversal",
-        "+ unswept liquidity to trap into",
-        "+ calibration: engine ran cold on this model (10% real vs 0% claimed)",
-        "calibrated: engine 13%; base rate 10%; engine runs cold on this one (1.31x)"
+        "\u2212 open below value \u2014 discount; historically favors continued weakness over a covering rally",
+        "+ 100% short overnight into strength \u2014 trapped shorts",
+        "+ price below gamma flip 30050 \u2014 momentum regime (soft; unconfirmed live)",
+        "+ calibration: engine ran cold on this model (19% real vs 0% claimed)",
+        "calibrated: engine 11%; base rate 6%; engine runs cold on this one (1.86x)"
       ],
-      "engine_probability": 13
+      "engine_probability": 11
     }
   ],
   "invalidations": [
     {
-      "scenario": "trend_up",
-      "status": "armed",
-      "condition": "close_below",
-      "level": 29599.0,
-      "closes_needed": 2,
-      "meaning": "trend_up dead \u2014 acceptance back below POC 29599.0"
-    },
-    {
-      "scenario": "trend_up",
-      "status": "armed",
-      "condition": "close_below",
-      "level": 28960.0,
-      "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance below the put wall 28960 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
-    },
-    {
-      "scenario": "trend_up",
+      "scenario": "trend_down",
       "status": "armed",
       "condition": "close_above",
-      "level": 30200.0,
+      "level": 29868.0,
       "closes_needed": 2,
-      "meaning": "\u26a1 GAMMA: acceptance above the call wall 30200 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
+      "meaning": "trend_down dead \u2014 acceptance back above POC 29868.0"
+    },
+    {
+      "scenario": "trend_down",
+      "status": "armed",
+      "condition": "close_below",
+      "level": 28975.0,
+      "closes_needed": 2,
+      "meaning": "\u26a1 GAMMA: acceptance below the put wall 28975 \u2014 hedged floor becomes trapdoor, liquidation can ACCELERATE. Don't knife-catch; shorts get fuel."
+    },
+    {
+      "scenario": "trend_down",
+      "status": "armed",
+      "condition": "close_above",
+      "level": 30215.0,
+      "closes_needed": 2,
+      "meaning": "\u26a1 GAMMA: acceptance above the call wall 30215 \u2014 hedged ceiling becomes launchpad, dealers chase upside. Don't fade acceptance; longs get fuel."
     }
   ],
   "gex": {
-    "total_gex_bn": -0.81,
-    "flip_nq": 30035,
-    "call_wall_nq": 30200,
-    "put_wall_nq": 28960
+    "total_gex_bn": -3.33,
+    "flip_nq": 30050,
+    "call_wall_nq": 30215,
+    "put_wall_nq": 28975
   }
 }
