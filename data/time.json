@@ -1,10 +1,10 @@
 {
-  "asof": "2026-10-29 10:54:56 ET",
-  "asof_epoch": 1793285696,
+  "asof": "2026-10-29 11:00:01 ET",
+  "asof_epoch": 1793286001,
   "session_date": "2026-10-29",
   "price": {
-    "NQ": 29578.0,
-    "ES": 7755.75
+    "NQ": 29472.75,
+    "ES": 7738.25
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "New York AM",
       "start": "2026-10-29T06:00:00-04:00",
       "end": "2026-10-29T12:00:00-04:00",
-      "left_sec": 3903,
+      "left_sec": 3598,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -48,7 +48,7 @@
       "span": "block 4 of 4",
       "start": "2026-10-29T10:30:00-04:00",
       "end": "2026-10-29T12:00:00-04:00",
-      "left_sec": 3903,
+      "left_sec": 3598,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
@@ -59,21 +59,21 @@
       "span": "22.5 min",
       "start": "2026-10-29T10:52:30-04:00",
       "end": "2026-10-29T11:15:00-04:00",
-      "left_sec": 1203,
+      "left_sec": 898,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
     },
     {
       "level": "Nano",
-      "q": 0,
+      "q": 1,
       "span": "5.625 min",
-      "start": "2026-10-29T10:52:30-04:00",
-      "end": "2026-10-29T10:58:07.500000-04:00",
-      "left_sec": 190,
-      "phase": "Q1",
-      "phase_name": "Accumulation",
-      "phase_why": "Range builds. The market is loading, not going anywhere."
+      "start": "2026-10-29T10:58:07.500000-04:00",
+      "end": "2026-10-29T11:03:45-04:00",
+      "left_sec": 223,
+      "phase": "Q2",
+      "phase_name": "Manipulation",
+      "phase_why": "The Judas swing. Price runs the obvious stops."
     }
   ],
   "chains": [
@@ -103,7 +103,7 @@
       "name": "true day open",
       "at": "2026-10-29T00:00:00-04:00",
       "px": 29549.5,
-      "side": "above"
+      "side": "below"
     },
     {
       "code": "TSO",
@@ -121,12 +121,11 @@
     }
   ],
   "opens_filter": {
-    "above": [
-      "TDO"
-    ],
+    "above": [],
     "below": [
       "TMO",
       "TWO",
+      "TDO",
       "TSO"
     ],
     "known": 4,
@@ -148,10 +147,10 @@
         "open": 29793.5,
         "high": 29794.25,
         "low": 29405.0,
-        "close": 29578.0,
+        "close": 29470.25,
         "n": 18,
         "start": "2026-10-28T18:00:00-04:00",
-        "end": "2026-10-29T10:54:56.681617-04:00"
+        "end": "2026-10-29T11:00:01.728419-04:00"
       },
       "sweep": {
         "swept": "low",
@@ -186,10 +185,10 @@
         "open": 29697.0,
         "high": 29735.0,
         "low": 29405.0,
-        "close": 29578.0,
+        "close": 29470.25,
         "n": 6,
         "start": "2026-10-29T06:00:00-04:00",
-        "end": "2026-10-29T10:54:56.681617-04:00"
+        "end": "2026-10-29T11:00:01.728419-04:00"
       },
       "sweep": {
         "swept": "low",
@@ -223,11 +222,11 @@
       "cur": {
         "open": 29573.75,
         "high": 29625.0,
-        "low": 29531.75,
-        "close": 29578.0,
-        "n": 16,
+        "low": 29464.25,
+        "close": 29472.75,
+        "n": 21,
         "start": "2026-10-29T10:30:00-04:00",
-        "end": "2026-10-29T10:54:56.681617-04:00"
+        "end": "2026-10-29T11:00:01.728419-04:00"
       },
       "sweep": {
         "swept": null,
@@ -252,9 +251,9 @@
       "prev": {
         "open": 29573.75,
         "high": 29625.0,
-        "low": 29531.75,
-        "close": 29578.0,
-        "n": 16,
+        "low": 29464.25,
+        "close": 29472.75,
+        "n": 21,
         "start": "2026-10-29T10:30:00-04:00",
         "end": "2026-10-29T10:52:30-04:00"
       },
@@ -269,18 +268,18 @@
         "leader": null,
         "filter_ok": null
       },
-      "shape": "AMD-X",
-      "shape_why": "Q1 ranged 1.0x the usual with 5% directional body - it behaved like accumulation",
+      "shape": "X-AMD",
+      "shape_why": "Q1 expanded 1.6x the usual range and closed 63% of the way in one direction - a reversal or continuation, not accumulation",
       "quarter": "Q2",
-      "job": "Manipulation",
+      "job": "Accumulation",
       "start": "2026-10-29T10:52:30-04:00",
       "end": "2026-10-29T11:15:00-04:00"
     }
   },
   "gb": {
     "on": false,
-    "minute": 54,
-    "next_in_min": 35
+    "minute": 0,
+    "next_in_min": 29
   },
   "checklist": [
     {
@@ -299,13 +298,13 @@
       "n": 3,
       "step": "SSMT / ISMT, above or below true opens",
       "ok": false,
-      "detail": "no divergence - both markets did the same thing at this seam - no divergence; price is above 1 and below 3 of 4 true opens"
+      "detail": "no divergence - both markets did the same thing at this seam - no divergence; price is above 0 and below 4 of 4 true opens"
     },
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 35 min"
+      "detail": "next one in 29 min"
     },
     {
       "n": 5,
