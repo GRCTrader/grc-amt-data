@@ -1,10 +1,10 @@
 {
-  "asof": "2026-10-29 10:24:25 ET",
-  "asof_epoch": 1793283865,
+  "asof": "2026-10-29 10:29:29 ET",
+  "asof_epoch": 1793284169,
   "session_date": "2026-10-29",
   "price": {
-    "NQ": 29528.75,
-    "ES": 7742.25
+    "NQ": 29612.75,
+    "ES": 7755.25
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "New York AM",
       "start": "2026-10-29T06:00:00-04:00",
       "end": "2026-10-29T12:00:00-04:00",
-      "left_sec": 5734,
+      "left_sec": 5430,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -48,7 +48,7 @@
       "span": "block 3 of 4",
       "start": "2026-10-29T09:00:00-04:00",
       "end": "2026-10-29T10:30:00-04:00",
-      "left_sec": 334,
+      "left_sec": 30,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -59,7 +59,7 @@
       "span": "22.5 min",
       "start": "2026-10-29T10:07:30-04:00",
       "end": "2026-10-29T10:30:00-04:00",
-      "left_sec": 334,
+      "left_sec": 30,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
@@ -70,7 +70,7 @@
       "span": "5.625 min",
       "start": "2026-10-29T10:24:22.500000-04:00",
       "end": "2026-10-29T10:30:00-04:00",
-      "left_sec": 334,
+      "left_sec": 30,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
@@ -103,7 +103,7 @@
       "name": "true day open",
       "at": "2026-10-29T00:00:00-04:00",
       "px": 29549.5,
-      "side": "below"
+      "side": "above"
     },
     {
       "code": "TSO",
@@ -121,11 +121,12 @@
     }
   ],
   "opens_filter": {
-    "above": [],
+    "above": [
+      "TDO"
+    ],
     "below": [
       "TMO",
       "TWO",
-      "TDO",
       "TSO",
       "TMSO"
     ],
@@ -148,10 +149,10 @@
         "open": 29793.5,
         "high": 29794.25,
         "low": 29405.0,
-        "close": 29528.75,
+        "close": 29612.75,
         "n": 18,
         "start": "2026-10-28T18:00:00-04:00",
-        "end": "2026-10-29T10:24:25.190945-04:00"
+        "end": "2026-10-29T10:29:29.980789-04:00"
       },
       "sweep": {
         "swept": "low",
@@ -186,10 +187,10 @@
         "open": 29697.0,
         "high": 29735.0,
         "low": 29405.0,
-        "close": 29528.75,
+        "close": 29612.75,
         "n": 6,
         "start": "2026-10-29T06:00:00-04:00",
-        "end": "2026-10-29T10:24:25.190945-04:00"
+        "end": "2026-10-29T10:29:29.980789-04:00"
       },
       "sweep": {
         "swept": "low",
@@ -224,10 +225,10 @@
         "open": 29661.5,
         "high": 29707.25,
         "low": 29405.0,
-        "close": 29528.75,
-        "n": 76,
+        "close": 29612.75,
+        "n": 81,
         "start": "2026-10-29T09:00:00-04:00",
-        "end": "2026-10-29T10:24:25.190945-04:00"
+        "end": "2026-10-29T10:29:29.980789-04:00"
       },
       "sweep": {
         "swept": "both",
@@ -263,10 +264,10 @@
         "open": 29618.25,
         "high": 29618.75,
         "low": 29497.0,
-        "close": 29528.75,
-        "n": 8,
+        "close": 29612.75,
+        "n": 13,
         "start": "2026-10-29T10:07:30-04:00",
-        "end": "2026-10-29T10:24:25.190945-04:00"
+        "end": "2026-10-29T10:29:29.980789-04:00"
       },
       "sweep": {
         "swept": null,
@@ -289,9 +290,9 @@
     }
   },
   "gb": {
-    "on": false,
-    "minute": 24,
-    "next_in_min": 5
+    "on": true,
+    "minute": 29,
+    "next_in_min": 0
   },
   "checklist": [
     {
@@ -310,13 +311,13 @@
       "n": 3,
       "step": "SSMT / ISMT, above or below true opens",
       "ok": false,
-      "detail": "bearish - NQ took the previous quarter high, ES did not; he wants BOTH above this quarter's open for a short; price is above 0 and below 5 of 5 true opens"
+      "detail": "bearish - NQ took the previous quarter high, ES did not; he wants BOTH above this quarter's open for a short; price is above 1 and below 4 of 5 true opens"
     },
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
-      "ok": false,
-      "detail": "next one in 5 min"
+      "ok": true,
+      "detail": "on the anchor now"
     },
     {
       "n": 5,
