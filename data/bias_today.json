@@ -1,25 +1,28 @@
 {
   "meta": {
-    "status": "ok",
-    "generated_at": "2026-10-29T09:32:01.324609-04:00",
-    "inputs_blank": []
+    "status": "provisional",
+    "generated_at": "2026-10-30T09:16:01.501323-04:00",
+    "inputs_blank": [
+      "d_naked_poc_below_atr",
+      "d_nearest_pool_below_atr"
+    ]
   },
   "engine": {
     "forecast": {
       "lon_high": {
         "label": "London High taken",
-        "probability": 86.7,
-        "probability_raw": 84.5,
+        "probability": 17.9,
+        "probability_raw": 24.6,
         "models": {
-          "hierarchical": 85.4,
-          "logistic": 78.2,
-          "boosted_trees": 90.0
+          "hierarchical": 31.2,
+          "logistic": 25.3,
+          "boosted_trees": 17.2
         },
-        "model_agreement": 88.3,
-        "model_spread_pts": 11.7,
+        "model_agreement": 86.0,
+        "model_spread_pts": 14.0,
         "confidence": "High",
         "base_rate": 56.3,
-        "exact_condition_n": 141,
+        "exact_condition_n": 253,
         "evidence": [
           {
             "level": "L5",
@@ -29,185 +32,53 @@
           },
           {
             "level": "L4",
-            "n": 2180,
-            "raw": 0.6945,
-            "shrunk": 0.693
+            "n": 1125,
+            "raw": 0.3093,
+            "shrunk": 0.3149
           },
           {
             "level": "L3",
-            "n": 404,
-            "raw": 0.6881,
-            "shrunk": 0.6884
-          },
-          {
-            "level": "L2",
-            "n": 141,
-            "raw": 0.8582,
-            "shrunk": 0.8326
-          },
-          {
-            "level": "L1",
-            "n": 141,
-            "raw": 0.8582,
-            "shrunk": 0.8543
+            "n": 253,
+            "raw": 0.3123,
+            "shrunk": 0.3125
           }
         ]
       },
       "lon_low": {
         "label": "London Low taken",
-        "probability": 32.0,
-        "probability_raw": 36.9,
-        "models": {
-          "hierarchical": 54.2,
-          "logistic": 25.4,
-          "boosted_trees": 31.1
-        },
-        "model_agreement": 71.2,
-        "model_spread_pts": 28.8,
-        "confidence": "Medium",
-        "base_rate": 53.7,
-        "exact_condition_n": 141,
-        "evidence": [
-          {
-            "level": "L5",
-            "n": 3591,
-            "raw": 0.5372,
-            "shrunk": 0.5372
-          },
-          {
-            "level": "L4",
-            "n": 2180,
-            "raw": 0.6619,
-            "shrunk": 0.6605
-          },
-          {
-            "level": "L3",
-            "n": 404,
-            "raw": 0.6782,
-            "shrunk": 0.6772
-          },
-          {
-            "level": "L2",
-            "n": 141,
-            "raw": 0.539,
-            "shrunk": 0.5598
-          },
-          {
-            "level": "L1",
-            "n": 141,
-            "raw": 0.539,
-            "shrunk": 0.5421
-          }
-        ]
+        "probability": null,
+        "not_applicable": true,
+        "reason": "already beyond this level at the anchor (open below range)",
+        "confidence": "n/a"
       },
       "both": {
         "label": "Both London sides taken",
-        "probability": 21.5,
-        "probability_raw": 28.9,
-        "models": {
-          "hierarchical": 40.4,
-          "logistic": 20.2,
-          "boosted_trees": 26.1
-        },
-        "model_agreement": 79.9,
-        "model_spread_pts": 20.1,
-        "confidence": "Medium",
-        "base_rate": 37.8,
-        "exact_condition_n": 141,
-        "evidence": [
-          {
-            "level": "L5",
-            "n": 2180,
-            "raw": 0.3775,
-            "shrunk": 0.3775
-          },
-          {
-            "level": "L4",
-            "n": 2180,
-            "raw": 0.3775,
-            "shrunk": 0.3775
-          },
-          {
-            "level": "L3",
-            "n": 404,
-            "raw": 0.3837,
-            "shrunk": 0.3833
-          },
-          {
-            "level": "L2",
-            "n": 141,
-            "raw": 0.4043,
-            "shrunk": 0.4011
-          },
-          {
-            "level": "L1",
-            "n": 141,
-            "raw": 0.4043,
-            "shrunk": 0.4038
-          }
-        ]
+        "probability": null,
+        "not_applicable": true,
+        "reason": "already beyond this level at the anchor (open below range)",
+        "confidence": "n/a"
       },
       "neither": {
         "label": "Neither London side taken",
-        "probability": 3.8,
-        "probability_raw": 3.1,
-        "models": {
-          "hierarchical": 0.7,
-          "logistic": 7.4,
-          "boosted_trees": 1.1
-        },
-        "model_agreement": 93.3,
-        "model_spread_pts": 6.7,
-        "confidence": "High",
-        "base_rate": 2.1,
-        "exact_condition_n": 141,
-        "evidence": [
-          {
-            "level": "L5",
-            "n": 2180,
-            "raw": 0.0211,
-            "shrunk": 0.0211
-          },
-          {
-            "level": "L4",
-            "n": 2180,
-            "raw": 0.0211,
-            "shrunk": 0.0211
-          },
-          {
-            "level": "L3",
-            "n": 404,
-            "raw": 0.0173,
-            "shrunk": 0.0175
-          },
-          {
-            "level": "L2",
-            "n": 141,
-            "raw": 0.0071,
-            "shrunk": 0.0087
-          },
-          {
-            "level": "L1",
-            "n": 141,
-            "raw": 0.0071,
-            "shrunk": 0.0073
-          }
-        ]
+        "probability": null,
+        "not_applicable": true,
+        "reason": "already beyond this level at the anchor (open below range)",
+        "confidence": "n/a"
       },
       "pdh": {
         "label": "Prior-day High taken",
-        "probability": 4.0,
-        "probability_raw": 13.5,
+        "probability": 1.1,
+        "probability_raw": 5.5,
         "models": {
-          "hierarchical": 33.8,
-          "logistic": 5.4,
-          "boosted_trees": 1.4
+          "hierarchical": 15.6,
+          "logistic": 0.1,
+          "boosted_trees": 0.9
         },
-        "model_agreement": 67.6,
-        "model_spread_pts": 32.4,
+        "model_agreement": 84.5,
+        "model_spread_pts": 15.5,
         "confidence": "Medium",
         "base_rate": 29.3,
-        "exact_condition_n": 97,
+        "exact_condition_n": 243,
         "evidence": [
           {
             "level": "L5",
@@ -217,27 +88,15 @@
           },
           {
             "level": "L4",
-            "n": 1750,
-            "raw": 0.3097,
-            "shrunk": 0.3095
+            "n": 1063,
+            "raw": 0.1947,
+            "shrunk": 0.197
           },
           {
             "level": "L3",
-            "n": 327,
-            "raw": 0.2905,
-            "shrunk": 0.2919
-          },
-          {
-            "level": "L2",
-            "n": 97,
-            "raw": 0.3402,
-            "shrunk": 0.3303
-          },
-          {
-            "level": "L1",
-            "n": 97,
-            "raw": 0.3402,
-            "shrunk": 0.3382
+            "n": 243,
+            "raw": 0.1523,
+            "shrunk": 0.1564
           }
         ]
       },
@@ -245,23 +104,23 @@
         "label": "Prior-day Low taken",
         "probability": null,
         "not_applicable": true,
-        "reason": "already beyond this level at the anchor (open inside range)",
+        "reason": "already beyond this level at the anchor (open below range)",
         "confidence": "n/a"
       },
       "on_high": {
         "label": "Overnight High taken",
-        "probability": 56.3,
-        "probability_raw": 56.3,
+        "probability": 8.0,
+        "probability_raw": 11.8,
         "models": {
-          "hierarchical": 62.9,
-          "logistic": 46.5,
-          "boosted_trees": 59.4
+          "hierarchical": 21.7,
+          "logistic": 5.5,
+          "boosted_trees": 8.1
         },
-        "model_agreement": 83.7,
-        "model_spread_pts": 16.3,
+        "model_agreement": 83.8,
+        "model_spread_pts": 16.2,
         "confidence": "Medium",
         "base_rate": 55.3,
-        "exact_condition_n": 141,
+        "exact_condition_n": 253,
         "evidence": [
           {
             "level": "L5",
@@ -271,44 +130,32 @@
           },
           {
             "level": "L4",
-            "n": 2180,
-            "raw": 0.5624,
-            "shrunk": 0.5623
+            "n": 1125,
+            "raw": 0.2507,
+            "shrunk": 0.2572
           },
           {
             "level": "L3",
-            "n": 404,
-            "raw": 0.5272,
-            "shrunk": 0.5293
-          },
-          {
-            "level": "L2",
-            "n": 141,
-            "raw": 0.6312,
-            "shrunk": 0.6159
-          },
-          {
-            "level": "L1",
-            "n": 141,
-            "raw": 0.6312,
-            "shrunk": 0.6289
+            "n": 253,
+            "raw": 0.2134,
+            "shrunk": 0.2174
           }
         ]
       },
       "on_low": {
         "label": "Overnight Low taken",
-        "probability": 19.5,
-        "probability_raw": 25.0,
+        "probability": 79.6,
+        "probability_raw": 74.2,
         "models": {
-          "hierarchical": 39.2,
-          "logistic": 16.7,
-          "boosted_trees": 19.0
+          "hierarchical": 70.1,
+          "logistic": 70.7,
+          "boosted_trees": 81.9
         },
-        "model_agreement": 77.5,
-        "model_spread_pts": 22.5,
-        "confidence": "Medium",
+        "model_agreement": 88.2,
+        "model_spread_pts": 11.8,
+        "confidence": "High",
         "base_rate": 49.0,
-        "exact_condition_n": 141,
+        "exact_condition_n": 253,
         "evidence": [
           {
             "level": "L5",
@@ -318,91 +165,39 @@
           },
           {
             "level": "L4",
-            "n": 2180,
-            "raw": 0.4894,
-            "shrunk": 0.4895
+            "n": 1125,
+            "raw": 0.76,
+            "shrunk": 0.7541
           },
           {
             "level": "L3",
-            "n": 404,
-            "raw": 0.4901,
-            "shrunk": 0.4901
-          },
-          {
-            "level": "L2",
-            "n": 141,
-            "raw": 0.3901,
-            "shrunk": 0.4051
-          },
-          {
-            "level": "L1",
-            "n": 141,
-            "raw": 0.3901,
-            "shrunk": 0.3923
+            "n": 253,
+            "raw": 0.6957,
+            "shrunk": 0.7009
           }
         ]
       },
       "first_high": {
         "label": "First side tagged = High",
-        "probability": 79.5,
-        "probability_raw": 83.0,
-        "models": {
-          "hierarchical": 77.2,
-          "logistic": 83.3,
-          "boosted_trees": 88.5
-        },
-        "model_agreement": 88.7,
-        "model_spread_pts": 11.3,
-        "confidence": "High",
-        "base_rate": 51.3,
-        "exact_condition_n": 140,
-        "evidence": [
-          {
-            "level": "L5",
-            "n": 2134,
-            "raw": 0.5127,
-            "shrunk": 0.5127
-          },
-          {
-            "level": "L4",
-            "n": 2134,
-            "raw": 0.5127,
-            "shrunk": 0.5127
-          },
-          {
-            "level": "L3",
-            "n": 397,
-            "raw": 0.4937,
-            "shrunk": 0.4948
-          },
-          {
-            "level": "L2",
-            "n": 140,
-            "raw": 0.7786,
-            "shrunk": 0.7356
-          },
-          {
-            "level": "L1",
-            "n": 140,
-            "raw": 0.7786,
-            "shrunk": 0.7721
-          }
-        ]
+        "probability": null,
+        "not_applicable": true,
+        "reason": "already beyond this level at the anchor (open below range)",
+        "confidence": "n/a"
       },
       "expand_up": {
         "label": "First expansion is UP",
-        "probability": 48.6,
-        "probability_raw": 50.7,
+        "probability": 50.4,
+        "probability_raw": 52.1,
         "models": {
-          "hierarchical": 46.1,
-          "logistic": 49.6,
-          "boosted_trees": 56.5
+          "hierarchical": 50.9,
+          "logistic": 52.8,
+          "boosted_trees": 52.6
         },
-        "model_agreement": 89.6,
-        "model_spread_pts": 10.4,
+        "model_agreement": 98.1,
+        "model_spread_pts": 1.9,
         "confidence": "High",
         "base_rate": 48.9,
-        "exact_condition_n": 126,
+        "exact_condition_n": 238,
         "evidence": [
           {
             "level": "L5",
@@ -412,44 +207,32 @@
           },
           {
             "level": "L4",
-            "n": 1956,
-            "raw": 0.4944,
-            "shrunk": 0.4943
+            "n": 1052,
+            "raw": 0.5162,
+            "shrunk": 0.5155
           },
           {
             "level": "L3",
-            "n": 371,
-            "raw": 0.4798,
-            "shrunk": 0.4807
-          },
-          {
-            "level": "L2",
-            "n": 126,
-            "raw": 0.4603,
-            "shrunk": 0.4637
-          },
-          {
-            "level": "L1",
-            "n": 126,
-            "raw": 0.4603,
-            "shrunk": 0.4609
+            "n": 238,
+            "raw": 0.5084,
+            "shrunk": 0.5091
           }
         ]
       },
       "reversal": {
         "label": "First move reverses",
-        "probability": 17.6,
-        "probability_raw": 15.2,
+        "probability": 26.8,
+        "probability_raw": 21.8,
         "models": {
-          "hierarchical": 15.1,
-          "logistic": 9.7,
-          "boosted_trees": 20.8
+          "hierarchical": 16.6,
+          "logistic": 16.8,
+          "boosted_trees": 32.0
         },
-        "model_agreement": 88.9,
-        "model_spread_pts": 11.1,
-        "confidence": "High",
+        "model_agreement": 84.6,
+        "model_spread_pts": 15.4,
+        "confidence": "Medium",
         "base_rate": 16.2,
-        "exact_condition_n": 126,
+        "exact_condition_n": 238,
         "evidence": [
           {
             "level": "L5",
@@ -459,44 +242,32 @@
           },
           {
             "level": "L4",
-            "n": 1956,
-            "raw": 0.1534,
-            "shrunk": 0.1535
+            "n": 1052,
+            "raw": 0.1911,
+            "shrunk": 0.1904
           },
           {
             "level": "L3",
-            "n": 371,
-            "raw": 0.1725,
-            "shrunk": 0.1713
-          },
-          {
-            "level": "L2",
-            "n": 126,
-            "raw": 0.1508,
-            "shrunk": 0.1542
-          },
-          {
-            "level": "L1",
-            "n": 126,
-            "raw": 0.1508,
-            "shrunk": 0.1514
+            "n": 238,
+            "raw": 0.1639,
+            "shrunk": 0.1664
           }
         ]
       },
       "am_up": {
         "label": "NY AM closes above the 09:15 open",
-        "probability": 54.4,
-        "probability_raw": 55.9,
+        "probability": 54.2,
+        "probability_raw": 55.6,
         "models": {
-          "hierarchical": 50.5,
-          "logistic": 56.2,
-          "boosted_trees": 61.1
+          "hierarchical": 53.4,
+          "logistic": 60.4,
+          "boosted_trees": 53.0
         },
-        "model_agreement": 89.3,
-        "model_spread_pts": 10.7,
+        "model_agreement": 92.6,
+        "model_spread_pts": 7.4,
         "confidence": "High",
         "base_rate": 52.6,
-        "exact_condition_n": 141,
+        "exact_condition_n": 253,
         "evidence": [
           {
             "level": "L5",
@@ -506,62 +277,50 @@
           },
           {
             "level": "L4",
-            "n": 2180,
-            "raw": 0.5413,
-            "shrunk": 0.5411
+            "n": 1125,
+            "raw": 0.544,
+            "shrunk": 0.5436
           },
           {
             "level": "L3",
-            "n": 404,
-            "raw": 0.547,
-            "shrunk": 0.5467
-          },
-          {
-            "level": "L2",
-            "n": 141,
-            "raw": 0.5035,
-            "shrunk": 0.51
-          },
-          {
-            "level": "L1",
-            "n": 141,
-            "raw": 0.5035,
-            "shrunk": 0.5045
+            "n": 253,
+            "raw": 0.5336,
+            "shrunk": 0.5345
           }
         ]
       },
       "_regression": {
         "exc_up_atr": {
           "label": "Expected upside excursion (ATR)",
-          "median": 0.2619,
-          "p75": 0.4493,
-          "p90": 0.6618,
-          "n": 2180,
-          "conditioned_on": "inside_range"
+          "median": 0.2963,
+          "p75": 0.5181,
+          "p90": 0.7486,
+          "n": 1125,
+          "conditioned_on": "below_range"
         },
         "exc_dn_atr": {
           "label": "Expected downside excursion (ATR)",
-          "median": 0.2613,
-          "p75": 0.474,
-          "p90": 0.7571,
-          "n": 2180,
-          "conditioned_on": "inside_range"
+          "median": 0.2731,
+          "p75": 0.4971,
+          "p90": 0.7856,
+          "n": 1125,
+          "conditioned_on": "below_range"
         },
         "range_atr": {
           "label": "Expected NY AM range (ATR)",
-          "median": 0.6031,
-          "p75": 0.7893,
-          "p90": 1.0594,
-          "n": 2180,
-          "conditioned_on": "inside_range"
+          "median": 0.6546,
+          "p75": 0.8643,
+          "p90": 1.1176,
+          "n": 1125,
+          "conditioned_on": "below_range"
         }
       },
       "_lean": {
-        "lean_label": "UPSIDE LIQUIDITY FAVOURED",
-        "favoured_side": "up",
-        "lean": 27.6,
-        "up_excess": 2.0,
-        "down_excess": -25.6,
+        "lean_label": "DOWNSIDE LIQUIDITY FAVOURED",
+        "favoured_side": "down",
+        "lean": -68.6,
+        "up_excess": -38.0,
+        "down_excess": 30.6,
         "basis": "mean EXCESS reach-probability (each pool vs its own base rate) of pools above minus pools below",
         "predicts_direction": false,
         "means": "which side's liquidity is more likely to be REACHED \u2014 this is a target-selection input, not a forecast of which way price closes",
@@ -583,9 +342,9 @@
         }
       },
       "_agreement": {
-        "mean_agreement": 83.5,
-        "min_agreement": 67.6,
-        "forecast_uncertainty": 16.5
+        "mean_agreement": 88.3,
+        "min_agreement": 83.8,
+        "forecast_uncertainty": 11.7
       }
     },
     "model_version": 3,
@@ -596,158 +355,158 @@
     ]
   },
   "row": {
-    "date": "2026-10-29",
-    "weekday": "Thursday",
-    "price_0900": 29695.25,
-    "london_range": 177.0,
-    "on_range": 311.75,
-    "atr14": 411.25,
-    "gap_vs_pdc": -386.25,
-    "gap_atr": -0.9392,
-    "on_range_vs_atr": 0.7581,
-    "lon_range_vs_atr": 0.4304,
+    "date": "2026-10-30",
+    "weekday": "Friday",
+    "price_0900": 28793.5,
+    "london_range": 178.5,
+    "on_range": 419.0,
+    "atr14": 417.18,
+    "gap_vs_pdc": -797.25,
+    "gap_atr": -1.9111,
+    "on_range_vs_atr": 1.0044,
+    "lon_range_vs_atr": 0.4279,
     "regime": "gap_continuation",
     "atr_pctile": 0.917,
-    "drift_atr_20d": -1.489,
-    "on_vwap": 29646.33,
+    "drift_atr_20d": -2.836,
+    "on_vwap": 28926.84,
     "naked_poc_count": 6,
-    "lon_high": 29729.25,
-    "d_lon_high_pts": -34.0,
-    "d_lon_high_lonrng": -0.1921,
-    "d_lon_high_atr": -0.0827,
+    "lon_high": 29062.0,
+    "d_lon_high_pts": -268.5,
+    "d_lon_high_lonrng": -1.5042,
+    "d_lon_high_atr": -0.6436,
     "above_lon_high": 0,
-    "lon_low": 29552.25,
-    "d_lon_low_pts": 143.0,
-    "d_lon_low_lonrng": 0.8079,
-    "d_lon_low_atr": 0.3477,
-    "above_lon_low": 1,
-    "lon_mid": 29640.75,
-    "d_lon_mid_pts": 54.5,
-    "d_lon_mid_lonrng": 0.3079,
-    "d_lon_mid_atr": 0.1325,
-    "above_lon_mid": 1,
-    "lon_close": 29651.75,
-    "d_lon_close_pts": 43.5,
-    "d_lon_close_lonrng": 0.2458,
-    "d_lon_close_atr": 0.1058,
-    "above_lon_close": 1,
-    "on_high": 29794.25,
-    "d_on_high_pts": -99.0,
-    "d_on_high_lonrng": -0.5593,
-    "d_on_high_atr": -0.2407,
+    "lon_low": 28883.5,
+    "d_lon_low_pts": -90.0,
+    "d_lon_low_lonrng": -0.5042,
+    "d_lon_low_atr": -0.2157,
+    "above_lon_low": 0,
+    "lon_mid": 28972.75,
+    "d_lon_mid_pts": -179.25,
+    "d_lon_mid_lonrng": -1.0042,
+    "d_lon_mid_atr": -0.4297,
+    "above_lon_mid": 0,
+    "lon_close": 28988.75,
+    "d_lon_close_pts": -195.25,
+    "d_lon_close_lonrng": -1.0938,
+    "d_lon_close_atr": -0.468,
+    "above_lon_close": 0,
+    "on_high": 29180.0,
+    "d_on_high_pts": -386.5,
+    "d_on_high_lonrng": -2.1653,
+    "d_on_high_atr": -0.9265,
     "above_on_high": 0,
-    "on_low": 29482.5,
-    "d_on_low_pts": 212.75,
-    "d_on_low_lonrng": 1.202,
-    "d_on_low_atr": 0.5173,
+    "on_low": 28761.0,
+    "d_on_low_pts": 32.5,
+    "d_on_low_lonrng": 0.1821,
+    "d_on_low_atr": 0.0779,
     "above_on_low": 1,
-    "asia_high": 29794.25,
-    "d_asia_high_pts": -99.0,
-    "d_asia_high_lonrng": -0.5593,
-    "d_asia_high_atr": -0.2407,
+    "asia_high": 29180.0,
+    "d_asia_high_pts": -386.5,
+    "d_asia_high_lonrng": -2.1653,
+    "d_asia_high_atr": -0.9265,
     "above_asia_high": 0,
-    "asia_low": 29482.5,
-    "d_asia_low_pts": 212.75,
-    "d_asia_low_lonrng": 1.202,
-    "d_asia_low_atr": 0.5173,
-    "above_asia_low": 1,
-    "pdh": 30096.0,
-    "d_pdh_pts": -400.75,
-    "d_pdh_lonrng": -2.2641,
-    "d_pdh_atr": -0.9745,
+    "asia_low": 28821.5,
+    "d_asia_low_pts": -28.0,
+    "d_asia_low_lonrng": -0.1569,
+    "d_asia_low_atr": -0.0671,
+    "above_asia_low": 0,
+    "pdh": 29677.0,
+    "d_pdh_pts": -883.5,
+    "d_pdh_lonrng": -4.9496,
+    "d_pdh_atr": -2.1178,
     "above_pdh": 0,
-    "pdl": 29767.25,
-    "d_pdl_pts": -72.0,
-    "d_pdl_lonrng": -0.4068,
-    "d_pdl_atr": -0.1751,
+    "pdl": 29405.0,
+    "d_pdl_pts": -611.5,
+    "d_pdl_lonrng": -3.4258,
+    "d_pdl_atr": -1.4658,
     "above_pdl": 0,
-    "pdc": 30081.5,
-    "d_pdc_pts": -386.25,
-    "d_pdc_lonrng": -2.1822,
-    "d_pdc_atr": -0.9392,
+    "pdc": 29590.75,
+    "d_pdc_pts": -797.25,
+    "d_pdc_lonrng": -4.4664,
+    "d_pdc_atr": -1.9111,
     "above_pdc": 0,
     "pwh": 30096.0,
-    "d_pwh_pts": -400.75,
-    "d_pwh_lonrng": -2.2641,
-    "d_pwh_atr": -0.9745,
+    "d_pwh_pts": -1302.5,
+    "d_pwh_lonrng": -7.2969,
+    "d_pwh_atr": -3.1222,
     "above_pwh": 0,
     "pwl": 28987.0,
-    "d_pwl_pts": 708.25,
-    "d_pwl_lonrng": 4.0014,
-    "d_pwl_atr": 1.7222,
-    "above_pwl": 1,
-    "prior_poc": 29845.33,
-    "d_prior_poc_pts": -150.08,
-    "d_prior_poc_lonrng": -0.8479,
-    "d_prior_poc_atr": -0.3649,
+    "d_pwl_pts": -193.5,
+    "d_pwl_lonrng": -1.084,
+    "d_pwl_atr": -0.4638,
+    "above_pwl": 0,
+    "prior_poc": 29558.0,
+    "d_prior_poc_pts": -764.5,
+    "d_prior_poc_lonrng": -4.2829,
+    "d_prior_poc_atr": -1.8325,
     "above_prior_poc": 0,
-    "prior_vah": 29911.08,
-    "d_prior_vah_pts": -215.83,
-    "d_prior_vah_lonrng": -1.2194,
-    "d_prior_vah_atr": -0.5248,
+    "prior_vah": 29612.4,
+    "d_prior_vah_pts": -818.9,
+    "d_prior_vah_lonrng": -4.5877,
+    "d_prior_vah_atr": -1.9629,
     "above_prior_vah": 0,
-    "prior_val": 29812.45,
-    "d_prior_val_pts": -117.2,
-    "d_prior_val_lonrng": -0.6622,
-    "d_prior_val_atr": -0.285,
+    "prior_val": 29483.2,
+    "d_prior_val_pts": -689.7,
+    "d_prior_val_lonrng": -3.8639,
+    "d_prior_val_atr": -1.6532,
     "above_prior_val": 0,
-    "midnight_open": 29549.5,
-    "d_midnight_open_pts": 145.75,
-    "d_midnight_open_lonrng": 0.8234,
-    "d_midnight_open_atr": 0.3544,
-    "above_midnight_open": 1,
-    "daily_open": 29793.5,
-    "d_daily_open_pts": -98.25,
-    "d_daily_open_lonrng": -0.5551,
-    "d_daily_open_atr": -0.2389,
+    "midnight_open": 28933.25,
+    "d_midnight_open_pts": -139.75,
+    "d_midnight_open_lonrng": -0.7829,
+    "d_midnight_open_atr": -0.335,
+    "above_midnight_open": 0,
+    "daily_open": 29180.0,
+    "d_daily_open_pts": -386.5,
+    "d_daily_open_lonrng": -2.1653,
+    "d_daily_open_atr": -0.9265,
     "above_daily_open": 0,
-    "on_poc": 29696.83,
-    "d_on_poc_pts": -1.58,
-    "d_on_poc_lonrng": -0.0089,
-    "d_on_poc_atr": -0.0038,
+    "on_poc": 28912.89,
+    "d_on_poc_pts": -119.39,
+    "d_on_poc_lonrng": -0.6688,
+    "d_on_poc_atr": -0.2862,
     "above_on_poc": 0,
-    "on_vah": 29728.0,
-    "d_on_vah_pts": -32.75,
-    "d_on_vah_lonrng": -0.185,
-    "d_on_vah_atr": -0.0796,
+    "on_vah": 29028.11,
+    "d_on_vah_pts": -234.61,
+    "d_on_vah_lonrng": -1.3144,
+    "d_on_vah_atr": -0.5624,
     "above_on_vah": 0,
-    "on_val": 29603.3,
-    "d_on_val_pts": 91.95,
-    "d_on_val_lonrng": 0.5195,
-    "d_on_val_atr": 0.2236,
-    "above_on_val": 1,
-    "on_vwap_lvl": 29646.33,
-    "d_on_vwap_lvl_pts": 48.92,
-    "d_on_vwap_lvl_lonrng": 0.2764,
-    "d_on_vwap_lvl_atr": 0.1189,
-    "above_on_vwap_lvl": 1,
-    "naked_poc_above": 29808.73,
-    "d_naked_poc_above_pts": -113.48,
-    "d_naked_poc_above_lonrng": -0.6412,
-    "d_naked_poc_above_atr": -0.2759,
+    "on_val": 28829.09,
+    "d_on_val_pts": -35.59,
+    "d_on_val_lonrng": -0.1994,
+    "d_on_val_atr": -0.0853,
+    "above_on_val": 0,
+    "on_vwap_lvl": 28926.84,
+    "d_on_vwap_lvl_pts": -133.34,
+    "d_on_vwap_lvl_lonrng": -0.747,
+    "d_on_vwap_lvl_atr": -0.3196,
+    "above_on_vwap_lvl": 0,
+    "naked_poc_above": 29558.0,
+    "d_naked_poc_above_pts": -764.5,
+    "d_naked_poc_above_lonrng": -4.2829,
+    "d_naked_poc_above_atr": -1.8325,
     "above_naked_poc_above": 0,
-    "naked_poc_below": 28996.68,
-    "d_naked_poc_below_pts": 698.57,
-    "d_naked_poc_below_lonrng": 3.9467,
-    "d_naked_poc_below_atr": 1.6986,
-    "above_naked_poc_below": 1,
-    "lon_loc": 0.8079,
-    "open_state": "inside_range",
-    "inside_third": "upper_third",
-    "vs_lon_close": "above_close",
-    "vs_lon_mid": "above_mid",
+    "naked_poc_below": null,
+    "d_naked_poc_below_pts": null,
+    "d_naked_poc_below_lonrng": null,
+    "d_naked_poc_below_atr": null,
+    "above_naked_poc_below": null,
+    "lon_loc": -0.5042,
+    "open_state": "below_range",
+    "inside_third": null,
+    "vs_lon_close": "below_close",
+    "vs_lon_mid": "below_mid",
     "asia_high_swept_by_0900": 0,
-    "asia_low_swept_by_0900": 0,
+    "asia_low_swept_by_0900": 1,
     "pdh_swept_by_0900": 0,
     "pdl_swept_by_0900": 1,
     "pwh_swept_by_0900": 0,
-    "pwl_swept_by_0900": 0,
+    "pwl_swept_by_0900": 1,
     "unswept_above": 4,
-    "unswept_below": 3,
-    "unswept_count": 7,
-    "nearest_pool_above": 29729.25,
-    "nearest_pool_below": 29552.25,
-    "d_nearest_pool_above_atr": 0.0827,
-    "d_nearest_pool_below_atr": 0.3477
+    "unswept_below": 0,
+    "unswept_count": 4,
+    "nearest_pool_above": 29062.0,
+    "nearest_pool_below": null,
+    "d_nearest_pool_above_atr": 0.6436,
+    "d_nearest_pool_below_atr": null
   }
 }
