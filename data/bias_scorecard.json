@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-10-30T09:32:02.546280-04:00",
+  "generated_at": "2026-11-02T09:16:03.348239-05:00",
   "live": {
     "lon_high": {
-      "n": 31,
-      "brier": 0.22868,
-      "accuracy": 64.5,
-      "avg_predicted": 44.6,
-      "actual_rate": 45.2,
+      "n": 32,
+      "brier": 0.22252,
+      "accuracy": 65.6,
+      "avg_predicted": 43.8,
+      "actual_rate": 43.8,
       "evidence": {
-        "skill": 0.0766,
-        "days": 31,
+        "skill": 0.0958,
+        "days": 32,
         "ci95": [
-          -0.2768,
-          0.3259
+          -0.2671,
+          0.348
         ],
         "verdict": "INSUFFICIENT EVIDENCE \u2014 interval spans zero"
       }
@@ -50,17 +50,17 @@
       }
     },
     "pdh": {
-      "n": 30,
-      "brier": 0.09832,
-      "accuracy": 90.0,
-      "avg_predicted": 30.3,
-      "actual_rate": 20.0,
+      "n": 31,
+      "brier": 0.09515,
+      "accuracy": 90.3,
+      "avg_predicted": 29.3,
+      "actual_rate": 19.4,
       "evidence": {
-        "skill": 0.3855,
-        "days": 30,
+        "skill": 0.3904,
+        "days": 31,
         "ci95": [
-          -0.8363,
-          0.75
+          -0.7426,
+          0.7518
         ],
         "verdict": "INSUFFICIENT EVIDENCE \u2014 interval spans zero"
       }
@@ -82,33 +82,33 @@
       }
     },
     "on_high": {
-      "n": 40,
-      "brier": 0.16341,
-      "accuracy": 75.0,
-      "avg_predicted": 44.2,
-      "actual_rate": 37.5,
+      "n": 41,
+      "brier": 0.15958,
+      "accuracy": 75.6,
+      "avg_predicted": 43.3,
+      "actual_rate": 36.6,
       "evidence": {
-        "skill": 0.3028,
-        "days": 40,
+        "skill": 0.3122,
+        "days": 41,
         "ci95": [
-          -0.0861,
-          0.544
+          -0.0592,
+          0.5492
         ],
         "verdict": "INSUFFICIENT EVIDENCE \u2014 interval spans zero"
       }
     },
     "on_low": {
-      "n": 40,
-      "brier": 0.1991,
-      "accuracy": 67.5,
-      "avg_predicted": 40.4,
-      "actual_rate": 42.5,
+      "n": 41,
+      "brier": 0.19504,
+      "accuracy": 68.3,
+      "avg_predicted": 41.4,
+      "actual_rate": 43.9,
       "evidence": {
-        "skill": 0.1852,
-        "days": 40,
+        "skill": 0.2081,
+        "days": 41,
         "ci95": [
-          -0.0818,
-          0.3924
+          -0.0621,
+          0.4155
         ],
         "verdict": "INSUFFICIENT EVIDENCE \u2014 interval spans zero"
       }
@@ -200,8 +200,51 @@
       "label": "NY AM closes above the 09:15 open"
     }
   },
-  "live_days": 43,
+  "live_days": 44,
   "recent": [
+    {
+      "date": "2026-10-30",
+      "weekday": "Friday",
+      "open_state": "below_range",
+      "scores": {
+        "lon_high": {
+          "p": 0.178,
+          "actual": 0,
+          "brier": 0.03168,
+          "correct": 1
+        },
+        "pdh": {
+          "p": 0.011,
+          "actual": 0,
+          "brier": 0.00012,
+          "correct": 1
+        },
+        "on_high": {
+          "p": 0.08,
+          "actual": 0,
+          "brier": 0.0064,
+          "correct": 1
+        },
+        "on_low": {
+          "p": 0.82,
+          "actual": 1,
+          "brier": 0.0324,
+          "correct": 1
+        }
+      },
+      "actual": {
+        "out_high": 28860.5,
+        "out_low": 28614.75,
+        "lon_high": 0,
+        "lon_low": 1,
+        "first_side": "low",
+        "first_high": 0,
+        "pdh": 0,
+        "pdl": null,
+        "on_high": 0,
+        "on_low": 1
+      }
+    },
     {
       "date": "2026-10-29",
       "weekday": "Thursday",
@@ -1218,49 +1261,6 @@
         "first_side": "high",
         "first_high": 1,
         "pdh": 0,
-        "pdl": 0,
-        "on_high": 1,
-        "on_low": 0
-      }
-    },
-    {
-      "date": "2026-10-02",
-      "weekday": "Friday",
-      "open_state": "above_range",
-      "scores": {
-        "lon_low": {
-          "p": 0.107,
-          "actual": 0,
-          "brier": 0.01145,
-          "correct": 1
-        },
-        "pdl": {
-          "p": 0.005,
-          "actual": 0,
-          "brier": 3e-05,
-          "correct": 1
-        },
-        "on_high": {
-          "p": 0.739,
-          "actual": 1,
-          "brier": 0.06812,
-          "correct": 1
-        },
-        "on_low": {
-          "p": 0.07,
-          "actual": 0,
-          "brier": 0.0049,
-          "correct": 1
-        }
-      },
-      "actual": {
-        "out_high": 31282.5,
-        "out_low": 31056.25,
-        "lon_high": 1,
-        "lon_low": 0,
-        "first_side": "high",
-        "first_high": 1,
-        "pdh": null,
         "pdl": 0,
         "on_high": 1,
         "on_low": 0
