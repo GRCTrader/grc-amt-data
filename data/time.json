@@ -1,10 +1,10 @@
 {
-  "asof": "2026-11-03 04:18:18 ET",
-  "asof_epoch": 1793697498,
+  "asof": "2026-11-03 04:23:23 ET",
+  "asof_epoch": 1793697803,
   "session_date": "2026-11-03",
   "price": {
-    "NQ": 28190.75,
-    "ES": 7567.0
+    "NQ": 28194.75,
+    "ES": 7568.75
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "London",
       "start": "2026-11-03T00:00:00-05:00",
       "end": "2026-11-03T06:00:00-05:00",
-      "left_sec": 6101,
+      "left_sec": 5796,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
@@ -48,7 +48,7 @@
       "span": "block 3 of 4",
       "start": "2026-11-03T03:00:00-05:00",
       "end": "2026-11-03T04:30:00-05:00",
-      "left_sec": 701,
+      "left_sec": 396,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -59,21 +59,21 @@
       "span": "22.5 min",
       "start": "2026-11-03T04:07:30-05:00",
       "end": "2026-11-03T04:30:00-05:00",
-      "left_sec": 701,
+      "left_sec": 396,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
     },
     {
       "level": "Nano",
-      "q": 1,
+      "q": 2,
       "span": "5.625 min",
-      "start": "2026-11-03T04:13:07.500000-05:00",
-      "end": "2026-11-03T04:18:45-05:00",
-      "left_sec": 26,
-      "phase": "Q2",
-      "phase_name": "Manipulation",
-      "phase_why": "The Judas swing. Price runs the obvious stops."
+      "start": "2026-11-03T04:18:45-05:00",
+      "end": "2026-11-03T04:24:22.500000-05:00",
+      "left_sec": 58,
+      "phase": "Q3",
+      "phase_name": "Distribution",
+      "phase_why": "The actual move. The quarter you want to be in."
     }
   ],
   "chains": [
@@ -149,10 +149,10 @@
         "open": 28201.0,
         "high": 28284.5,
         "low": 28038.25,
-        "close": 28190.75,
+        "close": 28194.75,
         "n": 12,
         "start": "2026-11-02T18:00:00-05:00",
-        "end": "2026-11-03T04:18:18.997295-05:00"
+        "end": "2026-11-03T04:23:23.803520-05:00"
       },
       "sweep": {
         "swept": "low",
@@ -187,10 +187,10 @@
         "open": 28118.0,
         "high": 28206.75,
         "low": 28038.25,
-        "close": 28190.75,
+        "close": 28194.75,
         "n": 6,
         "start": "2026-11-03T00:00:00-05:00",
-        "end": "2026-11-03T04:18:18.997295-05:00"
+        "end": "2026-11-03T04:23:23.803520-05:00"
       },
       "sweep": {
         "swept": "low",
@@ -225,10 +225,10 @@
         "open": 28150.25,
         "high": 28206.75,
         "low": 28104.25,
-        "close": 28190.75,
-        "n": 70,
+        "close": 28194.75,
+        "n": 75,
         "start": "2026-11-03T03:00:00-05:00",
-        "end": "2026-11-03T04:18:18.997295-05:00"
+        "end": "2026-11-03T04:23:23.803520-05:00"
       },
       "sweep": {
         "swept": "high",
@@ -261,12 +261,12 @@
       },
       "cur": {
         "open": 28186.0,
-        "high": 28194.75,
+        "high": 28205.75,
         "low": 28181.5,
-        "close": 28190.75,
-        "n": 2,
+        "close": 28194.75,
+        "n": 7,
         "start": "2026-11-03T04:07:30-05:00",
-        "end": "2026-11-03T04:18:18.997295-05:00"
+        "end": "2026-11-03T04:23:23.803520-05:00"
       },
       "sweep": {
         "swept": null,
@@ -275,10 +275,11 @@
         "note": "still inside 28,104.25-28,206.75"
       },
       "ssmt": {
-        "type": null,
-        "note": "both markets did the same thing at this seam - no divergence",
-        "leader": null,
-        "filter_ok": null
+        "type": "bearish",
+        "note": "ES took the previous quarter high, NQ did not",
+        "leader": "ES",
+        "filter_ok": true,
+        "filter_note": "both above this quarter's open"
       },
       "shape": "AMD-X",
       "shape_why": "Q1 ranged 0.8x the usual with 13% directional body - it behaved like accumulation",
@@ -290,8 +291,8 @@
   },
   "gb": {
     "on": false,
-    "minute": 18,
-    "next_in_min": 11
+    "minute": 23,
+    "next_in_min": 6
   },
   "checklist": [
     {
@@ -316,7 +317,7 @@
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 11 min"
+      "detail": "next one in 6 min"
     },
     {
       "n": 5,
