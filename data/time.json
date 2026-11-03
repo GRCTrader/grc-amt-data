@@ -1,10 +1,10 @@
 {
-  "asof": "2026-11-03 11:28:30 ET",
-  "asof_epoch": 1793723310,
+  "asof": "2026-11-03 11:33:35 ET",
+  "asof_epoch": 1793723615,
   "session_date": "2026-11-03",
   "price": {
-    "NQ": 28363.5,
-    "ES": 7610.25
+    "NQ": 28337.0,
+    "ES": 7606.75
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "New York AM",
       "start": "2026-11-03T06:00:00-05:00",
       "end": "2026-11-03T12:00:00-05:00",
-      "left_sec": 1889,
+      "left_sec": 1584,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -48,7 +48,7 @@
       "span": "block 4 of 4",
       "start": "2026-11-03T10:30:00-05:00",
       "end": "2026-11-03T12:00:00-05:00",
-      "left_sec": 1889,
+      "left_sec": 1584,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
@@ -59,21 +59,21 @@
       "span": "22.5 min",
       "start": "2026-11-03T11:15:00-05:00",
       "end": "2026-11-03T11:37:30-05:00",
-      "left_sec": 539,
+      "left_sec": 234,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
     },
     {
       "level": "Nano",
-      "q": 2,
+      "q": 3,
       "span": "5.625 min",
-      "start": "2026-11-03T11:26:15-05:00",
-      "end": "2026-11-03T11:31:52.500000-05:00",
-      "left_sec": 201,
-      "phase": "Q3",
-      "phase_name": "Distribution",
-      "phase_why": "The actual move. The quarter you want to be in."
+      "start": "2026-11-03T11:31:52.500000-05:00",
+      "end": "2026-11-03T11:37:30-05:00",
+      "left_sec": 234,
+      "phase": "Q4",
+      "phase_name": "Continuation / Reversal",
+      "phase_why": "It extends or it turns. The handover."
     }
   ],
   "chains": [],
@@ -111,21 +111,21 @@
       "name": "true micro-session open",
       "at": "2026-11-03T10:52:30-05:00",
       "px": 28362.25,
-      "side": "above"
+      "side": "below"
     }
   ],
   "opens_filter": {
     "above": [
       "TWO",
       "TDO",
-      "TSO",
-      "TMSO"
+      "TSO"
     ],
     "below": [
-      "TMO"
+      "TMO",
+      "TMSO"
     ],
     "known": 5,
-    "buy_ok": false,
+    "buy_ok": true,
     "sell_ok": true
   },
   "detail": {
@@ -143,10 +143,10 @@
         "open": 28201.0,
         "high": 28443.5,
         "low": 28038.25,
-        "close": 28363.5,
+        "close": 28337.0,
         "n": 19,
         "start": "2026-11-02T18:00:00-05:00",
-        "end": "2026-11-03T11:28:30.969543-05:00"
+        "end": "2026-11-03T11:33:35.680310-05:00"
       },
       "sweep": {
         "swept": "low",
@@ -181,10 +181,10 @@
         "open": 28234.25,
         "high": 28443.5,
         "low": 28114.25,
-        "close": 28363.5,
+        "close": 28337.0,
         "n": 7,
         "start": "2026-11-03T06:00:00-05:00",
-        "end": "2026-11-03T11:28:30.969543-05:00"
+        "end": "2026-11-03T11:33:35.680310-05:00"
       },
       "sweep": {
         "swept": "high",
@@ -219,10 +219,10 @@
         "open": 28339.5,
         "high": 28443.5,
         "low": 28288.75,
-        "close": 28363.5,
-        "n": 50,
+        "close": 28337.0,
+        "n": 55,
         "start": "2026-11-03T10:30:00-05:00",
-        "end": "2026-11-03T11:28:30.969543-05:00"
+        "end": "2026-11-03T11:33:35.680310-05:00"
       },
       "sweep": {
         "swept": "high",
@@ -256,17 +256,17 @@
       "cur": {
         "open": 28396.0,
         "high": 28414.5,
-        "low": 28354.75,
-        "close": 28363.5,
-        "n": 5,
+        "low": 28316.5,
+        "close": 28337.0,
+        "n": 10,
         "start": "2026-11-03T11:15:00-05:00",
-        "end": "2026-11-03T11:28:30.969543-05:00"
+        "end": "2026-11-03T11:33:35.680310-05:00"
       },
       "sweep": {
-        "swept": null,
+        "swept": "low",
         "prev_high": 28443.5,
         "prev_low": 28351.25,
-        "note": "still inside 28,351.25-28,443.50"
+        "note": "took the previous quarter low 28,351.25"
       },
       "ssmt": {
         "type": "bearish",
@@ -285,8 +285,8 @@
   },
   "gb": {
     "on": false,
-    "minute": 28,
-    "next_in_min": 1
+    "minute": 33,
+    "next_in_min": 2
   },
   "checklist": [
     {
@@ -305,13 +305,13 @@
       "n": 3,
       "step": "SSMT / ISMT, above or below true opens",
       "ok": false,
-      "detail": "no divergence - both markets did the same thing at this seam - no divergence; price is above 4 and below 1 of 5 true opens"
+      "detail": "no divergence - both markets did the same thing at this seam - no divergence; price is above 3 and below 2 of 5 true opens"
     },
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 1 min"
+      "detail": "next one in 2 min"
     },
     {
       "n": 5,
