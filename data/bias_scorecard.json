@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T09:32:01.874469-05:00",
+  "generated_at": "2026-11-04T09:16:03.862074-05:00",
   "live": {
     "lon_high": {
       "n": 33,
@@ -18,17 +18,17 @@
       }
     },
     "lon_low": {
-      "n": 33,
-      "brier": 0.18532,
-      "accuracy": 66.7,
-      "avg_predicted": 52.6,
-      "actual_rate": 48.5,
+      "n": 34,
+      "brier": 0.18396,
+      "accuracy": 67.6,
+      "avg_predicted": 52.2,
+      "actual_rate": 47.1,
       "evidence": {
-        "skill": 0.2581,
-        "days": 33,
+        "skill": 0.2616,
+        "days": 34,
         "ci95": [
-          -0.054,
-          0.4944
+          -0.0525,
+          0.485
         ],
         "verdict": "INSUFFICIENT EVIDENCE \u2014 interval spans zero"
       }
@@ -50,65 +50,65 @@
       }
     },
     "pdh": {
-      "n": 32,
-      "brier": 0.0922,
-      "accuracy": 90.6,
-      "avg_predicted": 28.5,
-      "actual_rate": 18.8,
+      "n": 33,
+      "brier": 0.08948,
+      "accuracy": 90.9,
+      "avg_predicted": 27.8,
+      "actual_rate": 18.2,
       "evidence": {
-        "skill": 0.3948,
-        "days": 32,
+        "skill": 0.3985,
+        "days": 33,
         "ci95": [
-          -0.7639,
-          0.7655
+          -0.6758,
+          0.7651
         ],
         "verdict": "INSUFFICIENT EVIDENCE \u2014 interval spans zero"
       }
     },
     "pdl": {
-      "n": 30,
-      "brier": 0.11896,
-      "accuracy": 80.0,
-      "avg_predicted": 18.0,
-      "actual_rate": 20.0,
+      "n": 31,
+      "brier": 0.11874,
+      "accuracy": 80.6,
+      "avg_predicted": 18.5,
+      "actual_rate": 19.4,
       "evidence": {
-        "skill": 0.2565,
-        "days": 30,
+        "skill": 0.2393,
+        "days": 31,
         "ci95": [
-          -0.4626,
-          0.6735
+          -0.5479,
+          0.6464
         ],
         "verdict": "INSUFFICIENT EVIDENCE \u2014 interval spans zero"
       }
     },
     "on_high": {
-      "n": 42,
-      "brier": 0.15974,
-      "accuracy": 76.2,
-      "avg_predicted": 43.7,
-      "actual_rate": 38.1,
+      "n": 43,
+      "brier": 0.15672,
+      "accuracy": 76.7,
+      "avg_predicted": 44.6,
+      "actual_rate": 39.5,
       "evidence": {
-        "skill": 0.3226,
-        "days": 42,
+        "skill": 0.3444,
+        "days": 43,
         "ci95": [
-          -0.0456,
-          0.5517
+          0.0141,
+          0.5584
         ],
-        "verdict": "INSUFFICIENT EVIDENCE \u2014 interval spans zero"
+        "verdict": "SUPPORTED \u2014 beats its base rate"
       }
     },
     "on_low": {
-      "n": 42,
-      "brier": 0.19365,
-      "accuracy": 69.0,
-      "avg_predicted": 41.9,
-      "actual_rate": 45.2,
+      "n": 43,
+      "brier": 0.19019,
+      "accuracy": 69.8,
+      "avg_predicted": 41.4,
+      "actual_rate": 44.2,
       "evidence": {
-        "skill": 0.2183,
-        "days": 42,
+        "skill": 0.2288,
+        "days": 43,
         "ci95": [
-          -0.0418,
-          0.4129
+          -0.0229,
+          0.4296
         ],
         "verdict": "INSUFFICIENT EVIDENCE \u2014 interval spans zero"
       }
@@ -200,8 +200,57 @@
       "label": "NY AM closes above the 09:15 open"
     }
   },
-  "live_days": 45,
+  "live_days": 46,
   "recent": [
+    {
+      "date": "2026-11-03",
+      "weekday": "Tuesday",
+      "open_state": "above_range",
+      "scores": {
+        "lon_low": {
+          "p": 0.373,
+          "actual": 0,
+          "brier": 0.13913,
+          "correct": 1
+        },
+        "pdh": {
+          "p": 0.051,
+          "actual": 0,
+          "brier": 0.0026,
+          "correct": 1
+        },
+        "pdl": {
+          "p": 0.335,
+          "actual": 0,
+          "brier": 0.11223,
+          "correct": 1
+        },
+        "on_high": {
+          "p": 0.828,
+          "actual": 1,
+          "brier": 0.02958,
+          "correct": 1
+        },
+        "on_low": {
+          "p": 0.211,
+          "actual": 0,
+          "brier": 0.04452,
+          "correct": 1
+        }
+      },
+      "actual": {
+        "out_high": 28433.25,
+        "out_low": 28215.75,
+        "lon_high": 1,
+        "lon_low": 0,
+        "first_side": "high",
+        "first_high": 1,
+        "pdh": 0,
+        "pdl": 0,
+        "on_high": 1,
+        "on_low": 0
+      }
+    },
     {
       "date": "2026-11-02",
       "weekday": "Monday",
@@ -1221,49 +1270,6 @@
         "pdl": null,
         "on_high": 0,
         "on_low": 1
-      }
-    },
-    {
-      "date": "2026-10-06",
-      "weekday": "Tuesday",
-      "open_state": "above_range",
-      "scores": {
-        "lon_low": {
-          "p": 0.28,
-          "actual": 0,
-          "brier": 0.0784,
-          "correct": 1
-        },
-        "pdl": {
-          "p": 0.005,
-          "actual": 0,
-          "brier": 3e-05,
-          "correct": 1
-        },
-        "on_high": {
-          "p": 0.8,
-          "actual": 1,
-          "brier": 0.04,
-          "correct": 1
-        },
-        "on_low": {
-          "p": 0.095,
-          "actual": 0,
-          "brier": 0.00903,
-          "correct": 1
-        }
-      },
-      "actual": {
-        "out_high": 31597.25,
-        "out_low": 31457.75,
-        "lon_high": 1,
-        "lon_low": 0,
-        "first_side": "high",
-        "first_high": 1,
-        "pdh": null,
-        "pdl": 0,
-        "on_high": 1,
-        "on_low": 0
       }
     }
   ],
