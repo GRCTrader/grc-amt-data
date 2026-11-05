@@ -1,10 +1,10 @@
 {
-  "asof": "2026-11-05 00:15:51 ET",
-  "asof_epoch": 1793855751,
+  "asof": "2026-11-05 00:21:00 ET",
+  "asof_epoch": 1793856060,
   "session_date": "2026-11-05",
   "price": {
-    "NQ": 28266.75,
-    "ES": 7703.0
+    "NQ": 28257.75,
+    "ES": 7702.25
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "London",
       "start": "2026-11-05T00:00:00-05:00",
       "end": "2026-11-05T06:00:00-05:00",
-      "left_sec": 20648,
+      "left_sec": 20339,
       "phase": "Q2",
       "phase_name": "Manipulation",
       "phase_why": "The Judas swing. Price runs the obvious stops."
@@ -48,7 +48,7 @@
       "span": "block 1 of 4",
       "start": "2026-11-05T00:00:00-05:00",
       "end": "2026-11-05T01:30:00-05:00",
-      "left_sec": 4448,
+      "left_sec": 4139,
       "phase": "Q1",
       "phase_name": "Accumulation",
       "phase_why": "Range builds. The market is loading, not going anywhere."
@@ -59,24 +59,30 @@
       "span": "22.5 min",
       "start": "2026-11-05T00:00:00-05:00",
       "end": "2026-11-05T00:22:30-05:00",
-      "left_sec": 398,
+      "left_sec": 89,
       "phase": "Q1",
       "phase_name": "Accumulation",
       "phase_why": "Range builds. The market is loading, not going anywhere."
     },
     {
       "level": "Nano",
-      "q": 2,
+      "q": 3,
       "span": "5.625 min",
-      "start": "2026-11-05T00:11:15-05:00",
-      "end": "2026-11-05T00:16:52.500000-05:00",
-      "left_sec": 60,
-      "phase": "Q3",
-      "phase_name": "Distribution",
-      "phase_why": "The actual move. The quarter you want to be in."
+      "start": "2026-11-05T00:16:52.500000-05:00",
+      "end": "2026-11-05T00:22:30-05:00",
+      "left_sec": 89,
+      "phase": "Q4",
+      "phase_name": "Continuation / Reversal",
+      "phase_why": "It extends or it turns. The handover."
     }
   ],
-  "chains": [],
+  "chains": [
+    [
+      "90 minute",
+      "Micro",
+      "Nano"
+    ]
+  ],
   "true_opens": [
     {
       "code": "TMO",
@@ -96,8 +102,8 @@
       "code": "TDO",
       "name": "true day open",
       "at": "2026-11-05T00:00:00-05:00",
-      "px": null,
-      "side": null
+      "px": 28245.75,
+      "side": "above"
     },
     {
       "code": "TSO",
@@ -117,10 +123,11 @@
   "opens_filter": {
     "above": [
       "TMO",
-      "TWO"
+      "TWO",
+      "TDO"
     ],
     "below": [],
-    "known": 2,
+    "known": 3,
     "buy_ok": false,
     "sell_ok": true
   },
@@ -139,10 +146,10 @@
         "open": 28615.0,
         "high": 28621.0,
         "low": 28180.0,
-        "close": 28259.25,
-        "n": 6,
+        "close": 28257.75,
+        "n": 7,
         "start": "2026-11-04T18:00:00-05:00",
-        "end": "2026-11-05T00:15:51.613839-05:00"
+        "end": "2026-11-05T00:21:00.608041-05:00"
       },
       "sweep": {
         "swept": null,
@@ -168,26 +175,36 @@
         "open": 28615.0,
         "high": 28621.0,
         "low": 28180.0,
-        "close": 28259.25,
-        "n": 6,
+        "close": 28367.0,
+        "n": 5,
         "start": "2026-11-04T18:00:00-05:00",
         "end": "2026-11-05T00:00:00-05:00"
       },
-      "cur": null,
+      "cur": {
+        "open": 28245.75,
+        "high": 28258.75,
+        "low": 28244.75,
+        "close": 28257.75,
+        "n": 2,
+        "start": "2026-11-05T00:00:00-05:00",
+        "end": "2026-11-05T00:21:00.608041-05:00"
+      },
       "sweep": {
         "swept": null,
-        "note": "not enough bars yet"
+        "prev_high": 28621.0,
+        "prev_low": 28180.0,
+        "note": "still inside 28,180.00-28,621.00"
       },
       "ssmt": {
         "type": null,
-        "note": "not enough bars in one of the quarters",
+        "note": "both markets did the same thing at this seam - no divergence",
         "leader": null,
         "filter_ok": null
       },
-      "shape": "X-AMD",
-      "shape_why": "Q1 expanded 1.5x the usual range and closed 81% of the way in one direction - a reversal or continuation, not accumulation",
+      "shape": "AMD-X",
+      "shape_why": "Q1 ranged 1.5x the usual with 56% directional body - it behaved like accumulation",
       "quarter": "Q2",
-      "job": "Accumulation",
+      "job": "Manipulation",
       "start": "2026-11-05T00:00:00-05:00",
       "end": "2026-11-05T06:00:00-05:00"
     },
@@ -201,19 +218,29 @@
         "start": "2026-11-04T22:30:00-05:00",
         "end": "2026-11-05T00:00:00-05:00"
       },
-      "cur": null,
+      "cur": {
+        "open": 28245.75,
+        "high": 28258.75,
+        "low": 28244.75,
+        "close": 28257.75,
+        "n": 3,
+        "start": "2026-11-05T00:00:00-05:00",
+        "end": "2026-11-05T00:21:00.608041-05:00"
+      },
       "sweep": {
         "swept": null,
-        "note": "not enough bars yet"
+        "prev_high": 28402.25,
+        "prev_low": 28228.5,
+        "note": "still inside 28,228.50-28,402.25"
       },
       "ssmt": {
         "type": null,
-        "note": "not enough bars in one of the quarters",
+        "note": "both markets did the same thing at this seam - no divergence",
         "leader": null,
         "filter_ok": null
       },
       "shape": "AMD-X",
-      "shape_why": "no data for Q1 - assuming the ordinary order",
+      "shape_why": "Q1 ranged 0.1x the usual with 86% directional body - it behaved like accumulation",
       "quarter": "Q1",
       "job": "Accumulation",
       "start": "2026-11-05T00:00:00-05:00",
@@ -229,19 +256,29 @@
         "start": "2026-11-04T23:37:30-05:00",
         "end": "2026-11-05T00:00:00-05:00"
       },
-      "cur": null,
+      "cur": {
+        "open": 28245.75,
+        "high": 28258.75,
+        "low": 28244.75,
+        "close": 28257.75,
+        "n": 3,
+        "start": "2026-11-05T00:00:00-05:00",
+        "end": "2026-11-05T00:21:00.608041-05:00"
+      },
       "sweep": {
-        "swept": null,
-        "note": "not enough bars yet"
+        "swept": "low",
+        "prev_high": 28332.75,
+        "prev_low": 28258.5,
+        "note": "took the previous quarter low 28,258.50"
       },
       "ssmt": {
         "type": null,
-        "note": "not enough bars in one of the quarters",
+        "note": "both markets did the same thing at this seam - no divergence",
         "leader": null,
         "filter_ok": null
       },
       "shape": "AMD-X",
-      "shape_why": "no data for Q1 - assuming the ordinary order",
+      "shape_why": "Q1 ranged 0.2x the usual with 86% directional body - it behaved like accumulation",
       "quarter": "Q1",
       "job": "Accumulation",
       "start": "2026-11-05T00:00:00-05:00",
@@ -250,33 +287,33 @@
   },
   "gb": {
     "on": false,
-    "minute": 15,
-    "next_in_min": 14
+    "minute": 21,
+    "next_in_min": 8
   },
   "checklist": [
     {
       "n": 1,
       "step": "Identify XAMD / AMDX",
       "ok": true,
-      "detail": "AMD-X - no data for Q1 - assuming the ordinary order"
+      "detail": "AMD-X - Q1 ranged 0.1x the usual with 86% directional body - it behaved like accumulation"
     },
     {
       "n": 2,
       "step": "Previous quarter sweep",
       "ok": false,
-      "detail": "not enough bars yet"
+      "detail": "still inside 28,228.50-28,402.25"
     },
     {
       "n": 3,
       "step": "SSMT / ISMT, above or below true opens",
       "ok": false,
-      "detail": "no divergence - not enough bars in one of the quarters; price is above 2 and below 0 of 2 true opens"
+      "detail": "no divergence - both markets did the same thing at this seam - no divergence; price is above 3 and below 0 of 3 true opens"
     },
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 14 min"
+      "detail": "next one in 8 min"
     },
     {
       "n": 5,
