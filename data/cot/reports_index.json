@@ -1,6 +1,28 @@
 {
-  "updated": "2026-11-01T10:01:25.731255-05:00",
+  "updated": "2026-11-08T10:01:39.364441-05:00",
   "reports": [
+    {
+      "market_code": "ES",
+      "report_date": "2026-11-03",
+      "publish_date": "2026-11-08",
+      "site_url": "https://grctrader.netlify.app/cot/es",
+      "status": "ok",
+      "correction_note": null,
+      "bias": "Bearish",
+      "report_url": "data/cot/reports/es-2026-11-03.json",
+      "week_review": null
+    },
+    {
+      "market_code": "NQ",
+      "report_date": "2026-11-03",
+      "publish_date": "2026-11-08",
+      "site_url": "https://grctrader.netlify.app/cot/nq",
+      "status": "ok",
+      "correction_note": null,
+      "bias": "Bearish",
+      "report_url": "data/cot/reports/nq-2026-11-03.json",
+      "week_review": null
+    },
     {
       "market_code": "ES",
       "report_date": "2026-10-27",
@@ -10,7 +32,76 @@
       "correction_note": null,
       "bias": "Bearish",
       "report_url": "data/cot/reports/es-2026-10-27.json",
-      "week_review": null
+      "week_review": {
+        "week_start": "2026-11-02",
+        "week_end": "2026-11-06",
+        "bias": "Bearish",
+        "days": [
+          {
+            "date": "2026-11-02",
+            "weekday": "Monday",
+            "open": 7626.0,
+            "high": 7693.75,
+            "low": 7570.75,
+            "close": 7574.5,
+            "direction": -1,
+            "narrative": "opened 7626, pushed up to 7694, faded to close 7574 (-52)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-11-03",
+            "weekday": "Tuesday",
+            "open": 7584.0,
+            "high": 7623.75,
+            "low": 7546.0,
+            "close": 7596.75,
+            "direction": 1,
+            "narrative": "opened 7584, sold down to 7546, recovered to close 7597 (+13)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-11-04",
+            "weekday": "Wednesday",
+            "open": 7610.25,
+            "high": 7746.25,
+            "low": 7490.0,
+            "close": 7720.5,
+            "direction": 1,
+            "narrative": "opened 7610, sold down to 7490, recovered to close 7720 (+110)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-11-05",
+            "weekday": "Thursday",
+            "open": 7737.25,
+            "high": 7738.75,
+            "low": 7346.0,
+            "close": 7383.0,
+            "direction": -1,
+            "narrative": "opened 7737, closed lower at 7383 (-354)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-11-06",
+            "weekday": "Friday",
+            "open": 7359.0,
+            "high": 7469.0,
+            "low": 7322.25,
+            "close": 7402.0,
+            "direction": 1,
+            "narrative": "opened 7359, sold down to 7322, recovered to close 7402 (+43)",
+            "bot_read": null
+          }
+        ],
+        "week_net_pct": -2.94,
+        "verdict": "correct",
+        "score": 76,
+        "components": {
+          "net_direction": 60,
+          "daily_agreement": 16
+        },
+        "review_text": "WHAT HAPPENED:\nThe engine correctly predicted the net bearish weekly trend (-2.94%), anchored by a massive Thursday drop. However, daily precision was low, matching only two of five daily closes due to violent mid-week counter-rallies.\n\nWHY IT MISSED:\nConfidence was capped at Low because absolute commercial positioning remained net long at the 63rd percentile, signaling an active broader buy program. This structural long baseline conflicted with the rapid three-week position reduction (-16,621 contracts) and the short-term bearish nodule, generating severe intra-week chop and daily directional misses despite getting the net weekly bias right.\n\nSUGGESTED IMPROVEMENT:\nSuggest reviewing engine weights to upgrade bias confidence from Low to Medium when a bearish nodule aligns with three consecutive weeks of high-magnitude commercial liquidation, even if the overall percentile remains above 50 percent."
+      }
     },
     {
       "market_code": "NQ",
@@ -21,7 +112,101 @@
       "correction_note": null,
       "bias": "Bearish",
       "report_url": "data/cot/reports/nq-2026-10-27.json",
-      "week_review": null
+      "week_review": {
+        "week_start": "2026-11-02",
+        "week_end": "2026-11-06",
+        "bias": "Bearish",
+        "days": [
+          {
+            "date": "2026-11-02",
+            "weekday": "Monday",
+            "open": 28587.75,
+            "high": 28891.25,
+            "low": 28101.75,
+            "close": 28127.5,
+            "direction": -1,
+            "narrative": "opened 28588, pushed up to 28891, faded to close 28128 (-460)",
+            "bot_read": {
+              "predicted_model": "C",
+              "actual_model": "rotational_balance",
+              "model_correct": 1,
+              "detail": "Held value 28474-28820"
+            }
+          },
+          {
+            "date": "2026-11-03",
+            "weekday": "Tuesday",
+            "open": 28201.0,
+            "high": 28449.5,
+            "low": 28038.25,
+            "close": 28305.75,
+            "direction": 1,
+            "narrative": "opened 28201, sold down to 28038, recovered to close 28306 (+105)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "range_expansion",
+              "model_correct": 1,
+              "detail": "Two-sided, range 28216-28389, close 28357"
+            }
+          },
+          {
+            "date": "2026-11-04",
+            "weekday": "Wednesday",
+            "open": 28410.0,
+            "high": 28969.0,
+            "low": 27615.75,
+            "close": 28566.75,
+            "direction": 0,
+            "narrative": "opened 28410, closed flat at 28567 (+157)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "range_expansion",
+              "model_correct": 1,
+              "detail": "Two-sided, range 28405-28969, close 28631"
+            }
+          },
+          {
+            "date": "2026-11-05",
+            "weekday": "Thursday",
+            "open": 28663.0,
+            "high": 28668.5,
+            "low": 26570.0,
+            "close": 26752.0,
+            "direction": -1,
+            "narrative": "opened 28663, closed lower at 26752 (-1911)",
+            "bot_read": {
+              "predicted_model": "C",
+              "actual_model": "trend_down",
+              "model_correct": 0,
+              "detail": "Accepted below VAL 28458, closed 26880 (low of range)"
+            }
+          },
+          {
+            "date": "2026-11-06",
+            "weekday": "Friday",
+            "open": 26640.25,
+            "high": 27425.0,
+            "low": 26366.5,
+            "close": 27085.25,
+            "direction": 1,
+            "narrative": "opened 26640, sold down to 26366, recovered to close 27085 (+445)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "range_expansion",
+              "model_correct": 1,
+              "detail": "Two-sided, range 27038-27425, close 27249"
+            }
+          }
+        ],
+        "week_net_pct": -5.26,
+        "verdict": "correct",
+        "score": 76,
+        "components": {
+          "net_direction": 60,
+          "daily_agreement": 16
+        },
+        "review_text": "WHAT HAPPENED:\nThe engine correctly predicted the net weekly bearish direction, capturing a severe 5.26 percent decline anchored by Thursday's sharp sell-off. However, it lost points on daily intra-week accuracy by incorrectly calling a neutral balanced context (C) on Thursday right before the market trended down 1,911 points.\n\nWHY IT MISSED:\nThe broad macro call was right because commercial short positioning sat at multi-month extremes (93rd percentile). However, daily tracking misfired on Thursday because the engine categorized recent commercial activity as passive neutral hedging based on a two-month-old nodule and a small weekly contract change (+1,484). This caused the daily engine to expect rotation (C) rather than dynamic trend continuation when price broke lower.\n\nSUGGESTED IMPROVEMENT:\nConsider reviewing a rule change that automatically disables neutral daily calls (C) in favor of trend-expansion tracking whenever 12-month commercial short positioning exceeds the 90th percentile and price trades below the weekly opening price."
+      }
     },
     {
       "market_code": "ES",
