@@ -1,0 +1,151 @@
+{
+  "2026-11-11": {
+    "date": "2026-11-11",
+    "written_at": "2026-11-11T12:25:06-05:00",
+    "plan": {
+      "bias": "short",
+      "price": 28376.5,
+      "levels": [
+        {
+          "price": 28406.25,
+          "name": "Overnight High",
+          "kind": "bsl"
+        },
+        {
+          "price": 28380.75,
+          "name": "08:30 Open",
+          "kind": "open"
+        },
+        {
+          "price": 28194.5,
+          "name": "Midnight Open",
+          "kind": "open"
+        },
+        {
+          "price": 28090.0,
+          "name": "PDH",
+          "kind": "bsl"
+        },
+        {
+          "price": 27847.75,
+          "name": "Overnight Low",
+          "kind": "ssl"
+        }
+      ],
+      "scenarios": [
+        {
+          "side": "short",
+          "model": "[A+] Full Reversal Model (A+ recipe)",
+          "trigger": "Sweep of ONH 28406.25 after 09:30 open followed by a 5m Change in State of Delivery and bearish FVG formation above midnight open",
+          "entry": 28390.0,
+          "stop": 28425.0,
+          "target": 28194.5,
+          "target2": 28090.0,
+          "window": "09:30-11:00"
+        },
+        {
+          "side": "long",
+          "model": "[ER] Expansion Retracement (Vol 1 Class 3)",
+          "trigger": "Deep retracement into discount near Midnight Open / PDH (28194.5 - 28090.0) with bodies respecting a 5m bullish FVG",
+          "entry": 28200.0,
+          "stop": 28075.0,
+          "target": 28406.25,
+          "target2": 28969.0,
+          "window": "09:30-11:00"
+        }
+      ],
+      "invalidation": {
+        "price": 28430.0,
+        "rule": "15m candle close above ONH 28406.25 with strong expansion and no bearish PD array creation",
+        "by": "11:00"
+      }
+    },
+    "outcome": "A_stop",
+    "detail": "[A+] Full Reversal Model (A+ recipe): stop \u00b7 at 10:40 \u00b7 went +5.46R / -1.55R\n  uncapped to 16:00: A_stop (-1.00R)\n  direction called short; AM was up, whole RTH was up",
+    "late_outcome": "A_stop",
+    "late_r": -1.0,
+    "grades": {
+      "bias2": "C",
+      "read": "D",
+      "day": "A"
+    },
+    "review": {
+      "bias2": {
+        "grade": "C",
+        "reason": "The short bias and primary [A+] reversal scenario failed, but the secondary [ER] long plan caught the exact 09:50 low at Midnight Open (28194.5) for a full target hit.",
+        "wanted": "A sweep of ONH 28406.25 followed by a 5m CSD for a short, or a deep dip into discount at Midnight Open 28194.5 for an ER long.",
+        "happened": "Price sold off at the open to 28199.0 (Midnight Open discount) at 09:50, respected the level, and expanded continuously upward to close at 28616.5.",
+        "model_called": "[A+] Full Reversal Model (A+ recipe)",
+        "model_actual": "[ER] Expansion Retracement (Vol 1 Class 3)",
+        "model_correct": false
+      },
+      "read": {
+        "grade": "D",
+        "reason": "The primary morning read called for a short reversal, misinterpreting discount price action as a short setup rather than a long expansion baseline."
+      },
+      "day": {
+        "grade": "A",
+        "shape": "Trend day up from Midnight Open discount",
+        "reason": "Clean algorithmic delivery: an early Judas dip to Midnight Open (28194.5) at 09:50 followed by one-way range expansion closing 98% up the range."
+      },
+      "lessons": [
+        "Never short below the Midnight Open (28194.5); opening price rules mandate longs in discount (D10 Daily Bias Practice).",
+        "When price respects the 09:50 low at Midnight Open with bodies and forms a bullish FVG, scrap short scenarios immediately.",
+        "On range expansion days, respect the [ER] target extensions (28406.25 / 28624.5) and do not fight early displacement."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe morning plan favored a short bias using the `[A+] Full Reversal Model`. It looked for a post-09:30 sweep of ONH (28406.25), followed by a 5m Change in State of Delivery (CISD) and a bearish FVG above the Midnight Open (28194.5), targeting 28194.5 and PDH (28090.0). As a contingency, Scenario B mapped an `[ER] Expansion Retracement` long if price dropped deep into discount near Midnight Open (28194.5\u201328090.0) and respected a 5m bullish FVG, targeting ONH (28406.25).\n\n## What actually happened\nAt the 09:30 open (28352.75), price did not sweep ONH first. Instead, it delivered an immediate downward Judas swing, driving straight into discount to print a session low of 28199.0 at 09:50\u2014holding just 4.5 pts above the Midnight Open (28194.5). Bodies respected the discount level, printed a bullish FVG, and triggered Scenario B (LONG [ER]) near 28200.0. From 09:50 onward, price spooled upward without looking back. It reclaimed the 08:30 open (28380.75), sliced through ONH (28406.25) at 10:35 to fulfill Scenario B's primary target (+1.65R), and expanded to an AM high of 28550.25 by 10:55. \n\nScenario A's short triggered during the rally attempt, yielding a brief scalp before getting stopped out at 10:40 (-1.00R).\n\n## How it went\nThe primary directional short read was wrong, but the plan's structure saved the day via Scenario B. Shorting into discount below the Midnight Open violated the core opening price rule: *\"Below two (best: all three) opens -> longs\"* (D10, V57). Short FVGs formed below opening prices are low-probability and rarely hold. \n\nHowever, Scenario B (`[ER] Expansion Retracement`) was executed cleanly: price hit 28199.0 (testing Midnight Open), held on a closing basis, and activated the buy program. Scenario B hit its first target (28406.25) by 10:35 with zero MAE (0.0R), confirming that the framework correctly identified the structural key level even though the trader favored the wrong initial bias.\n\n## The day as a whole\nThe session delivered a classic single-direction Trend Day Up from HTF discount. After the 09:50 low at Midnight Open, the market entered Low Resistance Liquidity Run (LRLR) conditions. It expanded through lunch to hit 28624.5 by 12:00 and closed near the absolute high of the day at 28616.5 (98.1% up the daily range). The afternoon price action proved that the early morning dip was pure PO3 accumulation below the open before full daily distribution.\n\n## What to do differently\n1. **Respect Opening Price Authority:** Do not build primary short scenarios when price is trading below the Midnight Open (28194.5) and 08:30 open (28380.75). Reversals must print above opens (V57).\n2. **Pivot Immediately on Discount Respect:** When 28199.0 held at 09:50 with bodies staying above Midnight Open, Scenario A should have been invalidated on the spot to focus entirely on the `[ER]` long.\n3. **Do Not Fight LRLR Expansion:** Once price reclaims the 08:30 open with displacement, cease all short entries; the buy program is fully active toward upper quadrant projections (D15).",
+    "session": {
+      "date": "2026-11-11",
+      "bars": 148,
+      "premarket": {
+        "open": 28284.5,
+        "high": 28406.25,
+        "low": 28224.5,
+        "close": 28352.0,
+        "at_high": "08:25",
+        "at_low": "04:15"
+      },
+      "am": {
+        "open": 28352.75,
+        "high": 28550.25,
+        "low": 28199.0,
+        "close": 28549.5,
+        "at_high": "10:55",
+        "at_low": "09:50"
+      },
+      "lunch": {
+        "open": 28549.0,
+        "high": 28624.5,
+        "low": 28462.0,
+        "close": 28616.5,
+        "at_high": "12:00",
+        "at_low": "11:10"
+      },
+      "pm": null,
+      "rth": {
+        "open": 28352.75,
+        "high": 28624.5,
+        "low": 28199.0,
+        "close": 28616.5,
+        "at_high": "12:00",
+        "at_low": "09:50",
+        "net": 263.75,
+        "shape": "trend up",
+        "close_in_range_pct": 98.1
+      }
+    },
+    "playbook": {
+      "models": 22,
+      "rule_sections": 18,
+      "rules": 203,
+      "glossary": 69,
+      "dojo_classes": 17,
+      "notes": 38,
+      "videos": 79,
+      "concepts": 20,
+      "video_notes": 47,
+      "synced_at": "2026-11-11T17:11:23+00:00"
+    }
+  }
+}
