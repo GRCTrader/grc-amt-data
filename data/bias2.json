@@ -476,5 +476,171 @@
       "video_notes": 47,
       "synced_at": "2026-11-11T17:11:23+00:00"
     }
+  },
+  "2026-11-05": {
+    "date": "2026-11-05",
+    "written_at": "2026-11-11T16:36:56-05:00",
+    "plan": {
+      "bias": "long",
+      "price": 28230.75,
+      "levels": [
+        {
+          "price": 28167.75,
+          "name": "Overnight Low",
+          "kind": "ssl"
+        },
+        {
+          "price": 28232.75,
+          "name": "Previous Week Low",
+          "kind": "ssl"
+        },
+        {
+          "price": 28259.25,
+          "name": "Midnight Open",
+          "kind": "open"
+        },
+        {
+          "price": 28351.25,
+          "name": "08:30 Open",
+          "kind": "open"
+        },
+        {
+          "price": 28405.0,
+          "name": "Previous Daily Low",
+          "kind": "bsl"
+        },
+        {
+          "price": 28465.0,
+          "name": "London High",
+          "kind": "bsl"
+        },
+        {
+          "price": 28587.75,
+          "name": "Weekly Open",
+          "kind": "open"
+        }
+      ],
+      "scenarios": [
+        {
+          "side": "long",
+          "model": "[A+] Full Reversal Model (A+ recipe)",
+          "trigger": "Price holds above ONL (28167.75) after sweeping PWL (28232.75) below three opening prices and reclaims Midnight Open (28259.25) with a bullish 5m displacement.",
+          "entry": 28260.0,
+          "stop": 28165.0,
+          "target": 28351.25,
+          "target2": 28405.0,
+          "window": "09:30-11:00"
+        },
+        {
+          "side": "short",
+          "model": "[ER] Expansion Retracement",
+          "trigger": "Price retraces into the 08:30 open (28351.25) / PDL (28405.0) premium area, rejects with a 5m bearish FVG, and fails to hold above Midnight Open.",
+          "entry": 28350.0,
+          "stop": 28465.0,
+          "target": 28167.75,
+          "target2": 27615.75,
+          "window": "09:30-11:00"
+        }
+      ],
+      "invalidation": {
+        "price": 28167.75,
+        "rule": "5m body close below ONL",
+        "by": "11:00"
+      }
+    },
+    "outcome": "invalidated",
+    "detail": "invalidation 28167.75 traded\n  uncapped to 16:00: no_trigger\n  direction called long; AM was down, whole RTH was down",
+    "late_outcome": "no_trigger",
+    "late_r": null,
+    "grades": {
+      "bias2": "C",
+      "read": "F",
+      "day": "A"
+    },
+    "review": {
+      "bias2": {
+        "grade": "C",
+        "reason": "The plan's primary long bias was incorrect, but its protective sit-out rules were triggered, successfully preventing entry into a bearish market.",
+        "wanted": "It wanted a long entry after sweeping PWL and reclaiming Midnight Open, or a short entry on a retracement to the 08:30 open/PDL premium.",
+        "happened": "Price opened well below all mentioned opening prices, immediately broke below ONL, and never revisited the premium areas for a short, leading to an immediate invalidation.",
+        "model_called": "[A+] Full Reversal Model (A+ recipe) / [ER] Expansion Retracement",
+        "model_actual": "[SO] Sell-Off / F-U Model",
+        "model_correct": false
+      },
+      "read": {
+        "grade": "F",
+        "reason": "The HTF bias was called long, but the market executed a strong trend down throughout the day, explicitly graded as a miss."
+      },
+      "day": {
+        "grade": "A",
+        "shape": "Trend day down",
+        "reason": "The market established a strong bearish trend from the open, following an 'F-U Shorts' profile, with continuous displacement to the downside."
+      },
+      "lessons": [
+        "Strictly adhere to the 'Thursday protocol rule' (PLAYBOOK RULES \u2014 The Week) and 'sit out if' conditions as they successfully prevent engagement when criteria are not met.",
+        "Learn to identify the 'F-U Shorts' day profile (V40, V57) early, especially when price opens and displaces below multiple opening prices, overriding prior HTF bias.",
+        "Prioritize the context of opening prices for bias confirmation; price remaining below Midnight, 08:30, and 09:30 opens is a strong bearish signal (CONCEPT PAGES \u2014 Opening Prices, V57)."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe morning's thesis was primarily a long via the [A+] Full Reversal Model. It sought for price to hold above the Overnight Low (28167.75) after sweeping the Previous Week Low (28232.75) below three opening prices, then reclaiming the Midnight Open (28259.25) with bullish 5m displacement, targeting the 08:30 Open (28351.25) or Previous Daily Low (28405.0). An alternative short via [ER] Expansion Retracement was planned if price retraced into the 08:30 Open/PDL premium and rejected with a bearish FVG. The plan explicitly stated to sit out if the Thursday protocol rule applied (Done by Wednesday AM) unless A+ criteria confirmed, or if a 5m body closed below ONL without immediate displacement back above.\n\n## What actually happened\nThe pre-market session saw price open at 28369.25, reach a high at the London High (28465.0), then drop to a low of 28200.25 (below the Midnight Open of 28259.25) before closing at 28205.25. At the 09:30 NY AM open, price was at 28203.25. This was significantly below the Midnight Open (28259.25) and 08:30 Open (28351.25). The first 5-minute candle immediately produced a lower low of 27950.0, breaching the Overnight Low (28167.75) within minutes of the open. Price never held above ONL, nor did it reclaim Midnight Open. The AM session (09:30-11:00) became a relentless drop, falling from 28203.25 to 26732.0. The lunch session saw a brief retracement to 27358.0, but the NY PM session continued the bearish trend, reaching a low of 26718.0 before closing at 26742.5. The whole RTH session closed down 1460.75 points.\n\n## How it went\nThe plan's primary long bias was unequivocally wrong. The market's aggressive downward movement from the open contradicted the core bullish thesis. Neither the [A+] Full Reversal Model for longs nor the [ER] Expansion Retracement for shorts triggered, as conditions for both were not met; price opened below all pertinent opening prices and never retraced to the specified premium for a short. However, the plan's protective rules worked effectively. The \"5m body close below ONL 28167.75 without immediate displacement back above\" sit-out condition was met almost immediately after 09:30, and the trade was mechanically invalidated. This prevented entry into a deeply bearish market, successfully containing potential losses, which aligns with the playbook's emphasis on capital preservation. The day delivered an \"F-U Shorts\" profile (V40, V57) or a [SO] Sell-Off / F-U Model, characterized by persistent downward displacement below opening prices.\n\n## The day as a whole\nThe day took the shape of a strong trend down, following an \"F-U Shorts\" daily profile, not a two-sided range or a reversal. The AM session established aggressive bearish momentum, never allowing a retracement back to significant premium levels. The price action demonstrated low-resistance delivery to the downside throughout the day, consistent with an F-U (sell-off) profile mentioned in V40, V57, and the [SO] model. The market's behavior, opening far below the Midnight and 08:30 opens and immediately extending lower, provided strong confluence for a bearish bias that contradicted the plan's initial long call.\n\n## What to do differently\n*   **Strictly adhere to the 'Thursday protocol rule' (PLAYBOOK RULES \u2014 The Week) and 'sit out if' conditions:** The plan explicitly indicated to \"Done by Wednesday AM\" on Thursday and to \"sit out if\" A+ criteria did not confirm at NY open. These rules were correctly triggered and would have prevented any attempt to trade.\n*   **Identify the 'F-U Shorts' day profile (V40, V57) earlier:** The immediate drop below all opening prices and continuous displacement after 9:30 strongly indicated an \"F-U Shorts\" or \"Sell-Off\" day, which demands a different approach than a long reversal.\n*   **Prioritize opening prices for bias confirmation:** Price opening and remaining below Midnight, 08:30, and 09:30 opens is a strong bearish signal (CONCEPT PAGES \u2014 Opening Prices, V57), which should override a prior HTF long bias.",
+    "session": {
+      "date": "2026-11-05",
+      "bars": 276,
+      "premarket": {
+        "open": 28369.25,
+        "high": 28465.0,
+        "low": 28200.25,
+        "close": 28205.25,
+        "at_high": "06:50",
+        "at_low": "09:25"
+      },
+      "am": {
+        "open": 28203.25,
+        "high": 28228.25,
+        "low": 26732.0,
+        "close": 26974.5,
+        "at_high": "09:30",
+        "at_low": "10:50"
+      },
+      "lunch": {
+        "open": 26974.25,
+        "high": 27358.0,
+        "low": 26816.0,
+        "close": 26920.75,
+        "at_high": "11:35",
+        "at_low": "13:00"
+      },
+      "pm": {
+        "open": 26921.75,
+        "high": 27180.0,
+        "low": 26718.0,
+        "close": 26742.5,
+        "at_high": "14:50",
+        "at_low": "15:55"
+      },
+      "rth": {
+        "open": 28203.25,
+        "high": 28228.25,
+        "low": 26718.0,
+        "close": 26742.5,
+        "at_high": "09:30",
+        "at_low": "15:55",
+        "net": -1460.75,
+        "shape": "trend down",
+        "close_in_range_pct": 1.6
+      }
+    },
+    "playbook": {
+      "models": 22,
+      "rule_sections": 18,
+      "rules": 203,
+      "glossary": 69,
+      "dojo_classes": 17,
+      "notes": 38,
+      "videos": 79,
+      "concepts": 20,
+      "video_notes": 47,
+      "synced_at": "2026-11-11T17:11:23+00:00"
+    }
   }
 }
