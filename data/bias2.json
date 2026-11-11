@@ -154,5 +154,156 @@
       "video_notes": 47,
       "synced_at": "2026-11-11T17:11:23+00:00"
     }
+  },
+  "2026-11-03": {
+    "date": "2026-11-03",
+    "written_at": "2026-11-11T16:35:52-05:00",
+    "plan": {
+      "bias": "long",
+      "price": 28163.5,
+      "levels": [
+        {
+          "price": 28038.25,
+          "name": "London Low",
+          "kind": "ssl"
+        },
+        {
+          "price": 28124.25,
+          "name": "True Day Open",
+          "kind": "open"
+        },
+        {
+          "price": 28201.0,
+          "name": "True Week Open / PWL",
+          "kind": "open"
+        },
+        {
+          "price": 28275.75,
+          "name": "Asia High",
+          "kind": "bsl"
+        }
+      ],
+      "scenarios": [
+        {
+          "side": "long",
+          "model": "[LMR] Lunch Macro Retracement",
+          "trigger": "Price holds above 28124.25 (True Day Open) on a 5m retracement following the SMT sweep of 28038.25.",
+          "entry": 28124.25,
+          "stop": 28038.25,
+          "target": 28201.0,
+          "target2": 28275.75,
+          "window": "13:00-15:00"
+        },
+        {
+          "side": "short",
+          "model": "[ER] Expansion Retracement (Vol 1 Class 3)",
+          "trigger": "Price reaches 28201.00 (True Week Open), fails to displace, and closes back below 28163.50.",
+          "entry": 28201.0,
+          "stop": 28275.75,
+          "target": 28124.25,
+          "target2": 28038.25,
+          "window": "13:30-15:30"
+        }
+      ],
+      "invalidation": {
+        "price": 28038.25,
+        "rule": "15m body close below London Low 28038.25",
+        "by": "14:00"
+      }
+    },
+    "outcome": "after_cutoff",
+    "detail": "written after the 11:00 cutoff \u2014 not graded\n  uncapped to 16:00: no_trigger",
+    "late_outcome": "no_trigger",
+    "late_r": null,
+    "grades": {
+      "bias2": "C",
+      "read": "C",
+      "day": "A"
+    },
+    "review": {
+      "bias2": {
+        "grade": "C",
+        "reason": "The plan's explicit sit-out condition was met due to the absence of the ES 15m chart, preventing any trade from triggering as intended.",
+        "wanted": "The plan wanted either a long entry at 28124.25 after an SMT sweep of 28038.25, or a short entry at 28201.0 after failure to displace.",
+        "happened": "Neither specific trigger for Scenario A nor Scenario B was met as described in their windows, and the market remained mostly above the London Low of 28114.25 from 07:00.",
+        "model_called": "[LMR] Lunch Macro Retracement",
+        "model_actual": "[ER] Expansion Retracement",
+        "model_correct": true
+      },
+      "read": {
+        "grade": "C",
+        "reason": "The core long bias had partial validation as the market rallied significantly from its low, but the day was two-sided with major retracements."
+      },
+      "day": {
+        "grade": "A",
+        "shape": "Two-sided range with significant expansions and retracements in both directions.",
+        "reason": "The market exhibited substantial volatility and price discovery, moving across a wide range but closing net positive."
+      },
+      "lessons": [
+        "Strictly Adhere to Sit-Out Conditions: The plan's rule to sit out if the ES 15m chart was not provided must be strictly followed, even if other factors seem to align [SMT].",
+        "Flexible Lunch Macro Timings: While the plan specified a 13:00-15:00 window for [LMR], the most significant lunch retracement occurred earlier (11:00-11:30), indicating a need for adaptability or earlier monitoring of macro timings [V53 Friday review, D07 Session Power of Three].",
+        "Validate All Trigger Elements: Ensure every component of a trigger (e.g., specific SMT sweep level, displacement failure, price action vs. opening prices) is unequivocally met before considering entry, as missing details can invalidate the entire setup [V57 Members Q&A]."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe morning plan called for a long bias (28163.5) expecting price to hold above the True Day Open (28124.25) on a 5m retracement following an SMT sweep of the London Low (28038.25), triggering a [LMR] Lunch Macro Retracement between 13:00-15:00 targeting 28201.0 / 28275.75. Alternatively, a short was anticipated via [ER] Expansion Retracement if price reached the True Week Open (28201.0), failed to displace, and closed back below 28163.50, also between 13:30-15:30, targeting 28124.25 / 28038.25. The plan explicitly stated to sit out if the ES 15m chart was not provided for SMT alignment.\n\n## What actually happened\nPre-market saw a high of 28426.5 (08:30) and a low of 28114.25 (07:00), opening NY AM at 28266.5. The NY AM session (09:30-11:00) immediately dropped to its low of 28215.75 at 09:30 before rallying to a high of 28422.5 by 10:55. The lunch period (11:00-13:30) saw an immediate high of 28443.5 at 11:00, followed by a significant retracement to 28282.75 by 11:30, then a rally into the PM open. The NY PM session (13:30-16:00) continued the two-sided action, reaching a high of 28431.75 at 13:30 before a drop to 28237.0 (14:55), closing RTH at 28300.5, a net gain of 34.0 points over a wide 227.75 point range.\n\n## How it went\nThe plan's explicit sit-out condition regarding the missing ES 15m chart was met, meaning no trade should have been attempted according to its own rules. Both specific trade scenarios' triggers failed to materialize as described:\n*   The London Low (28038.25) for the long trigger's SMT sweep was not reached during RTH, with the actual pre-market low being 28114.25 and NY AM low 28215.75. Therefore, Scenario A's primary trigger did not fire.\n*   For the short, price remained above 28201.0 (True Week Open) for most of the RTH, preventing the expected trigger where it reaches and fails to displace from this level in the 13:30-15:30 window.\n*   While a lunch macro retracement did occur (11:00-11:30), it was outside the plan's specified 13:00-15:00 window for the [LMR] model. The core long bias had partial validation as the market rallied significantly from its 09:30 low, closing net positive, but the day was characterized by deep two-sided movements, not a clean trend.\n\n## The day as a whole\nThe day exhibited a classic \"range_expansion\" profile, with price moving significantly in both directions within a wide range before closing slightly higher. The market's movement was consistently defined by [ER] Expansion Retracement cycles, demonstrating swings and counter-swings that took liquidity at various points. The volatility and lack of clean direction in the intended windows would have justified the plan's own sit-out condition.\n\n## What to do differently\n1.  **Strictly Adhere to Sit-Out Conditions:** The plan's rule to sit out if the ES 15m chart was not provided must be strictly followed, even if other factors seem to align [SMT].\n2.  **Flexible Lunch Macro Timings:** While the plan specified a 13:00-15:00 window for [LMR], the most significant lunch retracement occurred earlier (11:00-11:30), indicating a need for adaptability or earlier monitoring of macro timings [V53 Friday review, D07 Session Power of Three].\n3.  **Validate All Trigger Elements:** Ensure every component of a trigger (e.g., specific SMT sweep level, displacement failure, price action vs. opening prices) is unequivocally met before considering entry, as missing details can invalidate the entire setup [V57 Members Q&A].",
+    "session": {
+      "date": "2026-11-03",
+      "bars": 276,
+      "premarket": {
+        "open": 28159.25,
+        "high": 28426.5,
+        "low": 28114.25,
+        "close": 28266.5,
+        "at_high": "08:30",
+        "at_low": "07:00"
+      },
+      "am": {
+        "open": 28266.5,
+        "high": 28422.5,
+        "low": 28215.75,
+        "close": 28417.5,
+        "at_high": "10:55",
+        "at_low": "09:30"
+      },
+      "lunch": {
+        "open": 28418.5,
+        "high": 28443.5,
+        "low": 28282.75,
+        "close": 28385.25,
+        "at_high": "11:00",
+        "at_low": "11:30"
+      },
+      "pm": {
+        "open": 28383.75,
+        "high": 28431.75,
+        "low": 28237.0,
+        "close": 28300.5,
+        "at_high": "13:30",
+        "at_low": "14:55"
+      },
+      "rth": {
+        "open": 28266.5,
+        "high": 28443.5,
+        "low": 28215.75,
+        "close": 28300.5,
+        "at_high": "11:00",
+        "at_low": "09:30",
+        "net": 34.0,
+        "shape": "two-sided",
+        "close_in_range_pct": 37.2
+      }
+    },
+    "playbook": {
+      "models": 22,
+      "rule_sections": 18,
+      "rules": 203,
+      "glossary": 69,
+      "dojo_classes": 17,
+      "notes": 38,
+      "videos": 79,
+      "concepts": 20,
+      "video_notes": 47,
+      "synced_at": "2026-11-11T17:11:23+00:00"
+    }
   }
 }
