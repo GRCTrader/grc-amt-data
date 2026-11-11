@@ -305,5 +305,176 @@
       "video_notes": 47,
       "synced_at": "2026-11-11T17:11:23+00:00"
     }
+  },
+  "2026-11-04": {
+    "date": "2026-11-04",
+    "written_at": "2026-11-11T16:36:21-05:00",
+    "plan": {
+      "bias": "short",
+      "price": 28430.75,
+      "levels": [
+        {
+          "price": 28662.0,
+          "name": "Overnight High",
+          "kind": "bsl"
+        },
+        {
+          "price": 28587.75,
+          "name": "Weekly Open",
+          "kind": "open"
+        },
+        {
+          "price": 28512.0,
+          "name": "Asia High",
+          "kind": "bsl"
+        },
+        {
+          "price": 28443.5,
+          "name": "PDH",
+          "kind": "bsl"
+        },
+        {
+          "price": 28408.0,
+          "name": "08:30 Open",
+          "kind": "open"
+        },
+        {
+          "price": 28252.5,
+          "name": "London Low",
+          "kind": "ssl"
+        },
+        {
+          "price": 28215.75,
+          "name": "PDL",
+          "kind": "ssl"
+        },
+        {
+          "price": 27935.75,
+          "name": "Midnight Open",
+          "kind": "open"
+        }
+      ],
+      "scenarios": [
+        {
+          "side": "short",
+          "model": "[ER] Expansion Retracement (Vol 1 Class 3)",
+          "trigger": "Price retraces into premium above 08:30 open toward 28457.25 after 09:30 open and forms a 5m bearish displacement.",
+          "entry": 28457.25,
+          "stop": 28512.0,
+          "target": 28252.5,
+          "target2": 28215.75,
+          "window": "09:30-11:00"
+        },
+        {
+          "side": "long",
+          "model": "[A+] Full Reversal Model (A+ recipe)",
+          "trigger": "Price sweeps London Low (28252.50) and PDL (28215.75) into discount and prints a 5m bullish CSD.",
+          "entry": 28215.75,
+          "stop": 28150.0,
+          "target": 28408.0,
+          "target2": 28443.5,
+          "window": "09:30-11:00"
+        }
+      ],
+      "invalidation": {
+        "price": 28662.0,
+        "rule": "15m close above Overnight High",
+        "by": "11:00"
+      }
+    },
+    "outcome": "A_stop",
+    "detail": "[ER] Expansion Retracement (Vol 1 Class 3): stop \u00b7 at 09:35 \u00b7 went +0.75R / -3.56R\n  uncapped to 16:00: A_stop (-1.00R)\n  direction called short; AM was two_sided, whole RTH was two_sided",
+    "late_outcome": "A_stop",
+    "late_r": -1.0,
+    "grades": {
+      "bias2": "D",
+      "read": "C",
+      "day": "B"
+    },
+    "review": {
+      "bias2": {
+        "grade": "D",
+        "reason": "The plan's short bias was incorrect, leading to an immediate stop-out, but the invalidation correctly signaled strong bullish displacement.",
+        "wanted": "A retracement into premium for a short after 09:30 displacement towards lower targets.",
+        "happened": "Price immediately displaced upwards, triggering the invalidation early and continuing a strong bullish expansion.",
+        "model_called": "ER",
+        "model_actual": "ER",
+        "model_correct": false
+      },
+      "read": {
+        "grade": "C",
+        "reason": "While the HTF bias was incorrect, the plan correctly anticipated a range expansion and its invalidation accurately signaled the bullish directional move."
+      },
+      "day": {
+        "grade": "B",
+        "shape": "Trend Day Up with PM retracement",
+        "reason": "The day began with a strong, unambiguous bullish expansion that drove price up, followed by a two-sided retracement."
+      },
+      "lessons": [
+        "Prioritize explicit invalidation thresholds: The 15m close above Overnight High (28662.0) by 11:00 was a clear, early signal against the short bias, as stated in the plan's invalidation rule.",
+        "Recognize 'F-U Day' profiles early: The immediate strong displacement upwards after the 09:30 open, quickly leaving early lows untouched, points to an 'F-U long' profile (V40) where price is likely to trend aggressively in one direction.",
+        "Re-evaluate bias against opening price behavior: The rapid move and sustain above multiple opening prices (08:30 open 28408.0, 09:30 open 28429.75, PDH 28443.5) should contradict a bearish bias, as per the 'Opening Prices' rule (D03, V57)."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe morning's thesis was a short bias, targeting the London Low (28252.5) or PDL (28215.75). Scenario A called for an [ER] Expansion Retracement entry in the premium (28457.25) above the 08:30 open, with a stop at the Asia High (28512.0). Scenario B offered a long [A+] Full Reversal Model if price swept the London Low and PDL. Invalidation was a 15m close above the Overnight High (28662.0) by 11:00.\n\n## What actually happened\nThe pre-market saw price open at 28351.75, dipping to a low of 28262.25 (07:50), but then rallying strongly to an Overnight High of 28662.0 (05:30) before closing near 28430.75. At the 09:30 RTH open (28429.75), price immediately dipped to 28405.0 before aggressively reversing upwards. The short [ER] entry at 28457.25 was triggered as price ascended, but it was quickly stopped out by 09:35. Price continued its strong bullish expansion, hitting a high of 28969.0 by 10:15, well above the 28662.0 invalidation level. Scenario B (long) did not trigger as price never reached the required lower liquidity. The lunch session saw a retracement from the morning highs, dipping to 28474.0 (11:25) before recovering. The NY PM session was largely two-sided, ending at 28566.75, up +137.00 from the RTH open.\n\n## How it went\nThe plan was wrong on its primary short bias. The [ER] model was called, but for the opposite direction of the day's strong movement. The short trade was immediately stopped out at 09:35. However, the plan's explicit invalidation (15m close above Overnight High 28662.0) was clearly met early in the NY AM, correctly signaling that the bias should have flipped bullish. This served as effective risk management, limiting losses to the initial -1.0R. The problem was primarily a misread of the immediate directional flow at the open, which swiftly contradicted the bearish setup, rather than a bad entry placement given the called model and direction.\n\n## The day as a whole\nThe day evolved into a clear bullish expansion during the NY AM, characteristic of an \"F-U long\" profile as described in V40, with price trending strongly upwards and little manipulation below the opening prices. After the initial drive to 28969.0 by 10:15, the market entered a period of retracement during lunch and the PM session. The overall RTH was a range expansion of 564 points, closing near the middle after the morning's strong push and subsequent retracement. This confirms a significant range expansion, but with a strong initial directional lean upwards, making the morning's short bias fundamentally misaligned with the day's dominant flow.\n\n## What to do differently\n*   Prioritize explicit invalidation thresholds: The 15m close above Overnight High (28662.0) by 11:00 was a clear, early signal against the short bias, as stated in the plan's invalidation rule.\n*   Recognize 'F-U Day' profiles early: The immediate strong displacement upwards after the 09:30 open, quickly leaving early lows untouched, points to an 'F-U long' profile (V40) where price is likely to trend aggressively in one direction.\n*   Re-evaluate bias against opening price behavior: The rapid move and sustain above multiple opening prices (08:30 open 28408.0, 09:30 open 28429.75, PDH 28443.5) should contradict a bearish bias, as per the 'Opening Prices' rule (D03, V57).",
+    "session": {
+      "date": "2026-11-04",
+      "bars": 276,
+      "premarket": {
+        "open": 28351.75,
+        "high": 28662.0,
+        "low": 28262.25,
+        "close": 28430.75,
+        "at_high": "05:30",
+        "at_low": "07:50"
+      },
+      "am": {
+        "open": 28429.75,
+        "high": 28969.0,
+        "low": 28405.0,
+        "close": 28629.0,
+        "at_high": "10:15",
+        "at_low": "09:30"
+      },
+      "lunch": {
+        "open": 28628.75,
+        "high": 28792.0,
+        "low": 28474.0,
+        "close": 28703.75,
+        "at_high": "11:55",
+        "at_low": "11:25"
+      },
+      "pm": {
+        "open": 28704.25,
+        "high": 28719.25,
+        "low": 28510.5,
+        "close": 28566.75,
+        "at_high": "14:10",
+        "at_low": "15:55"
+      },
+      "rth": {
+        "open": 28429.75,
+        "high": 28969.0,
+        "low": 28405.0,
+        "close": 28566.75,
+        "at_high": "10:15",
+        "at_low": "09:30",
+        "net": 137.0,
+        "shape": "two-sided",
+        "close_in_range_pct": 28.7
+      }
+    },
+    "playbook": {
+      "models": 22,
+      "rule_sections": 18,
+      "rules": 203,
+      "glossary": 69,
+      "dojo_classes": 17,
+      "notes": 38,
+      "videos": 79,
+      "concepts": 20,
+      "video_notes": 47,
+      "synced_at": "2026-11-11T17:11:23+00:00"
+    }
   }
 }
