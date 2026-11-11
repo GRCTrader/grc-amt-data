@@ -642,5 +642,181 @@
       "video_notes": 47,
       "synced_at": "2026-11-11T17:11:23+00:00"
     }
+  },
+  "2026-11-06": {
+    "date": "2026-11-06",
+    "written_at": "2026-11-11T16:37:33-05:00",
+    "plan": {
+      "bias": "long",
+      "price": 27157.25,
+      "levels": [
+        {
+          "price": 26366.5,
+          "name": "ONL",
+          "kind": "ssl"
+        },
+        {
+          "price": 26718.0,
+          "name": "PDL",
+          "kind": "ssl"
+        },
+        {
+          "price": 27026.25,
+          "name": "Midnight Open",
+          "kind": "open"
+        },
+        {
+          "price": 27159.25,
+          "name": "Asia High",
+          "kind": "bsl"
+        },
+        {
+          "price": 27161.25,
+          "name": "08:30 Open",
+          "kind": "open"
+        },
+        {
+          "price": 27251.5,
+          "name": "ONH / London High",
+          "kind": "bsl"
+        },
+        {
+          "price": 28232.75,
+          "name": "PWL",
+          "kind": "other"
+        },
+        {
+          "price": 28228.25,
+          "name": "PDH",
+          "kind": "bsl"
+        },
+        {
+          "price": 28587.75,
+          "name": "WK OPEN",
+          "kind": "open"
+        }
+      ],
+      "scenarios": [
+        {
+          "side": "long",
+          "model": "ER",
+          "trigger": "NQ trades below Midnight Open (27026.25) to sweep the PDL (26718.0) after 09:30, then closes a 5m candle back above PDL (26718.0).",
+          "entry": 26718.0,
+          "stop": 26366.5,
+          "target": 27251.5,
+          "target2": 28232.75,
+          "window": "09:30-11:00"
+        },
+        {
+          "side": "short",
+          "model": "FS",
+          "trigger": "NQ wicks above ONH (27251.5) after 09:30, but fails to close a 5m candle above it (body closes below 27251.5).",
+          "entry": 27251.5,
+          "stop": 27271.5,
+          "target": 26718.0,
+          "target2": 26366.5,
+          "window": "09:30-11:00"
+        }
+      ],
+      "invalidation": {
+        "price": 26366.5,
+        "rule": "NQ closes a 15m candle below ONL (26366.5)",
+        "by": "11:00"
+      }
+    },
+    "outcome": "B_stop",
+    "detail": "FS: stop \u00b7 at 09:45 \u00b7 went +0.0R / -6.83R\n  uncapped to 16:00: B_stop (-1.00R)\n  direction called long; AM was two_sided, whole RTH was two_sided",
+    "late_outcome": "B_stop",
+    "late_r": -1.0,
+    "grades": {
+      "bias2": "F",
+      "read": "C",
+      "day": "B"
+    },
+    "review": {
+      "bias2": {
+        "grade": "F",
+        "reason": "The plan misidentified the price action above ONH as a failure swing when it was a sweep and expansion, leading to an incorrect short trigger and stop out, while the primary long bias was contradicted by the day's movement.",
+        "wanted": "The plan wanted price to sweep PDL for a long, or fail to take ONH for a short.",
+        "happened": "Price pushed significantly above ONH in the AM with a clear sweep and expansion before becoming two-sided.",
+        "model_called": "FS",
+        "model_actual": "ER",
+        "model_correct": false
+      },
+      "read": {
+        "grade": "C",
+        "reason": "Bias 1 correctly anticipated a range expansion but its HTF short bias was contradicted by the aggressive AM rally."
+      },
+      "day": {
+        "grade": "B",
+        "shape": "range expansion into a wide two-sided range",
+        "reason": "The NY AM experienced a strong upside expansion, followed by a significant retracement and choppy price action, closing in the lower half of its RTH range."
+      },
+      "lessons": [
+        "Strictly differentiate between a Failure Swing (failure to take liquidity) and a Sweep (displacement through liquidity), as they imply different subsequent price action.",
+        "Adhere rigorously to trigger conditions; if a 'fails to close' condition is not met, the trade should not be entered, even if price action later reverses.",
+        "Re-evaluate the daily bias quickly if initial market expansion strongly contradicts the morning's primary directional outlook."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe morning's primary bias was long. Scenario A aimed for a long entry at 26718.0 (PDL) after a sweep below Midnight Open (27026.25) between 09:30-11:00, targeting 27251.5 (ONH / London High). Scenario B offered a short entry at 27251.5 (ONH) if NQ wicked above it but failed to close a 5m candle above it (a failure swing), targeting 26718.0 (PDL) or 26366.5 (ONL). The plan would sit out if no Judas swing developed below Midnight Open by 10:00 or if the first 5m FVG after 09:30 showed chop.\n\n## What actually happened\nPre-market saw a high of 27251.5 (ONH) at 04:35. The NY AM session (09:30-11:00) opened at 27169.0. It immediately pushed higher, making a new high of 27425.0 at 09:50, which was significantly above the ONH (27251.5). This initial strong move constituted an expansion phase. The 09:45-09:50 candle wicked above and closed at 27364.75, which was well above the ONH. The market then began to retrace, with a low of 27037.75 at 09:35 and later 26988.5 at 12:50. The session closed at 27074.5, net negative but having moved through a wide range.\n\n## How it went\nThe primary long bias was incorrect as the RTH closed net negative and was two-sided. Scenario A (long via ER) did not trigger as price never traded below Midnight Open (27026.25) by 10:00 ET, which would have correctly led to a sit-out based on the plan's rules regarding a missing Judas swing.\n\nScenario B (short via FS) mechanically triggered and stopped out at 09:45. However, the trigger condition for a Failure Swing\u2014\"fails to close a 5m candle above it (body closes below 27251.5)\"\u2014was not met. The 09:45-09:50 candle wicked above ONH (27251.5) to 27425.0, but its body *closed above* ONH at 27364.75. This was a sweep and a strong expansion, not a failure swing. The [FS] Failure Swing model definition states \"Price approaches a swing high/low but fails to take it,\" which contradicts the observed price action where the ONH was clearly taken. Thus, the model chosen for the short was inappropriate for the market conditions, and the trade execution was based on a flawed trigger interpretation.\n\n## The day as a whole\nThe day began with a rapid [ER] Expansion phase in the NY AM, pushing significantly above pre-market highs. This strong directional move was followed by a substantial retracement through the lunch hour and a choppy NY PM session. The overall RTH formed a wide two-sided range, ultimately closing net negative from its open, despite the early bullish push. This dynamic confirmed Bias 1's prediction of a range expansion but contradicted the primary long bias of Bias 2.\n\n## What to do differently\n1.  Strictly differentiate between a Failure Swing (failure to take liquidity) and a Sweep (displacement through liquidity), as they imply different subsequent price action; the FS model was inappropriately applied when price clearly swept the ONH.\n2.  Adhere rigorously to trigger conditions; if a \"fails to close\" condition is not met, the trade should not be entered, even if price action later reverses.\n3.  Re-evaluate the daily bias quickly if initial market expansion strongly contradicts the morning's primary directional outlook.",
+    "session": {
+      "date": "2026-11-06",
+      "bars": 205,
+      "premarket": {
+        "open": 27037.75,
+        "high": 27251.5,
+        "low": 27031.0,
+        "close": 27169.25,
+        "at_high": "04:35",
+        "at_low": "04:00"
+      },
+      "am": {
+        "open": 27169.0,
+        "high": 27425.0,
+        "low": 27037.75,
+        "close": 27232.5,
+        "at_high": "09:50",
+        "at_low": "09:35"
+      },
+      "lunch": {
+        "open": 27233.25,
+        "high": 27323.75,
+        "low": 26988.5,
+        "close": 27104.25,
+        "at_high": "11:35",
+        "at_low": "12:50"
+      },
+      "pm": {
+        "open": 27105.0,
+        "high": 27258.0,
+        "low": 27058.0,
+        "close": 27074.5,
+        "at_high": "15:10",
+        "at_low": "15:55"
+      },
+      "rth": {
+        "open": 27169.0,
+        "high": 27425.0,
+        "low": 26988.5,
+        "close": 27074.5,
+        "at_high": "09:50",
+        "at_low": "12:50",
+        "net": -94.5,
+        "shape": "two-sided",
+        "close_in_range_pct": 19.7
+      }
+    },
+    "playbook": {
+      "models": 22,
+      "rule_sections": 18,
+      "rules": 203,
+      "glossary": 69,
+      "dojo_classes": 17,
+      "notes": 38,
+      "videos": 79,
+      "concepts": 20,
+      "video_notes": 47,
+      "synced_at": "2026-11-11T17:11:23+00:00"
+    }
   }
 }
