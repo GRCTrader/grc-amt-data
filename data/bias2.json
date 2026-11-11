@@ -818,5 +818,166 @@
       "video_notes": 47,
       "synced_at": "2026-11-11T17:11:23+00:00"
     }
+  },
+  "2026-11-09": {
+    "date": "2026-11-09",
+    "written_at": "2026-11-11T16:38:03-05:00",
+    "plan": {
+      "bias": "short",
+      "price": 27315.5,
+      "levels": [
+        {
+          "price": 27425.0,
+          "name": "PDH",
+          "kind": "bsl"
+        },
+        {
+          "price": 27378.0,
+          "name": "Overnight High",
+          "kind": "bsl"
+        },
+        {
+          "price": 27282.75,
+          "name": "08:30 Open",
+          "kind": "open"
+        },
+        {
+          "price": 27226.75,
+          "name": "Midnight Open",
+          "kind": "open"
+        },
+        {
+          "price": 26988.5,
+          "name": "PDL",
+          "kind": "ssl"
+        },
+        {
+          "price": 26878.5,
+          "name": "Weekly Open",
+          "kind": "open"
+        }
+      ],
+      "scenarios": [
+        {
+          "side": "short",
+          "model": "Full Reversal Model (A+ recipe)",
+          "trigger": "Price sweeps ONH 27378.0 or rejects near current high after 09:30, followed by a 5m CISD below 27315.5.",
+          "entry": 27335.0,
+          "stop": 27385.0,
+          "target": 27226.75,
+          "target2": 26988.5,
+          "window": "09:30-11:00"
+        },
+        {
+          "side": "long",
+          "model": "Expansion Retracement (Vol 1 Class 3)",
+          "trigger": "Displacement and 5m close above ONH 27378.0 with retracement holding discount FVG.",
+          "entry": 27380.0,
+          "stop": 27310.0,
+          "target": 27425.0,
+          "target2": 27500.0,
+          "window": "09:30-11:00"
+        }
+      ],
+      "invalidation": {
+        "price": 27425.0,
+        "rule": "15m body close above PDH 27425.0",
+        "by": "11:00"
+      }
+    },
+    "outcome": "A_open",
+    "detail": "Full Reversal Model (A+ recipe): open \u00b7 at 09:30 \u00b7 went +0.0R / -13.6R\n  uncapped to 16:00: A_stop (-1.00R)\n  direction called short; AM was up, whole RTH was up",
+    "late_outcome": "A_stop",
+    "late_r": -1.0,
+    "grades": {
+      "bias2": "D",
+      "read": "D",
+      "day": "A"
+    },
+    "review": {
+      "bias2": {
+        "grade": "D",
+        "reason": "The primary short scenario failed at the open, being stopped out early in a strongly trending bullish day, despite a correct long scenario being offered.",
+        "wanted": "Price to sweep ONH 27378.0 or reject near current high after 09:30 for a short, or displace and close above ONH 27378.0 for a long, targeting 27425.0 / 27500.0.",
+        "happened": "The market opened, consolidated briefly, then displaced strongly upwards, making a low at 27316.25 and trending up all day, closing +661 points.",
+        "model_called": "Full Reversal Model (A+ recipe)",
+        "model_actual": "Expansion Retracement (Vol 1 Class 3)",
+        "model_correct": false
+      },
+      "read": {
+        "grade": "D",
+        "reason": "The primary directional bias was short, which was incorrect as the market trended strongly upwards throughout the RTH session."
+      },
+      "day": {
+        "grade": "A",
+        "shape": "Trend day up",
+        "reason": "The market established a clear low at the 09:30 open and trended upwards strongly, closing near its highs after a +661 point move."
+      },
+      "lessons": [
+        "Prioritize the scenario aligned with the HTF bias and day-model range prediction (Bias 1's long range_expansion) when dual scenarios are present.",
+        "In a clear trending market, once the initial low/high is established, focus on continuation models like Expansion Retracement and avoid counter-trend reversal attempts.",
+        "Ensure clear execution logic for multiple scenarios to prevent taking a losing trade when a winning one is also identified."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe morning plan held a primary `short` bias, anticipating a `Full Reversal Model (A+ recipe)` entry around 27335.0 following a sweep of ONH 27378.0 or rejection near the current high after 09:30, confirmed by a 5m CISD below 27315.5. The primary target was Midnight Open 27226.75, then PDL 26988.5. An alternative `long` scenario proposed an `Expansion Retracement (Vol 1 Class 3)` entry around 27380.0 if displacement and a 5m close above ONH 27378.0 occurred. Invalidation for the short was a 15m body close above PDH 27425.0 by 11:00.\n\n## What actually happened\nThe pre-market session traded up to ONH 27378.0. At the 09:30 RTH open, the market immediately printed its low for the day at 27316.25 before reversing and displacing strongly upwards. The NY AM session (09:30-11:00) saw a continuous bullish expansion, taking out both ONH 27378.0 and PDH 27425.0, reaching 27996.5. The lunch macro (11:00-13:30) saw a minor retracement from 28014.75 to 27820.0, consolidating. The NY PM session (13:30-16:00) resumed the upward trend, creating a new high of 28129.25 and closing strongly at 28003.5. The whole RTH session closed +661 points, clearly trending up.\n\n## How it went\nThe primary `short` bias was incorrect. The market established its low at the 09:30 open and immediately began a strong upward trend, directly contradicting the `Full Reversal Model (A+ recipe)` short scenario. The short trade triggered at 09:30 and was stopped out early in the session, incurring a -1.00R loss. The invalidation of a 15m body close above PDH 27425.0 (planned for 11:00) was hit well before 11:00 due to the rapid upward displacement. Conversely, the `Expansion Retracement (Vol 1 Class 3)` long scenario was aligned with the day's actual delivery, as the market expanded, retraced briefly, and then continued its expansion toward higher targets. This alternative scenario would have paid substantially.\n\n## The day as a whole\nThe day delivered a clear \"Trend day up\", starting with a confirmed low at the 09:30 open. Price showed strong, low-resistance delivery throughout the RTH session, consistently respecting bullish order flow. This behavior is a textbook example of an `Expansion Retracement (Vol 1 Class 3)` in action, where the market expands away from equilibrium. The day closed near its highs, leaving no ambiguity in its directional bias, making the `Full Reversal Model (A+ recipe)` a miss against the tape's actual behavior.\n\n## What to do differently\n*   Prioritize the scenario that aligns with higher timeframe bias and day-model predictions (Bias 1 indicated a HTF LONG and `range_expansion`) when the plan includes dual, conflicting scenarios.\n*   In a clear trend day, once the initial low/high is definitively established (e.g., the 09:30 low holding), focus exclusively on continuation setups, such as `Expansion Retracement` entries, and avoid attempts at counter-trend reversals.\n*   Develop explicit execution rules for multiple-scenario plans, ensuring that the most aligned and profitable trade takes precedence or that a failed primary scenario leads to a rapid and disciplined transition to the alternative.",
+    "session": {
+      "date": "2026-11-09",
+      "bars": 277,
+      "premarket": {
+        "open": 27076.0,
+        "high": 27378.0,
+        "low": 27031.0,
+        "close": 27343.0,
+        "at_high": "07:50",
+        "at_low": "04:25"
+      },
+      "am": {
+        "open": 27342.5,
+        "high": 27996.5,
+        "low": 27316.25,
+        "close": 27991.0,
+        "at_high": "10:55",
+        "at_low": "09:30"
+      },
+      "lunch": {
+        "open": 27991.0,
+        "high": 28014.75,
+        "low": 27820.0,
+        "close": 27927.75,
+        "at_high": "11:00",
+        "at_low": "11:35"
+      },
+      "pm": {
+        "open": 27928.0,
+        "high": 28129.25,
+        "low": 27924.0,
+        "close": 28003.5,
+        "at_high": "15:25",
+        "at_low": "14:25"
+      },
+      "rth": {
+        "open": 27342.5,
+        "high": 28129.25,
+        "low": 27316.25,
+        "close": 28003.5,
+        "at_high": "15:25",
+        "at_low": "09:30",
+        "net": 661.0,
+        "shape": "trend up",
+        "close_in_range_pct": 84.5
+      }
+    },
+    "playbook": {
+      "models": 22,
+      "rule_sections": 18,
+      "rules": 203,
+      "glossary": 69,
+      "dojo_classes": 17,
+      "notes": 38,
+      "videos": 79,
+      "concepts": 20,
+      "video_notes": 47,
+      "synced_at": "2026-11-11T17:11:23+00:00"
+    }
   }
 }
