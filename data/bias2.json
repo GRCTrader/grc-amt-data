@@ -979,5 +979,206 @@
       "video_notes": 47,
       "synced_at": "2026-11-11T17:11:23+00:00"
     }
+  },
+  "2026-11-10": {
+    "date": "2026-11-10",
+    "written_at": "2026-11-11T16:38:33-05:00",
+    "plan": {
+      "bias": "short",
+      "price": 27730.75,
+      "levels": [
+        {
+          "price": 28129.25,
+          "name": "PDH",
+          "kind": "ssl"
+        },
+        {
+          "price": 27316.25,
+          "name": "PDL",
+          "kind": "bsl"
+        },
+        {
+          "price": 28003.5,
+          "name": "Previous Pit Close",
+          "kind": "other"
+        },
+        {
+          "price": 28109.0,
+          "name": "Overnight High",
+          "kind": "ssl"
+        },
+        {
+          "price": 27590.0,
+          "name": "Overnight Low",
+          "kind": "bsl"
+        },
+        {
+          "price": 28109.0,
+          "name": "Asia High",
+          "kind": "ssl"
+        },
+        {
+          "price": 27869.0,
+          "name": "Asia Low",
+          "kind": "bsl"
+        },
+        {
+          "price": 28050.5,
+          "name": "London High",
+          "kind": "ssl"
+        },
+        {
+          "price": 27870.0,
+          "name": "London Low",
+          "kind": "bsl"
+        },
+        {
+          "price": 27969.5,
+          "name": "Midnight Open",
+          "kind": "open"
+        },
+        {
+          "price": 27919.75,
+          "name": "08:30 Open",
+          "kind": "open"
+        },
+        {
+          "price": 26878.5,
+          "name": "Weekly Open",
+          "kind": "open"
+        },
+        {
+          "price": 28969.0,
+          "name": "Previous Week High",
+          "kind": "ssl"
+        },
+        {
+          "price": 26366.5,
+          "name": "Previous Week Low",
+          "kind": "bsl"
+        }
+      ],
+      "scenarios": [
+        {
+          "side": "short",
+          "model": "Expansion Retracement",
+          "trigger": "Price retraces into the bearish FVG (27838.25 - 27848.25) formed by the 08:55-09:05 candles on the 5m chart after the 09:30 open.",
+          "entry": 27840.0,
+          "stop": 27960.0,
+          "target": 27590.0,
+          "target2": 27316.25,
+          "window": "09:30-11:30"
+        },
+        {
+          "side": "long",
+          "model": "Change in State of Delivery",
+          "trigger": "Price sweeps the Previous Day Low (27316.25) and subsequently prints a 5m close above the opening price of the preceding consecutive down-close candles after 09:30 open.",
+          "entry": 27350.0,
+          "stop": 27300.0,
+          "target": 27590.0,
+          "target2": 27869.0,
+          "window": "09:30-12:00"
+        }
+      ],
+      "invalidation": {
+        "price": 27940.0,
+        "rule": "5m close above the swing high that began the bearish displacement",
+        "by": "12:00"
+      }
+    },
+    "outcome": "A_stop",
+    "detail": "Expansion Retracement: stop \u00b7 at 09:55 \u00b7 went +0.71R / -1.47R\n  uncapped to 16:00: A_stop (-1.00R)\n  direction called short; AM was two_sided, whole RTH was two_sided",
+    "late_outcome": "A_stop",
+    "late_r": -1.0,
+    "grades": {
+      "bias2": "F",
+      "read": "F",
+      "day": "F"
+    },
+    "review": {
+      "bias2": {
+        "grade": "F",
+        "reason": "The plan's primary short trade triggered into a strong reversal upwards, conflicting with opening price bias rules for the given market position and resulting in a stop out.",
+        "wanted": "The plan aimed for a short continuation via an Expansion Retracement into a bearish FVG after the 09:30 open, targeting lower levels.",
+        "happened": "The market immediately reversed from the 09:30 open, strongly rallying over 300 points and hitting the trade's stop and invalidation levels.",
+        "model_called": "Expansion Retracement",
+        "model_actual": "Consolidation Model",
+        "model_correct": false
+      },
+      "read": {
+        "grade": "F",
+        "reason": "The HTF directional bias for a short was contradicted by the price's position below the Midnight Open (27969.5), which typically favors longs, and the day ended net positive."
+      },
+      "day": {
+        "grade": "F",
+        "shape": "Two-sided range with initial reversal and upward expansion",
+        "reason": "The day presented strong two-way movement, closing net positive, directly opposing the morning's predicted downward trend."
+      },
+      "lessons": [
+        "Always confirm directional bias with opening price rules: price below Midnight Open should favor bullish setups ([opens], V57, V42).",
+        "Do not use the Expansion Retracement (ER) model for a reversal against strong initial momentum; anticipate reversals with models like CISD or Failure Swing (D05, [CISD], [FS]).",
+        "A strong reversal from a major low can signify the start of a Consolidation Model (accumulation at an extreme), indicating a potential expansion in the opposite direction (D02, D05)."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe morning plan called for a short bias, anticipating a downward trend. Scenario A, the primary trade, aimed for a short via the [ER] Expansion Retracement model, triggered by price retracing into a bearish FVG (27838.25 - 27848.25) after the 09:30 open. The entry was at 27840.0, with a stop at 27960.0, targeting the Overnight Low (27590.0) or Previous Day Low (27316.25). A secondary Scenario B proposed a long via [CISD] Change in State of Delivery if price swept the Previous Day Low (27316.25). The short bias was invalidated by a 5m close above 27940.0 by 12:00, representing the swing high that began the bearish displacement.\n\n## What actually happened\nThe pre-market session (04:00-09:30) saw a strong sell-off from 28022.0 to 27590.0. At the 09:30 RTH open, price was at 27743.0. Instead of continuing lower, it immediately dipped to a low of 27637.25 and then aggressively reversed, rallying over 300 points to 28090.0 by 10:00. This rally quickly breached the Scenario A entry at 27840.0 and subsequently blew past the stop at 27960.0. The 10:00 high of 28090.0 also clearly invalidated the plan's 27940.0 level. The lunch session (11:00-13:30) then saw price retrace from the AM high down to 27516.0, before the NY PM session (13:30-16:00) rallied again to 27897.0, closing at 27836.0. The day was two-sided, closing net positive (+93.00 points) and 55.7% up its range.\n\n## How it went\nThe morning plan\u2019s primary short bias was fundamentally incorrect for the day's dominant price action. The [ER] Expansion Retracement model, a continuation pattern, was misapplied to a day that began with a strong reversal from the pre-market low, not a continuation. The plan\u2019s assumption of downward continuation after 09:30 was immediately negated by a sharp upward expansion. Furthermore, the playbook's own rules on [opens] Opening Prices (V57, V42), stating that price below the Midnight Open (27969.5 at 09:30 price 27743.0) typically favors longs, contradicted the short bias. The trade was triggered and stopped out quickly, validating that the read was wrong, and the model chosen for the initial move was inappropriate. The plan did include a long [CISD] scenario, which aligns more with the initial price action, but it did not trigger. The day's actual delivery most resembled an [CM] Consolidation Model, specifically an accumulation at the pre-market low followed by a significant expansion (D02, D05), rather than a single continuation leg.\n\n## The day as a whole\nThe day as a whole was strongly two-sided with a net upward bias, definitively not a \"trend_down\" day as predicted by Bias 1. The early rally from the 09:30 open set the tone, reversing the pre-market sell-off. The subsequent dip during lunch and rally into the close confirmed the volatile, ranging nature of the session. The morning's short read was directly opposed to the market's behavior, and the initial trade incurred a full stop. The explicit invalidation level for the short was hit early in the AM session, containing the loss, but the directional read was entirely missed.\n\n## What to do differently\n1.  Always confirm directional bias with opening price rules: price below the Midnight Open (as it was at 09:30) should be considered as favoring bullish setups, rather than bearish (V57, V42, [opens]).\n2.  Do not use the [ER] Expansion Retracement model for an immediate reversal against strong initial momentum; identify clear reversal patterns like [CISD] Change in State of Delivery or [FS] Failure Swing for such moves (D05, [CISD], [FS]).\n3.  Recognize when a strong reversal from a major low indicates the beginning of an [CM] Consolidation Model (specifically, accumulation at an extreme), which often leads to significant expansion in the opposite direction (D02, D05).",
+    "session": {
+      "date": "2026-11-10",
+      "bars": 276,
+      "premarket": {
+        "open": 28022.0,
+        "high": 28022.0,
+        "low": 27590.0,
+        "close": 27743.75,
+        "at_high": "04:00",
+        "at_low": "08:40"
+      },
+      "am": {
+        "open": 27743.0,
+        "high": 28090.0,
+        "low": 27637.25,
+        "close": 27740.25,
+        "at_high": "10:00",
+        "at_low": "09:30"
+      },
+      "lunch": {
+        "open": 27740.0,
+        "high": 27852.75,
+        "low": 27516.0,
+        "close": 27625.25,
+        "at_high": "11:05",
+        "at_low": "12:40"
+      },
+      "pm": {
+        "open": 27625.25,
+        "high": 27897.0,
+        "low": 27621.0,
+        "close": 27836.0,
+        "at_high": "15:50",
+        "at_low": "13:30"
+      },
+      "rth": {
+        "open": 27743.0,
+        "high": 28090.0,
+        "low": 27516.0,
+        "close": 27836.0,
+        "at_high": "10:00",
+        "at_low": "12:40",
+        "net": 93.0,
+        "shape": "two-sided",
+        "close_in_range_pct": 55.7
+      }
+    },
+    "playbook": {
+      "models": 22,
+      "rule_sections": 18,
+      "rules": 203,
+      "glossary": 69,
+      "dojo_classes": 17,
+      "notes": 38,
+      "videos": 79,
+      "concepts": 20,
+      "video_notes": 47,
+      "synced_at": "2026-11-11T17:11:23+00:00"
+    }
   }
 }
