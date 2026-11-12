@@ -1,10 +1,10 @@
 {
-  "asof": "2026-11-12 15:59:20 ET",
-  "asof_epoch": 1794517160,
+  "asof": "2026-11-12 16:04:25 ET",
+  "asof_epoch": 1794517465,
   "session_date": "2026-11-12",
   "price": {
-    "NQ": 28364.25,
-    "ES": 7614.75
+    "NQ": 28356.0,
+    "ES": 7610.75
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "New York PM",
       "start": "2026-11-12T12:00:00-05:00",
       "end": "2026-11-12T18:00:00-05:00",
-      "left_sec": 7239,
+      "left_sec": 6934,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
@@ -48,7 +48,7 @@
       "span": "block 3 of 4",
       "start": "2026-11-12T15:00:00-05:00",
       "end": "2026-11-12T16:30:00-05:00",
-      "left_sec": 1839,
+      "left_sec": 1534,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -59,30 +59,24 @@
       "span": "22.5 min",
       "start": "2026-11-12T15:45:00-05:00",
       "end": "2026-11-12T16:07:30-05:00",
-      "left_sec": 489,
+      "left_sec": 184,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
     },
     {
       "level": "Nano",
-      "q": 2,
+      "q": 3,
       "span": "5.625 min",
-      "start": "2026-11-12T15:56:15-05:00",
-      "end": "2026-11-12T16:01:52.500000-05:00",
-      "left_sec": 151,
-      "phase": "Q3",
-      "phase_name": "Distribution",
-      "phase_why": "The actual move. The quarter you want to be in."
+      "start": "2026-11-12T16:01:52.500000-05:00",
+      "end": "2026-11-12T16:07:30-05:00",
+      "left_sec": 184,
+      "phase": "Q4",
+      "phase_name": "Continuation / Reversal",
+      "phase_why": "It extends or it turns. The handover."
     }
   ],
-  "chains": [
-    [
-      "90 minute",
-      "Micro",
-      "Nano"
-    ]
-  ],
+  "chains": [],
   "true_opens": [
     {
       "code": "TMO",
@@ -149,10 +143,10 @@
         "open": 28306.25,
         "high": 28652.25,
         "low": 28013.75,
-        "close": 28364.25,
+        "close": 28356.0,
         "n": 23,
         "start": "2026-11-11T18:00:00-05:00",
-        "end": "2026-11-12T15:59:20.873992-05:00"
+        "end": "2026-11-12T16:04:25.379246-05:00"
       },
       "sweep": {
         "swept": null,
@@ -188,10 +182,10 @@
         "open": 28530.0,
         "high": 28575.0,
         "low": 28302.0,
-        "close": 28364.25,
+        "close": 28356.0,
         "n": 5,
         "start": "2026-11-12T12:00:00-05:00",
-        "end": "2026-11-12T15:59:20.873992-05:00"
+        "end": "2026-11-12T16:04:25.379246-05:00"
       },
       "sweep": {
         "swept": null,
@@ -226,10 +220,10 @@
         "open": 28381.0,
         "high": 28392.0,
         "low": 28302.0,
-        "close": 28364.25,
-        "n": 51,
+        "close": 28356.0,
+        "n": 56,
         "start": "2026-11-12T15:00:00-05:00",
-        "end": "2026-11-12T15:59:20.873992-05:00"
+        "end": "2026-11-12T16:04:25.379246-05:00"
       },
       "sweep": {
         "swept": "low",
@@ -262,12 +256,12 @@
       },
       "cur": {
         "open": 28345.25,
-        "high": 28374.75,
+        "high": 28377.75,
         "low": 28341.0,
-        "close": 28364.25,
-        "n": 6,
+        "close": 28356.0,
+        "n": 11,
         "start": "2026-11-12T15:45:00-05:00",
-        "end": "2026-11-12T15:59:20.873992-05:00"
+        "end": "2026-11-12T16:04:25.379246-05:00"
       },
       "sweep": {
         "swept": null,
@@ -276,10 +270,11 @@
         "note": "still inside 28,302.00-28,392.00"
       },
       "ssmt": {
-        "type": null,
-        "note": "both markets did the same thing at this seam - no divergence",
-        "leader": null,
-        "filter_ok": null
+        "type": "bullish",
+        "note": "ES took the previous quarter low, NQ did not",
+        "leader": "ES",
+        "filter_ok": false,
+        "filter_note": "he wants BOTH below this quarter's open for a long"
       },
       "shape": "AMD-X",
       "shape_why": "Q1 ranged 0.8x the usual with 6% directional body - it behaved like accumulation",
@@ -291,8 +286,8 @@
   },
   "gb": {
     "on": false,
-    "minute": 59,
-    "next_in_min": 30
+    "minute": 4,
+    "next_in_min": 25
   },
   "checklist": [
     {
@@ -317,7 +312,7 @@
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 30 min"
+      "detail": "next one in 25 min"
     },
     {
       "n": 5,
