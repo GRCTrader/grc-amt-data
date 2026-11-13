@@ -2704,6 +2704,136 @@
         "brier_edge": -0.242,
         "brier_n": 111
       }
+    },
+    "day_report": {
+      "narrative": {
+        "headline": "**B** on 0.76. Most of what was missing went on the draw on liquidity: worth 0.35, returned 0.17.",
+        "paragraphs": [
+          "The plan was **short**. A was short on [A+] Full Reversal Model (A+ recipe) from 28,485.00. B was long on [ER] Expansion Retracement (Vol 1 Class 3) from 28,380.00. It was to be wrong below 28,652.25 \u2014 15m close above PDH (28652.25).",
+          "The session opened 28,391.00 and closed 28,038.00, a 704 point range. **A** (short from 28,485.00) reached its target. **B** (long from 28,380.00) was stopped. The invalidation at 28,652.25 never printed \u2014 the idea stayed alive all session.",
+          "**Where the score went**, worst first:\n- the draw on liquidity \u2014 50% of 0.35, part of it.\n- the levels it named \u2014 67% of 0.20, part of it; 4 of 6 reacted at.",
+          "What it got right: the direction, the timing, the invalidation \u2014 together worth 0.45 of the score.",
+          "You took 20 positions. 8 of them (40.0%) went with the stated bias, and 2 (10.0%) entered at a level the plan named. The day made $-7,234.34 on -7.28R.",
+          "**The one thing.** The draw on liquidity cost 0.17 of the grade, more than anything else. Fix that and the same day scores 0.93."
+        ],
+        "cost": [
+          {
+            "key": "draw",
+            "value": 0.5,
+            "weight": 0.35,
+            "lost": 0.175,
+            "won": 0.175,
+            "note": ""
+          },
+          {
+            "key": "levels",
+            "value": 0.667,
+            "weight": 0.2,
+            "lost": 0.0666,
+            "won": 0.1334,
+            "note": "4 of 6 reacted at"
+          }
+        ],
+        "credit": [
+          {
+            "key": "direction",
+            "value": 1.0,
+            "weight": 0.2,
+            "lost": 0.0,
+            "won": 0.2,
+            "note": "-648.5 pt"
+          },
+          {
+            "key": "timing",
+            "value": 1.0,
+            "weight": 0.15,
+            "lost": 0.0,
+            "won": 0.15,
+            "note": "resolved 09:35, inside the window"
+          },
+          {
+            "key": "invalidation",
+            "value": 1.0,
+            "weight": 0.1,
+            "lost": 0.0,
+            "won": 0.1,
+            "note": "held"
+          }
+        ],
+        "total": 0.758,
+        "grade": "B"
+      },
+      "happened": {
+        "open": 28391.0,
+        "high": 28399.0,
+        "low": 27695.25,
+        "close": 28038.0,
+        "range": 703.75,
+        "bars": 275,
+        "up": false,
+        "scenarios": [
+          {
+            "tag": "A",
+            "side": "short",
+            "entry": 28485.0,
+            "triggered": false,
+            "target_hit": true,
+            "stop_hit": false,
+            "verdict": "target"
+          },
+          {
+            "tag": "B",
+            "side": "long",
+            "entry": 28380.0,
+            "triggered": true,
+            "target_hit": false,
+            "stop_hit": true,
+            "verdict": "stop"
+          }
+        ],
+        "invalidation": {
+          "price": 28652.25,
+          "broke": false
+        }
+      },
+      "adherence": {
+        "n": 20,
+        "with_bias": 8,
+        "with_bias_pct": 40.0,
+        "at_level": 2,
+        "at_level_pct": 10.0,
+        "after_invalidation": 0,
+        "after_invalidation_pnl": 0,
+        "bias": "short"
+      },
+      "tilt": {
+        "median_gap_s": 85,
+        "cluster": {
+          "after": "10:09",
+          "gap_s": 3,
+          "median_s": 85,
+          "n_fast": 2
+        },
+        "size_up_after_loss": 7,
+        "losses": 17,
+        "size_up_pct": 41.2
+      },
+      "stats": {
+        "n": 20,
+        "net": -7234.34,
+        "wins": 2,
+        "losses": 18,
+        "win_pct": 10.0,
+        "best": 977.1,
+        "worst": -1264.6,
+        "fees": 288.84,
+        "r_n": 17,
+        "r_sum": -7.28,
+        "r_best": 1.02,
+        "r_worst": -1.0,
+        "positions": 20
+      },
+      "trades": 20
     }
   }
 }
