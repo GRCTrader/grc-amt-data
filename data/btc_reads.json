@@ -1,17 +1,17 @@
 {
-  "asof": "2026-11-12 18:10 ET",
+  "asof": "2026-11-13 18:10 ET",
   "venue": "Binance USD-M perpetual (BTCUSDT)",
   "method": "The day runs 18:00\u219218:00 New York. Levels are the prior day's range and value area, plus Asia+London (18:00\u219209:30). The read is graded at 18:00 against the move from the read price.",
   "record": {
-    "graded": 36,
-    "correct": 23,
-    "hit_rate": 63.9,
+    "graded": 37,
+    "correct": 24,
+    "hit_rate": 64.9,
     "by_bias": {
       "SHORT": {
-        "n": 10,
-        "correct": 8,
-        "hit_rate": 80.0,
-        "avg_move_pct": 0.95
+        "n": 11,
+        "correct": 9,
+        "hit_rate": 81.8,
+        "avg_move_pct": 1.1
       },
       "NEUTRAL": {
         "n": 16,
@@ -28,29 +28,92 @@
     },
     "sims": {
       "bias": {
-        "trades": 20,
+        "trades": 21,
         "no_trade": 16,
-        "wins": 9,
-        "record": "9\u201311",
-        "total_r": 5.53,
-        "avg_r": 0.28,
-        "usd_per_coin": 1426.5,
-        "avg_pct": 0.09
+        "wins": 10,
+        "record": "10\u201311",
+        "total_r": 19.42,
+        "avg_r": 0.92,
+        "usd_per_coin": 3105.6,
+        "avg_pct": 0.2
       },
       "plan": {
-        "trades": 36,
+        "trades": 37,
         "no_trade": 0,
-        "wins": 22,
-        "record": "22\u201314",
-        "total_r": 0.06,
-        "avg_r": 0.0,
-        "usd_per_coin": 1071.0,
-        "avg_pct": 0.04
+        "wins": 23,
+        "record": "23\u201314",
+        "total_r": 0.31,
+        "avg_r": 0.01,
+        "usd_per_coin": 1427.3,
+        "avg_pct": 0.05
       }
     }
   },
   "sim_note": "bias = take the side at the read price, stop at the nearest level the other way, target the next level along. plan = wait for a trigger to be accepted, then trade it from there. Both are 1 coin, no costs.",
   "reads": [
+    {
+      "date": "2026-11-13",
+      "posted_at": "2026-11-13T08:45:01.724776-05:00",
+      "price": 69791.6,
+      "bias": "SHORT",
+      "location": "below prior value",
+      "note": "Trading -2.06% below yesterday's value area. Acceptance below 71,262 keeps sellers in control; a reclaim of it says the flush was absorbed.",
+      "levels": {
+        "prior_high": 74191.7,
+        "prior_low": 71218.1,
+        "vah": 72987.5,
+        "poc": 71412.5,
+        "val": 71262.5,
+        "ovn_high": 71517.6,
+        "ovn_low": 67449.0,
+        "adr_14": 2282.33,
+        "basis": -36.79
+      },
+      "up_level": 69912.5,
+      "dn_level": 68468.8,
+      "result": {
+        "status": "graded",
+        "bias": "SHORT",
+        "correct": true,
+        "from_price": 69791.6,
+        "close": 67987.3,
+        "move": -1804.3,
+        "move_pct": -2.59,
+        "high": 69760.1,
+        "low": 67932.5,
+        "up_pct": -0.05,
+        "down_pct": -2.66,
+        "trigger_first": "down",
+        "trigger_at": "2026-11-13T10:30:00-05:00",
+        "bars": 111,
+        "sim": {
+          "bias": {
+            "side": "short",
+            "entry": 69791.6,
+            "stop": 69912.5,
+            "target": 68112.5,
+            "exit": 68112.5,
+            "why": "target",
+            "usd": 1679.1,
+            "pct": 2.41,
+            "r": 13.89,
+            "at": "2026-11-13T10:35:00-05:00"
+          },
+          "plan": {
+            "side": "short",
+            "entry": 68468.8,
+            "stop": 69912.5,
+            "target": 68112.5,
+            "exit": 68112.5,
+            "why": "target",
+            "usd": 356.3,
+            "pct": 0.52,
+            "r": 0.25,
+            "at": "2026-11-13T10:35:00-05:00"
+          }
+        }
+      }
+    },
     {
       "date": "2026-11-12",
       "posted_at": "2026-11-12T08:45:02.174835-05:00",
