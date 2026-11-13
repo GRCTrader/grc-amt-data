@@ -2203,5 +2203,507 @@
       },
       "trades": 39
     }
+  },
+  "2026-11-13": {
+    "date": "2026-11-13",
+    "written_at": "2026-11-13T16:10:39-05:00",
+    "plan": {
+      "bias": "short",
+      "price": 28465.25,
+      "levels": [
+        {
+          "price": 28652.25,
+          "name": "PDH",
+          "kind": "bsl"
+        },
+        {
+          "price": 28607.75,
+          "name": "ONH",
+          "kind": "bsl"
+        },
+        {
+          "price": 28428.0,
+          "name": "08:30 Open",
+          "kind": "open"
+        },
+        {
+          "price": 28362.5,
+          "name": "Midnight Open",
+          "kind": "open"
+        },
+        {
+          "price": 28243.25,
+          "name": "ONL",
+          "kind": "ssl"
+        },
+        {
+          "price": 28044.5,
+          "name": "PDL",
+          "kind": "ssl"
+        }
+      ],
+      "scenarios": [
+        {
+          "side": "short",
+          "model": "[A+] Full Reversal Model (A+ recipe)",
+          "trigger": "Price pops above 08:30 open (28428.00) into 28485-28520 premium after 09:30 open, prints a 5m bearish CISD, and closes back below 28450.",
+          "entry": 28485.0,
+          "stop": 28565.0,
+          "target": 28362.5,
+          "target2": 28243.25,
+          "window": "09:30-11:00"
+        },
+        {
+          "side": "long",
+          "model": "[ER] Expansion Retracement (Vol 1 Class 3)",
+          "trigger": "Price sweeps below Midnight Open (28362.50) into discount, holds Asia Low (28315.25), and closes back above 28362.50 with a 5m FVG.",
+          "entry": 28380.0,
+          "stop": 28310.0,
+          "target": 28500.0,
+          "target2": 28607.75,
+          "window": "09:30-11:00"
+        }
+      ],
+      "invalidation": {
+        "price": 28652.25,
+        "rule": "15m close above PDH (28652.25)",
+        "by": "11:00"
+      }
+    },
+    "outcome": "B_stop",
+    "detail": "[ER] Expansion Retracement (Vol 1 Class 3): stop \u00b7 at 09:35 \u00b7 went +0.0R / -2.53R\n  uncapped to 16:00: B_stop (-1.00R)\n  direction called short; AM was down, whole RTH was down",
+    "late_outcome": "B_stop",
+    "late_r": -1.0,
+    "grades": {
+      "bias2": "B",
+      "read": "B",
+      "day": "A",
+      "bias2_source": "measured"
+    },
+    "review": {
+      "bias2": {
+        "grade": "D",
+        "reason": "The plan's short scenario demanded a Judas rally above 08:30 open that never occurred, while its counter-trend long scenario stopped out instantly at 09:35 for -1.0R.",
+        "wanted": "A pop above the 08:30 open (28428.0) into 28485\u201328520 premium for an A+ short, or a long at 28380 holding Asia low.",
+        "happened": "Price opened below 08:30 open at 28391.0, topped at 28399.0, and flushed 670 points straight down into a classic F-U sell-off.",
+        "model_called": "[A+] Full Reversal Model (A+ recipe)",
+        "model_actual": "[SO] Sell-Off / F-U Model",
+        "model_correct": false,
+        "model_said": "D"
+      },
+      "read": {
+        "grade": "B",
+        "reason": "The macro short direction was right, but framing it around an A+ model requiring price above two opening prices left the plan unable to catch the move."
+      },
+      "day": {
+        "grade": "A",
+        "shape": "One-way sell-off day (F-U short profile)",
+        "reason": "The session opened with no manipulation above 08:30 open and expanded straight into a 670-point downside spool."
+      },
+      "lessons": [
+        "Identify F-U sell-off profiles when price opens below 08:30 open and displacement starts immediately, switching to the [SO] model.",
+        "Do not execute counter-trend [ER] longs under opening prices when pre-market displacement is heavily bearish.",
+        "Apply the 09:30\u201309:40 test: lower lows with displacement right after the bell confirm an all-day trend day."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe morning plan held a short bias, looking to execute via the **[A+] Full Reversal Model**. The primary thesis required a post-09:30 Judas swing above the 08:30 open (28428.00) into 28485.00\u201328520.00 premium to take liquidity above opening prices before printing a 5m bearish CISD to target Midnight open (28362.50) and ONL (28243.25). As a secondary hedge, Scenario B outlined an **[ER] Expansion Retracement** long off 28380.00 if price swept Midnight open into discount while holding Asia Low (28315.25).\n\n## What actually happened\nThe market gave zero manipulation above opening prices after the RTH open. RTH opened at 28391.00\u2014already below the 08:30 open (28428.00). Price ticked to a session high of 28399.00 at 09:30:00 and immediately spooled downward. \n\nScenario B (Long) triggered instantly at the open as price swept through Midnight open (28362.50), but failed to find any support at Asia Low. By 09:35, price breached the 28310.00 stop, registering a -1.0R loss (\u22122.53R MAE). Scenario A (Short) never triggered because price never approached 28428.00, let alone the 28485.00 entry zone.\n\nWhat followed was a textbook **[SO] Sell-Off / F-U Model** day (Vol 2 Class 2, V40, V57). Without any manipulation above midnight or 08:30 opens, NQ expanded relentlessly lower through ONL (28243.25) and PDL (28044.50), printing an AM low of 27719.75 at 10:25 (a 670-point decline from the bell). Price extended to a session low of 27695.25 at 11:20 before retracing during PM to close at 28038.00.\n\n## How it went\nThis was a correct directional read executed under the wrong model framework.\n\nThe morning plan correctly identified that the market wanted lower prices, but it misjudged the delivery profile. By insisting on the **[A+] Full Reversal Model**, the plan required price to push above two opening prices into premium. On an F-U sell-off day, the algorithm does not offer manipulation above opening prices after the open\u2014the pre-market high at 08:30 (28583.75) had already completed the premium business. \n\nCompounding the error, Scenario B attempted a counter-trend long right at the 09:30 open against an aggressive overnight sell-off. Catching a falling knife under the opening prices without an established HTF discount reaction or 5m reversal structure violated basic PO3 guidelines, leading to an immediate -1.0R stop out.\n\n## The day as a whole\nThe session delivered a classic single-direction sell-off profile. The 09:30\u201309:40 test (V40) confirmed the character of the day immediately: price broke lower lows with heavy displacement right off the bell. After the 670-point AM drop to 27719.75, the market spent the lunch hour completing its expansion at 27695.25 before standard PM profit-taking retraced 48.7% of the range back to 28038.00.\n\n## What to do differently\n1. **Switch to [SO] Sell-Off Model on zero-manipulation opens**: When price opens below midnight and 08:30 opens and displaces downward immediately, do not wait for an [A+] setup above opening prices. Use 5m/1m FVGs above the 09:30 open to enter shorts.\n2. **Eliminate counter-trend longs below key opens without structure**: Never schedule an [ER] long below Midnight open when the pre-market leg is expanding downward with speed and no 15m/1H reversal confirmation exists.\n3. **Respect the 09:30\u201309:40 F-U day test**: If the first 5\u201310 minutes after the bell print lower lows with displacement and leave a bearish FVG, treat the day as an F-U trend day and ride order flow in the direction of the open.",
+    "session": {
+      "date": "2026-11-13",
+      "bars": 193,
+      "premarket": {
+        "open": 28263.0,
+        "high": 28583.75,
+        "low": 28260.0,
+        "close": 28390.75,
+        "at_high": "08:30",
+        "at_low": "04:00"
+      },
+      "am": {
+        "open": 28391.0,
+        "high": 28399.0,
+        "low": 27719.75,
+        "close": 27827.5,
+        "at_high": "09:30",
+        "at_low": "10:25"
+      },
+      "lunch": {
+        "open": 27827.0,
+        "high": 27966.0,
+        "low": 27695.25,
+        "close": 27949.25,
+        "at_high": "13:25",
+        "at_low": "11:20"
+      },
+      "pm": {
+        "open": 27949.5,
+        "high": 28111.75,
+        "low": 27926.75,
+        "close": 28038.0,
+        "at_high": "15:50",
+        "at_low": "13:30"
+      },
+      "rth": {
+        "open": 28391.0,
+        "high": 28399.0,
+        "low": 27695.25,
+        "close": 28038.0,
+        "at_high": "09:30",
+        "at_low": "11:20",
+        "net": -353.0,
+        "shape": "trend down",
+        "close_in_range_pct": 48.7
+      }
+    },
+    "playbook": {
+      "models": 22,
+      "rule_sections": 18,
+      "rules": 203,
+      "glossary": 69,
+      "dojo_classes": 17,
+      "notes": 38,
+      "videos": 79,
+      "concepts": 20,
+      "video_notes": 47,
+      "synced_at": "2026-11-11T17:11:23+00:00"
+    },
+    "sim": [
+      {
+        "i": 0,
+        "side": "short",
+        "model": "[A+] Full Reversal Model (A+ recipe)",
+        "entry": 28485.0,
+        "target": 28362.5,
+        "variants": {
+          "model": {
+            "stop": 28565.0,
+            "risk_pts": 80.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "10pt": {
+            "stop": 28495.0,
+            "risk_pts": 10.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "20pt": {
+            "stop": 28505.0,
+            "risk_pts": 20.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "50pt": {
+            "stop": 28535.0,
+            "risk_pts": 50.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "1R": {
+            "stop": 28607.5,
+            "risk_pts": 122.5,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "2R": {
+            "stop": 28546.25,
+            "risk_pts": 61.25,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "3R": {
+            "stop": 28525.83,
+            "risk_pts": 40.83,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          }
+        }
+      },
+      {
+        "i": 1,
+        "side": "long",
+        "model": "[ER] Expansion Retracement (Vol 1 Class 3)",
+        "entry": 28380.0,
+        "target": 28500.0,
+        "variants": {
+          "model": {
+            "stop": 28310.0,
+            "risk_pts": 70.0,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -70.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -141.0,
+                "net": -142.5
+              },
+              "5 MNQ": {
+                "gross": -705.0,
+                "net": -712.5
+              },
+              "1 NQ": {
+                "gross": -1410.0,
+                "net": -1415.0
+              }
+            }
+          },
+          "10pt": {
+            "stop": 28370.0,
+            "risk_pts": 10.0,
+            "outcome": "open",
+            "at": "09:30",
+            "triggered": true,
+            "points": null,
+            "usd": null
+          },
+          "20pt": {
+            "stop": 28360.0,
+            "risk_pts": 20.0,
+            "outcome": "open",
+            "at": "09:30",
+            "triggered": true,
+            "points": null,
+            "usd": null
+          },
+          "50pt": {
+            "stop": 28330.0,
+            "risk_pts": 50.0,
+            "outcome": "open",
+            "at": "09:30",
+            "triggered": true,
+            "points": null,
+            "usd": null
+          },
+          "1R": {
+            "stop": 28260.0,
+            "risk_pts": 120.0,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -120.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -241.0,
+                "net": -242.5
+              },
+              "5 MNQ": {
+                "gross": -1205.0,
+                "net": -1212.5
+              },
+              "1 NQ": {
+                "gross": -2410.0,
+                "net": -2415.0
+              }
+            }
+          },
+          "2R": {
+            "stop": 28320.0,
+            "risk_pts": 60.0,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -60.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -121.0,
+                "net": -122.5
+              },
+              "5 MNQ": {
+                "gross": -605.0,
+                "net": -612.5
+              },
+              "1 NQ": {
+                "gross": -1210.0,
+                "net": -1215.0
+              }
+            }
+          },
+          "3R": {
+            "stop": 28340.0,
+            "risk_pts": 40.0,
+            "outcome": "open",
+            "at": "09:30",
+            "triggered": true,
+            "points": null,
+            "usd": null
+          }
+        }
+      }
+    ],
+    "score": {
+      "components": {
+        "draw": 0.5,
+        "direction": 1.0,
+        "levels": 0.667,
+        "timing": 1.0,
+        "invalidation": 1.0
+      },
+      "weights": {
+        "draw": 0.35,
+        "direction": 0.2,
+        "levels": 0.2,
+        "timing": 0.15,
+        "invalidation": 0.1
+      },
+      "notes": {
+        "direction": "-648.5 pt",
+        "levels": "4 of 6 reacted at",
+        "timing": "resolved 09:35, inside the window",
+        "invalidation": "held"
+      },
+      "total": 0.758,
+      "grade": "B",
+      "best_scenario": 0,
+      "per_scenario": [
+        {
+          "i": 0,
+          "side": "short",
+          "model": "[A+] Full Reversal Model (A+ recipe)",
+          "outcome": "no_trigger",
+          "triggered": false,
+          "at": null,
+          "score": 0.5,
+          "mfe_r": 0.0,
+          "mae_r": 0.0
+        },
+        {
+          "i": 1,
+          "side": "long",
+          "model": "[ER] Expansion Retracement (Vol 1 Class 3)",
+          "outcome": "stop",
+          "triggered": true,
+          "at": "09:35",
+          "score": 0.0,
+          "mfe_r": 0.0,
+          "mae_r": 2.53
+        }
+      ],
+      "levels": [
+        {
+          "price": 28652.25,
+          "name": "PDH",
+          "reacted": false
+        },
+        {
+          "price": 28607.75,
+          "name": "ONH",
+          "reacted": false
+        },
+        {
+          "price": 28428.0,
+          "name": "08:30 Open",
+          "reacted": true
+        },
+        {
+          "price": 28362.5,
+          "name": "Midnight Open",
+          "reacted": true
+        },
+        {
+          "price": 28243.25,
+          "name": "ONL",
+          "reacted": true
+        },
+        {
+          "price": 28044.5,
+          "name": "PDL",
+          "reacted": true
+        }
+      ],
+      "mirror_total": 0.633,
+      "mirror_grade": "C",
+      "beat_mirror": true
+    },
+    "prep": {
+      "events": [
+        {
+          "date": "2026-11-13",
+          "time": "08:30",
+          "title": "Core PPI m/m",
+          "impact": "high"
+        },
+        {
+          "date": "2026-11-13",
+          "time": "08:30",
+          "title": "PPI m/m",
+          "impact": "high"
+        }
+      ],
+      "pending": [
+        {
+          "price": 28151.75,
+          "name": "ER 0.5 never reached"
+        },
+        {
+          "price": 28583.75,
+          "name": "unswept Core PPI m/m high"
+        }
+      ],
+      "note": "**The prep \u2014 2026-11-13**\n\n**01 \u00b7 Calendar.** 08:30 Core PPI m/m (red), 08:30 PPI m/m (red).\nThe day is allowed to move at 08:30. Before that, treat expansion as suspect.\n\n**05 \u00b7 Still pending.** ER 0.5 never reached 28151.75, unswept Core PPI m/m high 28583.75. These stay marked for the rest of the week.\n\n**10 \u00b7 The plan.** SHORT from 28485.0, stop 28565.0, target 28362.5. Wrong if 15m close above PDH (28652.25) 28652.25 by 11:00.\n\n_Steps 02-04, 06, 07 and 09 are live on the chart \u2014 they are the ones that change while you watch, so they are not written down here._"
+    },
+    "read_bench": {
+      "recent": {
+        "n": 30,
+        "hit": 56.7,
+        "benchmark": "C",
+        "benchmark_hit": 50.0,
+        "edge": 6.7,
+        "mix": {
+          "C": 15,
+          "B": 13,
+          "A": 2
+        },
+        "called": {
+          "C": 12,
+          "B": 18
+        },
+        "brier": 0.578,
+        "brier_prior": 0.581,
+        "brier_edge": 0.003,
+        "brier_n": 30
+      },
+      "all": {
+        "n": 115,
+        "hit": 33.0,
+        "benchmark": "C",
+        "benchmark_hit": 53.0,
+        "edge": -20.0,
+        "mix": {
+          "A": 15,
+          "C": 61,
+          "B": 39
+        },
+        "called": {
+          "A": 62,
+          "C": 18,
+          "B": 31
+        },
+        "brier": 0.832,
+        "brier_prior": 0.59,
+        "brier_edge": -0.242,
+        "brier_n": 111
+      }
+    }
   }
 }
