@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T10:01:39.364441-05:00",
+  "updated": "2026-11-15T10:02:12.000141-05:00",
   "reports": [
     {
       "market_code": "ES",
@@ -10,7 +10,76 @@
       "correction_note": null,
       "bias": "Bearish",
       "report_url": "data/cot/reports/es-2026-11-03.json",
-      "week_review": null
+      "week_review": {
+        "week_start": "2026-11-09",
+        "week_end": "2026-11-13",
+        "bias": "Bearish",
+        "days": [
+          {
+            "date": "2026-11-09",
+            "weekday": "Monday",
+            "open": 7371.0,
+            "high": 7600.5,
+            "low": 7363.75,
+            "close": 7574.25,
+            "direction": 1,
+            "narrative": "opened 7371, closed higher at 7574 (+203)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-11-10",
+            "weekday": "Tuesday",
+            "open": 7580.75,
+            "high": 7598.75,
+            "low": 7493.0,
+            "close": 7544.25,
+            "direction": -1,
+            "narrative": "opened 7581, pushed up to 7599, faded to close 7544 (-36)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-11-11",
+            "weekday": "Wednesday",
+            "open": 7554.25,
+            "high": 7671.5,
+            "low": 7547.5,
+            "close": 7640.5,
+            "direction": 1,
+            "narrative": "opened 7554, closed higher at 7640 (+86)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-11-12",
+            "weekday": "Thursday",
+            "open": 7616.75,
+            "high": 7674.75,
+            "low": 7572.0,
+            "close": 7615.25,
+            "direction": 0,
+            "narrative": "opened 7617, closed flat at 7615 (-2)",
+            "bot_read": null
+          },
+          {
+            "date": "2026-11-13",
+            "weekday": "Friday",
+            "open": 7620.25,
+            "high": 7669.25,
+            "low": 7519.25,
+            "close": 7583.0,
+            "direction": -1,
+            "narrative": "opened 7620, pushed up to 7669, faded to close 7583 (-37)",
+            "bot_read": null
+          }
+        ],
+        "week_net_pct": 2.88,
+        "verdict": "incorrect",
+        "score": 16,
+        "components": {
+          "net_direction": 0,
+          "daily_agreement": 16
+        },
+        "review_text": "WHAT HAPPENED:\nThe engine issued a low-confidence bearish call on ES, but price rallied strongly across the week to gain 2.88%, moving from a Monday open of 7371 to a Friday close of 7583.\n\nWHY IT MISSED:\nThe system mistook routine commercial hedging (-12,106 contracts) for a directional reversal, even though Commercials remained net long overall (+5,195 contracts) inside a broader buy program. Furthermore, a 58% percentile reading reflects neutral mid-range positioning rather than a bearish extreme, allowing minor unwinding to generate an incorrect counter-trend bias.\n\nSUGGESTED IMPROVEMENT:\nConsider reviewing a rule logic update that suppresses bearish signals driven by weekly commercial unwinding whenever net positioning remains positive within a broader buy program, unless six-month range percentiles drop below an extreme threshold like 30%."
+      }
     },
     {
       "market_code": "NQ",
@@ -21,7 +90,101 @@
       "correction_note": null,
       "bias": "Bearish",
       "report_url": "data/cot/reports/nq-2026-11-03.json",
-      "week_review": null
+      "week_review": {
+        "week_start": "2026-11-09",
+        "week_end": "2026-11-13",
+        "bias": "Bearish",
+        "days": [
+          {
+            "date": "2026-11-09",
+            "weekday": "Monday",
+            "open": 26878.5,
+            "high": 28129.25,
+            "low": 26751.25,
+            "close": 28014.5,
+            "direction": 1,
+            "narrative": "opened 26878, closed higher at 28014 (+1136)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "short_covering",
+              "model_correct": 0,
+              "detail": "Accepted above VAH 27241, closed 27936 (top of range)"
+            }
+          },
+          {
+            "date": "2026-11-10",
+            "weekday": "Tuesday",
+            "open": 28064.0,
+            "high": 28109.0,
+            "low": 27516.0,
+            "close": 27835.25,
+            "direction": -1,
+            "narrative": "opened 28064, closed lower at 27835 (-229)",
+            "bot_read": {
+              "predicted_model": "trend_down",
+              "actual_model": "trend_down",
+              "model_correct": 1,
+              "detail": "Accepted below VAL 27828, closed 27745 (low of range)"
+            }
+          },
+          {
+            "date": "2026-11-11",
+            "weekday": "Wednesday",
+            "open": 27899.5,
+            "high": 28697.0,
+            "low": 27847.75,
+            "close": 28473.25,
+            "direction": 1,
+            "narrative": "opened 27900, closed higher at 28473 (+574)",
+            "bot_read": {
+              "predicted_model": "range_expansion",
+              "actual_model": "trend_up",
+              "model_correct": 0,
+              "detail": "Accepted above VAH 28044, closed 28513 (top of range)"
+            }
+          },
+          {
+            "date": "2026-11-12",
+            "weekday": "Thursday",
+            "open": 28306.25,
+            "high": 28652.25,
+            "low": 28013.75,
+            "close": 28384.5,
+            "direction": 0,
+            "narrative": "opened 28306, closed flat at 28384 (+78)",
+            "bot_read": {
+              "predicted_model": "trend_down",
+              "actual_model": "mean_reversion",
+              "model_correct": 0,
+              "detail": "Reverted to POC 28473"
+            }
+          },
+          {
+            "date": "2026-11-13",
+            "weekday": "Friday",
+            "open": 28399.25,
+            "high": 28607.75,
+            "low": 27695.25,
+            "close": 28034.75,
+            "direction": -1,
+            "narrative": "opened 28399, pushed up to 28608, faded to close 28035 (-364)",
+            "bot_read": {
+              "predicted_model": "C",
+              "actual_model": "trend_down",
+              "model_correct": 0,
+              "detail": "Accepted below VAL 28153, closed 27796 (low of range)"
+            }
+          }
+        ],
+        "week_net_pct": 4.3,
+        "verdict": "incorrect",
+        "score": 16,
+        "components": {
+          "net_direction": 0,
+          "daily_agreement": 16
+        },
+        "review_text": "WHAT HAPPENED: The engine issued a high-confidence bearish bias on the Nasdaq-100, but the index rallied strongly, closing up 4.30% for the week with four out of five days failing daily direction calls.\n\nWHY IT MISSED: The system flagged a high-confidence sell based on a 4-year positioning extreme (94th percentile low), ignoring that commercials were actually reducing their short exposure (-1,178 contracts). Treating an exhausted multi-year extreme as an active sell trigger while commercial short-covering was already underway left the model vulnerable to a squeeze without a fresh price trigger.\n\nSUGGESTED IMPROVEMENT: Consider reviewing the engine logic to automatically downgrade bias confidence from high to neutral whenever commercial positioning sits at a multi-year extreme (e.g., past the 90th percentile) if the week-over-week contract change reflects short reduction rather than fresh short expansion."
+      }
     },
     {
       "market_code": "ES",
