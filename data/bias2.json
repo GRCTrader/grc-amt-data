@@ -2835,5 +2835,556 @@
       },
       "trades": 20
     }
+  },
+  "2026-11-16": {
+    "date": "2026-11-16",
+    "written_at": "2026-11-16T16:10:39-05:00",
+    "plan": {
+      "bias": "long",
+      "price": 27688.5,
+      "levels": [
+        {
+          "price": 27554.0,
+          "name": "Overnight Low",
+          "kind": "ssl"
+        },
+        {
+          "price": 27621.25,
+          "name": "08:30 Open",
+          "kind": "open"
+        },
+        {
+          "price": 27695.25,
+          "name": "Previous Day Low",
+          "kind": "ssl"
+        },
+        {
+          "price": 27816.25,
+          "name": "Midnight Open",
+          "kind": "open"
+        },
+        {
+          "price": 27853.25,
+          "name": "London High",
+          "kind": "bsl"
+        },
+        {
+          "price": 28062.5,
+          "name": "Weekly Open",
+          "kind": "open"
+        }
+      ],
+      "scenarios": [
+        {
+          "side": "long",
+          "model": "Expansion Retracement (Vol 1 Class 3)",
+          "trigger": "09:30 open retracement into discount of the pre-market leg near the 08:30 open holding above 27621.25",
+          "entry": 27635.0,
+          "stop": 27545.0,
+          "target": 27816.25,
+          "target2": 27853.25,
+          "window": "09:30-11:00"
+        },
+        {
+          "side": "short",
+          "model": "Expansion Retracement (Vol 1 Class 3)",
+          "trigger": "Direct expansion to Midnight Open (27816.25) followed by a 5m bearish displacement back below midnight open",
+          "entry": 27810.0,
+          "stop": 27865.0,
+          "target": 27695.25,
+          "target2": 27621.25,
+          "window": "09:45-11:00"
+        }
+      ],
+      "invalidation": {
+        "price": 27554.0,
+        "rule": "5m candle close below overnight low",
+        "by": "11:00"
+      }
+    },
+    "outcome": "A_stop",
+    "detail": "Expansion Retracement (Vol 1 Class 3): stop \u00b7 at 09:35 \u00b7 went +0.62R / -1.66R\n  uncapped to 16:00: A_stop (-1.00R)\n  direction called long; AM was down, whole RTH was down",
+    "late_outcome": "A_stop",
+    "late_r": -1.0,
+    "grades": {
+      "bias2": "D",
+      "read": "D",
+      "day": "D",
+      "bias2_source": "measured"
+    },
+    "review": {
+      "bias2": {
+        "grade": "D",
+        "reason": "The long expansion retracement entry at 27635.0 was stopped out immediately at 09:35 as the market entered a heavy sell-off session.",
+        "wanted": "A pullback to the 08:30 open (27621.25) holding for an expansion retracement long toward the Midnight Open (27816.25).",
+        "happened": "Price sliced directly through the 08:30 open and the overnight low (27554.0), trending downward over 370 points to a low of 27234.75.",
+        "model_called": "[ER] Expansion Retracement (Vol 1 Class 3)",
+        "model_actual": "[SO] Sell-Off / F-U Model",
+        "model_correct": false
+      },
+      "read": {
+        "grade": "D",
+        "reason": "The plan insisted on a long directional bias despite price being trapped below Midnight Open and Weekly Open with zero pre-market manipulation above."
+      },
+      "day": {
+        "grade": "D",
+        "shape": "Trend day down / Sell-off day",
+        "reason": "The market executed a textbook F-U sell-off profile, expanding lower from the 09:45 high straight into the PM session."
+      },
+      "lessons": [
+        "Do not take long setups below Midnight Open when pre-market shows zero manipulation above Midnight or Weekly Open.",
+        "Treat a 09:30-09:40 pattern that sweeps a minor 5m high and displaces lower as an F-U sell-off confirmation.",
+        "Accept immediate breaches of overnight lows as low-resistance sell-side liquidity delivery, not a discount buying opportunity."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe plan called for an HTF long continuation using the **[ER] Expansion Retracement** model (Vol 1 Class 3). It looked for the 09:30 RTH open to retrace into discount near the 08:30 open (27621.25), holding above the overnight low (27554.0). The trigger was a long entry at 27635.0 with a 27545.0 stop, targeting Midnight Open (27816.25) and London High (27853.25). A secondary short scenario required a direct expansion into Midnight Open (27816.25) followed by a 5m bearish displacement, which never materialized.\n\n## What actually happened\nAt the 09:30 bell, price opened at 27668.25 and immediately collapsed. By 09:35, price sliced straight through the 08:30 open (27621.25) and hit 27530s, stopping out Scenario A (-1.0R) within five minutes. Price then offered a minor 5m retracement to 27716.25 at 09:45\u2014taking a minor 5m buy-side pool well below the Midnight Open (27816.25)\u2014before printing heavy bearish displacement.\n\nFrom 09:45 onward, price entered low-resistance liquidity delivery to the downside. It sliced through the overnight low (27554.0) and Previous Day Low (27695.25), driving aggressively down to 27339.0 by 10:25 AM. The lunch window (11:00\u201313:30) saw a weak retracement capping out at 27621.5 before sell programs resumed. NY PM expanded even lower, reaching the session low of 27234.75 at 15:35 and settling at 27291.5 for a net daily loss of -376.75 points.\n\n## How it went\nThis was a flatly wrong directional read. The plan attempted to buy discount in a market primed for a **[SO] Sell-Off / F-U Model** (V40, V57). \n\nUnder the playbook's opening price rules, a bullish day requires price to trade below opening prices during manipulation, but it also requires HTF narrative alignment and support from opening prices. Here, price sat below both the Midnight Open (27816.25) and Weekly Open (28062.5), while pre-market action printed zero manipulation above Midnight. Per V40 and V57, an explosive overnight trend with no manipulation above Midnight/08:30 opens signals an F-U sell-off day that trends all session.\n\nThe only saving grace was trade management: the hard stop at 27545.0 cut Scenario A cleanly at -1.0R, containing risk on a day that dumped nearly 400 points.\n\n## The day as a whole\nThe session delivered a textbook Sell-Off / F-U Day profile (V40, V57). The early test at 09:30\u201309:45 took a small 5m buy-side pool up to 27716.25, printed a bearish displacement gap below the 08:30 open, and immediately expanded lower into an un-tapped sell-side pool. Bearish order blocks and FVGs held perfectly on every timeframe through the AM, lunch, and PM macros. The morning read stood directly in front of an active institutional sell program.\n\n## What to do differently\n1. **Identify F-U Sell-Off profiles early:** When price trades below Midnight and Weekly Open with zero pre-market manipulation above Midnight, do not hunt discount longs (V57).\n2. **Respect early RTH displacement signatures:** If the 09:30\u201309:40 window takes minor 5m buy-side and immediately prints a bearish FVG through an opening price, switch to continuation shorts immediately (V40).\n3. **Never long a broken overnight low:** A candle body closing below the overnight low early in RTH is a sign of low-resistance sell-side delivery, not an engineered spring.",
+    "session": {
+      "date": "2026-11-16",
+      "bars": 193,
+      "premarket": {
+        "open": 27825.75,
+        "high": 27826.5,
+        "low": 27554.0,
+        "close": 27669.25,
+        "at_high": "04:00",
+        "at_low": "07:30"
+      },
+      "am": {
+        "open": 27668.25,
+        "high": 27716.25,
+        "low": 27339.0,
+        "close": 27563.75,
+        "at_high": "09:45",
+        "at_low": "10:25"
+      },
+      "lunch": {
+        "open": 27562.75,
+        "high": 27621.5,
+        "low": 27314.75,
+        "close": 27326.0,
+        "at_high": "11:30",
+        "at_low": "13:25"
+      },
+      "pm": {
+        "open": 27325.25,
+        "high": 27413.0,
+        "low": 27234.75,
+        "close": 27291.5,
+        "at_high": "13:50",
+        "at_low": "15:35"
+      },
+      "rth": {
+        "open": 27668.25,
+        "high": 27716.25,
+        "low": 27234.75,
+        "close": 27291.5,
+        "at_high": "09:45",
+        "at_low": "15:35",
+        "net": -376.75,
+        "shape": "trend down",
+        "close_in_range_pct": 11.8
+      }
+    },
+    "playbook": {
+      "models": 22,
+      "rule_sections": 18,
+      "rules": 203,
+      "glossary": 69,
+      "dojo_classes": 17,
+      "notes": 38,
+      "videos": 79,
+      "concepts": 20,
+      "video_notes": 47,
+      "synced_at": "2026-11-11T17:11:23+00:00"
+    },
+    "sim": [
+      {
+        "i": 0,
+        "side": "long",
+        "model": "Expansion Retracement (Vol 1 Class 3)",
+        "entry": 27635.0,
+        "target": 27816.25,
+        "variants": {
+          "model": {
+            "stop": 27545.0,
+            "risk_pts": 90.0,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -90.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -181.0,
+                "net": -182.5
+              },
+              "5 MNQ": {
+                "gross": -905.0,
+                "net": -912.5
+              },
+              "1 NQ": {
+                "gross": -1810.0,
+                "net": -1815.0
+              }
+            }
+          },
+          "10pt": {
+            "stop": 27625.0,
+            "risk_pts": 10.0,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -10.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -21.0,
+                "net": -22.5
+              },
+              "5 MNQ": {
+                "gross": -105.0,
+                "net": -112.5
+              },
+              "1 NQ": {
+                "gross": -210.0,
+                "net": -215.0
+              }
+            }
+          },
+          "20pt": {
+            "stop": 27615.0,
+            "risk_pts": 20.0,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -20.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -41.0,
+                "net": -42.5
+              },
+              "5 MNQ": {
+                "gross": -205.0,
+                "net": -212.5
+              },
+              "1 NQ": {
+                "gross": -410.0,
+                "net": -415.0
+              }
+            }
+          },
+          "50pt": {
+            "stop": 27585.0,
+            "risk_pts": 50.0,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -50.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -101.0,
+                "net": -102.5
+              },
+              "5 MNQ": {
+                "gross": -505.0,
+                "net": -512.5
+              },
+              "1 NQ": {
+                "gross": -1010.0,
+                "net": -1015.0
+              }
+            }
+          },
+          "1R": {
+            "stop": 27453.75,
+            "risk_pts": 181.25,
+            "outcome": "stop",
+            "at": "10:00",
+            "triggered": true,
+            "points": -181.75,
+            "usd": {
+              "1 MNQ": {
+                "gross": -363.5,
+                "net": -365.0
+              },
+              "5 MNQ": {
+                "gross": -1817.5,
+                "net": -1825.0
+              },
+              "1 NQ": {
+                "gross": -3635.0,
+                "net": -3640.0
+              }
+            }
+          },
+          "2R": {
+            "stop": 27544.38,
+            "risk_pts": 90.62,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -91.12,
+            "usd": {
+              "1 MNQ": {
+                "gross": -182.25,
+                "net": -183.75
+              },
+              "5 MNQ": {
+                "gross": -911.25,
+                "net": -918.75
+              },
+              "1 NQ": {
+                "gross": -1822.5,
+                "net": -1827.5
+              }
+            }
+          },
+          "3R": {
+            "stop": 27574.58,
+            "risk_pts": 60.42,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -60.92,
+            "usd": {
+              "1 MNQ": {
+                "gross": -121.83,
+                "net": -123.33
+              },
+              "5 MNQ": {
+                "gross": -609.17,
+                "net": -616.67
+              },
+              "1 NQ": {
+                "gross": -1218.33,
+                "net": -1223.33
+              }
+            }
+          }
+        }
+      },
+      {
+        "i": 1,
+        "side": "short",
+        "model": "Expansion Retracement (Vol 1 Class 3)",
+        "entry": 27810.0,
+        "target": 27695.25,
+        "variants": {
+          "model": {
+            "stop": 27865.0,
+            "risk_pts": 55.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "10pt": {
+            "stop": 27820.0,
+            "risk_pts": 10.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "20pt": {
+            "stop": 27830.0,
+            "risk_pts": 20.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "50pt": {
+            "stop": 27860.0,
+            "risk_pts": 50.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "1R": {
+            "stop": 27924.75,
+            "risk_pts": 114.75,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "2R": {
+            "stop": 27867.38,
+            "risk_pts": 57.38,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "3R": {
+            "stop": 27848.25,
+            "risk_pts": 38.25,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          }
+        }
+      }
+    ],
+    "score": {
+      "components": {
+        "draw": 0.5,
+        "direction": 0.0,
+        "levels": 0.5,
+        "timing": 1.0,
+        "invalidation": 0.0
+      },
+      "weights": {
+        "draw": 0.35,
+        "direction": 0.2,
+        "levels": 0.2,
+        "timing": 0.15,
+        "invalidation": 0.1
+      },
+      "notes": {
+        "direction": "-135.2 pt",
+        "levels": "3 of 6 reacted at",
+        "timing": "resolved 09:35, inside the window",
+        "invalidation": "tripped"
+      },
+      "total": 0.425,
+      "grade": "D",
+      "best_scenario": 1,
+      "per_scenario": [
+        {
+          "i": 0,
+          "side": "long",
+          "model": "Expansion Retracement (Vol 1 Class 3)",
+          "outcome": "stop",
+          "triggered": true,
+          "at": "09:35",
+          "score": 0.0,
+          "mfe_r": 0.62,
+          "mae_r": 1.66
+        },
+        {
+          "i": 1,
+          "side": "short",
+          "model": "Expansion Retracement (Vol 1 Class 3)",
+          "outcome": "no_trigger",
+          "triggered": false,
+          "at": null,
+          "score": 0.5,
+          "mfe_r": 0.0,
+          "mae_r": 0.0
+        }
+      ],
+      "levels": [
+        {
+          "price": 27554.0,
+          "name": "Overnight Low",
+          "reacted": true
+        },
+        {
+          "price": 27621.25,
+          "name": "08:30 Open",
+          "reacted": true
+        },
+        {
+          "price": 27695.25,
+          "name": "Previous Day Low",
+          "reacted": true
+        },
+        {
+          "price": 27816.25,
+          "name": "Midnight Open",
+          "reacted": false
+        },
+        {
+          "price": 27853.25,
+          "name": "London High",
+          "reacted": false
+        },
+        {
+          "price": 28062.5,
+          "name": "Weekly Open",
+          "reacted": false
+        }
+      ],
+      "mirror_total": 0.8,
+      "mirror_grade": "B",
+      "beat_mirror": false
+    },
+    "prep": {
+      "events": [
+        {
+          "date": "2026-11-16",
+          "time": "12:00",
+          "title": "Fed Chairman Warsh Speaks",
+          "impact": "high"
+        }
+      ],
+      "pending": [
+        {
+          "price": 27428.5,
+          "name": "ER 0.5 never reached"
+        },
+        {
+          "price": 27554.5,
+          "name": "unswept Fed Chairman Warsh Spe high"
+        },
+        {
+          "price": 28066.75,
+          "name": "ER 0.5 never reached"
+        }
+      ],
+      "note": "**The prep \u2014 2026-11-16**\n\n**01 \u00b7 Calendar.** 12:00 Fed Chairman Warsh Speaks (red).\nThe day is allowed to move at 12:00. Before that, treat expansion as suspect.\n\n**05 \u00b7 Still pending.** ER 0.5 never reached 27428.5, unswept Fed Chairman Warsh Spe high 27554.5, ER 0.5 never reached 28066.75. These stay marked for the rest of the week.\n\n**10 \u00b7 The plan.** LONG from 27635.0, stop 27545.0, target 27816.25. Wrong if 5m candle close below overnight low 27554.0 by 11:00.\n\n_Steps 02-04, 06, 07 and 09 are live on the chart \u2014 they are the ones that change while you watch, so they are not written down here._"
+    },
+    "read_bench": {
+      "recent": {
+        "n": 30,
+        "hit": 53.3,
+        "benchmark": "C",
+        "benchmark_hit": 50.0,
+        "edge": 3.3,
+        "mix": {
+          "B": 13,
+          "C": 15,
+          "A": 2
+        },
+        "called": {
+          "B": 19,
+          "C": 11
+        },
+        "brier": 0.58,
+        "brier_prior": 0.581,
+        "brier_edge": 0.001,
+        "brier_n": 30
+      },
+      "all": {
+        "n": 116,
+        "hit": 32.8,
+        "benchmark": "C",
+        "benchmark_hit": 53.4,
+        "edge": -20.7,
+        "mix": {
+          "A": 15,
+          "C": 62,
+          "B": 39
+        },
+        "called": {
+          "A": 62,
+          "C": 18,
+          "B": 32
+        },
+        "brier": 0.829,
+        "brier_prior": 0.588,
+        "brier_edge": -0.241,
+        "brier_n": 112
+      }
+    }
   }
 }
