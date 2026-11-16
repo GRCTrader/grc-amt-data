@@ -1,23 +1,23 @@
 {
-  "asof": "2026-11-13 18:10 ET",
+  "asof": "2026-11-16 18:10 ET",
   "venue": "Binance USD-M perpetual (BTCUSDT)",
   "method": "The day runs 18:00\u219218:00 New York. Levels are the prior day's range and value area, plus Asia+London (18:00\u219209:30). The read is graded at 18:00 against the move from the read price.",
   "record": {
-    "graded": 37,
-    "correct": 24,
-    "hit_rate": 64.9,
+    "graded": 38,
+    "correct": 25,
+    "hit_rate": 65.8,
     "by_bias": {
+      "NEUTRAL": {
+        "n": 17,
+        "correct": 12,
+        "hit_rate": 70.6,
+        "avg_move_pct": 0.89
+      },
       "SHORT": {
         "n": 11,
         "correct": 9,
         "hit_rate": 81.8,
         "avg_move_pct": 1.1
-      },
-      "NEUTRAL": {
-        "n": 16,
-        "correct": 11,
-        "hit_rate": 68.8,
-        "avg_move_pct": 0.86
       },
       "LONG": {
         "n": 10,
@@ -29,7 +29,7 @@
     "sims": {
       "bias": {
         "trades": 21,
-        "no_trade": 16,
+        "no_trade": 17,
         "wins": 10,
         "record": "10\u201311",
         "total_r": 19.42,
@@ -38,19 +38,78 @@
         "avg_pct": 0.2
       },
       "plan": {
-        "trades": 37,
+        "trades": 38,
         "no_trade": 0,
-        "wins": 23,
-        "record": "23\u201314",
+        "wins": 24,
+        "record": "24\u201314",
         "total_r": 0.31,
         "avg_r": 0.01,
-        "usd_per_coin": 1427.3,
+        "usd_per_coin": 1429.5,
         "avg_pct": 0.05
       }
     }
   },
   "sim_note": "bias = take the side at the read price, stop at the nearest level the other way, target the next level along. plan = wait for a trigger to be accepted, then trade it from there. Both are 1 coin, no costs.",
   "reads": [
+    {
+      "date": "2026-11-16",
+      "posted_at": "2026-11-16T08:45:01.751960-05:00",
+      "price": 64354.4,
+      "bias": "NEUTRAL",
+      "location": "inside prior value",
+      "note": "Inside yesterday's value (63,762\u201365,612), around below the point of control 64,762. Balance until one edge is accepted \u2014 the edges are the trade, not the middle.",
+      "levels": {
+        "prior_high": 66093.2,
+        "prior_low": 61956.3,
+        "vah": 65612.5,
+        "poc": 64762.5,
+        "val": 63762.5,
+        "ovn_high": 65475.1,
+        "ovn_low": 63871.0,
+        "adr_14": 4148.43,
+        "basis": -5.7
+      },
+      "up_level": 64762.5,
+      "dn_level": 64262.5,
+      "result": {
+        "status": "graded",
+        "bias": "NEUTRAL",
+        "correct": true,
+        "from_price": 64354.4,
+        "close": 65187.0,
+        "move": 832.6,
+        "move_pct": 1.29,
+        "high": 65679.2,
+        "low": 63986.1,
+        "up_pct": 2.06,
+        "down_pct": -0.57,
+        "trigger_first": "down",
+        "trigger_at": "2026-11-16T08:50:00-05:00",
+        "bars": 111,
+        "sim": {
+          "bias": {
+            "why": "no trade",
+            "usd": 0.0,
+            "pct": 0.0,
+            "r": 0.0,
+            "side": "none",
+            "entry": null
+          },
+          "plan": {
+            "side": "short",
+            "entry": 64262.5,
+            "stop": 64762.5,
+            "target": 64260.3,
+            "exit": 64260.3,
+            "why": "target",
+            "usd": 2.2,
+            "pct": 0.0,
+            "r": 0.0,
+            "at": "2026-11-16T08:55:00-05:00"
+          }
+        }
+      }
+    },
     {
       "date": "2026-11-13",
       "posted_at": "2026-11-13T08:45:01.724776-05:00",
