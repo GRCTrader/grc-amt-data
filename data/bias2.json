@@ -3386,5 +3386,220 @@
         "brier_n": 112
       }
     }
+  },
+  "2026-11-17": {
+    "date": "2026-11-17",
+    "status": "pre-market",
+    "written_at": "2026-11-17T09:26:22-05:00",
+    "plan": {
+      "bias": "long",
+      "price": 27377.75,
+      "levels": [
+        {
+          "price": 27716.25,
+          "name": "PDH",
+          "kind": "bsl"
+        },
+        {
+          "price": 27234.75,
+          "name": "PDL",
+          "kind": "ssl"
+        },
+        {
+          "price": 27498.0,
+          "name": "ONH",
+          "kind": "bsl"
+        },
+        {
+          "price": 27085.0,
+          "name": "ONL",
+          "kind": "ssl"
+        },
+        {
+          "price": 27405.5,
+          "name": "Midnight Open",
+          "kind": "open"
+        },
+        {
+          "price": 27405.0,
+          "name": "08:30 Open",
+          "kind": "open"
+        },
+        {
+          "price": 28062.5,
+          "name": "Weekly Open",
+          "kind": "open"
+        },
+        {
+          "price": 26751.25,
+          "name": "Previous Week Low",
+          "kind": "ssl"
+        }
+      ],
+      "scenarios": [
+        {
+          "side": "long",
+          "model": "Full Reversal Model (A+ recipe)",
+          "trigger": "Price enters the NY AM killzone (09:30-11:30) and respects a bullish PD array below the 08:30 Open after 09:30, then closes above it, targeting the next buy-side liquidity.",
+          "entry": 27390.0,
+          "stop": 27350.0,
+          "target": 27498.0,
+          "target2": 27716.25,
+          "window": "09:30-11:30"
+        },
+        {
+          "side": "short",
+          "model": "Failure Swing",
+          "trigger": "Price rallies to the 08:30 Open (27405.0) or ONH (27498.0), fails to take it (wick only above the level), respects its wick CE with bodies, and prints a bearish FVG below it.",
+          "entry": 27405.0,
+          "stop": 27450.0,
+          "target": 27234.75,
+          "target2": 27085.0,
+          "window": "09:30-11:30"
+        }
+      ],
+      "invalidation": {
+        "price": 27350.0,
+        "rule": "5m close below",
+        "by": "11:00"
+      },
+      "model_screen": [
+        {
+          "model": "Expansion Retracement (Vol 1 Class 3)",
+          "status": "watch",
+          "why": "A bullish expansion leg from ONL is present, needs a clear retracement into discount to form an entry."
+        },
+        {
+          "model": "Failure Swing (Vol 1 Class 4)",
+          "status": "in_play",
+          "why": "Price rallied after sweeping ONL and PDL, implying failure to continue lower from this liquidity zone."
+        },
+        {
+          "model": "HRLR Model: Wick + Rejection Block",
+          "status": "watch",
+          "why": "Current choppy conditions around opens suggest HRLR, needs a specific wick+rejection block setup to confirm reversal."
+        },
+        {
+          "model": "Overpowered Order Block",
+          "status": "watch",
+          "why": "Liquidity was taken at ONL/PDL; needs to form a clear bullish OB with an FVG in its upper portion for entry."
+        },
+        {
+          "model": "Change in State of Delivery",
+          "status": "in_play",
+          "why": "The rally from ONL after it was taken implies a change in delivery, confirmed by price moving above prior candles' opens."
+        },
+        {
+          "model": "Reversal Confirmation Chain",
+          "status": "watch",
+          "why": "CISD is present, but needs further respected PD arrays and inversions to complete the chain."
+        },
+        {
+          "model": "Secret Confirmation (hard days)",
+          "status": "not_today",
+          "why": "No clear swing high, bearish PD array, and disrespected bullish PD array visible yet."
+        },
+        {
+          "model": "Inversion FVG",
+          "status": "not_today",
+          "why": "No relevant FVG has been closed through and inverted to serve as current support/resistance."
+        },
+        {
+          "model": "Balanced Price Range",
+          "status": "not_today",
+          "why": "No two opposing FVGs are overlapping in the current range."
+        },
+        {
+          "model": "Consolidation Model",
+          "status": "watch",
+          "why": "Price is chopping around the 00:00/08:30 opens; could form if it consolidates further and then breaks out."
+        },
+        {
+          "model": "Breaker & Mitigation Block",
+          "status": "watch",
+          "why": "Price took ONL/PDL; needs a close above a swing high to confirm a bullish breaker formation."
+        },
+        {
+          "model": "Anticipating Turtle Soups",
+          "status": "not_today",
+          "why": "Current price is above 0.5 of overnight range; no valid low soups for longs or high soups for shorts forming clearly now."
+        },
+        {
+          "model": "Sell-Off / F-U Model",
+          "status": "not_today",
+          "why": "Bias is long, and price traded below 00:00/08:30 opens, so conditions for sell-off model are not met."
+        },
+        {
+          "model": "Full Reversal Model (A+ recipe)",
+          "status": "in_play",
+          "why": "Price is below 00:00 and 08:30 opens, and 15m/1H sell-side (ONL, PDL) has been taken."
+        },
+        {
+          "model": "First Presentation",
+          "status": "watch",
+          "why": "The 9:30 open is 4 minutes away; the first FVG after 9:30 will form soon."
+        },
+        {
+          "model": "Approaching Previous Week Low/High",
+          "status": "in_play",
+          "why": "It's Tuesday and price is near PWL, making longs more likely after PWL was taken earlier in the week."
+        },
+        {
+          "model": "Fading the fake \"Model 2022\"",
+          "status": "not_today",
+          "why": "No obvious retail reversal pattern formed before a big sell-side pool to fade."
+        },
+        {
+          "model": "Model 2022 + OTE",
+          "status": "watch",
+          "why": "Sell-side taken; needs a clear MSS and an expansion without a 50% retracement to apply OTE."
+        },
+        {
+          "model": "Short / Intermediate-term structure",
+          "status": "watch",
+          "why": "Price rallied from ONL, but the full ST\u2013IT\u2013ST structure needs to develop more clearly."
+        },
+        {
+          "model": "Quadrant Order Flow",
+          "status": "watch",
+          "why": "Dealing range needs to be clearly defined for NY session; current price is in premium of ONL-ONH range."
+        },
+        {
+          "model": "Lunch Macro Retracement",
+          "status": "not_today",
+          "why": "Too early for the lunch macro time window (after 11:30)."
+        },
+        {
+          "model": "Three-Candle Wick CE",
+          "status": "not_today",
+          "why": "No specific three-candle wick setup is forming currently."
+        }
+      ],
+      "confluence": [
+        "Below WOP on Tue/Wed \u2192 high-probability longs",
+        "For longs want price below at least TWO opens; below all = higher probability",
+        "15m/1H sell-side taken (ONL, PDL) as per Full Reversal Model",
+        "Price rallied from ONL after it was taken, suggesting a Failure Swing/Change in State of Delivery",
+        "Tuesday after big Monday move: Tuesday comes back stronger (exchange volatility)"
+      ],
+      "screen_check": {
+        "screened": 22,
+        "of": 22,
+        "missing": [],
+        "unknown": [],
+        "in_play": [
+          "Failure Swing (Vol 1 Class 4)",
+          "Change in State of Delivery",
+          "Full Reversal Model (A+ recipe)",
+          "Approaching Previous Week Low/High"
+        ],
+        "off_screen_scenarios": []
+      },
+      "sit_out": [
+        "He doesn't trade the last two weeks of November."
+      ],
+      "ai_model": "gemini-2.5-flash"
+    },
+    "prose": "## The read\nToday is Tuesday, November 17, and the market is in pre-market at 09:25 ET. Price is currently trading at 27377.75. On the higher timeframe, price is significantly below the Weekly Open (28062.5), which, combined with it being Tuesday, suggests a high-probability long bias. Intraday, price is also below the Midnight and 08:30 opens (both around 27405.0), further supporting a long bias. The London session saw price take the Overnight Low (27085.0) and Previous Day Low (27234.75), then rally, indicating a change in the state of delivery and a potential failure to continue lower. Given yesterday's significant bearish move, today could see increased volatility. However, the playbook explicitly advises against trading in the last two weeks of November.\n\n## Levels that matter\n*   **28062.5 (Weekly Open):** Key higher-timeframe reference; price is significantly below it, influencing today's bias.\n*   **27716.25 (PDH):** A primary buy-side target for a long scenario.\n*   **27498.0 (ONH):** Immediate overhead buy-side liquidity, a first target.\n*   **27405.5 (Midnight Open) / 27405.0 (08:30 Open):** These opening prices are just above current price and act as a magnetic attraction or immediate resistance for the upcoming session.\n*   **27234.75 (PDL):** This sell-side liquidity has been taken and could act as support or a retrace point in a long scenario, or a target for shorts.\n*   **27085.0 (ONL):** This sell-side liquidity has been taken and could act as support or a retrace point in a long scenario, or a target for shorts.\n*   **26751.25 (Previous Week Low):** Price is above it; the rule for Tue/Wed suggests longs are likely after it was taken earlier in the week.\n\n## Scenario A\n**Model:** Full Reversal Model (A+ recipe)\n**Trigger:** Price enters the NY AM killzone (09:30-11:30) and respects a bullish PD array below the 08:30 Open after 09:30, then closes above it, targeting the next buy-side liquidity.\n**Entry:** 27390.0\n**Stop:** 27350.0\n**Target:** 27498.0 (ONH)\n**Target2:** 27716.25 (PDH)\n**Window:** 09:30-11:30\n\n## Scenario B\n**Model:** Failure Swing\n**Trigger:** Price rallies to the 08:30 Open (27405.0) or ONH (27498.0), fails to take it (wick only above the level), respects its wick CE with bodies, and prints a bearish FVG below it.\n**Entry:** 27405.0\n**Stop:** 27450.0\n**Target:** 27234.75 (PDL)\n**Target2:** 27085.0 (ONL)\n**Window:** 09:30-11:30\n\n## Invalidation\nA 5-minute candle close below 27350.0 by 11:00 would invalidate the primary long scenario.\n\n## Sit out if\nThe playbook explicitly states: \"He doesn't trade the last two weeks of November.\" Today's date (November 17) falls within this period. Therefore, the primary plan for today is to sit out.\n\n## Models checked\n*   **Expansion Retracement (Vol 1 Class 3):** Watch. A bullish expansion leg from ONL is present, needs a clear retracement into discount to form an entry.\n*   **Failure Swing (Vol 1 Class 4):** In play. Price rallied after sweeping ONL and PDL, implying failure to continue lower from this liquidity zone.\n*   **HRLR Model: Wick + Rejection Block:** Watch. Current choppy conditions around opens suggest HRLR, needs a specific wick+rejection block setup to confirm reversal.\n*   **Overpowered Order Block:** Watch. Liquidity was taken at ONL/PDL; needs to form a bullish OB with an FVG in its upper portion for entry.\n*   **Change in State of Delivery:** In play. The rally from ONL after it was taken implies a change in delivery, confirmed by price moving above prior candles' opens.\n*   **Reversal Confirmation Chain:** Watch. CISD is present, but needs further respected PD arrays and inversions to complete the chain.\n*   **Secret Confirmation (hard days):** Not today. No clear swing high, bearish PD array, and disrespected bullish PD array visible yet.\n*   **Inversion FVG:** Not today. No relevant FVG has been closed through and inverted to serve as current support/resistance.\n*   **Balanced Price Range:** Not today. No two opposing FVGs are overlapping in the current range.\n*   **Consolidation Model:** Watch. Price is chopping around the 00:00/08:30 opens; could form if it consolidates further and then breaks out.\n*   **Breaker & Mitigation Block:** Watch. Price took ONL/PDL; needs a close above a swing high to confirm a bullish breaker formation.\n*   **Anticipating Turtle Soups:** Not today. Current price is above 0.5 of overnight range; no valid low soups for longs or high soups for shorts forming clearly now.\n*   **Sell-Off / F-U Model:** Not today. Bias is long, and price traded below 00:00/08:30 opens, so conditions for sell-off model are not met.\n*   **Full Reversal Model (A+ recipe):** In play. Price is below 00:00 and 08:30 opens, and 15m/1H sell-side (ONL, PDL) has been taken.\n*   **First Presentation:** Watch. The 9:30 open is 4 minutes away; the first FVG after 9:30 will form soon.\n*   **Approaching Previous Week Low/High:** In play. It's Tuesday and price is near PWL, making longs more likely after PWL was taken earlier in the week.\n*   **Fading the fake \"Model 2022\":** Not today. No obvious retail reversal pattern formed before a big sell-side pool to fade.\n*   **Model 2022 + OTE:** Watch. Sell-side taken; needs a clear MSS and an expansion without a 50% retracement to apply OTE.\n*   **Short / Intermediate-term structure:** Watch. Price rallied from ONL, but the full ST\u2013IT\u2013ST structure needs to develop more clearly.\n*   **Quadrant Order Flow:** Watch. Dealing range needs to be clearly defined for NY session; current price is in premium of ONL-ONH range.\n*   **Lunch Macro Retracement:** Not today. Too early for the lunch macro time window (after 11:30).\n*   **Three-Candle Wick CE:** Not today. No specific three-candle wick setup is forming currently.\n\nThe primary long scenario is backed by the rule \"Below WOP on Tue/Wed \u2192 high-probability longs\" and the \"Full Reversal Model (A+ recipe)\" conditions being met (price below two opening prices and 15m/1H sell-side taken). These align with the observed price action (Failure Swing and Change in State of Delivery) after sweeping overnight lows."
   }
 }
