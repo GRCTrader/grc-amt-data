@@ -4001,5 +4001,219 @@
         "brier_n": 112
       }
     }
+  },
+  "2026-11-18": {
+    "date": "2026-11-18",
+    "status": "pre-market",
+    "written_at": "2026-11-18T09:26:12-05:00",
+    "plan": {
+      "bias": "long",
+      "price": 27219.75,
+      "levels": [
+        {
+          "price": 27351.0,
+          "name": "PDH",
+          "kind": "bsl"
+        },
+        {
+          "price": 26658.5,
+          "name": "PDL",
+          "kind": "ssl"
+        },
+        {
+          "price": 27609.75,
+          "name": "ONH",
+          "kind": "bsl"
+        },
+        {
+          "price": 27093.0,
+          "name": "ONL",
+          "kind": "ssl"
+        },
+        {
+          "price": 27174.25,
+          "name": "Midnight Open",
+          "kind": "open"
+        },
+        {
+          "price": 27260.25,
+          "name": "08:30 Open",
+          "kind": "open"
+        },
+        {
+          "price": 28062.5,
+          "name": "Weekly Open",
+          "kind": "open"
+        },
+        {
+          "price": 28697.0,
+          "name": "Previous Week High",
+          "kind": "bsl"
+        },
+        {
+          "price": 26751.25,
+          "name": "Previous Week Low",
+          "kind": "ssl"
+        },
+        {
+          "price": 27424.5,
+          "name": "London High",
+          "kind": "bsl"
+        },
+        {
+          "price": 27146.25,
+          "name": "London Low",
+          "kind": "ssl"
+        }
+      ],
+      "scenarios": [
+        {
+          "side": "long",
+          "model": "Expansion Retracement (Vol 1 Class 3)",
+          "trigger": "Price retraces into discount and respects the bullish Order Block at the Midnight Open (27174.25)",
+          "entry": 27174.25,
+          "stop": 27088.0,
+          "target": 27351.0,
+          "target2": 27609.75,
+          "window": "09:30-11:30"
+        }
+      ],
+      "invalidation": {
+        "price": 27093.0,
+        "rule": "15m close below ONL",
+        "by": "11:00"
+      },
+      "model_screen": [
+        {
+          "model": "Expansion Retracement (Vol 1 Class 3)",
+          "status": "in_play",
+          "why": "Price is retracing into discount of the London session expansion, seeking a bullish OB near the Midnight Open."
+        },
+        {
+          "model": "Failure Swing (Vol 1 Class 4)",
+          "status": "not_today",
+          "why": "No clear failure to take a liquidity pool with an immediate reversal signal."
+        },
+        {
+          "model": "HRLR Model: Wick + Rejection Block",
+          "status": "not_today",
+          "why": "No strong indicators of HRLR conditions (e.g., packed news, big overnight move); 'Below WOP' suggests trending."
+        },
+        {
+          "model": "Overpowered Order Block",
+          "status": "watch",
+          "why": "A bullish OB exists near Midnight Open, but needs specific setup of price trading beyond its opening and a gap forming in its upper portion."
+        },
+        {
+          "model": "Change in State of Delivery",
+          "status": "watch",
+          "why": "CSD likely already occurred from ONL, but an entry on retrace to last down-close candle could form."
+        },
+        {
+          "model": "Reversal Confirmation Chain",
+          "status": "not_today",
+          "why": "Complex multi-step model not clearly forming in the immediate price action."
+        },
+        {
+          "model": "Secret Confirmation",
+          "status": "not_today",
+          "why": "Conditions for 'nothing is clear' are not met, and no specific setup visible."
+        },
+        {
+          "model": "Inversion FVG",
+          "status": "not_today",
+          "why": "No relevant FVG has closed through to invert yet."
+        },
+        {
+          "model": "Balanced Price Range",
+          "status": "not_today",
+          "why": "No overlapping opposing FVGs are clearly visible forming an immediate BPR."
+        },
+        {
+          "model": "Consolidation Model",
+          "status": "watch",
+          "why": "Price action around the 08:30 open shows consolidation, which could lead to a breakaway gap."
+        },
+        {
+          "model": "Breaker & Mitigation Block",
+          "status": "not_today",
+          "why": "No clear failed OB and structure shift for a breaker or mitigation block."
+        },
+        {
+          "model": "Anticipating Turtle Soups",
+          "status": "watch",
+          "why": "Price is in discount of the overnight range, a soup of a low below the 0.5 of the London leg could be valid for a long."
+        },
+        {
+          "model": "Sell-Off / F-U Model",
+          "status": "not_today",
+          "why": "Manipulation below the Midnight Open (Judas swing) rules out an F-U day profile."
+        },
+        {
+          "model": "Full Reversal Model (A+ recipe)",
+          "status": "not_today",
+          "why": "Price is not currently below 2-3 opening prices, only the 08:30 open."
+        },
+        {
+          "model": "First Presentation",
+          "status": "watch",
+          "why": "Will be relevant to mark the first FVG after the 09:30 open."
+        },
+        {
+          "model": "Approaching Previous Week Low/High",
+          "status": "not_today",
+          "why": "The strong bullish bias (Below WOP) does not align with aiming at PWL for big drops."
+        },
+        {
+          "model": "Fading the fake \"Model 2022\"",
+          "status": "not_today",
+          "why": "No specific 'fake Model 2022' pattern is apparent."
+        },
+        {
+          "model": "Model 2022 + OTE",
+          "status": "not_today",
+          "why": "The expansion from ONL already offered a retracement into discount, so a deep OTE isn't expected."
+        },
+        {
+          "model": "Short / Intermediate-term structure",
+          "status": "not_today",
+          "why": "The full ST-IT-ST structure isn't clearly visible forming for an immediate entry."
+        },
+        {
+          "model": "Quadrant Order Flow",
+          "status": "watch",
+          "why": "A framework to read price delivery within a chosen dealing range, not an entry model itself."
+        },
+        {
+          "model": "Lunch Macro Retracement",
+          "status": "not_today",
+          "why": "It is too early for the lunch macro window (after 10:00, especially 11:30)."
+        },
+        {
+          "model": "Three-Candle Wick CE",
+          "status": "not_today",
+          "why": "No specific three-candle wick CE setup forming on the 5m chart at this time."
+        }
+      ],
+      "confluence": [
+        "The Week rule: Below WOP on Tue/Wed \u2192 high-probability longs.",
+        "Expansion Retracement: Price is currently in discount of the London session's expansion from ONL to London High.",
+        "D10: 8:30 often makes the low; 9:30 just continues \u2013 supporting a low forming before NY open.",
+        "Rule: Liquidity below an opening price (Midnight Open) is a super high probability target for longs once swept and respected (as a bullish OB)."
+      ],
+      "screen_check": {
+        "screened": 22,
+        "of": 22,
+        "missing": [],
+        "unknown": [],
+        "in_play": [
+          "Expansion Retracement (Vol 1 Class 3)"
+        ],
+        "off_screen_scenarios": []
+      },
+      "sit_out": [],
+      "ai_model": "gemini-2.5-flash"
+    },
+    "prose": "## The read\nToday is Wednesday, and price is significantly below the Weekly Opening Price (WOP), which, according to playbook rules, points to a high-probability long bias for the day. London session saw a push lower to the Overnight Low (ONL) followed by an expansion higher to the London High, and price is now retracing into the discount of that move. The market is preparing for the NY Open within the AM killzone.\n\n## Levels that matter\n*   **27219.75 (Current Price):** Trading below the 08:30 Open but above the Midnight Open.\n*   **27174.25 (Midnight Open):** A key opening price and a potential bullish Order Block (OB) entry level in discount.\n*   **27093.0 (Overnight Low):** The recent low from which the London expansion began, acting as sell-side liquidity and a key invalidation level.\n*   **27351.0 (Previous Day High):** The first buy-side liquidity target.\n*   **27609.75 (Overnight High):** A secondary buy-side liquidity target.\n*   **28062.5 (Weekly Open):** The higher-timeframe reference indicating a long bias.\n\n## Scenario A\n**Model:** Expansion Retracement (Vol 1 Class 3)\n**Trigger:** Price retraces into discount and respects the bullish Order Block at the Midnight Open (27174.25).\n**Entry:** 27174.25\n**Stop:** 27088.0 (just below ONL)\n**Target:** 27351.0 (PDH)\n**Target2:** 27609.75 (ONH)\n**Window:** 09:30-11:30 (NY AM killzone)\n\n## Scenario B\nNo high-probability short setup is identified based on current market conditions and the strong \"Below WOP on Wednesday\" rule for longs.\n\n## Invalidation\nThe long bias is invalidated if a 15-minute candle closes below the Overnight Low (ONL) at 27093.0 by 11:00 ET.\n\n## Sit out if\nNo specific sit-out conditions are met today based on the playbook rules.\n\n## Models checked\n*   **Expansion Retracement (Vol 1 Class 3):** In play; price is retracing into discount of the London session expansion, seeking a bullish OB near the Midnight Open.\n*   **Overpowered Order Block:** On watch; a bullish OB exists near Midnight Open, but needs specific setup of price trading beyond its opening and a gap forming in its upper portion.\n*   **Change in State of Delivery:** On watch; CSD likely already occurred from ONL, but an entry on retrace to last down-close candle could form.\n*   **Consolidation Model:** On watch; price action around the 08:30 open shows consolidation, which could lead to a breakaway gap.\n*   **Anticipating Turtle Soups:** On watch; price is in discount of the overnight range, a soup of a low below the 0.5 of the London leg could be valid for a long.\n*   **First Presentation:** On watch; will be relevant to mark the first FVG after the 09:30 open.\n*   **Quadrant Order Flow:** On watch; a framework to read price delivery within a chosen dealing range, not an entry model itself.\n*   All other 15 models are not applicable today due to missing conditions or conflicting signals.\n\n**Confluence:** The primary long scenario is strongly supported by the \"Below WOP on Tue/Wed \u2192 high-probability longs\" rule. This is further aligned with price being in discount of the London session's expansion and the principle that 8:30 often forms the low, leading to continuation through 9:30. The Midnight Open area offers a strong institutional reference for a bullish Order Block entry."
   }
 }
