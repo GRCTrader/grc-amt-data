@@ -1,10 +1,10 @@
 {
-  "asof": "2026-11-18 10:30:15 ET",
-  "asof_epoch": 1795015815,
+  "asof": "2026-11-18 10:35:20 ET",
+  "asof_epoch": 1795016120,
   "session_date": "2026-11-18",
   "price": {
-    "NQ": 27257.25,
-    "ES": 7364.5
+    "NQ": 27148.75,
+    "ES": 7348.75
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "New York AM",
       "start": "2026-11-18T06:00:00-05:00",
       "end": "2026-11-18T12:00:00-05:00",
-      "left_sec": 5384,
+      "left_sec": 5079,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -48,7 +48,7 @@
       "span": "block 4 of 4",
       "start": "2026-11-18T10:30:00-05:00",
       "end": "2026-11-18T12:00:00-05:00",
-      "left_sec": 5384,
+      "left_sec": 5079,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
@@ -59,7 +59,7 @@
       "span": "22.5 min",
       "start": "2026-11-18T10:30:00-05:00",
       "end": "2026-11-18T10:52:30-05:00",
-      "left_sec": 1334,
+      "left_sec": 1029,
       "phase": "Q1",
       "phase_name": "Accumulation",
       "phase_why": "Range builds. The market is loading, not going anywhere."
@@ -70,7 +70,7 @@
       "span": "5.625 min",
       "start": "2026-11-18T10:30:00-05:00",
       "end": "2026-11-18T10:35:37.500000-05:00",
-      "left_sec": 321,
+      "left_sec": 16,
       "phase": "Q1",
       "phase_name": "Accumulation",
       "phase_why": "Range builds. The market is loading, not going anywhere."
@@ -103,7 +103,7 @@
       "name": "true day open",
       "at": "2026-11-18T00:00:00-05:00",
       "px": 27160.75,
-      "side": "above"
+      "side": "below"
     },
     {
       "code": "TSO",
@@ -121,12 +121,11 @@
     }
   ],
   "opens_filter": {
-    "above": [
-      "TDO"
-    ],
+    "above": [],
     "below": [
       "TMO",
       "TWO",
+      "TDO",
       "TSO"
     ],
     "known": 4,
@@ -148,10 +147,10 @@
         "open": 27382.0,
         "high": 27609.75,
         "low": 26951.75,
-        "close": 27257.25,
+        "close": 27148.75,
         "n": 18,
         "start": "2026-11-17T18:00:00-05:00",
-        "end": "2026-11-18T10:30:15.584986-05:00"
+        "end": "2026-11-18T10:35:20.911089-05:00"
       },
       "sweep": {
         "swept": "high",
@@ -187,10 +186,10 @@
         "open": 27400.75,
         "high": 27403.0,
         "low": 26951.75,
-        "close": 27257.25,
+        "close": 27148.75,
         "n": 6,
         "start": "2026-11-18T06:00:00-05:00",
-        "end": "2026-11-18T10:30:15.584986-05:00"
+        "end": "2026-11-18T10:35:20.911089-05:00"
       },
       "sweep": {
         "swept": "low",
@@ -216,8 +215,8 @@
         "open": 27288.0,
         "high": 27325.5,
         "low": 26951.75,
-        "close": 27257.25,
-        "n": 82,
+        "close": 27148.75,
+        "n": 87,
         "start": "2026-11-18T09:00:00-05:00",
         "end": "2026-11-18T10:30:00-05:00"
       },
@@ -243,9 +242,9 @@
       "prev": {
         "open": 27213.5,
         "high": 27289.25,
-        "low": 27145.25,
-        "close": 27257.25,
-        "n": 14,
+        "low": 27128.25,
+        "close": 27148.75,
+        "n": 19,
         "start": "2026-11-18T10:07:30-05:00",
         "end": "2026-11-18T10:30:00-05:00"
       },
@@ -269,9 +268,9 @@
     }
   },
   "gb": {
-    "on": false,
-    "minute": 30,
-    "next_in_min": 5
+    "on": true,
+    "minute": 35,
+    "next_in_min": 0
   },
   "checklist": [
     {
@@ -290,13 +289,13 @@
       "n": 3,
       "step": "SSMT / ISMT, above or below true opens",
       "ok": false,
-      "detail": "no divergence - not enough bars in one of the quarters; price is above 1 and below 3 of 4 true opens"
+      "detail": "no divergence - not enough bars in one of the quarters; price is above 0 and below 4 of 4 true opens"
     },
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
-      "ok": false,
-      "detail": "next one in 5 min"
+      "ok": true,
+      "detail": "on the anchor now"
     },
     {
       "n": 5,
