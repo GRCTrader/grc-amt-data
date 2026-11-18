@@ -1,10 +1,10 @@
 {
-  "asof": "2026-11-18 15:02:44 ET",
-  "asof_epoch": 1795032164,
+  "asof": "2026-11-18 15:07:50 ET",
+  "asof_epoch": 1795032470,
   "session_date": "2026-11-18",
   "price": {
-    "NQ": 27122.0,
-    "ES": 7335.5
+    "NQ": 27161.5,
+    "ES": 7342.75
   },
   "cycles": [
     {
@@ -37,7 +37,7 @@
       "span": "New York PM",
       "start": "2026-11-18T12:00:00-05:00",
       "end": "2026-11-18T18:00:00-05:00",
-      "left_sec": 10635,
+      "left_sec": 10329,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
@@ -48,7 +48,7 @@
       "span": "block 3 of 4",
       "start": "2026-11-18T15:00:00-05:00",
       "end": "2026-11-18T16:30:00-05:00",
-      "left_sec": 5235,
+      "left_sec": 4929,
       "phase": "Q3",
       "phase_name": "Distribution",
       "phase_why": "The actual move. The quarter you want to be in."
@@ -59,21 +59,21 @@
       "span": "22.5 min",
       "start": "2026-11-18T15:00:00-05:00",
       "end": "2026-11-18T15:22:30-05:00",
-      "left_sec": 1185,
+      "left_sec": 879,
       "phase": "Q1",
       "phase_name": "Accumulation",
       "phase_why": "Range builds. The market is loading, not going anywhere."
     },
     {
       "level": "Nano",
-      "q": 0,
+      "q": 1,
       "span": "5.625 min",
-      "start": "2026-11-18T15:00:00-05:00",
-      "end": "2026-11-18T15:05:37.500000-05:00",
-      "left_sec": 172,
-      "phase": "Q1",
-      "phase_name": "Accumulation",
-      "phase_why": "Range builds. The market is loading, not going anywhere."
+      "start": "2026-11-18T15:05:37.500000-05:00",
+      "end": "2026-11-18T15:11:15-05:00",
+      "left_sec": 204,
+      "phase": "Q2",
+      "phase_name": "Manipulation",
+      "phase_why": "The Judas swing. Price runs the obvious stops."
     }
   ],
   "chains": [],
@@ -97,7 +97,7 @@
       "name": "true day open",
       "at": "2026-11-18T00:00:00-05:00",
       "px": 27160.75,
-      "side": "below"
+      "side": "above"
     },
     {
       "code": "TSO",
@@ -115,11 +115,12 @@
     }
   ],
   "opens_filter": {
-    "above": [],
+    "above": [
+      "TDO"
+    ],
     "below": [
       "TMO",
       "TWO",
-      "TDO",
       "TSO"
     ],
     "known": 4,
@@ -141,10 +142,10 @@
         "open": 27382.0,
         "high": 27609.75,
         "low": 26921.75,
-        "close": 27122.0,
+        "close": 27162.0,
         "n": 22,
         "start": "2026-11-17T18:00:00-05:00",
-        "end": "2026-11-18T15:02:44.903270-05:00"
+        "end": "2026-11-18T15:07:50.244369-05:00"
       },
       "sweep": {
         "swept": "high",
@@ -180,10 +181,10 @@
         "open": 27050.5,
         "high": 27321.75,
         "low": 27034.75,
-        "close": 27122.0,
+        "close": 27162.0,
         "n": 4,
         "start": "2026-11-18T12:00:00-05:00",
-        "end": "2026-11-18T15:02:44.903270-05:00"
+        "end": "2026-11-18T15:07:50.244369-05:00"
       },
       "sweep": {
         "swept": null,
@@ -209,8 +210,8 @@
         "open": 27193.0,
         "high": 27301.0,
         "low": 27105.5,
-        "close": 27122.0,
-        "n": 84,
+        "close": 27161.5,
+        "n": 89,
         "start": "2026-11-18T13:30:00-05:00",
         "end": "2026-11-18T15:00:00-05:00"
       },
@@ -237,8 +238,8 @@
         "open": 27138.25,
         "high": 27176.5,
         "low": 27105.5,
-        "close": 27122.0,
-        "n": 16,
+        "close": 27161.5,
+        "n": 21,
         "start": "2026-11-18T14:37:30-05:00",
         "end": "2026-11-18T15:00:00-05:00"
       },
@@ -263,8 +264,8 @@
   },
   "gb": {
     "on": false,
-    "minute": 2,
-    "next_in_min": 27
+    "minute": 7,
+    "next_in_min": 22
   },
   "checklist": [
     {
@@ -283,13 +284,13 @@
       "n": 3,
       "step": "SSMT / ISMT, above or below true opens",
       "ok": false,
-      "detail": "no divergence - not enough bars in one of the quarters; price is above 0 and below 4 of 4 true opens"
+      "detail": "no divergence - not enough bars in one of the quarters; price is above 1 and below 3 of 4 true opens"
     },
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
       "ok": false,
-      "detail": "next one in 27 min"
+      "detail": "next one in 22 min"
     },
     {
       "n": 5,
