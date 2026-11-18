@@ -4004,8 +4004,7 @@
   },
   "2026-11-18": {
     "date": "2026-11-18",
-    "status": "pre-market",
-    "written_at": "2026-11-18T09:26:12-05:00",
+    "written_at": "2026-11-18T16:10:32-05:00",
     "plan": {
       "bias": "long",
       "price": 27219.75,
@@ -4210,10 +4209,430 @@
           "Expansion Retracement (Vol 1 Class 3)"
         ],
         "off_screen_scenarios": []
-      },
-      "sit_out": [],
-      "ai_model": "gemini-2.5-flash"
+      }
     },
-    "prose": "## The read\nToday is Wednesday, and price is significantly below the Weekly Opening Price (WOP), which, according to playbook rules, points to a high-probability long bias for the day. London session saw a push lower to the Overnight Low (ONL) followed by an expansion higher to the London High, and price is now retracing into the discount of that move. The market is preparing for the NY Open within the AM killzone.\n\n## Levels that matter\n*   **27219.75 (Current Price):** Trading below the 08:30 Open but above the Midnight Open.\n*   **27174.25 (Midnight Open):** A key opening price and a potential bullish Order Block (OB) entry level in discount.\n*   **27093.0 (Overnight Low):** The recent low from which the London expansion began, acting as sell-side liquidity and a key invalidation level.\n*   **27351.0 (Previous Day High):** The first buy-side liquidity target.\n*   **27609.75 (Overnight High):** A secondary buy-side liquidity target.\n*   **28062.5 (Weekly Open):** The higher-timeframe reference indicating a long bias.\n\n## Scenario A\n**Model:** Expansion Retracement (Vol 1 Class 3)\n**Trigger:** Price retraces into discount and respects the bullish Order Block at the Midnight Open (27174.25).\n**Entry:** 27174.25\n**Stop:** 27088.0 (just below ONL)\n**Target:** 27351.0 (PDH)\n**Target2:** 27609.75 (ONH)\n**Window:** 09:30-11:30 (NY AM killzone)\n\n## Scenario B\nNo high-probability short setup is identified based on current market conditions and the strong \"Below WOP on Wednesday\" rule for longs.\n\n## Invalidation\nThe long bias is invalidated if a 15-minute candle closes below the Overnight Low (ONL) at 27093.0 by 11:00 ET.\n\n## Sit out if\nNo specific sit-out conditions are met today based on the playbook rules.\n\n## Models checked\n*   **Expansion Retracement (Vol 1 Class 3):** In play; price is retracing into discount of the London session expansion, seeking a bullish OB near the Midnight Open.\n*   **Overpowered Order Block:** On watch; a bullish OB exists near Midnight Open, but needs specific setup of price trading beyond its opening and a gap forming in its upper portion.\n*   **Change in State of Delivery:** On watch; CSD likely already occurred from ONL, but an entry on retrace to last down-close candle could form.\n*   **Consolidation Model:** On watch; price action around the 08:30 open shows consolidation, which could lead to a breakaway gap.\n*   **Anticipating Turtle Soups:** On watch; price is in discount of the overnight range, a soup of a low below the 0.5 of the London leg could be valid for a long.\n*   **First Presentation:** On watch; will be relevant to mark the first FVG after the 09:30 open.\n*   **Quadrant Order Flow:** On watch; a framework to read price delivery within a chosen dealing range, not an entry model itself.\n*   All other 15 models are not applicable today due to missing conditions or conflicting signals.\n\n**Confluence:** The primary long scenario is strongly supported by the \"Below WOP on Tue/Wed \u2192 high-probability longs\" rule. This is further aligned with price being in discount of the London session's expansion and the principle that 8:30 often forms the low, leading to continuation through 9:30. The Midnight Open area offers a strong institutional reference for a bullish Order Block entry."
+    "outcome": "A_stop",
+    "detail": "Expansion Retracement (Vol 1 Class 3): stop \u00b7 at 09:40 \u00b7 went +0.0R / -1.97R\n  uncapped to 16:00: A_stop (-1.00R)\n  direction called long; AM was two_sided, whole RTH was down",
+    "late_outcome": "A_stop",
+    "late_r": -1.0,
+    "grades": {
+      "bias2": "F",
+      "read": "B",
+      "day": "C",
+      "bias2_source": "measured"
+    },
+    "review": {
+      "bias2": {
+        "grade": "D",
+        "reason": "The long bias and Expansion Retracement model were incorrect for a day that delivered net down and two-sided action, with the trade stopping out quickly.",
+        "wanted": "Price to retrace into discount and respect a bullish Order Block at the Midnight Open (27174.25) for a long toward 27351.0 / 27609.75.",
+        "happened": "Price opened, wicked up briefly, then dropped sharply below the entry and stop, hitting the invalidation level (15m close below ONL 27093.0) by 09:50, with the RTH closing net down.",
+        "model_called": "Expansion Retracement (Vol 1 Class 3)",
+        "model_actual": "Consolidation Model (Vol 1 Class 2)",
+        "model_correct": false,
+        "model_said": "D"
+      },
+      "read": {
+        "grade": "B",
+        "reason": "Bias 1's HTF directional bias of SHORT was correct for the net-down RTH, even if its specific day-model prediction was off."
+      },
+      "day": {
+        "grade": "C",
+        "shape": "two-sided rotational balance within a wide range",
+        "reason": "The day engineered liquidity on both sides with a sharp initial drop, a strong rally, and then rotated within a broad range, closing net down but in the upper portion of its own daily range."
+      },
+      "lessons": [
+        "Prioritize explicit market condition readings (e.g., HRLR) over model triggers on volatile, two-sided days that feature quick invalidations.",
+        "Re-evaluate opening price rules: if price immediately breaks below a bullish OB at an open, the long bias is immediately questionable (V57, V42).",
+        "In two-sided conditions, focus on smaller ranges and quicker partials, as implied by the Consolidation Model and HRLR principles (V45, V50)."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe morning plan (Bias 2) anticipated a long day via the Expansion Retracement model. It aimed to enter long at the Midnight Open (27174.25) if price retraced into discount and respected a bullish Order Block there, with a stop at 27088.0. The targets were the PDH (27351.0) and ONH (27609.75). Invalidation was a 15m close below the ONL (27093.0) by 11:00.\n\n## What actually happened\nThe market opened at 27252.25 at 09:30. Price first wicked up to 27325.5 by 10:00, then turned sharply down, plummeting to 26951.75 by 09:50. The entry at 27174.25 (Midnight Open) would have been triggered as price dropped to it around 09:35-09:40, but the move continued down, hitting the stop at 27088.0. The low of 26951.75 at 09:50 was below the ONL (27093.0), triggering the invalidation. Price then rallied to 27321.75 (12:30) during lunch, before rotating again in the afternoon, closing at 27190.25 (net -62.00 points from the 09:30 open), two-sided but ultimately lower.\n\n## How it went\nThe plan was fundamentally wrong. The long bias was invalidated immediately as price dropped sharply after the open, leading to a quick stop-out. The Expansion Retracement model was inappropriate for the day's action, which was characterized by two-sided, rotational price movement. Bias 1, in contrast, correctly identified a HTF bias SHORT, aligning with the net-down close, although its prediction of a `range_expansion` was marked as a miss against the actual `rotational_balance`. This highlights a failure in the initial directional read and model selection for Bias 2. The explicit stop and invalidation did protect against further losses, but the trade itself was a clear loss.\n\n## The day as a whole\nThe day took the shape of a two-sided rotational balance within a wide range (high 27325.5, low 26921.75). Price engineered liquidity on both sides, with a significant drop in the morning followed by a strong rally, and subsequent rotation. This behavior is best described by the Consolidation Model (Vol 1 Class 2), where price chops around an inefficiency, engineering liquidity before potentially a breakaway. Such days are often indicative of High-Resistance Liquidity Run (HRLR) conditions, where gaps tend to be filled rather than respected for clean delivery (V50, V63).\n\n## What to do differently\n*   Prioritize explicit market condition readings (e.g., HRLR) over model triggers on volatile, two-sided days that feature quick invalidations (V60, V63).\n*   Re-evaluate opening price rules: if price immediately breaks below a bullish Order Block at an open, the long bias is immediately questionable (V57, V42).\n*   In two-sided conditions, focus on smaller ranges and quicker partials, as implied by the Consolidation Model and HRLR principles, rather than holding for large targets (V45, V50).",
+    "session": {
+      "date": "2026-11-18",
+      "bars": 193,
+      "premarket": {
+        "open": 27334.75,
+        "high": 27424.5,
+        "low": 27170.0,
+        "close": 27251.75,
+        "at_high": "05:05",
+        "at_low": "07:40"
+      },
+      "am": {
+        "open": 27252.25,
+        "high": 27325.5,
+        "low": 26951.75,
+        "close": 27139.75,
+        "at_high": "10:00",
+        "at_low": "09:50"
+      },
+      "lunch": {
+        "open": 27138.75,
+        "high": 27321.75,
+        "low": 26921.75,
+        "close": 27193.5,
+        "at_high": "12:30",
+        "at_low": "11:20"
+      },
+      "pm": {
+        "open": 27193.0,
+        "high": 27301.0,
+        "low": 27091.5,
+        "close": 27190.25,
+        "at_high": "13:40",
+        "at_low": "15:20"
+      },
+      "rth": {
+        "open": 27252.25,
+        "high": 27325.5,
+        "low": 26921.75,
+        "close": 27190.25,
+        "at_high": "10:00",
+        "at_low": "11:20",
+        "net": -62.0,
+        "shape": "two-sided",
+        "close_in_range_pct": 66.5
+      }
+    },
+    "playbook": {
+      "models": 22,
+      "rule_sections": 18,
+      "rules": 203,
+      "glossary": 69,
+      "dojo_classes": 17,
+      "notes": 42,
+      "videos": 82,
+      "concepts": 21,
+      "video_notes": 50,
+      "synced_at": "2026-11-17T21:21:23+00:00"
+    },
+    "sim": [
+      {
+        "i": 0,
+        "side": "long",
+        "model": "Expansion Retracement (Vol 1 Class 3)",
+        "entry": 27174.25,
+        "target": 27351.0,
+        "variants": {
+          "model": {
+            "stop": 27088.0,
+            "risk_pts": 86.25,
+            "outcome": "stop",
+            "at": "09:40",
+            "triggered": true,
+            "points": -86.75,
+            "usd": {
+              "1 MNQ": {
+                "gross": -173.5,
+                "net": -175.0
+              },
+              "5 MNQ": {
+                "gross": -867.5,
+                "net": -875.0
+              },
+              "1 NQ": {
+                "gross": -1735.0,
+                "net": -1740.0
+              }
+            }
+          },
+          "10pt": {
+            "stop": 27164.25,
+            "risk_pts": 10.0,
+            "outcome": "stop",
+            "at": "09:55",
+            "triggered": true,
+            "points": -10.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -21.0,
+                "net": -22.5
+              },
+              "5 MNQ": {
+                "gross": -105.0,
+                "net": -112.5
+              },
+              "1 NQ": {
+                "gross": -210.0,
+                "net": -215.0
+              }
+            }
+          },
+          "20pt": {
+            "stop": 27154.25,
+            "risk_pts": 20.0,
+            "outcome": "stop",
+            "at": "09:55",
+            "triggered": true,
+            "points": -20.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -41.0,
+                "net": -42.5
+              },
+              "5 MNQ": {
+                "gross": -205.0,
+                "net": -212.5
+              },
+              "1 NQ": {
+                "gross": -410.0,
+                "net": -415.0
+              }
+            }
+          },
+          "50pt": {
+            "stop": 27124.25,
+            "risk_pts": 50.0,
+            "outcome": "stop",
+            "at": "09:40",
+            "triggered": true,
+            "points": -50.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -101.0,
+                "net": -102.5
+              },
+              "5 MNQ": {
+                "gross": -505.0,
+                "net": -512.5
+              },
+              "1 NQ": {
+                "gross": -1010.0,
+                "net": -1015.0
+              }
+            }
+          },
+          "1R": {
+            "stop": 26997.5,
+            "risk_pts": 176.75,
+            "outcome": "stop",
+            "at": "09:45",
+            "triggered": true,
+            "points": -177.25,
+            "usd": {
+              "1 MNQ": {
+                "gross": -354.5,
+                "net": -356.0
+              },
+              "5 MNQ": {
+                "gross": -1772.5,
+                "net": -1780.0
+              },
+              "1 NQ": {
+                "gross": -3545.0,
+                "net": -3550.0
+              }
+            }
+          },
+          "2R": {
+            "stop": 27085.88,
+            "risk_pts": 88.38,
+            "outcome": "stop",
+            "at": "09:40",
+            "triggered": true,
+            "points": -88.88,
+            "usd": {
+              "1 MNQ": {
+                "gross": -177.75,
+                "net": -179.25
+              },
+              "5 MNQ": {
+                "gross": -888.75,
+                "net": -896.25
+              },
+              "1 NQ": {
+                "gross": -1777.5,
+                "net": -1782.5
+              }
+            }
+          },
+          "3R": {
+            "stop": 27115.33,
+            "risk_pts": 58.92,
+            "outcome": "stop",
+            "at": "09:40",
+            "triggered": true,
+            "points": -59.42,
+            "usd": {
+              "1 MNQ": {
+                "gross": -118.83,
+                "net": -120.33
+              },
+              "5 MNQ": {
+                "gross": -594.17,
+                "net": -601.67
+              },
+              "1 NQ": {
+                "gross": -1188.33,
+                "net": -1193.33
+              }
+            }
+          }
+        }
+      }
+    ],
+    "score": {
+      "components": {
+        "draw": 0.0,
+        "direction": 0.0,
+        "levels": 0.364,
+        "timing": 1.0,
+        "invalidation": 0.0
+      },
+      "weights": {
+        "draw": 0.35,
+        "direction": 0.2,
+        "levels": 0.2,
+        "timing": 0.15,
+        "invalidation": 0.1
+      },
+      "notes": {
+        "direction": "-160.0 pt",
+        "levels": "4 of 11 reacted at",
+        "timing": "resolved 09:40, inside the window",
+        "invalidation": "tripped"
+      },
+      "total": 0.223,
+      "grade": "F",
+      "best_scenario": 0,
+      "per_scenario": [
+        {
+          "i": 0,
+          "side": "long",
+          "model": "Expansion Retracement (Vol 1 Class 3)",
+          "outcome": "stop",
+          "triggered": true,
+          "at": "09:40",
+          "score": 0.0,
+          "mfe_r": 0.0,
+          "mae_r": 1.97
+        }
+      ],
+      "levels": [
+        {
+          "price": 27351.0,
+          "name": "PDH",
+          "reacted": false
+        },
+        {
+          "price": 26658.5,
+          "name": "PDL",
+          "reacted": false
+        },
+        {
+          "price": 27609.75,
+          "name": "ONH",
+          "reacted": false
+        },
+        {
+          "price": 27093.0,
+          "name": "ONL",
+          "reacted": true
+        },
+        {
+          "price": 27174.25,
+          "name": "Midnight Open",
+          "reacted": true
+        },
+        {
+          "price": 27260.25,
+          "name": "08:30 Open",
+          "reacted": true
+        },
+        {
+          "price": 28062.5,
+          "name": "Weekly Open",
+          "reacted": false
+        },
+        {
+          "price": 28697.0,
+          "name": "Previous Week High",
+          "reacted": false
+        },
+        {
+          "price": 26751.25,
+          "name": "Previous Week Low",
+          "reacted": false
+        },
+        {
+          "price": 27424.5,
+          "name": "London High",
+          "reacted": false
+        },
+        {
+          "price": 27146.25,
+          "name": "London Low",
+          "reacted": true
+        }
+      ],
+      "mirror_total": 0.773,
+      "mirror_grade": "B",
+      "beat_mirror": false
+    },
+    "prep": {
+      "events": [
+        {
+          "date": "2026-11-18",
+          "time": "14:00",
+          "title": "FOMC Meeting Minutes",
+          "impact": "high"
+        }
+      ],
+      "pending": [
+        {
+          "price": 27265.25,
+          "name": "unswept FOMC Meeting Minutes high"
+        },
+        {
+          "price": 27502.62,
+          "name": "ER 0.5 never reached"
+        }
+      ],
+      "note": "**The prep \u2014 2026-11-18**\n\n**01 \u00b7 Calendar.** 14:00 FOMC Meeting Minutes (red).\nThe day is allowed to move at 14:00. Before that, treat expansion as suspect.\n\n**05 \u00b7 Still pending.** unswept FOMC Meeting Minutes high 27265.25, ER 0.5 never reached 27502.62. These stay marked for the rest of the week.\n\n**10 \u00b7 The plan.** LONG from 27174.25, stop 27088.0, target 27351.0. Wrong if 15m close below ONL 27093.0 by 11:00.\n\n_Steps 02-04, 06, 07 and 09 are live on the chart \u2014 they are the ones that change while you watch, so they are not written down here._"
+    },
+    "read_bench": {
+      "recent": {
+        "n": 30,
+        "hit": 53.3,
+        "benchmark": "C",
+        "benchmark_hit": 53.3,
+        "edge": 0.0,
+        "mix": {
+          "C": 16,
+          "B": 12,
+          "A": 2
+        },
+        "called": {
+          "B": 18,
+          "C": 12
+        },
+        "brier": 0.578,
+        "brier_prior": 0.565,
+        "brier_edge": -0.013,
+        "brier_n": 30
+      },
+      "all": {
+        "n": 117,
+        "hit": 33.3,
+        "benchmark": "C",
+        "benchmark_hit": 53.8,
+        "edge": -20.5,
+        "mix": {
+          "A": 15,
+          "C": 63,
+          "B": 39
+        },
+        "called": {
+          "A": 62,
+          "C": 19,
+          "B": 32
+        },
+        "brier": 0.824,
+        "brier_prior": 0.585,
+        "brier_edge": -0.239,
+        "brier_n": 113
+      }
+    }
   }
 }
