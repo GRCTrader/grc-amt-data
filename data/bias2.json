@@ -4634,5 +4634,215 @@
         "brier_n": 113
       }
     }
+  },
+  "2026-11-19": {
+    "date": "2026-11-19",
+    "status": "pre-market",
+    "written_at": "2026-11-19T09:26:22-05:00",
+    "plan": {
+      "bias": "short",
+      "price": 27718.0,
+      "levels": [
+        {
+          "price": 27830.5,
+          "name": "ONH",
+          "kind": "bsl"
+        },
+        {
+          "price": 27461.75,
+          "name": "Midnight Open",
+          "kind": "open"
+        },
+        {
+          "price": 27718.0,
+          "name": "08:30 Open",
+          "kind": "open"
+        },
+        {
+          "price": 28062.5,
+          "name": "Weekly Open",
+          "kind": "open"
+        },
+        {
+          "price": 27438.5,
+          "name": "London Low",
+          "kind": "ssl"
+        },
+        {
+          "price": 27653.0,
+          "name": "5m FVG Low",
+          "kind": "gap"
+        },
+        {
+          "price": 27679.5,
+          "name": "5m FVG High",
+          "kind": "gap"
+        }
+      ],
+      "scenarios": [
+        {
+          "side": "short",
+          "model": "Sell-Off / F-U Model",
+          "trigger": "After 09:30 open, price takes the Overnight High (27830.5), and then forms a 5m bearish FVG after a close below an important 5m low.",
+          "entry": 27820.0,
+          "stop": 27870.0,
+          "target": 27461.75,
+          "target2": 27438.5,
+          "window": "09:30-11:30"
+        },
+        {
+          "side": "long",
+          "model": "Expansion Retracement",
+          "trigger": "Price dips into and respects the 5m bullish FVG (27653.0-27679.5).",
+          "entry": 27660.0,
+          "stop": 27630.0,
+          "target": 27830.5,
+          "target2": 28062.5,
+          "window": "09:30-11:30"
+        }
+      ],
+      "invalidation": {
+        "price": 27438.5,
+        "rule": "15m close below",
+        "by": "11:00"
+      },
+      "model_screen": [
+        {
+          "model": "Expansion Retracement",
+          "status": "in_play",
+          "why": "Strong expansion needs retracement into discount for optimal entry."
+        },
+        {
+          "model": "Failure Swing",
+          "status": "watch",
+          "why": "If price takes ONH without displacement and reverses with a CV."
+        },
+        {
+          "model": "HRLR Model: Wick + Rejection Block",
+          "status": "watch",
+          "why": "Similar to FS, if ONH is taken then fails."
+        },
+        {
+          "model": "OPOB: Overpowered Order Block",
+          "status": "watch",
+          "why": "Requires liquidity taken (ONH) then specific OB/FVG formation on retracement."
+        },
+        {
+          "model": "Change in State of Delivery",
+          "status": "watch",
+          "why": "If liquidity (ONH or London Low) is taken, then a strong close through opens."
+        },
+        {
+          "model": "Reversal Confirmation Chain",
+          "status": "not_today",
+          "why": "Too many sequential confirmations required, not forming yet."
+        },
+        {
+          "model": "Secret Confirmation (hard days)",
+          "status": "not_today",
+          "why": "For hard days and unclear ER, not the primary read."
+        },
+        {
+          "model": "Inversion FVG",
+          "status": "watch",
+          "why": "If a FVG below (for long) or above (for short) gets closed through and retested."
+        },
+        {
+          "model": "Balanced Price Range",
+          "status": "not_today",
+          "why": "No overlapping opposing FVGs in the immediate range."
+        },
+        {
+          "model": "Consolidation Model",
+          "status": "not_today",
+          "why": "Price is in expansion, not consolidation."
+        },
+        {
+          "model": "Breaker & Mitigation Block",
+          "status": "watch",
+          "why": "Requires specific swing structure after liquidity sweep."
+        },
+        {
+          "model": "Anticipating Turtle Soups",
+          "status": "in_play",
+          "why": "Price is in premium, an overshoot and reversal from ONH is possible."
+        },
+        {
+          "model": "Sell-Off / F-U Model",
+          "status": "in_play",
+          "why": "Short side can apply if 5m buy-side is taken above opens after 09:30."
+        },
+        {
+          "model": "Full Reversal Model (A+ recipe)",
+          "status": "not_today",
+          "why": "Price is not below 2-3 opening prices for a long, nor above 2-3 for a reversal from high."
+        },
+        {
+          "model": "First Presentation",
+          "status": "in_play",
+          "why": "Will mark the first FVG after 09:30 for future reference."
+        },
+        {
+          "model": "Approaching Previous Week Low/High",
+          "status": "not_today",
+          "why": "Not close enough to trigger the model's specific rules."
+        },
+        {
+          "model": "Fading the fake \"Model 2022\"",
+          "status": "not_today",
+          "why": "No retail reversal pattern apparent."
+        },
+        {
+          "model": "Model 2022 + OTE",
+          "status": "watch",
+          "why": "Requires MSS after liquidity taken, then deep retracement. Not immediately formed."
+        },
+        {
+          "model": "Short / Intermediate-term structure",
+          "status": "watch",
+          "why": "Requires specific low formation and holding after a raid. Not immediately formed."
+        },
+        {
+          "model": "Quadrant Order Flow",
+          "status": "not_today",
+          "why": "Best used once day's high/low are formed for Gann box."
+        },
+        {
+          "model": "Lunch Macro Retracement",
+          "status": "not_today",
+          "why": "Too early, applies after 10:00/11:30."
+        },
+        {
+          "model": "Three-Candle Wick CE",
+          "status": "not_today",
+          "why": "No specific 3-candle wick pattern around a PD array apparent."
+        }
+      ],
+      "confluence": [
+        "Playbook Rules: Price above two opening prices (midnight 27461.75, 08:30 open 27718.0) suggests a short bias.",
+        "Concept Page: SMT (Sick Sister): NQ is showing more strength than ES (NQ is closer to its ONH than ES), indicating NQ might be topping out while ES is still trying to catch up, supporting a potential NQ short or retracement.",
+        "Playbook Rules: Thursday (don't touch) rule suggests caution or potential retracement/reversal.",
+        "Youtube Video Notes V70: Thursday can be a continuation or retracement day after an aggressive Wednesday. A retracement from current highs aligns with a short.",
+        "Youtube Video Notes V57: Anticipating Turtle Soups states that in HRLR, bearish soups happen in the upper portion, which applies to current price being in premium."
+      ],
+      "screen_check": {
+        "screened": 22,
+        "of": 22,
+        "missing": [],
+        "unknown": [],
+        "in_play": [
+          "Expansion Retracement (Vol 1 Class 3)",
+          "Anticipating Turtle Soups",
+          "Sell-Off / F-U Model",
+          "First Presentation"
+        ],
+        "off_screen_scenarios": []
+      },
+      "sit_out": [
+        "Thursday (don't touch)"
+      ],
+      "ai_model": "gemini-2.5-flash"
+    },
+    "prose": "## The read\nToday is Thursday, 4 minutes before the NY open, and price is currently at 27718.0. The higher-timeframe orderflow, particularly from Wednesday and overnight, has been strongly bullish. However, current price is trading above both the midnight open (27461.75) and the 08:30 open (27718.0), which, by the playbook's explicit rules, indicates a short bias. Price is also in the premium of the recent bullish expansion. While NQ has shown strength (Sick Sister with ES lagging), this could lead to an overshoot of the overnight high (27830.5) before a reversal or retracement. The \"don't touch Thursday\" rule also advises caution.\n\n## Levels that matter\n*   **27830.5 (Overnight High, BSL)**: The immediate buy-side liquidity target after the strong overnight run.\n*   **27461.75 (Midnight Open, Open)**: A key opening price; price is currently trading above it.\n*   **27718.0 (08:30 Open, Open)**: The current price is exactly at this open, indicating it's a critical level at the start of the NY session.\n*   **28062.5 (Weekly Open, Open)**: A significant higher-timeframe magnet for price.\n*   **27438.5 (London Low, SSL)**: A key sell-side level that would become a target if price reverses lower.\n*   **27653.0-27679.5 (5m FVG, Gap)**: A small bullish Fair Value Gap that could act as support during a retracement.\n\n## Scenario A\n**Model:** Sell-Off / F-U Model\n**Trigger:** After 09:30 open, price takes the Overnight High (27830.5), and then forms a 5m bearish FVG after a close below an important 5m low.\n**Entry:** 27820.0\n**Stop:** 27870.0\n**Target:** 27461.75\n**Target2:** 27438.5\n**Window:** 09:30-11:30\n\n## Scenario B\n**Model:** Expansion Retracement\n**Trigger:** Price dips into and respects the 5m bullish FVG (27653.0-27679.5).\n**Entry:** 27660.0\n**Stop:** 27630.0\n**Target:** 27830.5\n**Target2:** 28062.5\n**Window:** 09:30-11:30\n\n## Invalidation\nThe primary bias is invalidated if there is a 15m close below 27438.5 by 11:00.\n\n## Sit out if\nThe playbook's rule \"Don't touch Thursday\" applies, suggesting heightened caution for trading today.\n\n## Models checked\n*   **Expansion Retracement**: In play - Strong expansion needs retracement into discount for optimal entry.\n*   **Anticipating Turtle Soups**: In play - Price is in premium, an overshoot and reversal from ONH is possible.\n*   **Sell-Off / F-U Model**: In play - Short side can apply if 5m buy-side is taken above opens after 09:30.\n*   **First Presentation**: In play - Will mark the first FVG after 09:30 for future reference.\n*   **Failure Swing**: Watch - If price takes ONH without displacement and reverses with a CV.\n*   **HRLR Model: Wick + Rejection Block**: Watch - Similar to FS, if ONH is taken then fails.\n*   **OPOB: Overpowered Order Block**: Watch - Requires liquidity taken (ONH) then specific OB/FVG formation on retracement.\n*   **Change in State of Delivery**: Watch - If liquidity (ONH or London Low) is taken, then a strong close through opens.\n*   **Inversion FVG**: Watch - If an FVG below (for long) or above (for short) gets closed through and retested.\n*   **Breaker & Mitigation Block**: Watch - Requires specific swing structure after liquidity sweep.\n*   **Model 2022 + OTE**: Watch - Requires MSS after liquidity taken, then deep retracement. Not immediately formed.\n*   **Short / Intermediate-term structure**: Watch - Requires specific low formation and holding after a raid. Not immediately formed.\n*   All other models are not applicable today due to missing conditions or context.\n\n**Confluence:** The primary short bias is supported by the playbook's rule on price trading above two opening prices, current premium pricing, and the general caution advised for Thursday. The SMT (Sick Sister) also indicates NQ's relative strength might lead to a top before a retracement."
   }
 }
