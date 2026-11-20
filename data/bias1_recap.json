@@ -1,0 +1,154 @@
+{
+  "2026-11-19": {
+    "date": "2026-11-19",
+    "written_at": "2026-11-20T07:10:21-05:00",
+    "grades": {
+      "plan": "A",
+      "plan_source": "measured",
+      "read": "A",
+      "day": "A"
+    },
+    "review": {
+      "bias1": {
+        "grade": "C",
+        "reason": "The text read correctly called the short direction toward 27,442, but predicted the wrong day-model (range_expansion vs long_liquidation) while the frozen plan triggered a long scalp before a 1,075-point collapse.",
+        "wanted": "The read wanted price to reject near 27,733\u201327,792 or break below 27,662 to drive lower toward the 27,442 London low.",
+        "happened": "NQ engineered a 20-minute Judas sweep to 27,838 before delivering a violent -1,075 point trend-down liquidation to 26,559.",
+        "model_called": "range_expansion",
+        "model_actual": "long_liquidation",
+        "model_correct": false,
+        "model_said": "C"
+      },
+      "read": {
+        "grade": "A",
+        "reason": "The text read nailed the directional HTF short bias and the draw on liquidity down to the London low at 27,442 (which was completely blown through)."
+      },
+      "day": {
+        "grade": "A",
+        "shape": "trend day down / long liquidation",
+        "reason": "Price executed a classic Power of Three distribution: an AM Judas raid of the overnight high followed by a one-way 1,075-point sell-off into the close."
+      },
+      "lessons": [
+        "Do not set a mechanical LONG breakout trigger above overnight VAH when HTF bias and pre-open read are explicitly SHORT.",
+        "Classify early sweeps of overnight highs above the 9:30 open as PO3 Judas swings rather than structural bullish regime shifts.",
+        "On high-conviction short days, re-anchor short entries at the first 5m/15m CSD or inverted FVG following the 09:30\u201309:50 manipulation."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe pre-open read established a clear HTF **SHORT** bias, identifying the primary draw on liquidity at the overnight London low (27,442.00) with an intermediate pool at the London KZ low (27,627.50). The ideal entry sequence sought either an immediate sell-side displacement below the NY AM low (27,662.75) or a passive seller absorption/rejection in the 27,733.00\u201327,792.50 premium zone. The read explicitly cautioned against long engagement and stated that price should not accept above 27,733.00 or the NY AM open (27,760.25). \n\nHowever, the frozen 09:16 execution plan contained a structural contradiction: it placed a mechanical LONG breakout trigger at 27,688.00 (OVN VAH) targeting the OVN High (27,830.50), while placing the SHORT trigger all the way down at 27,609.75.\n\n## What actually happened\nAt the 09:30 open (27,663.75), NQ immediately spooled upward into a 20-minute Judas expansion, triggering the frozen plan's LONG entry at 27,688.00. Price reached an AM high of 27,838.00 at 09:50, filling the long target for a +1.90R (+142.00 pt) gain. \n\nOnce the overnight high (27,830.50) was swept\u2014taking buy-side liquidity above all three opening prices\u2014the market printed a sharp reversal. The 09:50 high established the High of Day. NQ then entered a relentless sell-off program:\n- **09:50\u201310:35 (NY AM):** Price collapsed 799 points from the high, breaching the 27,627.50 London KZ low and smashing through the 27,442.00 primary target to print 27,038.75.\n- **11:00\u201313:30 (Lunch):** A weak retracement capped at 27,429.75 (11:40) was met with another wave of distribution, driving price down to 26,674.25 by 12:05.\n- **13:30\u201316:00 (NY PM):** PM delivery offered no bounce, printing a Low of Day at 26,559.25 (15:10) and closing near the dead low at 26,588.25 (-1,075.50 pts on RTH).\n\n## How it went\nThis was a case of a **correct higher-timeframe read coupled with an execution plan that traded against its own narrative**.\n\n- **The Read:** Earns an **A**. The text read identified the HTF short bias and correctly named the 27,442 London low as the magnetic draw. The market delivered over 1,000 points of downward expansion straight to that pool and beyond.\n- **The Execution Plan:** Received a **C**. The frozen plan's long trigger at 27,688.00 caught a fast 142-point scalp during the 09:30\u201309:50 Judas run, so the plan technically \"paid.\" However, buying above overnight VAH on a short-bias day meant step-ing in front of an F-U sell-off profile [SO]. Furthermore, the short trigger (27,609.75) was placed so far below the open that the entire initial 230-point drop off the 27,838.00 high occurred before the short plan could even activate.\n\n## The day as a whole\nThe session delivered a classic **long liquidation / trend down profile** [SO]. The 09:30\u201309:50 rally to 27,838.00 was pure Power of Three manipulation above the midnight and 08:30 opens [PO3 / opens]. Once buy-side liquidity was swept at the overnight high, the Change in State of Delivery [CISD] triggered a continuous liquidation run that expanded through lunch and closed at the absolute low of the day.\n\n**Bias 2 comparison:** Bias 2 called the short, aligned its day-model correctly with the trend-down liquidation, and scored A across the board. Bias 1 got the macro direction right, but its mechanical execution rules got distracted by an intra-range long scalp.\n\n## What to do differently\n1. **Align mechanical triggers with the HTF bias:** If the 09:16 read establishes a SHORT bias based on HTF liquidity draws, disable automated breakout long triggers that sit directly inside premium resistance zones (like OVN VAH).\n2. **Treat 09:30 runs above OVN Highs as Judas swings:** Under PO3 rules [opens], early expansions above opening prices on short-bias days are manipulation legs to be faded via CSD/IFVG, not long breakout confirmations.\n3. **Re-anchor short triggers to intermediate structure:** Rather than placing short triggers far below key support (27,609.75), anticipate entries at the first 1m/5m CISD or bearish OB [OPOB / CSD] formed after the Judas sweep completes.",
+    "trade_11": {
+      "date": "2026-11-19",
+      "outcome": "target",
+      "side": "long",
+      "trigger": 27688.0,
+      "at": "09:30",
+      "r": 1.9,
+      "mfe_r": 1.94,
+      "mae_r": 0.6,
+      "label": "\u2705 the plan worked",
+      "stop": 27613.0,
+      "target": 27830.5,
+      "risk_pts": 75.0,
+      "trigger_name": "OVN VAH",
+      "stop_name": "75-pt cap",
+      "points": 142.0,
+      "marked": false,
+      "usd": {
+        "1 MNQ": {
+          "gross": 284.0,
+          "net": 282.5
+        },
+        "5 MNQ": {
+          "gross": 1420.0,
+          "net": 1412.5
+        },
+        "1 NQ": {
+          "gross": 2840.0,
+          "net": 2835.0
+        }
+      }
+    },
+    "trade_day": {
+      "date": "2026-11-19",
+      "outcome": "target",
+      "side": "long",
+      "trigger": 27688.0,
+      "at": "09:30",
+      "r": 1.9,
+      "mfe_r": 1.94,
+      "mae_r": 0.6,
+      "label": "\u2705 the plan worked",
+      "stop": 27613.0,
+      "target": 27830.5,
+      "risk_pts": 75.0,
+      "trigger_name": "OVN VAH",
+      "stop_name": "75-pt cap",
+      "points": 142.0,
+      "marked": false,
+      "usd": {
+        "1 MNQ": {
+          "gross": 284.0,
+          "net": 282.5
+        },
+        "5 MNQ": {
+          "gross": 1420.0,
+          "net": 1412.5
+        },
+        "1 NQ": {
+          "gross": 2840.0,
+          "net": 2835.0
+        }
+      }
+    },
+    "session": {
+      "date": "2026-11-19",
+      "bars": 276,
+      "premarket": {
+        "open": 27708.5,
+        "high": 27830.5,
+        "low": 27627.5,
+        "close": 27663.75,
+        "at_high": "06:45",
+        "at_low": "04:30"
+      },
+      "am": {
+        "open": 27663.75,
+        "high": 27838.0,
+        "low": 27038.75,
+        "close": 27263.25,
+        "at_high": "09:50",
+        "at_low": "10:35"
+      },
+      "lunch": {
+        "open": 27263.75,
+        "high": 27429.75,
+        "low": 26674.25,
+        "close": 26864.5,
+        "at_high": "11:40",
+        "at_low": "12:05"
+      },
+      "pm": {
+        "open": 26863.5,
+        "high": 26918.25,
+        "low": 26559.25,
+        "close": 26588.25,
+        "at_high": "13:35",
+        "at_low": "15:10"
+      },
+      "rth": {
+        "open": 27663.75,
+        "high": 27838.0,
+        "low": 26559.25,
+        "close": 26588.25,
+        "at_high": "09:50",
+        "at_low": "15:10",
+        "net": -1075.5,
+        "shape": "trend down",
+        "close_in_range_pct": 2.3
+      }
+    },
+    "called": {
+      "htf_bias": "SHORT",
+      "model": "range_expansion"
+    }
+  }
+}
