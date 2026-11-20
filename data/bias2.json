@@ -5411,5 +5411,212 @@
         "brier_n": 114
       }
     }
+  },
+  "2026-11-20": {
+    "date": "2026-11-20",
+    "status": "pre-market",
+    "written_at": "2026-11-20T09:28:42-05:00",
+    "plan": {
+      "bias": "long",
+      "price": 26244.25,
+      "levels": [
+        {
+          "price": 26000.0,
+          "name": "Overnight Low",
+          "kind": "ssl"
+        },
+        {
+          "price": 26085.0,
+          "name": "08:30 Open",
+          "kind": "open"
+        },
+        {
+          "price": 26135.75,
+          "name": "London Low",
+          "kind": "ssl"
+        },
+        {
+          "price": 26354.0,
+          "name": "Midnight Open",
+          "kind": "open"
+        },
+        {
+          "price": 26447.75,
+          "name": "London High",
+          "kind": "bsl"
+        },
+        {
+          "price": 26559.25,
+          "name": "PDL",
+          "kind": "ssl"
+        },
+        {
+          "price": 26603.5,
+          "name": "Overnight High",
+          "kind": "bsl"
+        }
+      ],
+      "scenarios": [
+        {
+          "side": "long",
+          "model": "[ER] Expansion Retracement (Vol 1 Class 3)",
+          "trigger": "Price retraces into the 5m discount FVG / bullish OB above the 08:30 open (26,085.00) and respects equilibrium of the pre-market expansion leg.",
+          "entry": 26140.0,
+          "stop": 26065.0,
+          "target": 26354.0,
+          "target2": 26447.75,
+          "window": "09:30-11:00"
+        },
+        {
+          "side": "short",
+          "model": "[SO] Sell-Off / F-U Model",
+          "trigger": "Price rallies above Midnight Open (26,354.00), takes minor buy-side, and prints a 5m bearish CSD with displacement back below Midnight Open.",
+          "entry": 26350.0,
+          "stop": 26425.0,
+          "target": 26135.75,
+          "target2": 26000.0,
+          "window": "09:30-11:00"
+        }
+      ],
+      "invalidation": {
+        "price": 25990.0,
+        "rule": "15m candle close below Overnight Low (26,000.00)",
+        "by": "11:00"
+      },
+      "model_screen": [
+        {
+          "model": "[ER] Expansion Retracement (Vol 1 Class 3)",
+          "status": "in_play",
+          "why": "Pre-market expanded from 26,000.00 to 26,260.00; looking for retracement into discount FVG (26,140.00) toward Midnight Open (26,354.00)."
+        },
+        {
+          "model": "[FS] Failure Swing (Vol 1 Class 4)",
+          "status": "watch",
+          "why": "Requires price to fail near Midnight Open / London High while respecting wick CE."
+        },
+        {
+          "model": "[HR] HRLR Model: Wick + Rejection Block",
+          "status": "not_today",
+          "why": "Price displaced cleanly off 26,000.00 sweep rather than chopping at a rejection block."
+        },
+        {
+          "model": "[OPOB] Overpowered Order Block",
+          "status": "watch",
+          "why": "Bullish OB at 26,120.00\u201326,140.00 requires a clean gap in its upper quadrant after 09:30."
+        },
+        {
+          "model": "[CISD] Change in State of Delivery",
+          "status": "watch",
+          "why": "Awaiting post-09:30 confirmation of up-close or down-close opening price breaches."
+        },
+        {
+          "model": "[RC] Reversal Confirmation Chain",
+          "status": "not_today",
+          "why": "Requires multiple sequential PD array respects not yet constructed today."
+        },
+        {
+          "model": "[SC] \"Secret Confirmation\" (hard days)",
+          "status": "not_today",
+          "why": "Used during hard ER days when a bullish OB gets disrespected."
+        },
+        {
+          "model": "[IFVG] Inversion FVG",
+          "status": "not_today",
+          "why": "No prominent 15m/5m FVG has been closed through and inverted yet."
+        },
+        {
+          "model": "[BPR] Balanced Price Range",
+          "status": "not_today",
+          "why": "No overlapping opposing FVGs in the immediate 5m pre-market leg."
+        },
+        {
+          "model": "[CM] Consolidation Model",
+          "status": "not_today",
+          "why": "Price expanded out of 26,000.00 rather than compressing inside a body range."
+        },
+        {
+          "model": "[BRK] Breaker & Mitigation Block",
+          "status": "not_today",
+          "why": "No disrespected order block forming breaker structure on 15m/5m."
+        },
+        {
+          "model": "[TS] Anticipating Turtle Soups",
+          "status": "not_today",
+          "why": "Pre-market already swept ONL (26,000.00); intra-range soup printed prior to NY AM."
+        },
+        {
+          "model": "[SO] Sell-Off / F-U Model",
+          "status": "in_play",
+          "why": "Active for Scenario B if price manipulates above Midnight Open (26,354.00) after 09:30."
+        },
+        {
+          "model": "[A+] Full Reversal Model (A+ recipe)",
+          "status": "watch",
+          "why": "Major sell-side (26,000.00 ONL) taken below opens; watching for full reversal reclamation."
+        },
+        {
+          "model": "[FP] First Presentation",
+          "status": "watch",
+          "why": "Awaiting the first 5m FVG after the 09:30 open bell."
+        },
+        {
+          "model": "[PWL] Approaching Previous Week Low/High",
+          "status": "not_today",
+          "why": "PWL (26,751.25) was already taken earlier in the week."
+        },
+        {
+          "model": "[FD] Fading the fake \"Model 2022\"",
+          "status": "not_today",
+          "why": "No retail Model 2022 pattern forming ahead of key liquidity."
+        },
+        {
+          "model": "[OTE] Model 2022 + OTE",
+          "status": "watch",
+          "why": "Requires 5m MSS above pre-market high followed by 62\u201379% retracement."
+        },
+        {
+          "model": "[STL] Short / Intermediate-term structure",
+          "status": "not_today",
+          "why": "ST-IT-ST swing structure not fully established on 15m."
+        },
+        {
+          "model": "[QF] Quadrant Order Flow",
+          "status": "not_today",
+          "why": "Dealing range box not yet anchored for today's RTH session."
+        },
+        {
+          "model": "[LMR] Lunch Macro Retracement",
+          "status": "not_today",
+          "why": "Time is 09:25 ET; macro applies after 11:30."
+        },
+        {
+          "model": "[WK] Three-Candle Wick CE",
+          "status": "not_today",
+          "why": "No active 1H 3-candle wick CE setup at current price."
+        }
+      ],
+      "confluence": [
+        "Friday Rule: After terminus hit on Thursday/Friday overnight, expect price to retrace ~20-30% back inside the weekly range",
+        "Open Rules: Bullish retracement setups are sought in discount below Midnight Open (26,354.00)",
+        "Dojo Class 4: Reversal off major pool (26,000 ONL) targets opposite liquidity (Midnight Open / London High)"
+      ],
+      "screen_check": {
+        "screened": 22,
+        "of": 22,
+        "missing": [],
+        "unknown": [],
+        "in_play": [
+          "Expansion Retracement (Vol 1 Class 3)",
+          "Sell-Off / F-U Model"
+        ],
+        "off_screen_scenarios": []
+      },
+      "sit_out": [
+        "Price chops between 26,180.00 and 26,260.00 without touching 08:30 or Midnight opens by 10:00",
+        "ES and NQ show severe SMT divergence at the 09:30 open"
+      ],
+      "ai_model": "gemini-3.6-flash"
+    },
+    "prose": "## The read\nFollowing massive downward expansion earlier this week that flushed Previous Week Low (26,751.25) and PDL (26,559.25), price printed an overnight low of 26,000.00 during the pre-market session. According to playbook Friday rules, once the weekly terminus is reached, we do not chase continuation; instead, we anticipate a Friday retracement back inside the weekly range (~20\u201330%). The 07:30\u201308:30 expansion away from 26,000.00 swept the London Low (26,135.75) and pushed price up to 26,244.25, placing it above the 08:30 open (26,085.00) but below the Midnight open (26,354.00). A retracement into the 5m discount FVG / OB above the 08:30 open offers a high-probability Expansion Retracement setup targeting Midnight Open (26,354.00) and London High (26,447.75).\n\n## Levels that matter\n- **26,000.00 (Overnight Low)**: Key HTF sell-side pool swept in pre-market; origin of today's bullish expansion leg.\n- **26,085.00 (08:30 Open)**: Intraday anchor level; bullish setups must hold above or near this price.\n- **26,354.00 (Midnight Open)**: Overbought/oversold indicator; primary magnet for Friday retracement longs.\n- **26,447.75 (London High)**: Major session buy-side pool above Midnight open.\n\n## Scenario A\nModel: `[ER] Expansion Retracement (Vol 1 Class 3)`  \nTrigger: Price retraces after 09:30 into the 5m discount FVG / OB around 26,140.00 (above 08:30 open) and holds the 50% equilibrium of the pre-market leg.  \nEntry: 26,140.00  \nStop: 26,065.00 (below 08:30 open and 5m OB low)  \nFirst target: 26,354.00 (Midnight Open)  \nSecond target: 26,447.75 (London High)  \nSession window: 09:30\u201311:00 ET\n\n## Scenario B\nModel: `[SO] Sell-Off / F-U Model`  \nTrigger: Price rallies past Midnight Open (26,354.00) into pre-market buy-side, fails to sustain, and prints a 5m bearish CSD with a body close back below Midnight Open.  \nEntry: 26,350.00  \nStop: 26,425.00  \nFirst target: 26,135.75 (London Low)  \nSecond target: 26,000.00 (Overnight Low)  \nSession window: 09:30\u201311:00 ET\n\n## Invalidation\nThe long read is invalidated if a 15-minute candle closes below the Overnight Low (26,000.00) before 11:00 ET.\n\n## Sit out if\n- Price chops between 26,180.00 and 26,260.00 without reaching either the 08:30 open (26,085.00) or Midnight open (26,354.00) by 10:00 ET.\n- NQ and ES show disjointed SMT action with conflicting order flow at the NY open.\n\n## Models checked\n**In play**:\n- `[ER] Expansion Retracement (Vol 1 Class 3)`: Pre-market expanded from 26,000.00 to 26,260.00; looking for discount entry at 26,140.00 toward 26,354.00.\n- `[SO] Sell-Off / F-U Model`: Active for Scenario B if price manipulates above Midnight Open (26,354.00) post-09:30.\n\n**On watch**:\n- `[FS] Failure Swing (Vol 1 Class 4)`: Watching for rejection at Midnight Open / London High.\n- `[OPOB] Overpowered Order Block`: Watching for a clean gap inside the upper quadrant of the 26,120.00 OB after 09:30.\n- `[CISD] Change in State of Delivery`: Awaiting post-open breach of opening prices.\n- `[A+] Full Reversal Model (A+ recipe)`: Major sell-side (26,000.00 ONL) taken; watching for full reversal setup.\n- `[FP] First Presentation`: Awaiting the first 5m FVG after 09:30.\n- `[OTE] Model 2022 + OTE`: Watching for 5m MSS then 62\u201379% deep retracement.\n\n**Not today**: `[HR]`, `[RC]`, `[SC]`, `[IFVG]`, `[BPR]`, `[CM]`, `[BRK]`, `[TS]`, `[PWL]`, `[FD]`, `[STL]`, `[QF]`, `[LMR]`, `[WK]` \u2014 these models lack the required structural conditions (such as active BPRs, disrespected breakers, HRLR chop ranges, or applicable time windows).\n\n**Confluence**: Friday Rule (retrace ~20\u201330% after weekly terminus), Open Rules (buying in discount below Midnight Open), Dojo Class 4 (reversals off major pools target opposite liquidity)."
   }
 }
