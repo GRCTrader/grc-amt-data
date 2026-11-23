@@ -6193,5 +6193,219 @@
         "brier_n": 115
       }
     }
+  },
+  "2026-11-23": {
+    "date": "2026-11-23",
+    "status": "pre-market",
+    "written_at": "2026-11-23T09:25:46-05:00",
+    "plan": {
+      "bias": "long",
+      "price": 26878.5,
+      "levels": [
+        {
+          "price": 26878.5,
+          "name": "Overnight High (ONH)",
+          "kind": "bsl"
+        },
+        {
+          "price": 26504.25,
+          "name": "Previous Day High (PDH)",
+          "kind": "bsl"
+        },
+        {
+          "price": 26102.25,
+          "name": "London High",
+          "kind": "bsl"
+        },
+        {
+          "price": 25962.0,
+          "name": "08:30 Open",
+          "kind": "open"
+        },
+        {
+          "price": 25842.25,
+          "name": "Midnight Open",
+          "kind": "open"
+        },
+        {
+          "price": 25561.5,
+          "name": "Weekly Open",
+          "kind": "open"
+        },
+        {
+          "price": 25426.75,
+          "name": "Overnight Low (ONL)",
+          "kind": "ssl"
+        },
+        {
+          "price": 24976.5,
+          "name": "Previous Day Low (PDL)",
+          "kind": "ssl"
+        }
+      ],
+      "scenarios": [
+        {
+          "side": "long",
+          "model": "[ER] Expansion Retracement (Vol 1 Class 3)",
+          "trigger": "5m retracement into the 26720-26750 pre-market FVG/discount holding above 26610 with a bullish OB respect",
+          "entry": 26740.0,
+          "stop": 26610.0,
+          "target": 26878.5,
+          "target2": 27050.0,
+          "window": "09:30-11:00"
+        },
+        {
+          "side": "short",
+          "model": "[FS] Failure Swing (Vol 1 Class 4)",
+          "trigger": "Price wicks above ONH 26878.50 after 09:30, fails to expand, respects wick CE, and prints a 5m bearish FVG with a CSD close below 26850",
+          "entry": 26860.0,
+          "stop": 26920.0,
+          "target": 26650.0,
+          "target2": 26504.25,
+          "window": "09:30-11:00"
+        }
+      ],
+      "invalidation": {
+        "price": 26610.0,
+        "rule": "15m candle close below 26610.00 invalidates the pre-market expansion structure",
+        "by": "11:00"
+      },
+      "model_screen": [
+        {
+          "model": "[ER] Expansion Retracement (Vol 1 Class 3)",
+          "status": "in_play",
+          "why": "Pre-market expansion leg from 25842 to 26878 left 5m/15m discount FVGs for continuation."
+        },
+        {
+          "model": "[FS] Failure Swing (Vol 1 Class 4)",
+          "status": "watch",
+          "why": "Watching if 09:30 open wicks past ONH 26878.50 and fails to hold with body closes."
+        },
+        {
+          "model": "[HR] HRLR Model: Wick + Rejection Block",
+          "status": "not_today",
+          "why": "Market is in clean LRLR pre-market expansion, not choppy HRLR conditions."
+        },
+        {
+          "model": "[OPOB] Overpowered Order Block",
+          "status": "watch",
+          "why": "Awaiting a 5m OB with an embedded gap in its upper quadrant post-open."
+        },
+        {
+          "model": "[CISD] Change in State of Delivery",
+          "status": "watch",
+          "why": "Triggers only if 09:30 open breaks the opening price of the up-close pre-market run."
+        },
+        {
+          "model": "[RC] Reversal Confirmation Chain",
+          "status": "not_today",
+          "why": "Requires multi-stage PD array inversion sequence not currently present."
+        },
+        {
+          "model": "[SC] \"Secret Confirmation\" (hard days)",
+          "status": "not_today",
+          "why": "Orderflow is straightforward LRLR expansion; SC is reserved for ambiguous chop."
+        },
+        {
+          "model": "[IFVG] Inversion FVG",
+          "status": "watch",
+          "why": "Needs a 5m bullish gap to close through post-open to validate short reversal."
+        },
+        {
+          "model": "[BPR] Balanced Price Range",
+          "status": "not_today",
+          "why": "No overlapping opposing FVGs in the immediate 5m/15m leg."
+        },
+        {
+          "model": "[CM] Consolidation Model",
+          "status": "not_today",
+          "why": "Price is in vertical expansion, not range-bound consolidation."
+        },
+        {
+          "model": "[BRK] Breaker & Mitigation Block",
+          "status": "not_today",
+          "why": "No disrespected order block or failed swing structure on 5m/15m."
+        },
+        {
+          "model": "[TS] Anticipating Turtle Soups",
+          "status": "watch",
+          "why": "Potential short turtle soup if 09:30 wicks above ONH 26878.50 into immediate rejection."
+        },
+        {
+          "model": "[SO] Sell-Off / F-U Model",
+          "status": "not_today",
+          "why": "Pre-market printed aggressive bullish displacement >1000 pts above midnight/08:30 opens."
+        },
+        {
+          "model": "[A+] Full Reversal Model (A+ recipe)",
+          "status": "watch",
+          "why": "Requires 15m/1H BSL sweep and bearish CSD above opening prices."
+        },
+        {
+          "model": "[FP] First Presentation",
+          "status": "watch",
+          "why": "First 9:30 FVG has not formed yet (minutes to open)."
+        },
+        {
+          "model": "[PWL] Approaching Previous Week Low/High",
+          "status": "not_today",
+          "why": "PWL 24976.50 was swept Friday; market is now expanding upward."
+        },
+        {
+          "model": "[FD] Fading the fake \"Model 2022\"",
+          "status": "not_today",
+          "why": "No retail stair-step pattern attempting a fake 2022 setup."
+        },
+        {
+          "model": "[OTE] Model 2022 + OTE",
+          "status": "not_today",
+          "why": "No MSS back down following sell-side purge; orderflow is expanding up."
+        },
+        {
+          "model": "[STL] Short / Intermediate-term structure",
+          "status": "not_today",
+          "why": "STH-ITH-STH sequence around gaps has not completed on 5m."
+        },
+        {
+          "model": "[QF] Quadrant Order Flow",
+          "status": "not_today",
+          "why": "Pre-market leg is actively forming; RTH dealing range quadrants not anchored."
+        },
+        {
+          "model": "[LMR] Lunch Macro Retracement",
+          "status": "not_today",
+          "why": "Applies only post-11:30 ET."
+        },
+        {
+          "model": "[WK] Three-Candle Wick CE",
+          "status": "not_today",
+          "why": "No 3-candle wick pattern with 0.25 entry present on 1H/15m."
+        }
+      ],
+      "confluence": [
+        "Measured draw indicates ONH 26878.50 has an 89% probability of being taken by 11:00",
+        "PWL 24976.50 was taken on Friday, setting up early-week bullish delivery (PWL rule)",
+        "Pre-market LRLR orderflow displaced through PDH 26504.25 with zero opposing resistance",
+        "Positioning above Midnight (25842.25) and 08:30 (25962.00) opens supports continuation under LRLR"
+      ],
+      "screen_check": {
+        "screened": 22,
+        "of": 22,
+        "missing": [],
+        "unknown": [],
+        "in_play": [
+          "Expansion Retracement (Vol 1 Class 3)"
+        ],
+        "off_screen_scenarios": [
+          "[FS] Failure Swing (Vol 1 Class 4)"
+        ]
+      },
+      "sit_out": [
+        "Price chops sideways inside 26800-26878 without offering a retracement into discount before 10:00 AM",
+        "NQ and ES exhibit severe SMT divergence at the 09:30 open with disjointed candle delivery"
+      ],
+      "ai_model": "gemini-3.6-flash"
+    },
+    "prose": "## The read\nFollowing Friday's sweep of Previous Week Low (24976.50), the market initiated a powerful low-resistance liquidity run (LRLR). In pre-market, price expanded over 1,000 points from the Midnight Open (25842.25) straight through Previous Day High (26504.25), pressing into Overnight High (26878.50). The walk-forward statistical engine rates the probability of taking ONH by 11:00 at 89%. Because price is vastly extended above the opening prices (>900 points), we do not chase market orders at the bell; instead, we look for a functional 5m retracement into discount of the morning expansion leg to execute continuation via the Expansion Retracement model toward 27000+.\n\n## Levels that matter\n- **26878.50 (Overnight High / BSL):** Primary draw on liquidity (89% probability). A clean 5m close above opens standard deviation projections toward 27050.\n- **26504.25 (Previous Day High):** Swept in pre-market; acts as major underlying structural support.\n- **25962.00 & 25842.25 (08:30 & Midnight Opens):** Baseline origin of today's PO3 manipulation/expansion leg.\n\n## Scenario A\n- **Model:** [ER] Expansion Retracement (Vol 1 Class 3)\n- **Trigger:** A 5m retracement after 09:30 into the 26720.00\u201326750.00 discount FVG, holding above 26610.00 with a bullish down-close OB reaction.\n- **Entry:** 26740.00\n- **Stop:** 26610.00 (below the 5m pre-market origin swing low)\n- **First Target:** 26878.50 (ONH), with Target 2 at 27050.00\n- **Session Window:** 09:30\u201311:00 ET\n\n## Scenario B\n- **Model:** [FS] Failure Swing (Vol 1 Class 4)\n- **Trigger:** Price wicks above ONH 26878.50 after 09:30, fails to maintain body closes, respects the wick CE, and prints a 5m SIBI with a CSD close below 26850.00.\n- **Entry:** 26860.00\n- **Stop:** 26920.00 (above the failure swing high)\n- **First Target:** 26650.00 (pre-market gap top), with Target 2 at 26504.25 (PDH)\n- **Session Window:** 09:30\u201311:00 ET\n\n## Invalidation\nThe long plan is invalidated if a 15-minute candle closes below 26610.00 prior to 11:00 ET, indicating that pre-market expansion buyers have lost control of the dealing range.\n\n## Sit out if\n- Price trades inside a tight 26800\u201326878 range without offering a retracement to discount before 10:00 AM.\n- NQ and ES exhibit severe cracking correlation (SMT) at 09:30 with disjointed candle delivery.\n\n## Models checked\n- **In Play:** [ER] Expansion Retracement (Vol 1 Class 3) \u2014 pre-market displacement created clear 5m/15m discount arrays for continuation.\n- **On Watch:** [FS] Failure Swing, [OPOB] Overpowered Order Block, [CISD] Change in State of Delivery, [IFVG] Inversion FVG, [TS] Anticipating Turtle Soups, [A+] Full Reversal Model, [FP] First Presentation \u2014 awaiting 09:30 price action at ONH.\n- **Not Today:** All remaining 14 models \u2014 conditions (such as HRLR, BPR overlaps, consolidation ranges, or post-11:30 macros) are absent.\n- **Confluence:** 89% draw on ONH; early-week bullish delivery following PWL sweep (PWL rule); LRLR displacement above PDH (26504.25)."
   }
 }
