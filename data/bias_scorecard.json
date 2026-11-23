@@ -1,66 +1,66 @@
 {
-  "generated_at": "2026-11-20T09:32:02.112760-05:00",
+  "generated_at": "2026-11-23T09:16:03.255727-05:00",
   "live": {
     "lon_high": {
-      "n": 42,
-      "brier": 0.20737,
-      "accuracy": 69.0,
-      "avg_predicted": 47.6,
-      "actual_rate": 50.0,
+      "n": 43,
+      "brier": 0.20627,
+      "accuracy": 69.8,
+      "avg_predicted": 47.9,
+      "actual_rate": 51.2,
       "evidence": {
-        "skill": 0.1705,
-        "days": 42,
+        "skill": 0.1745,
+        "days": 43,
         "ci95": [
-          -0.125,
-          0.3949
+          -0.1239,
+          0.3935
         ],
         "verdict": "INSUFFICIENT EVIDENCE \u2014 interval spans zero"
       }
     },
     "lon_low": {
-      "n": 42,
-      "brier": 0.17469,
-      "accuracy": 69.0,
-      "avg_predicted": 50.8,
-      "actual_rate": 47.6,
+      "n": 43,
+      "brier": 0.17336,
+      "accuracy": 69.8,
+      "avg_predicted": 51.1,
+      "actual_rate": 48.8,
       "evidence": {
-        "skill": 0.2997,
-        "days": 42,
+        "skill": 0.3062,
+        "days": 43,
         "ci95": [
-          0.0481,
-          0.4876
+          0.0729,
+          0.4956
         ],
         "verdict": "SUPPORTED \u2014 beats its base rate"
       }
     },
     "first_high": {
-      "n": 25,
-      "brier": 0.19461,
-      "accuracy": 76.0,
-      "avg_predicted": 40.7,
-      "actual_rate": 48.0,
+      "n": 26,
+      "brier": 0.19558,
+      "accuracy": 76.9,
+      "avg_predicted": 40.9,
+      "actual_rate": 46.2,
       "evidence": {
-        "skill": 0.2203,
-        "days": 25,
+        "skill": 0.213,
+        "days": 26,
         "ci95": [
-          -0.271,
-          0.5382
+          -0.2203,
+          0.5216
         ],
         "verdict": "INSUFFICIENT EVIDENCE \u2014 interval spans zero"
       }
     },
     "pdh": {
-      "n": 43,
-      "brier": 0.08498,
-      "accuracy": 90.7,
-      "avg_predicted": 27.2,
-      "actual_rate": 18.6,
+      "n": 44,
+      "brier": 0.08305,
+      "accuracy": 90.9,
+      "avg_predicted": 26.6,
+      "actual_rate": 18.2,
       "evidence": {
-        "skill": 0.4388,
-        "days": 43,
+        "skill": 0.4417,
+        "days": 44,
         "ci95": [
-          -0.3159,
-          0.746
+          -0.3451,
+          0.7401
         ],
         "verdict": "INSUFFICIENT EVIDENCE \u2014 interval spans zero"
       }
@@ -82,32 +82,32 @@
       }
     },
     "on_high": {
-      "n": 55,
-      "brier": 0.16214,
-      "accuracy": 76.4,
-      "avg_predicted": 44.6,
-      "actual_rate": 41.8,
+      "n": 56,
+      "brier": 0.16098,
+      "accuracy": 76.8,
+      "avg_predicted": 44.3,
+      "actual_rate": 41.1,
       "evidence": {
-        "skill": 0.3336,
-        "days": 55,
+        "skill": 0.3349,
+        "days": 56,
         "ci95": [
-          0.0741,
-          0.524
+          0.0703,
+          0.5177
         ],
         "verdict": "SUPPORTED \u2014 beats its base rate"
       }
     },
     "on_low": {
-      "n": 55,
-      "brier": 0.20621,
-      "accuracy": 67.3,
-      "avg_predicted": 40.4,
-      "actual_rate": 45.5,
+      "n": 56,
+      "brier": 0.20632,
+      "accuracy": 67.9,
+      "avg_predicted": 40.6,
+      "actual_rate": 46.4,
       "evidence": {
-        "skill": 0.1683,
-        "days": 55,
+        "skill": 0.1705,
+        "days": 56,
         "ci95": [
-          -0.0809,
+          -0.071,
           0.3619
         ],
         "verdict": "INSUFFICIENT EVIDENCE \u2014 interval spans zero"
@@ -200,8 +200,63 @@
       "label": "NY AM closes above the 09:15 open"
     }
   },
-  "live_days": 58,
+  "live_days": 59,
   "recent": [
+    {
+      "date": "2026-11-20",
+      "weekday": "Friday",
+      "open_state": "inside_range",
+      "scores": {
+        "lon_high": {
+          "p": 0.6,
+          "actual": 1,
+          "brier": 0.16,
+          "correct": 1
+        },
+        "lon_low": {
+          "p": 0.657,
+          "actual": 1,
+          "brier": 0.11765,
+          "correct": 1
+        },
+        "first_high": {
+          "p": 0.469,
+          "actual": 0,
+          "brier": 0.21996,
+          "correct": 1
+        },
+        "pdh": {
+          "p": 0.013,
+          "actual": 0,
+          "brier": 0.00017,
+          "correct": 1
+        },
+        "on_high": {
+          "p": 0.312,
+          "actual": 0,
+          "brier": 0.09734,
+          "correct": 1
+        },
+        "on_low": {
+          "p": 0.539,
+          "actual": 1,
+          "brier": 0.21252,
+          "correct": 1
+        }
+      },
+      "actual": {
+        "out_high": 26504.25,
+        "out_low": 25805.5,
+        "lon_high": 1,
+        "lon_low": 1,
+        "first_side": "low",
+        "first_high": 0,
+        "pdh": 0,
+        "pdl": null,
+        "on_high": 0,
+        "on_low": 1
+      }
+    },
     {
       "date": "2026-11-19",
       "weekday": "Thursday",
@@ -1179,55 +1234,6 @@
         "pdl": 0,
         "on_high": 1,
         "on_low": 0
-      }
-    },
-    {
-      "date": "2026-10-23",
-      "weekday": "Friday",
-      "open_state": "below_range",
-      "scores": {
-        "lon_high": {
-          "p": 0.207,
-          "actual": 1,
-          "brier": 0.62885,
-          "correct": 0
-        },
-        "pdh": {
-          "p": 0.011,
-          "actual": 0,
-          "brier": 0.00012,
-          "correct": 1
-        },
-        "pdl": {
-          "p": 0.938,
-          "actual": 1,
-          "brier": 0.00384,
-          "correct": 1
-        },
-        "on_high": {
-          "p": 0.178,
-          "actual": 1,
-          "brier": 0.67568,
-          "correct": 0
-        },
-        "on_low": {
-          "p": 0.802,
-          "actual": 1,
-          "brier": 0.0392,
-          "correct": 1
-        }
-      },
-      "actual": {
-        "out_high": 29326.0,
-        "out_low": 28987.0,
-        "lon_high": 1,
-        "lon_low": 1,
-        "first_side": "low",
-        "first_high": 0,
-        "pdh": 0,
-        "pdl": 1,
-        "on_high": 1,
-        "on_low": 1
       }
     }
   ],
