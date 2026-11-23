@@ -6196,8 +6196,7 @@
   },
   "2026-11-23": {
     "date": "2026-11-23",
-    "status": "pre-market",
-    "written_at": "2026-11-23T09:25:46-05:00",
+    "written_at": "2026-11-23T16:10:24-05:00",
     "plan": {
       "bias": "long",
       "price": 26878.5,
@@ -6399,13 +6398,595 @@
         "off_screen_scenarios": [
           "[FS] Failure Swing (Vol 1 Class 4)"
         ]
-      },
-      "sit_out": [
-        "Price chops sideways inside 26800-26878 without offering a retracement into discount before 10:00 AM",
-        "NQ and ES exhibit severe SMT divergence at the 09:30 open with disjointed candle delivery"
-      ],
-      "ai_model": "gemini-3.6-flash"
+      }
     },
-    "prose": "## The read\nFollowing Friday's sweep of Previous Week Low (24976.50), the market initiated a powerful low-resistance liquidity run (LRLR). In pre-market, price expanded over 1,000 points from the Midnight Open (25842.25) straight through Previous Day High (26504.25), pressing into Overnight High (26878.50). The walk-forward statistical engine rates the probability of taking ONH by 11:00 at 89%. Because price is vastly extended above the opening prices (>900 points), we do not chase market orders at the bell; instead, we look for a functional 5m retracement into discount of the morning expansion leg to execute continuation via the Expansion Retracement model toward 27000+.\n\n## Levels that matter\n- **26878.50 (Overnight High / BSL):** Primary draw on liquidity (89% probability). A clean 5m close above opens standard deviation projections toward 27050.\n- **26504.25 (Previous Day High):** Swept in pre-market; acts as major underlying structural support.\n- **25962.00 & 25842.25 (08:30 & Midnight Opens):** Baseline origin of today's PO3 manipulation/expansion leg.\n\n## Scenario A\n- **Model:** [ER] Expansion Retracement (Vol 1 Class 3)\n- **Trigger:** A 5m retracement after 09:30 into the 26720.00\u201326750.00 discount FVG, holding above 26610.00 with a bullish down-close OB reaction.\n- **Entry:** 26740.00\n- **Stop:** 26610.00 (below the 5m pre-market origin swing low)\n- **First Target:** 26878.50 (ONH), with Target 2 at 27050.00\n- **Session Window:** 09:30\u201311:00 ET\n\n## Scenario B\n- **Model:** [FS] Failure Swing (Vol 1 Class 4)\n- **Trigger:** Price wicks above ONH 26878.50 after 09:30, fails to maintain body closes, respects the wick CE, and prints a 5m SIBI with a CSD close below 26850.00.\n- **Entry:** 26860.00\n- **Stop:** 26920.00 (above the failure swing high)\n- **First Target:** 26650.00 (pre-market gap top), with Target 2 at 26504.25 (PDH)\n- **Session Window:** 09:30\u201311:00 ET\n\n## Invalidation\nThe long plan is invalidated if a 15-minute candle closes below 26610.00 prior to 11:00 ET, indicating that pre-market expansion buyers have lost control of the dealing range.\n\n## Sit out if\n- Price trades inside a tight 26800\u201326878 range without offering a retracement to discount before 10:00 AM.\n- NQ and ES exhibit severe cracking correlation (SMT) at 09:30 with disjointed candle delivery.\n\n## Models checked\n- **In Play:** [ER] Expansion Retracement (Vol 1 Class 3) \u2014 pre-market displacement created clear 5m/15m discount arrays for continuation.\n- **On Watch:** [FS] Failure Swing, [OPOB] Overpowered Order Block, [CISD] Change in State of Delivery, [IFVG] Inversion FVG, [TS] Anticipating Turtle Soups, [A+] Full Reversal Model, [FP] First Presentation \u2014 awaiting 09:30 price action at ONH.\n- **Not Today:** All remaining 14 models \u2014 conditions (such as HRLR, BPR overlaps, consolidation ranges, or post-11:30 macros) are absent.\n- **Confluence:** 89% draw on ONH; early-week bullish delivery following PWL sweep (PWL rule); LRLR displacement above PDH (26504.25)."
+    "outcome": "A_stop",
+    "detail": "[ER] Expansion Retracement (Vol 1 Class 3): stop \u00b7 at 09:35 \u00b7 went +0.18R / -1.32R\n  uncapped to 16:00: A_stop (-1.00R)\n  direction called long; AM was two_sided, whole RTH was two_sided",
+    "late_outcome": "A_stop",
+    "late_r": -1.0,
+    "grades": {
+      "bias2": "D",
+      "read": "C",
+      "day": "C",
+      "bias2_source": "measured"
+    },
+    "review": {
+      "bias2": {
+        "grade": "C",
+        "reason": "The primary ER long stopped out immediately during an opening 686-point crash, but the secondary Failure Swing short triggered cleanly for +3.5R.",
+        "wanted": "Wanted a 5m retracement into 26720-26750 discount to hold for a long expansion to 27050, or a Failure Swing above 26878.5 for a short to 26504.25.",
+        "happened": "NQ spiked to 27137.0 at the open, failed above ONH 26878.5, and crashed to 26450.25 by 09:40 before mean-reverting back to 26878.75.",
+        "model_called": "[ER] Expansion Retracement (Vol 1 Class 3)",
+        "model_actual": "[FS] Failure Swing (Vol 1 Class 4)",
+        "model_correct": false,
+        "model_said": "C"
+      },
+      "read": {
+        "grade": "C",
+        "reason": "The primary long directional bias was wrong at the open, but the plan correctly anticipated the Failure Swing counter-move."
+      },
+      "day": {
+        "grade": "C",
+        "shape": "Two-sided failure swing and liquidity raid",
+        "reason": "Price swept above ONH to 27137.0, collapsed 686 points to 26450.25 in 10 minutes, and mean-reverted back to close near the open at 26812.5."
+      },
+      "lessons": [
+        "Do not call primary long ERs when price at 09:30 sits over 900 points above the Midnight and 08:30 opening prices (Vol 2 Class 1).",
+        "When 09:30 wicks aggressively above ONH without displacement, prioritize the Failure Swing model over catching discount retracements (Vol 1 Class 4).",
+        "Require a confirmed CSD close before entering an ER leg inside the first 5 minutes of RTH (Vol 3 Class 3)."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe morning plan leaned long, looking for an [ER] Expansion Retracement (Vol 1 Class 3) to fill at 26740.0 into a 5m pre-market discount FVG (26720\u201326750) holding above 26610.0, targeting 26878.5 (ONH) and 27050.0. As a contingency, Scenario B anticipated a [FS] Failure Swing (Vol 1 Class 4) if price swept ONH 26878.50, failed to expand, and printed a CSD close below 26850.0 for a short to 26504.25.\n\n## What actually happened\nAt the 09:30 open (26878.5), NQ instantly spiked to 27137.0, purging ONH 26878.50. It immediately failed to hold bodies above the wick CE and violently reversed. By 09:35, price collapsed past the Scenario A entry of 26740.0 and slammed through the 26610.0 invalidation level, stopping out the long for -1.00R. Concurrently, the sharp rejection from 27137.0 triggered Scenario B's Failure Swing short at 26860.0, which swept straight into both downside targets (26650.0 and 26504.25) to hit a 26450.25 low at 09:40 (+3.5R). From 09:40 onward, price staged a full V-bottom recovery back to 26878.75 by 11:00 AM and closed the session at 26812.5.\n\n## How it went\nThis was a flawed primary read mitigated by a clean scenario contingency. Primary bias called for an ER continuation higher despite price trading >900 points above both the Midnight open (25842.25) and 08:30 open (25962.0)\u2014violating the core Opening Prices rule that price above opens favors shorts, not longs (Vol 2 Class 1, V57). Trying to catch a discount ER right at the 09:30 bell while overextended led to an immediate -1.00R stop. However, Scenario B accurately identified the structural risk of a Failure Swing at ONH 26878.5; that trade delivered +3.5R within 5 minutes.\n\n## The day as a whole\nThe session delivered a classic two-sided sweep day. The 09:30-09:40 window expanded 686 points top-to-bottom (27137.0 down to 26450.25) before completely mean-reverting back to equilibrium. By the 16:00 close (26812.5), NQ settled near the middle of its daily range (52.7% position), leaving long upper and lower wicks. The AM expansion was not a clean trend continuation but a liquidity purge of both extremes.\n\n## What to do differently\n- Refuse primary long ER entries when price at 09:30 is >300 points above midnight and 08:30 opening prices (Vol 2 Class 1).\n- Wait for a 5m CSD confirmation candle before stepping in front of an opening 09:30 expansion leg (Vol 3 Class 3).\n- When ONH sits right at the 09:30 open price, treat an immediate wick past it as a Failure Swing setup first, not an ER anchor (Vol 1 Class 4).",
+    "session": {
+      "date": "2026-11-23",
+      "bars": 193,
+      "premarket": {
+        "open": 25975.25,
+        "high": 26878.5,
+        "low": 25824.0,
+        "close": 26878.5,
+        "at_high": "09:00",
+        "at_low": "07:45"
+      },
+      "am": {
+        "open": 26878.5,
+        "high": 27137.0,
+        "low": 26450.25,
+        "close": 26878.75,
+        "at_high": "09:30",
+        "at_low": "09:40"
+      },
+      "lunch": {
+        "open": 26878.0,
+        "high": 26945.0,
+        "low": 26638.75,
+        "close": 26851.5,
+        "at_high": "11:10",
+        "at_low": "11:40"
+      },
+      "pm": {
+        "open": 26851.5,
+        "high": 26948.0,
+        "low": 26693.0,
+        "close": 26812.5,
+        "at_high": "15:40",
+        "at_low": "14:50"
+      },
+      "rth": {
+        "open": 26878.5,
+        "high": 27137.0,
+        "low": 26450.25,
+        "close": 26812.5,
+        "at_high": "09:30",
+        "at_low": "09:40",
+        "net": -66.0,
+        "shape": "two-sided",
+        "close_in_range_pct": 52.7
+      }
+    },
+    "playbook": {
+      "models": 22,
+      "rule_sections": 18,
+      "rules": 203,
+      "glossary": 69,
+      "dojo_classes": 17,
+      "notes": 42,
+      "videos": 82,
+      "concepts": 21,
+      "video_notes": 50,
+      "synced_at": "2026-11-17T21:21:23+00:00"
+    },
+    "sim": [
+      {
+        "i": 0,
+        "side": "long",
+        "model": "[ER] Expansion Retracement (Vol 1 Class 3)",
+        "entry": 26740.0,
+        "target": 26878.5,
+        "variants": {
+          "model": {
+            "stop": 26610.0,
+            "risk_pts": 130.0,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -130.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -261.0,
+                "net": -262.5
+              },
+              "5 MNQ": {
+                "gross": -1305.0,
+                "net": -1312.5
+              },
+              "1 NQ": {
+                "gross": -2610.0,
+                "net": -2615.0
+              }
+            }
+          },
+          "10pt": {
+            "stop": 26730.0,
+            "risk_pts": 10.0,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -10.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -21.0,
+                "net": -22.5
+              },
+              "5 MNQ": {
+                "gross": -105.0,
+                "net": -112.5
+              },
+              "1 NQ": {
+                "gross": -210.0,
+                "net": -215.0
+              }
+            }
+          },
+          "20pt": {
+            "stop": 26720.0,
+            "risk_pts": 20.0,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -20.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -41.0,
+                "net": -42.5
+              },
+              "5 MNQ": {
+                "gross": -205.0,
+                "net": -212.5
+              },
+              "1 NQ": {
+                "gross": -410.0,
+                "net": -415.0
+              }
+            }
+          },
+          "50pt": {
+            "stop": 26690.0,
+            "risk_pts": 50.0,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -50.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -101.0,
+                "net": -102.5
+              },
+              "5 MNQ": {
+                "gross": -505.0,
+                "net": -512.5
+              },
+              "1 NQ": {
+                "gross": -1010.0,
+                "net": -1015.0
+              }
+            }
+          },
+          "1R": {
+            "stop": 26601.5,
+            "risk_pts": 138.5,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -139.0,
+            "usd": {
+              "1 MNQ": {
+                "gross": -278.0,
+                "net": -279.5
+              },
+              "5 MNQ": {
+                "gross": -1390.0,
+                "net": -1397.5
+              },
+              "1 NQ": {
+                "gross": -2780.0,
+                "net": -2785.0
+              }
+            }
+          },
+          "2R": {
+            "stop": 26670.75,
+            "risk_pts": 69.25,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -69.75,
+            "usd": {
+              "1 MNQ": {
+                "gross": -139.5,
+                "net": -141.0
+              },
+              "5 MNQ": {
+                "gross": -697.5,
+                "net": -705.0
+              },
+              "1 NQ": {
+                "gross": -1395.0,
+                "net": -1400.0
+              }
+            }
+          },
+          "3R": {
+            "stop": 26693.83,
+            "risk_pts": 46.17,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -46.67,
+            "usd": {
+              "1 MNQ": {
+                "gross": -93.33,
+                "net": -94.83
+              },
+              "5 MNQ": {
+                "gross": -466.67,
+                "net": -474.17
+              },
+              "1 NQ": {
+                "gross": -933.33,
+                "net": -938.33
+              }
+            }
+          }
+        }
+      },
+      {
+        "i": 1,
+        "side": "short",
+        "model": "[FS] Failure Swing (Vol 1 Class 4)",
+        "entry": 26860.0,
+        "target": 26650.0,
+        "variants": {
+          "model": {
+            "stop": 26920.0,
+            "risk_pts": 60.0,
+            "outcome": "target",
+            "at": "09:35",
+            "triggered": true,
+            "points": 209.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": 419.0,
+                "net": 417.5
+              },
+              "5 MNQ": {
+                "gross": 2095.0,
+                "net": 2087.5
+              },
+              "1 NQ": {
+                "gross": 4190.0,
+                "net": 4185.0
+              }
+            }
+          },
+          "10pt": {
+            "stop": 26870.0,
+            "risk_pts": 10.0,
+            "outcome": "target",
+            "at": "09:35",
+            "triggered": true,
+            "points": 209.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": 419.0,
+                "net": 417.5
+              },
+              "5 MNQ": {
+                "gross": 2095.0,
+                "net": 2087.5
+              },
+              "1 NQ": {
+                "gross": 4190.0,
+                "net": 4185.0
+              }
+            }
+          },
+          "20pt": {
+            "stop": 26880.0,
+            "risk_pts": 20.0,
+            "outcome": "target",
+            "at": "09:35",
+            "triggered": true,
+            "points": 209.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": 419.0,
+                "net": 417.5
+              },
+              "5 MNQ": {
+                "gross": 2095.0,
+                "net": 2087.5
+              },
+              "1 NQ": {
+                "gross": 4190.0,
+                "net": 4185.0
+              }
+            }
+          },
+          "50pt": {
+            "stop": 26910.0,
+            "risk_pts": 50.0,
+            "outcome": "target",
+            "at": "09:35",
+            "triggered": true,
+            "points": 209.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": 419.0,
+                "net": 417.5
+              },
+              "5 MNQ": {
+                "gross": 2095.0,
+                "net": 2087.5
+              },
+              "1 NQ": {
+                "gross": 4190.0,
+                "net": 4185.0
+              }
+            }
+          },
+          "1R": {
+            "stop": 27070.0,
+            "risk_pts": 210.0,
+            "outcome": "target",
+            "at": "09:35",
+            "triggered": true,
+            "points": 209.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": 419.0,
+                "net": 417.5
+              },
+              "5 MNQ": {
+                "gross": 2095.0,
+                "net": 2087.5
+              },
+              "1 NQ": {
+                "gross": 4190.0,
+                "net": 4185.0
+              }
+            }
+          },
+          "2R": {
+            "stop": 26965.0,
+            "risk_pts": 105.0,
+            "outcome": "target",
+            "at": "09:35",
+            "triggered": true,
+            "points": 209.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": 419.0,
+                "net": 417.5
+              },
+              "5 MNQ": {
+                "gross": 2095.0,
+                "net": 2087.5
+              },
+              "1 NQ": {
+                "gross": 4190.0,
+                "net": 4185.0
+              }
+            }
+          },
+          "3R": {
+            "stop": 26930.0,
+            "risk_pts": 70.0,
+            "outcome": "target",
+            "at": "09:35",
+            "triggered": true,
+            "points": 209.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": 419.0,
+                "net": 417.5
+              },
+              "5 MNQ": {
+                "gross": 2095.0,
+                "net": 2087.5
+              },
+              "1 NQ": {
+                "gross": 4190.0,
+                "net": 4185.0
+              }
+            }
+          }
+        }
+      }
+    ],
+    "score": {
+      "components": {
+        "draw": 1.0,
+        "direction": 0.0,
+        "levels": 0.25,
+        "timing": 1.0,
+        "invalidation": 0.0
+      },
+      "weights": {
+        "draw": 0.35,
+        "direction": 0.2,
+        "levels": 0.2,
+        "timing": 0.15,
+        "invalidation": 0.1
+      },
+      "notes": {
+        "direction": "-71.5 pt",
+        "levels": "2 of 8 reacted at",
+        "timing": "resolved 09:35, inside the window",
+        "invalidation": "tripped"
+      },
+      "total": 0.55,
+      "grade": "D",
+      "best_scenario": 1,
+      "per_scenario": [
+        {
+          "i": 0,
+          "side": "long",
+          "model": "[ER] Expansion Retracement (Vol 1 Class 3)",
+          "outcome": "stop",
+          "triggered": true,
+          "at": "09:35",
+          "score": 0.0,
+          "mfe_r": 0.18,
+          "mae_r": 1.32
+        },
+        {
+          "i": 1,
+          "side": "short",
+          "model": "[FS] Failure Swing (Vol 1 Class 4)",
+          "outcome": "target",
+          "triggered": true,
+          "at": "09:35",
+          "score": 1.0,
+          "mfe_r": 4.85,
+          "mae_r": 0.0
+        }
+      ],
+      "levels": [
+        {
+          "price": 26878.5,
+          "name": "Overnight High (ONH)",
+          "reacted": true
+        },
+        {
+          "price": 26504.25,
+          "name": "Previous Day High (PDH)",
+          "reacted": true
+        },
+        {
+          "price": 26102.25,
+          "name": "London High",
+          "reacted": false
+        },
+        {
+          "price": 25962.0,
+          "name": "08:30 Open",
+          "reacted": false
+        },
+        {
+          "price": 25842.25,
+          "name": "Midnight Open",
+          "reacted": false
+        },
+        {
+          "price": 25561.5,
+          "name": "Weekly Open",
+          "reacted": false
+        },
+        {
+          "price": 25426.75,
+          "name": "Overnight Low (ONL)",
+          "reacted": false
+        },
+        {
+          "price": 24976.5,
+          "name": "Previous Day Low (PDL)",
+          "reacted": false
+        }
+      ],
+      "mirror_total": 0.75,
+      "mirror_grade": "B",
+      "beat_mirror": false
+    },
+    "prep": {
+      "events": [
+        {
+          "date": "2026-11-23",
+          "time": "09:45",
+          "title": "Flash Manufacturing PMI",
+          "impact": "medium"
+        },
+        {
+          "date": "2026-11-23",
+          "time": "09:45",
+          "title": "Flash Services PMI",
+          "impact": "medium"
+        }
+      ],
+      "pending": [
+        {
+          "price": 25777.88,
+          "name": "ER 0.5 never reached"
+        },
+        {
+          "price": 28583.75,
+          "name": "unswept Core PPI m/m high"
+        }
+      ],
+      "note": "**The prep \u2014 2026-11-23**\n\n**01 \u00b7 Calendar.** 09:45 Flash Manufacturing PMI (orange), 09:45 Flash Services PMI (orange).\n\n**05 \u00b7 Still pending.** ER 0.5 never reached 25777.88, unswept Core PPI m/m high 28583.75. These stay marked for the rest of the week.\n\n**10 \u00b7 The plan.** LONG from 26740.0, stop 26610.0, target 26878.5. Wrong if 15m candle close below 26610.00 invalidates the pre-market expansion structure 26610.0 by 11:00.\n\n_Steps 02-04, 06, 07 and 09 are live on the chart \u2014 they are the ones that change while you watch, so they are not written down here._"
+    },
+    "read_bench": {
+      "recent": {
+        "n": 30,
+        "hit": 53.3,
+        "benchmark": "B",
+        "benchmark_hit": 46.7,
+        "edge": 6.7,
+        "mix": {
+          "B": 14,
+          "C": 14,
+          "A": 2
+        },
+        "called": {
+          "C": 10,
+          "B": 20
+        },
+        "brier": 0.588,
+        "brier_prior": 0.597,
+        "brier_edge": 0.009,
+        "brier_n": 30
+      },
+      "all": {
+        "n": 120,
+        "hit": 34.2,
+        "benchmark": "C",
+        "benchmark_hit": 53.3,
+        "edge": -19.2,
+        "mix": {
+          "A": 15,
+          "C": 64,
+          "B": 41
+        },
+        "called": {
+          "A": 62,
+          "C": 19,
+          "B": 35
+        },
+        "brier": 0.816,
+        "brier_prior": 0.587,
+        "brier_edge": -0.229,
+        "brier_n": 116
+      }
+    }
   }
 }
