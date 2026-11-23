@@ -302,5 +302,157 @@
       "htf_bias": "SHORT",
       "model": null
     }
+  },
+  "2026-11-23": {
+    "date": "2026-11-23",
+    "written_at": "2026-11-23T16:15:31-05:00",
+    "grades": {
+      "plan": "B",
+      "plan_source": "measured",
+      "read": "C",
+      "day": "C"
+    },
+    "review": {
+      "bias1": {
+        "grade": "D",
+        "reason": "The short trigger at 26,770.0 was filled at the 09:30 bell and immediately stopped out for a 1.00R loss during a 258-point opening Judas spike to 27,137.0.",
+        "wanted": "A clean short breakdown below OVN VAH 26,770.0 targeting 26,603.5 and 26,504.25.",
+        "happened": "Price spiked to 27,137.0 at 09:30 to breach the stop cap before reversing 686 points down to 26,450.25 in a violent two-sided double purge.",
+        "model_called": "B",
+        "model_actual": "range_expansion",
+        "model_correct": false,
+        "model_said": "D"
+      },
+      "read": {
+        "grade": "C",
+        "reason": "The HTF long directional bias correctly anticipated higher prices above pre-market levels (reaching 27,137.0), but the narrative used stale level anchors (25,800s) and missed the opening double-purge volatility."
+      },
+      "day": {
+        "grade": "C",
+        "shape": "two-sided range expansion",
+        "reason": "The session printed a 686-point two-sided range expansion (26,450 to 27,137) via an opening double purge before balancing back around 26,812."
+      },
+      "lessons": [
+        "Do not place breakout stop-entry triggers at key levels right at the 09:30 open without waiting for the first presentation or Judas swing to clear [opens, Vol 2 Class 2].",
+        "Verify narrative level anchors match live pre-market price action when overnight gaps exceed standard daily ranges [gaps].",
+        "On massive overnight gap-up days, anticipate a double-purge expansion sweeping both liquidity extremes before settlement [CM, V67]."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe pre-open read held a HTF long bias, looking for post-open dip absorption around the London open/low zone to expand higher toward 26,102.25 and 26,504.25. However, live pre-market price traded hundreds of points higher at 26,778.75. The frozen 09:16 plan set a SHORT trigger on a close/break below OVN VAH 26,770.0 with a 75-point stop cap at 26,845.0, targeting 26,603.50 (PD Globex High) and 26,504.25 (PDH). The LONG plan required a breakout above OVN High 26,878.50.\n\n## What actually happened\nAt the 09:30 bell, price opened at 26,878.50 and instantly exploded upward to 27,137.00. This 258-point opening spike triggered the SHORT plan at 26,770.00 and immediately ran through the 26,845.00 stop cap for a full -1.00R loss (-75.50 pts, MAE 4.89R). Immediately upon tagging 27,137.00, the tape violently reversed, collapsing 686.75 points down to 26,450.25 by 09:40 (clearing both short targets after stopping the trade out). From 09:40 onward, price recovered to 26,878.75 by 11:00 AM and spent the remainder of lunch and PM chopping in a tight band around 26,812.50.\n\n## How it went\nThe execution failed due to poor timing and trigger placement right at the 09:30 open bell (`[opens]`, Vol 2 Class 2). Placing a breakout short trigger at 26,770.00 inside an opening volatility window exposed the plan directly to the 09:30 Judas swing (`[V57]`). While the stop cap did its job containing risk to -1.00R against a 367-point adverse move, the entry itself was misaligned with opening protocol. Furthermore, the pre-open narrative suffered from anchor distortion\u2014referencing 25,800\u201326,100 price levels while live pre-market traded at 26,778.75.\n\n## The day as a whole\nThe session delivered a classic two-sided range expansion driven by a massive overnight gap up from 25,142.00 settle. The 09:30\u201309:40 window executed a classic double purge (`[CM]`, V67): purging buy-stops above the pre-market high up to 27,137.00, then purging sell-stops down to 26,450.25, before returning to equilibrium near 26,812.00. Bias 2 outscored Bias 1 by avoiding breakout triggers at the open and anticipating two-sided rotation.\n\n## What to do differently\n1. **Never place breakout stop-entry triggers right at the 09:30 open:** Wait for the 09:30 opening candle to close or the first 5-minute presentation to print before engaging entries near session extremes (`[opens]`, Vol 2 Class 2).\n2. **Audit narrative price anchors against live price before freezing:** Ensure pre-open narrative PD arrays and target levels match current pre-market dealing ranges when massive gap-ups occur (`[gaps]`).\n3. **Prepare for double-purge price delivery on 700+ point gap days:** Recognize that extreme gaps into fresh high territory frequently engineer a double purge of both sides before directional program activation (`[CM]`, V67).",
+    "trade_11": {
+      "date": "2026-11-23",
+      "outcome": "stop",
+      "side": "short",
+      "trigger": 26770.0,
+      "at": "09:30",
+      "r": -1.0,
+      "mfe_r": 0.82,
+      "mae_r": 4.89,
+      "label": "\u274c the plan was stopped",
+      "stop": 26845.0,
+      "target": 26603.5,
+      "risk_pts": 75.0,
+      "trigger_name": "OVN VAH",
+      "stop_name": "75-pt cap",
+      "points": -75.5,
+      "marked": false,
+      "usd": {
+        "1 MNQ": {
+          "gross": -151.0,
+          "net": -152.5
+        },
+        "5 MNQ": {
+          "gross": -755.0,
+          "net": -762.5
+        },
+        "1 NQ": {
+          "gross": -1510.0,
+          "net": -1515.0
+        }
+      }
+    },
+    "trade_day": {
+      "date": "2026-11-23",
+      "outcome": "stop",
+      "side": "short",
+      "trigger": 26770.0,
+      "at": "09:30",
+      "r": -1.0,
+      "mfe_r": 0.82,
+      "mae_r": 4.89,
+      "label": "\u274c the plan was stopped",
+      "stop": 26845.0,
+      "target": 26603.5,
+      "risk_pts": 75.0,
+      "trigger_name": "OVN VAH",
+      "stop_name": "75-pt cap",
+      "points": -75.5,
+      "marked": false,
+      "usd": {
+        "1 MNQ": {
+          "gross": -151.0,
+          "net": -152.5
+        },
+        "5 MNQ": {
+          "gross": -755.0,
+          "net": -762.5
+        },
+        "1 NQ": {
+          "gross": -1510.0,
+          "net": -1515.0
+        }
+      }
+    },
+    "session": {
+      "date": "2026-11-23",
+      "bars": 194,
+      "premarket": {
+        "open": 25975.25,
+        "high": 26878.5,
+        "low": 25824.0,
+        "close": 26878.5,
+        "at_high": "09:00",
+        "at_low": "07:45"
+      },
+      "am": {
+        "open": 26878.5,
+        "high": 27137.0,
+        "low": 26450.25,
+        "close": 26878.75,
+        "at_high": "09:30",
+        "at_low": "09:40"
+      },
+      "lunch": {
+        "open": 26878.0,
+        "high": 26945.0,
+        "low": 26638.75,
+        "close": 26851.5,
+        "at_high": "11:10",
+        "at_low": "11:40"
+      },
+      "pm": {
+        "open": 26851.5,
+        "high": 26948.0,
+        "low": 26693.0,
+        "close": 26812.5,
+        "at_high": "15:40",
+        "at_low": "14:50"
+      },
+      "rth": {
+        "open": 26878.5,
+        "high": 27137.0,
+        "low": 26450.25,
+        "close": 26812.5,
+        "at_high": "09:30",
+        "at_low": "09:40",
+        "net": -66.0,
+        "shape": "two-sided",
+        "close_in_range_pct": 52.7
+      }
+    },
+    "called": {
+      "htf_bias": "LONG",
+      "model": null
+    }
   }
 }
