@@ -454,5 +454,171 @@
       "htf_bias": "LONG",
       "model": null
     }
+  },
+  "2026-11-24": {
+    "date": "2026-11-24",
+    "written_at": "2026-11-24T16:15:42-05:00",
+    "grades": {
+      "plan": "A",
+      "plan_source": "measured",
+      "read": "A",
+      "day": "C"
+    },
+    "review": {
+      "bias1": {
+        "grade": "C",
+        "reason": "The short leg filled and hit its target, but the day's actual range-bound, two-sided behavior did not match the implied 'trend_down' day-model.",
+        "wanted": "Price to push up, show orderflow absorption/exhaustion below the NY AM open near the 09:50\u201310:10 ET macro, then enter short targeting 26,178.25 and 26,142.25.",
+        "happened": "Price initially rose from the open, then broke below the 26265.0 OVN POC trigger at 09:35, activating the short trade which reached its first target.",
+        "model_called": "Scenario B (implied trend_down)",
+        "model_actual": "two_sided_range_with_recovery",
+        "model_correct": false,
+        "model_said": "C"
+      },
+      "read": {
+        "grade": "A",
+        "reason": "The directional short read correctly identified the market's bias and the primary draw on liquidity, which was ultimately taken."
+      },
+      "day": {
+        "grade": "C",
+        "shape": "two_sided_range_with_recovery",
+        "reason": "The RTH session saw price make a new low but then recover significantly, closing near the middle of its range with a small net loss, not characteristic of a sustained trend day."
+      },
+      "keep": [
+        "The HTF short bias and primary draw (26142.25 OVN L, 26043.62 Daily BISI CE) were correctly identified and reached.",
+        "The early downside price action, though not sustained, aligned with a 'Sell-Off / F-U' profile."
+      ],
+      "messages": {
+        "right": [
+          "09:16 Pre-open read: DRAW: The primary draw on liquidity is taking the overnight low at 26,142.25 (77% probability), with intermediate objective at today's NY AM KZ low at 26,178.25, extending into the Daily BISI CE at 26,043.62 (all were reached by 11:10).",
+          "09:40 #DM: Today reads as a Sell-Off / F-U day. (The RTH opened with a significant downward move into the lows)."
+        ],
+        "wrong": [
+          "02:45 London read: LONDON: LONG \u2014 Asia compressed... London is positioned for a liquidity raid before expanding toward upper value area targets. (London's implied long expansion did not follow through into the NY AM session, which continued downward).",
+          "09:40 #DM: Plan \u2460 is FILLED against the test \u2014 get out (break-even or the stop, no adding). (This message contradicts the Bias 1 frozen plan, whose long trigger (26450.25) was not met by 09:35, and contradicts the overall resolution that Bias 1's SHORT was filled and hit target at 09:35)."
+        ]
+      },
+      "lessons": [
+        "Ensure intra-day updates accurately reflect the state and triggers of the frozen plan to prevent contradictions (D14 Market Structure Shift 2.0).",
+        "Clearly distinguish between the predicted day-model and specific scenarios in the initial brief to enable precise evaluation of day type (D02 1st Stage: Consolidation Model).",
+        "Classify day-models based on the entire RTH session's price action, especially for 'trend_down' days which require closing near the low, rather than early performance (Playbook Rules: The Week - Sell-off week)."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe morning's Bias 1 read had a higher-timeframe short bias, with the primary draw on liquidity targeting the overnight low at 26,142.25, extending into the Daily BISI CE at 26,043.62. The specific short entry was planned for after price pushes up to test the NY AM Killzone high at 26,227.25 and shows absorption or exhaustion below the NY AM open (26,364.25), ideally around the 09:50\u201310:10 ET macro window. The frozen plan set a short trigger at a close below 26,265.0 (OVN POC), with a 75-point stop at 26,340.0, and targets at 26,200.0 (OVN VAL) and 26,142.25 (OVN L). The bias would be invalidated by a 15-minute candle close above today's NY AM high at 26,472.25. The implied day-model was 'trend_down'.\n\n## What actually happened\nThe NY AM session opened at 26,361.25. Price initially rose to an RTH high of 26,509.75 at 10:00, exceeding the pre-open's suggested entry zone. However, before that, at 09:35, price broke below the 26,265.0 OVN POC, triggering the short trade from the frozen plan. This trade successfully hit its target, yielding +0.87R. Price continued to drop, reaching the RTH low of 25,998.0 at 11:10, significantly beyond the primary draw of 26,142.25 and the Daily BISI CE of 26,043.62. After 11:10, the market reversed, recovering steadily throughout lunch and into the PM session, closing at 26,284.25. The day's net change was a modest -77.00 points, and price closed 55.9% up from its RTH low.\n\n## How it went\nThe Bias 1 read was accurate in its higher-timeframe short bias and correctly identified the primary draw on liquidity, which the market ultimately cleared. The short leg of the frozen plan triggered and delivered a profitable trade. However, the predicted day-model, implied as a 'trend_down' by Scenario B, was incorrect. The day's price action presented as a two-sided range with a significant recovery from the lows, rather than a sustained downward trend culminating in a close near the low, as expected for a `Sell-off week` or F-U profile (Playbook Rules: The Week). This indicates a strong directional read with a misclassification of the day's overall character.\n\n## The day as a whole\nThe RTH session ultimately resolved as a two-sided range with a substantial recovery from the lows, rather than a decisive trend down. Despite a strong initial move that cleared significant sell-side liquidity, the market failed to sustain the downward momentum, retracing and closing near its midpoint. This behavior contradicts the definition of a `trend_down` day, which typically closes strongly in the direction of the trend. In comparison, Bias 1 achieved a 'C' grade due to its profitable short leg despite the day-model misclassification, outperforming Bias 2 which was graded 'D'.\n\n## The posts today\n*   **Right:** The `09:16 Pre-open read` accurately identified the HTF short bias and correctly projected the primary draw on liquidity, including the overnight low at 26,142.25 and the Daily BISI CE at 26,043.62, all of which were eventually taken. The `09:40 #DM` post stating \"Today reads as a Sell-Off / F-U day\" captured the strong early downside move, consistent with the `SO` model's requirements (ENTRY MODELS - SO).\n*   **Wrong:** The `02:45 London read` anticipated a long expansion after a liquidity raid, but this long bias did not materialize into the NY AM session, which saw continued downside (PLAYBOOK RULES - News Protocols: London & pre-market deliver well, NY AM is choppy HRLR). Critically, the `09:40 #DM` post stating \"Plan \u2460 is FILLED against the test \u2014 get out (break-even or the stop, no adding)\" is factually incorrect. Bias 1's long trigger (26450.25 PDL) was not met by 09:35, as price was trading below this level, leading to an internal contradiction with Bias 1's successful short fill at 09:35.\n\n## What to do differently\n1.  Ensure intra-day updates accurately reflect the state and triggers of the `frozen plan` to prevent contradictions with the consolidated resolution (D14 Market Structure Shift 2.0).\n2.  Clearly distinguish between the `predicted day-model` and specific `scenarios` in the initial brief to enable precise evaluation of the day's character and avoid ambiguity in post-analysis (D02 1st Stage: Consolidation Model).\n3.  Classify day-models based on the entire RTH session's price action, especially for `trend_down` days where closing near the low is expected, rather than relying solely on early performance or partial session behavior (PLAYBOOK RULES - The Week: Sell-off week).",
+    "trade_11": {
+      "date": "2026-11-24",
+      "outcome": "target",
+      "side": "short",
+      "trigger": 26265.0,
+      "at": "09:35",
+      "r": 0.87,
+      "mfe_r": 0.97,
+      "mae_r": 0.95,
+      "label": "\u2705 the plan worked",
+      "stop": 26340.0,
+      "target": 26200.0,
+      "risk_pts": 75.0,
+      "trigger_name": "OVN POC",
+      "stop_name": "75-pt cap",
+      "points": 64.75,
+      "marked": false,
+      "usd": {
+        "1 MNQ": {
+          "gross": 129.5,
+          "net": 128.0
+        },
+        "5 MNQ": {
+          "gross": 647.5,
+          "net": 640.0
+        },
+        "1 NQ": {
+          "gross": 1295.0,
+          "net": 1290.0
+        }
+      }
+    },
+    "trade_day": {
+      "date": "2026-11-24",
+      "outcome": "target",
+      "side": "short",
+      "trigger": 26265.0,
+      "at": "09:35",
+      "r": 0.87,
+      "mfe_r": 0.97,
+      "mae_r": 0.95,
+      "label": "\u2705 the plan worked",
+      "stop": 26340.0,
+      "target": 26200.0,
+      "risk_pts": 75.0,
+      "trigger_name": "OVN POC",
+      "stop_name": "75-pt cap",
+      "points": 64.75,
+      "marked": false,
+      "usd": {
+        "1 MNQ": {
+          "gross": 129.5,
+          "net": 128.0
+        },
+        "5 MNQ": {
+          "gross": 647.5,
+          "net": 640.0
+        },
+        "1 NQ": {
+          "gross": 1295.0,
+          "net": 1290.0
+        }
+      }
+    },
+    "session": {
+      "date": "2026-11-24",
+      "bars": 194,
+      "premarket": {
+        "open": 26613.25,
+        "high": 26620.75,
+        "low": 26142.25,
+        "close": 26362.25,
+        "at_high": "04:40",
+        "at_low": "08:15"
+      },
+      "am": {
+        "open": 26361.25,
+        "high": 26509.75,
+        "low": 26038.75,
+        "close": 26116.75,
+        "at_high": "10:00",
+        "at_low": "10:45"
+      },
+      "lunch": {
+        "open": 26116.25,
+        "high": 26401.5,
+        "low": 25998.0,
+        "close": 26317.25,
+        "at_high": "12:45",
+        "at_low": "11:10"
+      },
+      "pm": {
+        "open": 26317.75,
+        "high": 26357.5,
+        "low": 26126.25,
+        "close": 26284.25,
+        "at_high": "13:30",
+        "at_low": "15:35"
+      },
+      "rth": {
+        "open": 26361.25,
+        "high": 26509.75,
+        "low": 25998.0,
+        "close": 26284.25,
+        "at_high": "10:00",
+        "at_low": "11:10",
+        "net": -77.0,
+        "shape": "two-sided",
+        "close_in_range_pct": 55.9
+      }
+    },
+    "called": {
+      "htf_bias": "SHORT",
+      "model": null
+    }
   }
 }
