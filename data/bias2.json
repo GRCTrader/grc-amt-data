@@ -6991,8 +6991,7 @@
   },
   "2026-11-24": {
     "date": "2026-11-24",
-    "status": "pre-market",
-    "written_at": "2026-11-24T09:25:45-05:00",
+    "written_at": "2026-11-24T16:11:00-05:00",
     "plan": {
       "bias": "long",
       "price": 26294.25,
@@ -7233,13 +7232,636 @@
         "off_screen_scenarios": [
           "Expansion Retracement"
         ]
-      },
-      "sit_out": [
-        "If 09:30 price action is choppy or fails to produce a clear bullish displacement from London low 26282.0.",
-        "If the 09:30 open fails to take one of the conflicting opens (Midnight or 08:30) and remains two-sided."
-      ],
-      "ai_model": "gemini-2.5-flash"
+      }
     },
-    "prose": "## The read\nPrice is currently trading at 26294.25, significantly below the Midnight Open but above the 08:30 Open. The key development is the sweep of the London low at 26282.0, followed by price returning back inside, signalling a failed break. This immediate price action, supported by the playbook's interpretation, generates a long bias for the 09:30 open. However, the statistically measured draw is to the downside (Overnight Low 26142.25). Our plan prioritizes the immediate failed break for a long entry, but remains vigilant for a continuation of the downside draw if the long setup fails. The conflicting open prices (Midnight vs 08:30) suggest waiting for 09:30 to clarify direction.\n\n## Levels that matter\n*   **26294.25 (Current Price):** Current market quote.\n*   **26282.0 (London Low):** Was recently taken below, then price came back inside, making it a critical reversal point.\n*   **26208.75 (08:30 Open):** Price rallied from this level in pre-market.\n*   **26450.25 (PDL):** Previous day's low, will likely act as resistance for an upward move.\n*   **26823.0 (Midnight Open):** Significantly above current price, potential higher target.\n*   **26142.25 (Overnight Low):** The strong statistical draw on liquidity to the downside.\n\n## Scenario A\n**Model:** Failure Swing\n**Trigger:** After 09:30, price respects London low 26282.0 as support and creates a 5m bullish FVG above it, with bodies respecting the FVG's CE.\n**Entry:** 26290.0\n**Stop:** 26260.0\n**First Target:** 26450.25\n**Session Window:** 09:30-11:00\n\n## Scenario B\n**Model:** Expansion Retracement\n**Trigger:** If 15m candle closes below London low 26282.0, then price expands lower forming a 5m bearish FVG below 08:30 open 26208.75; enter at the FVG CE on retracement.\n**Entry:** 26200.0\n**Stop:** 26240.0\n**First Target:** 26142.25\n**Session Window:** 09:30-11:00\n\n## Invalidation\nA 15m candle close below London low 26282.0 by 11:00.\n\n## Sit out if\nIf 09:30 price action is choppy or fails to produce a clear bullish displacement from London low 26282.0, or if the 09:30 open fails to take one of the conflicting opens (Midnight or 08:30) and remains two-sided.\n\n## Models checked\n*   **Expansion Retracement:** On watch, as a new expansion might form a retracement for entry.\n*   **Failure Swing:** In play, due to the failed break of the London low (26282.0).\n*   **Overpowered Order Block:** On watch, awaiting an OB and associated gap after liquidity was taken.\n*   **Change in State of Delivery:** On watch, awaiting confirmation of a bullish shift after liquidity was taken.\n*   **Reversal Confirmation Chain:** On watch, as components for this chain might form after 09:30.\n*   **Anticipating Turtle Soups:** On watch, as the London low was souped; awaiting reversal confirmation.\n*   **Full Reversal Model (A+ recipe):** On watch, as London low was taken, awaiting further confirmation from opens after 09:30.\n*   **First Presentation:** On watch, as the first FVG after 09:30 will be important.\n*   **Model 2022 + OTE:** On watch, after sell-side was taken, we await an MSS/CSD and expansion for an OTE retracement.\n*   All other models are not today, as their specific conditions are not met or forming on the charts at this time.\n\n**Confluence:**\n*   The playbook's explicit bias lean, derived directly from the current price state, is 'long (long: failed break of a low)'.\n*   The Failure Swing model is highlighted as 'Among the most powerful reversals of the week', adding conviction to a reversal from the swept low.\n*   Price is positioned at 17% of the overnight range, indicating it is at the lower end of the range, suggesting potential for an upward move.\n*   The bullish pre-market activity, with price rallying +85.50 pts from the 08:30 open, indicates immediate upward momentum into the RTH."
+    "outcome": "A_stop",
+    "detail": "Failure Swing: stop \u00b7 at 09:35 \u00b7 went +1.55R / -3.27R\n  uncapped to 16:00: A_stop (-1.00R)\n  direction called long; AM was down, whole RTH was down",
+    "late_outcome": "A_stop",
+    "late_r": -1.0,
+    "grades": {
+      "bias2": "F",
+      "read": "F",
+      "day": "C",
+      "bias2_source": "measured"
+    },
+    "review": {
+      "bias2": {
+        "grade": "D",
+        "reason": "The morning's primary long bias was wrong, its trigger condition for the Failure Swing was not strictly met, and both scenarios resulted in immediate stop-outs.",
+        "wanted": "The plan primarily wanted to see price respect the London low 26282.0 as support after 09:30 for a bullish Failure Swing.",
+        "happened": "Price broke below the London low 26282.0 immediately after 09:30, confirmed a downside move, then rallied briefly before resuming a strong descent.",
+        "model_called": "Failure Swing",
+        "model_actual": "Sell-Off / F-U Model",
+        "model_correct": false,
+        "model_said": "D"
+      },
+      "read": {
+        "grade": "F",
+        "reason": "The day exhibited a strong downward trend in the AM and closed net down, directly opposing the morning's primary long bias."
+      },
+      "day": {
+        "grade": "C",
+        "shape": "Trend day down into a two-sided range",
+        "reason": "Price made a significant move lower in the morning after an initial rally, but then recovered to close mid-range, resulting in a net down yet two-sided RTH."
+      },
+      "keep": [
+        "The 09:40 test correctly identified the day's true profile as a 'Sell-Off / F-U day' after the initial long failed.",
+        "Bias 1's HTF pre-open read correctly predicted a 'SHORT' bias and 'trend_down' day, which played out in the AM."
+      ],
+      "messages": {
+        "right": [
+          "09:16 Pre-open read \u2014 the map, then the draw SHORT",
+          "09:40 test \u2014 lower low through the PDL 26,450.25 with displacement... Today reads as a Sell-Off / F-U day.",
+          "09:40 test... Plan \u2460 is FILLED against the test \u2014 get out (break-even or the stop, no adding)."
+        ],
+        "wrong": [
+          "09:25 BIAS 2 \u00b7 2026-11-24 \u00b7 LONG",
+          "09:27 NQ \u00b7 2026-11-24 \u00b7 Playbook 1 \u00b7 LONG",
+          "09:35 \u2460 filled 26,290 09:30 \u00b7 stop 26,260 \u00b7 target 26,450.25"
+        ]
+      },
+      "lessons": [
+        "Strictly adhere to trigger conditions, especially for 'respect as support' in the Failure Swing model, ensuring price action genuinely confirms (V43).",
+        "Prioritize HTF bias, as demonstrated by Bias 1's correct read, when LTF conditions for a counter-trend trade are ambiguous or contradictory to avoid early failures.",
+        "Recognize and adapt quickly to a 'Sell-Off / F-U day' profile, as called by the 09:40 test, by focusing on short entries from initial rallies rather than trying to counter-trend (SO)."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe morning's Bias 2 called for a long bias (26294.25). The primary scenario was a Failure Swing [FS], triggered if price respected the London low 26282.0 as support after 09:30, creating a 5m bullish FVG above it. The entry was at 26290.0 with a tight stop at 26260.0, targeting 26450.25 / 26823.0. A secondary scenario, a short via Expansion Retracement [ER], would trigger if a 15m candle closed below London low, implying a continuation lower. Invalidation for the long was a 15m close below London low by 11:00.\n\n## What actually happened\nThe RTH opened at 26361.25. The first 5-minute candle (09:30-09:35) opened at 26361.25, dropped to 26270.0 (below London low 26282.0), and closed at 26270.0. This immediately violated the \"respects London low as support\" condition. Despite this, the Failure Swing long trade triggered and was stopped out at 09:35, recording a -1.0R loss. The 09:30-09:45 15m candle closed at 26116.75, confirming the long invalidation (a close below London low). The bot's 09:40 test correctly identified the breakdown, stopped the failed long, and proposed a new short trade based on the \"Sell-Off / F-U Model\" [SO]. The secondary Expansion Retracement short also triggered and stopped out at 09:40. Price rallied to 26509.75 by 10:00, then plummeted to 26038.75 by 10:45, confirming the morning's strong downside trend. The day's low was 25998.0 at 11:10. The RTH ultimately closed at 26284.25, net down 77.0 points, finishing 55.9% up from the day's low.\n\n## How it went\nThe morning's long bias was entirely wrong. The core condition for the primary Failure Swing long\u2014price respecting the London low as support\u2014was immediately violated when price broke below it, yet the trade still filled, leading to an immediate stop-out. This indicates a failure in strictly adhering to the specified trigger [FS]. The subsequent short trade also failed quickly. In contrast, Bias 1's pre-open read correctly identified a \"SHORT\" HTF bias and predicted a \"trend_down\" day, which the AM session decisively confirmed. The playbook's strength was in its 09:40 self-correction, pivoting to a \"Sell-Off / F-U Model\" [SO] after the initial long failed, identifying the day's true profile. However, this re-direction did not result in a profitable trade for the specified entries.\n\n## The day as a whole\nThe day presented as a clear trend down in the morning session, with price pushing significantly lower after an initial counter-trend rally into 10:00. This strong AM directional movement strongly validated Bias 1's \"trend_down\" prediction. However, the RTH closing at 26284.25, net down but 55.9% up from the day's low, shows a two-sided recovery in the afternoon, forming a trend day down into a two-sided range. The morning's primary long bias was fundamentally misaligned with the immediate market delivery.\n\n## The posts today\nThe most insightful posts came from the bot's self-correction. At **09:40**, the test detected a \"lower low through the PDL... with displacement\" and stated: \"Today reads as a Sell-Off / F-U day.\" It also correctly advised: \"Plan \u2460 is FILLED against the test \u2014 get out (break-even or the stop, no adding).\" This was a crucial and correct pivot. Bias 1's **09:16** \"Pre-open read\" also correctly called for a \"SHORT\" HTF bias. The **09:25** \"BIAS 2 \u00b7 LONG\" post was wrong, as was its **09:27** \"Playbook 1 \u00b7 LONG\" thesis, which claimed a \"failed break\" of the London low when price clearly broke below it. The **09:35** post stating \"\u2460 filled 26,290 09:30\" was technically true that the order filled, but the explicit trigger condition for respecting the London low was not met by the price action.\n\n## What to do differently\n*   Adhere strictly to Failure Swing trigger conditions: If the plan states \"price respects [level] as support,\" ensure price truly holds above that level with bodies, rather than breaking below, before entry (V43).\n*   Incorporate HTF bias earlier: When the HTF bias (like Bias 1's short call) conflicts with an LTF counter-trend setup, give higher weight to the HTF context to avoid getting trapped in early counter-trend trades (D10).\n*   Improve execution of the \"Sell-Off / F-U Model\": Once the day's profile shifts to a strong trend, refine entry timing within rallies (e.g., at PD arrays in premium) to participate effectively in the move rather than being immediately stopped out (SO, V57).",
+    "session": {
+      "date": "2026-11-24",
+      "bars": 193,
+      "premarket": {
+        "open": 26613.25,
+        "high": 26620.75,
+        "low": 26142.25,
+        "close": 26362.25,
+        "at_high": "04:40",
+        "at_low": "08:15"
+      },
+      "am": {
+        "open": 26361.25,
+        "high": 26509.75,
+        "low": 26038.75,
+        "close": 26116.75,
+        "at_high": "10:00",
+        "at_low": "10:45"
+      },
+      "lunch": {
+        "open": 26116.25,
+        "high": 26401.5,
+        "low": 25998.0,
+        "close": 26317.25,
+        "at_high": "12:45",
+        "at_low": "11:10"
+      },
+      "pm": {
+        "open": 26317.75,
+        "high": 26357.5,
+        "low": 26126.25,
+        "close": 26284.25,
+        "at_high": "13:30",
+        "at_low": "15:35"
+      },
+      "rth": {
+        "open": 26361.25,
+        "high": 26509.75,
+        "low": 25998.0,
+        "close": 26284.25,
+        "at_high": "10:00",
+        "at_low": "11:10",
+        "net": -77.0,
+        "shape": "two-sided",
+        "close_in_range_pct": 55.9
+      }
+    },
+    "playbook": {
+      "models": 22,
+      "rule_sections": 18,
+      "rules": 203,
+      "glossary": 69,
+      "dojo_classes": 17,
+      "notes": 42,
+      "videos": 82,
+      "concepts": 21,
+      "video_notes": 50,
+      "synced_at": "2026-11-17T21:21:23+00:00"
+    },
+    "sim": [
+      {
+        "i": 0,
+        "side": "long",
+        "model": "Failure Swing",
+        "entry": 26290.0,
+        "target": 26450.25,
+        "variants": {
+          "model": {
+            "stop": 26260.0,
+            "risk_pts": 30.0,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -30.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -61.0,
+                "net": -62.5
+              },
+              "5 MNQ": {
+                "gross": -305.0,
+                "net": -312.5
+              },
+              "1 NQ": {
+                "gross": -610.0,
+                "net": -615.0
+              }
+            }
+          },
+          "10pt": {
+            "stop": 26280.0,
+            "risk_pts": 10.0,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -10.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -21.0,
+                "net": -22.5
+              },
+              "5 MNQ": {
+                "gross": -105.0,
+                "net": -112.5
+              },
+              "1 NQ": {
+                "gross": -210.0,
+                "net": -215.0
+              }
+            }
+          },
+          "20pt": {
+            "stop": 26270.0,
+            "risk_pts": 20.0,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -20.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -41.0,
+                "net": -42.5
+              },
+              "5 MNQ": {
+                "gross": -205.0,
+                "net": -212.5
+              },
+              "1 NQ": {
+                "gross": -410.0,
+                "net": -415.0
+              }
+            }
+          },
+          "50pt": {
+            "stop": 26240.0,
+            "risk_pts": 50.0,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -50.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -101.0,
+                "net": -102.5
+              },
+              "5 MNQ": {
+                "gross": -505.0,
+                "net": -512.5
+              },
+              "1 NQ": {
+                "gross": -1010.0,
+                "net": -1015.0
+              }
+            }
+          },
+          "1R": {
+            "stop": 26129.75,
+            "risk_pts": 160.25,
+            "outcome": "target",
+            "at": "09:45",
+            "triggered": true,
+            "points": 159.75,
+            "usd": {
+              "1 MNQ": {
+                "gross": 319.5,
+                "net": 318.0
+              },
+              "5 MNQ": {
+                "gross": 1597.5,
+                "net": 1590.0
+              },
+              "1 NQ": {
+                "gross": 3195.0,
+                "net": 3190.0
+              }
+            }
+          },
+          "2R": {
+            "stop": 26209.88,
+            "risk_pts": 80.12,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -80.62,
+            "usd": {
+              "1 MNQ": {
+                "gross": -161.25,
+                "net": -162.75
+              },
+              "5 MNQ": {
+                "gross": -806.25,
+                "net": -813.75
+              },
+              "1 NQ": {
+                "gross": -1612.5,
+                "net": -1617.5
+              }
+            }
+          },
+          "3R": {
+            "stop": 26236.58,
+            "risk_pts": 53.42,
+            "outcome": "stop",
+            "at": "09:35",
+            "triggered": true,
+            "points": -53.92,
+            "usd": {
+              "1 MNQ": {
+                "gross": -107.83,
+                "net": -109.33
+              },
+              "5 MNQ": {
+                "gross": -539.17,
+                "net": -546.67
+              },
+              "1 NQ": {
+                "gross": -1078.33,
+                "net": -1083.33
+              }
+            }
+          }
+        }
+      },
+      {
+        "i": 1,
+        "side": "short",
+        "model": "Expansion Retracement",
+        "entry": 26200.0,
+        "target": 26142.25,
+        "variants": {
+          "model": {
+            "stop": 26240.0,
+            "risk_pts": 40.0,
+            "outcome": "stop",
+            "at": "09:40",
+            "triggered": true,
+            "points": -40.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -81.0,
+                "net": -82.5
+              },
+              "5 MNQ": {
+                "gross": -405.0,
+                "net": -412.5
+              },
+              "1 NQ": {
+                "gross": -810.0,
+                "net": -815.0
+              }
+            }
+          },
+          "10pt": {
+            "stop": 26210.0,
+            "risk_pts": 10.0,
+            "outcome": "stop",
+            "at": "10:20",
+            "triggered": true,
+            "points": -10.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -21.0,
+                "net": -22.5
+              },
+              "5 MNQ": {
+                "gross": -105.0,
+                "net": -112.5
+              },
+              "1 NQ": {
+                "gross": -210.0,
+                "net": -215.0
+              }
+            }
+          },
+          "20pt": {
+            "stop": 26220.0,
+            "risk_pts": 20.0,
+            "outcome": "stop",
+            "at": "09:40",
+            "triggered": true,
+            "points": -20.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -41.0,
+                "net": -42.5
+              },
+              "5 MNQ": {
+                "gross": -205.0,
+                "net": -212.5
+              },
+              "1 NQ": {
+                "gross": -410.0,
+                "net": -415.0
+              }
+            }
+          },
+          "50pt": {
+            "stop": 26250.0,
+            "risk_pts": 50.0,
+            "outcome": "stop",
+            "at": "09:40",
+            "triggered": true,
+            "points": -50.5,
+            "usd": {
+              "1 MNQ": {
+                "gross": -101.0,
+                "net": -102.5
+              },
+              "5 MNQ": {
+                "gross": -505.0,
+                "net": -512.5
+              },
+              "1 NQ": {
+                "gross": -1010.0,
+                "net": -1015.0
+              }
+            }
+          },
+          "1R": {
+            "stop": 26257.75,
+            "risk_pts": 57.75,
+            "outcome": "stop",
+            "at": "09:40",
+            "triggered": true,
+            "points": -58.25,
+            "usd": {
+              "1 MNQ": {
+                "gross": -116.5,
+                "net": -118.0
+              },
+              "5 MNQ": {
+                "gross": -582.5,
+                "net": -590.0
+              },
+              "1 NQ": {
+                "gross": -1165.0,
+                "net": -1170.0
+              }
+            }
+          },
+          "2R": {
+            "stop": 26228.88,
+            "risk_pts": 28.88,
+            "outcome": "stop",
+            "at": "09:40",
+            "triggered": true,
+            "points": -29.38,
+            "usd": {
+              "1 MNQ": {
+                "gross": -58.75,
+                "net": -60.25
+              },
+              "5 MNQ": {
+                "gross": -293.75,
+                "net": -301.25
+              },
+              "1 NQ": {
+                "gross": -587.5,
+                "net": -592.5
+              }
+            }
+          },
+          "3R": {
+            "stop": 26219.25,
+            "risk_pts": 19.25,
+            "outcome": "stop",
+            "at": "09:40",
+            "triggered": true,
+            "points": -19.75,
+            "usd": {
+              "1 MNQ": {
+                "gross": -39.5,
+                "net": -41.0
+              },
+              "5 MNQ": {
+                "gross": -197.5,
+                "net": -205.0
+              },
+              "1 NQ": {
+                "gross": -395.0,
+                "net": -400.0
+              }
+            }
+          }
+        }
+      }
+    ],
+    "score": {
+      "components": {
+        "draw": 0.0,
+        "direction": 0.0,
+        "levels": 0.267,
+        "timing": 1.0,
+        "invalidation": 0.0
+      },
+      "weights": {
+        "draw": 0.35,
+        "direction": 0.2,
+        "levels": 0.2,
+        "timing": 0.15,
+        "invalidation": 0.1
+      },
+      "notes": {
+        "direction": "-315.2 pt",
+        "levels": "4 of 15 reacted at",
+        "timing": "resolved 09:35, inside the window",
+        "invalidation": "tripped"
+      },
+      "total": 0.203,
+      "grade": "F",
+      "best_scenario": 0,
+      "per_scenario": [
+        {
+          "i": 0,
+          "side": "long",
+          "model": "Failure Swing",
+          "outcome": "stop",
+          "triggered": true,
+          "at": "09:35",
+          "score": 0.0,
+          "mfe_r": 1.55,
+          "mae_r": 3.27
+        },
+        {
+          "i": 1,
+          "side": "short",
+          "model": "Expansion Retracement",
+          "outcome": "stop",
+          "triggered": true,
+          "at": "09:40",
+          "score": 0.0,
+          "mfe_r": 0.0,
+          "mae_r": 4.98
+        }
+      ],
+      "levels": [
+        {
+          "price": 27137.0,
+          "name": "PDH",
+          "reacted": false
+        },
+        {
+          "price": 26450.25,
+          "name": "PDL",
+          "reacted": true
+        },
+        {
+          "price": 26812.5,
+          "name": "Previous Pit Close",
+          "reacted": false
+        },
+        {
+          "price": 27036.0,
+          "name": "ONH",
+          "reacted": false
+        },
+        {
+          "price": 26142.25,
+          "name": "ONL",
+          "reacted": true
+        },
+        {
+          "price": 27036.0,
+          "name": "Asia High",
+          "reacted": false
+        },
+        {
+          "price": 26684.0,
+          "name": "Asia Low",
+          "reacted": false
+        },
+        {
+          "price": 26949.5,
+          "name": "London High",
+          "reacted": false
+        },
+        {
+          "price": 26282.0,
+          "name": "London Low",
+          "reacted": true
+        },
+        {
+          "price": 26888.0,
+          "name": "Asia Open",
+          "reacted": false
+        },
+        {
+          "price": 26823.0,
+          "name": "Midnight Open",
+          "reacted": false
+        },
+        {
+          "price": 26208.75,
+          "name": "08:30 Open",
+          "reacted": true
+        },
+        {
+          "price": 25561.5,
+          "name": "Weekly Open",
+          "reacted": false
+        },
+        {
+          "price": 28279.25,
+          "name": "Previous Week High",
+          "reacted": false
+        },
+        {
+          "price": 24976.5,
+          "name": "Previous Week Low",
+          "reacted": false
+        }
+      ],
+      "mirror_total": 0.753,
+      "mirror_grade": "B",
+      "beat_mirror": false
+    },
+    "prep": {
+      "events": [
+        {
+          "date": "2026-11-24",
+          "time": "10:00",
+          "title": "CB Consumer Confidence",
+          "impact": "medium"
+        }
+      ],
+      "pending": [
+        {
+          "price": 25777.88,
+          "name": "ER 0.5 never reached"
+        }
+      ],
+      "note": "**The prep \u2014 2026-11-24**\n\n**01 \u00b7 Calendar.** 10:00 CB Consumer Confidence (orange).\n\n**05 \u00b7 Still pending.** ER 0.5 never reached 25777.88. These stay marked for the rest of the week.\n\n**10 \u00b7 The plan.** LONG from 26290.0, stop 26260.0, target 26450.25. Wrong if 15m close below London low 26282.0 by 11:00.\n\n_Steps 02-04, 06, 07 and 09 are live on the chart \u2014 they are the ones that change while you watch, so they are not written down here._"
+    },
+    "read_bench": {
+      "recent": {
+        "n": 30,
+        "hit": 56.7,
+        "benchmark": "C",
+        "benchmark_hit": 46.7,
+        "edge": 10.0,
+        "mix": {
+          "C": 14,
+          "B": 14,
+          "A": 2
+        },
+        "called": {
+          "B": 21,
+          "C": 9
+        },
+        "brier": 0.561,
+        "brier_prior": 0.597,
+        "brier_edge": 0.036,
+        "brier_n": 30
+      },
+      "all": {
+        "n": 121,
+        "hit": 34.7,
+        "benchmark": "C",
+        "benchmark_hit": 52.9,
+        "edge": -18.2,
+        "mix": {
+          "A": 15,
+          "C": 64,
+          "B": 42
+        },
+        "called": {
+          "A": 62,
+          "C": 19,
+          "B": 36
+        },
+        "brier": 0.813,
+        "brier_prior": 0.589,
+        "brier_edge": -0.224,
+        "brier_n": 117
+      }
+    }
   }
 }
