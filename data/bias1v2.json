@@ -1,0 +1,548 @@
+{
+  "at": "2026-11-25T04:38-05:00",
+  "questions": {
+    "dir": "09:30\u201311:00 closes UP",
+    "first": "overnight HIGH taken before the overnight LOW",
+    "poc": "price trades back to the prior-day POC by 11:00",
+    "gap": "the gap to yesterday's 16:00 close fills by 11:00",
+    "orx": "the 09:30\u201309:40 high or low is the morning's (to 12:00) extreme"
+  },
+  "today": {},
+  "recent": [],
+  "bench": {
+    "days": 49,
+    "from": "2026-09-17",
+    "to": "2026-11-24",
+    "l2": "auto",
+    "feats": [
+      "gap_atr",
+      "vs_va",
+      "pos_ovn",
+      "ovn_rng_atr",
+      "vs_mid",
+      "vs_830",
+      "settle_inv",
+      "prior_dir",
+      "prior_cl_loc",
+      "trend5_atr",
+      "london_sweep",
+      "ovn_delta",
+      "dow_mon",
+      "dow_fri",
+      "poc_dist_atr"
+    ],
+    "dir": {
+      "days": 19,
+      "calls": 8,
+      "coverage": 42.1,
+      "ci95": [
+        25.0,
+        87.5
+      ],
+      "enough": false,
+      "note": "8 calls: needs 40 before the hit rate means anything",
+      "hit_when_called": 62.5,
+      "benchmark_same_days": 62.5,
+      "benchmark_all_days": 42.1,
+      "brier": 0.2579,
+      "brier_base": 0.2702,
+      "skill": 0.046,
+      "pts_1nq": -316.0,
+      "calibration": [
+        {
+          "bucket": "40\u201350%",
+          "n": 1,
+          "said": 50.0,
+          "happened": 0.0
+        },
+        {
+          "bucket": "50\u201360%",
+          "n": 10,
+          "said": 57.2,
+          "happened": 30.0
+        },
+        {
+          "bucket": "60\u201370%",
+          "n": 8,
+          "said": 62.8,
+          "happened": 62.5
+        }
+      ],
+      "weekday": {
+        "Mon": {
+          "calls": 2,
+          "hit": 100.0
+        },
+        "Tue": {
+          "calls": 2,
+          "hit": 50.0
+        },
+        "Wed": {
+          "calls": 1,
+          "hit": 100.0
+        },
+        "Thu": {
+          "calls": 1,
+          "hit": 0.0
+        },
+        "Fri": {
+          "calls": 2,
+          "hit": 50.0
+        }
+      },
+      "alt_l2": {
+        "calls": 17,
+        "hit_when_called": 47.1,
+        "benchmark_same_days": 41.2,
+        "skill": -0.249
+      }
+    },
+    "first": {
+      "days": 17,
+      "calls": 16,
+      "coverage": 94.1,
+      "ci95": [
+        50.0,
+        93.8
+      ],
+      "enough": false,
+      "note": "16 calls: needs 40 before the hit rate means anything",
+      "hit_when_called": 75.0,
+      "benchmark_same_days": 31.2,
+      "benchmark_all_days": 29.4,
+      "brier": 0.1976,
+      "brier_base": 0.2584,
+      "skill": 0.235,
+      "pts_1nq": 1288.2,
+      "calibration": [
+        {
+          "bucket": "0\u201330%",
+          "n": 6,
+          "said": 12.5,
+          "happened": 16.7
+        },
+        {
+          "bucket": "40\u201350%",
+          "n": 1,
+          "said": 49.5,
+          "happened": 100.0
+        },
+        {
+          "bucket": "60\u201370%",
+          "n": 1,
+          "said": 68.7,
+          "happened": 100.0
+        },
+        {
+          "bucket": "70\u2013100%",
+          "n": 9,
+          "said": 87.2,
+          "happened": 66.7
+        }
+      ],
+      "weekday": {
+        "Mon": {
+          "calls": 3,
+          "hit": 100.0
+        },
+        "Tue": {
+          "calls": 4,
+          "hit": 75.0
+        },
+        "Wed": {
+          "calls": 3,
+          "hit": 66.7
+        },
+        "Thu": {
+          "calls": 3,
+          "hit": 66.7
+        },
+        "Fri": {
+          "calls": 3,
+          "hit": 66.7
+        }
+      },
+      "alt_l2": {
+        "calls": 15,
+        "hit_when_called": 73.3,
+        "benchmark_same_days": 26.7,
+        "skill": 0.103
+      }
+    },
+    "poc": {
+      "days": 19,
+      "calls": 17,
+      "coverage": 89.5,
+      "ci95": [
+        52.9,
+        94.1
+      ],
+      "enough": false,
+      "note": "17 calls: needs 40 before the hit rate means anything",
+      "hit_when_called": 76.5,
+      "benchmark_same_days": 70.6,
+      "benchmark_all_days": 68.4,
+      "brier": 0.1911,
+      "brier_base": 0.2233,
+      "skill": 0.144,
+      "pts_1nq": 2311.0,
+      "calibration": [
+        {
+          "bucket": "0\u201330%",
+          "n": 12,
+          "said": 17.5,
+          "happened": 16.7
+        },
+        {
+          "bucket": "30\u201340%",
+          "n": 4,
+          "said": 34.7,
+          "happened": 50.0
+        },
+        {
+          "bucket": "40\u201350%",
+          "n": 2,
+          "said": 44.4,
+          "happened": 50.0
+        },
+        {
+          "bucket": "60\u201370%",
+          "n": 1,
+          "said": 65.7,
+          "happened": 100.0
+        }
+      ],
+      "weekday": {
+        "Mon": {
+          "calls": 4,
+          "hit": 100.0
+        },
+        "Tue": {
+          "calls": 4,
+          "hit": 75.0
+        },
+        "Wed": {
+          "calls": 3,
+          "hit": 66.7
+        },
+        "Thu": {
+          "calls": 3,
+          "hit": 66.7
+        },
+        "Fri": {
+          "calls": 3,
+          "hit": 66.7
+        }
+      },
+      "alt_l2": {
+        "calls": 16,
+        "hit_when_called": 81.2,
+        "benchmark_same_days": 75.0,
+        "skill": 0.13
+      }
+    },
+    "gap": {
+      "days": 17,
+      "calls": 17,
+      "coverage": 100.0,
+      "ci95": [
+        47.1,
+        88.2
+      ],
+      "enough": false,
+      "note": "17 calls: needs 40 before the hit rate means anything",
+      "hit_when_called": 70.6,
+      "benchmark_same_days": 70.6,
+      "benchmark_all_days": 70.6,
+      "brier": 0.2055,
+      "brier_base": 0.2134,
+      "skill": 0.037,
+      "pts_1nq": 1199.0,
+      "calibration": [
+        {
+          "bucket": "0\u201330%",
+          "n": 17,
+          "said": 24.4,
+          "happened": 29.4
+        }
+      ],
+      "weekday": {
+        "Mon": {
+          "calls": 4,
+          "hit": 100.0
+        },
+        "Tue": {
+          "calls": 4,
+          "hit": 50.0
+        },
+        "Wed": {
+          "calls": 3,
+          "hit": 66.7
+        },
+        "Thu": {
+          "calls": 3,
+          "hit": 33.3
+        },
+        "Fri": {
+          "calls": 3,
+          "hit": 100.0
+        }
+      },
+      "alt_l2": {
+        "calls": 16,
+        "hit_when_called": 68.8,
+        "benchmark_same_days": 68.8,
+        "skill": 0.068
+      }
+    },
+    "orx": {
+      "days": 19,
+      "calls": 10,
+      "coverage": 52.6,
+      "ci95": [
+        0.0,
+        60.0
+      ],
+      "enough": false,
+      "note": "10 calls: needs 40 before the hit rate means anything",
+      "hit_when_called": 30.0,
+      "benchmark_same_days": 30.0,
+      "benchmark_all_days": 47.4,
+      "brier": 0.2708,
+      "brier_base": 0.2658,
+      "skill": -0.019,
+      "pts_1nq": -745.8,
+      "calibration": [
+        {
+          "bucket": "50\u201360%",
+          "n": 9,
+          "said": 55.6,
+          "happened": 66.7
+        },
+        {
+          "bucket": "60\u201370%",
+          "n": 10,
+          "said": 62.2,
+          "happened": 30.0
+        }
+      ],
+      "weekday": {
+        "Mon": {
+          "calls": 4,
+          "hit": 50.0
+        },
+        "Tue": {
+          "calls": 2,
+          "hit": 0.0
+        },
+        "Wed": {
+          "calls": 2,
+          "hit": 0.0
+        },
+        "Thu": {
+          "calls": 1,
+          "hit": 0.0
+        },
+        "Fri": {
+          "calls": 1,
+          "hit": 100.0
+        }
+      },
+      "alt_l2": {
+        "calls": 13,
+        "hit_when_called": 53.8,
+        "benchmark_same_days": 46.2,
+        "skill": -0.309
+      }
+    },
+    "reread_0940": {
+      "dir": {
+        "days": 19,
+        "calls": 11,
+        "coverage": 57.9,
+        "ci95": [
+          27.3,
+          81.8
+        ],
+        "enough": false,
+        "note": "11 calls: needs 40 before the hit rate means anything",
+        "hit_when_called": 54.5,
+        "benchmark_same_days": 45.5,
+        "benchmark_all_days": 42.1,
+        "brier": 0.241,
+        "brier_base": 0.2634,
+        "skill": 0.085,
+        "pts_1nq": 710.0
+      },
+      "first": {},
+      "poc": {
+        "days": 19,
+        "calls": 18,
+        "coverage": 94.7,
+        "ci95": [
+          50.0,
+          94.4
+        ],
+        "enough": false,
+        "note": "18 calls: needs 40 before the hit rate means anything",
+        "hit_when_called": 72.2,
+        "benchmark_same_days": 72.2,
+        "benchmark_all_days": 73.7,
+        "brier": 0.232,
+        "brier_base": 0.1994,
+        "skill": -0.163,
+        "pts_1nq": 1322.2
+      }
+    },
+    "london_0500": {
+      "dir": {
+        "days": 19,
+        "calls": 9,
+        "coverage": 47.4,
+        "ci95": [
+          22.2,
+          88.9
+        ],
+        "enough": false,
+        "note": "9 calls: needs 40 before the hit rate means anything",
+        "hit_when_called": 55.6,
+        "benchmark_same_days": 55.6,
+        "benchmark_all_days": 42.1,
+        "brier": 0.265,
+        "brier_base": 0.2702,
+        "skill": 0.019,
+        "pts_1nq": -772.0
+      },
+      "first": {
+        "days": 17,
+        "calls": 14,
+        "coverage": 82.4,
+        "ci95": [
+          57.1,
+          100.0
+        ],
+        "enough": false,
+        "note": "14 calls: needs 40 before the hit rate means anything",
+        "hit_when_called": 78.6,
+        "benchmark_same_days": 50.0,
+        "benchmark_all_days": 47.1,
+        "brier": 0.153,
+        "brier_base": 0.2558,
+        "skill": 0.402,
+        "pts_1nq": 262.5
+      },
+      "poc": {
+        "days": 19,
+        "calls": 17,
+        "coverage": 89.5,
+        "ci95": [
+          47.1,
+          88.2
+        ],
+        "enough": false,
+        "note": "17 calls: needs 40 before the hit rate means anything",
+        "hit_when_called": 70.6,
+        "benchmark_same_days": 70.6,
+        "benchmark_all_days": 68.4,
+        "brier": 0.2008,
+        "brier_base": 0.2233,
+        "skill": 0.1,
+        "pts_1nq": 1917.2
+      }
+    },
+    "plan": {
+      "plans": 19,
+      "filled": 12,
+      "wins": 3,
+      "net_r": 5.99,
+      "losses_why": [
+        {
+          "day": "2026-11-05",
+          "lean": "two-sided",
+          "side": "long",
+          "entry": "Overnight low",
+          "r": -1.0,
+          "why": "the questions were right; the entry or stop was the problem"
+        },
+        {
+          "day": "2026-11-10",
+          "lean": "two-sided",
+          "side": "short",
+          "entry": "8:30 open",
+          "r": -1.0,
+          "why": "poc said NO (31%), it was YES"
+        },
+        {
+          "day": "2026-11-12",
+          "lean": "short",
+          "side": "short",
+          "entry": "PDL",
+          "r": -1.0,
+          "why": "first said NO (5%), it was YES"
+        },
+        {
+          "day": "2026-11-13",
+          "lean": "long",
+          "side": "long",
+          "entry": "Prior POC",
+          "r": -1.0,
+          "why": "dir said YES (60%), it was NO; first said YES (80%), it was NO"
+        },
+        {
+          "day": "2026-11-16",
+          "lean": "long",
+          "side": "long",
+          "entry": "Overnight low",
+          "r": -1.0,
+          "why": "dir said YES (63%), it was NO"
+        },
+        {
+          "day": "2026-11-17",
+          "lean": "long",
+          "side": "long",
+          "entry": "PDL",
+          "r": -1.0,
+          "why": "dir said YES (79%), it was NO; first said YES (79%), it was NO"
+        },
+        {
+          "day": "2026-11-18",
+          "lean": "long",
+          "side": "long",
+          "entry": "Prior VAH",
+          "r": -1.0,
+          "why": "dir said YES (65%), it was NO; first said YES (78%), it was NO; poc said NO (1%), it was YES"
+        },
+        {
+          "day": "2026-11-19",
+          "lean": "long",
+          "side": "long",
+          "entry": "Midnight open",
+          "r": -1.0,
+          "why": "dir said YES (66%), it was NO; poc said NO (7%), it was YES"
+        },
+        {
+          "day": "2026-11-20",
+          "lean": "long",
+          "side": "long",
+          "entry": "8:30 open",
+          "r": -1.0,
+          "why": "dir said YES (64%), it was NO"
+        }
+      ]
+    },
+    "at": "2026-11-25T04:33-05:00"
+  },
+  "alerts": {
+    "days": 30,
+    "random_abs_move30": null,
+    "kinds": {}
+  },
+  "muted": [],
+  "levels": {
+    "date": null,
+    "iv": null,
+    "sd": null,
+    "levels": []
+  },
+  "h2h": {}
+}
