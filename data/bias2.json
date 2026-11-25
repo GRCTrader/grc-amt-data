@@ -7863,5 +7863,223 @@
         "brier_n": 117
       }
     }
+  },
+  "2026-11-25": {
+    "date": "2026-11-25",
+    "status": "pre-market",
+    "written_at": "2026-11-25T09:25:43-05:00",
+    "plan": {
+      "bias": "short",
+      "price": 25427.0,
+      "levels": [
+        {
+          "price": 26350.75,
+          "name": "Overnight High",
+          "kind": "bsl"
+        },
+        {
+          "price": 25998.0,
+          "name": "Previous Day Low",
+          "kind": "ssl"
+        },
+        {
+          "price": 25972.0,
+          "name": "Midnight Open",
+          "kind": "open"
+        },
+        {
+          "price": 25573.5,
+          "name": "London Low",
+          "kind": "ssl"
+        },
+        {
+          "price": 25564.75,
+          "name": "08:30 Open",
+          "kind": "open"
+        },
+        {
+          "price": 25561.5,
+          "name": "Weekly Open",
+          "kind": "open"
+        },
+        {
+          "price": 25393.75,
+          "name": "Overnight Low",
+          "kind": "ssl"
+        },
+        {
+          "price": 24976.5,
+          "name": "Previous Week Low",
+          "kind": "ssl"
+        }
+      ],
+      "scenarios": [
+        {
+          "side": "short",
+          "role": "primary",
+          "model": "Sell-Off / F-U Model",
+          "conviction": 4,
+          "trigger": "After 09:30, price rallies into the 25480-25520 pre-market FVG/OB below the 08:30 open (25564.75), sweeps a minor 5m high, and displaces lower with a 5m bearish FVG.",
+          "entry": 25490.0,
+          "stop": 25575.0,
+          "target": 25393.75,
+          "target2": 25250.0,
+          "window": "09:30-11:00"
+        },
+        {
+          "side": "long",
+          "role": "counter",
+          "model": "Failure Swing (Vol 1 Class 4)",
+          "conviction": 2,
+          "trigger": "If 15m closes above 25575.0 (reclaiming 08:30 open and London low), price respects 25564.75 as support and prints a 5m bullish FVG.",
+          "entry": 25585.0,
+          "stop": 25520.0,
+          "target": 25750.0,
+          "target2": 25900.0,
+          "window": "09:45-11:00"
+        }
+      ],
+      "invalidation": {
+        "price": 25575.0,
+        "rule": "15m close above 25575.0 (reclaiming 08:30 open and London low)",
+        "by": "11:00"
+      },
+      "model_screen": [
+        {
+          "model": "Expansion Retracement (Vol 1 Class 3)",
+          "status": "watch",
+          "why": "Requires a 5m retracement into premium of the 08:30-09:30 leg once ONL is breached."
+        },
+        {
+          "model": "Failure Swing (Vol 1 Class 4)",
+          "status": "watch",
+          "why": "Active only if ONL 25393.75 is wicked without body closure, followed by 5m bullish FVG."
+        },
+        {
+          "model": "HRLR Model: Wick + Rejection Block",
+          "status": "not_today",
+          "why": "Today is LRLR trend down, not choppy HRLR range with gap fills at rejection blocks."
+        },
+        {
+          "model": "Overpowered Order Block",
+          "status": "not_today",
+          "why": "No upper/lower quadrant OPOB structure validated on 5m prior to open."
+        },
+        {
+          "model": "Change in State of Delivery",
+          "status": "watch",
+          "why": "Awaiting 09:30 open run of up-close candles to break below its opening price."
+        },
+        {
+          "model": "Reversal Confirmation Chain",
+          "status": "not_today",
+          "why": "Requires multi-stage PD array inversion sequence not visible."
+        },
+        {
+          "model": "\"Secret Confirmation\" (hard days)",
+          "status": "not_today",
+          "why": "Used under ER when disrespected bullish OB becomes breaker; not formed."
+        },
+        {
+          "model": "Inversion FVG",
+          "status": "watch",
+          "why": "5m bullish FVG closed through below 25450 would confirm short execution."
+        },
+        {
+          "model": "Balanced Price Range",
+          "status": "not_today",
+          "why": "No overlapping opposing FVGs in current 5m leg."
+        },
+        {
+          "model": "Consolidation Model",
+          "status": "not_today",
+          "why": "Market is in clear expansion/trend down, not multi-hour consolidation."
+        },
+        {
+          "model": "Breaker & Mitigation Block",
+          "status": "not_today",
+          "why": "No validated 5m breaker or mitigation block pattern at present price."
+        },
+        {
+          "model": "Anticipating Turtle Soups",
+          "status": "not_today",
+          "why": "Turtle soup of ONL requires bullish reversal context, which conflicts with LRLR flow."
+        },
+        {
+          "model": "Sell-Off / F-U Model",
+          "status": "in_play",
+          "why": "Zero manipulation above Midnight (25972.0) or 08:30 open (25564.75); 09:30 test of pre-market high sets up short."
+        },
+        {
+          "model": "Full Reversal Model (A+ recipe)",
+          "status": "not_today",
+          "why": "Requires 15m/1H sell-side sweep + reversal structure, currently expanding downward."
+        },
+        {
+          "model": "First Presentation",
+          "status": "watch",
+          "why": "Awaiting the first 5m FVG after 09:30 open."
+        },
+        {
+          "model": "Approaching Previous Week Low/High",
+          "status": "watch",
+          "why": "Wednesday trading expanding toward PWL 24976.50; big drop protocol active."
+        },
+        {
+          "model": "Fading the fake \"Model 2022\"",
+          "status": "not_today",
+          "why": "No retail model 2022 structure present before major pool."
+        },
+        {
+          "model": "Model 2022 + OTE",
+          "status": "not_today",
+          "why": "No market structure shift after sell-side sweep."
+        },
+        {
+          "model": "Short / Intermediate-term structure",
+          "status": "not_today",
+          "why": "Seeking immediate LRLR continuation, not intermediate structural shift."
+        },
+        {
+          "model": "Quadrant Order Flow",
+          "status": "not_today",
+          "why": "Dealing range quadrant distribution not established for LTF execution."
+        },
+        {
+          "model": "Lunch Macro Retracement",
+          "status": "not_today",
+          "why": "Time is 09:25 AM; lunch macro window is 11:30 AM."
+        },
+        {
+          "model": "Three-Candle Wick CE",
+          "status": "not_today",
+          "why": "No 1H long-wick pattern meeting 0.25 entry criteria today."
+        }
+      ],
+      "confluence": [
+        "Pre-market shows zero manipulation above Midnight (25972.0) or 08:30 open (25564.75) with pre-market displacement (-137.75 pts), making Sell-Off / F-U Model the exact structural profile.",
+        "Bias 1 statistical engine projects an 85% probability of sweeping Overnight Low (25393.75) by 11:00.",
+        "London low break at 25573.50 held through pre-market, establishing low-resistance sell-side delivery.",
+        "Wednesday protocol in a multi-day decline points toward clean continuation toward pending lower liquidity targets (PWL 24976.50)."
+      ],
+      "screen_check": {
+        "screened": 22,
+        "of": 22,
+        "missing": [],
+        "unknown": [],
+        "in_play": [
+          "Sell-Off / F-U Model"
+        ],
+        "off_screen_scenarios": [
+          "Failure Swing (Vol 1 Class 4)"
+        ]
+      },
+      "sit_out": [
+        "Price chops in a tight 30-point range between 25420 and 25450 without testing pre-market premium or ONL before 10:00 AM.",
+        "Price expands past 25575.0 with strong momentum before 09:35 without printing a structured setup."
+      ],
+      "ai_model": "gemini-3.6-flash"
+    },
+    "prose": "## The read\nPrice opens Wednesday heavily depressed, sitting at 25427.0 \u2014 over 540 points below Midnight Open (25972.0) and 137 points below the 08:30 open (25564.75). Pre-market showed zero upward manipulation above Midnight or 08:30 opens, dropping cleanly through London Low (25573.50) and holding below it. Under Playbook 1 rules, a day with no manipulation above opening prices in a sustained drop fits the Sell-Off / F-U Model profile. The statistical engine assigns an 85% probability to taking the Overnight Low (25393.75) by 11:00. The trade is to short a 09:30-09:40 rally back toward the 25480\u201325520 pre-market inefficiency below the 08:30 open, targeting Overnight Low and 25250.\n\n## Levels that matter\n- **25972.00 (Midnight Open):** HTF daily bias threshold; price trading 545 pts below it establishes severe discount/bearish pressure.\n- **25573.50 / 25564.75 (London Low / 08:30 Open):** The key resistance zone. Pre-market broke below and held; acts as invalidation for shorts if reclaimed on a 15m basis.\n- **25393.75 (Overnight Low):** Primary liquidity objective for the morning session (85% statistical draw).\n- **24976.50 (Previous Week Low):** HTF weekly objective for extended sell-off delivery.\n\n## Scenario A\n- **Model:** Sell-Off / F-U Model\n- **Trigger:** After 09:30, price rallies into the 25480\u201325520 pre-market FVG/OB below 25564.75, sweeps a 5m high, and displaces lower with a 5m bearish FVG.\n- **Entry:** 25490.0\n- **Stop:** 25575.0 (above 08:30 open and London Low break level)\n- **First Target:** 25393.75 (Overnight Low)\n- **Second Target:** 25250.0 (-2.0 std dev projection)\n- **Session Window:** 09:30\u201311:00 ET\n\n## Scenario B\n- **Model:** Failure Swing (Vol 1 Class 4)\n- **Trigger:** Live only if invalidation breaks: 15m candle closes above 25575.0 (reclaiming 08:30 open & London Low), price holds 25564.75 as support, and prints a 5m bullish FVG.\n- **Entry:** 25585.0\n- **Stop:** 25520.0\n- **First Target:** 25750.0 (1H FVG / overnight range midpoint)\n- **Second Target:** 25900.0 (Asia low / Midnight open area)\n- **Session Window:** 09:45\u201311:00 ET\n\n## Invalidation\n15m candle close above 25575.0 (reclaiming both the 08:30 open and London Low break level) by 11:00 ET.\n\n## Sit out if\n- Price chops between 25420 and 25450 in a tight range without testing pre-market premium or ONL before 10:00 AM.\n- Price expands aggressively above 25575.0 before 09:35 without printing a valid setup.\n\n## Models checked\n- **Sell-Off / F-U Model (In Play):** Pre-market shows zero manipulation above Midnight or 08:30 open; 09:30 test of pre-market high sets up short continuation.\n- **Expansion Retracement (Watch):** Requires a 5m retracement into premium of the 08:30-09:30 leg once ONL is breached.\n- **Failure Swing (Watch):** Active only if ONL 25393.75 is wicked without body closure, followed by 5m bullish FVG.\n- **Change in State of Delivery (Watch):** Awaiting 09:30 open run of up-close candles to break below its opening price.\n- **Inversion FVG (Watch):** 5m bullish FVG closed through below 25450 would confirm short execution.\n- **First Presentation (Watch):** Awaiting the first 5m FVG after 09:30 open.\n- **Approaching Previous Week Low/High (Watch):** Wednesday trading expanding toward PWL 24976.50; big drop protocol active.\n- **All other 15 models (Not Today):** HRLR Model, OPOB, Reversal Confirmation Chain, Secret Confirmation, BPR, Consolidation Model, Breaker/Mitigation, Turtle Soups, Full Reversal, Fading Model 2022, OTE Model 2022, ST/IT Structure, Quadrant Order Flow, Lunch Macro, Three-Candle Wick CE \u2014 missing structural prerequisites (range chop, multi-stage reversals, or time windows).\n\n**Confluence backing Scenario A:**\n1. Pre-market shows zero manipulation above Midnight (25972.0) or 08:30 open (25564.75) with pre-market displacement (-137.75 pts), establishing Sell-Off / F-U Model conditions.\n2. Bias 1 statistical engine projects an 85% probability of sweeping Overnight Low (25393.75) by 11:00.\n3. London low break at 25573.50 held through pre-market, establishing low-resistance sell-side delivery.\n4. Wednesday protocol in a multi-day decline points toward clean continuation toward pending lower liquidity targets (PWL 24976.50)."
   }
 }
