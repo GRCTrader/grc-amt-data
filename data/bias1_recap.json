@@ -620,5 +620,173 @@
       "htf_bias": "SHORT",
       "model": null
     }
+  },
+  "2026-11-25": {
+    "date": "2026-11-25",
+    "written_at": "2026-11-25T16:18:40-05:00",
+    "grades": {
+      "plan": "B",
+      "plan_source": "measured",
+      "read": "C",
+      "day": "A"
+    },
+    "review": {
+      "bias1": {
+        "grade": "A",
+        "reason": "The short plan successfully triggered and hit its target, and the predicted 'trend_down' model for the 09:30-11:00 ET window was correct.",
+        "wanted": "The read wanted a short entry on a retrace to structural resistance for a trend_down day, targeting OVN L and PWL.",
+        "happened": "The short entry at 25418.0 (OVN VAL) triggered at 09:30 and immediately hit its first target (25393.75 OVN L).",
+        "model_called": "trend_down",
+        "model_actual": "trend_down",
+        "model_correct": true,
+        "model_said": "A"
+      },
+      "read": {
+        "grade": "C",
+        "reason": "The primary short bias was accurate for the initial NY AM drop, but the day's overall RTH was a significant reversal to a strong upward trend, invalidating the primary bias."
+      },
+      "day": {
+        "grade": "A",
+        "shape": "Trend day up reversal",
+        "reason": "The day started with a sharp downward expansion during the pre-market and early NY AM, then executed a strong, sustained mean-reversion and upward trend throughout the lunch and PM sessions, closing near its high."
+      },
+      "keep": [
+        "The 08:32 'Delta divergence at the high' and 08:35 'Buying outlier disrespected' accurately foreshadowed the immediate AM dump.",
+        "The 02:45 London read correctly identified 'overnight short inventory stretched' and predicted a 'mean-reversion rotation higher' for the broader RTH."
+      ],
+      "messages": {
+        "right": [
+          "08:32 Delta divergence at the high",
+          "08:35 Buying outlier disrespected",
+          "09:16 frozen plan SHORT trigger at 25418.0 and target 25393.75 (OVN L)",
+          "02:45 London read LONG for a mean-reversion rotation higher"
+        ],
+        "wrong": [
+          "09:16 'wrong if: Acceptance ... above NY AM open (25659.0) would invalidate the primary short bias.' - This occurred during lunch and the market trended strongly up, indicating the overall short bias was wrong.",
+          "09:16 'Strongly short, aligning with the dominant measured draw and current market imbalance.' - This proved incorrect for the overall RTH's upward trend."
+        ]
+      },
+      "lessons": [
+        "Prioritize the 'wrong if' invalidation condition (from PLAYBOOK RULES - Bias & Narrative) as a clear signal to reassess or flip bias, even after an initial profitable trade, especially on days with strong opposing overnight narratives (like the London read's mean-reversion).",
+        "Integrate London's 'mean-reversion' insights more strongly into the primary NY AM bias, especially when price is 'deep in discount' relative to higher timeframes and 'below value' (V43 Weekly Review First Week of July), recognizing potential for 'accumulation at extremes' (D05 4th Stage: Reversal).",
+        "When the day begins with extreme 'expansion' (D04 2nd & 3rd Stage: Expansion & Retracement) after a significant overnight move, anticipate a potential 'reversal' if 'liquidity' is taken and 'three drives' fail (D08 Market Structure Fundamentals), rather than solely focusing on continuation of the immediate trend."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe morning's read articulated a `higher-timeframe bias` of SHORT, predicting a `trend_down` model for the 09:30-11:00 ET window, possibly preceded by an `open_rejection` Judas swing. The market was `strongly short`, deep in a `discount` relative to all higher timeframes, and significantly `below the prior month, week, and day ranges`. The `primary draw` was the Overnight low (25,418.50). The `frozen plan` SHORT leg had a trigger at 25418.0 (OVN VAL), a stop at 25456.0 (OVN POC), and a primary target of 25393.75 (OVN L). Invalidation of the primary short bias was set at `acceptance (closing multiple 5-min candles and building volume) above NY AM open (25659.0)`. The 02:45 London read, however, was `LONG`, anticipating a `mean-reversion rotation higher` due to `overnight short inventory stretched into the lower extreme`.\n\n## What actually happened\n**Pre-market (04:00-09:30):** NQ experienced a sharp downward `expansion`, dropping from an open of 25822.75 to a low of 25393.75 by 09:05, closing at 25410.0.\n**NY AM (09:30-11:00):** Opening at 25409.25, the `frozen plan` SHORT leg triggered at 25418.0 (OVN VAL) at 09:30. Price immediately dropped to hit the first target of 25393.75 (OVN L), then continued to make a low of 25027.5 at 09:45, before a slight bounce to close at 25135.0. This confirmed the initial `trend_down`.\n**Lunch (11:00-13:30):** The market reversed dramatically, moving from an open of 25134.75 to a high of 25923.5 by 13:25, closing at 25908.5. This moved decisively above the NY AM open (25659.0).\n**NY PM (13:30-16:00):** The upward trend continued, reaching a high of 26146.25 at 14:30 and closing at 26104.25.\n**Whole RTH (09:30-16:00):** The day closed with a net gain of +695.00 points, exhibiting a strong upward trend and closing 96.2% up its range from the open.\n\n## How it went\nBias 1's `predicted day-model` for the 09:30-11:00 window, `trend_down`, was accurate, as the market initially expanded downward. The `frozen plan` SHORT successfully triggered at the Overnight Value Area Low and immediately hit its first target (OVN L), confirming the initial downward move as per the playbook's `Expansion` phase (D04). This execution aligned precisely with the trade plan. However, the overall `strongly short` `higher-timeframe bias` for the full RTH proved incorrect. The `wrong if` condition (acceptance above NY AM open 25659.0) was clearly met during the lunch session, indicating that the primary short bias was invalidated for the remainder of the trading day.\n\n## The day as a whole\nThe day delivered a `Trend day up reversal` shape. It commenced with a rapid downward `expansion` in the NY AM, fulfilling immediate bearish targets. However, from the lunch session onward, the market executed a powerful `mean-reversion` and developed into a sustained upward `expansion`, ultimately confirming a `reversal` (D05 4th Stage: Reversal) against the prevailing morning bias. This strong upward `distribution` contrasted sharply with the initial `accumulation` and `manipulation` below the opens (D03 Introduction to Power of Three). Bias 1's performance, with a grade of 'A', indicated its model and initial plan for the specified window were correct and profitable, whereas Bias 2 was recorded as 'A' for its read and 'B' for its day model.\n\n## The posts today\n**Right:**\n*   The 08:32 `Delta divergence at the high` and 08:35 `Buying outlier disrespected` alerts accurately signaled immediate downside, preceding the NY AM dump, consistent with `Order pairing` (D08).\n*   The 09:16 `frozen plan` SHORT leg successfully triggered at 25418.0 (OVN VAL) and hit its target of 25393.75 (OVN L) immediately at 09:30.\n*   The 02:45 London read correctly identified \"overnight short inventory stretched into the lower extreme\" and predicted a \"mean-reversion rotation higher\", which manifested as the powerful upward trend from lunch through PM.\n**Wrong:**\n*   The 09:16 `pre-open read`'s overall `strongly short` bias for the RTH was invalidated as price accepted above the NY AM open (25659.0) during the lunch session, confirming the overall short bias was incorrect.\n**Contradictions:**\n*   The 09:16 `pre-open read`'s `strongly short` bias for the RTH contradicted the 02:45 London read's `LONG` bias, which predicted a \"mean-reversion rotation higher\" due to stretched overnight short inventory. The market ultimately confirmed the London read for the overall RTH.\n\n## What to do differently\n*   Prioritize the \"wrong if\" invalidation condition (from PLAYBOOK RULES - Bias & Narrative) as a clear signal to reassess or flip bias, even after an initial profitable trade, especially on days with strong opposing overnight narratives (like the London read's mean-reversion).\n*   Integrate London's `mean-reversion` insights more strongly into the primary NY AM bias, especially when price is `deep in discount` relative to higher timeframes and `below value` (V43 Weekly Review First Week of July), recognizing potential for `accumulation at extremes` (D05 4th Stage: Reversal).\n*   When the day begins with extreme `expansion` (D04 2nd & 3rd Stage: Expansion & Retracement) after a significant overnight move, anticipate a potential `reversal` if `liquidity` is taken and `three drives` fail (D08 Market Structure Fundamentals), rather than solely focusing on continuation of the immediate trend.",
+    "trade_11": {
+      "date": "2026-11-25",
+      "outcome": "target",
+      "side": "short",
+      "trigger": 25418.0,
+      "at": "09:30",
+      "r": 0.64,
+      "mfe_r": 5.4,
+      "mae_r": 0.57,
+      "label": "\u2705 the plan worked",
+      "stop": 25456.0,
+      "target": 25393.75,
+      "risk_pts": 38.0,
+      "trigger_name": "OVN VAL",
+      "stop_name": "OVN POC",
+      "points": 23.82,
+      "marked": false,
+      "usd": {
+        "1 MNQ": {
+          "gross": 47.64,
+          "net": 46.14
+        },
+        "5 MNQ": {
+          "gross": 238.2,
+          "net": 230.7
+        },
+        "1 NQ": {
+          "gross": 476.4,
+          "net": 471.4
+        }
+      }
+    },
+    "trade_day": {
+      "date": "2026-11-25",
+      "outcome": "target",
+      "side": "short",
+      "trigger": 25418.0,
+      "at": "09:30",
+      "r": 0.64,
+      "mfe_r": 5.4,
+      "mae_r": 0.57,
+      "label": "\u2705 the plan worked",
+      "stop": 25456.0,
+      "target": 25393.75,
+      "risk_pts": 38.0,
+      "trigger_name": "OVN VAL",
+      "stop_name": "OVN POC",
+      "points": 23.82,
+      "marked": false,
+      "usd": {
+        "1 MNQ": {
+          "gross": 47.64,
+          "net": 46.14
+        },
+        "5 MNQ": {
+          "gross": 238.2,
+          "net": 230.7
+        },
+        "1 NQ": {
+          "gross": 476.4,
+          "net": 471.4
+        }
+      }
+    },
+    "session": {
+      "date": "2026-11-25",
+      "bars": 194,
+      "premarket": {
+        "open": 25822.75,
+        "high": 25826.5,
+        "low": 25393.75,
+        "close": 25410.0,
+        "at_high": "04:00",
+        "at_low": "09:05"
+      },
+      "am": {
+        "open": 25409.25,
+        "high": 25509.75,
+        "low": 25027.5,
+        "close": 25135.0,
+        "at_high": "10:00",
+        "at_low": "09:45"
+      },
+      "lunch": {
+        "open": 25134.75,
+        "high": 25923.5,
+        "low": 25061.25,
+        "close": 25908.5,
+        "at_high": "13:25",
+        "at_low": "11:15"
+      },
+      "pm": {
+        "open": 25907.75,
+        "high": 26146.25,
+        "low": 25804.0,
+        "close": 26104.25,
+        "at_high": "14:30",
+        "at_low": "13:30"
+      },
+      "rth": {
+        "open": 25409.25,
+        "high": 26146.25,
+        "low": 25027.5,
+        "close": 26104.25,
+        "at_high": "14:30",
+        "at_low": "09:45",
+        "net": 695.0,
+        "shape": "trend up",
+        "close_in_range_pct": 96.2
+      }
+    },
+    "called": {
+      "htf_bias": "SHORT",
+      "model": null
+    }
   }
 }
