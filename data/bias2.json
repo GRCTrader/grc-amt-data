@@ -7866,8 +7866,7 @@
   },
   "2026-11-25": {
     "date": "2026-11-25",
-    "status": "pre-market",
-    "written_at": "2026-11-25T09:25:43-05:00",
+    "written_at": "2026-11-25T16:12:32-05:00",
     "plan": {
       "bias": "short",
       "price": 25427.0,
@@ -8073,13 +8072,520 @@
         "off_screen_scenarios": [
           "Failure Swing (Vol 1 Class 4)"
         ]
-      },
-      "sit_out": [
-        "Price chops in a tight 30-point range between 25420 and 25450 without testing pre-market premium or ONL before 10:00 AM.",
-        "Price expands past 25575.0 with strong momentum before 09:35 without printing a structured setup."
-      ],
-      "ai_model": "gemini-3.6-flash"
+      }
     },
-    "prose": "## The read\nPrice opens Wednesday heavily depressed, sitting at 25427.0 \u2014 over 540 points below Midnight Open (25972.0) and 137 points below the 08:30 open (25564.75). Pre-market showed zero upward manipulation above Midnight or 08:30 opens, dropping cleanly through London Low (25573.50) and holding below it. Under Playbook 1 rules, a day with no manipulation above opening prices in a sustained drop fits the Sell-Off / F-U Model profile. The statistical engine assigns an 85% probability to taking the Overnight Low (25393.75) by 11:00. The trade is to short a 09:30-09:40 rally back toward the 25480\u201325520 pre-market inefficiency below the 08:30 open, targeting Overnight Low and 25250.\n\n## Levels that matter\n- **25972.00 (Midnight Open):** HTF daily bias threshold; price trading 545 pts below it establishes severe discount/bearish pressure.\n- **25573.50 / 25564.75 (London Low / 08:30 Open):** The key resistance zone. Pre-market broke below and held; acts as invalidation for shorts if reclaimed on a 15m basis.\n- **25393.75 (Overnight Low):** Primary liquidity objective for the morning session (85% statistical draw).\n- **24976.50 (Previous Week Low):** HTF weekly objective for extended sell-off delivery.\n\n## Scenario A\n- **Model:** Sell-Off / F-U Model\n- **Trigger:** After 09:30, price rallies into the 25480\u201325520 pre-market FVG/OB below 25564.75, sweeps a 5m high, and displaces lower with a 5m bearish FVG.\n- **Entry:** 25490.0\n- **Stop:** 25575.0 (above 08:30 open and London Low break level)\n- **First Target:** 25393.75 (Overnight Low)\n- **Second Target:** 25250.0 (-2.0 std dev projection)\n- **Session Window:** 09:30\u201311:00 ET\n\n## Scenario B\n- **Model:** Failure Swing (Vol 1 Class 4)\n- **Trigger:** Live only if invalidation breaks: 15m candle closes above 25575.0 (reclaiming 08:30 open & London Low), price holds 25564.75 as support, and prints a 5m bullish FVG.\n- **Entry:** 25585.0\n- **Stop:** 25520.0\n- **First Target:** 25750.0 (1H FVG / overnight range midpoint)\n- **Second Target:** 25900.0 (Asia low / Midnight open area)\n- **Session Window:** 09:45\u201311:00 ET\n\n## Invalidation\n15m candle close above 25575.0 (reclaiming both the 08:30 open and London Low break level) by 11:00 ET.\n\n## Sit out if\n- Price chops between 25420 and 25450 in a tight range without testing pre-market premium or ONL before 10:00 AM.\n- Price expands aggressively above 25575.0 before 09:35 without printing a valid setup.\n\n## Models checked\n- **Sell-Off / F-U Model (In Play):** Pre-market shows zero manipulation above Midnight or 08:30 open; 09:30 test of pre-market high sets up short continuation.\n- **Expansion Retracement (Watch):** Requires a 5m retracement into premium of the 08:30-09:30 leg once ONL is breached.\n- **Failure Swing (Watch):** Active only if ONL 25393.75 is wicked without body closure, followed by 5m bullish FVG.\n- **Change in State of Delivery (Watch):** Awaiting 09:30 open run of up-close candles to break below its opening price.\n- **Inversion FVG (Watch):** 5m bullish FVG closed through below 25450 would confirm short execution.\n- **First Presentation (Watch):** Awaiting the first 5m FVG after 09:30 open.\n- **Approaching Previous Week Low/High (Watch):** Wednesday trading expanding toward PWL 24976.50; big drop protocol active.\n- **All other 15 models (Not Today):** HRLR Model, OPOB, Reversal Confirmation Chain, Secret Confirmation, BPR, Consolidation Model, Breaker/Mitigation, Turtle Soups, Full Reversal, Fading Model 2022, OTE Model 2022, ST/IT Structure, Quadrant Order Flow, Lunch Macro, Three-Candle Wick CE \u2014 missing structural prerequisites (range chop, multi-stage reversals, or time windows).\n\n**Confluence backing Scenario A:**\n1. Pre-market shows zero manipulation above Midnight (25972.0) or 08:30 open (25564.75) with pre-market displacement (-137.75 pts), establishing Sell-Off / F-U Model conditions.\n2. Bias 1 statistical engine projects an 85% probability of sweeping Overnight Low (25393.75) by 11:00.\n3. London low break at 25573.50 held through pre-market, establishing low-resistance sell-side delivery.\n4. Wednesday protocol in a multi-day decline points toward clean continuation toward pending lower liquidity targets (PWL 24976.50)."
+    "outcome": "A_target",
+    "detail": "Sell-Off / F-U Model: target \u00b7 at 10:05 \u00b7 went +1.72R / -0.0R\n  uncapped to 16:00: A_target (+1.13R)\n  direction called short; AM was down, whole RTH was down",
+    "late_outcome": "A_target",
+    "late_r": 1.13,
+    "grades": {
+      "bias2": "B",
+      "read": "A",
+      "day": "B",
+      "bias2_source": "measured"
+    },
+    "review": {
+      "bias2": {
+        "grade": "A",
+        "reason": "Scenario A's Sell-Off / F-U Model short filled at 25490.0 after price tested pre-market premium at 10:00 ET and reached its target of 25393.75 by 10:05 ET for +1.72R.",
+        "wanted": "A rally after 09:30 into the 25480\u201325520 pre-market FVG/OB below the 08:30 open (25564.75), sweeping a 5m high and displacing lower.",
+        "happened": "Price opened at 25409.25, rallied to 25509.75 at 10:00 ET below the 08:30 open, triggered the 5m bearish displacement, and dropped to 25027.5 by 10:05 ET.",
+        "model_called": "[SO] Sell-Off / F-U Model",
+        "model_actual": "[SO] Sell-Off / F-U Model",
+        "model_correct": true,
+        "model_said": "A"
+      },
+      "read": {
+        "grade": "A",
+        "reason": "The short directional bias for the NY AM killzone was accurate as heavy liquidation continued under all major opening prices."
+      },
+      "day": {
+        "grade": "B",
+        "shape": "V-reversal from morning liquidation low to PM trend up",
+        "reason": "The AM short captured the drop down to 25027.5, but the plan did not anticipate the massive 1,100-point V-reversal out of the 11:30 lunch window that closed NQ at 26104.25."
+      },
+      "keep": [
+        "Identifying sell-off profile days where price remains under the 08:30 and midnight opening prices.",
+        "Strictly locking in AM targets before the 11:30 lunch window begins."
+      ],
+      "messages": {
+        "right": [
+          "08:35 Order flow alert correctly flagged the disrespected buying outlier at 25447.50 for a fast downward reversal.",
+          "09:16 Pre-open read correctly established the HTF discount and short bias into the RTH open."
+        ],
+        "wrong": [
+          "02:45 London read called for a long mean-reversion rotation while London price action continued to liquidate lower.",
+          "09:16 Stat bias posted a 56% long lean for the 11:00 close, directly contradicting the pre-open short read."
+        ]
+      },
+      "lessons": [
+        "Always take full partials at the primary liquidity target in the AM killzone and avoid holding shorts past 11:00 ET after a multi-hundred point drop.",
+        "When price sweeps deep sell-side liquidity at a HTF pool in the morning without new bearish PD arrays, watch for the Lunch Macro Retracement to flip narrative.",
+        "Do not ignore the 11:30 lunch macro timing protocol when morning extensions reach extreme standard deviations."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe thesis called for a short via the `[SO] Sell-Off / F-U Model` inside the 09:30\u201311:00 AM window. Because overnight price action had liquidated over 800 points below the Midnight Open (25972.0) and 08:30 Open (25564.75), the plan required price to stay below those opens. Scenario A looked for a post-09:30 retracement into the 25480\u201325520 pre-market FVG/OB zone, a sweep of a minor 5m high, and a 5m bearish FVG displacement to enter short at 25490.0 with a 25575.0 stop, targeting the Overnight Low (25393.75) and 25250.0. Scenario B was a conditional long invalidation if 15m closed back above 25575.0.\n\n## What actually happened\nAt the 09:30 open, NQ printed 25409.25 and initially flushed down to 25027.5 at 09:45 ET. It then executed a sharp pull-back into 10:00 ET, reaching a high of 25509.75. This retracement filled into the 25480\u201325520 pre-market FVG/OB while remaining strictly below the 08:30 Open (25564.75). Price printed the 5m bearish FVG displacement, filling the Scenario A limit at 25490.0 with zero MAE. By 10:05 ET, price expanded rapidly lower into the target zone, taking out the Overnight Low (25393.75) and reaching the target for +1.72R (+1.13R uncapped).\n\nAfter 11:00 ET, delivery completely shifted. From the 25061.25 low at 11:15 ET, NQ launched a massive `[LMR] Lunch Macro Retracement` and `[A+] Full Reversal Model` rally, driving through 25923.5 by 13:25 ET and reaching a session high of 26146.25 in the PM killzone, closing near the top of the range at 26104.25 (+695.00 points).\n\n## How it went\nThe morning read and trade execution were clean. The plan correctly identified the `[SO] Sell-Off / F-U Model` mechanics: price was capped under the 08:30 open, offered a retracement into premium below the open, and displaced swiftly into the 25393.75 target. \n\nThis was a good read traded accurately. The AM short captured its full move inside the designated 09:30\u201311:00 execution window. The only weakness in the overall daily plan was failing to prepare for the PM reversal once the morning expansion hit major exhaustion at 25027.5.\n\n## The day as a whole\nThe session split into two distinct regimes. The AM session (09:30\u201311:00) was a pure one-way sell-off expansion that fulfilled the morning plan's short target. However, once price swept the deep liquidity around 25027.5 near the Previous Week Low (24976.5), the 11:30 lunch macro activated a full V-reversal (`[LMR] Lunch Macro Retracement`). Price recovered the entire 1,100-point decline between 11:15 and 14:30 ET. While the AM trade paid in full, holding any short bias into the PM would have resulted in complete giveback.\n\n## The posts today\n- **08:35 ET (`#orderflow-alerts`) \u2014 RIGHT:** Correctly flagged the disrespected buying outlier bar at 25447.50, warning that passive absorption would lead to a fast downward rotation.\n- **09:16 ET (`#morning-brief`) \u2014 RIGHT:** The Pre-Open Read accurately identified the HTF discount and liquidating short structure heading into the RTH open.\n- **02:45 ET (`#personal-nasdaq-performance`) \u2014 WRONG:** The London read called for an immediate long mean-reversion rotation while London price action continued to break down to lower extremes.\n- **09:16 ET (`#morning-brief`) \u2014 CONTRADICTION:** The Stat Bias posted a 56% green probability for the 11:00 ET close, directly contradicting the Pre-Open Read's short bias published in the same timestamp block.\n\n## What to do differently\n1. **Enforce hard exits at 11:00 AM on sell-off days:** When a short trade hits its primary liquidity target after a steep morning drop, take 100% off before the 11:30 lunch macro (`D07 Session Power of Three`).\n2. **Flag HTF target exhaustion:** When price sweeps a major multi-day or weekly liquidity pool (like Previous Week Low at 24976.5) during the AM session, stop looking for ER short continuations and anticipate a structural pause or reversal.\n3. **Filter pre-open stat bias against opening prices:** Ignore historical stat leans when price opens massively out of value and below all intraday opening prices (`[opens]`).",
+    "session": {
+      "date": "2026-11-25",
+      "bars": 193,
+      "premarket": {
+        "open": 25822.75,
+        "high": 25826.5,
+        "low": 25393.75,
+        "close": 25410.0,
+        "at_high": "04:00",
+        "at_low": "09:05"
+      },
+      "am": {
+        "open": 25409.25,
+        "high": 25509.75,
+        "low": 25027.5,
+        "close": 25135.0,
+        "at_high": "10:00",
+        "at_low": "09:45"
+      },
+      "lunch": {
+        "open": 25134.75,
+        "high": 25923.5,
+        "low": 25061.25,
+        "close": 25908.5,
+        "at_high": "13:25",
+        "at_low": "11:15"
+      },
+      "pm": {
+        "open": 25907.75,
+        "high": 26146.25,
+        "low": 25804.0,
+        "close": 26104.25,
+        "at_high": "14:30",
+        "at_low": "13:30"
+      },
+      "rth": {
+        "open": 25409.25,
+        "high": 26146.25,
+        "low": 25027.5,
+        "close": 26104.25,
+        "at_high": "14:30",
+        "at_low": "09:45",
+        "net": 695.0,
+        "shape": "trend up",
+        "close_in_range_pct": 96.2
+      }
+    },
+    "playbook": {
+      "models": 22,
+      "rule_sections": 18,
+      "rules": 203,
+      "glossary": 69,
+      "dojo_classes": 17,
+      "notes": 42,
+      "videos": 82,
+      "concepts": 21,
+      "video_notes": 50,
+      "synced_at": "2026-11-17T21:21:23+00:00"
+    },
+    "sim": [
+      {
+        "i": 0,
+        "side": "short",
+        "model": "Sell-Off / F-U Model",
+        "entry": 25490.0,
+        "target": 25393.75,
+        "variants": {
+          "model": {
+            "stop": 25575.0,
+            "risk_pts": 85.0,
+            "outcome": "target",
+            "at": "10:05",
+            "triggered": true,
+            "points": 95.75,
+            "usd": {
+              "1 MNQ": {
+                "gross": 191.5,
+                "net": 190.0
+              },
+              "5 MNQ": {
+                "gross": 957.5,
+                "net": 950.0
+              },
+              "1 NQ": {
+                "gross": 1915.0,
+                "net": 1910.0
+              }
+            }
+          },
+          "10pt": {
+            "stop": 25500.0,
+            "risk_pts": 10.0,
+            "outcome": "target",
+            "at": "10:05",
+            "triggered": true,
+            "points": 95.75,
+            "usd": {
+              "1 MNQ": {
+                "gross": 191.5,
+                "net": 190.0
+              },
+              "5 MNQ": {
+                "gross": 957.5,
+                "net": 950.0
+              },
+              "1 NQ": {
+                "gross": 1915.0,
+                "net": 1910.0
+              }
+            }
+          },
+          "20pt": {
+            "stop": 25510.0,
+            "risk_pts": 20.0,
+            "outcome": "target",
+            "at": "10:05",
+            "triggered": true,
+            "points": 95.75,
+            "usd": {
+              "1 MNQ": {
+                "gross": 191.5,
+                "net": 190.0
+              },
+              "5 MNQ": {
+                "gross": 957.5,
+                "net": 950.0
+              },
+              "1 NQ": {
+                "gross": 1915.0,
+                "net": 1910.0
+              }
+            }
+          },
+          "50pt": {
+            "stop": 25540.0,
+            "risk_pts": 50.0,
+            "outcome": "target",
+            "at": "10:05",
+            "triggered": true,
+            "points": 95.75,
+            "usd": {
+              "1 MNQ": {
+                "gross": 191.5,
+                "net": 190.0
+              },
+              "5 MNQ": {
+                "gross": 957.5,
+                "net": 950.0
+              },
+              "1 NQ": {
+                "gross": 1915.0,
+                "net": 1910.0
+              }
+            }
+          },
+          "1R": {
+            "stop": 25586.25,
+            "risk_pts": 96.25,
+            "outcome": "target",
+            "at": "10:05",
+            "triggered": true,
+            "points": 95.75,
+            "usd": {
+              "1 MNQ": {
+                "gross": 191.5,
+                "net": 190.0
+              },
+              "5 MNQ": {
+                "gross": 957.5,
+                "net": 950.0
+              },
+              "1 NQ": {
+                "gross": 1915.0,
+                "net": 1910.0
+              }
+            }
+          },
+          "2R": {
+            "stop": 25538.12,
+            "risk_pts": 48.12,
+            "outcome": "target",
+            "at": "10:05",
+            "triggered": true,
+            "points": 95.75,
+            "usd": {
+              "1 MNQ": {
+                "gross": 191.5,
+                "net": 190.0
+              },
+              "5 MNQ": {
+                "gross": 957.5,
+                "net": 950.0
+              },
+              "1 NQ": {
+                "gross": 1915.0,
+                "net": 1910.0
+              }
+            }
+          },
+          "3R": {
+            "stop": 25522.08,
+            "risk_pts": 32.08,
+            "outcome": "target",
+            "at": "10:05",
+            "triggered": true,
+            "points": 95.75,
+            "usd": {
+              "1 MNQ": {
+                "gross": 191.5,
+                "net": 190.0
+              },
+              "5 MNQ": {
+                "gross": 957.5,
+                "net": 950.0
+              },
+              "1 NQ": {
+                "gross": 1915.0,
+                "net": 1910.0
+              }
+            }
+          }
+        }
+      },
+      {
+        "i": 1,
+        "side": "long",
+        "model": "Failure Swing (Vol 1 Class 4)",
+        "entry": 25585.0,
+        "target": 25750.0,
+        "variants": {
+          "model": {
+            "stop": 25520.0,
+            "risk_pts": 65.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "10pt": {
+            "stop": 25575.0,
+            "risk_pts": 10.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "20pt": {
+            "stop": 25565.0,
+            "risk_pts": 20.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "50pt": {
+            "stop": 25535.0,
+            "risk_pts": 50.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "1R": {
+            "stop": 25420.0,
+            "risk_pts": 165.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "2R": {
+            "stop": 25502.5,
+            "risk_pts": 82.5,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "3R": {
+            "stop": 25530.0,
+            "risk_pts": 55.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          }
+        }
+      }
+    ],
+    "score": {
+      "components": {
+        "draw": 1.0,
+        "direction": 1.0,
+        "levels": 0.125,
+        "timing": 1.0,
+        "invalidation": 1.0
+      },
+      "weights": {
+        "draw": 0.35,
+        "direction": 0.2,
+        "levels": 0.2,
+        "timing": 0.15,
+        "invalidation": 0.1
+      },
+      "notes": {
+        "direction": "-262.2 pt",
+        "levels": "1 of 8 reacted at",
+        "timing": "resolved 10:05, inside the window",
+        "invalidation": "held"
+      },
+      "total": 0.825,
+      "grade": "B",
+      "best_scenario": 0,
+      "per_scenario": [
+        {
+          "i": 0,
+          "side": "short",
+          "model": "Sell-Off / F-U Model",
+          "outcome": "target",
+          "triggered": true,
+          "at": "10:05",
+          "score": 1.0,
+          "mfe_r": 1.72,
+          "mae_r": 0.0
+        },
+        {
+          "i": 1,
+          "side": "long",
+          "model": "Failure Swing (Vol 1 Class 4)",
+          "outcome": "no_trigger",
+          "triggered": false,
+          "at": null,
+          "score": 0.5,
+          "mfe_r": 0.0,
+          "mae_r": 0.0
+        }
+      ],
+      "levels": [
+        {
+          "price": 26350.75,
+          "name": "Overnight High",
+          "reacted": false
+        },
+        {
+          "price": 25998.0,
+          "name": "Previous Day Low",
+          "reacted": false
+        },
+        {
+          "price": 25972.0,
+          "name": "Midnight Open",
+          "reacted": false
+        },
+        {
+          "price": 25573.5,
+          "name": "London Low",
+          "reacted": false
+        },
+        {
+          "price": 25564.75,
+          "name": "08:30 Open",
+          "reacted": false
+        },
+        {
+          "price": 25561.5,
+          "name": "Weekly Open",
+          "reacted": false
+        },
+        {
+          "price": 25393.75,
+          "name": "Overnight Low",
+          "reacted": true
+        },
+        {
+          "price": 24976.5,
+          "name": "Previous Week Low",
+          "reacted": false
+        }
+      ],
+      "mirror_total": 0.35,
+      "mirror_grade": "F",
+      "beat_mirror": true
+    },
+    "prep": {
+      "events": [
+        {
+          "date": "2026-11-25",
+          "time": "08:30",
+          "title": "Core PCE Price Index m/m",
+          "impact": "high"
+        },
+        {
+          "date": "2026-11-25",
+          "time": "08:30",
+          "title": "Prelim GDP q/q",
+          "impact": "high"
+        },
+        {
+          "date": "2026-11-25",
+          "time": "08:30",
+          "title": "Prelim GDP Price Index q/q",
+          "impact": "medium"
+        }
+      ],
+      "pending": [
+        {
+          "price": 25603.75,
+          "name": "ER 0.5 never reached"
+        }
+      ],
+      "note": "**The prep \u2014 2026-11-25**\n\n**01 \u00b7 Calendar.** 08:30 Core PCE Price Index m/m (red), 08:30 Prelim GDP q/q (red), 08:30 Prelim GDP Price Index q/q (orange).\nThe day is allowed to move at 08:30. Before that, treat expansion as suspect.\n\n**05 \u00b7 Still pending.** ER 0.5 never reached 25603.75. These stay marked for the rest of the week.\n\n**10 \u00b7 The plan.** SHORT from 25490.0, stop 25575.0, target 25393.75. Wrong if 15m close above 25575.0 (reclaiming 08:30 open and London low) 25575.0 by 11:00.\n\n_Steps 02-04, 06, 07 and 09 are live on the chart \u2014 they are the ones that change while you watch, so they are not written down here._"
+    },
+    "read_bench": {
+      "recent": {
+        "n": 30,
+        "hit": 60.0,
+        "benchmark": "B",
+        "benchmark_hit": 50.0,
+        "edge": 10.0,
+        "mix": {
+          "B": 15,
+          "C": 13,
+          "A": 2
+        },
+        "called": {
+          "B": 21,
+          "C": 9
+        },
+        "brier": 0.556,
+        "brier_prior": 0.613,
+        "brier_edge": 0.057,
+        "brier_n": 30
+      },
+      "all": {
+        "n": 122,
+        "hit": 35.2,
+        "benchmark": "C",
+        "benchmark_hit": 52.5,
+        "edge": -17.2,
+        "mix": {
+          "A": 15,
+          "C": 64,
+          "B": 43
+        },
+        "called": {
+          "A": 62,
+          "C": 19,
+          "B": 37
+        },
+        "brier": 0.81,
+        "brier_prior": 0.59,
+        "brier_edge": -0.22,
+        "brier_n": 118
+      }
+    }
   }
 }
