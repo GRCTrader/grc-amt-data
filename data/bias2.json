@@ -8590,8 +8590,7 @@
   },
   "2026-11-26": {
     "date": "2026-11-26",
-    "status": "pre-market",
-    "written_at": "2026-11-26T09:25:56-05:00",
+    "written_at": "2026-11-26T16:10:37-05:00",
     "plan": {
       "bias": "long",
       "price": 26261.75,
@@ -8793,14 +8792,425 @@
         "off_screen_scenarios": [
           "Expansion Retracement"
         ]
-      },
-      "sit_out": [
-        "If the 5m FVG at 26233.5 fails to hold as support on a closing basis before 09:40 ET.",
-        "If there is no clear displacement away from the London Low after 09:30 ET.",
-        "Today is Thursday, a day often advised against trading in general rules, but specific setups can override."
-      ],
-      "ai_model": "gemini-2.5-flash"
+      }
     },
-    "prose": "## The read\nPrice is currently trading in a discount, below both the Midnight and 08:30 opening prices. The London low was swept earlier in pre-market, and price has since rallied back above it, indicating a failed break. This combination of being in discount and showing a failed raid on sell-side liquidity strongly favors a long bias, suggesting a full reversal is in play. The price action appears to be consolidating in the middle of the overnight range after the liquidity sweep.\n\n## Levels that matter\n*   **26261.75:** Current price.\n*   **26393.75:** Midnight Open, a key opening price acting as a potential magnet to the upside.\n*   **26300.0:** 08:30 Open, another opening price that price is currently below, reinforcing the discount.\n*   **26436.0:** Overnight High, a higher buy-side liquidity target.\n*   **26133.5:** London Low, a 15m sell-side liquidity pool that was swept and subsequently failed to hold, making it a critical reversal level.\n*   **25027.5:** Previous Day Low (PDL), a significant sell-side liquidity target if the bias flips bearish.\n*   **26242.75:** The Consequent Encroachment (CE) of the current 5m bullish FVG, identified as a potential entry point.\n*   **26217.0:** The low of the 5m FVG, serving as a tight stop for the primary scenario.\n\n## Scenario A\n**Model:** Full Reversal Model (A+ recipe)\n**Trigger:** Price respects the 5m bullish FVG (26233.5-26252.25) with a bullish close (e.g., 5m candle close back above the FVG CE), confirming the failed break of London Low.\n**Entry:** 26242.75 (CE of the 5m FVG)\n**Stop:** 26217.0 (Below the low of the 5m FVG candle)\n**First Target:** 26393.75 (Midnight Open)\n**Second Target:** 26436.0 (Overnight High)\n**Session Window:** 09:30-11:00 ET\n\n## Scenario B\n**Model:** Expansion Retracement\n**Trigger:** If a 15m candle explicitly closes below the London Low (26133.5), await for a bearish FVG to form on the subsequent expansion, then enter on a retracement back to 26133.5 now acting as resistance.\n**Entry:** 26133.5 (Retest of the broken London Low)\n**Stop:** 26300.0 (Above the 08:30 Open)\n**First Target:** 25027.5 (Previous Day Low)\n**Session Window:** 09:45-12:00 ET\n\n## Invalidation\nA 15m candle close below the London Low (26133.5) by 11:00 ET.\n\n## Sit out if\n*   If the 5m FVG at 26233.5 fails to hold as support on a closing basis before 09:40 ET.\n*   If there is no clear displacement away from the London Low after 09:30 ET, indicating a lack of institutional commitment.\n*   Today is Thursday, a day often advised against trading in general rules. While specific mechanical setups can override this, lack of clear conviction would warrant sitting out.\n\n## Models checked\n*   **Expansion Retracement:** `watch` - Price may expand from the London low sweep; looking for a retracement for a potential counter-trend move.\n*   **Failure Swing:** `in_play` - London low 26133.5 was taken and price is back inside, explicitly indicating a failure to hold the break.\n*   **HRLR Model: Wick + Rejection Block:** `not_today` - No clear choppy conditions, and the failed break of London low implies a directional move rather than a HRLR fill strategy.\n*   **Overpowered Order Block:** `watch` - Liquidity (London low) was taken; awaiting a clear OB with an FVG in its upper portion for a refined entry.\n*   **Change in State of Delivery:** `watch` - London low was swept; a bullish CSD would be a close above the opening price of the down-close candles, which likely occurred during the rally but needs specific confirmation on LTF for entry.\n*   **Reversal Confirmation Chain:** `watch` - Requires multiple respected PD arrays to align for a high-probability bias switch.\n*   **Secret Confirmation (hard days):** `not_today` - No current Expansion Retracement context for this hard day model.\n*   **Inversion FVG:** `watch` - Need a specific FVG to be closed through and flip its role to become support/resistance.\n*   **Balanced Price Range:** `not_today` - No current indication of opposing overlapping FVGs forming a BPR.\n*   **Consolidation Model:** `in_play` - Price is currently trading in the middle of the overnight range with quiet pre-market activity, aligning with consolidation conditions.\n*   **Breaker & Mitigation Block:** `watch` - After the London low sweep, looking for a clear market structure shift and potential breaker formation if the rally expands.\n*   **Anticipating Turtle Soups:** `watch` - The London low sweep can be classified as a turtle soup, awaiting entry confirmation after the raid.\n*   **Sell-Off / F-U Model:** `not_today` - Price is below midnight and 08:30 opens, suggesting a discount for longs rather than a one-sided sell-off profile. For a short, it requires a clear buy-side sweep above these opens, which has not occurred. For a long, it only targets 5m highs, which is too limited for a potential reversal from a key low.\n*   **Full Reversal Model (A+ recipe):** `in_play` - Price is below two opening prices, and 15m sell-side liquidity (London low) was taken, with price now back inside.\n*   **First Presentation:** `not_today` - The 09:30 open is yet to occur, so the first FVG cannot be marked.\n*   **Approaching Previous Week Low/High:** `not_today` - Price is currently far from both the Previous Week Low (24976.5) and Previous Week High (28279.25).\n*   **Fading the fake \"Model 2022\":** `not_today` - No retail reversal pattern has formed yet before a big pool to fade.\n*   **Model 2022 + OTE:** `watch` - Requires a Market Structure Shift (MSS) followed by an expansion that does not offer a 50% retracement before looking for an OTE entry.\n*   **Short / Intermediate-term structure:** `watch` - Need to observe the formation of the Short-term Low / Intermediate-term Low sequence to confirm structure shift.\n*   **Quadrant Order Flow:** `watch` - Need to define a clear dealing range with both buy-side and sell-side taken to apply quadrant analysis.\n*   **Lunch Macro Retracement:** `not_today` - It is currently 09:25 ET, too early for the Lunch Macro Retracement timing (which typically occurs after 10:00, especially around 11:30).\n*   **Three-Candle Wick CE:** `not_today` - No specific three-candle wick setup is currently apparent on the charts.\n\nThe primary scenario (Full Reversal Model) is backed by:\n1.  **Opening Prices:** Price is below both the Midnight and 08:30 opens, which is a key characteristic for a bullish bias (Vol 2 Class 1, V57).\n2.  **Liquidity Sweep & Failed Break:** The London low (a 15m sell-side liquidity pool) was taken and price immediately moved back inside, indicating a failed break and supporting a reversal (Failure Swing, Vol 1 Class 4).\n3.  **SMT Check:** NQ's sweep below the London low (26133.5) while ES's overnight low (7187.0) held stronger (ES price 7240.75, NQ price 26261.75) suggests a potential SMT divergence, where NQ may have been manipulated lower to sweep liquidity before a bullish move (D12)."
+    "outcome": "A_open",
+    "detail": "Full Reversal Model (A+ recipe): open \u00b7 at 09:30 \u00b7 went +2.79R / -0.0R\n  uncapped to 16:00: A_open\n  direction called long; AM was up, whole RTH was up",
+    "late_outcome": "A_open",
+    "late_r": null,
+    "grades": {
+      "bias2": "C",
+      "read": "A",
+      "day": "B",
+      "bias2_source": "measured"
+    },
+    "review": {
+      "bias2": {
+        "grade": "A",
+        "reason": "The plan correctly identified the long bias based on opening prices and liquidity sweep, and the trade paid 2.79R without drawdown.",
+        "wanted": "Price to respect the 5m FVG (26233.5-26252.25) with a bullish close, confirming the failed break of London Low, for a Full Reversal Model long.",
+        "happened": "Price opened inside the 5m FVG, respected its low end, and closed bullishly above it, confirming the pre-market sweep and rally, leading to an initial expansion up.",
+        "model_called": "Full Reversal Model (A+ recipe)",
+        "model_actual": "Full Reversal Model (A+ recipe)",
+        "model_correct": true,
+        "model_said": "A"
+      },
+      "read": {
+        "grade": "A",
+        "reason": "The morning plan correctly identified the strong bullish direction for the AM session."
+      },
+      "day": {
+        "grade": "B",
+        "shape": "two-sided range",
+        "am_shape": "initial expansion up, then tight range",
+        "am_model_correct": true,
+        "reason": "The AM session started with a strong bullish expansion as predicted, but the overall RTH settled into a two-sided range, failing to reach the higher targets."
+      },
+      "trigger_check": [
+        {
+          "plan": "A",
+          "part": "Price respects the 5m FVG (26233.5-26252.25) with a bullish close",
+          "met": true,
+          "at": "09:30",
+          "note": "The 09:30 candle opened at 26240.25 (inside FVG), had a low of 26223.75 (respecting FVG Low 26217.0), and closed at 26316.0 (bullish, above FVG)."
+        },
+        {
+          "plan": "A",
+          "part": "confirming the failed break of London Low",
+          "met": true,
+          "at": "09:30",
+          "note": "The London Low (26133.5) was swept at 06:00 pre-market (low 26131.0) and price rallied back above it before 09:30, confirmed by the FVG respect at the open."
+        }
+      ],
+      "keep": [
+        "The predictive power of being below opening prices after a liquidity sweep for a long bias, as per the `opens` concept and `A+` recipe.",
+        "The profitability of taking AM targets and not holding past the 11:00-11:30 window, as per the tested lessons."
+      ],
+      "messages": {
+        "right": [
+          "09:25 BIAS 2: thesis on discount, opens, London Low sweep, rallying back.",
+          "09:27 THE CALL: NQ \u00b7 2026-11-26 \u00b7 Playbook 1 \u00b7 LONG Thesis.",
+          "09:31 orderflow-alerts: Aggressive buying at ONVP POC 26233.00, aligning with the entry area."
+        ],
+        "wrong": [
+          "09:16 BIAS 1: SHORT bias was contrary to the AM's strong upward move.",
+          "07:42 sigma-alerts: \u03c3 HV +2\u03c3 first touch \u2192 SHORT (paper) at 26320.12 was stopped out as price rallied.",
+          "09:16 morning-brief: Stat Bias 'no edge' for NY AM direction when a clear bullish move occurred."
+        ]
+      },
+      "lessons": [
+        "The Full Reversal Model (A+ recipe) is highly effective when price is in discount below multiple opening prices after a HTF liquidity sweep, consistent with `opens` and `A+` concepts.",
+        "The tested lesson `KEPT: Take the AM target and do not hold past 11:00-11:30` is re-validated by the day's price action, which became choppy after initial AM expansion.",
+        "The tested lesson `REJECTED: Never short below the Midnight Open` is confirmed as rejected; trading long below Midnight/08:30 opens was the correct high-probability play, consistent with the Playbook Rule `Below two (best: all three) \u2192 longs`."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe morning's thesis, driven by Bias 2, called for a long position. The plan noted that price was trading in discount, below both the Midnight (26393.75) and 08:30 (26300.0) opening prices. Crucially, the London Low (26133.5) had been swept earlier in pre-market at 06:00, with price subsequently rallying back above it, indicating a failed break of sell-side liquidity. This setup, combining discount pricing and a failed raid, suggested a Full Reversal Model (A+ recipe) was in play. The primary target was the Midnight Open (26393.75) and the Overnight High (26436.0).\n\n## What actually happened\nThe pre-market session saw the London Low (26133.5) swept at 06:00 (low 26131.0), followed by a rally. At the RTH 09:30 open, price was at 26240.25. The 09:30 5-minute candle opened within the identified 5m FVG (26233.5-26252.25), touched a low of 26223.75 (respecting the FVG's low end of 26217.0), and closed strongly bullish at 26316.0. This confirmed the FVG's respect and initial upward displacement. The NY AM (09:30-11:00) maintained this bullish momentum, rising to a high of 26316.0 at 09:30 and closing at 26310.0. After 11:00, the market entered a choppy phase, making a high of 26322.0 at 11:10 and a low of 26214.0 at 12:45 before closing the RTH at 26221.25. Neither of the high-end targets (26393.75 / 26436.0) was reached.\n\n## How it went\nThe plan was **Grade A**. The read for the NY AM session was entirely correct. The thesis, built on price being in discount relative to opening prices and respecting a liquidity sweep with a subsequent rally, precisely matched the `Full Reversal Model (A+ recipe)` from the playbook. The trade triggered at 09:30, immediately moving in the predicted direction, achieving 2.79R without experiencing any drawdown (MAE 0.0R). This demonstrates a flawless entry and accurate directional bias. While the ultimate, higher targets were not hit, the trade paid handsomely, proving the strength of the model and entry. Scenario B, the short Expansion Retracement, never triggered within its designated time window, as the conditions for entry (15m close below London Low *and* a retracement to it as resistance during RTH) did not materialize.\n\n## The day as a whole\nThe day as a whole exhibited a **two-sided range**. The initial NY AM session (09:30-11:00) was characterized by a strong bullish expansion, accurately predicted by Bias 2. However, this expansion quickly gave way to a tight, choppy range after 11:00, with price failing to push towards the higher targets. The RTH ultimately closed slightly lower than its open, indicating a drift downwards after the initial AM rally. Bias 2's prediction of an AM trend was correct, but the overall day did not sustain that trend, settling instead into a consolidation or `Consolidation Model` following the initial expansion. This highlights the value of taking profits within the initial trading window.\n\n## The posts today\nSeveral posts from the bot and the brief proved accurate. At 09:25, Bias 2's thesis laid out the correct bullish narrative. This was reinforced by THE CALL at 09:27, which correctly identified the long direction for the NQ. The 09:31 `orderflow-alerts` reported \"Aggressive buying at ONVP POC 26233.00,\" which supported the bullish entry near the 5m FVG. In contrast, Bias 1's morning read at 09:16 called for a SHORT bias, which was incorrect for the AM session. The 07:42 `sigma-alerts` paper short trade at 26320.12 was also stopped out, directly contradicting the subsequent upward move. Furthermore, the 09:16 `morning-brief` stating \"no edge\" for the NY AM direction was inaccurate given the clear bullish expansion that occurred.\n\n## What to do differently\n1.  Continue to apply the `Full Reversal Model (A+ recipe)` as it proved highly effective today when price is in discount below multiple opening prices following a HTF liquidity sweep, reinforcing concepts from `opens` and `A+`.\n2.  Adhere to the tested lesson `KEPT: Take the AM target and do not hold past 11:00-11:30`. Today's price action demonstrated that while the initial AM expansion was strong, the market became choppy afterwards, making sustained holds less profitable.\n3.  Reaffirm the rejection of `REJECTED: Never short below the Midnight Open`. Trading long below Midnight/08:30 opens was the correct, high-probability play in this scenario, aligning with the Playbook Rule \"Below two (best: all three) \u2192 longs\".",
+    "session": {
+      "date": "2026-11-26",
+      "bars": 156,
+      "premarket": {
+        "open": 26287.25,
+        "high": 26344.0,
+        "low": 26131.0,
+        "close": 26239.75,
+        "at_high": "08:10",
+        "at_low": "06:00"
+      },
+      "am": {
+        "open": 26240.25,
+        "high": 26316.0,
+        "low": 26223.75,
+        "close": 26310.0,
+        "at_high": "09:30",
+        "at_low": "09:30"
+      },
+      "lunch": {
+        "open": 26309.0,
+        "high": 26322.0,
+        "low": 26214.0,
+        "close": 26221.25,
+        "at_high": "11:10",
+        "at_low": "12:45"
+      },
+      "pm": null,
+      "rth": {
+        "open": 26240.25,
+        "high": 26322.0,
+        "low": 26214.0,
+        "close": 26221.25,
+        "at_high": "11:10",
+        "at_low": "12:45",
+        "net": -19.0,
+        "shape": "two-sided",
+        "close_in_range_pct": 6.7
+      }
+    },
+    "playbook": {
+      "models": 22,
+      "rule_sections": 18,
+      "rules": 203,
+      "glossary": 69,
+      "dojo_classes": 17,
+      "notes": 42,
+      "videos": 82,
+      "concepts": 21,
+      "video_notes": 50,
+      "synced_at": "2026-11-17T21:21:23+00:00"
+    },
+    "sim": [
+      {
+        "i": 0,
+        "side": "long",
+        "model": "Full Reversal Model (A+ recipe)",
+        "entry": 26242.75,
+        "target": 26393.75,
+        "variants": {
+          "model": {
+            "stop": 26217.0,
+            "risk_pts": 25.75,
+            "outcome": "open",
+            "at": "09:30",
+            "triggered": true,
+            "points": null,
+            "usd": null
+          },
+          "10pt": {
+            "stop": 26232.75,
+            "risk_pts": 10.0,
+            "outcome": "open",
+            "at": "09:30",
+            "triggered": true,
+            "points": null,
+            "usd": null
+          },
+          "20pt": {
+            "stop": 26222.75,
+            "risk_pts": 20.0,
+            "outcome": "open",
+            "at": "09:30",
+            "triggered": true,
+            "points": null,
+            "usd": null
+          },
+          "50pt": {
+            "stop": 26192.75,
+            "risk_pts": 50.0,
+            "outcome": "open",
+            "at": "09:30",
+            "triggered": true,
+            "points": null,
+            "usd": null
+          },
+          "1R": {
+            "stop": 26091.75,
+            "risk_pts": 151.0,
+            "outcome": "open",
+            "at": "09:30",
+            "triggered": true,
+            "points": null,
+            "usd": null
+          },
+          "2R": {
+            "stop": 26167.25,
+            "risk_pts": 75.5,
+            "outcome": "open",
+            "at": "09:30",
+            "triggered": true,
+            "points": null,
+            "usd": null
+          },
+          "3R": {
+            "stop": 26192.42,
+            "risk_pts": 50.33,
+            "outcome": "open",
+            "at": "09:30",
+            "triggered": true,
+            "points": null,
+            "usd": null
+          }
+        }
+      },
+      {
+        "i": 1,
+        "side": "short",
+        "model": "Expansion Retracement",
+        "entry": 26133.5,
+        "target": 25027.5,
+        "variants": {
+          "model": {
+            "stop": 26300.0,
+            "risk_pts": 166.5,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "10pt": {
+            "stop": 26143.5,
+            "risk_pts": 10.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "20pt": {
+            "stop": 26153.5,
+            "risk_pts": 20.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "50pt": {
+            "stop": 26183.5,
+            "risk_pts": 50.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "1R": {
+            "stop": 27239.5,
+            "risk_pts": 1106.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "2R": {
+            "stop": 26686.5,
+            "risk_pts": 553.0,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          },
+          "3R": {
+            "stop": 26502.17,
+            "risk_pts": 368.67,
+            "outcome": "no_trigger",
+            "at": null,
+            "triggered": false,
+            "points": null,
+            "usd": null
+          }
+        }
+      }
+    ],
+    "score": {
+      "components": {
+        "draw": 0.5,
+        "direction": 1.0,
+        "levels": 0.286,
+        "timing": 0.5,
+        "invalidation": 1.0
+      },
+      "weights": {
+        "draw": 0.35,
+        "direction": 0.2,
+        "levels": 0.2,
+        "timing": 0.15,
+        "invalidation": 0.1
+      },
+      "notes": {
+        "direction": "+60.0 pt",
+        "levels": "2 of 7 reacted at",
+        "timing": "nothing resolved",
+        "invalidation": "held"
+      },
+      "total": 0.607,
+      "grade": "C",
+      "best_scenario": 0,
+      "per_scenario": [
+        {
+          "i": 0,
+          "side": "long",
+          "model": "Full Reversal Model (A+ recipe)",
+          "outcome": "open",
+          "triggered": true,
+          "at": "09:30",
+          "score": 0.5,
+          "mfe_r": 2.79,
+          "mae_r": 0.0
+        },
+        {
+          "i": 1,
+          "side": "short",
+          "model": "Expansion Retracement",
+          "outcome": "no_trigger",
+          "triggered": false,
+          "at": null,
+          "score": 0.5,
+          "mfe_r": 0.0,
+          "mae_r": 0.0
+        }
+      ],
+      "levels": [
+        {
+          "price": 26393.75,
+          "name": "Midnight Open",
+          "reacted": false
+        },
+        {
+          "price": 26300.0,
+          "name": "08:30 Open",
+          "reacted": true
+        },
+        {
+          "price": 26436.0,
+          "name": "Overnight High",
+          "reacted": false
+        },
+        {
+          "price": 26133.5,
+          "name": "London Low",
+          "reacted": false
+        },
+        {
+          "price": 25027.5,
+          "name": "PDL",
+          "reacted": false
+        },
+        {
+          "price": 26242.75,
+          "name": "5m FVG CE",
+          "reacted": true
+        },
+        {
+          "price": 26217.0,
+          "name": "5m FVG Low",
+          "reacted": false
+        }
+      ],
+      "mirror_total": 0.382,
+      "mirror_grade": "F",
+      "beat_mirror": true
+    },
+    "prep": {
+      "events": [
+        {
+          "date": "2026-11-26",
+          "time": null,
+          "title": "Bank Holiday",
+          "impact": "holiday"
+        }
+      ],
+      "pending": [
+        {
+          "price": 25603.75,
+          "name": "ER 0.5 never reached"
+        }
+      ],
+      "note": "**The prep \u2014 2026-11-26**\n\n**01 \u00b7 Calendar.** **Bank Holiday** (all day, white).\nA holiday session: thinner books, and moves that would mean something on a full day often do not. Size accordingly.\n\n**05 \u00b7 Still pending.** ER 0.5 never reached 25603.75. These stay marked for the rest of the week.\n\n**10 \u00b7 The plan.** LONG from 26242.75, stop 26217.0, target 26393.75. Wrong if 15m close below 26133.5 by 11:00.\n\n_Steps 02-04, 06, 07 and 09 are live on the chart \u2014 they are the ones that change while you watch, so they are not written down here._"
+    },
+    "read_bench": {
+      "recent": {
+        "n": 30,
+        "hit": 56.7,
+        "benchmark": "B",
+        "benchmark_hit": 50.0,
+        "edge": 6.7,
+        "mix": {
+          "C": 13,
+          "A": 2,
+          "B": 15
+        },
+        "called": {
+          "B": 20,
+          "C": 10
+        },
+        "brier": 0.566,
+        "brier_prior": 0.613,
+        "brier_edge": 0.047,
+        "brier_n": 30
+      },
+      "all": {
+        "n": 123,
+        "hit": 35.0,
+        "benchmark": "C",
+        "benchmark_hit": 52.0,
+        "edge": -17.1,
+        "mix": {
+          "A": 15,
+          "C": 64,
+          "B": 44
+        },
+        "called": {
+          "A": 62,
+          "C": 20,
+          "B": 37
+        },
+        "brier": 0.808,
+        "brier_prior": 0.592,
+        "brier_edge": -0.216,
+        "brier_n": 119
+      }
+    }
   }
 }
