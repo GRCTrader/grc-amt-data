@@ -788,5 +788,165 @@
       "htf_bias": "SHORT",
       "model": null
     }
+  },
+  "2026-11-26": {
+    "date": "2026-11-26",
+    "written_at": "2026-11-26T16:15:33-05:00",
+    "grades": {
+      "plan": "D",
+      "plan_source": "measured",
+      "read": "F",
+      "day": "C"
+    },
+    "review": {
+      "bias1": {
+        "grade": "F",
+        "reason": "The higher-timeframe bias was Short, but the day delivered a Trend Up model, and the Long leg of the plan, which was counter-bias, stopped out for a loss immediately.",
+        "wanted": "The read wanted a rejection of the Asia high and aggressive selling to dominate, targeting gaps lower.",
+        "happened": "Price gapped up, the Long leg of the plan triggered and stopped out at the open, and the day was subsequently classified as a Trend Up.",
+        "model_called": "C",
+        "model_actual": "trend_up",
+        "model_correct": false,
+        "model_said": "F"
+      },
+      "read": {
+        "grade": "F",
+        "reason": "The directional read for a Short day was fundamentally incorrect as the market opened strong in the AM and was classified as a Trend Up day."
+      },
+      "day": {
+        "grade": "C",
+        "shape": "two-sided range with initial AM upward momentum, closing slightly lower overall",
+        "reason": "The RTH exhibited a significant upward move in the morning, followed by a retracement, resulting in a tight range and a negligible net change for the day, despite the model classifying it as 'trend_up'."
+      },
+      "keep": [
+        "08:52 Delta divergence at the high, indicating buyers were not behind the pre-market high.",
+        "07:42 Sigma alert to SHORT at 26320.12, accurately identifying exhaustion and subsequent pre-market drop."
+      ],
+      "messages": {
+        "right": [
+          "08:52 Delta divergence at the high \u2014 price made a new 30-minute high (26328.75) but cumulative delta is lower than at the last high (-26). Buyers are not behind it.",
+          "07:42 \u03c3 HV +2\u03c3 first touch \u2192 SHORT (paper) ... rejection with little aggression: exhaustion ... \u0394 touch -185 \u00b7 \u0394 5 min -255 (-37%)",
+          "09:31 Aggressive buying at ONVP POC 26233.00 \u2014 +75 delta in one minute."
+        ],
+        "wrong": [
+          "09:16 'Expect passive buying to fail and aggressive selling to dominate as price returns to prior value.'",
+          "09:16 'Price should NOT accept and hold above tonight's Asia high of 26,436.00 with sustained buying pressure, nor should it establish a new value area above this level.' (Condition was met, yet Short bias was incorrect.)"
+        ]
+      },
+      "lessons": [
+        "Re-evaluate day-model classification (e.g., 'trend_up') to ensure it aligns with net RTH price action (e.g., two-sided range), particularly on holiday sessions, to prevent directional misdirection.",
+        "The plan's counter-bias Long entry at 09:30 immediately failed. Adhere to 'KEPT: ER NEEDS A CONFIRMED CLOSE AND NO ENTRY BEFORE 09:40' by delaying entries past the opening 20 minutes of noise, especially when conflicting with HTF bias.",
+        "On holiday sessions where liquidity is thin and levels are less reliable, the `wrong if` condition for a primary bias must provide more timely and relevant invalidation closer to price action, rather than relying on distant, untouched levels (e.g., 26436.0)."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe morning read held a higher-timeframe Short bias, predicting a \"C\" day-model. It wanted to see price reject the Asia high (26436.00) with order flow confirmation of exhaustion or absorption, expecting passive buying to fail and aggressive selling to dominate, targeting the half-gap at 26247.62 and the full-gap (prior RTH settle) at 26105.50. The Long plan, positioned above OVN VAH 26294.0, aimed for PD Globex H (26350.75) and OVN H (26436.0). The Short plan, below OVN POC 26233.0, aimed for PDH (26146.25) and Settle (26099.5).\n\n## What actually happened\nThe session was a US holiday, noted as a thin, shortened session with less reliable levels. Pre-market, price peaked at 26344.0 (08:10), well below the Asia high, then dropped to 26131.0 (06:00) before closing pre-market at 26239.75. The NY AM (09:30-11:00) opened at 26240.25, with the Long plan triggering immediately at 26294.0. The 09:30 candle had a high of 26316.0 and a low of 26223.75, which hit the Long plan's stop at 26233.0. Price closed the AM at 26310.0, showing an initial upward push. The lunch session (11:00-13:30) saw price range between 26322.0 (11:10) and 26214.0 (12:45), closing at 26221.25. The full RTH (09:30-16:00) ranged from 26322.0 to 26214.0, closing at 26221.25, a net decrease of 19.00 points, overall a two-sided range.\n\n## How it went\nThe read's higher-timeframe Short bias was incorrect; the day opened with strong upward momentum in the AM, and the model classified it as a 'trend_up' day, contradicting the expectation of aggressive selling. The Long leg of the frozen plan, which was counter to the primary Short bias, triggered at 09:30 and immediately stopped out for a -1.00R loss within the first 5-minute candle. This highlights a failure in both the directional read and the timing/placement of the counter-bias trade, particularly given the explicit holiday warning about unreliable levels. The primary Short thesis's invalidation condition (acceptance above Asia high 26436.00) was never met, yet the short bias was still proven wrong by the actual price action.\n\n## The day as a whole\nThe day, classified by the model as a 'trend_up,' in fact behaved as a two-sided range with a net -19.00 point change for the full RTH session. While the AM saw an upward push, this momentum faded, and the market remained contained within a relatively tight range for the remainder of the shortened session. This outcome contradicts both the predicted Short bias and the 'trend_up' day-model classification, demonstrating a significant discrepancy between the model's prediction/classification and the actual market behavior. Bias 1 was significantly off, whereas Bias 2 called Long, and its plan scored a \"day B\", indicating a better alignment with the day's initial direction.\n\n## The posts today\nThe 08:52 #orderflow-alerts post, \"Delta divergence at the high\", correctly identified exhaustion in buyers leading up to the AM session's high. The 07:42 #sigma-alerts post, indicating a SHORT opportunity at 26320.12, also proved directionally correct for the immediate pre-market and early AM drop. However, the 09:16 #morning-brief stating, \"Expect passive buying to fail and aggressive selling to dominate,\" was incorrect, as the AM saw an initial aggressive buying push.\n\n## What to do differently\n*   Re-evaluate the internal definition and classification of `day-model` (e.g., 'trend_up') to ensure it consistently reflects the net RTH price action, especially on shortened or holiday sessions, to avoid directional misdirection in the 09:16 read.\n*   The Long entry at 26294.0 triggered at 09:30 and stopped out immediately. Consistent with \"KEPT: ER NEEDS A CONFIRMED CLOSE AND NO ENTRY BEFORE 09:40\", delay entries, particularly those conflicting with the HTF bias, until after the initial 20 minutes of RTH noise and a clear change in state of delivery (CSD) confirmation.\n*   On holiday sessions, where \"levels are less reliable\", the `wrong if` condition for the primary bias should be a more responsive, closer-to-price-action signal rather than a distant level (e.g., 26436.0) that fails to provide timely invalidation even when the bias is incorrect, as per the \"KEPT: Respect Bias 2's wrong-if\" lesson.",
+    "trade_11": {
+      "date": "2026-11-26",
+      "outcome": "stop",
+      "side": "long",
+      "trigger": 26294.0,
+      "at": "09:30",
+      "r": -1.0,
+      "mfe_r": 0.36,
+      "mae_r": 1.15,
+      "label": "\u274c the plan was stopped",
+      "stop": 26233.0,
+      "target": 26350.75,
+      "risk_pts": 61.0,
+      "trigger_name": "OVN VAH",
+      "stop_name": "OVN POC",
+      "points": -61.5,
+      "marked": false,
+      "usd": {
+        "1 MNQ": {
+          "gross": -123.0,
+          "net": -124.5
+        },
+        "5 MNQ": {
+          "gross": -615.0,
+          "net": -622.5
+        },
+        "1 NQ": {
+          "gross": -1230.0,
+          "net": -1235.0
+        }
+      }
+    },
+    "trade_day": {
+      "date": "2026-11-26",
+      "outcome": "stop",
+      "side": "long",
+      "trigger": 26294.0,
+      "at": "09:30",
+      "r": -1.0,
+      "mfe_r": 0.36,
+      "mae_r": 1.15,
+      "label": "\u274c the plan was stopped",
+      "stop": 26233.0,
+      "target": 26350.75,
+      "risk_pts": 61.0,
+      "trigger_name": "OVN VAH",
+      "stop_name": "OVN POC",
+      "points": -61.5,
+      "marked": false,
+      "usd": {
+        "1 MNQ": {
+          "gross": -123.0,
+          "net": -124.5
+        },
+        "5 MNQ": {
+          "gross": -615.0,
+          "net": -622.5
+        },
+        "1 NQ": {
+          "gross": -1230.0,
+          "net": -1235.0
+        }
+      }
+    },
+    "session": {
+      "date": "2026-11-26",
+      "bars": 156,
+      "premarket": {
+        "open": 26287.25,
+        "high": 26344.0,
+        "low": 26131.0,
+        "close": 26239.75,
+        "at_high": "08:10",
+        "at_low": "06:00"
+      },
+      "am": {
+        "open": 26240.25,
+        "high": 26316.0,
+        "low": 26223.75,
+        "close": 26310.0,
+        "at_high": "09:30",
+        "at_low": "09:30"
+      },
+      "lunch": {
+        "open": 26309.0,
+        "high": 26322.0,
+        "low": 26214.0,
+        "close": 26221.25,
+        "at_high": "11:10",
+        "at_low": "12:45"
+      },
+      "pm": null,
+      "rth": {
+        "open": 26240.25,
+        "high": 26322.0,
+        "low": 26214.0,
+        "close": 26221.25,
+        "at_high": "11:10",
+        "at_low": "12:45",
+        "net": -19.0,
+        "shape": "two-sided",
+        "close_in_range_pct": 6.7
+      }
+    },
+    "called": {
+      "htf_bias": "SHORT",
+      "model": null
+    }
   }
 }
