@@ -8587,5 +8587,220 @@
         "brier_n": 118
       }
     }
+  },
+  "2026-11-26": {
+    "date": "2026-11-26",
+    "status": "pre-market",
+    "written_at": "2026-11-26T09:25:56-05:00",
+    "plan": {
+      "bias": "long",
+      "price": 26261.75,
+      "levels": [
+        {
+          "price": 26393.75,
+          "name": "Midnight Open",
+          "kind": "open"
+        },
+        {
+          "price": 26300.0,
+          "name": "08:30 Open",
+          "kind": "open"
+        },
+        {
+          "price": 26436.0,
+          "name": "Overnight High",
+          "kind": "bsl"
+        },
+        {
+          "price": 26133.5,
+          "name": "London Low",
+          "kind": "ssl"
+        },
+        {
+          "price": 25027.5,
+          "name": "PDL",
+          "kind": "ssl"
+        },
+        {
+          "price": 26242.75,
+          "name": "5m FVG CE",
+          "kind": "gap"
+        },
+        {
+          "price": 26217.0,
+          "name": "5m FVG Low",
+          "kind": "gap"
+        }
+      ],
+      "scenarios": [
+        {
+          "side": "long",
+          "role": "primary",
+          "model": "Full Reversal Model (A+ recipe)",
+          "conviction": 5,
+          "trigger": "Price respects the 5m FVG (26233.5-26252.25) with a bullish close, confirming the failed break of London Low.",
+          "entry": 26242.75,
+          "stop": 26217.0,
+          "target": 26393.75,
+          "target2": 26436.0,
+          "window": "09:30-11:00"
+        },
+        {
+          "side": "short",
+          "role": "counter",
+          "model": "Expansion Retracement",
+          "conviction": 3,
+          "trigger": "If a 15m candle closes below London Low (26133.5), await retracement back to 26133.5 acting as resistance.",
+          "entry": 26133.5,
+          "stop": 26300.0,
+          "target": 25027.5,
+          "target2": null,
+          "window": "09:45-12:00"
+        }
+      ],
+      "invalidation": {
+        "price": 26133.5,
+        "rule": "15m close below",
+        "by": "11:00"
+      },
+      "model_screen": [
+        {
+          "model": "Expansion Retracement",
+          "status": "watch",
+          "why": "Price may expand from the London low sweep; looking for a retracement for a potential counter-trend move."
+        },
+        {
+          "model": "Failure Swing",
+          "status": "in_play",
+          "why": "London low 26133.5 was taken and price is back inside, explicitly indicating a failure to hold the break."
+        },
+        {
+          "model": "HRLR Model: Wick + Rejection Block",
+          "status": "not_today",
+          "why": "No clear choppy conditions, and the failed break of London low implies a directional move rather than a HRLR fill strategy."
+        },
+        {
+          "model": "Overpowered Order Block",
+          "status": "watch",
+          "why": "Liquidity (London low) was taken; awaiting a clear OB with an FVG in its upper portion for a refined entry."
+        },
+        {
+          "model": "Change in State of Delivery",
+          "status": "watch",
+          "why": "London low was swept; a bullish CSD would be a close above the opening price of the down-close candles, which likely occurred during the rally but needs specific confirmation on LTF for entry."
+        },
+        {
+          "model": "Reversal Confirmation Chain",
+          "status": "watch",
+          "why": "Requires multiple respected PD arrays to align for a high-probability bias switch."
+        },
+        {
+          "model": "Secret Confirmation (hard days)",
+          "status": "not_today",
+          "why": "No current Expansion Retracement context for this hard day model."
+        },
+        {
+          "model": "Inversion FVG",
+          "status": "watch",
+          "why": "Need a specific FVG to be closed through and flip its role to become support/resistance."
+        },
+        {
+          "model": "Balanced Price Range",
+          "status": "not_today",
+          "why": "No current indication of opposing overlapping FVGs forming a BPR."
+        },
+        {
+          "model": "Consolidation Model",
+          "status": "in_play",
+          "why": "Price is currently trading in the middle of the overnight range with quiet pre-market activity, aligning with consolidation conditions."
+        },
+        {
+          "model": "Breaker & Mitigation Block",
+          "status": "watch",
+          "why": "After the London low sweep, looking for a clear market structure shift and potential breaker formation if the rally expands."
+        },
+        {
+          "model": "Anticipating Turtle Soups",
+          "status": "watch",
+          "why": "The London low sweep can be classified as a turtle soup, awaiting entry confirmation after the raid."
+        },
+        {
+          "model": "Sell-Off / F-U Model",
+          "status": "not_today",
+          "why": "Price is below midnight and 08:30 opens, suggesting a discount for longs rather than a one-sided sell-off profile. For a short, it requires a clear buy-side sweep above these opens, which has not occurred. For a long, it only targets 5m highs, which is too limited for a potential reversal from a key low."
+        },
+        {
+          "model": "Full Reversal Model (A+ recipe)",
+          "status": "in_play",
+          "why": "Price is below two opening prices, and 15m sell-side liquidity (London low) was taken, with price now back inside."
+        },
+        {
+          "model": "First Presentation",
+          "status": "not_today",
+          "why": "The 09:30 open is yet to occur, so the first FVG cannot be marked."
+        },
+        {
+          "model": "Approaching Previous Week Low/High",
+          "status": "not_today",
+          "why": "Price is currently far from both the Previous Week Low (24976.5) and Previous Week High (28279.25)."
+        },
+        {
+          "model": "Fading the fake \"Model 2022\"",
+          "status": "not_today",
+          "why": "No retail reversal pattern has formed yet before a big pool to fade."
+        },
+        {
+          "model": "Model 2022 + OTE",
+          "status": "watch",
+          "why": "Requires a Market Structure Shift (MSS) followed by an expansion that does not offer a 50% retracement before looking for an OTE entry."
+        },
+        {
+          "model": "Short / Intermediate-term structure",
+          "status": "watch",
+          "why": "Need to observe the formation of the Short-term Low / Intermediate-term Low sequence to confirm structure shift."
+        },
+        {
+          "model": "Quadrant Order Flow",
+          "status": "watch",
+          "why": "Need to define a clear dealing range with both buy-side and sell-side taken to apply quadrant analysis."
+        },
+        {
+          "model": "Lunch Macro Retracement",
+          "status": "not_today",
+          "why": "It is currently 09:25 ET, too early for the Lunch Macro Retracement timing (which typically occurs after 10:00, especially around 11:30)."
+        },
+        {
+          "model": "Three-Candle Wick CE",
+          "status": "not_today",
+          "why": "No specific three-candle wick setup is currently apparent on the charts."
+        }
+      ],
+      "confluence": [
+        "Opening Prices: Price is below both the Midnight and 08:30 opens, which aligns with a bullish bias (Vol 2 Class 1, V57).",
+        "Liquidity Sweep & Failed Break: The London low (a 15m sell-side pool) was taken and price moved back inside, indicating a failed break and supporting a reversal (Failure Swing, Vol 1 Class 4).",
+        "SMT Check: ES is at 7240.75, NQ at 26261.75. ES ONH 7254.75, NQ ONH 26436.0. Both indices have moved off their overnight lows and are below their overnight highs, but NQ seems to have experienced a deeper sweep below its London low compared to ES's ONL 7187.0 which held stronger. This could indicate a subtle SMT divergence where NQ lagged lower for a clean sweep, favoring a reversal up (D12)."
+      ],
+      "screen_check": {
+        "screened": 22,
+        "of": 22,
+        "missing": [],
+        "unknown": [],
+        "in_play": [
+          "Failure Swing (Vol 1 Class 4)",
+          "Consolidation Model",
+          "Full Reversal Model (A+ recipe)"
+        ],
+        "off_screen_scenarios": [
+          "Expansion Retracement"
+        ]
+      },
+      "sit_out": [
+        "If the 5m FVG at 26233.5 fails to hold as support on a closing basis before 09:40 ET.",
+        "If there is no clear displacement away from the London Low after 09:30 ET.",
+        "Today is Thursday, a day often advised against trading in general rules, but specific setups can override."
+      ],
+      "ai_model": "gemini-2.5-flash"
+    },
+    "prose": "## The read\nPrice is currently trading in a discount, below both the Midnight and 08:30 opening prices. The London low was swept earlier in pre-market, and price has since rallied back above it, indicating a failed break. This combination of being in discount and showing a failed raid on sell-side liquidity strongly favors a long bias, suggesting a full reversal is in play. The price action appears to be consolidating in the middle of the overnight range after the liquidity sweep.\n\n## Levels that matter\n*   **26261.75:** Current price.\n*   **26393.75:** Midnight Open, a key opening price acting as a potential magnet to the upside.\n*   **26300.0:** 08:30 Open, another opening price that price is currently below, reinforcing the discount.\n*   **26436.0:** Overnight High, a higher buy-side liquidity target.\n*   **26133.5:** London Low, a 15m sell-side liquidity pool that was swept and subsequently failed to hold, making it a critical reversal level.\n*   **25027.5:** Previous Day Low (PDL), a significant sell-side liquidity target if the bias flips bearish.\n*   **26242.75:** The Consequent Encroachment (CE) of the current 5m bullish FVG, identified as a potential entry point.\n*   **26217.0:** The low of the 5m FVG, serving as a tight stop for the primary scenario.\n\n## Scenario A\n**Model:** Full Reversal Model (A+ recipe)\n**Trigger:** Price respects the 5m bullish FVG (26233.5-26252.25) with a bullish close (e.g., 5m candle close back above the FVG CE), confirming the failed break of London Low.\n**Entry:** 26242.75 (CE of the 5m FVG)\n**Stop:** 26217.0 (Below the low of the 5m FVG candle)\n**First Target:** 26393.75 (Midnight Open)\n**Second Target:** 26436.0 (Overnight High)\n**Session Window:** 09:30-11:00 ET\n\n## Scenario B\n**Model:** Expansion Retracement\n**Trigger:** If a 15m candle explicitly closes below the London Low (26133.5), await for a bearish FVG to form on the subsequent expansion, then enter on a retracement back to 26133.5 now acting as resistance.\n**Entry:** 26133.5 (Retest of the broken London Low)\n**Stop:** 26300.0 (Above the 08:30 Open)\n**First Target:** 25027.5 (Previous Day Low)\n**Session Window:** 09:45-12:00 ET\n\n## Invalidation\nA 15m candle close below the London Low (26133.5) by 11:00 ET.\n\n## Sit out if\n*   If the 5m FVG at 26233.5 fails to hold as support on a closing basis before 09:40 ET.\n*   If there is no clear displacement away from the London Low after 09:30 ET, indicating a lack of institutional commitment.\n*   Today is Thursday, a day often advised against trading in general rules. While specific mechanical setups can override this, lack of clear conviction would warrant sitting out.\n\n## Models checked\n*   **Expansion Retracement:** `watch` - Price may expand from the London low sweep; looking for a retracement for a potential counter-trend move.\n*   **Failure Swing:** `in_play` - London low 26133.5 was taken and price is back inside, explicitly indicating a failure to hold the break.\n*   **HRLR Model: Wick + Rejection Block:** `not_today` - No clear choppy conditions, and the failed break of London low implies a directional move rather than a HRLR fill strategy.\n*   **Overpowered Order Block:** `watch` - Liquidity (London low) was taken; awaiting a clear OB with an FVG in its upper portion for a refined entry.\n*   **Change in State of Delivery:** `watch` - London low was swept; a bullish CSD would be a close above the opening price of the down-close candles, which likely occurred during the rally but needs specific confirmation on LTF for entry.\n*   **Reversal Confirmation Chain:** `watch` - Requires multiple respected PD arrays to align for a high-probability bias switch.\n*   **Secret Confirmation (hard days):** `not_today` - No current Expansion Retracement context for this hard day model.\n*   **Inversion FVG:** `watch` - Need a specific FVG to be closed through and flip its role to become support/resistance.\n*   **Balanced Price Range:** `not_today` - No current indication of opposing overlapping FVGs forming a BPR.\n*   **Consolidation Model:** `in_play` - Price is currently trading in the middle of the overnight range with quiet pre-market activity, aligning with consolidation conditions.\n*   **Breaker & Mitigation Block:** `watch` - After the London low sweep, looking for a clear market structure shift and potential breaker formation if the rally expands.\n*   **Anticipating Turtle Soups:** `watch` - The London low sweep can be classified as a turtle soup, awaiting entry confirmation after the raid.\n*   **Sell-Off / F-U Model:** `not_today` - Price is below midnight and 08:30 opens, suggesting a discount for longs rather than a one-sided sell-off profile. For a short, it requires a clear buy-side sweep above these opens, which has not occurred. For a long, it only targets 5m highs, which is too limited for a potential reversal from a key low.\n*   **Full Reversal Model (A+ recipe):** `in_play` - Price is below two opening prices, and 15m sell-side liquidity (London low) was taken, with price now back inside.\n*   **First Presentation:** `not_today` - The 09:30 open is yet to occur, so the first FVG cannot be marked.\n*   **Approaching Previous Week Low/High:** `not_today` - Price is currently far from both the Previous Week Low (24976.5) and Previous Week High (28279.25).\n*   **Fading the fake \"Model 2022\":** `not_today` - No retail reversal pattern has formed yet before a big pool to fade.\n*   **Model 2022 + OTE:** `watch` - Requires a Market Structure Shift (MSS) followed by an expansion that does not offer a 50% retracement before looking for an OTE entry.\n*   **Short / Intermediate-term structure:** `watch` - Need to observe the formation of the Short-term Low / Intermediate-term Low sequence to confirm structure shift.\n*   **Quadrant Order Flow:** `watch` - Need to define a clear dealing range with both buy-side and sell-side taken to apply quadrant analysis.\n*   **Lunch Macro Retracement:** `not_today` - It is currently 09:25 ET, too early for the Lunch Macro Retracement timing (which typically occurs after 10:00, especially around 11:30).\n*   **Three-Candle Wick CE:** `not_today` - No specific three-candle wick setup is currently apparent on the charts.\n\nThe primary scenario (Full Reversal Model) is backed by:\n1.  **Opening Prices:** Price is below both the Midnight and 08:30 opens, which is a key characteristic for a bullish bias (Vol 2 Class 1, V57).\n2.  **Liquidity Sweep & Failed Break:** The London low (a 15m sell-side liquidity pool) was taken and price immediately moved back inside, indicating a failed break and supporting a reversal (Failure Swing, Vol 1 Class 4).\n3.  **SMT Check:** NQ's sweep below the London low (26133.5) while ES's overnight low (7187.0) held stronger (ES price 7240.75, NQ price 26261.75) suggests a potential SMT divergence, where NQ may have been manipulated lower to sweep liquidity before a bullish move (D12)."
   }
 }
