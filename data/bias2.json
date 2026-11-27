@@ -9954,6 +9954,104 @@
         "brier_edge": -0.217,
         "brier_n": 120
       }
+    },
+    "day_report": {
+      "narrative": {
+        "headline": "**C** on 0.56. The biggest single loss was the draw on liquidity: worth 0.35, returned 0.17.",
+        "paragraphs": [
+          "The plan was **neutral**. A was long on Consolidation Model from 26,648.00. B was short on Expansion Retracement from 26,595.00. It was to be wrong below 26,590.00 \u2014 5m close below.",
+          "The session opened 26,579.75 and closed 26,756.25, a 618 point range. **A** (long from 26,648.00) was stopped. **B** (short from 26,595.00) was stopped. The invalidation printed at 21:20 (26,590.00), so the idea was dead from there.",
+          "**Where the score went**, worst first:\n- the draw on liquidity \u2014 50% of 0.35, part of it.\n- the invalidation \u2014 0% of 0.10, nothing to show; tripped.\n- the levels it named \u2014 56% of 0.20, part of it; 5 of 9 reacted at.\n- the timing \u2014 50% of 0.15, part of it; nothing resolved.",
+          "What it got right: the direction \u2014 together worth 0.20 of the score.",
+          "**The one thing.** The draw on liquidity cost 0.17 of the grade, more than anything else. Fix that and the same day scores 0.74."
+        ],
+        "cost": [
+          {
+            "key": "draw",
+            "value": 0.5,
+            "weight": 0.35,
+            "lost": 0.175,
+            "won": 0.175,
+            "note": ""
+          },
+          {
+            "key": "invalidation",
+            "value": 0.0,
+            "weight": 0.1,
+            "lost": 0.1,
+            "won": 0.0,
+            "note": "tripped"
+          },
+          {
+            "key": "levels",
+            "value": 0.556,
+            "weight": 0.2,
+            "lost": 0.0888,
+            "won": 0.1112,
+            "note": "5 of 9 reacted at"
+          },
+          {
+            "key": "timing",
+            "value": 0.5,
+            "weight": 0.15,
+            "lost": 0.075,
+            "won": 0.075,
+            "note": "nothing resolved"
+          }
+        ],
+        "credit": [
+          {
+            "key": "direction",
+            "value": 1.0,
+            "weight": 0.2,
+            "lost": 0.0,
+            "won": 0.2,
+            "note": "neutral, closed -18.8 on a 409 pt range"
+          }
+        ],
+        "total": 0.561,
+        "grade": "C"
+      },
+      "happened": {
+        "open": 26579.75,
+        "high": 26826.5,
+        "low": 26208.5,
+        "close": 26756.25,
+        "range": 618.0,
+        "bars": 231,
+        "up": true,
+        "scenarios": [
+          {
+            "tag": "A",
+            "side": "long",
+            "entry": 26648.0,
+            "triggered": true,
+            "target_hit": true,
+            "stop_hit": true,
+            "verdict": "stop"
+          },
+          {
+            "tag": "B",
+            "side": "short",
+            "entry": 26595.0,
+            "triggered": true,
+            "target_hit": true,
+            "stop_hit": true,
+            "verdict": "stop"
+          }
+        ],
+        "invalidation": {
+          "price": 26590.0,
+          "broke": true,
+          "at": "2026-11-26T21:20:00-05:00"
+        }
+      },
+      "adherence": {},
+      "tilt": {},
+      "stats": {
+        "positions": 0
+      },
+      "trades": 0
     }
   }
 }
