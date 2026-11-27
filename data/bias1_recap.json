@@ -948,5 +948,139 @@
       "htf_bias": "SHORT",
       "model": null
     }
+  },
+  "2026-11-27": {
+    "date": "2026-11-27",
+    "written_at": "2026-11-27T16:15:28-05:00",
+    "grades": {
+      "plan": "B",
+      "plan_source": "measured",
+      "read": "B",
+      "day": "B"
+    },
+    "review": {
+      "bias1": {
+        "grade": "C",
+        "reason": "The directional read correctly anticipated the AM liquidation down to 26208.5, but the frozen short plan contained a dead zone with no entry trigger, leaving the short unexecuted while the long leg triggered after 11:00 AM.",
+        "wanted": "A sweep of liquidity above pre-market levels followed by downside aggression targeting the 26278 RTH POC and 26214 PDL.",
+        "happened": "Price opened at 26579.75 and sold off 371 points directly into 26208.5 by 10:05 ET before V-bottoming into a 618-point lunch rally to 26826.5.",
+        "model_called": "Scenario B",
+        "model_actual": "range_expansion",
+        "model_correct": false,
+        "model_said": "C"
+      },
+      "read": {
+        "grade": "B",
+        "reason": "The AM short bias correctly targeted the daily sell-side liquidity at 26214/26278, though it missed the explosive lunch macro V-reversal."
+      },
+      "day": {
+        "grade": "B",
+        "shape": "two-sided range expansion / Black Friday V-reversal",
+        "reason": "A 371-point AM sell-off to 26208.5 followed by a massive 618-point lunch macro reversal up to 26826.5."
+      },
+      "keep": [
+        "The 02:45 London read correctly projected the draw down to prior NY accepted prices (26322 / 26214).",
+        "The 09:16 morning brief correctly identified the RTH POC (26278) and PDL (26214) as the primary AM targets."
+      ],
+      "messages": {
+        "right": [
+          "02:45 #london-read: Correctly called rotation down toward prior session accepted prices and Asia low 26219 / Prev NY low 26214.",
+          "09:16 #morning-brief: Correctly named target RTH POC 26278.0 and PDL 26214.0 for the short direction."
+        ],
+        "wrong": [
+          "09:16 #morning-brief: Incorrectly stated PD Globex H 26436.00 was 212 pts away out of reach when price was at 26648.00.",
+          "09:25 #morning-brief: Bias 2 predicted consolidation with small targets right before a 618-point expansion move."
+        ]
+      },
+      "lessons": [
+        "Ensure level math in pre-open scripts calculates distance to levels correctly to prevent creating artificial no-trade zones.",
+        "Do not hold AM positions past 11:00 ET, especially on holiday sessions where lunch macro runs can aggressively reverse the AM range.",
+        "When HTF bias targets clean 15m/1H sell-side liquidity (26214), provide an executable entry model trigger above the open rather than standing aside."
+      ]
+    },
+    "prose": "## What we wanted to see\nThe morning read established a HTF SHORT bias entering Black Friday's shortened session. Coming off a 650-point overnight expansion (26219 to 26868.75), price was trading in premium relative to yesterday's close (26221.25). The read sought a liquidity sweep followed by downside delivery into key discount targets: the prior NY session POC (26278.0), the Asia low (26219.0), and the prior day low (26214.0). \n\nExecution parameters specified waiting past 09:40 ET for confirmation of failed buying before entering short on a retracement.\n\n## What actually happened\nAt the 09:30 ET bell, NQ opened at 26579.75, already down 68 points from the 09:00 brief. The market offered no upward manipulation above the open. Instead, an aggressive sell-off began immediately. By 09:31 ET, delta flipped heavily negative (-457 delta at VWAP \u22121\u03c3). \n\nPrice sliced through intermediate levels without establishing an upper range, bottoming at 26208.5 at 10:05 ET\u2014sweeping the 26214 PDL and 26219 Asia low to the tick. Once sell-side liquidity was cleaned at 26208.5, the AM sell program concluded. \n\nDuring the Lunch Macro window (11:00\u201313:30 ET), price executed an aggressive V-bottom reversal, rallying 618 points from the 26208.5 low to a session high of 26826.5 by 13:05 ET before closing at 26756.25 (+176.50 pts on the day).\n\n## How it went\nThe directional read for the AM session was accurate. It correctly identified that overnight buying would be liquidated down to the prior day's value structure at 26278 and 26214. \n\nHowever, the frozen execution plan failed to capitalize on the move. The 09:16 frozen plan declared a short \"no-trade zone\" between 26436.0 and 26708.0 due to a script distance calculation error. Consequently, no short trade was triggered during the 371-point AM drop. \n\nThe LONG leg triggered late at 12:55 ET when price crossed 26708.0, reaching its target at 26764.0 for +0.75R (+55.75 pts). While profitable, entering long after 11:00 ET violates the playbook rule: *\"Take AM target and do not hold past 11:00-11:30\"*.\n\n## The day as a whole\nThe session delivered a classic two-sided range expansion. The morning provided a clean LRLR liquidation leg directly into HTF sell-side liquidity at 26208.5. Once that pool was cleared, the market launched a violent Lunch Macro Retracement [LMR] that reclaimed the entire morning drop and expanded toward the overnight high. \n\nComparing the two biases: Bias 1 correctly called the HTF SHORT direction and target levels for the morning, whereas Bias 2 misjudged the environment as a tight consolidation day.\n\n## The posts today\n- **02:45 #london-read (RIGHT):** Correctly called for a rotation down toward prior NY accepted prices (26322.0 / 26214.0) and the Asia low (26219.0).\n- **09:16 #morning-brief (RIGHT):** Correctly pinpointed 26278.0 (RTH POC) and 26214.0 (PDL) as the primary short targets.\n- **09:16 #morning-brief (WRONG):** Stated that PD Globex High 26436.0 was 212 points away and out of reach, despite price trading at 26648.0 (212 points *above* 26436.0).\n- **09:25 #morning-brief (WRONG):** Bias 2 called for \"consolidation conditions... leading to smaller targets\" immediately prior to a 371-point fall and 618-point rise.\n- **Contradiction (09:16 vs 09:25):** The 09:16 brief called for a short drive to 26214.0, while the 09:25 Bias 2 brief asserted price had broken the London low and held, recommending small-target consolidation scalps.\n\n## What to do differently\n1. **Audit Pre-Open Level Distance Logic:** Correct pine/python script calculations for level offsets so trade-plan generation does not build invalid no-trade zones.\n2. **Enforce 11:00 ET Cutoff on Holiday Sessions:** Enforce flat positions by 11:00 ET during shortened holiday sessions to avoid exposure to violent lunch macro reversals.\n3. **Align Triggers with HTF Liquidity Draws:** When the morning brief identifies a high-probability draw (26214 PDL), ensure the plan includes an active entry model trigger (e.g., CISD or 5m FVG retrace) rather than leaving the leg unconfigured.",
+    "trade_11": {
+      "date": "2026-11-27",
+      "outcome": "none",
+      "label": "\u23f8\ufe0f the plan never triggered",
+      "points": null,
+      "usd": null
+    },
+    "trade_day": {
+      "date": "2026-11-27",
+      "outcome": "target",
+      "side": "long",
+      "trigger": 26708.0,
+      "at": "12:55",
+      "r": 0.75,
+      "mfe_r": 1.44,
+      "mae_r": 0.92,
+      "label": "\u2705 the plan worked",
+      "stop": 26633.0,
+      "target": 26764.0,
+      "risk_pts": 75.0,
+      "trigger_name": "OVN POC",
+      "stop_name": "75-pt cap",
+      "points": 55.75,
+      "marked": false,
+      "usd": {
+        "1 MNQ": {
+          "gross": 111.5,
+          "net": 110.0
+        },
+        "5 MNQ": {
+          "gross": 557.5,
+          "net": 550.0
+        },
+        "1 NQ": {
+          "gross": 1115.0,
+          "net": 1110.0
+        }
+      }
+    },
+    "session": {
+      "date": "2026-11-27",
+      "bars": 159,
+      "premarket": {
+        "open": 26838.0,
+        "high": 26864.25,
+        "low": 26576.75,
+        "close": 26579.5,
+        "at_high": "04:05",
+        "at_low": "09:25"
+      },
+      "am": {
+        "open": 26579.75,
+        "high": 26617.75,
+        "low": 26208.5,
+        "close": 26541.5,
+        "at_high": "10:45",
+        "at_low": "10:05"
+      },
+      "lunch": {
+        "open": 26541.5,
+        "high": 26826.5,
+        "low": 26504.5,
+        "close": 26756.25,
+        "at_high": "13:05",
+        "at_low": "11:15"
+      },
+      "pm": null,
+      "rth": {
+        "open": 26579.75,
+        "high": 26826.5,
+        "low": 26208.5,
+        "close": 26756.25,
+        "at_high": "13:05",
+        "at_low": "10:05",
+        "net": 176.5,
+        "shape": "two-sided",
+        "close_in_range_pct": 88.6
+      }
+    },
+    "called": {
+      "htf_bias": "SHORT",
+      "model": null
+    }
   }
 }
