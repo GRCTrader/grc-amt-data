@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-26T09:21-05:00",
+  "at": "2026-11-26T20:30-05:00",
   "questions": {
     "dir": "09:30\u201311:00 closes UP",
     "first": "overnight HIGH taken before the overnight LOW",
@@ -26,9 +26,9 @@
     }
   ],
   "bench": {
-    "days": 50,
+    "days": 51,
     "from": "2026-09-17",
-    "to": "2026-11-25",
+    "to": "2026-11-26",
     "l2": "auto",
     "feats": [
       "gap_atr",
@@ -48,9 +48,9 @@
       "poc_dist_atr"
     ],
     "dir": {
-      "days": 20,
+      "days": 21,
       "calls": 8,
-      "coverage": 40.0,
+      "coverage": 38.1,
       "ci95": [
         25.0,
         87.5
@@ -59,10 +59,10 @@
       "note": "8 calls: needs 40 before the hit rate means anything",
       "hit_when_called": 62.5,
       "benchmark_same_days": 62.5,
-      "benchmark_all_days": 40.0,
-      "brier": 0.2553,
-      "brier_base": 0.2708,
-      "skill": 0.057,
+      "benchmark_all_days": 42.9,
+      "brier": 0.2538,
+      "brier_base": 0.2689,
+      "skill": 0.056,
       "pts_1nq": -316.0,
       "calibration": [
         {
@@ -73,9 +73,9 @@
         },
         {
           "bucket": "50\u201360%",
-          "n": 10,
-          "said": 57.2,
-          "happened": 30.0
+          "n": 11,
+          "said": 56.8,
+          "happened": 36.4
         },
         {
           "bucket": "60\u201370%",
@@ -110,7 +110,7 @@
         "calls": 18,
         "hit_when_called": 50.0,
         "benchmark_same_days": 38.9,
-        "skill": -0.191
+        "skill": -0.179
       }
     },
     "first": {
@@ -186,22 +186,22 @@
       }
     },
     "poc": {
-      "days": 20,
-      "calls": 18,
-      "coverage": 90.0,
+      "days": 21,
+      "calls": 19,
+      "coverage": 90.5,
       "ci95": [
-        55.6,
-        94.4
+        52.6,
+        94.7
       ],
       "enough": false,
-      "note": "18 calls: needs 40 before the hit rate means anything",
-      "hit_when_called": 77.8,
-      "benchmark_same_days": 72.2,
-      "benchmark_all_days": 70.0,
-      "brier": 0.183,
-      "brier_base": 0.2181,
-      "skill": 0.161,
-      "pts_1nq": 2585.2,
+      "note": "19 calls: needs 40 before the hit rate means anything",
+      "hit_when_called": 73.7,
+      "benchmark_same_days": 73.7,
+      "benchmark_all_days": 71.4,
+      "brier": 0.1945,
+      "brier_base": 0.2132,
+      "skill": 0.088,
+      "pts_1nq": 2655.0,
       "calibration": [
         {
           "bucket": "0\u201330%",
@@ -223,9 +223,9 @@
         },
         {
           "bucket": "60\u201370%",
-          "n": 1,
-          "said": 65.7,
-          "happened": 100.0
+          "n": 2,
+          "said": 65.4,
+          "happened": 50.0
         }
       ],
       "weekday": {
@@ -242,8 +242,8 @@
           "hit": 75.0
         },
         "Thu": {
-          "calls": 3,
-          "hit": 66.7
+          "calls": 4,
+          "hit": 50.0
         },
         "Fri": {
           "calls": 3,
@@ -251,35 +251,41 @@
         }
       },
       "alt_l2": {
-        "calls": 17,
-        "hit_when_called": 82.4,
-        "benchmark_same_days": 76.5,
-        "skill": 0.151
+        "calls": 18,
+        "hit_when_called": 77.8,
+        "benchmark_same_days": 77.8,
+        "skill": 0.029
       }
     },
     "gap": {
-      "days": 18,
-      "calls": 18,
+      "days": 19,
+      "calls": 19,
       "coverage": 100.0,
       "ci95": [
-        50.0,
-        88.9
+        52.6,
+        89.5
       ],
       "enough": false,
-      "note": "18 calls: needs 40 before the hit rate means anything",
-      "hit_when_called": 72.2,
-      "benchmark_same_days": 72.2,
-      "benchmark_all_days": 72.2,
-      "brier": 0.1983,
-      "brier_base": 0.2058,
-      "skill": 0.036,
-      "pts_1nq": 1473.2,
+      "note": "19 calls: needs 40 before the hit rate means anything",
+      "hit_when_called": 73.7,
+      "benchmark_same_days": 73.7,
+      "benchmark_all_days": 73.7,
+      "brier": 0.1936,
+      "brier_base": 0.1988,
+      "skill": 0.026,
+      "pts_1nq": 1403.5,
       "calibration": [
         {
           "bucket": "0\u201330%",
           "n": 18,
           "said": 24.6,
           "happened": 27.8
+        },
+        {
+          "bucket": "30\u201340%",
+          "n": 1,
+          "said": 33.1,
+          "happened": 0.0
         }
       ],
       "weekday": {
@@ -296,8 +302,8 @@
           "hit": 75.0
         },
         "Thu": {
-          "calls": 3,
-          "hit": 33.3
+          "calls": 4,
+          "hit": 50.0
         },
         "Fri": {
           "calls": 3,
@@ -305,16 +311,16 @@
         }
       },
       "alt_l2": {
-        "calls": 17,
-        "hit_when_called": 70.6,
-        "benchmark_same_days": 70.6,
-        "skill": 0.08
+        "calls": 18,
+        "hit_when_called": 66.7,
+        "benchmark_same_days": 72.2,
+        "skill": -0.045
       }
     },
     "orx": {
-      "days": 20,
+      "days": 21,
       "calls": 10,
-      "coverage": 50.0,
+      "coverage": 47.6,
       "ci95": [
         0.0,
         60.0
@@ -323,10 +329,10 @@
       "note": "10 calls: needs 40 before the hit rate means anything",
       "hit_when_called": 30.0,
       "benchmark_same_days": 30.0,
-      "benchmark_all_days": 45.0,
-      "brier": 0.2686,
-      "brier_base": 0.2676,
-      "skill": -0.003,
+      "benchmark_all_days": 47.6,
+      "brier": 0.2649,
+      "brier_base": 0.265,
+      "skill": 0.0,
       "pts_1nq": -745.8,
       "calibration": [
         {
@@ -337,9 +343,9 @@
         },
         {
           "bucket": "50\u201360%",
-          "n": 9,
-          "said": 55.6,
-          "happened": 66.7
+          "n": 10,
+          "said": 55.7,
+          "happened": 70.0
         },
         {
           "bucket": "60\u201370%",
@@ -371,56 +377,56 @@
         }
       },
       "alt_l2": {
-        "calls": 14,
-        "hit_when_called": 57.1,
-        "benchmark_same_days": 42.9,
-        "skill": -0.241
+        "calls": 15,
+        "hit_when_called": 53.3,
+        "benchmark_same_days": 46.7,
+        "skill": -0.291
       }
     },
     "reread_0940": {
       "dir": {
-        "days": 20,
-        "calls": 12,
-        "coverage": 60.0,
+        "days": 21,
+        "calls": 13,
+        "coverage": 61.9,
         "ci95": [
-          33.3,
-          83.3
+          38.5,
+          84.6
         ],
         "enough": false,
-        "note": "12 calls: needs 40 before the hit rate means anything",
-        "hit_when_called": 58.3,
-        "benchmark_same_days": 41.7,
-        "benchmark_all_days": 40.0,
-        "brier": 0.2326,
-        "brier_base": 0.2633,
-        "skill": 0.117,
-        "pts_1nq": 759.8
+        "note": "13 calls: needs 40 before the hit rate means anything",
+        "hit_when_called": 61.5,
+        "benchmark_same_days": 46.2,
+        "benchmark_all_days": 42.9,
+        "brier": 0.2283,
+        "brier_base": 0.2627,
+        "skill": 0.131,
+        "pts_1nq": 802.8
       },
       "first": {},
       "poc": {
-        "days": 20,
-        "calls": 19,
-        "coverage": 95.0,
+        "days": 21,
+        "calls": 20,
+        "coverage": 95.2,
         "ci95": [
-          52.6,
-          89.6
+          55.0,
+          95.0
         ],
         "enough": false,
-        "note": "19 calls: needs 40 before the hit rate means anything",
-        "hit_when_called": 73.7,
-        "benchmark_same_days": 73.7,
-        "benchmark_all_days": 75.0,
-        "brier": 0.2209,
-        "brier_base": 0.1925,
-        "skill": -0.148,
-        "pts_1nq": 1372.0
+        "note": "20 calls: needs 40 before the hit rate means anything",
+        "hit_when_called": 75.0,
+        "benchmark_same_days": 75.0,
+        "benchmark_all_days": 76.2,
+        "brier": 0.2148,
+        "brier_base": 0.186,
+        "skill": -0.155,
+        "pts_1nq": 1329.0
       }
     },
     "london_0500": {
       "dir": {
-        "days": 20,
+        "days": 21,
         "calls": 9,
-        "coverage": 45.0,
+        "coverage": 42.9,
         "ci95": [
           22.2,
           88.9
@@ -429,10 +435,10 @@
         "note": "9 calls: needs 40 before the hit rate means anything",
         "hit_when_called": 55.6,
         "benchmark_same_days": 55.6,
-        "benchmark_all_days": 40.0,
-        "brier": 0.2635,
-        "brier_base": 0.2708,
-        "skill": 0.027,
+        "benchmark_all_days": 42.9,
+        "brier": 0.2628,
+        "brier_base": 0.2689,
+        "skill": 0.023,
         "pts_1nq": -772.0
       },
       "first": {
@@ -454,26 +460,26 @@
         "pts_1nq": 536.8
       },
       "poc": {
-        "days": 20,
-        "calls": 18,
-        "coverage": 90.0,
+        "days": 21,
+        "calls": 19,
+        "coverage": 90.5,
         "ci95": [
-          50.0,
-          88.9
+          47.4,
+          89.5
         ],
         "enough": false,
-        "note": "18 calls: needs 40 before the hit rate means anything",
-        "hit_when_called": 72.2,
-        "benchmark_same_days": 72.2,
-        "benchmark_all_days": 70.0,
-        "brier": 0.1927,
-        "brier_base": 0.2181,
-        "skill": 0.117,
-        "pts_1nq": 2191.5
+        "note": "19 calls: needs 40 before the hit rate means anything",
+        "hit_when_called": 68.4,
+        "benchmark_same_days": 73.7,
+        "benchmark_all_days": 71.4,
+        "brier": 0.2011,
+        "brier_base": 0.2132,
+        "skill": 0.057,
+        "pts_1nq": 2261.2
       }
     },
     "plan": {
-      "plans": 20,
+      "plans": 21,
       "filled": 12,
       "wins": 3,
       "net_r": 5.99,
@@ -552,11 +558,11 @@
         }
       ]
     },
-    "at": "2026-11-25T20:30-05:00"
+    "at": "2026-11-26T20:30-05:00"
   },
   "alerts": {
     "days": 30,
-    "random_abs_move30": 63.8,
+    "random_abs_move30": 63.3,
     "kinds": {
       "weak_break": {
         "n": 4,
@@ -566,18 +572,18 @@
         "all_mean30": 184.4
       },
       "aggression": {
-        "n": 2,
-        "right": 0.0,
-        "mean30": -119.5,
-        "all_n": 2,
-        "all_mean30": -119.5
+        "n": 7,
+        "right": 14.3,
+        "mean30": -41.1,
+        "all_n": 7,
+        "all_mean30": -41.1
       },
       "divergence": {
-        "n": 5,
-        "right": 60.0,
-        "mean30": 36.3,
-        "all_n": 5,
-        "all_mean30": 36.3
+        "n": 9,
+        "right": 66.7,
+        "mean30": 30.3,
+        "all_n": 9,
+        "all_mean30": 30.3
       },
       "acceptance": {
         "n": 1,
@@ -592,6 +598,13 @@
         "mean30": -255.8,
         "all_n": 1,
         "all_mean30": -255.8
+      },
+      "failed_auction": {
+        "n": 1,
+        "right": 100.0,
+        "mean30": 45.8,
+        "all_n": 1,
+        "all_mean30": 45.8
       },
       "outlier": {
         "n": 1,
@@ -616,7 +629,7 @@
     "sd": 632.7246687784531,
     "levels": [
       {
-        "price": 28173.5,
+        "price": 28144.5,
         "name": "Call wall 2 (67%, +150M)",
         "star": false
       },
@@ -626,13 +639,13 @@
         "star": false
       },
       {
-        "price": 27344.75,
-        "name": "Call wall 3 (55%, +125M)",
+        "price": 27333.95,
+        "name": "EM +2\u03c3 (95%)",
         "star": false
       },
       {
-        "price": 27333.95,
-        "name": "EM +2\u03c3 (95%)",
+        "price": 27316.75,
+        "name": "Call wall 3 (55%, +125M)",
         "star": false
       },
       {
@@ -641,17 +654,17 @@
         "star": false
       },
       {
-        "price": 27015.0,
+        "price": 26985.0,
         "name": "Max Pain",
         "star": false
       },
       {
-        "price": 26970.0,
+        "price": 26945.0,
         "name": "Gamma flip",
         "star": false
       },
       {
-        "price": 26930.5,
+        "price": 26902.75,
         "name": "Call wall 1 (100%, +225M)",
         "star": false
       },
@@ -666,7 +679,7 @@
         "star": false
       },
       {
-        "price": 26516.25,
+        "price": 26489.0,
         "name": "Put wall 1 (100%, -390M)",
         "star": false
       },
@@ -676,24 +689,24 @@
         "star": false
       },
       {
-        "price": 26412.38,
+        "price": 26412.07,
         "name": "VWAP +2\u03c3",
         "star": false
       },
       {
-        "price": 26315.19,
+        "price": 26315.18,
         "name": "VWAP +1\u03c3",
-        "star": true
-      },
-      {
-        "price": 26309.0,
-        "name": "Put wall 3 (75%, -294M)",
-        "star": true
+        "star": false
       },
       {
         "price": 26294.0,
         "name": "ONVP VAH",
-        "star": false
+        "star": true
+      },
+      {
+        "price": 26282.0,
+        "name": "Put wall 3 (75%, -294M)",
+        "star": true
       },
       {
         "price": 26249.25,
@@ -706,29 +719,29 @@
         "star": false
       },
       {
-        "price": 26217.99,
+        "price": 26218.29,
         "name": "VWAP",
         "star": false
       },
       {
-        "price": 26120.8,
+        "price": 26121.4,
         "name": "VWAP \u22121\u03c3",
         "star": false
       },
       {
-        "price": 26102.0,
+        "price": 26075.0,
         "name": "Put wall 2 (78%, -302M)",
         "star": false
       },
       {
         "price": 26037.0,
         "name": "ONVP VAL",
-        "star": false
+        "star": true
       },
       {
-        "price": 26023.6,
+        "price": 26024.5,
         "name": "VWAP \u22122\u03c3",
-        "star": false
+        "star": true
       },
       {
         "price": 25982.75,
@@ -783,6 +796,61 @@
       {
         "price": 24170.33,
         "name": "EM \u22123\u03c3 (99.7%)",
+        "star": false
+      },
+      {
+        "price": 26316.0,
+        "name": "IB high",
+        "star": false
+      },
+      {
+        "price": 26223.75,
+        "name": "IB low",
+        "star": false
+      },
+      {
+        "price": 26362.12,
+        "name": "IB +1.5\u00d7",
+        "star": false
+      },
+      {
+        "price": 26177.62,
+        "name": "IB \u22121.5\u00d7",
+        "star": false
+      },
+      {
+        "price": 26408.25,
+        "name": "IB +2\u00d7",
+        "star": false
+      },
+      {
+        "price": 26131.5,
+        "name": "IB \u22122\u00d7",
+        "star": false
+      },
+      {
+        "price": 26278.14,
+        "name": "Developing VWAP",
+        "star": false
+      },
+      {
+        "price": 26877.14,
+        "name": "EM 09:30 +1\u03c3 (68%)",
+        "star": false
+      },
+      {
+        "price": 25603.36,
+        "name": "EM 09:30 \u22121\u03c3 (68%)",
+        "star": false
+      },
+      {
+        "price": 27514.04,
+        "name": "EM 09:30 +2\u03c3 (95%)",
+        "star": false
+      },
+      {
+        "price": 24966.46,
+        "name": "EM 09:30 \u22122\u03c3 (95%)",
         "star": false
       }
     ]
