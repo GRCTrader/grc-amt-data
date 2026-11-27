@@ -1,6 +1,6 @@
 {
-  "asof": "2026-11-27 16:29:29 ET",
-  "asof_epoch": 1795814969,
+  "asof": "2026-11-27 16:34:36 ET",
+  "asof_epoch": 1795815276,
   "session_date": "2026-11-27",
   "price": {
     "NQ": 26779.0,
@@ -34,46 +34,53 @@
       "span": "New York PM",
       "start": "2026-11-27T12:00:00-05:00",
       "end": "2026-11-27T18:00:00-05:00",
-      "left_sec": 5430,
+      "left_sec": 5123,
       "phase": "Q4",
       "phase_name": "Continuation / Reversal",
       "phase_why": "It extends or it turns. The handover."
     },
     {
       "level": "90 minute",
-      "q": 2,
-      "span": "block 3 of 4",
-      "start": "2026-11-27T15:00:00-05:00",
-      "end": "2026-11-27T16:30:00-05:00",
-      "left_sec": 30,
-      "phase": "Q3",
-      "phase_name": "Distribution",
-      "phase_why": "The actual move. The quarter you want to be in."
+      "q": 3,
+      "span": "block 4 of 4",
+      "start": "2026-11-27T16:30:00-05:00",
+      "end": "2026-11-27T18:00:00-05:00",
+      "left_sec": 5123,
+      "phase": "Q4",
+      "phase_name": "Continuation / Reversal",
+      "phase_why": "It extends or it turns. The handover."
     },
     {
       "level": "Micro",
-      "q": 3,
+      "q": 0,
       "span": "22.5 min",
-      "start": "2026-11-27T16:07:30-05:00",
-      "end": "2026-11-27T16:30:00-05:00",
-      "left_sec": 30,
-      "phase": "Q4",
-      "phase_name": "Continuation / Reversal",
-      "phase_why": "It extends or it turns. The handover."
+      "start": "2026-11-27T16:30:00-05:00",
+      "end": "2026-11-27T16:52:30-05:00",
+      "left_sec": 1073,
+      "phase": "Q1",
+      "phase_name": "Accumulation",
+      "phase_why": "Range builds. The market is loading, not going anywhere."
     },
     {
       "level": "Nano",
-      "q": 3,
+      "q": 0,
       "span": "5.625 min",
-      "start": "2026-11-27T16:24:22.500000-05:00",
-      "end": "2026-11-27T16:30:00-05:00",
-      "left_sec": 30,
-      "phase": "Q4",
-      "phase_name": "Continuation / Reversal",
-      "phase_why": "It extends or it turns. The handover."
+      "start": "2026-11-27T16:30:00-05:00",
+      "end": "2026-11-27T16:35:37.500000-05:00",
+      "left_sec": 61,
+      "phase": "Q1",
+      "phase_name": "Accumulation",
+      "phase_why": "Range builds. The market is loading, not going anywhere."
     }
   ],
-  "chains": [],
+  "chains": [
+    [
+      "Daily",
+      "90 minute",
+      "Micro",
+      "Nano"
+    ]
+  ],
   "true_opens": [
     {
       "code": "TMO",
@@ -106,7 +113,7 @@
     {
       "code": "TMSO",
       "name": "true micro-session open",
-      "at": "2026-11-27T15:22:30-05:00",
+      "at": "2026-11-27T16:52:30-05:00",
       "px": null,
       "side": null
     }
@@ -140,7 +147,7 @@
         "close": 26765.0,
         "n": 5,
         "start": "2026-11-26T18:00:00-05:00",
-        "end": "2026-11-27T16:29:29.792929-05:00"
+        "end": "2026-11-27T16:34:36.041312-05:00"
       },
       "sweep": {
         "swept": "high",
@@ -178,7 +185,7 @@
         "close": 26765.0,
         "n": 2,
         "start": "2026-11-27T12:00:00-05:00",
-        "end": "2026-11-27T16:29:29.792929-05:00"
+        "end": "2026-11-27T16:34:36.041312-05:00"
       },
       "sweep": {
         "swept": "high",
@@ -214,10 +221,10 @@
       },
       "shape": "AMD-X",
       "shape_why": "not enough history to judge Q1",
-      "quarter": "Q3",
-      "job": "Distribution",
-      "start": "2026-11-27T15:00:00-05:00",
-      "end": "2026-11-27T16:30:00-05:00"
+      "quarter": "Q4",
+      "job": "X - continuation / reversal",
+      "start": "2026-11-27T16:30:00-05:00",
+      "end": "2026-11-27T18:00:00-05:00"
     },
     "Micro": {
       "prev": null,
@@ -234,16 +241,16 @@
       },
       "shape": "AMD-X",
       "shape_why": "no data for Q1 - assuming the ordinary order",
-      "quarter": "Q4",
-      "job": "X - continuation / reversal",
-      "start": "2026-11-27T16:07:30-05:00",
-      "end": "2026-11-27T16:30:00-05:00"
+      "quarter": "Q1",
+      "job": "Accumulation",
+      "start": "2026-11-27T16:30:00-05:00",
+      "end": "2026-11-27T16:52:30-05:00"
     }
   },
   "gb": {
-    "on": true,
-    "minute": 29,
-    "next_in_min": 0
+    "on": false,
+    "minute": 34,
+    "next_in_min": 1
   },
   "checklist": [
     {
@@ -267,8 +274,8 @@
     {
       "n": 4,
       "step": "GB time anchor (:29 / :35)",
-      "ok": true,
-      "detail": "on the anchor now"
+      "ok": false,
+      "detail": "next one in 1 min"
     },
     {
       "n": 5,
